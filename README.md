@@ -1,7 +1,7 @@
 # Blog
 
 This is the codebase for my personal blog at
-[`paulfioravanti.com`](http://paulfioravanti.com).
+[`paulfioravanti.com`](https://paulfioravanti.com).
 Created with [Jekyll](https://jekyllrb.com/).
 
 ## License
