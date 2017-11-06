@@ -25,6 +25,9 @@ github_username:  paulfioravanti
 minima:
   date_format: "%b %-d, %Y"
 
+disqus:
+  shortname: paulfioravanti
+
 # Build settings
 markdown: kramdown
 theme: minima
