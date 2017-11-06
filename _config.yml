@@ -22,17 +22,20 @@ url: "https://paulfioravanti.com"
 twitter_username: paulfioravanti
 github_username:  paulfioravanti
 
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
 minima:
   date_format: "%b %-d, %Y"
 
 disqus:
   shortname: paulfioravanti
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+google_analytics: "UA-109270947-1"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
