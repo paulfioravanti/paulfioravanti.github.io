@@ -26,6 +26,34 @@ $content-width:    800px !default;
 $on-palm:          600px !default;
 $on-laptop:        800px !default;
 
+// Code colors
+$code-comment-color: #998 !default;
+$code-comment-preproc-color: #999 !default;
+$code-background-color: #eef !default;
+$code-background-highlight: #fff !default;
+$code-black: #000 !default;
+$code-deleted-background-color: #fdd !default;
+$code-deleted-specific-background-color: #faa !default;
+$code-error-color: #a61717 !default;
+$code-error-background-color: #e3d2d2 !default;
+$code-generic-error: #a00 !default;
+$code-generic-inserted-background: #dfd !default;
+$code-generic-inserted-specific-background: #afa !default;
+$code-generic-output: #888 !default;
+$code-generic-prompt: #555 !default;
+$code-generic-subheading: #aaa !default;
+$code-keyword-type: #458 !default;
+$code-literal: #099 !default;
+$code-literal-regex: #009926 !default;
+$code-literal-string: #d14 !default;
+$code-literal-symbol: #990073 !default;
+$code-name: #008080 !default;
+$code-name-builtin: #0086b3 !default;
+$code-name-entity: #800080 !default;
+$code-name-exception: #900 !default;
+$code-name-tag: #000080 !default;
+$code-whitespace: #bbb !default;
+
 // Use media queries like this:
 // @include media-query($on-palm) {
 //   .wrapper {
@@ -44,8 +72,6 @@ $on-laptop:        800px !default;
 }
 
 // Import partials.
-@import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
-;
+@import "minima/base";
+@import "minima/layout";
+@import "minima/syntax-highlighting";

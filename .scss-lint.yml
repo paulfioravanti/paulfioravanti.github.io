@@ -1,0 +1,26 @@
+scss_files: "_sass/**/*.scss"
+
+linters:
+  DuplicateProperty:
+    # Minima seems to be using consecutive properties for dealing with
+    # various levels of browser support for some CSS properties.
+    ignore_consecutive:
+      - max-width
+      - width
+  LeadingZero:
+    style: include_zero
+  QualifyingElement:
+    # Added due to label[for="nav-trigger"] in _layout.scss
+    allow_element_with_attribute: true
+  # Selector max depth added due to styling in layout
+  SelectorDepth:
+    max_depth: 4
+  StringQuotes:
+    style: double_quotes
+  VendorPrefix:
+    # Currently exclude identifiers that default Minima theme vendor
+    # prefixes.
+    excluded_identifiers:
+      - calc
+      - font-feature-settings
+      - text-size-adjust
