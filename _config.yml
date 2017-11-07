@@ -36,6 +36,8 @@ disqus:
 
 google_analytics: "UA-109270947-1"
 
+twitter:
+  username: paulfioravanti
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
