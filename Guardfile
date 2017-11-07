@@ -1,5 +1,8 @@
 clearing :on
 
+# NOTE: I tried to use the guard-scss_lint gem but it didn't seem
+# to want to play nice with Jekyll, so the guard-process gem was
+# used instead.
 guard :process,
       name: "SCSS linter",
       command: ["scss-lint"] do
