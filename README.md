@@ -35,6 +35,14 @@ Start Guard with the following command:
 $ bundle exec guard
 ```
 
+## Theme
+
+This blog uses the [Minima][minima] theme, as that seemed to be the theme that
+worked best out of the box with Jekyll 3.6 and was usable on
+[Github Pages][github-pages], but I'm gradually copying over and overwriting
+files with customisations (see the [`_includes`](_includes) directory), with
+the intent to eventually leave the theme behind and fully customise everything.
+
 ## License
 
 Content in all blog posts are licensed under the
@@ -51,10 +59,12 @@ the [MIT license][license-mit].
 </a>
 
 [blog-url]: https://paulfioravanti.com
+[github-pages]: https://pages.github.com/
 [guard]: https://github.com/guard/guard
 [jekyll-url]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
 [license-mit]: LICENSE-MIT.txt
+[minima]: https://github.com/jekyll/minima
 [localhost]: http://localhost:4000/
 [scss-lint]: https://github.com/brigade/scss-lint
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
