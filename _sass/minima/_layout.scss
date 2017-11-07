@@ -26,6 +26,26 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
+  .nav-trigger {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  // NOTE: This exception due to Minima's stylng rules.
+  // scss-lint:disable DeclarationOrder
   @include media-query($on-palm) {
     background-color: $background-color;
     border: 1px solid $grey-color-light;
@@ -78,24 +98,7 @@
       }
     }
   }
-
-  .nav-trigger {
-    display: none;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
+  // scss-lint:enable DeclarationOrder
 }
 
 // Site footer
