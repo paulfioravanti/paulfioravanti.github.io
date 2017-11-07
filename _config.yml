@@ -16,7 +16,8 @@
 title: Paul's Blog
 email: paul.fioravanti@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Stuff and things, usually with a technical bent.
+  The personal blog of Paul Fioravanti.
+  Contains text on pages, usually with a technical bent.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulfioravanti.com"
 twitter_username: paulfioravanti
