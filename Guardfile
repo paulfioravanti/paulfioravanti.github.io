@@ -1,14 +1,16 @@
-clearing :on
-
-# NOTE: I tried to use the guard-scss_lint gem but it didn't seem
-# to want to play nice with Jekyll, so the guard-process gem was
-# used instead.
-guard :process,
-      name: "SCSS linter",
-      command: ["scss-lint"] do
+guard "process",
+      name: "SASS Lint",
+      command: ["sass-lint", "--verbose", "--no-exit"] do
   watch(%r{^_sass/.+\.scss$})
+  watch(%r{^assets/.+\.scss$})
 end
 
-# NOTE: If you're a tmux user, this is a setting that will keep you informed
-# of whether the suite is passing
+guard "process",
+      name: "htmllint",
+      command: ["htmllint", "_includes/*.html", "./*.html"] do
+  watch(%r{^_includes/.+\.html$})
+  watch(%r{^.+\.html$})
+end
+
 notification :tmux, color_location: "status-right-bg"
+clearing :on
