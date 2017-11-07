@@ -22,12 +22,15 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://paulfioravanti.com"
 twitter_username: paulfioravanti
 github_username:  paulfioravanti
+linkedin_username: paulfioravanti
+stackoverflow_id: 567863
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 minima:
   date_format: "%b %-d, %Y"
@@ -39,6 +42,9 @@ google_analytics: "UA-109270947-1"
 
 twitter:
   username: paulfioravanti
+
+gravatar: abda861707b1e78e0fce47ced55f84ee
+font_awesome_embed_code: 04ac649a83
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

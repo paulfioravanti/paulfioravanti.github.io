@@ -1,0 +1,51 @@
+$social-link-background-color: rgba(150, 150, 150, 0.5);
+$social-link-background-hover-color: rgba(0, 0, 0, 0.5);
+
+.about-section {
+  img {
+    border-radius: 10px;
+    float: left;
+    margin-right: 2vw;
+
+    @media (max-width: 800px) {
+      height: 20vh;
+    }
+  }
+
+  .summary {
+    @media (max-width: 800px) {
+      font-size: 0.8em;
+    }
+  }
+
+  .social-list {
+    font-size: 3em;
+    margin-top: 5vh;
+    text-align: center;
+
+    > li {
+      display: inline-block;
+      margin: 0 0.20em;
+    }
+
+    @media (max-width: 800px) {
+      float: left;
+      font-size: 2em;
+      margin-top: 3vh;
+    }
+  }
+
+  .social-link {
+    background-color: $social-link-background-color;
+    border-radius: 99px;
+    color: $background-color;
+    display: inline-block;
+    height: 1.5em;
+    text-decoration: none;
+    width: 1.5em;
+
+    &:hover {
+      background-color: $social-link-background-hover-color;
+    }
+  }
+}
