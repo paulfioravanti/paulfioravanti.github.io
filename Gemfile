@@ -8,5 +8,5 @@ end
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.9"
-  gem "github-pages", "~> 167"
+  gem "github-pages", "~> 168"
 end
