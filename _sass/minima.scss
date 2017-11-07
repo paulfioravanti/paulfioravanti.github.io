@@ -25,8 +25,13 @@ $table-text-align: left !default;
 // Width of the content area
 $content-width:    800px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+// NOTE: Not entirely sure of the consequences of doing this yet, so leave
+// these comments in here for now but if all seems okay, remove commented out
+// code.
+// $on-palm:          600px !default;
+// $on-laptop:        800px !default;
+$on-palm:          "(max-width: 600px)" !default;
+$on-laptop:        "(min-width: 601px)" !default;
 
 
 // Use media queries like this:
@@ -36,8 +41,13 @@ $on-laptop:        800px !default;
 //     padding-left: $spacing-unit / 2;
 //   }
 // }
+// @mixin media-query($device) {
+//   @media screen and (max-width: $device) {
+//     @content;
+//   }
+// }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
+  @media screen and #{$device} {
     @content;
   }
 }

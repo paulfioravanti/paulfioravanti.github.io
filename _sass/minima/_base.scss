@@ -11,15 +11,15 @@ dl, dd, ol, ul, figure {
 // Basic styling
 body {
   // sass-lint:disable-block no-vendor-prefixes
-  background-color: $background-color;
-  color: $text-color;
-  font: $base-font-weight (#{$base-font-size} / #{$base-line-height}) $base-font-family;
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   -webkit-font-feature-settings: "kern" 1;
+  -webkit-text-size-adjust: 100%;
+  background-color: $background-color;
+  color: $text-color;
+  font: $base-font-weight (#{$base-font-size} / #{$base-line-height}) $base-font-family;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  -webkit-text-size-adjust: 100%;
 }
 
 // Set `margin-bottom` to maintain vertical rhythm
@@ -136,12 +136,12 @@ pre {
   // sass-lint:disable-block no-vendor-prefixes
   @extend %clearfix;
 
-  margin-left: auto;
-  margin-right: auto;
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
-  padding-left: $spacing-unit;
-  padding-right: $spacing-unit;
+  @include media-query($on-palm) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+  }
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
@@ -149,6 +149,9 @@ pre {
     padding-left: $spacing-unit / 2;
     padding-right: $spacing-unit / 2;
   }
+
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Clearfix

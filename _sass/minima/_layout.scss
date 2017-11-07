@@ -53,13 +53,15 @@
     text-align: right;
     top: 9px;
 
-    label[for="nav-trigger"] {
-      cursor: pointer;
-      display: block;
-      float: right;
-      height: 36px;
-      width: 36px;
-      z-index: 2;
+    label {
+      &[for="nav-trigger"] {
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 36px;
+        width: 36px;
+        z-index: 2;
+      }
     }
 
     .menu-icon {
@@ -71,19 +73,23 @@
       text-align: center;
       width: 36px;
 
-      > svg path {
-        fill: $grey-color-dark;
+      > svg {
+        path {
+          fill: $grey-color-dark;
+        }
       }
     }
 
-    input ~ .trigger {
-      clear: both;
-      display: none;
-    }
+    input {
+      &:checked ~ .trigger {
+        display: block;
+        padding-bottom: 5px;
+      }
 
-    input:checked ~ .trigger {
-      display: block;
-      padding-bottom: 5px;
+      ~ .trigger {
+        clear: both;
+        display: none;
+      }
     }
 
     .page-link {
@@ -206,14 +212,16 @@
 }
 
 .post-title {
-  @include relative-font-size(2.625);
-
-  letter-spacing: -1px;
-  line-height: 1;
+  @include media-query($on-palm) {
+    @include relative-font-size(2.625);
+  }
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
+
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
 .post-content {
