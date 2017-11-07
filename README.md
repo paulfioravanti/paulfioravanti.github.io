@@ -11,6 +11,25 @@ $ cd paulfioravanti.github.io
 $ bundle install
 ```
 
+### Development Dependencies
+
+This app uses the following [Node][node]-based dependencies during development:
+
+- [Sass Lint][sass-lint]: make sure styling syntax conforms to
+  community standards. Note that the [gem version][scss-lint] is deprecated.
+- [htmllint][htmllint] (via [htmllint-cli][htmllint-cli]): make sure HTML
+  syntax conforms to community standards.
+
+Install dependencies in the following way, and remember to re-shim whatever
+version manager is being used for Node, or add the `bin` folder of the Node
+installation to the `$PATH`, otherwise executables like `sass-lint` won't be
+readily available:
+
+```
+$ npm install -g sass-lint htmllint-cli
+$ asdf reshim nodejs
+```
+
 ## Usage
 
 ### Start blog server
@@ -23,11 +42,7 @@ Then, navigate to [`localhost:4000`][localhost].
 
 ### Monitor files
 
-This project uses [Guard][guard] to monitor file changes on the following types
-of files:
-
-- SCSS files: runs [`scss-lint`][scss-lint] to make sure styling syntax conforms
-  to community standards.
+This project uses [Guard][guard] to monitor file changes.
   
 Start Guard with the following command:
 
@@ -61,11 +76,15 @@ the [MIT license][license-mit].
 [blog-url]: https://paulfioravanti.com
 [github-pages]: https://pages.github.com/
 [guard]: https://github.com/guard/guard
+[htmllint]: https://github.com/htmllint/htmllint
+[htmllint-cli]: https://github.com/htmllint/htmllint-cli 
 [jekyll-url]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
 [license-mit]: LICENSE-MIT.txt
 [minima]: https://github.com/jekyll/minima
 [localhost]: http://localhost:4000/
+[node]: https://github.com/nodejs/node
+[sass-lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
 [twitter-url]: https://twitter.com/paulfioravanti
