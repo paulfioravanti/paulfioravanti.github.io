@@ -13,7 +13,7 @@ body {
   // sass-lint:disable-block no-vendor-prefixes
   background-color: $background-color;
   color: $text-color;
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight (#{$base-font-size} / #{$base-line-height}) $base-font-family;
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   -webkit-font-feature-settings: "kern" 1;

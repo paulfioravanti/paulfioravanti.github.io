@@ -1,5 +1,5 @@
 guard "process",
-      name: "SASS Lint",
+      name: "sass-lint",
       command: ["sass-lint", "--verbose", "--no-exit"] do
   watch(%r{^_sass/.+\.scss$})
   watch(%r{^assets/.+\.scss$})
