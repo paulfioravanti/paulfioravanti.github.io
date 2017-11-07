@@ -139,7 +139,7 @@ $code-whitespace: #bbb !default;
     color: $code-generic-subheading;
   }
 
-   // Generic.Traceback
+  // Generic.Traceback
   .gt {
     color: $code-generic-error;
   }
@@ -181,11 +181,11 @@ $code-whitespace: #bbb !default;
   // Name.Variable.Class
   // Name.Variable.Global
   // Name.Variable.Instance
-  // scss-lint:disable SingleLinePerSelector
+  // sass-lint:disable single-line-per-selector
   .na, .no, .nv, .vc, .vg, .vi {
     color: $code-name;
   }
-  // scss-lint:enable SingleLinePerSelector
+  // sass-lint:enable single-line-per-selector
 
   // Name.Builtin
   .nb {
@@ -237,11 +237,11 @@ $code-whitespace: #bbb !default;
   // Literal.Number.Integer
   // Literal.Number.Oct
   // Literal.Number.Integer.Long
-  // scss-lint:disable SingleLinePerSelector
+  // sass-lint:disable single-line-per-selector
   .il, .m, .mf, .mh, .mi, .mo {
     color: $code-literal;
   }
-  // scss-lint:enable SingleLinePerSelector
+  // sass-lint:enable single-line-per-selector
 
   // Literal.String.Backtick
   // Literal.String.Char
@@ -252,11 +252,11 @@ $code-whitespace: #bbb !default;
   // Literal.String.Interpol
   // Literal.String.Other
   // Literal.String.Single
-  // scss-lint:disable SingleLinePerSelector
+  // sass-lint:disable single-line-per-selector
   .sb, .sc, .sd, .s2, .se, .sh, .si, .sx, .s1 {
     color: $code-literal-string;
   }
-  // scss-lint:enable SingleLinePerSelector
+  // sass-lint:enable single-line-per-selector
 
   // Literal.String.Regex
   .sr {

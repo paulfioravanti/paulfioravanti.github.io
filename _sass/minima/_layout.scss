@@ -44,8 +44,6 @@
     }
   }
 
-  // NOTE: This exception due to Minima's stylng rules.
-  // scss-lint:disable DeclarationOrder
   @include media-query($on-palm) {
     background-color: $background-color;
     border: 1px solid $grey-color-light;
@@ -98,7 +96,6 @@
       }
     }
   }
-  // scss-lint:enable DeclarationOrder
 }
 
 // Site footer
@@ -134,21 +131,25 @@
 }
 
 .footer-col-1 {
+  // sass-lint:disable-block no-vendor-prefixes
   width: -webkit-calc(35% - (#{$spacing-unit} / 2));
   width: calc(35% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-2 {
+  // sass-lint:disable-block no-vendor-prefixes
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width: calc(20% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
+  // sass-lint:disable-block no-vendor-prefixes
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
   width: calc(45% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
+  // sass-lint:disable-block no-vendor-prefixes
   .footer-col-1,
   .footer-col-2 {
     width: -webkit-calc(50% - (#{$spacing-unit} / 2));
@@ -162,6 +163,7 @@
 }
 
 @include media-query($on-palm) {
+  // sass-lint:disable-block no-vendor-prefixes
   .footer-col {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));

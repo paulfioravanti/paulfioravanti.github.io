@@ -1,15 +1,16 @@
 // Reset some basic elements
-// scss-lint:disable SingleLinePerSelector
+// sass-lint:disable single-line-per-selector
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
-// scss-lint:enable SingleLinePerSelector
+// sass-lint:enable single-line-per-selector
 
 // Basic styling
 body {
+  // sass-lint:disable-block no-vendor-prefixes
   background-color: $background-color;
   color: $text-color;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
@@ -22,14 +23,14 @@ body {
 }
 
 // Set `margin-bottom` to maintain vertical rhythm
-// scss-lint:disable SingleLinePerSelector
+// sass-lint:disable single-line-per-selector
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
-// scss-lint:enable SingleLinePerSelector
+// sass-lint:enable single-line-per-selector
 
 // Images
 img {
@@ -60,11 +61,11 @@ li {
 }
 
 // Headings
-// scss-lint:disable SingleLinePerSelector
+// sass-lint:disable single-line-per-selector
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
-// scss-lint:enable SingleLinePerSelector
+// sass-lint:enable single-line-per-selector
 
 // Links
 a {
@@ -132,6 +133,7 @@ pre {
 
 // Wrapper
 .wrapper {
+  // sass-lint:disable-block no-vendor-prefixes
   @extend %clearfix;
 
   margin-left: auto;
