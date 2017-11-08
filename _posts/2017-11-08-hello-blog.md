@@ -26,7 +26,7 @@ as I made a few changes I think I will want to reference later, so I
 Github Pages, and instead deployed it using [Heroku][heroku] to its
 [new home][learn-enough-css-heroku].
 
-So, hello (again) blog, and here's to a new start.
+So, hello (again) blog, and here's to a new start :beers:
 
 
 [github-pages]: https://pages.github.com/
