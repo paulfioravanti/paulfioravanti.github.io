@@ -21,9 +21,9 @@ This app uses the following [Node][node]-based dependencies during development:
   syntax conforms to community standards.
 
 Install dependencies in the following way, and remember to re-shim whatever
-version manager is being used for Node, or add the `bin` folder of the Node
-installation to the `$PATH`, otherwise executables like `sass-lint` won't be
-readily available:
+version manager is being used for Node (I use [`asdf`][asdf]), or add the `bin`
+folder of the Node installation to the `$PATH`, otherwise executables like
+`sass-lint` won't be available:
 
 ```
 $ npm install -g sass-lint htmllint-cli
@@ -73,6 +73,7 @@ the [MIT license][license-mit].
   <img src="http://stackoverflow.com/users/flair/567863.png" width="208" height="58" alt="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 </a>
 
+[asdf]: https://github.com/asdf-vm/asdf
 [blog-url]: https://paulfioravanti.com
 [github-pages]: https://pages.github.com/
 [guard]: https://github.com/guard/guard
