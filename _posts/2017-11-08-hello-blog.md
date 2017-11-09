@@ -3,6 +3,7 @@ layout: post
 title:  "Hello Blog!"
 date:   2017-11-08 16:49 +1100
 categories: jekyll
+comments: false
 ---
 
 After finishing [_Learn Enough CSS & Layout to Be Dangerous_][learn-enough-css]
