@@ -68,10 +68,7 @@ the [MIT license][license-mit].
 ## Social
 
 [![Contact][twitter-badge]][twitter-url]
-
-<a href="http://stackoverflow.com/users/567863/paul-fioravanti">
-  <img src="http://stackoverflow.com/users/flair/567863.png" width="208" height="58" alt="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
-</a>
+[![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
 [asdf]: https://github.com/asdf-vm/asdf
 [blog-url]: https://paulfioravanti.com
@@ -87,5 +84,7 @@ the [MIT license][license-mit].
 [node]: https://github.com/nodejs/node
 [sass-lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
+[stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
+[stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
 [twitter-url]: https://twitter.com/paulfioravanti
