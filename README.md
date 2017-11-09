@@ -60,6 +60,11 @@ the intent to eventually leave the theme behind and fully customise everything.
 
 ## License
 
+| Category |                         License                           |
+|----------|-----------------------------------------------------------|
+| Content  | [![License: CC BY 4.0][license-cc-badge]][license-cc-url] |
+| Code     | [![License: MIT][license-mit-badge]][license-mit-url]     |
+
 Content in all blog posts are licensed under the
 [Creative Commons Attribution 4.0 license][license-cc], and all
 source code in this repo and contained within any blog posts is licensed under
@@ -67,7 +72,7 @@ the [MIT license][license-mit].
 
 ## Social
 
-[![Contact][twitter-badge]][twitter-url]
+[![Contact][twitter-badge]][twitter-url]<br />
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
 [asdf]: https://github.com/asdf-vm/asdf
@@ -78,7 +83,11 @@ the [MIT license][license-mit].
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli 
 [jekyll-url]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
+[license-cc-badge]: https://licensebuttons.net/l/by/4.0/80x15.png
+[license-cc-url]: https://creativecommons.org/licenses/by/4.0/
 [license-mit]: LICENSE-MIT.txt
+[license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
+[license-mit-url]: https://opensource.org/licenses/MIT
 [minima]: https://github.com/jekyll/minima
 [localhost]: http://localhost:4000/
 [node]: https://github.com/nodejs/node

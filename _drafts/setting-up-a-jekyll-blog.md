@@ -15,7 +15,7 @@ new blog generated.
 NOTE: I used Jekyll 3.6.2 to originally generate this blog, so your mileage may
 vary depending on what version you use and when you read this post.
 
-# Choosing a theme
+## Choosing a theme
 
 If you are hosting outside of Github, then you can get themes from
 [many][jekyllthemes.org] [different][jekyllthemes.io]
@@ -30,7 +30,22 @@ newly-generated site wants by default, as well as integrations for
 [Disqus comments][minima-disqus] and
 [Google Analytics][minima-google-analytics]. This ease of use, coupled with my
 desire to tinker with the CSS, made the minimalistic Minima a straightforward
-choice.
+choice, but I would encourage you to experiment and pick one that best suits
+the look you want for your site.
+
+## Overriding Styling
+
+## Overriding _include files_
+
+## Lint all the Things
+
+## Run all the Lints
+
+## Custom Domain Setup
+
+## SSL Setup
+
+## No Foreign Plugins
 
 
 [github-pages]: https://pages.github.com/
@@ -40,6 +55,7 @@ choice.
 [jekyllthemes.org]: http://jekyllthemes.org/
 [jekyllthemes.io]: http://jekyllthemes.io/
 [minima]: https://github.com/jekyll/minima
+[minima-customisation]: https://github.com/jekyll/minima#customization
 [minima-disqus]: https://github.com/jekyll/minima#enabling-comments-via-disqus 
 [minima-google-analytics]: https://github.com/jekyll/minima#enabling-google-analytics
 [minima-layouts]: https://github.com/jekyll/minima/tree/master/_layouts
