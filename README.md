@@ -65,10 +65,10 @@ the intent to eventually leave the theme behind and fully customise everything.
 | Content  | [![License: CC BY 4.0][license-cc-badge]][license-cc-url] |
 | Code     | [![License: MIT][license-mit-badge]][license-mit-url]     |
 
-Content in all blog posts are licensed under the
+Content in all blog posts is licensed under the
 [Creative Commons Attribution 4.0 license][license-cc], and all
-source code in this repo and contained within any blog posts is licensed under
-the [MIT license][license-mit].
+source code in this repo, and contained within any blog posts, is licensed
+under the [MIT license][license-mit].
 
 ## Social
 
