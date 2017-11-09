@@ -88,8 +88,8 @@ under the [MIT license][license-mit].
 [license-mit]: LICENSE-MIT.txt
 [license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
 [license-mit-url]: https://opensource.org/licenses/MIT
-[minima]: https://github.com/jekyll/minima
 [localhost]: http://localhost:4000/
+[minima]: https://github.com/jekyll/minima
 [node]: https://github.com/nodejs/node
 [sass-lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint

@@ -3,6 +3,7 @@ layout: post
 title:  "Setting up a Jekyll Blog"
 date:   2017-11-09 14:00 +1100
 categories: jekyll
+comments: true
 ---
 
 Since setting up this blog and creating a development environment for it that I
