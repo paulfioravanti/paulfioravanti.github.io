@@ -42,11 +42,11 @@ the look you want for your site.
 
 # Run all the Lints
 
-## Custom Domain Setup
+# Custom Domain Setup
 
-## SSL Setup
+# SSL Setup
 
-## No Foreign Plugins
+# No Foreign Plugins
 
 [github-pages]: https://pages.github.com/
 [github-pages-supported-themes]: https://pages.github.com/themes/
