@@ -1,7 +1,7 @@
 # Blog
 
-This is the codebase for my personal blog at [`paulfioravanti.com`][blog-url].
-Created with [Jekyll][jekyll-url].
+This is the codebase for my personal blog at [`paulfioravanti.com`][].
+Created with [Jekyll][].
 
 ## Install
 
@@ -13,20 +13,22 @@ bundle install
 
 ### Development Dependencies
 
-This app uses the following [Node][node]-based dependencies during development:
+This app uses the following [Node][]-based dependencies during development:
 
-- [Sass Lint][sass-lint]: make sure styling syntax conforms to
+- [Sass Lint][]: make sure styling syntax conforms to
   community standards. Note that the [gem version][scss-lint] is deprecated.
-- [htmllint][htmllint] (via [htmllint-cli][htmllint-cli]): make sure HTML
+- [htmllint][] (via [htmllint-cli][]): make sure HTML
   syntax conforms to community standards.
+- [markdownlint][] (via [markdownlint-cli][]): make sure Markdown syntax conforms
+  to community standards.
 
 Install dependencies in the following way, and remember to re-shim whatever
-version manager is being used for Node (I use [`asdf`][asdf]), or add the `bin`
+version manager is being used for Node (I use [`asdf`][]), or add the `bin`
 folder of the Node installation to the `$PATH`, otherwise executables like
 `sass-lint` won't be available:
 
 ```sh
-npm install -g sass-lint htmllint-cli
+npm install -g sass-lint htmllint-cli markdoownlint-cli
 asdf reshim nodejs
 ```
 
@@ -38,11 +40,11 @@ asdf reshim nodejs
 bundle exec jekyll start
 ```
 
-Then, navigate to [`localhost:4000`][localhost].
+Then, navigate to [`localhost:4000`][].
 
 ### Monitor files
 
-This project uses [Guard][guard] to monitor file changes.
+This project uses [Guard][] to monitor file changes.
 
 Start Guard with the following command:
 
@@ -52,10 +54,10 @@ bundle exec guard
 
 ## Theme
 
-This blog uses the [Minima][minima] theme, as that seemed to be the theme that
+This blog uses the [Minima][] theme, as that seemed to be the theme that
 worked best out of the box with Jekyll 3.6 and was usable on
-[Github Pages][github-pages], but I'm gradually copying over and overwriting
-files with customisations (see the [`_includes`](_includes) directory), with
+[Github Pages][], but I'm gradually copying over and overwriting
+files with customisations (see the [`_includes`][] directory), with
 the intent to eventually leave the theme behind and fully customise everything.
 
 ## License
@@ -75,23 +77,26 @@ under the [MIT license][license-mit].
 [![Contact][twitter-badge]][twitter-url]<br />
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
-[asdf]: https://github.com/asdf-vm/asdf
-[blog-url]: https://paulfioravanti.com
-[github-pages]: https://pages.github.com/
-[guard]: https://github.com/guard/guard
+[`asdf`]: https://github.com/asdf-vm/asdf
+[Github Pages]: https://pages.github.com/
+[Guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli
-[jekyll-url]: https://jekyllrb.com
+[`_includes`]: _includes
+[Jekyll]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
 [license-cc-badge]: https://licensebuttons.net/l/by/4.0/80x15.png
 [license-cc-url]: https://creativecommons.org/licenses/by/4.0/
 [license-mit]: LICENSE-MIT.txt
 [license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
 [license-mit-url]: https://opensource.org/licenses/MIT
-[localhost]: http://localhost:4000/
-[minima]: https://github.com/jekyll/minima
-[node]: https://github.com/nodejs/node
-[sass-lint]: https://github.com/sasstools/sass-lint
+[`localhost:4000`]: http://localhost:4000/
+[markdownlint]: https://github.com/DavidAnson/markdownlint
+[markdownlint-cli]: https://github.com/igorshubovych/markdownlint-cli
+[Minima]: https://github.com/jekyll/minima
+[Node]: https://github.com/nodejs/node
+[`paulfioravanti.com`]: https://paulfioravanti.com
+[Sass Lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
