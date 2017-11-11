@@ -5,10 +5,10 @@ Created with [Jekyll][jekyll-url].
 
 ## Install
 
-```
-$ git clone git@github.com:paulfioravanti/paulfioravanti.github.io.git
-$ cd paulfioravanti.github.io
-$ bundle install
+```sh
+git clone git@github.com:paulfioravanti/paulfioravanti.github.io.git
+cd paulfioravanti.github.io
+bundle install
 ```
 
 ### Development Dependencies
@@ -25,17 +25,17 @@ version manager is being used for Node (I use [`asdf`][asdf]), or add the `bin`
 folder of the Node installation to the `$PATH`, otherwise executables like
 `sass-lint` won't be available:
 
-```
-$ npm install -g sass-lint htmllint-cli
-$ asdf reshim nodejs
+```sh
+npm install -g sass-lint htmllint-cli
+asdf reshim nodejs
 ```
 
 ## Usage
 
 ### Start blog server
 
-```
-$ bundle exec jekyll start
+```sh
+bundle exec jekyll start
 ```
 
 Then, navigate to [`localhost:4000`][localhost].
@@ -43,11 +43,11 @@ Then, navigate to [`localhost:4000`][localhost].
 ### Monitor files
 
 This project uses [Guard][guard] to monitor file changes.
-  
+
 Start Guard with the following command:
 
-```
-$ bundle exec guard
+```sh
+bundle exec guard
 ```
 
 ## Theme
@@ -80,7 +80,7 @@ under the [MIT license][license-mit].
 [github-pages]: https://pages.github.com/
 [guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
-[htmllint-cli]: https://github.com/htmllint/htmllint-cli 
+[htmllint-cli]: https://github.com/htmllint/htmllint-cli
 [jekyll-url]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
 [license-cc-badge]: https://licensebuttons.net/l/by/4.0/80x15.png

@@ -29,7 +29,6 @@ Github Pages, and instead deployed it using [Heroku][heroku] to its
 
 So, hello (again) blog, and here's to a new start :beers:
 
-
 [github-pages]: https://pages.github.com/
 [heroku]: https://www.heroku.com/
 [jekyll]: https://github.com/jekyll/jekyll

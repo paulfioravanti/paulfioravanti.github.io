@@ -16,7 +16,7 @@ new blog generated.
 NOTE: I used Jekyll 3.6.2 to originally generate this blog, so your mileage may
 vary depending on what version you use and when you read this post.
 
-## Choosing a theme
+# Choosing a theme
 
 If you are hosting outside of Github, then you can get themes from
 [many][jekyllthemes.org] [different][jekyllthemes.io]
@@ -34,20 +34,19 @@ desire to tinker with the CSS, made the minimalistic Minima a straightforward
 choice, but I would encourage you to experiment and pick one that best suits
 the look you want for your site.
 
-## Overriding Styling
+# Overriding Styling
 
-## Overriding _include files_
+# Overriding _include files_
 
-## Lint all the Things
+# Lint all the Things
 
-## Run all the Lints
+# Run all the Lints
 
 ## Custom Domain Setup
 
 ## SSL Setup
 
 ## No Foreign Plugins
-
 
 [github-pages]: https://pages.github.com/
 [github-pages-supported-themes]: https://pages.github.com/themes/
@@ -57,7 +56,7 @@ the look you want for your site.
 [jekyllthemes.io]: http://jekyllthemes.io/
 [minima]: https://github.com/jekyll/minima
 [minima-customisation]: https://github.com/jekyll/minima#customization
-[minima-disqus]: https://github.com/jekyll/minima#enabling-comments-via-disqus 
+[minima-disqus]: https://github.com/jekyll/minima#enabling-comments-via-disqus
 [minima-google-analytics]: https://github.com/jekyll/minima#enabling-google-analytics
 [minima-layouts]: https://github.com/jekyll/minima/tree/master/_layouts
 [themes.jekyllrc.org]: http://themes.jekyllrc.org/
