@@ -28,7 +28,7 @@ folder of the Node installation to the `$PATH`, otherwise executables like
 `sass-lint` won't be available:
 
 ```sh
-npm install -g sass-lint htmllint-cli markdoownlint-cli
+npm install -g sass-lint htmllint-cli markdownlint-cli
 asdf reshim nodejs
 ```
 
