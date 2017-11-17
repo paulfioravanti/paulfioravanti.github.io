@@ -3,5 +3,7 @@
     "allowed_elements": [
       "br"
     ]
-  }
+  },
+  "first-header-h1": false,
+  "first-line-h1": false
 }
