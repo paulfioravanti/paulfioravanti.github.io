@@ -10,13 +10,7 @@ group :red_green_refactor, halt_on_fail: true do
   end
 
   guard "process",
-        command: [
-          "markdownlint",
-          "_posts",
-          "_drafts",
-          "README.md",
-          "index.md"
-        ],
+        command: ["markdownlint", "_posts", "_drafts", "README.md", "index.md"],
         name: "markdownlint" do
     watch(%r{^_posts/.+\.md$})
     watch(%r{^.+\.md$})
