@@ -114,7 +114,7 @@ key from Pybitcointools, we could do the following:
 defmodule MasteringBitcoin.KeyToAddressECCExample do
   use Export.Python
 
-  @python_src "src"
+  @python_src "priv"
   @python_file "key-to-address-ecc-example"
 
   def private_key do
@@ -139,9 +139,10 @@ Private Key (hex) is: "e473f28e7c9dd8c46d2698ddc73af1017157f2e2979efe3c116dd35b0
 
 A few things to note here:
 
-- The `@python_src "src"` module attribute is telling `Export.Python` where
+- The `@python_src "priv"` module attribute is telling `Export.Python` where
   to go looking for Python files, so here, the Python example file lives under
-  the top level `src` directory in<br /> `src/key-to-address-ecc-example.py`
+  the top level `priv` directory in<br /> `priv/key-to-address-ecc-example.py`
+  ([as is Elixir convention][what-is-priv])
 - In `Python.call(@python_file, "bitcoin.random_key", [])`, we're calling the
   `bitcoin.random_key()` method with no arguments, hence the empty argument list
   as the final function parameter.
@@ -164,7 +165,7 @@ add that to the current code, refactoring slightly as we go along:
 defmodule MasteringBitcoin.KeyToAddressECCExample do
   use Export.Python
 
-  @python_src "src"
+  @python_src "priv"
   @python_file "key-to-address-ecc-example"
   @hex "hex"
 
@@ -293,7 +294,7 @@ defmodule MasteringBitcoin.KeyToAddressECCExample do
   # REF: https://github.com/vbuterin/pybitcointools/blob/master/bitcoin/main.py
   @n 115792089237316195423570985008687907852837564279074904382605163141518161494337
 
-  @python_src "src"
+  @python_src "priv"
   @python_file "key-to-address-ecc-example"
   @hex "hex"
 
@@ -377,7 +378,7 @@ attempt to port over more code, so keep an eye out for updates!
 [Export]: https://github.com/fazibear/export
 [Implementing Keys and Addresses]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#implementing-keys-and-addresses-in-python
 [key-to-address-elixir-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/lib/mastering_bitcoin/key_to_address_ecc_example.ex
-[key-to-address-python-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/src/key-to-address-ecc-example.py
+[key-to-address-python-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/priv/key-to-address-ecc-example.py
 [Libbitcoin]: https://github.com/libbitcoin/libbitcoin
 [mastering-bitcoin-affiliate-link]: https://www.amazon.com/gp/product/B071K7FCD4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071K7FCD4&linkCode=as2&tag=paulfioravant-20&linkId=c70c3b7b2ba56b9490dcfe334b4970ab
 [mastering-bitcoin-example-4-5]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/key-to-address-ecc-example.py
@@ -390,3 +391,4 @@ attempt to port over more code, so keep an eye out for updates!
 [Ruby]: https://www.ruby-lang.org/en/
 [Secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
 [Wallet Import Format]: https://en.bitcoin.it/wiki/Wallet_import_format
+[what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
