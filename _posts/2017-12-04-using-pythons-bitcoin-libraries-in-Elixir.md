@@ -114,7 +114,7 @@ key from Pybitcointools, we could do the following:
 defmodule MasteringBitcoin.KeyToAddressECCExample do
   use Export.Python
 
-  @python_src "priv"
+  @python_src :code.priv_dir(:mastering_bitcoin) |> Path.basename()
   @python_file "key-to-address-ecc-example"
 
   def private_key do
@@ -139,10 +139,12 @@ Private Key (hex) is: "e473f28e7c9dd8c46d2698ddc73af1017157f2e2979efe3c116dd35b0
 
 A few things to note here:
 
-- The `@python_src "priv"` module attribute is telling `Export.Python` where
-  to go looking for Python files, so here, the Python example file lives under
-  the top level `priv` directory in<br /> `priv/key-to-address-ecc-example.py`
-  ([as is Elixir convention][what-is-priv])
+- The `@python_src :code.priv_dir(:mastering_bitcoin) |> Path.basename()` module
+  attribute is telling `Export.Python` where to go looking for Python files, so
+  here, the Python example file lives under the top level `priv` directory in
+  `priv/key-to-address-ecc-example.py`
+  ([as is Elixir convention][what-is-priv]), so this attribute will evaluate to
+  be simply `"priv"`.
 - In `Python.call(@python_file, "bitcoin.random_key", [])`, we're calling the
   `bitcoin.random_key()` method with no arguments, hence the empty argument list
   as the final function parameter.
@@ -165,7 +167,7 @@ add that to the current code, refactoring slightly as we go along:
 defmodule MasteringBitcoin.KeyToAddressECCExample do
   use Export.Python
 
-  @python_src "priv"
+  @python_src :code.priv_dir(:mastering_bitcoin) |> Path.basename()
   @python_file "key-to-address-ecc-example"
   @hex "hex"
 
@@ -294,7 +296,7 @@ defmodule MasteringBitcoin.KeyToAddressECCExample do
   # REF: https://github.com/vbuterin/pybitcointools/blob/master/bitcoin/main.py
   @n 115792089237316195423570985008687907852837564279074904382605163141518161494337
 
-  @python_src "priv"
+  @python_src :code.priv_dir(:mastering_bitcoin) |> Path.basename()
   @python_file "key-to-address-ecc-example"
   @hex "hex"
 
