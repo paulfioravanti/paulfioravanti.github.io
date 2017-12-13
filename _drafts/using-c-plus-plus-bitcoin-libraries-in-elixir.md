@@ -136,14 +136,14 @@ defmodule Libbitcoin.Addr do
   private key.
   """
 
-  @src_compile """
+  @cpp_compile """
   g++ -std=c++11 -o priv/addr priv/addr.cpp \
   $(pkg-config --cflags --libs libbitcoin)
   """
   @src_execute "./priv/addr"
 
   def run do
-    Porcelain.shell(@src_compile)
+    Porcelain.shell(@cpp_compile)
 
     @src_execute
     |> Porcelain.shell()
@@ -280,7 +280,7 @@ defmodule Libbitcoin.Addr do
 
   alias Cure.Server, as: Cure
 
-  @src_compile """
+  @cpp_compile """
   g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 -x c++ \
   -o priv/addr priv/addr.cpp ./deps/cure/c_src/elixir_comm.c \
   $(pkg-config --cflags --libs libbitcoin)
@@ -288,7 +288,7 @@ defmodule Libbitcoin.Addr do
   @cpp_executable "priv/addr"
 
   def run do
-    Porcelain.shell(@src_compile)
+    Porcelain.shell(@cpp_compile)
 
     with {:ok, pid} <- Cure.start_link(@cpp_executable),
          greeting <- hello_world(pid) do
@@ -340,11 +340,388 @@ remove the `c_src/` directory from the project if you haven't already.
 
 ## Working with Libbitcoin
 
+Looking at the code in `priv/addr.cpp.orig` (the original code from the book),
+it would seem that it performs two main actions:
+
+- Generate a public key from a private key
+- Create a bitcoin address from a public key
+
+So, let's separate those two concerns into their own functions in our C++ code,
+porting over the code mostly as-is:
+
+**priv/addr.h**
+
+```cpp
+#ifndef ADDR_H
+#define ADDR_H
+#include "elixir_comm.h"
+
+std::string generate_public_key(std::string priv_key);
+std::string create_bitcoin_address(std::string pub_key);
+
+#endif
+```
+
+**priv/addr.cpp**
+
+```cpp
+#include <string>
+#include "addr.h"
+
+int main(void) {
+ // ...
+}
+
+std::string generate_public_key(std::string priv_key) {
+  bc::ec_secret decoded;
+  bc::decode_base16(decoded, priv_key);
+
+  bc::wallet::ec_private secret(decoded, bc::wallet::ec_private::mainnet_p2kh);
+
+  // Get public key.
+  bc::wallet::ec_public public_key(secret);
+  return public_key.encoded();
+}
+
+std::string create_bitcoin_address(std::string pub_key) {
+  bc::wallet::ec_public public_key = bc::wallet::ec_public::ec_public(pub_key);
+  // Compute hash of public key for P2PKH address.
+  bc::data_chunk public_key_data;
+  public_key.to_data(public_key_data);
+  const auto hash = bc::bitcoin_short_hash(public_key_data);
+
+  bc::data_chunk unencoded_address;
+  // Reserve 25 bytes
+  //   [ version:1  ]
+  //   [ hash:20    ]
+  //   [ checksum:4 ]
+  unencoded_address.reserve(25);
+  // Version byte, 0 is normal BTC address (P2PKH).
+  unencoded_address.push_back(0);
+  // Hash data
+  bc::extend_data(unencoded_address, hash);
+  // Checksum is computed by hashing data, and adding 4 bytes from hash.
+  bc::append_checksum(unencoded_address);
+  // Finally we must encode the result in Bitcoin's base58 encoding.
+  assert(unencoded_address.size() == 25);
+  const std::string address = bc::encode_base58(unencoded_address);
+  return address;
+}
+```
+
+So, that's all well and good (probably), but how can we get Elixir to tell
+C++ to call these functions? It would be nice if there was some kind of
+[Export][]-style interface where we could pass the C++ function name that we
+want called as a string from Elixir.  Alas, there aren't any (that I know of),
+so we'll have to get a bit more creative. 
+
+While searching Github for examples that used Cure, I came across the
+[elixir-interop-examples][] repo, which provided me with some inspiration on
+how to tackle this problem: get Elixir to send an integer as the first byte
+of the message to C++. This integer will represent the function to be called,
+and C++ can `switch` on it to determine what action needs to be performed.
+[Elixir binaries][] make it straightforward to be able to tinker with the
+innards of a sequence of bytes, so that's how we can proceed by updating the
+C++ code as follows:
+
+**priv/addr.h**
+
+```cpp
+// ...
+
+// Helper functions
+// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/serial.c
+void process_command(byte* buffer, int bytes_read);
+// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/erl_comm.h
+void get_string_arg(byte* buffer, char* string, int bytes_read);
+```
+
+**priv/addr.cpp**
+
+```cpp
+#include <bitcoin/bitcoin.hpp>
+#include "addr.h"
+
+const int GENERATE_PUBLIC_KEY = 1;
+const int CREATE_BITCOIN_ADDRESS = 2;
+
+int main(void) {
+  int bytes_read;
+  byte buffer[MAX_BUFFER_SIZE];
+
+  while ((bytes_read = read_msg(buffer)) > 0) {
+    process_command(buffer, bytes_read);
+  }
+
+  return 0;
+}
+
+// Process the command dependent on the integer value given in the message
+// sent from Elixir
+void process_command(byte* buffer, int bytes_read) {
+  int function = buffer[0];
+  char arg[1024];
+  get_string_arg(buffer, arg, bytes_read);
+  std::string retval;
+
+  if (bytes_read > 0) {
+    switch (function) {
+      case GENERATE_PUBLIC_KEY:
+        retval = generate_public_key(arg);
+        break;
+      case CREATE_BITCOIN_ADDRESS:
+        retval = create_bitcoin_address(arg);
+        break;
+      default:
+        fprintf(stderr, "not a valid function %i\n", function);
+        exit(1);
+    }
+    memcpy(buffer, retval.data(), retval.length());
+    send_msg(buffer, retval.size());
+  } else {
+    fprintf(stderr, "no command given");
+    exit(1);
+  }
+}
+
+void get_string_arg(byte* buffer, char* arg, int bytes_read) {
+  buffer[bytes_read] = '\0';
+  strcpy(arg, (char*) &buffer[1]);
+}
+
+std::string generate_public_key(std::string priv_key) {
+  // ...
+}
+
+std::string create_bitcoin_address(std::string pub_key) {
+  // ...
+}
+```
+
+The `main` function now immediately delegates off to `process_command`, which
+extracts the `function` indicator and `arg`ument from the bytes passed to it by
+Elixir, calls the appropriate function, and sends its return value (`retval`)
+back to Elixir.
+
+On the Elixir side, the code looks like the following:
+
+```elixir
+defmodule Libbitcoin.Addr do
+  @moduledoc """
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """
+
+  alias Cure.Server, as: Cure
+
+  @cpp_compile """
+  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 -x c++ \
+  -o priv/addr priv/addr.cpp ./deps/cure/c_src/elixir_comm.c \
+  $(pkg-config --cflags --libs libbitcoin)
+  """
+  @cpp_executable "priv/addr"
+  # Private secret key string as base16
+  @private_key """
+  038109007313a5807b2eccc082c8c3fbb988a973cacf1a7df9ce725c31b14776\
+  """
+
+  # Integers representing C++ methods
+  @generate_public_key 1
+  @create_bitcoin_address 2
+
+  def run do
+    Porcelain.shell(@cpp_compile)
+
+    with {:ok, pid} <- Cure.start_link(@cpp_executable),
+         public_key <- generate_public_key(pid),
+         bitcoin_address <- create_bitcoin_address(pid, public_key) do
+      IO.puts("Public key: #{inspect(public_key)}")
+      IO.puts("Address: #{inspect(bitcoin_address)}")
+      :ok = Cure.stop(pid)
+    end
+  end
+
+  defp generate_public_key(pid) do
+    cure_data(pid, <<@generate_public_key, @private_key>>)
+  end
+
+  defp create_bitcoin_address(pid, public_key) do
+    cure_data(pid, <<@create_bitcoin_address, public_key :: binary>>)
+  end
+
+  defp cure_data(pid, data) do
+    Cure.send_data(pid, data, :once)
+    receive do
+      {:cure_data, response} ->
+        response
+    end
+  end
+end
+```
+
+- Both `generate_public_key` and `create_bitcoin_address` send separate requests
+  out to the C++ code via Cure, in the same way that you might call some other
+  external service. Each of the binary messages has an integer as its first
+  byte, and a string taking up the rest of the message.
+- The `@generate_public_key 1` and `@create_bitcoin_address 2` module attributes
+  mirror the similarly named constants in the C++ code, so they are coupled
+  quite tightly out of necessity.
+- We're now keeping the private key on the Elixir side and passing in to C++ as
+  a parameter, rather than have its definition be on the C++ side.
+
+Before seeing if this actually works, for clarity's sake, here are the full
+C++ code samples:
+
+**priv/addr.h**
+
+```cpp
+#ifndef ADDR_H
+#define ADDR_H
+#include "elixir_comm.h"
+
+std::string generate_public_key(std::string priv_key);
+std::string create_bitcoin_address(std::string pub_key);
+
+// Helper functions
+// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/serial.c
+void process_command(byte* buffer, int bytes_read);
+// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/erl_comm.h
+void get_string_arg(byte* buffer, char* string, int bytes_read);
+
+#endif
+```
+
+**priv/addr.cpp**
+
+```cpp
+#include <bitcoin/bitcoin.hpp>
+#include "addr.h"
+
+const int GENERATE_PUBLIC_KEY = 1;
+const int CREATE_BITCOIN_ADDRESS = 2;
+
+int main(void) {
+  int bytes_read;
+  byte buffer[MAX_BUFFER_SIZE];
+
+  while ((bytes_read = read_msg(buffer)) > 0) {
+    process_command(buffer, bytes_read);
+  }
+
+  return 0;
+}
+
+// Process the command dependent on the integer value given in the message
+// sent from Elixir
+void process_command(byte* buffer, int bytes_read) {
+  int function = buffer[0];
+  char arg[1024];
+  get_string_arg(buffer, arg, bytes_read);
+  std::string retval;
+
+  if (bytes_read > 0) {
+    switch (function) {
+      case GENERATE_PUBLIC_KEY:
+        retval = generate_public_key(arg);
+        break;
+      case CREATE_BITCOIN_ADDRESS:
+        retval = create_bitcoin_address(arg);
+        break;
+      default:
+        fprintf(stderr, "not a valid function %i\n", function);
+        exit(1);
+    }
+    memcpy(buffer, retval.data(), retval.length());
+    send_msg(buffer, retval.size());
+  } else {
+    fprintf(stderr, "no command given");
+    exit(1);
+  }
+}
+
+void get_string_arg(byte* buffer, char* string, int bytes_read) {
+  buffer[bytes_read] = '\0';
+  strcpy(string, (char*) &buffer[1]);
+}
+
+std::string generate_public_key(std::string priv_key) {
+  bc::ec_secret decoded;
+  bc::decode_base16(decoded, priv_key);
+
+  bc::wallet::ec_private secret(decoded, bc::wallet::ec_private::mainnet_p2kh);
+
+  // Get public key.
+  bc::wallet::ec_public public_key(secret);
+  return public_key.encoded();
+}
+
+std::string create_bitcoin_address(std::string pub_key) {
+  // Create Bitcoin address.
+  // Normally you can use:
+  //    bc::wallet::payment_address payaddr =
+  //        public_key.to_payment_address(
+  //            bc::wallet::ec_public::mainnet_p2kh);
+  //  const std::string address = payaddr.encoded();
+
+  bc::wallet::ec_public public_key = bc::wallet::ec_public::ec_public(pub_key);
+  // Compute hash of public key for P2PKH address.
+  bc::data_chunk public_key_data;
+  public_key.to_data(public_key_data);
+  const auto hash = bc::bitcoin_short_hash(public_key_data);
+
+  bc::data_chunk unencoded_address;
+  // Reserve 25 bytes
+  //   [ version:1  ]
+  //   [ hash:20    ]
+  //   [ checksum:4 ]
+  unencoded_address.reserve(25);
+  // Version byte, 0 is normal BTC address (P2PKH).
+  unencoded_address.push_back(0);
+  // Hash data
+  bc::extend_data(unencoded_address, hash);
+  // Checksum is computed by hashing data, and adding 4 bytes from hash.
+  bc::append_checksum(unencoded_address);
+  // Finally we must encode the result in Bitcoin's base58 encoding.
+  assert(unencoded_address.size() == 25);
+  const std::string address = bc::encode_base58(unencoded_address);
+  return address;
+}
+```
+
+Now, the moment of truth. Open up an `iex` console and let's see if we can talk
+to Libbitcoin:
+
+```sh
+iex -S mix
+iex(1)> Libbitcoin.Addr.run()
+Public key: "0202a406624211f2abbdc68da3df929f938c3399dd79fac1b51b0e4ad1d26a47aa"
+Address: "1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK"
+:ok
+```
+
+Success! This may not be the most elegant way to talk to C++ code, but, for this
+use case, it works!
+
+## Conclusion
+
+This blog post was borne out of a lot of trial and error and frustration, mostly
+due to me not being able to C++ my way out of a paper bag without a
+[Stack Overflow][] safety net. So, I hope it at least assists someone who may
+be attempting to try something similar, or is reading
+_[Mastering Bitcoin][mastering-bitcoin-affiliate-link]_ as well. I have no doubt
+that I'm doing it wrong when it comes to C++, so if you have any improvement
+suggestions, please leave a comment. If you want to keep tabs on my gradual
+port over of _Mastering Bitcoin_ code over to Elixir, check out my
+[Mastering Bitcoin repo][].
+
 [Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example
 [Cure]: https://github.com/luc-tielen/Cure
 [cure-helper-functions-info]: https://github.com/luc-tielen/Cure#cc-code
 [cure-readme-examples]: https://github.com/luc-tielen/Cure#example
 [Elixir]: http://elixir-lang.github.io/
+[Elixir binaries]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
+[elixir-interop-examples]: https://github.com/asbaker/elixir-interop-examples
+[Export]: https://github.com/fazibear/export
 [`g++`]: https://www.cprogramming.com/g++.html
 [Goon]: https://github.com/alco/goon
 [Homebrew]: https://brew.sh/
@@ -354,9 +731,9 @@ remove the `c_src/` directory from the project if you haven't already.
 [mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example_run
 [mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp
 [mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp
+[Mastering Bitcoin repo]: https://github.com/paulfioravanti/mastering_bitcoin
 [Native Implemented Functions]: http://erlang.org/doc/tutorial/nif.html
 [Options Controlling C Dialect]: https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
-[Using Python's Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-elixir
-[what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
+[Stack Overflow]: https://stackoverflow.com/
