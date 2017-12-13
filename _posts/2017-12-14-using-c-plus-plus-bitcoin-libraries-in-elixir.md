@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Using C++ Bitcoin libraries in Elixir"
-date:   2017-12-11 09:20 +1100
+date:   2017-12-14 09:03 +1100
 categories: elixir bitcoin
 comments: true
 affiliate: true
 ---
 
-Following up from my previous blog post about [using Python's Bitcoin libraries
+Following up from my previous blog post about [Using Python's Bitcoin libraries
 in Elixir][], I initially mentioned that I was having trouble figuring out a way
 to get Elixir talking to C++ code, specifically to use the [Libbitcoin][]
 toolkit. After looking through a bunch of libraries that purport to solve this
@@ -117,7 +117,6 @@ Running the generated `priv/addr` executable outputs the following result:
 
 ```sh
 ./priv/addr
-
 Public key: 0202a406624211f2abbdc68da3df929f938c3399dd79fac1b51b0e4ad1d26a47aa
 Address: 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
 ```
@@ -739,4 +738,5 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
 [Stack Overflow]: https://stackoverflow.com/
+[Using Python's Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-elixir.html
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A

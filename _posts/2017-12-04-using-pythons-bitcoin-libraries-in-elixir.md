@@ -21,7 +21,8 @@ code that I could not.
 
 I have not been able to find a way to get Elixir to talk to C++ libraries
 like [Libbitcoin][], which are used in the book (if you have a good method,
-please let me know in the comments!), so this post will focus on getting Elixir
+please let me know in the comments! \[_Update 14 Dec 2017: I figured it out. See
+[Using C++ Bitcoin Libraries in Elixir][]_\]), so this post will focus on getting Elixir
 to talk to Python's [Pybitcointools][] library, within the context of the
 [Implementing Keys and Addresses][] section in Chapter 4 of the book, using
 the code in [Example 4-5][mastering-bitcoin-example-4-5].
@@ -393,5 +394,6 @@ attempt to port over more code, so keep an eye out for updates!
 [python-bytes-decode-method]: https://docs.python.org/3/library/stdtypes.html#bytes.decode
 [Ruby]: https://www.ruby-lang.org/en/
 [Secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
+[Using C++ Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir.html
 [Wallet Import Format]: https://en.bitcoin.it/wiki/Wallet_import_format
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
