@@ -163,7 +163,7 @@ Address: 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
 :ok
 ```
 
-Success! We've now been able to get Elixir to output the result of running
+It works! We've now been able to get Elixir to output the result of running
 the C++ executable, but Elixir isn't really talking directly (sending and
 receiving messages) to the code yet, so let's work on that next.
 
@@ -334,7 +334,7 @@ Hello Elixir from C++
 :ok
 ```
 
-Success! Now that we have Elixir and C++ talking to each other, it's time to
+Excellent! Now that we have Elixir and C++ talking to each other, it's time to
 actually get Elixir talking with Libbitcoin. Also, it's probably okay to
 remove the `c_src/` directory from the project if you haven't already.
 
@@ -434,6 +434,8 @@ C++ code as follows:
 void process_command(byte* buffer, int bytes_read);
 // REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/erl_comm.h
 void get_string_arg(byte* buffer, char* string, int bytes_read);
+
+#endif
 ```
 
 **priv/addr.cpp**
@@ -706,8 +708,8 @@ use case, it works!
 
 This blog post was borne out of a lot of trial and error and frustration, mostly
 due to me not being able to C++ my way out of a paper bag without a
-[Stack Overflow][] safety net. So, I hope it at least assists someone who may
-be attempting to try something similar, or is reading
+[Stack Overflow][] safety net. Regardless, I hope it at least assists someone
+who may be attempting to try something similar, or is reading
 _[Mastering Bitcoin][mastering-bitcoin-affiliate-link]_ as well. I have no doubt
 that I'm doing it wrong when it comes to C++, so if you have any improvement
 suggestions, please leave a comment. If you want to keep tabs on my gradual
@@ -737,3 +739,4 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
 [Stack Overflow]: https://stackoverflow.com/
+[what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
