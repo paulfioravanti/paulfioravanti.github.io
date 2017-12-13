@@ -10,7 +10,7 @@ affiliate: true
 
 I'm currently attempting to learn about the technical details of [Bitcoin][] and
 blockchains by reading
-[Mastering Bitcoin: Programming the Open Blockchain][mastering-bitcoin-affiliate-link].
+_[Mastering Bitcoin: Programming the Open Blockchain][mastering-bitcoin-affiliate-link]_.
 
 All the code examples in the book are in [C++][] and [Python][], but I wanted to
 see if I could port them over to [Elixir][]. There are Bitcoin libraries in
@@ -23,7 +23,7 @@ I have not been able to find a way to get Elixir to talk to C++ libraries
 like [Libbitcoin][], which are used in the book (if you have a good method,
 please let me know in the comments!), so this post will focus on getting Elixir
 to talk to Python's [Pybitcointools][] library, within the context of the
-_[Implementing Keys and Addresses][]_ section in Chapter 4 of the book, using
+[Implementing Keys and Addresses][] section in Chapter 4 of the book, using
 the code in [Example 4-5][mastering-bitcoin-example-4-5].
 
 The Python example uses the Pybitcointools library to generate a
