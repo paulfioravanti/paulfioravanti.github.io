@@ -394,6 +394,6 @@ attempt to port over more code, so keep an eye out for updates!
 [python-bytes-decode-method]: https://docs.python.org/3/library/stdtypes.html#bytes.decode
 [Ruby]: https://www.ruby-lang.org/en/
 [Secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
-[Using C++ Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir.html
+[Using C++ Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir.html
 [Wallet Import Format]: https://en.bitcoin.it/wiki/Wallet_import_format
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
