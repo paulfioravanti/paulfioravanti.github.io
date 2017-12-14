@@ -22,10 +22,10 @@ code that I could not.
 I have not been able to find a way to get Elixir to talk to C++ libraries
 like [Libbitcoin][], which are used in the book (if you have a good method,
 please let me know in the comments! \[_Update 14 Dec 2017: I figured it out. See
-[Using C++ Bitcoin Libraries in Elixir][]_\]), so this post will focus on getting Elixir
-to talk to Python's [Pybitcointools][] library, within the context of the
-[Implementing Keys and Addresses][] section in Chapter 4 of the book, using
-the code in [Example 4-5][mastering-bitcoin-example-4-5].
+[Using C++ Bitcoin Libraries in Elixir][]_\]), so this post will focus on
+getting Elixir to talk to Python's [Pybitcointools][] library, within the
+context of the [Implementing Keys and Addresses][] section in Chapter 4 of the
+book, using the code in [Example 4-5][mastering-bitcoin-example-4-5].
 
 The Python example uses the Pybitcointools library to generate a
 [private key][bitcoin-private-key], and then encode it into different formats

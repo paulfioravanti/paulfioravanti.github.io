@@ -75,7 +75,7 @@ end
 
 Install Porcelain:
 
-```
+```sh
 mix deps.get
 ```
 
@@ -190,7 +190,7 @@ mix cure.bootstrap
 
 This command will create the following file tree under the project root folder:
 
-```
+```text
 c_src
 ├── Makefile
 ├── main.c
@@ -227,7 +227,7 @@ Yes, it's okay for the `.c` file to become a `.cpp` file for our purposes.
 Next, open up each of the files and change them so that they look like
 the following:
 
-**addr.h**
+### **`priv/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -239,7 +239,8 @@ the following:
 #endif
 ```
 
-**addr.cpp**
+### **`priv/addr.cpp`**
+
 ```cpp
 #include <string>
 #include "addr.h"
@@ -348,7 +349,7 @@ it would seem that it performs two main actions:
 So, let's separate those two concerns into their own functions in our C++ code,
 porting over the code mostly as-is:
 
-**priv/addr.h**
+**`priv/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -361,7 +362,7 @@ std::string create_bitcoin_address(std::string pub_key);
 #endif
 ```
 
-**priv/addr.cpp**
+**`priv/addr.cpp`**
 
 ```cpp
 #include <string>
@@ -412,7 +413,7 @@ So, that's all well and good (probably), but how can we get Elixir to tell
 C++ to call these functions? It would be nice if there was some kind of
 [Export][]-style interface where we could pass the C++ function name that we
 want called as a string from Elixir.  Alas, there aren't any (that I know of),
-so we'll have to get a bit more creative. 
+so we'll have to get a bit more creative.
 
 While searching Github for examples that used Cure, I came across the
 [elixir-interop-examples][] repo, which provided me with some inspiration on
@@ -423,7 +424,7 @@ and C++ can `switch` on it to determine what action needs to be performed.
 innards of a sequence of bytes, so that's how we can proceed by updating the
 C++ code as follows:
 
-**priv/addr.h**
+**`priv/addr.h`**
 
 ```cpp
 // ...
@@ -437,7 +438,7 @@ void get_string_arg(byte* buffer, char* string, int bytes_read);
 #endif
 ```
 
-**priv/addr.cpp**
+**`priv/addr.cpp`**
 
 ```cpp
 #include <bitcoin/bitcoin.hpp>
@@ -573,7 +574,7 @@ end
 Before seeing if this actually works, for clarity's sake, here are the full
 C++ code samples:
 
-**priv/addr.h**
+**`priv/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -592,7 +593,7 @@ void get_string_arg(byte* buffer, char* string, int bytes_read);
 #endif
 ```
 
-**priv/addr.cpp**
+**`priv/addr.cpp`**
 
 ```cpp
 #include <bitcoin/bitcoin.hpp>
