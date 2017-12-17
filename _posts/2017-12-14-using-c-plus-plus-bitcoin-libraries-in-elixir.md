@@ -92,14 +92,22 @@ basic driver.
 
 ## Confirm C++ code can be compiled and run
 
-Next, create a `priv/` directory in the project, and copy the code from the
+Next, create a `c_src/` directory in the project, and copy the code from the
 book's [`addr.cpp`][mastering-bitcoin-example-4-3-raw] file into
-`priv/addr.cpp`.
+`c_src/addr.cpp`, and create a `priv/` directory, which is where we will output
+compiled C++ executable files.
+
+Having C source code in a `c_src/` directory is
+[Erlang convention for the location of C source code][erlang-guide-ports], but
+for artifacts that are needed in production (ie those compiled C++ executables),
+[the Elixir convention is to have them in a `priv/` folder][what-is-priv],
+so that's how we'll roll.
+
 [According to the book][mastering-bitcoin-compiling-and-running-the-addr-code],
 we should be able to compile the code using [`g++`][] in the following way:
 
 ```sh
-g++ -o priv/addr priv/addr.cpp $(pkg-config --cflags --libs libbitcoin)
+g++ -o priv/addr c_src/addr.cpp $(pkg-config --cflags --libs libbitcoin)
 ```
 
 If running this command as-is works for you, then that's great, but on my
@@ -110,7 +118,7 @@ standard plus amendments (see [Options Controlling C Dialect][] for more
 information). So, the compilation command needed to be changed to:
 
 ```sh
-g++ -std=c++11 -o priv/addr priv/addr.cpp $(pkg-config --cflags --libs libbitcoin)
+g++ -std=c++11 -o priv/addr c_src/addr.cpp $(pkg-config --cflags --libs libbitcoin)
 ```
 
 Running the generated `priv/addr` executable outputs the following result:
@@ -136,15 +144,15 @@ defmodule Libbitcoin.Addr do
   """
 
   @cpp_compile """
-  g++ -std=c++11 -o priv/addr priv/addr.cpp \
-  $(pkg-config --cflags --libs libbitcoin)
+  g++ -std=c++11 $(pkg-config --cflags --libs libbitcoin) \
+  c_src/addr.cpp -o priv/addr
   """
-  @src_execute "./priv/addr"
+  @cpp_executable "priv/addr"
 
   def run do
     Porcelain.shell(@cpp_compile)
 
-    @src_execute
+    @cpp_executable
     |> Porcelain.shell()
     |> Map.fetch!(:out)
     |> IO.write()
@@ -188,7 +196,7 @@ C++ and Elixir:
 mix cure.bootstrap
 ```
 
-This command will create the following file tree under the project root folder:
+This command will add the following files to the `c_src` directory:
 
 ```text
 c_src
@@ -197,11 +205,10 @@ c_src
 └── main.h
 ```
 
-At the time of this writing, Cure is hardcoded to assume that you want all
-C/C++ code dealt with inside a `c_src` directory, which I think goes against
-the Elixir convention of having [artifacts that you need in production
-alongside your code in the `priv` directory][what-is-priv], so we'll begin the
-process of moving the bootstrap code over to `priv/`.
+- `Makefile`: a template to automatically build a C++ executable including
+  Cure's libraries. We'll leave this for now, but get back to it later on.
+- `main.c`: Cure's base C file to communicate between C/C++ and Elixir.
+- `main.h`: The header file for `main.c`
 
 ## Hello C++
 
@@ -212,14 +219,14 @@ We are going to need the original `addr.cpp` code for reference, so let's first
 store a copy of the original:
 
 ```sh
-mv priv/addr.cpp priv/addr.cpp.orig
+mv c_src/addr.cpp c_src/addr.cpp.orig
 ```
 
 Next, we'll move over the Cure-generated files to the be the new `addr` files:
 
 ```sh
-mv c_src/main.h priv/addr.h
-mv c_src/main.c priv/addr.cpp
+mv c_src/main.h c_src/addr.h
+mv c_src/main.c c_src/addr.cpp
 ```
 
 Yes, it's okay for the `.c` file to become a `.cpp` file for our purposes.
@@ -227,7 +234,7 @@ Yes, it's okay for the `.c` file to become a `.cpp` file for our purposes.
 Next, open up each of the files and change them so that they look like
 the following:
 
-### **`priv/addr.h`**
+### **`c_src/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -239,7 +246,7 @@ the following:
 #endif
 ```
 
-### **`priv/addr.cpp`**
+### **`c_src/addr.cpp`**
 
 ```cpp
 #include <string>
@@ -264,9 +271,9 @@ int main(void) {
 The code here reads in the message (an array of bytes) that gets brought in from
 Elixir via the `read_msg` function that Cure provides, stores it in a
 `buffer`, copies it into a C++ `param` string, interpolates it into a `greeting`
-message, copies the `greeting` back into the `buffer`, and sends it back to
-Elixir via the `send_msg` function, also provided by Cure. More information
-about the I/O functions provided by cure can be found
+message, copies the `greeting` back into the `buffer`, and finally sends it back
+to Elixir via the `send_msg` function, also provided by Cure. More information
+about the I/O functions provided by Cure can be found
 [here][cure-helper-functions-info].
 
 Next, change the Elixir code to use Cure to send messages to C++:
@@ -281,9 +288,10 @@ defmodule Libbitcoin.Addr do
   alias Cure.Server, as: Cure
 
   @cpp_compile """
-  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 -x c++ \
-  -o priv/addr priv/addr.cpp ./deps/cure/c_src/elixir_comm.c \
-  $(pkg-config --cflags --libs libbitcoin)
+  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 \
+  $(pkg-config --cflags --libs libbitcoin) \
+  -x c++ ./deps/cure/c_src/elixir_comm.c \
+  c_src/addr.cpp -o priv/addr
   """
   @cpp_executable "priv/addr"
 
@@ -313,6 +321,9 @@ Some things to note about this code:
   was mostly a case of going through the `c_src/Makefile` that Cure generated as
   part of its bootstrapping process, and reconstructing the compilation command
   to include all the necessary Cure headers and libraries.
+- `-x c++ ./deps/cure/c_src/elixir_comm.c` is telling the compiler to treat
+  Cure's generated `elixir_comm.c` file as a C++ file (otherwise the `g++`
+  compiler will output warnings).
 - Cure's default way of opening a port to a C++ program is by the use of the
   `Cure.load()` API, which "starts a supervisor which supervises all of its
   children (a child in this case is a GenServer that communicates with a C/C++
@@ -335,12 +346,11 @@ Hello Elixir from C++
 ```
 
 Excellent! Now that we have Elixir and C++ talking to each other, it's time to
-actually get Elixir talking with Libbitcoin. Also, it's probably okay to
-remove the `c_src/` directory from the project if you haven't already.
+actually get Elixir talking with Libbitcoin.
 
 ## Working with Libbitcoin
 
-Looking at the code in `priv/addr.cpp.orig` (the original code from the book),
+Looking at the code in `c_src/addr.cpp.orig` (the original code from the book),
 it would seem that it performs two main actions:
 
 - Generate a public key from a private key
@@ -349,7 +359,7 @@ it would seem that it performs two main actions:
 So, let's separate those two concerns into their own functions in our C++ code,
 porting over the code mostly as-is:
 
-**`priv/addr.h`**
+**`c_src/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -362,7 +372,7 @@ std::string create_bitcoin_address(std::string pub_key);
 #endif
 ```
 
-**`priv/addr.cpp`**
+**`c_src/addr.cpp`**
 
 ```cpp
 #include <string>
@@ -424,7 +434,7 @@ and C++ can `switch` on it to determine what action needs to be performed.
 innards of a sequence of bytes, so that's how we can proceed by updating the
 C++ code as follows:
 
-**`priv/addr.h`**
+**`c_src/addr.h`**
 
 ```cpp
 // ...
@@ -438,7 +448,7 @@ void get_string_arg(byte* buffer, char* string, int bytes_read);
 #endif
 ```
 
-**`priv/addr.cpp`**
+**`c_src/addr.cpp`**
 
 ```cpp
 #include <bitcoin/bitcoin.hpp>
@@ -517,9 +527,10 @@ defmodule Libbitcoin.Addr do
   alias Cure.Server, as: Cure
 
   @cpp_compile """
-  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 -x c++ \
-  -o priv/addr priv/addr.cpp ./deps/cure/c_src/elixir_comm.c \
-  $(pkg-config --cflags --libs libbitcoin)
+  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 \
+  $(pkg-config --cflags --libs libbitcoin) \
+  -x c++ ./deps/cure/c_src/elixir_comm.c \
+  c_src/addr.cpp -o priv/addr
   """
   @cpp_executable "priv/addr"
   # Private secret key string as base16
@@ -574,7 +585,7 @@ end
 Before seeing if this actually works, for clarity's sake, here are the full
 C++ code samples:
 
-**`priv/addr.h`**
+**`c_src/addr.h`**
 
 ```cpp
 #ifndef ADDR_H
@@ -593,7 +604,7 @@ void get_string_arg(byte* buffer, char* string, int bytes_read);
 #endif
 ```
 
-**`priv/addr.cpp`**
+**`c_src/addr.cpp`**
 
 ```cpp
 #include <bitcoin/bitcoin.hpp>
@@ -704,7 +715,142 @@ Address: "1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK"
 Success! This may not be the most elegant way to talk to C++ code, but, for this
 use case, it works!
 
-## Conclusion
+## Improve Build Automation with a Makefile
+
+Now that we have everything working as expected, we can make the build process
+more maintainable for the future if we take the compile command that we
+currently have in the Elixir `@cpp_compile` module attribute, and put it
+back in C-land inside the `Makefile`. So, building on the `Makefile` that Cure
+bootstrap provided for us, add some more code so it looks like the following:
+
+**`c_src/Makefile`**
+
+```Makefile
+CC = g++ -std=c++11
+APP_DIR = $(shell dirname $(shell pwd))
+CURE_DEPS_DIR = $(APP_DIR)/deps/cure/c_src
+CURE_DEPS = -I$(CURE_DEPS_DIR) -L$(CURE_DEPS_DIR)
+ELIXIR_COMM_C = -x c++ $(CURE_DEPS_DIR)/elixir_comm.c
+LIBBITCOIN_DEPS = $(shell pkg-config --cflags --libs libbitcoin)
+C_FLAGS = $(CURE_DEPS) $(ELIXIR_COMM_C) $(LIBBITCOIN_DEPS) -O3
+PRIV_DIR = $(APP_DIR)/priv
+C_SRC_DIR = $(APP_DIR)/c_src
+EXECUTABLES = addr
+
+all: $(EXECUTABLES)
+# REF: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
+# $< - prerequisite file, $@ - executable file
+$(EXECUTABLES): %: %.cpp
+	$(CC) $(C_FLAGS) $(C_SRC_DIR)/$< -o $(PRIV_DIR)/$@
+```
+
+A few notes about this `Makefile` that I learned when figuring out its correct
+incantations:
+
+- When you want to call a shell function inside a `Makefile` that would
+  normally look something like `$(ls)` on the command line, since the `$()`
+  syntax is used for Makefile internal
+  [variable referencing][makefile-variable-referencing], the syntax then becomes
+  `$(shell ls)` (see [The `shell` function][makefile-shell-function]).
+- Set up of the `EXECUTABLES` statement, and the code below it, means that
+  when `make all` is run, for each of the filenames in that `EXECUTABLES` list
+  (ie this list could be added to: `EXECUTABLES = addr foo bar`), the
+  `$(CC) $(C_FLAGS) $(C_SRC_DIR)/$< -o $(PRIV_DIR)/$@` command gets run for each
+  of them (for example `$<` gets subbed out for `addr.cpp` and `$@` gets subbed
+  out for `addr`). More information about this code structure for `Makefile`s
+  can be found in Makefile's
+  [Static Usage documentation][makefile-static-usage].
+
+Now, you can get Cure to compile all your C++ executables for you via `mix`:
+
+```sh
+mix compile.cure
+```
+
+If you want to have this done automatically when you compile your Elixir code,
+you can add the Cure compiler to the list of your project's compilers in
+`mix.exs`:
+
+```elixir
+defmodule Libbitcoin.Mixfile do
+  use Mix.Project
+
+  def project do
+    [
+      # ...
+      compilers: Mix.compilers ++ [:cure, :"cure.deps"]
+    ]
+  end
+
+  # ...
+end
+```
+
+Note, though, that if you do this, _every time_ a process calls `mix compile`,
+the C++ executables will be re-compiled. So, it may end up slowing down, say,
+the running of a set of tasks in a [mix test.watch][] process, as each task will
+end up re-compiling the C++ code (potentially unnecessarily) before it runs.
+In this case, it may be best to just add a `compile.cure` task to run before any
+of the others. For other Cure-based compilation options see its
+[README][cure-compile-options].
+
+Since we've now moved all the responsibility for C compilation into the
+`Makefile`, we can cull some code from `addr.ex` to create the final file:
+
+```elixir
+defmodule Libbitcoin.Addr do
+  @moduledoc """
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """
+
+  alias Cure.Server, as: Cure
+
+  @cpp_executable "priv/addr"
+  # Private secret key string as base16
+  @private_key """
+  038109007313a5807b2eccc082c8c3fbb988a973cacf1a7df9ce725c31b14776\
+  """
+
+  # Integers representing C++ methods
+  @generate_public_key 1
+  @create_bitcoin_address 2
+
+  def run do
+    with {:ok, pid} <- Cure.start_link(@cpp_executable),
+         public_key <- generate_public_key(pid),
+         bitcoin_address <- create_bitcoin_address(pid, public_key) do
+      IO.puts("Public key: #{inspect(public_key)}")
+      IO.puts("Address: #{inspect(bitcoin_address)}")
+      :ok = Cure.stop(pid)
+    end
+  end
+
+  defp generate_public_key(pid) do
+    cure_data(pid, <<@generate_public_key, @private_key>>)
+  end
+
+  defp create_bitcoin_address(pid, public_key) do
+    cure_data(pid, <<@create_bitcoin_address, public_key :: binary>>)
+  end
+
+  defp cure_data(pid, data) do
+    Cure.send_data(pid, data, :once)
+    receive do
+      {:cure_data, response} ->
+        response
+    end
+  end
+end
+```
+
+Elixir now need to know nothing about C++ source code compilation:
+only that it needs to target a `@cpp_executable` file when it wants to talk
+with C++. Porcelain also now has nothing specifically to do anymore, so it can be
+safely removed from the project `mix.exs` file, and its configuration removed
+from `config.exs`.
+
+## Final Thoughts
 
 This blog post was borne out of a lot of trial and error and frustration, mostly
 due to me not being able to C++ my way out of a paper bag without a
@@ -718,22 +864,28 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 
 [Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example
 [Cure]: https://github.com/luc-tielen/Cure
+[cure-compile-options]: https://github.com/luc-tielen/Cure#start-developing-in-cc
 [cure-helper-functions-info]: https://github.com/luc-tielen/Cure#cc-code
 [cure-readme-examples]: https://github.com/luc-tielen/Cure#example
 [Elixir]: http://elixir-lang.github.io/
 [Elixir binaries]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
 [elixir-interop-examples]: https://github.com/asbaker/elixir-interop-examples
+[erlang-guide-ports]: https://erlang.mk/guide/ports.html
 [Export]: https://github.com/fazibear/export
 [`g++`]: https://www.cprogramming.com/g++.html
 [Goon]: https://github.com/alco/goon
 [Homebrew]: https://brew.sh/
 [Libbitcoin]: https://github.com/libbitcoin/libbitcoin
 [Libbitcoin's installation instructions]: https://github.com/libbitcoin/libbitcoin#installation
+[makefile-shell-function]: https://www.gnu.org/software/make/manual/html_node/Shell-Function.html
+[makefile-static-usage]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
+[makefile-variable-referencing]: https://www.gnu.org/software/make/manual/html_node/Reference.html
 [mastering-bitcoin-affiliate-link]: https://www.amazon.com/gp/product/B071K7FCD4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071K7FCD4&linkCode=as2&tag=paulfioravant-20&linkId=c70c3b7b2ba56b9490dcfe334b4970ab
 [mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example_run
 [mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp
 [mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp
 [Mastering Bitcoin repo]: https://github.com/paulfioravanti/mastering_bitcoin
+[mix test.watch]: https://github.com/lpil/mix-test.watch
 [Native Implemented Functions]: http://erlang.org/doc/tutorial/nif.html
 [Options Controlling C Dialect]: https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html
 [Porcelain]: https://github.com/alco/porcelain
