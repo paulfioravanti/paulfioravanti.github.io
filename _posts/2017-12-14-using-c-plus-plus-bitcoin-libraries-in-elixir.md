@@ -844,7 +844,7 @@ defmodule Libbitcoin.Addr do
 end
 ```
 
-Elixir now need to know nothing about C++ source code compilation:
+Elixir now needs to know nothing about C++ source code compilation:
 only that it needs to target a `@cpp_executable` file when it wants to talk
 with C++. Porcelain also now has nothing specifically to do anymore, so it can be
 safely removed from the project `mix.exs` file, and its configuration removed
