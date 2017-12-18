@@ -1,9 +1,12 @@
 {
+  "first-header-h1": false,
+  "first-line-h1": false,
+  "no-hard-tabs": {
+    "code_blocks": false
+  },
   "no-inline-html": {
     "allowed_elements": [
       "br"
     ]
-  },
-  "first-header-h1": false,
-  "first-line-h1": false
+  }
 }
