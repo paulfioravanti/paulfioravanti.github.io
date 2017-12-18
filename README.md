@@ -37,7 +37,7 @@ asdf reshim nodejs
 ### Start blog server
 
 ```sh
-bundle exec jekyll start
+bundle exec jekyll liveserve --drafts
 ```
 
 Then, navigate to [`localhost:4000`][].
