@@ -227,7 +227,7 @@ GEM
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
-    octokit (4.7.0)
+    octokit (4.8.0)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.16.1)
       forwardable-extended (~> 2.6)
@@ -273,5 +273,8 @@ DEPENDENCIES
   guard-process (~> 1.2)
   hawkins (~> 2.0)
 
+RUBY VERSION
+   ruby 2.5.0p0
+
 BUNDLED WITH
-   1.16.0
+   1.16.1

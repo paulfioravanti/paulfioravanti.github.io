@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+ruby "2.5.0"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
