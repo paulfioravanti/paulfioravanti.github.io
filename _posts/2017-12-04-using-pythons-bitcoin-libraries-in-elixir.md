@@ -1,5 +1,7 @@
 ---
-redirect_from: /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-Elixir
+redirect_from:
+  - /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-Elixir
+  - /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-elixir.html
 layout: post
 title:  "Using Python's Bitcoin libraries in Elixir"
 date:   2017-12-04 17:20 +1100
