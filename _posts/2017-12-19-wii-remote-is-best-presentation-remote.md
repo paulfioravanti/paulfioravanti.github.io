@@ -45,7 +45,7 @@ different (and incompatible) Bluetooth connection drivers to later batches of
 Wii Remote Pluses (device code `RVL-CNT-01-TR`). My Wii Remote Plus registered
 as the latter device code, so it looked like I'd just purchased a Wii
 Remote-shaped paperweight since I did not even have a Wii console to use it
-with.  
+with.
 
 I was just about to go hunting on auction sites and in second-hand game shops,
 when a friend reached out via Twitter who was willing to graciously swap his
