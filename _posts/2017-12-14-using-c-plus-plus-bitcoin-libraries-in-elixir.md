@@ -100,7 +100,7 @@ compiled C++ executable files.
 
 Having C source code in a `c_src/` directory is
 [Erlang convention for the location of C source code][erlang-guide-ports], but
-for artifacts that are needed in production (ie those compiled C++ executables),
+for artefacts that are needed in production (ie those compiled C++ executables),
 [the Elixir convention is to have them in a `priv/` folder][what-is-priv],
 so that's how we'll roll.
 
@@ -512,8 +512,8 @@ std::string create_bitcoin_address(std::string pub_key) {
 ```
 
 The `main` function now immediately delegates off to `process_command`, which
-extracts the `function` indicator and `arg`ument from the bytes passed to it by
-Elixir, calls the appropriate function, and sends its return value (`retval`)
+extracts the `function` indicator and `arg` argument from the bytes passed to it
+by Elixir, calls the appropriate function, and sends its return value (`retval`)
 back to Elixir.
 
 On the Elixir side, the code looks like the following:
@@ -758,7 +758,7 @@ incantations:
   (ie this list could be added to: `EXECUTABLES = addr foo bar`), the
   `$(CC) $(C_FLAGS) $(C_SRC_DIR)/$< -o $(PRIV_DIR)/$@` command gets run for each
   of them (for example `$<` gets subbed out for `addr.cpp` and `$@` gets subbed
-  out for `addr`). More information about this code structure for `Makefile`s
+  out for `addr`). More information about this code structure for a `Makefile`
   can be found in Makefile's
   [Static Usage documentation][makefile-static-usage].
 
@@ -847,8 +847,8 @@ end
 
 Elixir now needs to know nothing about C++ source code compilation:
 only that it needs to target a `@cpp_executable` file when it wants to talk
-with C++. Porcelain also now has nothing specifically to do anymore, so it can be
-safely removed from the project `mix.exs` file, and its configuration removed
+with C++. Porcelain also now has nothing specifically to do any more, so it can
+be safely removed from the project `mix.exs` file, and its configuration removed
 from `config.exs`.
 
 ## Final Thoughts

@@ -44,7 +44,7 @@ If you are hosting outside of Github, then you can get themes from
 
 After generating a few different test blogs and applying different themes, I
 found that [Minima][], the default theme, is the one that works most
-seemlessly out-of-the-box: it includes [all the layouts][minima-layouts] that a
+seamlessly out-of-the-box: it includes [all the layouts][minima-layouts] that a
 newly-generated site wants by default, as well as integrations for
 [Disqus comments][minima-disqus] and
 [Google Analytics][minima-google-analytics]. This ease of use, coupled with my
@@ -79,7 +79,7 @@ bundle exec jekyll liveserve --drafts
 
 Hawkins does not cover any Markdown in a Jekyll application's `README` file, so
 if you change it often, or just want a process to monitor it, install Grip
-(I use [Homebrew][]), and run it in a seperate terminal window:
+(I use [Homebrew][]), and run it in a separate terminal window:
 
 ```sh
 brew install grip
@@ -233,7 +233,7 @@ Since I had my own custom name domain, I wanted to use it with the Jekyll blog
 on Github Pages rather than the default domain of `<username>.github.io`.
 
 Luckily, [Namecheap][], my registrar for [paulfioravanti.com][], has a fantastic
-[article in their knowledgebase][namecheap-github-pages] that took me through
+[article in their knowledge base][namecheap-github-pages] that took me through
 all the steps I needed to link my domain to Github Pages. Although specific
 to Namecheap, I would wager the information is generic enough to help anyone
 else wanting to do the same thing.

@@ -221,7 +221,7 @@ string "hex">)`.
 
 When Elixir/Erlang passes binary information to Python 3, it receives the
 information as [`b'information'`][python-b-character]: a literal sequence of
-bytes (as apposed to Python 2, which would receive this data as a string;
+bytes (as opposed to Python 2, which would receive this data as a string;
 explanation from
 [Erlport data types mapping documentation][erlport-data-types-mapping] to the
 rescue here again), so it looks like we need to write a Python-side wrapper
