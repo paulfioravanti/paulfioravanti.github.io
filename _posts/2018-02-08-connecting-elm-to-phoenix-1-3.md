@@ -130,7 +130,9 @@ consider having the Elm files compiled out into the `vendor` folder a
 hack/workaround for now (since code that we write in the `elm` directory does
 not constitute an external library). If you have been able to use
 `before`/`after` compilation order statements in a Phoenix/Elm project, please
-leave a comment with a link to your config!
+leave a comment with a link to your config! **[Update 2018-02-16]** See the
+[update][] below that puts your code back in the `js/` directory, where it
+belongs:
 
 ## Display Elm app in Phoenix template
 
@@ -204,6 +206,55 @@ class="img-responsive"
 Great! You're now successfully bootstrapped to start building out your new
 Phoenix-and-Elm powered app!
 
+<br />
+
+----
+
+<br />
+
+### Update 2018-02-16
+
+To put the Elm-generated Javascript file into the `js` directory
+(rather than in `vendor`, which should only be for third-party code), and then
+have the app use it properly, edit the codebase in the following way:
+
+**``assets/brunch-config.js``**
+
+```js
+exports.config = {
+  // ...
+
+  // Specify outputFolder to be in the js/ directory, along with app.js
+  plugins: {
+    elmBrunch: {
+      elmFolder: "elm",
+      mainModules: ["src/Main.elm"],
+      outputFolder: "../js",
+      outputFile: "elm.js",
+      makeParameters: ["--warn"]
+    },
+    // ...
+  }
+  // ...
+}
+```
+
+Then, _specifically_ import the `Elm` variable in from `elm.js`,
+now located in the same directory as `app.js`, rather than just assuming
+it is available to use:
+
+**`assets/js/app.js`**
+
+```js
+import Elm from "./elm"
+
+const elmDiv = document.getElementById("elm-main");
+Elm.Main.embed(elmDiv);
+```
+
+[Back to "Display Elm app in Phoenix template"][]
+
+[Back to "Display Elm app in Phoenix template"]: #display-elm-app-in-phoenix-template
 [Brunch]: http://brunch.io/
 [Brunch's file config documentation]: http://brunch.io/docs/config#-files-
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
@@ -213,3 +264,4 @@ Phoenix-and-Elm powered app!
 [Phoenix]: http://phoenixframework.org/
 [Phoenix 1.3]: http://phoenixframework.org/blog/phoenix-1-3-0-released
 [phoenix-installation]: https://hexdocs.pm/phoenix/installation.html#content
+[update]: #update-2018-02-16
