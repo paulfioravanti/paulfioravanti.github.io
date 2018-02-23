@@ -223,15 +223,22 @@ have the app use it properly, edit the codebase in the following way:
 ```js
 exports.config = {
   // ...
-
-  // Specify outputFolder to be in the js/ directory, along with app.js
   plugins: {
+    // Specify outputFolder to be in the js/ directory, along with app.js
     elmBrunch: {
       elmFolder: "elm",
       mainModules: ["src/Main.elm"],
       outputFolder: "../js",
       outputFile: "elm.js",
       makeParameters: ["--warn"]
+    },
+
+    // Do not use ES6 compiler in vendor or Elm-generated Javascript code.
+    babel: {
+      ignore: [
+        /vendor/,
+        "js/elm.js"
+      ]
     },
     // ...
   }
