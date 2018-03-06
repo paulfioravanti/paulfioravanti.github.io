@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Migrating a Phoenix and Elm app from REST to GraphQL"
-date:   2018-03-05 09:55 +1100
+date:   2018-03-07 09:10 +1100
 categories: elixir phoenix elm rest graphql api
 comments: true
 ---
@@ -23,7 +23,7 @@ using REST to using GraphQL, including:
 
 - Adding [GraphQL schemas and types][] to the Phoenix back end
 - Migrating from Phoenix controllers to [resolvers][GraphQL resolvers]
-- Migrating Elm-side JSON response decoding from [`JSON.Decode`][] to
+- Migrating Elm-side JSON response decoding from using [`JSON.Decode`][] to
   [`ValueSpec`][] from the [`elm-graphql`] Elm package.
 - Translating GraphQL requests created in [GraphiQL][] into Elm code, and
   sending them to Phoenix
@@ -43,7 +43,7 @@ I learned a lot from coding up the app while reading those posts, and I thank
 Ricardo sincerely for putting the time into his write-ups! Afterwards, I
 upgraded the app to Phoenix 1.3, played around with the codebase, and put
 my version of it in its own Github repository, so it is this version of the app
-that we will use. So, if you are following along at home, please clone
+that we will use. If you are following along at home, please clone
 [my repo][Paul's repo] and follow the `README` instructions to get up and
 running, or you can skip straight to the finished product, which is in the
 repo's [`graphql` branch][Paul's repo graphql branch].
@@ -139,10 +139,10 @@ contactsApiUrl =
     "/api/v1/contacts"
 ```
 
-The two main models in the Elm app are `Contact` and `ContactList`, and code
-related to how to fetch information to fill the [records][Elm records] of these
-models is kept in `Commands` files under directories named after the model
-itself.
+The two main models in the Elm app are [`Contact`][Contact Elm Model] and
+[`ContactList`][ContactList Elm Model], and code related to how to fetch
+information to fill the [records][Elm records] of these models is kept in
+`Commands` files under directories named after the model itself.
 
 #### Contact
 
@@ -173,9 +173,9 @@ fetchContact id =
 ```
 
 When `Contact.Commands.fetchContact` is called within the Elm app, a `Cmd` is
-sent to the Elm Runtime telling it to send a request to the `apiUrl` (looking
-something like `api/v1/contacts/5`), then decode the response using the
-`Contact.Decoder`, and send a `Msg` of type `ContactMsg FetchContact`.
+sent to the Elm Runtime, with a `Msg` type of `ContactMsg FetchContact`, telling
+it to send a request to the `apiUrl` (looking something like
+`api/v1/contacts/5`), and decode the response using `Contact.Decoder`.
 
 The decoder used for a `Contact` looks like the following:
 
@@ -305,13 +305,13 @@ and `search` parameters, resulting in an `apiUrl` that looks something like
 `api/v1/contacts?search=paul&page=2`.
 
 Just like with the contact API call, we decode the response, this time using the
-`ContactList.Decoder`, and then send a `Msg` of type
+`ContactList.Decoder`, and then send a `Cmd` with a `Msg` of type
 `ContactListMsg FetchContactList`, which will then be handled in the
 `ContactList.Update.update` function.
 
-The `ContactList.Decoder` itself delegates most of its logic to
+The `ContactList.Decoder` itself delegates its `Contact`-decoding logic to
 `Contact.Decoder`, defining only fields related to data about a paginated list
-of records.
+of records:
 
 **`assets/elm/src/ContactList/Decoder.elm`**
 
@@ -339,9 +339,9 @@ decoder =
 ```
 
 The reason that the `field` for a list of contacts is specifically named
-`"entries"` is due to the Phoenix app using [Scrivener.Ecto][] for pagination,
-which returns a [`Scrivener.Page`][] struct that contains the list of items
-its paginating under an `:entries` map key.
+`"entries"` is due to the Phoenix app using [Scrivener.Ecto][] for pagination.
+Paginated contact lists are provided in a [`Scrivener.Page`][] struct, that
+contains the list of items its paginating under an `:entries` map key.
 
 And I think that about covers the request/response handling code on the front
 end. So, it looks like we will need to:
@@ -360,10 +360,10 @@ So, without further ado, let's tackle migration of the back end first.
 
 ### Absinthe
 
-[Absinthe][] is pretty much the go-to toolkit for using GraphQL in Elixir, with
-its authors pretty much [writing the book][Absinthe PragProg Book] on the
-subject, hence we will be use it for this project. So, open up `mix.exs`, and
-add the following libraries to get it installed for Phoenix:
+[Absinthe][] is the go-to toolkit for using GraphQL in Elixir, with its authors
+pretty much [writing the book][Absinthe PragProg Book] on the subject, hence we
+will be use it in this project. So, open up `mix.exs`, and add the following
+libraries to get it installed for Phoenix:
 
 **`mix.exs`**
 
@@ -482,7 +482,7 @@ defmodule PhoenixAndElmWeb.ContactResolver do
 end
 ```
 
-This resolver look suspiciously like the original REST `ContactController`, and
+This resolver looks suspiciously like the original REST `ContactController`, and
 this is mainly thanks to having the `AddressBook` context hide away all of the
 complexity around preparing contact data sets for delivery to the front end.
 Handy!
@@ -619,15 +619,15 @@ from controllers to resolvers is complete, it is safe to delete
 ## Migrate Front End to GraphQL
 
 Before we start, we will need a GraphQL package for Elm, and for this project,
-let's use [`elm-graphql`][]. Install it in the `assets` directory:
+we will use [`elm-graphql`][]. Let's install it directly in the Elm app:
 
 ```sh
 cd assets/elm
 elm-package install jamesmacaulay/elm-graphql
 ```
 
-Now, since the API URL has changed, the first thing we need to do is make our
-easiest edit, and tell Elm where to send requests to:
+Now, since the Phoenix-side API URL has changed, the first thing we need to do
+is make our easiest edit, and tell Elm the new location to send requests to:
 
 **`assets/elm/src/Commands.elm`**
 
@@ -671,16 +671,17 @@ fetchContact id =
 Once we've built the GraphQL request to fetch a contact (whose
 `Contact.Request` module we will create next), we:
 
-- use [`GraphQL.Client.Http.sendQuery`][] create a `Task` to send the query off
-  to the `apiUrl`
+- use [`GraphQL.Client.Http.sendQuery`][] to create a `Task` to send the query
+  off to the `apiUrl`
 - ask the Elm runtime to `attempt` to run that `Task`
 - send a `Msg` of type `ContactMsg FetchContact`, which gets handled just like
   before in `Contact.Update` (no changes needed to that file)
 
-Now, let's create that `Contact.Request` to replace the `Contact.Decoder`.
-Unlike in GraphiQL, we cannot use raw GraphQL queries in Elm-land, so we will
-have to port the content of the query to Elm (but let's keep the GraphQL query
-that we want generated as a comment so we can keep our bearing):
+Now, let's create that `Contact.Request` module to replace the
+`Contact.Decoder`.  Unlike in GraphiQL, we cannot use raw GraphQL queries in
+Elm-land, so we will have to port the content of the query to Elm (but let's
+keep the GraphQL query that we want generated as a comment, just so we can keep
+our bearings):
 
 **`assets/elm/src/Contact/Request.elm`**
 
@@ -769,7 +770,7 @@ the code that we have in `Contact.Decoder`, while `fetchContact`:
   sent to the `apiUrl` in `Contact.Commands`
 
 One final small change is to make sure that the `Contact.Messages` file,
-which have been referencing the [`Http`][] library, now need to reference
+which has been referencing the [`Http`][] library, now needs to reference
 [`GraphQL.Client.Http`][] instead:
 
 **`assets/elm/src/Contact/Messages.elm`**
@@ -796,8 +797,8 @@ class="img-responsive"
 The sample data in the app is generated randomly, so the contact you see from
 the URL above will most likely be different, but, it works! Performing a search,
 or navigating to the root page of the app, or doing anything that results in
-displaying a list of contacts will _not_ work just yet, though, so let's get
-polish that task off and finish up this migration.
+displaying a list of contacts will _not_ work just yet, though, so let's polish
+that task off and finish up this migration.
 
 ### Contact List
 
@@ -937,24 +938,33 @@ Now, you should be able to view any page in the app that displays a list of
 contacts. The GraphQL migration is complete, and you can safely remove the
 `Decoder` files from the application.
 
+> Any issues getting things to work? Have a look at the
+[`graphql` branch][Paul's repo graphql branch] and see if there are any
+differences from your code.
+
 ## Wrapping Up
 
 There is so much more to GraphQL than what I've managed to fit into this
 admittedly long blog post. We only dealt with queries, and did not even touch
 other GraphQL fundamentals like [mutations][GraphQL mutations], which cover
-modifying server-side data.
+modifying server-side data (though take a look at the
+[Elm hipster stack repo][] for some good examples of that).
 
 However, I hope that you enjoyed this small taste of Phoenix, Elm, and GraphQL
-working together, and if you join me in making further inroads with this tech
-stack moving forward, I would love to hear about it.
+working together, and if you join me in making further inroads with this fully
+functional tech
+stack moving forward, I would love to hear about it!
 
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
 [API]: https://en.wikipedia.org/wiki/Application_programming_interface
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
+[Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
+[ContactList Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/ContactList/Model.elm
 [Elm]: http://elm-lang.org/
 [`elm-graphql`]: https://github.com/jamesmacaulay/elm-graphql
+[Elm hipster stack repo]: https://github.com/carleryd/elm-hipster-stack
 [Elm records]: http://elm-lang.org/docs/records
 [GraphiQL]: https://github.com/graphql/graphiql
 [GraphQL]: http://graphql.org/
@@ -964,7 +974,7 @@ stack moving forward, I would love to hear about it.
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
 [GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
-[`Http` library]: https://github.com/elm-lang/http
+[`Http`]: https://github.com/elm-lang/http
 [JSON]: https://www.json.org/
 [`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode
 [Navigation package]: https://github.com/elm-lang/navigation
