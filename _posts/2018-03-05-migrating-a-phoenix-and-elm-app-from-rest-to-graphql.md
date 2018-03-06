@@ -33,7 +33,7 @@ using REST to using GraphQL, including:
 The app that we are going to use as a baseline to migrate from REST to GraphQL
 is an Address Book app that was originally created by [Ricardo García Vega][]
 over a [series of blog posts][Phoenix and Elm, a real use case]
-([Richardo's Github repo][Richardo's repo]).
+([Ricardo's Github repo][Ricardo's repo]).
 
 ![Address Book App](/assets/images/address-book-contacts-index.png){:
 class="img-responsive"
@@ -614,7 +614,7 @@ to get them translated into Elm code!
 [Phoenix context]: https://hexdocs.pm/phoenix/contexts.html
 [REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Ricardo García Vega]: https://twitter.com/bigardone
-[Richardo's repo]: https://github.com/bigardone/phoenix-and-elm
+[Ricardo's repo]: https://github.com/bigardone/phoenix-and-elm
 [Scrivener.Ecto]: https://github.com/drewolson/scrivener_ecto
 [`Scrivener.Page`]: https://github.com/drewolson/scrivener/blob/master/lib/scrivener/page.ex
 [Translator Pattern blog]: https://medium.com/@alex.lew/the-translator-pattern-a-model-for-child-to-parent-communication-in-elm-f4bfaa1d3f98
