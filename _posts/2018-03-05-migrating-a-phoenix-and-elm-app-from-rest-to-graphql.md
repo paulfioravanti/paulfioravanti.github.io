@@ -7,9 +7,9 @@ comments: true
 ---
 
 [GraphQL][] enables consumers of an [API][] to ask for the exact data they
-want from it, as opposed to [REST][], where the API provider dictates what data
-will be served, and it is up to the consumer to make sense of whatever data it
-receives, and in what form it is received in.
+want from it. This is as opposed to [REST][], where the API provider dictates
+what and how data will be served, and it is up to the consumer to make sense of
+whatever data it receives.
 
 In an app that uses [Phoenix][] for the back end and [Elm][] for the front end,
 the flow of data via APIs for a query will usually take the form of:
@@ -35,7 +35,7 @@ is an Address Book app that was originally created by [Ricardo García Vega][]
 over a [series of blog posts][Phoenix and Elm, a real use case]
 ([Ricardo's Github repo][Ricardo's repo]).
 
-![Address Book App](/assets/images/address-book-contacts-index.png){:
+![Address Book contacts](/assets/images/address-book-contacts-index.png){:
 class="img-responsive"
 }
 
@@ -487,6 +487,28 @@ this is mainly thanks to having the `AddressBook` context hide away all of the
 complexity around preparing contact data sets for delivery to the front end.
 Handy!
 
+One extra tiny change that needs to happen before we move on: did you notice
+in the `get_contact()` function that the map that comes through as the `args`
+parameter has atoms for keys, as opposed to the `ContactController`, where the
+keys are strings? We're handling that fine in the `get_contact` function, but in
+`list_contacts()`, we're passing `args` straight through to
+`AddressBook.list_contacts()`, which is expecting a map with string keys, so we
+will have to update it to expect one with atom keys:
+
+**`lib/phoenix_and_elm/address_book/address_book.ex`**
+
+```elixir
+defmodule PhoenixAndElm.AddressBook do
+  # ...
+  def list_contacts(%{search: query} = params) do
+    # ...
+  end
+end
+```
+
+This small change is the only time we should have to climb over the
+`AddressBook` context wall.
+
 ### Router
 
 Finally, let's expose our new GraphQL API to the world by changing the router
@@ -652,8 +674,280 @@ Once we've built the GraphQL request to fetch a contact (whose
 - use [`GraphQL.Client.Http.sendQuery`][] create a `Task` to send the query off
   to the `apiUrl`
 - ask the Elm runtime to `attempt` to run that `Task`
-- finally, send a `Msg` of type `ContactMsg FetchContact`, which gets handled
-  just like before in `Contact.Update` (no changes needed to that file)
+- send a `Msg` of type `ContactMsg FetchContact`, which gets handled just like
+  before in `Contact.Update` (no changes needed to that file)
+
+Now, let's create that `Contact.Request` to replace the `Contact.Decoder`.
+Unlike in GraphiQL, we cannot use raw GraphQL queries in Elm-land, so we will
+have to port the content of the query to Elm (but let's keep the GraphQL query
+that we want generated as a comment so we can keep our bearing):
+
+**`assets/elm/src/Contact/Request.elm`**
+
+```elm
+module Contact.Request exposing (fetchContact, contactSpec)
+
+import Contact.Model exposing (Contact)
+import GraphQL.Request.Builder as Builder
+    exposing
+        ( Document
+        , NonNull
+        , ObjectType
+        , Query
+        , Request
+        , ValueSpec
+        , field
+        , int
+        , object
+        , string
+        , with
+        )
+import GraphQL.Request.Builder.Arg as Arg
+import GraphQL.Request.Builder.Variable as Var
+
+
+{-|
+query($contactID: ID!) {
+  contact(id: $contactID) {
+    id
+    firstName
+    lastName
+    gender
+    birthDate
+    location
+    phoneNumber
+    email
+    headline
+    picture
+  }
+}
+-}
+fetchContact : Int -> Request Query Contact
+fetchContact id =
+    let
+        contactID =
+            Arg.variable (Var.required "contactID" .contactID Var.int)
+
+        contactField =
+            Builder.extract
+                (field
+                    "contact"
+                    [ ( "id", contactID ) ]
+                    contactSpec
+                )
+
+        params =
+            { contactID = id }
+    in
+        contactField
+            |> Builder.queryDocument
+            |> Builder.request params
+
+
+contactSpec : ValueSpec NonNull ObjectType Contact vars
+contactSpec =
+    Contact
+        |> object
+        |> with (field "id" [] int)
+        |> with (field "firstName" [] string)
+        |> with (field "lastName" [] string)
+        |> with (field "gender" [] int)
+        |> with (field "birthDate" [] string)
+        |> with (field "location" [] string)
+        |> with (field "phoneNumber" [] string)
+        |> with (field "email" [] string)
+        |> with (field "headline" [] string)
+        |> with (field "picture" [] string)
+```
+
+The content of the `contactSpec` function pretty much lines up logically with
+the code that we have in `Contact.Decoder`, while `fetchContact`:
+
+- builds the query step by step with the `let` expressions
+- creates a `GraphQL.Request.Builder.Document` for the query
+- creates a `GraphQL.Request.Builder.Request` from the `Document` that gets
+  sent to the `apiUrl` in `Contact.Commands`
+
+One final small change is to make sure that the `Contact.Messages` file,
+which have been referencing the [`Http`][] library, now need to reference
+[`GraphQL.Client.Http`][] instead:
+
+**`assets/elm/src/Contact/Messages.elm`**
+
+```elm
+module Contact.Messages exposing (ContactMsg(..))
+
+import Contact.Model exposing (Contact)
+import GraphQL.Client.Http as Http
+
+
+type ContactMsg
+    = FetchContact (Result Http.Error Contact)
+```
+
+At this point, individual contact detail pages should be displaying, so navigate
+to the URL of a known contact (eg <http://localhost:4000/contacts/4>), and you
+should see a page that looks something like:
+
+![Address Book contact](/assets/images/address-book-contact-show.png){:
+class="img-responsive"
+}
+
+The sample data in the app is generated randomly, so the contact you see from
+the URL above will most likely be different, but, it works! Performing a search,
+or navigating to the root page of the app, or doing anything that results in
+displaying a list of contacts will _not_ work just yet, though, so let's get
+polish that task off and finish up this migration.
+
+### Contact List
+
+This process will look (and be) very similar to how we migrated the contacts,
+so let's briskly get through how the files will change:
+
+**`assets/elm/src/ContactList/Commands.elm`**
+
+```elm
+module ContactList.Commands exposing (fetchContactList)
+
+import Commands exposing (apiUrl)
+import ContactList.Messages exposing (ContactListMsg(FetchContactList))
+import ContactList.Request as Request
+import GraphQL.Client.Http as Http
+import Messages exposing (Msg(ContactListMsg))
+import Task exposing (Task)
+
+
+fetchContactList : Int -> String -> Cmd Msg
+fetchContactList pageNumber search =
+    search
+        |> Request.fetchContactList pageNumber
+        |> Http.sendQuery apiUrl
+        |> Task.attempt FetchContactList
+        |> Cmd.map ContactListMsg
+```
+
+**`assets/elm/src/ContactList/Messages.elm`**
+
+```elm
+module ContactList.Messages exposing (ContactListMsg(..))
+
+import ContactList.Model exposing (ContactList)
+import GraphQL.Client.Http as Http
+
+
+type ContactListMsg
+    = FetchContactList (Result Http.Error ContactList)
+    | Paginate Int
+    | ResetSearch
+    | SearchContacts
+```
+
+**`assets/elm/src/ContactList/Request.elm`**
+
+```elm
+module ContactList.Request exposing (fetchContactList)
+
+import Contact.Request
+import ContactList.Model exposing (ContactList)
+import GraphQL.Request.Builder as Builder
+    exposing
+        ( NonNull
+        , ObjectType
+        , Query
+        , Request
+        , ValueSpec
+        , field
+        , int
+        , list
+        , object
+        , with
+        )
+import GraphQL.Request.Builder.Arg as Arg
+import GraphQL.Request.Builder.Variable as Var
+
+
+{-|
+query($searchQuery: String!, $pageNumber: Int!) {
+  contacts(search: $searchQuery, page: $pageNumber) {
+    entries {
+      id
+      firstName
+      lastName
+      gender
+      birthDate
+      location
+      phoneNumber
+      email
+      headline
+      picture
+    },
+    pageNumber,
+    totalEntries
+    totalPages,
+  }
+}
+-}
+fetchContactList : Int -> String -> Request Query ContactList
+fetchContactList page search =
+    let
+        searchQuery =
+            Arg.variable (Var.required "searchQuery" .searchQuery Var.string)
+
+        pageNumber =
+            Arg.variable (Var.required "pageNumber" .pageNumber Var.int)
+
+        contactsField =
+            Builder.extract
+                (field
+                    "contacts"
+                    [ ( "search", searchQuery ), ( "page", pageNumber ) ]
+                    contactListSpec
+                )
+
+        params =
+            { searchQuery = search
+            , pageNumber = page
+            }
+    in
+        contactsField
+            |> Builder.queryDocument
+            |> Builder.request params
+
+
+contactListSpec : ValueSpec NonNull ObjectType ContactList vars
+contactListSpec =
+    let
+        contact =
+            Contact.Request.contactSpec
+    in
+        ContactList
+            |> object
+            |> with (field "entries" [] (list contact))
+            |> with (field "pageNumber" [] int)
+            |> with (field "totalEntries" [] int)
+            |> with (field "totalPages" [] int)
+```
+
+Pretty similar set of changes, right?  The only real differences are the number
+of parameters for the query, and the `contactSpec` nesting inside
+`contactListSpec`, which is in a similar vein to the nesting of the
+`Contact.Decoder` inside a `ContactList.Decoder`.
+
+Now, you should be able to view any page in the app that displays a list of
+contacts. The GraphQL migration is complete, and you can safely remove the
+`Decoder` files from the application.
+
+## Wrapping Up
+
+There is so much more to GraphQL than what I've managed to fit into this
+admittedly long blog post. We only dealt with queries, and did not even touch
+other GraphQL fundamentals like [mutations][GraphQL mutations], which cover
+modifying server-side data.
+
+However, I hope that you enjoyed this small taste of Phoenix, Elm, and GraphQL
+working together, and if you join me in making further inroads with this tech
+stack moving forward, I would love to hear about it.
+
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
@@ -664,10 +958,13 @@ Once we've built the GraphQL request to fetch a contact (whose
 [Elm records]: http://elm-lang.org/docs/records
 [GraphiQL]: https://github.com/graphql/graphiql
 [GraphQL]: http://graphql.org/
+[`GraphQL.Client.Http`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http
 [`GraphQL.Client.Http.sendQuery`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http#sendQuery
+[GraphQL mutations]: http://graphql.org/learn/queries/#mutations
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
 [GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
+[`Http` library]: https://github.com/elm-lang/http
 [JSON]: https://www.json.org/
 [`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode
 [Navigation package]: https://github.com/elm-lang/navigation
