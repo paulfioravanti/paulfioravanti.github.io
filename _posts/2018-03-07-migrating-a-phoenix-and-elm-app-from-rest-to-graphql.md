@@ -144,7 +144,7 @@ The two main models in the Elm app are [`Contact`][Contact Elm Model] and
 information to fill the [records][Elm records] of these models is kept in
 `Commands` files under directories named after the model itself.
 
-#### Contact
+#### Contact via REST
 
 Let's see how information for a single contact is retrieved:
 
@@ -266,7 +266,7 @@ directly, like `UpdateSearchQuery`, while messages that are wrapped in a
 > See [this blog post about "The Translator Pattern" in Elm][Translator
 Pattern blog] for more information about this style of message passing.
 
-#### Contact List
+#### Contact List via REST
 
 Now that we know about fetching a single contact to populate a `Contact` record,
 what about fetching a list of contacts to populate a `ContactList` record?
@@ -640,7 +640,7 @@ apiUrl =
     "/api"
 ```
 
-### Contact
+### Contact via GraphQL
 
 Now, let's begin the process of getting the display of a single contact working
 again, starting with changing `Contact.Commands` to use GraphQL when sending
@@ -800,7 +800,7 @@ or navigating to the root page of the app, or doing anything that results in
 displaying a list of contacts will _not_ work just yet, though, so let's polish
 that task off and finish up this migration.
 
-### Contact List
+### Contact List via GraphQL
 
 This process will look (and be) very similar to how we migrated the contacts,
 so let's briskly get through how the files will change:
@@ -954,7 +954,6 @@ However, I hope that you enjoyed this small taste of Phoenix, Elm, and GraphQL
 working together, and if you join me in making further inroads with this fully
 functional tech
 stack moving forward, I would love to hear about it!
-
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
