@@ -460,7 +460,7 @@ end
 ### Resolvers
 
 Resolvers can tend to get quite long, so it is considered good practice to put
-resolvers into their own top level directory under the web app, so let's do that
+them into their own top level directory under the web app, so let's do that
 and create a `ContactResolver`:
 
 ```elixir
@@ -479,10 +479,117 @@ defmodule PhoenixAndElmWeb.ContactResolver do
 end
 ```
 
-These resolvers look suspiciously like the original REST controllers, and this
-is mainly thanks to having the `AddressBook` context hide away all of the
+This resolver look suspiciously like the original REST `ContactController`, and
+this is mainly thanks to having the `AddressBook` context hide away all of the
 complexity around preparing contact data sets for delivery to the front end.
 Handy!
+
+### Router
+
+Finally, let's expose our new GraphQL API to the world by changing the router
+to send `/api` requests to the new schema, and `/api/graphiql` requests to
+GraphiQL.
+
+**`lib/phoenix_and_elm_web/router.ex`**
+
+```elixir
+defmodule PhoenixAndElmWeb.Router do
+  # ...
+  scope "/api" do
+    pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL,
+      schema: PhoenixAndElmWeb.Schema,
+      interface: :simple
+
+    forward "/", Absinthe.Plug, schema: PhoenixAndElmWeb.Schema
+  end
+
+  scope "/", PhoenixAndElmWeb do
+    pipe_through :browser
+
+    get "/*path", AddressBookController, :index
+  end
+end
+```
+
+## Testing with GraphiQL
+
+Speaking of GraphiQL, let's use it to help us build the queries that we're going
+to want to have Elm send to it. Navigating to
+<http://localhost:4000/api/graphiql> will bring up the GraphiQL interface, so
+let's start with a GraphQL query for a single contact.
+
+We need a query that will take in a contact ID parameter, and will return all
+the fields that we currently have defined in the `Contact.Decoder` Elm file:
+
+```graphql
+query($contactID: ID!) {
+  contact(id: $contactID) {
+    id
+    firstName
+    lastName
+    gender
+    birthDate
+    location
+    phoneNumber
+    email
+    headline
+    picture
+  }
+}
+```
+
+> The exclamation mark on `ID!` means that
+[the field is non-nullable][GraphQL types and fields], so you have to provide
+an ID or the query will error out.
+
+Let's now input that in GraphiQL and fire it off to the Phoenix app, along with
+a `contactID` parameter:
+
+![GraphiQL contact query](/assets/images/GraphiQL-contact-query.png){:
+class="img-responsive"
+}
+
+Looks pretty good to me! Now, how about for a list of contacts?
+
+We need a query that will take in search and page number parameters, and return
+all the fields that we currently have defined in the `ContactList.Decoder` Elm
+file:
+
+```graphql
+query($searchQuery: String!, $pageNumber: Int!) {
+  contacts(search: $searchQuery, page: $pageNumber) {
+    entries {
+      id
+      firstName
+      lastName
+      gender
+      birthDate
+      location
+      phoneNumber
+      email
+      headline
+      picture
+    },
+    pageNumber,
+    totalEntries
+    totalPages,
+  }
+}
+```
+
+And for a search query of `"Barn"`, the results are...
+
+![GraphiQL contacts query](/assets/images/GraphiQL-contacts-query.png){:
+class="img-responsive"
+}
+
+...all of the users with a first name of Barney! Great! We now know the GraphQL
+queries that we want the front end to send to the back end, and now, it's time
+to get them translated into Elm code!
+
+## Migrate Front End to GraphQL
 
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
@@ -496,6 +603,7 @@ Handy!
 [GraphQL]: http://graphql.org/
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
+[GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
 [JSON]: https://www.json.org/
 [`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode
 [Navigation package]: https://github.com/elm-lang/navigation
