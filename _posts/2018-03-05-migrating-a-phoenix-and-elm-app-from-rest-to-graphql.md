@@ -237,7 +237,7 @@ the size of the "parent" `update` function:
 module Update exposing (update, urlUpdate)
 
 import Contact.Update
-import Messages exposing ( Msg ( ContactMsg, ContactListMsg, NavigateTo, ...))
+import Messages exposing (Msg(ContactMsg, ContactListMsg, NavigateTo, ...))
 import Model exposing (Model, RemoteData(NotRequested, Requesting))
 -- ...
 
@@ -263,7 +263,7 @@ directly, like `UpdateSearchQuery`, while messages that are wrapped in a
 `ContactMsg` message, for example, are delegated straight off to the
 `Contact.Update.update` function.
 
-See [this blog post about "The Translator Pattern" in Elm][Translator
+> See [this blog post about "The Translator Pattern" in Elm][Translator
 Pattern blog] for more information about this style of message passing.
 
 #### Contact List
@@ -288,10 +288,10 @@ fetchContactList page search =
     let
         apiUrl =
             contactsApiUrl
-                ++ "?page="
-                ++ (toString page)
-                ++ "&search="
+                ++ "?search="
                 ++ search
+                ++ "&page="
+                ++ (toString page)
     in
         Decoder.decoder
             |> Http.get apiUrl
@@ -302,7 +302,7 @@ fetchContactList page search =
 Fetching a list of contacts looks very similar to fetching a single contact
 from an API callout point of view, except that we are now providing `page`
 and `search` parameters, resulting in an `apiUrl` that looks something like
-`api/v1/contacts?page=2&search=paul`.
+`api/v1/contacts?search=paul&page=2`.
 
 Just like with the contact API call, we decode the response, this time using the
 `ContactList.Decoder`, and then send a `Msg` of type
@@ -426,7 +426,7 @@ that we can use.
 
 The `:contact_list` `object` essentially describes a [`Scrivener.Page`][],
 though for simplicity's sake, we are limiting `entries` to only containing
-a `list_of(:contact)` (Scrivener can, of course, paginate more types of
+a `list_of(:contact)` (Scrivener can, of course, paginate other types of
 things!).
 
 ### Schema
@@ -463,6 +463,8 @@ end
 Resolvers can tend to get quite long, so it is considered good practice to put
 them into their own top level directory under the web app, so let's do that
 and create a `ContactResolver`:
+
+**`lib/phoenix_and_elm_web/resolvers/contact_resolver.ex`**
 
 ```elixir
 defmodule PhoenixAndElmWeb.ContactResolver do
@@ -588,10 +590,70 @@ class="img-responsive"
 
 ...all of the users with a first name of Barney! Great! We now know the GraphQL
 queries that we want the front end to send to the back end, and now, it's time
-to get them translated into Elm code!
+to get them translated into Elm code! (At this point, now that the migration
+from controllers to resolvers is complete, it is safe to delete
+`ContactController` from the app.)
 
 ## Migrate Front End to GraphQL
 
+Before we start, we will need a GraphQL package for Elm, and for this project,
+let's use [`elm-graphql`][]. Install it in the `assets` directory:
+
+```sh
+cd assets/elm
+elm-package install jamesmacaulay/elm-graphql
+```
+
+Now, since the API URL has changed, the first thing we need to do is make our
+easiest edit, and tell Elm where to send requests to:
+
+**`assets/elm/src/Commands.elm`**
+
+```elm
+module Commands exposing (apiUrl)
+
+
+apiUrl : String
+apiUrl =
+    "/api"
+```
+
+### Contact
+
+Now, let's begin the process of getting the display of a single contact working
+again, starting with changing `Contact.Commands` to use GraphQL when sending
+requests:
+
+**`assets/elm/src/Contact/Commands.elm`**
+
+```elm
+module Contact.Commands exposing (fetchContact)
+
+import Commands exposing (apiUrl)
+import Contact.Messages exposing (ContactMsg(FetchContact))
+import Contact.Request as Request
+import GraphQL.Client.Http as Http
+import Messages exposing (Msg(ContactMsg))
+import Task exposing (Task)
+
+
+fetchContact : Int -> Cmd Msg
+fetchContact id =
+    id
+        |> Request.fetchContact
+        |> Http.sendQuery apiUrl
+        |> Task.attempt FetchContact
+        |> Cmd.map ContactMsg
+```
+
+Once we've built the GraphQL request to fetch a contact (whose
+`Contact.Request` module we will create next), we:
+
+- use [`GraphQL.Client.Http.sendQuery`][] create a `Task` to send the query off
+  to the `apiUrl`
+- ask the Elm runtime to `attempt` to run that `Task`
+- finally, send a `Msg` of type `ContactMsg FetchContact`, which gets handled
+  just like before in `Contact.Update` (no changes needed to that file)
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
@@ -602,6 +664,7 @@ to get them translated into Elm code!
 [Elm records]: http://elm-lang.org/docs/records
 [GraphiQL]: https://github.com/graphql/graphiql
 [GraphQL]: http://graphql.org/
+[`GraphQL.Client.Http.sendQuery`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http#sendQuery
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
 [GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
