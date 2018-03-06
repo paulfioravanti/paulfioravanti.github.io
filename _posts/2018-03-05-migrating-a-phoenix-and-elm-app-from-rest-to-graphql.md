@@ -39,10 +39,11 @@ over a [series of blog posts][Phoenix and Elm, a real use case]
 class="img-responsive"
 }
 
-I learned a lot from reading those posts and writing the app. Afterwards, I
+I learned a lot from coding up the app while reading those posts, and I thank
+Ricardo sincerely for putting the time into his write-ups! Afterwards, I
 upgraded the app to Phoenix 1.3, played around with the codebase, and put
-my version in its own Github repository, so it is this version of the app that
-we will use. So, if you are following along at home, please clone
+my version of it in its own Github repository, so it is this version of the app
+that we will use. So, if you are following along at home, please clone
 [my repo][Paul's repo] and follow the `README` instructions to get up and
 running, or you can skip straight to the finished product, which is in the
 repo's [`graphql` branch][Paul's repo graphql branch].
