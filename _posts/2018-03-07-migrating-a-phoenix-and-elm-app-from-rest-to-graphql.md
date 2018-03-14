@@ -363,7 +363,7 @@ So, without further ado, let's tackle migration of the back end first.
 [Absinthe][] is the go-to toolkit for using GraphQL in Elixir, with its authors
 pretty much [writing the book][Absinthe PragProg Book] on the subject, hence we
 will be use it in this project. So, open up `mix.exs`, and add the following
-libraries to get it installed for Phoenix:
+libraries:
 
 **`mix.exs`**
 
@@ -373,14 +373,16 @@ defmodule PhoenixAndElm.Mixfile do
   defp deps do
     [
       # ...
-      {:absinthe, "~> 1.4.2"},
-      {:absinthe_plug, "~> 1.4.0"},
-      {:absinthe_phoenix, "~> 1.4.0"},
-      {:absinthe_relay, "~> 1.4.0"}
+      {:absinthe, "~> 1.4"},
+      {:absinthe_plug, "~> 1.4"}
     ]
   end
 end
 ```
+
+> Note that even though this is a Phoenix app, for this example we will not need
+the [Absinthe.Phoenix][] package since we will be sending messages via HTTP,
+and not via [Phoenix channels][]/websockets.
 
 ### Types
 
@@ -956,6 +958,7 @@ functional tech
 stack moving forward, I would love to hear about it!
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
+[Absinthe.Phoenix]: https://github.com/absinthe-graphql/absinthe_phoenix
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
 [API]: https://en.wikipedia.org/wiki/Application_programming_interface
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
@@ -981,6 +984,7 @@ stack moving forward, I would love to hear about it!
 [Paul's repo graphql branch]: https://github.com/paulfioravanti/phoenix-and-elm/tree/graphql
 [Phoenix]: http://phoenixframework.org/
 [Phoenix and Elm, a real use case]: http://codeloveandboards.com/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1/
+[Phoenix channels]: https://hexdocs.pm/phoenix/channels.html
 [Phoenix context]: https://hexdocs.pm/phoenix/contexts.html
 [REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
 [Ricardo García Vega]: https://twitter.com/bigardone
