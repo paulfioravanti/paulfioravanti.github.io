@@ -885,8 +885,8 @@ query($searchQuery: String!, $pageNumber: Int!) {
       picture
     },
     pageNumber,
-    totalEntries
-    totalPages,
+    totalEntries,
+    totalPages
   }
 }
 -}
