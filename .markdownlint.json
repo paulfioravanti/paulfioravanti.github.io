@@ -6,7 +6,8 @@
   },
   "no-inline-html": {
     "allowed_elements": [
-      "br"
+      "br",
+      "span"
     ]
   }
 }
