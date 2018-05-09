@@ -25,6 +25,10 @@ github_link:  https://github.com/paulfioravanti
 linkedin_link: https://www.linkedin.com/in/paulfioravanti
 stackoverflow_link: https://stackoverflow.com/users/567863
 gravatar_link: https://s.gravatar.com/avatar/abda861707b1e78e0fce47ced55f84ee
+elixir_link: https://elixir-lang.org/
+elm_link: http://elm-lang.org/
+ruby_link: https://www.ruby-lang.org/en/
+roro_link: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney/
 permalink: /blog/:year/:month/:day/:title/
 
 # Build settings
