@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Runtime Language Switching in Elm"
-date:   2018-05-10 10:30 +1100
+date:   2018-05-11 20:00 +1100
 categories: elm i18n
 comments: true
 ---
@@ -10,12 +10,12 @@ When it comes to creating multilingual web pages, internationali[s\|z]ation
 ([I18n][Internationalization naming]) would seem to be a deceptively complex
 problem using [Elm][].
 
-I never had to think of the choice of having application translations
-generated as a pre-build phase of an app (eg [elm-i18n][]), or dynamically
+I have never had to consider the choice of generating application translations
+as a pre-build phase of an app (eg [elm-i18n][]), or have them be dynamically
 loaded (eg [elm-i18next][]) when working with i18n in [Rails][Rails i18n] or
 [Phoenix][Phoenix Gettext]. To be honest, I still do not know which way of doing
 things is "best" in an Elm context. But, I do know that I want to have
-runtime-switchable languages via a drop-down menu, so the creation of an example
+runtime-switchable languages via a dropdown menu, so the creation of an example
 page with dynamically loaded translations will be the main focus of this blog
 post.
 
@@ -24,13 +24,13 @@ with Elm, so we will set about doing the following:
 
 - Re-create Tachyons'
   [Full Screen Centered Title component documentation page][] in Elm
-- Add a custom language-switcher drop-down menu to the page
-- Provide some translations for the page in [JSON][] format, and allow the drop-down
-  menu to switch the language
+- Add a custom language-switcher dropdown menu to the page
+- Provide some translations for the page in [JSON][] format, and allow the
+  dropdown menu to switch the language
 - Store the selected language in [`localStorage`][] so that any selected
   language persists through page refreshes and different sessions.
-- Explore generating Elm modules from the JSON translation files to give the
-  translations some type safety
+- Explore generating Elm modules from the JSON translation files in order to
+  give the translations some type safety
 
 Let's get started!
 
@@ -39,7 +39,7 @@ Let's get started!
 [Create Elm App][] will help us bootstrap our app, so install it with:
 
 ```sh
-npm install create-elm-app -g
+npm install -g create-elm-app
 ```
 
 Then, generate a new app, initialise `npm` (using the default fields provided
@@ -196,7 +196,7 @@ Using utility-based CSS frameworks like Tachyons and [Tailwind][] can seem
 daunting at first, what with all the mnemonics that you seem to have to
 commit to memory, so I always keep [Tachyons' Table of Styles][] open in a
 browser tab for quick reference, and if this is your first look at Tachyons, I
-would recommend you do as well.
+would recommend you do the same.
 
 Anyway, your page should now look like the following screen shot:
 
@@ -210,22 +210,23 @@ codebase to see if anything is missing.
 
 ## Add Language Dropdown Menu
 
-Time to add the language dropdown menu. For now, it will be mostly just for show
-with placeholder values, and will not actually change any languages, but what
-we want from the menu in the end is:
+For now, the language dropdown menu will be populated with placeholder values,
+and will not actually be able to change languages, but what we want from the
+menu in the end is:
 
 - The current language should be shown on the menu by default
 - When you click the menu, it should open, revealing any other available
   languages _aside from_ the current language
-- When you mouse over a menu item, it should highlight in some way
+- When you mouse over a menu item, it should be highlighted in some way
 - When you click on a menu item, it should change the current language of the
   application (we'll do that later)
 - If, while the menu is open, you click anywhere else on the page, the menu
   should close
 
-All these requirements sound like they would be best served in their own module,
-so let's create one called `LanguageDropdown.elm`, and start with rendering only
-the current language selection so we can get the menu positioning right.
+Most of these requirements sound like they would be best served in their own
+module, so let's create one called `LanguageDropdown.elm`, and start with
+rendering just the current language selection so we can get the menu positioning
+right.
 
 ### Current Selection
 
@@ -288,7 +289,7 @@ currentSelection =
 ```
 
 Next, we have to import the language dropdown code in the `Main` module,
-as well as slightly adjust the styles in the `view` since there is now
+as well as slightly adjust the styles in the `view` function, since there is now
 more on the page than just the message:
 
 **`src/Main.elm`**
@@ -304,8 +305,8 @@ view model =
     let
         classes =
             [ "bg-dark-pink"
-            , "pt3"
             , "overflow-container"
+            , "pt3"
             , "sans-serif"
             , "vh-100"
             , "white"
@@ -422,12 +423,12 @@ class="img-responsive"
   underneath the `p` tag, simulating a menu opening.
 - When we hover over a menu item, we can tell which item is currently being
   selected.
-- Selectable languages currently have strings as their place holders, but we
+- Selectable languages currently have strings as their placeholders, but we
   will change that later on as we introduce the concept of a language to the
   application.
 
 So, we now know what the menu looks like when it is open, but we need it to
-interact with mouse clicks to open and close the dropdown list (read: show and
+respond to mouse clicks to open and close the dropdown list (read: show and
 hide the list), so let's do that now.
 
 ## Show and Hide Available Languages
@@ -437,14 +438,14 @@ dropdown list, and needs to be able to track clicks on the menu and page, so it
 sounds like we need the following:
 
 - A Boolean flag to tell the app whether to `showAvailableLanguages` or not
-- An update `Msg` that will toggle the show/hide the dropdown list; let's call
-  it `ShowAvailableLanguages`
+- An update `Msg` that will toggle the visibility of the dropdown list; let's
+  call it `ShowAvailableLanguages`
 - An update `Msg` that will hide the dropdown list, for when the dropdown is
   open but a click is registered anywhere else on the page; let's call it
   `CloseAvailableLanguages`
 
-We will start with updating the `Msg`. Both `Main.elm` and
-`LanguageDropdown.elm` are going to need access to the `Msg`, so let's extract
+We will start with updating the `Msg` union type. Both `Main.elm` and
+`LanguageDropdown.elm` are going to need access to `Msg`, so let's extract
 it into its own module:
 
 **`src/Msg.elm`**
@@ -479,7 +480,8 @@ init =
 ```
 
 Now, we need to update `Main.elm` and `LanguageDropdown.elm` to import these
-modules, and write some handling code for these `Msg`s in the `update` function:
+modules, and then write some handling code for these `Msg`s in the `update`
+function:
 
 **`src/Main.elm`**
 
@@ -642,7 +644,7 @@ If the app so far is not behaving as you would expect, compare your code to
 codebase to see if anything is missing.
 
 Now, it's time to give the application the concept of a language to switch, and
-replace those place holder values with actual data!
+replace those placeholder values with actual data!
 
 ## Language Switching
 
@@ -684,8 +686,8 @@ following files under it:
 ```
 
 Next, let's create a `Translations` module where we will define the type for
-a language, and provide a helper function to convert a language type into a
-string:
+a language, and provide a helper function to convert a string language code
+into a language:
 
 **`src/Translations.elm`**
 
@@ -746,7 +748,7 @@ create that in a new module called `Cmd`:
 ```elm
 module Cmd exposing (fetchTranslations)
 
-import I18Next exposing (Translations)
+import I18Next
 import Msg exposing (Msg(FetchTranslations))
 import Translations exposing (Lang)
 
@@ -804,14 +806,14 @@ init =
 ```
 
 Next, we need to handle the new `ChangeLanguage` and `FetchTranslations`
-messages in the `update` function.
+messages in the `update` function:
 
 - When the language is changed, as well as change the `currentLanguage`, we need
   to go and fetch the translations for that language in the same way we did in
   the `init` function
 - If fetching the translations succeeds, we will display the new translations,
   otherwise, for now we will just ignore any errors since we would not expect
-  to fetch translations for a language that we have not created ourselves.
+  to fetch translations for a language that we did not create ourselves.
 
 **`src/Main.elm`**
 
@@ -899,7 +901,6 @@ import Translations exposing (Lang)
 
 -- ...
 
-
 currentSelection : Model -> Html Msg
 currentSelection model =
     let
@@ -949,7 +950,7 @@ class="img-responsive"
 }
 
 Great! Now let's get that translated message showing on the page by letting
-the content know what translations it is supposed to be displaying!
+the content know what translations it is supposed to be displaying:
 
 **`src/Main.elm`**
 
@@ -990,8 +991,8 @@ heading translations =
             [ text (I18Next.t translations "verticallyCenteringInCssIsEasy") ]
 ```
 
-And now, when you change language, you should see the displayed message also
-change language:
+And now, when you change language, you should see the displayed message in that
+language:
 
 ![Japanese Display](/assets/images/20180510/japanese-display.png){:
 class="img-responsive"
@@ -1142,17 +1143,287 @@ preference for this application. So, let's then use the browser's
 
 ## Store Language Preference
 
+Sending Elm data to Javscript requires us to use [Elm Ports][]. All port
+functions return a `Cmd msg`, so let's put the function to remember a language
+preference in the `Cmd` module, changing it over to a `port module`:
+
+**`src/Cmd.elm`**
+
+```elm
+port module Cmd exposing (fetchTranslations, storeLanguage)
+
+-- ...
+
+port storeLanguageInLocalStorage : String -> Cmd msg
+
+-- ...
+
+storeLanguage : Lang -> Cmd msg
+storeLanguage language =
+    language
+        |> toString
+        |> String.toLower
+        |> storeLanguageInLocalStorage
+```
+
+Here we have created a `storeLanguage` command function that takes in a `Lang`
+type, stringifies it, and sends it off to Javascript via the
+`storeLanguageInLocalStorage` port. On the Javascript side, there is currently
+no code that is subscribing to messages coming from that port, so we'll make
+that next:
+
+**`src/index.js`**
+
+```javascript
+// ...
+if (appContainer) {
+  const app = Main.embed(appContainer, { language: getLanguage() })
+
+  app.ports.storeLanguageInLocalStorage.subscribe((language) => {
+    localStorage.setItem("elm-i18n-example-language", language)
+  })
+}
+// ...
+```
+
+There is no particular reason behind the "elm-i18n-example-language" named key;
+it could have been named anything, but it is best to have it as unique as
+possible, since many different applications will likely be making use of
+`localStorage`.
+
+Okay, we've got the pathway to Javascript set up, now we need to make sure that
+the command is run every time the language is changed (ie the `ChangeLanguage`
+message is sent), so let's make that addition to the `update` function:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        ChangeLanguage language ->
+            ( { model | currentLanguage = language }
+            , Cmd.batch
+                [ Cmd.fetchTranslations language
+                , Cmd.storeLanguage language
+                ]
+            )
+    -- ...
+```
+
+The `ChangeLanguage` branch of the `update` function has gotten a bit busier,
+needing to use `Cmd.batch` to send commands to both fetch new language
+translations, and store the user language preference.
+
+Now, you should be able to switch languages, and have it stored in
+`localStorage`. Open up the Javascript console in your browser's developer tools
+to confirm this with the following command:
+`localStorage.getItem("elm-i18n-example-language")`
+
+![Language Stored](/assets/images/20180510/language-stored.png){:
+class="img-responsive"
+}
+
+Success! But there is one small lingering issue though: if you refresh the
+browser, the application is still reverting back to the default language of
+English. We need to have our Javascript code get the language from
+`localStorage` (if it's there), and pass that in as the Elm language flag, so
+let's do that:
+
+**`src/index.js`**
+
+```javascript
+// ...
+function getLanguage() {
+  return localStorage.getItem("elm-i18n-example-language") ||
+    navigator.language ||
+    navigator.userLanguage
+}
+```
+
+Now, if you change languages and refresh the page, the application should still
+show you the language that you originally selected! If it doesn't, check your
+code against
+[the `5-store-language-preference` branch][5-store-language-preference] of my
+codebase.
+
+At this stage, our page is pretty much feature complete. However, there are
+still a few potential issues that would be worthy of a bit more investigation:
+
+- If you refresh the page, you may see the translation key
+  "verticallyCenteringInCssIsEasy" briefly flash before the translation is
+  shown. This is particularly noticeable on the Japanese translation. Perhaps
+  the translations are being loaded too slowly...?
+- If you accidentally make a typo when requesting a translation by key in a view
+  (eg `I18Next.t translations "thisKeyDoesNotExist"`), then no error
+  is raised: the key is simply displayed on the page, which may not be what you
+  want.
+- If you accidentally do not provide a translation for a particular key for a
+  known available language, or make a typo in the translation file (eg delete
+  the `translations.ja.json` file or change its key name), then, again, no error
+  is raised, and the requested key is displayed on the page as-is.
+
+Elm programmers are spoiled by the Elm compiler always looking over our shoulder
+and helping us avoid these kinds of mistakes. If you are confident about
+manually handling the issues outlined or they are not important to you, then
+all is good and you need not go any further. But, if want Elm to cast more of
+an eye over your i18n development, what options are available to you?
+
+## Type-Safe Translations
+
+Since we have our translation files as JSON, we can use [Elm i18n Gen][] to
+generate a `Translations` module containing one function for every translation
+in the JSON files. So, let's give it a try.
+
+Install it with the following command:
+
+```sh
+npm install -g elm-i18n-gen
+```
+
+Generate a new `Translations` module for the app with the following command:
+
+```sh
+elm-i18n-gen public/locale src/Translations.elm
+```
+
+And if you open up the `Translations` module you should see the following:
+
+**`src/Translations.elm`**
+
+```elm
+module Translations exposing (..)
+
+
+type Lang
+    = En
+    | It
+    | Ja
+
+
+getLnFromCode : String -> Lang
+getLnFromCode code =
+    case code of
+        "en" ->
+            En
+
+        "it" ->
+            It
+
+        "ja" ->
+            Ja
+
+        _ ->
+            En
+
+
+verticallyCenteringInCssIsEasy : Lang -> String
+verticallyCenteringInCssIsEasy lang =
+    case lang of
+        En ->
+            "Vertically centering things in css is easy!"
+
+        It ->
+            "Centrare verticalmente con css è facile!"
+
+        Ja ->
+            "CSSで垂直センタリングは簡単だよ！"
+```
+
+We only have one translation key in our JSON files, so `elm-i18n-gen` created
+just one function for us that covers translations for all our languages. You can
+also see here that I adopted `elm-i18n-gen`'s specific naming conventions for
+`Lang`, and `getLnFromCode` in advance, and deliberately put that information in
+the `Translations` module knowing it would be overwritten when the new
+`Translations` file was generated (...I think my [Chekhov's Gun][] is
+jammed...).
+
+Anyway, now that we have our function, let's use it in the view:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Translations exposing (Lang)
+
+-- ...
+
+view : Model -> Html Msg
+view model =
+    let
+        -- ...
+    in
+        main_ [ classes ]
+            [ LanguageDropdown.view model
+            , content model.currentLanguage
+            ]
+
+
+content : Lang -> Html Msg
+content language =
+    let
+        -- ...
+    in
+        article [ articleClasses ]
+            [ div [ divClasses ]
+                [ heading language ]
+            ]
+
+
+heading : Lang -> Html Msg
+heading language =
+    let
+        -- ...
+    in
+        h1 [ classes ]
+            [ text (Translations.verticallyCenteringInCssIsEasy language) ]
+```
+
+The effects of this one change are the following:
+
+- There is now no need to fetch any translations, and consequently the
+  `FetchTranslations` `Msg`, the `fetchTranslations` function in the `Cmd`
+  module, the `translations` entry in the `Model`, and any trace of the
+  `I18Next` and `Http` packages, can now be safely removed.
+- The issue of a translation key displaying before the translation is loaded
+  has consequently gone away since we are now just calling a function.
+- Elm will raise a compiler error if a translation is not provided for all
+  languages.
+
+Those are some pretty good benefits! I'm not sure about any downsides to this,
+aside from maybe having a single module with potentially hundreds of functions
+in it for any given large JSON translation file. But, I would guess the
+overhead for maintainability of that module would be the same for the JSON file.
+Please let me know if I'm wrong about this!
+
+See [the `6-type-safe-translations` branch][6-type-safe-translations] of my
+codebase to see the final form of the application, with all extraneous code
+removed.
+
+## Conclusion
+
+Even after all this, I'm still not really sure what to think when it comes to an
+ideal solution for I18n in Elm. I am planning on using the methods outlined in
+this blog post for the time being, but if you have any better ways of doing
+things (I'd love to see an actual example of an app using the [elm-i18n][]
+package), please let me know!
 
 [1-recreate-tachyons-doc-page]: https://github.com/paulfioravanti/elm-i18n-example/tree/1-recreate-tachyons-doc-page
 [2-add-language-dropdown]: https://github.com/paulfioravanti/elm-i18n-example/tree/2-add-language-dropdown
 [3-add-language-switching]: https://github.com/paulfioravanti/elm-i18n-example/tree/3-add-language-switching
 [4-detect-user-language]: https://github.com/paulfioravanti/elm-i18n-example/tree/4-detect-user-language
 [5-store-language-preference]: https://github.com/paulfioravanti/elm-i18n-example/tree/5-store-language-preference
+[6-type-safe-translations]: https://github.com/paulfioravanti/elm-i18n-example/tree/6-type-safe-translations
+[Chekhov's Gun]: https://en.wikipedia.org/wiki/Chekhov%27s_gun
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Elm]: http://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
 [elm-i18next]: https://github.com/ChristophP/elm-i18next
+[Elm i18n Gen]: https://github.com/ChristophP/elm-i18n-module-generator
 [Elm Mouse package]: https://github.com/elm-lang/mouse
+[Elm Ports]: https://guide.elm-lang.org/interop/javascript.html
 [Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
 [HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
