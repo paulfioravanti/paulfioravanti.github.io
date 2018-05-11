@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Runtime Language Switching in Elm"
-date:   2018-05-11 20:00 +1100
+date:   2018-05-11 20:05 +1100
 categories: elm i18n
 comments: true
 ---
@@ -31,6 +31,9 @@ with Elm, so we will set about doing the following:
   language persists through page refreshes and different sessions.
 - Explore generating Elm modules from the JSON translation files in order to
   give the translations some type safety
+
+(If you want to skip ahead and see the final result, feel free to clone my
+[`elm-i18n-example` repo][])
 
 Let's get started!
 
@@ -1420,6 +1423,7 @@ package), please let me know!
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Elm]: http://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
+[`elm-i18n-example` repo]: https://github.com/paulfioravanti/elm-i18n-example
 [elm-i18next]: https://github.com/ChristophP/elm-i18next
 [Elm i18n Gen]: https://github.com/ChristophP/elm-i18n-module-generator
 [Elm Mouse package]: https://github.com/elm-lang/mouse
