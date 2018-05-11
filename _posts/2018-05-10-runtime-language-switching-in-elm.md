@@ -1000,11 +1000,154 @@ class="img-responsive"
 Fantastic! That covers the main functionality of language switching, but there
 is still more we can do. Before we move on though, if you cannot switch
 languages, be sure to double-check your code against
-[the `3-add-language-switching` branch] of my codebase.
+[the `3-add-language-switching` branch][3-add-language-switching] of my
+codebase.
+
+## Detect User Language
+
+Currently, the application language is set to English by default when it starts,
+but it would be nice if we at least tried to set the application to initially
+display in the user's preferred language. To simplify the idea of a "preferred
+language" (because [this is not universal amongst browers][ksol-gist]), we will
+consider it to be the language of the browser being used. How do we get that?
+In Javascript, we can use:
+
+- [`navigator.language`][]
+- [`navigator.userLanguage`][] (for Internet Explorer)
+
+So, let's grab this information from Javascript, and pass it into Elm as a
+flag:
+
+**`src/index.js`**
+
+```js
+import "tachyons"
+import { Main } from "./Main.elm"
+
+const appContainer = document.getElementById("root")
+
+if (appContainer) {
+  Main.embed(appContainer, { language: getLanguage() })
+}
+
+function getLanguage() {
+  return navigator.language || navigator.userLanguage
+}
+```
+
+Our application cannot currently accept flags from Javascript, so let's change
+our program type to `programWithFlags` to allow that to happen:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Model exposing (Flags, Model)
+
+-- ...
+
+main : Program Flags Model Msg
+main =
+    Html.programWithFlags
+        { view = view
+        , init = Model.init
+        , update = update
+        , subscriptions = subscriptions
+        }
+```
+
+Next, we will define what type of flags we will accept in the `Model` module,
+and because we do not trust any information passed in from Javascript, we will
+decode the flag to ensure that we are getting a string.
+
+**`src/Model.elm`**
+
+```elm
+module Model exposing (Flags, Model, init)
+
+-- ...
+import Json.Decode as Decode exposing (Value)
+import Language
+
+
+type alias Flags =
+    { language : Value }
+
+-- ...
+
+init : Flags -> ( Model, Cmd Msg )
+init flags =
+    let
+        language =
+            flags.language
+                |> Decode.decodeValue Decode.string
+                |> Language.langFromFlag
+    in
+        ( { currentLanguage = language
+          , showAvailableLanguages = False
+          , translations = I18Next.initialTranslations
+          }
+        , Cmd.fetchTranslations language
+        )
+```
+
+Finally, we will create the `Language.langFromFlag` function that will return
+a language if decoding goes well, and return a default language if not:
+
+**`src/Language.elm`**
+
+```elm
+module Language exposing (availableLanguages, langFromFlag, langToString)
+
+-- ...
+
+langFromFlag : Result String String -> Lang
+langFromFlag language =
+    case language of
+        Ok language ->
+            Translations.getLnFromCode language
+
+        Err _ ->
+            En
+```
+
+If your browser language is English, you will not notice any change as a result
+of these additions, but if you change your browser language to Italian or
+Japanese and then refresh the page, you will see that the application will start
+in that language.
+
+For Chrome, you can change the language setting by opening the browser
+preferences, opening the Advanced preferences...
+
+![Chrome Advanced Preferences](/assets/images/20180510/chrome-advanced-preferences.png){:
+class="img-responsive"
+}
+
+...finding the Languages preferences, and then choosing a language to Move to
+the top of the list:
+
+![Chrome Language Preferences](/assets/images/20180510/chrome-language-preferences.png){:
+class="img-responsive"
+}
+
+Default language not changing? Check your code against
+[the `4-detect-user-language` branch][4-detect-user-language] of my codebase.
+
+Now, having a default language is nice, but if you switch languages and then
+refresh the page, the application will revert back to the language set in the
+browser. Plenty of people want to read content in a different language than
+their system settings, and it would be nice to be able to save their language
+preference for this application. So, let's then use the browser's
+[`localStorage`][] to help us do exactly that.
+
+## Store Language Preference
+
 
 [1-recreate-tachyons-doc-page]: https://github.com/paulfioravanti/elm-i18n-example/tree/1-recreate-tachyons-doc-page
 [2-add-language-dropdown]: https://github.com/paulfioravanti/elm-i18n-example/tree/2-add-language-dropdown
 [3-add-language-switching]: https://github.com/paulfioravanti/elm-i18n-example/tree/3-add-language-switching
+[4-detect-user-language]: https://github.com/paulfioravanti/elm-i18n-example/tree/4-detect-user-language
+[5-store-language-preference]: https://github.com/paulfioravanti/elm-i18n-example/tree/5-store-language-preference
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Elm]: http://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
@@ -1014,7 +1157,10 @@ languages, be sure to double-check your code against
 [HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [JSON]: https://www.json.org/
+[ksol-gist]: https://gist.github.com/ksol/62b489572944ca70b4ba
 [`localStorage`]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[`navigator.language`]: https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language
+[`navigator.userLanguage`]: http://help.dottoro.com/ljgtasfq.php
 [Phoenix Gettext]: https://hexdocs.pm/gettext/Gettext.html
 [Rails i18n]: http://guides.rubyonrails.org/i18n.html
 [Tachyons]: http://tachyons.io/
