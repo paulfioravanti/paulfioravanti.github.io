@@ -19,8 +19,8 @@ runtime-switchable languages via a drop-down menu, so the creation of an example
 page with dynamically loaded translations will be the main focus of this blog
 post.
 
-I have been using [Tachyons][] a lot lately, and like how it plays with Elm, so
-we will set about doing the following:
+I have been using [Tachyons][] a lot lately for styling, and like how it plays
+with Elm, so we will set about doing the following:
 
 - Re-create Tachyons'
   [Full Screen Centered Title component documentation page][] in Elm
@@ -187,15 +187,16 @@ heading =
             [ text "Vertically centering things in css is easy!" ]
 ```
 
-I think that putting Tachyons classes in lists like this makes them easy to
-scan and maintain, but also has the side effect of making function definitions
-really long, so here we have split out the content across three different
-smaller functions.
+I think that putting Tachyons classes in lists like this makes them easier to
+scan and maintain, but it also has the side effect of making function
+definitions really long, so here we have split out the content across three
+different smaller functions.
 
 Using utility-based CSS frameworks like Tachyons and [Tailwind][] can seem
 daunting at first, what with all the mnemonics that you seem to have to
 commit to memory, so I always keep [Tachyons' Table of Styles][] open in a
-browser tab for quick reference.
+browser tab for quick reference, and if this is your first look at Tachyons, I
+would recommend you do as well.
 
 Anyway, your page should now look like the following screen shot:
 
@@ -207,12 +208,810 @@ If it does not, check your code against
 [the `1-recreate-tachyons-doc-page` branch][1-recreate-tachyons-doc-page] of my
 codebase to see if anything is missing.
 
+## Add Language Dropdown Menu
+
+Time to add the language dropdown menu. For now, it will be mostly just for show
+with placeholder values, and will not actually change any languages, but what
+we want from the menu in the end is:
+
+- The current language should be shown on the menu by default
+- When you click the menu, it should open, revealing any other available
+  languages _aside from_ the current language
+- When you mouse over a menu item, it should highlight in some way
+- When you click on a menu item, it should change the current language of the
+  application (we'll do that later)
+- If, while the menu is open, you click anywhere else on the page, the menu
+  should close
+
+All these requirements sound like they would be best served in their own module,
+so let's create one called `LanguageDropdown.elm`, and start with rendering only
+the current language selection so we can get the menu positioning right.
+
+### Current Selection
+
+**`src/LanguageDropdown.elm`**
+
+```elm
+module LanguageDropdown exposing (view)
+
+import Html exposing (Html, div, li, p, span, text, ul)
+import Html.Attributes exposing (class)
+
+
+view : Html msg
+view =
+    let
+        classes =
+            [ "center"
+            , "f3"
+            , "flex"
+            , "h3"
+            , "items-center"
+            , "justify-end"
+            , "w-90"
+            ]
+                |> String.join " "
+                |> class
+    in
+        div [ classes ]
+            [ currentSelection ]
+
+
+currentSelection : Html msg
+currentSelection =
+    let
+        classes =
+            [ "b--white"
+            , "ba"
+            , "br2"
+            , "pa2"
+            , "pointer"
+            , "tc"
+            , "w4"
+            ]
+                |> String.join " "
+                |> class
+
+        caretClasses =
+            [ "absolute"
+            , "ml2"
+            ]
+                |> String.join " "
+                |> class
+    in
+        p [ classes ]
+            [ span []
+                [ text "English" ]
+            , span [ caretClasses ]
+                [ text "▾" ]
+            ]
+```
+
+Next, we have to import the language dropdown code in the `Main` module,
+as well as slightly adjust the styles in the `view` since there is now
+more on the page than just the message:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import LanguageDropdown
+
+-- ...
+
+view : Model -> Html Msg
+view model =
+    let
+        classes =
+            [ "bg-dark-pink"
+            , "pt3"
+            , "overflow-container"
+            , "sans-serif"
+            , "vh-100"
+            , "white"
+            ]
+                |> String.join " "
+                |> class
+    in
+        main_ [ classes ]
+            [ LanguageDropdown.view
+            , content
+            ]
+
+content : Html Msg
+content =
+    let
+        articleClasses =
+            [ "dt"
+            , "vh-75"
+            , "w-100"
+            ]
+                |> String.join " "
+                |> class
+
+        -- ...
+    in
+        -- ...
+```
+
+Now, your page should look like this:
+
+![Menu with current selection only](/assets/images/20180510/menu-with-current-selection.png){:
+class="img-responsive"
+}
+
+The "menu" here (yes, it is currently just a `p` tag), currently does nothing,
+but we can at least confirm that it looks like it is in a good spot on the page.
+Now, let's actually give it a `dropdownList` under the `currentSelection`!
+
+### Language Dropdown List
+
+**`src/LanguageDropdown.elm`**
+
+```elm
+view : Html msg
+view =
+    let
+        -- ...
+    in
+        div [ classes ]
+            [ currentSelection
+            , dropdownList
+            ]
+
+-- ...
+
+dropdownList : Html msg
+dropdownList =
+    let
+        classes =
+            [ "absolute"
+            , "b--white"
+            , "bb"
+            , "bl"
+            , "br"
+            , "br--bottom"
+            , "br2"
+            , "items-center"
+            , "list"
+            , "mt5"
+            , "pl0"
+            , "pointer"
+            , "pr0"
+            , "pt1"
+            , "tc"
+            , "top-0"
+            , "w4"
+            ]
+                |> String.join " "
+                |> class
+
+        selectableLanguages =
+            [ "Italiano", "日本語" ]
+
+    in
+        ul [ classes ]
+            (List.map dropdownListItem selectableLanguages)
+
+
+dropdownListItem : String -> Html msg
+dropdownListItem language =
+    let
+        classes =
+            [ "hover-bg-white"
+            , "hover-dark-pink"
+            , "ph1"
+            , "pv2"
+            , "pt0"
+            , "w-100"
+            ]
+                |> String.join " "
+                |> class
+    in
+        li [ classes ]
+            [ span [] [ text language ] ]
+```
+
+This results in:
+
+![Menu with open selection](/assets/images/20180510/menu-with-open-selection.png){:
+class="img-responsive"
+}
+
+- For the dropdown list, we are shoving a HTML unordered list (`ul`) right
+  underneath the `p` tag, simulating a menu opening.
+- When we hover over a menu item, we can tell which item is currently being
+  selected.
+- Selectable languages currently have strings as their place holders, but we
+  will change that later on as we introduce the concept of a language to the
+  application.
+
+So, we now know what the menu looks like when it is open, but we need it to
+interact with mouse clicks to open and close the dropdown list (read: show and
+hide the list), so let's do that now.
+
+## Show and Hide Available Languages
+
+The application needs to be able to keep track of whether to show or hide the
+dropdown list, and needs to be able to track clicks on the menu and page, so it
+sounds like we need the following:
+
+- A Boolean flag to tell the app whether to `showAvailableLanguages` or not
+- An update `Msg` that will toggle the show/hide the dropdown list; let's call
+  it `ShowAvailableLanguages`
+- An update `Msg` that will hide the dropdown list, for when the dropdown is
+  open but a click is registered anywhere else on the page; let's call it
+  `CloseAvailableLanguages`
+
+We will start with updating the `Msg`. Both `Main.elm` and
+`LanguageDropdown.elm` are going to need access to the `Msg`, so let's extract
+it into its own module:
+
+**`src/Msg.elm`**
+
+```elm
+module Msg exposing (Msg(..))
+
+
+type Msg
+    = CloseAvailableLanguages
+    | ShowAvailableLanguages
+```
+
+Next, extract `Model` and the `init` function from `Main` into a new `Model.elm`
+module, making sure that the dropdown is set to be hidden by default:
+
+**`src/Model.elm`**
+
+```elm
+module Model exposing (Model, init)
+
+import Msg exposing (Msg)
+
+
+type alias Model =
+    { showAvailableLanguages : Bool }
+
+
+init : ( Model, Cmd Msg )
+init =
+    ( { showAvailableLanguages = False }, Cmd.none )
+```
+
+Now, we need to update `Main.elm` and `LanguageDropdown.elm` to import these
+modules, and write some handling code for these `Msg`s in the `update` function:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Model exposing (Model)
+import Msg exposing (Msg(CloseAvailableLanguages, ShowAvailableLanguages))
+
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        CloseAvailableLanguages ->
+            ( { model | showAvailableLanguages = False }, Cmd.none )
+
+        ShowAvailableLanguages ->
+            ( { model
+                | showAvailableLanguages = not model.showAvailableLanguages
+              }
+            , Cmd.none
+            )
+
+-- ...
+
+main : Program Never Model Msg
+main =
+    Html.program
+        { view = view
+        , init = Model.init
+        , update = update
+        , subscriptions = always Sub.none
+        }
+```
+
+In the `LanguageDropdown`, since we will be now be sending messages of type
+`Msg`, all function annotations with `Html msg` will need to be updated to be
+`Html Msg`. We will also be making use of the `view` function's `model`
+parameter throughout the dropdown in order to determine what to show, as well
+as how to style the dropdown menu when it is open and closed:
+
+**`src/LanguageDropdown.elm`**
+
+```elm
+-- ...
+import Html.Events exposing (onClick)
+import Model exposing (Model)
+import Msg exposing (Msg(ShowAvailableLanguages))
+
+
+view : Model -> Html Msg
+view model =
+    let
+        -- ...
+    in
+        div [ classes ]
+            [ currentSelection model
+            , dropdownList model
+            ]
+
+
+currentSelection : Model -> Html Msg
+currentSelection model =
+    let
+        displayClasses =
+            if model.showAvailableLanguages then
+                [ "br--top" ]
+            else
+                []
+
+        classes =
+            [ -- ...
+            ]
+                ++ displayClasses
+                |> String.join " "
+                |> class
+
+        -- ...
+    in
+        p [ classes, onClick ShowAvailableLanguages ]
+            [ -- ...
+            ]
+
+
+dropdownList : Model -> Html Msg
+dropdownList model =
+    let
+        displayClasses =
+            if model.showAvailableLanguages then
+                [ "flex", "flex-column" ]
+            else
+                [ "dn" ]
+
+        classes =
+            [ -- ...
+            ]
+                ++ displayClasses
+                |> String.join " "
+                |> class
+
+        -- ...
+    in
+       -- ...
+
+
+dropdownListItem : String -> Html Msg
+-- ...
+```
+
+Once the above changes are made, you should be able to click on the dropdown
+menu to open and close it, showing and hiding the available languages. However,
+if you open the menu and then click anywhere else, the menu stays open.
+
+In order to get it to close (and actually use that `CloseAvailableLanguages`
+message), we are going to have to make use of the [Elm Mouse package][], and a
+subscription to mouse clicks.
+
+## Subscribe to Mouse Clicks
+
+Install the Elm Mouse package:
+
+```sh
+elm-package install -y elm-lang/mouse
+```
+
+Then, create a `subscriptions` function in Elm that listens out for mouse clicks
+_only_ when the dropdown menu is open, and if a click is detected, sends a
+`CloseAvailableLanguages` message:
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Mouse
+
+-- ...
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    if model.showAvailableLanguages then
+        Mouse.clicks (\_ -> CloseAvailableLanguages)
+    else
+        Sub.none
+
+
+main : Program Never Model Msg
+main =
+    Html.programWithFlags
+        { view = view
+        , init = Model.init
+        , update = update
+        , subscriptions = subscriptions
+        }
+```
+
+Now, whenever you click open the dropdown menu, and then click anywhere else,
+the menu will close, as expected.
+
+If the app so far is not behaving as you would expect, compare your code to
+[the `2-add-language-dropdown` branch][2-add-language-dropdown] of my
+codebase to see if anything is missing.
+
+Now, it's time to give the application the concept of a language to switch, and
+replace those place holder values with actual data!
+
+## Language Switching
+
+Time to get some translations into the application, and for that, we will use
+[elm-i18next][], along with the [HTTP in Elm][] package, so let's get
+installing:
+
+```sh
+elm-package install -y ChristophP/elm-i18next
+elm-package install -y elm-lang/http
+```
+
+First, let's provide some translation JSON files for the message on screen in
+English, Italian, and Japanese. Create a `public/locale/` directory and add the
+following files under it:
+
+**`public/locale/translations.en.json`**
+
+```json
+{
+  "verticallyCenteringInCssIsEasy": "Vertically centering things in css is easy!"
+}
+```
+
+**`public/locale/translations.it.json`**
+
+```json
+{
+  "verticallyCenteringInCssIsEasy": "Centrare verticalmente con css è facile!"
+}
+```
+
+**`public/locale/translations.ja.json`**
+
+```json
+{
+  "verticallyCenteringInCssIsEasy": "CSSで垂直センタリングは簡単だよ！"
+}
+```
+
+Next, let's create a `Translations` module where we will define the type for
+a language, and provide a helper function to convert a language type into a
+string:
+
+**`src/Translations.elm`**
+
+```elm
+module Translations exposing (Lang(..), getLnFromCode)
+
+
+type Lang
+    = En
+    | It
+    | Ja
+
+
+getLnFromCode : String -> Lang
+getLnFromCode code =
+    case code of
+        "en" ->
+            En
+
+        "it" ->
+            It
+
+        "ja" ->
+            Ja
+
+        _ ->
+            En
+```
+
+Great! Now we need to add some new `Msg` types for:
+
+- Fetching the translations from the JSON files
+- Changing the language
+
+**`src/Msg.elm`**
+
+```elm
+module Msg exposing (Msg(..))
+
+import Http exposing (Error)
+import I18Next exposing (Translations)
+import Translations exposing (Lang)
+
+
+type Msg
+    = ChangeLanguage Lang
+    | CloseAvailableLanguages
+    | FetchTranslations (Result Error Translations)
+    | ShowAvailableLanguages
+```
+
+We now need a way to be able to go and fetch the translations from the JSON
+files, and return the result back via the `FetchTranslations` message, so let's
+create that in a new module called `Cmd`:
+
+**`src/Cmd.elm`**
+
+```elm
+module Cmd exposing (fetchTranslations)
+
+import I18Next exposing (Translations)
+import Msg exposing (Msg(FetchTranslations))
+import Translations exposing (Lang)
+
+
+fetchTranslations : Lang -> Cmd Msg
+fetchTranslations language =
+    language
+        |> toTranslationsUrl
+        |> I18Next.fetchTranslations FetchTranslations
+
+
+toTranslationsUrl : Lang -> String
+toTranslationsUrl language =
+    let
+        translationLanguage =
+            language
+                |> toString
+                |> String.toLower
+    in
+        "/locale/translations." ++ translationLanguage ++ ".json"
+```
+
+Now, the `Model` needs to know about what the `currentLanguage` of the
+application is in order to determine what `translations` should be loaded, so
+let's add that information, and call the `Cmd.fetchTranslations En` command to
+immediately go and fetch the appropriate English translations, which we will
+also set as the default language:
+
+**`src/Model.elm`**
+
+```elm
+module Model exposing (Model, init)
+
+import Cmd
+import I18Next exposing (Translations)
+import Msg exposing (Msg)
+import Translations exposing (Lang(En))
+
+
+type alias Model =
+    { currentLanguage : Lang
+    , showAvailableLanguages : Bool
+    , translations : Translations
+    }
+
+
+init : ( Model, Cmd Msg )
+init =
+    ( { currentLanguage = En
+      , showAvailableLanguages = False
+      , translations = I18Next.initialTranslations
+      }
+    , Cmd.fetchTranslations En
+    )
+```
+
+Next, we need to handle the new `ChangeLanguage` and `FetchTranslations`
+messages in the `update` function.
+
+- When the language is changed, as well as change the `currentLanguage`, we need
+  to go and fetch the translations for that language in the same way we did in
+  the `init` function
+- If fetching the translations succeeds, we will display the new translations,
+  otherwise, for now we will just ignore any errors since we would not expect
+  to fetch translations for a language that we have not created ourselves.
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Cmd
+import Msg
+    exposing
+        ( Msg
+            ( ChangeLanguage
+            , CloseAvailableLanguages
+            , FetchTranslations
+            , ShowAvailableLanguages
+            )
+        )
+
+--- ...
+
+update : Msg -> Model -> ( Model, Cmd Msg )
+update msg model =
+    case msg of
+        -- ...
+        ChangeLanguage language ->
+            ( { model | currentLanguage = language }
+            , Cmd.fetchTranslations language
+            )
+
+        FetchTranslations (Ok translations) ->
+            ( { model | translations = translations }, Cmd.none )
+
+        FetchTranslations (Err msg) ->
+            ( model, Cmd.none )
+```
+
+At this stage, the application should be back to a point where everything is
+compiling again, but on the surface there are no changes since the language
+display still consists of static values, so let's change that.
+
+First, we will create a `Language` module that will have some helper functions
+around generating the string value for a language (eg "English" should always
+be displayed as "English", regardless of what the current language is), and
+keeping a static list of available languages so we can display them in the
+dropdown menu. Unfortunately, there is no way to generate a list of type values
+from a type (eg `[En, It, Ja]` from the `Lang` type), so it will have to be a
+separate definition:
+
+**`src/Language.elm`**
+
+```elm
+module Language exposing (availableLanguages, langToString)
+
+import Translations exposing (Lang(En, It, Ja))
+
+
+availableLanguages : List Lang
+availableLanguages =
+    [ En, It, Ja ]
+
+
+langToString : Lang -> String
+langToString language =
+    case language of
+        En ->
+            "English"
+
+        It ->
+            "Italiano"
+
+        Ja ->
+            "日本語"
+```
+
+Now that we have our language data setup, let's go back to the view code and
+get the page to start displaying it. First, let's get the correct information
+displayed on the dropdown menu for both the current language, and for
+the other available languages in the dropdown:
+
+**`src/LanguageDropdown.elm`**
+
+```elm
+-- ...
+import Language
+import Msg exposing (Msg(ChangeLanguage, ShowAvailableLanguages))
+import Translations exposing (Lang)
+
+-- ...
+
+
+currentSelection : Model -> Html Msg
+currentSelection model =
+    let
+        -- ...
+    in
+        p [ classes, onClick ShowAvailableLanguages ]
+            [ span []
+                [ text (Language.langToString model.currentLanguage) ]
+            , span [ caretClasses ]
+                [ text "▾" ]
+            ]
+
+
+dropdownList : Model -> Html Msg
+dropdownList model =
+    let
+        -- ...
+
+        selectableLanguages =
+            List.filter
+                (\language -> language /= model.currentLanguage)
+                Language.availableLanguages
+    in
+        ul [ classes ]
+            (List.map dropdownListItem selectableLanguages)
+
+
+dropdownListItem : Lang -> Html Msg
+dropdownListItem language =
+    let
+        -- ...
+    in
+        li [ classes, onClick (ChangeLanguage language) ]
+            [ span []
+                [ text (Language.langToString language) ]
+            ]
+```
+
+At this point, if you select a new language from the dropdown menu, you will
+see the current language display change on the menu, and if you open the Elm
+debugger, you will see that the language of the application is _actually_
+changing, and the translations for the language _are_ being loaded into the
+application:
+
+![Language Change](/assets/images/20180510/language-change.png){:
+class="img-responsive"
+}
+
+Great! Now let's get that translated message showing on the page by letting
+the content know what translations it is supposed to be displaying!
+
+**`src/Main.elm`**
+
+```elm
+-- ...
+import Translations exposing (Lang)
+
+-- ...
+
+view : Model -> Html Msg
+view model =
+    let
+        -- ...
+    in
+        main_ [ classes ]
+            [ LanguageDropdown.view model
+            , content model.translations
+            ]
+
+
+content : Translations -> Html Msg
+content translations =
+    let
+       -- ...
+    in
+        article [ articleClasses ]
+            [ div [ divClasses ]
+                [ heading translations ]
+            ]
+
+
+heading : Translations -> Html Msg
+heading translations =
+    let
+        -- ...
+    in
+        h1 [ classes ]
+            [ text (I18Next.t translations "verticallyCenteringInCssIsEasy") ]
+```
+
+And now, when you change language, you should see the displayed message also
+change language:
+
+![Japanese Display](/assets/images/20180510/japanese-display.png){:
+class="img-responsive"
+}
+
+Fantastic! That covers the main functionality of language switching, but there
+is still more we can do. Before we move on though, if you cannot switch
+languages, be sure to double-check your code against
+[the `3-add-language-switching` branch] of my codebase.
+
 [1-recreate-tachyons-doc-page]: https://github.com/paulfioravanti/elm-i18n-example/tree/1-recreate-tachyons-doc-page
+[2-add-language-dropdown]: https://github.com/paulfioravanti/elm-i18n-example/tree/2-add-language-dropdown
+[3-add-language-switching]: https://github.com/paulfioravanti/elm-i18n-example/tree/3-add-language-switching
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Elm]: http://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
 [elm-i18next]: https://github.com/ChristophP/elm-i18next
+[Elm Mouse package]: https://github.com/elm-lang/mouse
 [Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
+[HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [JSON]: https://www.json.org/
 [`localStorage`]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
