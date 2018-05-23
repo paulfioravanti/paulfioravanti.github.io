@@ -11,7 +11,7 @@ end
 group :jekyll_plugins do
   # Bootstrap dependencies for setting up and maintaining a local Jekyll
   # environment in sync with GitHub Pages
-  gem "github-pages", "183"
+  gem "github-pages", "185"
   # A Jekyll plugin that incorporates LiveReload
   gem "hawkins", "~> 2.0"
 end
