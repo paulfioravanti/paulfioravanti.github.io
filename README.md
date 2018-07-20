@@ -72,6 +72,8 @@ Content in all blog posts is licensed under the
 source code in this repo, and contained within any blog posts, is licensed
 under the [MIT license][license-mit].
 
+SPDX-License-Identifier: MIT AND CC-BY-4.0
+
 ## Social
 
 [![Contact][twitter-badge]][twitter-url]<br />
