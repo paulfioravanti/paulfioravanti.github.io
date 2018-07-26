@@ -5,6 +5,8 @@ date:   2018-02-09 09:55 +1100
 categories: elixir phoenix elm
 comments: true
 ---
+> Looking to connect Elm to a Phoenix 1.4 app? Go and check out the update to
+this blog post: [Connecting Elm to Phoenix 1.4 with webpack]
 
 Want to start using [Elm][] on the front end of a [Phoenix][] app (in this
 case, [Phoenix 1.3][])? This blog post will go over the steps I use to get
@@ -264,6 +266,7 @@ Elm.Main.embed(elmDiv);
 [Back to "Display Elm app in Phoenix template"]: #display-elm-app-in-phoenix-template
 [Brunch]: http://brunch.io/
 [Brunch's file config documentation]: http://brunch.io/docs/config#-files-
+[Connecting Elm to Phoenix 1.4 with webpack]: https://paulfioravanti.com/blog/2018/07/26/connecting-elm-to-phoenix-1-4-with-webpack/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/
