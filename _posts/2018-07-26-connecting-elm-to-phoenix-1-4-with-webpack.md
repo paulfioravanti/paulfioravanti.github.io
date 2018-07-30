@@ -17,12 +17,15 @@ entry where possible), updating information where relevant.
 > NOTE: Phoenix 1.4 is in beta at the time of this writing, so if it still
 is at the time of your reading this, and you would like to follow along, you can
 install Phoenix 1.4 Beta by doing the following:
+
 ```sh
 mix archive.uninstall phx_new
 mix archive.install https://github.com/phoenixframework/archives/raw/master/1.4-dev/phx_new.ez
 ```
+
 > Don't forget to re-install the latest stable version of Phoenix when you are
 done experimenting!
+
 ```sh
 mix archive.uninstall phx_new
 mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez

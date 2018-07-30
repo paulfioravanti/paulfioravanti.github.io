@@ -145,7 +145,7 @@ combination you want to perform?
 
 Let's say that on the layout above, instead of having the top left corner key be
 the "=" character (ie `KC_EQL`) when tapped, you would like it to perform some
-custom combination of key presses, which we'll name `MY_KEY_COMBO`. 
+custom combination of key presses, which we'll name `MY_KEY_COMBO`.
 
 Where does `MY_KEY_COMBO` get declared, and where do we define what it is
 supposed to actually do? Well, there are three main steps for this, but before
@@ -319,7 +319,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         SEND_STRING(SS_DOWN(X_LALT)SS_DOWN(X_LGUI));
         SEND_STRING(SS_TAP(X_LEFT));
         SEND_STRING(SS_UP(X_LGUI)SS_UP(X_LALT));
-        return false; 
+        return false;
       case RIGHT_PANE:
         SEND_STRING(SS_DOWN(X_LALT)SS_DOWN(X_LGUI));
         SEND_STRING(SS_TAP(X_RIGHT));
@@ -396,7 +396,7 @@ Some notes on these rules:
   Enter/Return to be "Control when held, Return/Enter when tapped". Works great
   for touch typing Vimmers that want to stay close to the home row!
 - The final rule represents the following mappings: when Left-⌘ is tapped
-  (not held), send the "英数" (_eisū_, alphanumeric) key, and when Right-⌘  is 
+  (not held), send the "英数" (_eisū_, alphanumeric) key, and when Right-⌘  is
   tapped (not held), send the "かな" (_kana_, Japanese) key. These two keys are
   often found on Japanese Mac OS keyboards and make it easy to switch between
   the inputting English and Japanese. More info
