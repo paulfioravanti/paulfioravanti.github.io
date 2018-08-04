@@ -891,5 +891,5 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
 [Stack Overflow]: https://stackoverflow.com/
-[Using Python's Bitcoin libraries in Elixir]: /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-elixir.html
+[Using Python's Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/2017/12/04/using-pythons-bitcoin-libraries-in-elixir/
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
