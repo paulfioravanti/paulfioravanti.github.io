@@ -5,7 +5,6 @@ title:  "Using C++ Bitcoin libraries in Elixir"
 date:   2017-12-14 09:03 +1100
 categories: elixir bitcoin
 comments: true
-affiliate: true
 ---
 
 Following up from my previous blog post about [Using Python's Bitcoin libraries
@@ -20,7 +19,7 @@ This blog post will focus on getting Elixir to talk to C++ code that will
 interface with Libbitcoin, within the context of the
 [Creating a Base58Check-encoded bitcoin address from a private key][] section
 in Chapter 4 of
-_[Mastering Bitcoin: Programming the Open Blockchain][mastering-bitcoin-affiliate-link]_,
+_[Mastering Bitcoin: Programming the Open Blockchain][mastering-bitcoin-book]_,
 using the code in [Example 4-3][mastering-bitcoin-example-4-3]. We'll create
 a new project and create a solution in two main steps:
 
@@ -857,7 +856,7 @@ This blog post was borne out of a lot of trial and error and frustration, mostly
 due to me not being able to C++ my way out of a paper bag without a
 [Stack Overflow][] safety net. Regardless, I hope it at least assists someone
 who may be attempting to try something similar, or is reading
-_[Mastering Bitcoin][mastering-bitcoin-affiliate-link]_ as well. I have no doubt
+_[Mastering Bitcoin][mastering-bitcoin-book]_ as well. I have no doubt
 that I'm doing it wrong when it comes to C++, so if you have any improvement
 suggestions, please leave a comment. If you want to keep tabs on my gradual
 port over of _Mastering Bitcoin_ code over to Elixir, check out my
@@ -881,7 +880,7 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [makefile-shell-function]: https://www.gnu.org/software/make/manual/html_node/Shell-Function.html
 [makefile-static-usage]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 [makefile-variable-referencing]: https://www.gnu.org/software/make/manual/html_node/Reference.html
-[mastering-bitcoin-affiliate-link]: https://www.amazon.com/gp/product/B071K7FCD4/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B071K7FCD4&linkCode=as2&tag=paulfioravant-20&linkId=c70c3b7b2ba56b9490dcfe334b4970ab
+[mastering-bitcoin-book]: https://bitcoinbook.info/
 [mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example_run
 [mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp
 [mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp

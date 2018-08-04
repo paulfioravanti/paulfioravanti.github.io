@@ -20,13 +20,7 @@ layout: default
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    {% if page.affiliate %}
-      {% include affiliate-notice.html %}
-    {% endif %}
     {{ content }}
-    {% if page.affiliate %}
-      {% include affiliate-disclosure.html %}
-    {% endif %}
   </div>
 
   {% if site.disqus.shortname %}
