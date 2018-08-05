@@ -231,8 +231,8 @@ the best solution that you can.
 [Bundler]: http://bundler.io/
 [default gems file]: https://github.com/asdf-vm/asdf-ruby#default-gems
 [Exercism]: http://exercism.io/
-[exercism-ruby-track]: http://exercism.io/languages/ruby/about
-[exercism-profile-link]: http://exercism.io/paulfioravanti
+[exercism-ruby-track]: https://exercism.io/tracks/ruby
+[exercism-profile-link]: https://exercism.io/profiles/paulfioravanti
 [`Gemfile`]: http://bundler.io/v1.5/gemfile.html
 [Guard]: https://github.com/guard/guard
 [guard-rubocop]: https://github.com/yujinakayama/guard-rubocop
