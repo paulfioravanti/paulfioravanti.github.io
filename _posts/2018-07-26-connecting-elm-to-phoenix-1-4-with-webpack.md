@@ -108,6 +108,8 @@ npm install elm-webpack-loader
 Now, open up `webpack.config.js` in a text editor and add the configuration rule
 for Elm files underneath the css rule:
 
+**`assets/webpack.config.js`**
+
 ```js
 // ...
 module.exports = (env, options) => ({
