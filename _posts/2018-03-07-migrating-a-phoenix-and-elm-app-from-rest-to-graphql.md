@@ -33,7 +33,7 @@ is an Address Book app that was originally created by [Ricardo García Vega][]
 over a [series of blog posts][Phoenix and Elm, a real use case]
 ([Ricardo's Github repo][Ricardo's repo]).
 
-![Address Book contacts](/assets/images/20180307/address-book-contacts-index.png){:
+![Address Book contacts](/assets/images/2018-03-07/address-book-contacts-index.png){:
 class="img-responsive"
 }
 
@@ -572,7 +572,7 @@ an ID or the query will error out.
 Let's now input that in GraphiQL and fire it off to the Phoenix app, along with
 a `contactID` parameter:
 
-![GraphiQL contact query](/assets/images/20180307/GraphiQL-contact-query.png){:
+![GraphiQL contact query](/assets/images/2018-03-07/GraphiQL-contact-query.png){:
 class="img-responsive"
 }
 
@@ -606,7 +606,7 @@ query($searchQuery: String!, $pageNumber: Int!) {
 
 And for a search query of `"Barn"`, the results are...
 
-![GraphiQL contacts query](/assets/images/20180307/GraphiQL-contacts-query.png){:
+![GraphiQL contacts query](/assets/images/2018-03-07/GraphiQL-contacts-query.png){:
 class="img-responsive"
 }
 
@@ -790,7 +790,7 @@ At this point, individual contact detail pages should be displaying, so navigate
 to the URL of a known contact (eg <http://localhost:4000/contacts/4>), and you
 should see a page that looks something like:
 
-![Address Book contact](/assets/images/20180307/address-book-contact-show.png){:
+![Address Book contact](/assets/images/2018-03-07/address-book-contact-show.png){:
 class="img-responsive"
 }
 

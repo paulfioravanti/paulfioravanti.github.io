@@ -5,7 +5,7 @@ date:   2017-12-19 09:40 +1100
 categories: presentations
 ---
 
-![Wii Remote](/assets/images/20171219/wii-remote.jpg){:class="img-responsive"}
+![Wii Remote](/assets/images/2017-12-19/wii-remote.jpg){:class="img-responsive"}
 
 I use a Nintendo [Wii Remote][] as my controller whenever
 [I do a presentation][my-presentations].
@@ -57,14 +57,14 @@ was perhaps in with a chance.
 So, if you've managed to get an old `RVL-CNT-01` Wiimote and have bought
 Remote Buddy, here's how you can get connected (tested on Mac OS High Sierra):
 
-![Press Wiimote buttons](/assets/images/20171219/press-buttons.png){:
+![Press Wiimote buttons](/assets/images/2017-12-19/press-buttons.png){:
 class="img-responsive"
 }
 
 Open Remote Buddy and you will be greeted with the message above telling you
 to "Please press 1 and 2 simultaneously on your Wiimote". You should do so.
 
-![Bluetooth Connection Request](/assets/images/20171219/connection-request.png){:
+![Bluetooth Connection Request](/assets/images/2017-12-19/connection-request.png){:
 class="img-responsive"
 }
 
@@ -81,7 +81,7 @@ either of the following):
 - Ignore the dialog box and it will eventually go away
 - Press the "Cancel" button
 
-![Wiimote Connected](/assets/images/20171219/wiimote-connected.png){:
+![Wiimote Connected](/assets/images/2017-12-19/wiimote-connected.png){:
 class="img-responsive"
 }
 

@@ -4,7 +4,7 @@ date:   2018-07-31 09:10 +1100
 categories: ergodox keyboards "mechanical keyboards" qmk clang
 ---
 
-![Ergodox EZ](/assets/images/20180731/ergodox-ez.jpg){:
+![Ergodox EZ](/assets/images/2018-07-31/ergodox-ez.jpg){:
 class="img-responsive"
 }
 
@@ -24,7 +24,7 @@ firmware can enable you to personalise how you use your keyboard, allowing your
 brain (or hand muscle memory) a say in assigning functionality to keys, rather
 than you having to train yourself to adapt to some product's specification.
 
-![Massdrop Configurator](/assets/images/20180731/massdrop-configurator.png){:
+![Massdrop Configurator](/assets/images/2018-07-31/massdrop-configurator.png){:
 class="img-responsive"
 }
 
@@ -77,7 +77,7 @@ Ergodoxes) to use as a base, and see about getting a feel for how to use it.
 
 ### Keyboard Layout
 
-![Ergodox Left Hand](/assets/images/20180731/ergodox-left-hand.jpg){:
+![Ergodox Left Hand](/assets/images/2018-07-31/ergodox-left-hand.jpg){:
 class="img-responsive"
 }
 
@@ -383,7 +383,7 @@ keyboard built-in to your laptop computer. If you need key mappings in that
 situation, then I can definitely recommend [Karabiner Elements][]. My mappings
 look like the following from the user interface:
 
-![Karabiner Mappings](/assets/images/20180731/karabiner-mappings.png){:
+![Karabiner Mappings](/assets/images/2018-07-31/karabiner-mappings.png){:
 class="img-responsive"
 }
 

@@ -201,7 +201,7 @@ would recommend you do the same.
 
 Anyway, your page should now look like the following screen shot:
 
-![Tachyons Page Recreated](/assets/images/20180510/Tachyons-Page-Recreated.png){:
+![Tachyons Page Recreated](/assets/images/2018-05-11/Tachyons-Page-Recreated.png){:
 class="img-responsive"
 }
 
@@ -338,7 +338,7 @@ content =
 
 Now, your page should look like this:
 
-![Menu with current selection only](/assets/images/20180510/menu-with-current-selection.png){:
+![Menu with current selection only](/assets/images/2018-05-11/menu-with-current-selection.png){:
 class="img-responsive"
 }
 
@@ -416,7 +416,7 @@ dropdownListItem language =
 
 This results in:
 
-![Menu with open selection](/assets/images/20180510/menu-with-open-selection.png){:
+![Menu with open selection](/assets/images/2018-05-11/menu-with-open-selection.png){:
 class="img-responsive"
 }
 
@@ -946,7 +946,7 @@ debugger, you will see that the language of the application is _actually_
 changing, and the translations for the language _are_ being loaded into the
 application:
 
-![Language Change](/assets/images/20180510/language-change.png){:
+![Language Change](/assets/images/2018-05-11/language-change.png){:
 class="img-responsive"
 }
 
@@ -995,7 +995,7 @@ heading translations =
 And now, when you change language, you should see the displayed message in that
 language:
 
-![Japanese Display](/assets/images/20180510/japanese-display.png){:
+![Japanese Display](/assets/images/2018-05-11/japanese-display.png){:
 class="img-responsive"
 }
 
@@ -1121,14 +1121,14 @@ in that language.
 For Chrome, you can change the language setting by opening the browser
 preferences, opening the Advanced preferences...
 
-![Chrome Advanced Preferences](/assets/images/20180510/chrome-advanced-preferences.png){:
+![Chrome Advanced Preferences](/assets/images/2018-05-11/chrome-advanced-preferences.png){:
 class="img-responsive"
 }
 
 ...finding the Languages preferences, and then choosing a language to Move to
 the top of the list:
 
-![Chrome Language Preferences](/assets/images/20180510/chrome-language-preferences.png){:
+![Chrome Language Preferences](/assets/images/2018-05-11/chrome-language-preferences.png){:
 class="img-responsive"
 }
 
@@ -1223,7 +1223,7 @@ Now, you should be able to switch languages, and have it stored in
 to confirm this with the following command:
 `localStorage.getItem("elm-i18n-example-language")`
 
-![Language Stored](/assets/images/20180510/language-stored.png){:
+![Language Stored](/assets/images/2018-05-11/language-stored.png){:
 class="img-responsive"
 }
 

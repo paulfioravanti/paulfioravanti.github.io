@@ -41,7 +41,7 @@ mix phx.server
 Navigate to <http://localhost:4000/> and you should see the familiar Phoenix
 welcome screen.
 
-![Welcome to Phoenix](/assets/images/20180726/welcome-to-phoenix.png){:
+![Welcome to Phoenix](/assets/images/2018-07-26/welcome-to-phoenix.png){:
 class="img-responsive"
 }
 
@@ -82,7 +82,7 @@ elm-app start
 Starting the Elm app should then automatically open a browser window for you at
 <http://localhost:3000/>, and you should see a message saying that...
 
-![Your Elm app is working](/assets/images/20180726/elm-app-working.png){:
+![Your Elm app is working](/assets/images/2018-07-26/elm-app-working.png){:
 class="img-responsive"
 }
 
@@ -169,7 +169,7 @@ Elm.Main.embed(elmDiv);
 Now, run `mix phx.server` again and navigate to <http://localhost:4000> to see
 if we're in business:
 
-![Image broken](/assets/images/20180726/phoenix-elm-broken-image.png){:
+![Image broken](/assets/images/2018-07-26/phoenix-elm-broken-image.png){:
 class="img-responsive"
 }
 
@@ -208,7 +208,7 @@ view model =
 
 Now, at <http://localhost:4000/>, you should see the following:
 
-![Phoenix and Elm working](/assets/images/20180726/phoenix-elm-working.png){:
+![Phoenix and Elm working](/assets/images/2018-07-26/phoenix-elm-working.png){:
 class="img-responsive"
 }
 
@@ -233,7 +233,7 @@ import "../elm/src/main.css"
 
 Re-start the app and let's see what happened...
 
-![Elm Styles Override Phoenix Styles](/assets/images/20180726/elm-styles-override-phoenix-styles.png){:
+![Elm Styles Override Phoenix Styles](/assets/images/2018-07-26/elm-styles-override-phoenix-styles.png){:
 class="img-responsive"
 }
 
@@ -285,7 +285,7 @@ img#elm-logo {
 
 Re-start the app, and...
 
-![Finished App](/assets/images/20180726/finished-app.png){:
+![Finished App](/assets/images/2018-07-26/finished-app.png){:
 class="img-responsive"
 }
 
