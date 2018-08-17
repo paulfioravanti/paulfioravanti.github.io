@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Connecting Elm to Phoenix 1.4 with webpack"
 date:   2018-07-26 16:20 +1100
 categories: elixir phoenix elm
-comments: true
 ---
 
 As of version 1.4, [Phoenix][] has changed its front end configuration framework

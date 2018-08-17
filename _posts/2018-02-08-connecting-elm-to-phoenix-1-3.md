@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Connecting Elm to Phoenix 1.3"
 date:   2018-02-09 09:55 +1100
 categories: elixir phoenix elm
-comments: true
 ---
 > Looking to connect Elm to a Phoenix 1.4 app? Go and check out the update to
 this blog post: [Connecting Elm to Phoenix 1.4 with webpack]

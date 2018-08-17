@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Runtime Language Switching in Elm"
 date:   2018-05-11 20:05 +1100
 categories: elm i18n
-comments: true
 ---
 
 When it comes to creating multilingual web pages, internationali[s\|z]ation

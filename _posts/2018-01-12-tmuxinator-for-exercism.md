@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Tmuxinator for Exercism"
 date:   2018-01-12 17:10 +1100
 categories: exercism ruby tmux tmuxinator
-comments: true
 ---
 
 [Vim][] and [tmux][] are the backbone of all my development environments.

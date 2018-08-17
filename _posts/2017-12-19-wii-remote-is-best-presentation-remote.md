@@ -1,10 +1,8 @@
 ---
 redirect_from: /presenting/2017/12/18/wii-remote-is-best-presentation-remote.html
-layout: post
 title:  "Wii Remote is Best Presentation Remote"
 date:   2017-12-19 09:40 +1100
 categories: presentations
-comments: true
 ---
 
 ![Wii Remote](/assets/images/wii-remote.jpg){:class="img-responsive"}

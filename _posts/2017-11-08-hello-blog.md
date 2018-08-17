@@ -1,6 +1,5 @@
 ---
 redirect_from: /jekyll/2017/11/08/hello-blog.html
-layout: post
 title:  "Hello Blog!"
 date:   2017-11-08 16:49 +1100
 categories: jekyll

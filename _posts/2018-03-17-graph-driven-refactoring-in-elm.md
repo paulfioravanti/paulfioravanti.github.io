@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Graph-driven Refactoring in Elm"
 date:   2018-03-17 12:15 +1100
 categories: elm refactoring architecture graphs
-comments: true
 ---
 
 After completing the "[Phoenix and Elm, a real use case][]" tutorial by

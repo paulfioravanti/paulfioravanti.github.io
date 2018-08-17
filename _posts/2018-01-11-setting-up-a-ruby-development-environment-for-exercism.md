@@ -1,9 +1,7 @@
 ---
-layout: post
 title:  "Setting up a Ruby development environment for Exercism"
 date:   2018-01-11 15:35 +1100
 categories: exercism ruby guard rubocop
-comments: true
 ---
 
 I'm extremely late to the [Exercism][] party, but I've been having lots of fun
