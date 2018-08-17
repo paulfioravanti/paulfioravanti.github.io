@@ -5,7 +5,7 @@ date:   2017-12-19 09:40 +1100
 categories: presentations
 ---
 
-![Wii Remote](/assets/images/wii-remote.jpg){:class="img-responsive"}
+![Wii Remote](/assets/images/20171219/wii-remote.jpg){:class="img-responsive"}
 
 I use a Nintendo [Wii Remote][] as my controller whenever
 [I do a presentation][my-presentations].
@@ -57,12 +57,16 @@ was perhaps in with a chance.
 So, if you've managed to get an old `RVL-CNT-01` Wiimote and have bought
 Remote Buddy, here's how you can get connected (tested on Mac OS High Sierra):
 
-![Press Wiimote buttons](/assets/images/press-buttons.png){:class="img-responsive"}
+![Press Wiimote buttons](/assets/images/20171219/press-buttons.png){:
+class="img-responsive"
+}
 
 Open Remote Buddy and you will be greeted with the message above telling you
 to "Please press 1 and 2 simultaneously on your Wiimote". You should do so.
 
-![Bluetooth Connection Request](/assets/images/connection-request.png){:class="img-responsive"}
+![Bluetooth Connection Request](/assets/images/20171219/connection-request.png){:
+class="img-responsive"
+}
 
 Then, you will get a dialog box asking you to put in a passcode to use the
 Wiimote. This is, of course, impossible since Wiimotes do not have built in
@@ -77,7 +81,9 @@ either of the following):
 - Ignore the dialog box and it will eventually go away
 - Press the "Cancel" button
 
-![Wiimote Connected](/assets/images/wiimote-connected.png){:class="img-responsive"}
+![Wiimote Connected](/assets/images/20171219/wiimote-connected.png){:
+class="img-responsive"
+}
 
 Regardless of which option you choose, assuming everything goes well, you should
 get a successful connection dialog, and you can begin configuring the Wiimote
