@@ -3,6 +3,10 @@ redirect_from: /jekyll/2017/11/17/setting-up-a-jekyll-blog.html
 title:  "Setting up a Jekyll Blog"
 date:   2017-11-17 22:30 +1100
 categories: jekyll
+excerpt: >
+  Setting up this blog, and creating a development environment that I was happy
+  with, took longer than I expected, so I thought I would document the process
+  and other learnings gained along the way.
 ---
 
 ## TL;DR
