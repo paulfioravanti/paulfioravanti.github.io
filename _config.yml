@@ -106,7 +106,7 @@ author:
   location         : "Sydney, Australia"
   email            : paul.fioravanti@gmail.com
   uri              : https://paulfioravanti.com
-  home             : # null (default), "absolute or relative url to link to author home"
+  home             : "/"
   bitbucket        :
   codepen          :
   dribbble         :
