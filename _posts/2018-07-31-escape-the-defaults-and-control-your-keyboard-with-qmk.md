@@ -1,15 +1,14 @@
 ---
 title:  "Escape the defaults and Control your keyboard with QMK"
 date:   2018-07-31 09:10 +1100
-categories: ergodox keyboards "mechanical keyboards" qmk clang
+categories: ergodox keyboards mechanical-keyboards qmk clang
 ---
 
-![Ergodox EZ](/assets/images/2018-07-31/ergodox-ez.jpg){:
-class="img-responsive"
-}
+![Ergodox EZ](/assets/images/2018-07-31/ergodox-ez.jpg)
 
 I love [mechanical keyboards][], and have been using an [Ergodox][] as my daily
 driver since 2014.
+<!--more-->
 
 If you are someone who spends a lot of time using a keyboard, and are likely to
 continue to do so in the future, then I would:
@@ -24,9 +23,7 @@ firmware can enable you to personalise how you use your keyboard, allowing your
 brain (or hand muscle memory) a say in assigning functionality to keys, rather
 than you having to train yourself to adapt to some product's specification.
 
-![Massdrop Configurator](/assets/images/2018-07-31/massdrop-configurator.png){:
-class="img-responsive"
-}
+![Massdrop Configurator](/assets/images/2018-07-31/massdrop-configurator.png)
 
 When I got my first Ergodox, I used [Massdrop's Ergodox Configurator][] to
 generate firmware for the keyboard. As I got to know my Ergodox better, and my
@@ -77,9 +74,7 @@ Ergodoxes) to use as a base, and see about getting a feel for how to use it.
 
 ### Keyboard Layout
 
-![Ergodox Left Hand](/assets/images/2018-07-31/ergodox-left-hand.jpg){:
-class="img-responsive"
-}
+![Ergodox Left Hand](/assets/images/2018-07-31/ergodox-left-hand.jpg)
 
 Below is an abbreviated part of the default layout, focusing on one layer for
 the left side of an Ergodox keyboard:
@@ -383,9 +378,7 @@ keyboard built-in to your laptop computer. If you need key mappings in that
 situation, then I can definitely recommend [Karabiner Elements][]. My mappings
 look like the following from the user interface:
 
-![Karabiner Mappings](/assets/images/2018-07-31/karabiner-mappings.png){:
-class="img-responsive"
-}
+![Karabiner Mappings](/assets/images/2018-07-31/karabiner-mappings.png)
 
 Some notes on these rules:
 

@@ -128,7 +128,7 @@ easily shared between the different API calls coming from Elm:
 
 **`assets/elm/src/Commands.elm`**
 
-```elm
+```haskell
 module Commands exposing (contactsApiUrl)
 
 
@@ -148,7 +148,7 @@ Let's see how information for a single contact is retrieved:
 
 **`assets/elm/src/Contact/Commands.elm`**
 
-```elm
+```haskell
 module Contact.Commands exposing (fetchContact)
 
 import Commands exposing (contactsApiUrl)
@@ -179,7 +179,7 @@ The decoder used for a `Contact` looks like the following:
 
 **`assets/elm/src/Contact/Decoder.elm`**
 
-```elm
+```haskell
 module Contact.Decoder exposing (decoder)
 
 import Contact.Model exposing (Contact)
@@ -208,7 +208,7 @@ updates the `Contact` model record:
 
 **`assets/elm/src/Contact/Update.elm`**
 
-```elm
+```haskell
 module Contact.Update exposing (update)
 
 import Contact.Messages exposing (ContactMsg(FetchContact))
@@ -231,7 +231,7 @@ The use of `Cmd.map ContactMsg` in `Contact.Commands` is what enables the
 case `Contact.Update` is considered a child of `Update`), which can help reduce
 the size of the "parent" `update` function:
 
-```elm
+```haskell
 module Update exposing (update, urlUpdate)
 
 import Contact.Update
@@ -271,7 +271,7 @@ what about fetching a list of contacts to populate a `ContactList` record?
 
 **`assets/elm/src/ContactList/Commands.elm`**
 
-```elm
+```haskell
 module ContactList.Commands exposing (fetchContactList)
 
 import Commands exposing (contactsApiUrl)
@@ -313,7 +313,7 @@ of records:
 
 **`assets/elm/src/ContactList/Decoder.elm`**
 
-```elm
+```haskell
 module ContactList.Decoder exposing (decoder)
 
 import Contact.Decoder
@@ -631,7 +631,7 @@ is make our easiest edit, and tell Elm the new location to send requests to:
 
 **`assets/elm/src/Commands.elm`**
 
-```elm
+```haskell
 module Commands exposing (apiUrl)
 
 
@@ -648,7 +648,7 @@ requests:
 
 **`assets/elm/src/Contact/Commands.elm`**
 
-```elm
+```haskell
 module Contact.Commands exposing (fetchContact)
 
 import Commands exposing (apiUrl)
@@ -685,7 +685,7 @@ our bearings):
 
 **`assets/elm/src/Contact/Request.elm`**
 
-```elm
+```haskell
 module Contact.Request exposing (fetchContact, contactSpec)
 
 import Contact.Model exposing (Contact)
@@ -775,7 +775,7 @@ which has been referencing the [`Http`][] library, now needs to reference
 
 **`assets/elm/src/Contact/Messages.elm`**
 
-```elm
+```haskell
 module Contact.Messages exposing (ContactMsg(..))
 
 import Contact.Model exposing (Contact)
@@ -807,7 +807,7 @@ so let's briskly get through how the files will change:
 
 **`assets/elm/src/ContactList/Commands.elm`**
 
-```elm
+```haskell
 module ContactList.Commands exposing (fetchContactList)
 
 import Commands exposing (apiUrl)
@@ -829,7 +829,7 @@ fetchContactList pageNumber search =
 
 **`assets/elm/src/ContactList/Messages.elm`**
 
-```elm
+```haskell
 module ContactList.Messages exposing (ContactListMsg(..))
 
 import ContactList.Model exposing (ContactList)
@@ -845,7 +845,7 @@ type ContactListMsg
 
 **`assets/elm/src/ContactList/Request.elm`**
 
-```elm
+```haskell
 module ContactList.Request exposing (fetchContactList)
 
 import Contact.Request
