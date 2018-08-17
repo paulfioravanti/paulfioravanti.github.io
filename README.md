@@ -54,11 +54,9 @@ bundle exec guard
 
 ## Theme
 
-This blog uses the [Minima][] theme, as that seemed to be the theme that
-worked best out of the box with Jekyll 3.6 and was usable on
-[Github Pages][], but I'm gradually copying over and overwriting
-files with customisations (see the [`_includes`][] directory), with
-the intent to eventually leave the theme behind and fully customise everything.
+This blog currently uses the [Minimal Mistakes][] theme. Previously, it used 
+the [Minima][] theme, as that seemed to be the theme that worked best out of the
+box with Jekyll 3.6, and was usable on [Github Pages][].
 
 ## License
 
@@ -96,6 +94,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [markdownlint]: https://github.com/DavidAnson/markdownlint
 [markdownlint-cli]: https://github.com/igorshubovych/markdownlint-cli
 [Minima]: https://github.com/jekyll/minima
+[Minimal Mistakes]: https://github.com/mmistakes/minimal-mistakes
 [Node]: https://github.com/nodejs/node
 [`paulfioravanti.com`]: https://paulfioravanti.com
 [Sass Lint]: https://github.com/sasstools/sass-lint
