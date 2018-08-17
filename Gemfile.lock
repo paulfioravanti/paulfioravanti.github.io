@@ -118,6 +118,8 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
+    jekyll-archives (2.1.1)
+      jekyll (>= 2.4)
     jekyll-avatar (0.6.0)
       jekyll (~> 3.0)
     jekyll-coffeescript (1.1.1)
@@ -277,6 +279,8 @@ DEPENDENCIES
   guard (~> 2.14)
   guard-process (~> 1.2)
   hawkins (~> 2.0)
+  jekyll-archives (~> 2.1)
+  jekyll-remote-theme (~> 0.3)
 
 RUBY VERSION
    ruby 2.5.1p57

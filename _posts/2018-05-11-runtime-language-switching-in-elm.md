@@ -100,7 +100,7 @@ import { Main } from "./Main.elm"
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 
 view : Model -> Html Msg
@@ -122,7 +122,7 @@ edits), change the `Main.elm` module definitions, import declarations, and
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 module Main exposing (main)
 
 import Html exposing (Html, article, div, h1, main_, text)
@@ -233,7 +233,7 @@ right.
 
 **`src/LanguageDropdown.elm`**
 
-```elm
+```haskell
 module LanguageDropdown exposing (view)
 
 import Html exposing (Html, div, li, p, span, text, ul)
@@ -295,7 +295,7 @@ more on the page than just the message:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import LanguageDropdown
 
@@ -350,7 +350,7 @@ Now, let's actually give it a `dropdownList` under the `currentSelection`!
 
 **`src/LanguageDropdown.elm`**
 
-```elm
+```haskell
 view : Html msg
 view =
     let
@@ -451,7 +451,7 @@ it into its own module:
 
 **`src/Msg.elm`**
 
-```elm
+```haskell
 module Msg exposing (Msg(..))
 
 
@@ -465,7 +465,7 @@ module, making sure that the dropdown is set to be hidden by default:
 
 **`src/Model.elm`**
 
-```elm
+```haskell
 module Model exposing (Model, init)
 
 import Msg exposing (Msg)
@@ -486,7 +486,7 @@ function:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Model exposing (Model)
 import Msg exposing (Msg(CloseAvailableLanguages, ShowAvailableLanguages))
@@ -525,7 +525,7 @@ as how to style the dropdown menu when it is open and closed:
 
 **`src/LanguageDropdown.elm`**
 
-```elm
+```haskell
 -- ...
 import Html.Events exposing (onClick)
 import Model exposing (Model)
@@ -613,7 +613,7 @@ _only_ when the dropdown menu is open, and if a click is detected, sends a
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Mouse
 
@@ -692,7 +692,7 @@ into a language:
 
 **`src/Translations.elm`**
 
-```elm
+```haskell
 module Translations exposing (Lang(..), getLnFromCode)
 
 
@@ -725,7 +725,7 @@ Great! Now we need to add some new `Msg` types for:
 
 **`src/Msg.elm`**
 
-```elm
+```haskell
 module Msg exposing (Msg(..))
 
 import Http exposing (Error)
@@ -746,7 +746,7 @@ create that in a new module called `Cmd`:
 
 **`src/Cmd.elm`**
 
-```elm
+```haskell
 module Cmd exposing (fetchTranslations)
 
 import I18Next
@@ -780,7 +780,7 @@ also set as the default language:
 
 **`src/Model.elm`**
 
-```elm
+```haskell
 module Model exposing (Model, init)
 
 import Cmd
@@ -818,7 +818,7 @@ messages in the `update` function:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Cmd
 import Msg
@@ -863,7 +863,7 @@ separate definition:
 
 **`src/Language.elm`**
 
-```elm
+```haskell
 module Language exposing (availableLanguages, langToString)
 
 import Translations exposing (Lang(En, It, Ja))
@@ -894,7 +894,7 @@ the other available languages in the dropdown:
 
 **`src/LanguageDropdown.elm`**
 
-```elm
+```haskell
 -- ...
 import Language
 import Msg exposing (Msg(ChangeLanguage, ShowAvailableLanguages))
@@ -955,7 +955,7 @@ the content know what translations it is supposed to be displaying:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Translations exposing (Lang)
 
@@ -1042,7 +1042,7 @@ our program type to `programWithFlags` to allow that to happen:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Model exposing (Flags, Model)
 
@@ -1064,7 +1064,7 @@ decode the flag to ensure that we are getting a string.
 
 **`src/Model.elm`**
 
-```elm
+```haskell
 module Model exposing (Flags, Model, init)
 
 -- ...
@@ -1098,7 +1098,7 @@ a language if decoding goes well, and return a default language if not:
 
 **`src/Language.elm`**
 
-```elm
+```haskell
 module Language exposing (availableLanguages, langFromFlag, langToString)
 
 -- ...
@@ -1150,7 +1150,7 @@ preference in the `Cmd` module, changing it over to a `port module`:
 
 **`src/Cmd.elm`**
 
-```elm
+```haskell
 port module Cmd exposing (fetchTranslations, storeLanguage)
 
 -- ...
@@ -1198,7 +1198,7 @@ message is sent), so let's make that addition to the `update` function:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -1294,7 +1294,7 @@ And if you open up the `Translations` module you should see the following:
 
 **`src/Translations.elm`**
 
-```elm
+```haskell
 module Translations exposing (..)
 
 
@@ -1345,7 +1345,7 @@ Anyway, now that we have our function, let's use it in the view:
 
 **`src/Main.elm`**
 
-```elm
+```haskell
 -- ...
 import Translations exposing (Lang)
 
