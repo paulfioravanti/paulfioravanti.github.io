@@ -2,6 +2,12 @@
 title:  "Connecting Elm to Phoenix 1.4 with webpack"
 date:   2018-07-26 16:20 +1100
 categories: elixir phoenix elm
+header:
+  overlay_image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
+  overlay_filter: 0.5
+excerpt: >
+  Phoenix 1.4 has changed its front end configuration framework from Brunch to
+  webpack.
 ---
 
 As of version 1.4, [Phoenix][] has changed its front end configuration framework
