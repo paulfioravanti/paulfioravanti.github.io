@@ -2,6 +2,11 @@
 title:  "Migrating a Phoenix and Elm app from REST to GraphQL"
 date:   2018-03-07 09:10 +1100
 categories: elixir phoenix elm rest graphql api
+header:
+  overlay_image: /assets/images/2018-03-07/GraphiQL-contact-query.png
+  overlay_filter: 0.7
+excerpt: >
+  Change your API from set menu to à la carte.
 ---
 
 [GraphQL][] enables consumers of an [API][] to ask for the exact data they

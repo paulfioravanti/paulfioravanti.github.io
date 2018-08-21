@@ -18,6 +18,8 @@ group :jekyll_plugins do
   # to Rouge 3.1.0, then all the ```haskell code markers can be changed to Elm.
   # Until then, Haskell highlighting will give close-enough results. More info:
   # https://dmitryrogozhny.com/blog/adding-elm-lexer-to-rouge
+  # NOTE: Also, Makefile syntax is not supported under 2.x, so change that to
+  # ```sh highlighting for now (see C++ bitcoin blog).
   gem "github-pages", "191"
   # A Jekyll plugin that incorporates LiveReload
   gem "hawkins", "~> 2.0"

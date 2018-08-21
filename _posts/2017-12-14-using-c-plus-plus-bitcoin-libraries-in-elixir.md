@@ -3,6 +3,14 @@ redirect_from: /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in
 title:  "Using C++ Bitcoin libraries in Elixir"
 date:   2017-12-14 09:03 +1100
 categories: elixir bitcoin
+header:
+  overlay_image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
+  overlay_filter: 0.5
+  caption: >
+    Photo by [Matt Antonioli](https://unsplash.com/photos/c8QJ7dhHP9Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: >
+  Pass messages from Elixir to C++ with Cure.
 ---
 
 Following up from my previous blog post about [Using Python's Bitcoin libraries
@@ -723,7 +731,7 @@ bootstrap provided for us, add some more code so it looks like the following:
 
 **`c_src/Makefile`**
 
-```Makefile
+```sh
 CC = g++ -std=c++11
 APP_DIR = $(shell dirname $(shell pwd))
 CURE_DEPS_DIR = $(APP_DIR)/deps/cure/c_src

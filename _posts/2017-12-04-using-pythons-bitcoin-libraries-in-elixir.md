@@ -5,6 +5,14 @@ redirect_from:
 title:  "Using Python's Bitcoin libraries in Elixir"
 date:   2017-12-04 17:20 +1100
 categories: elixir bitcoin
+header:
+  overlay_image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
+  overlay_filter: 0.5
+  caption: >
+    Photo by [Drew Stock](https://unsplash.com/photos/K-he2HgZVCA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: >
+  Leverage Elixir ports to talk to Python with Export.
 ---
 
 I'm currently attempting to learn about the technical details of [Bitcoin][] and
@@ -103,6 +111,20 @@ the following method calls:
 - `bitcoin.G`
 
 ## Generate Private Key
+
+{% capture katy_belcher_img %}
+![Katy Belcher Image](/assets/images/2017-12-04/katy-belcher-43836-unsplash.jpg)
+{% endcapture %}
+{% capture katy_belcher_credit %}
+Photo by [Katy Belcher](https://unsplash.com/photos/uVX0tmFdNEg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+{% endcapture %}
+<figure>
+  {% include stripped_markdown.html markdown=katy_belcher_img %}
+  <figcaption>
+    {% include stripped_markdown.html markdown=katy_belcher_credit %}
+  </figcaption>
+</figure>
 
 To do this, we can use [Export][], an Elixir wrapper for [Erlport], which allows
 [Erlang][] to talk to Python and [Ruby][] code. After creating a new `mix`

@@ -2,6 +2,12 @@
 title:  "Graph-driven Refactoring in Elm"
 date:   2018-03-17 12:15 +1100
 categories: elm refactoring architecture graphs
+header:
+  overlay_image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
+  overlay_filter: 0.8
+excerpt: >
+  Visually explore package and module dependencies in an Elm project to help
+  architect your app.
 ---
 
 After completing the "[Phoenix and Elm, a real use case][]" tutorial by

@@ -3,6 +3,14 @@ redirect_from: /presenting/2017/12/18/wii-remote-is-best-presentation-remote.htm
 title:  "Wii Remote is Best Presentation Remote"
 date:   2017-12-19 09:40 +1100
 categories: presentations
+header:
+  overlay_image: /assets/images/2017-12-19/geeky-shots-687868-unsplash.jpg
+  overlay_filter: 0.5
+  caption: >
+    Photo by [Geeky Shots](https://unsplash.com/photos/hQ4BQ3wdHsQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/nintendo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+excerpt: >
+  Give new life to your old controllers.
 ---
 
 ![Wii Remote](/assets/images/2017-12-19/wii-remote.jpg){:class="img-responsive"}
