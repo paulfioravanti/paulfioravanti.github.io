@@ -3,6 +3,7 @@ title:  "Runtime Language Switching in Elm"
 date:   2018-05-11 20:05 +1100
 categories: elm i18n
 header:
+  image: /assets/images/2018-05-11/japanese-display.png
   overlay_image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
   overlay_filter: 0.5
   caption: >
@@ -10,7 +11,6 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/language?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Internationalisation would seem to be a deceptively complex problem using Elm.
-og_image: /assets/images/2018-05-11/japanese-display.png
 ---
 
 When it comes to creating multilingual web pages, internationali[s\|z]ation

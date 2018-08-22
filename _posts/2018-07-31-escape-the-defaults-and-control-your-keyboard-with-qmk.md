@@ -3,12 +3,12 @@ title:  "Escape the defaults and Control your keyboard with QMK"
 date:   2018-07-31 09:10 +1100
 categories: ergodox keyboards mechanical-keyboards qmk clang
 header:
+  image: /assets/images/2018-07-31/ergodox-ez.jpg)
   overlay_image: /assets/images/2018-07-31/ergodox-kit.jpg
   overlay_filter: 0.5
 excerpt: >
   Getting a keyboard with programmable firmware can enable you to uniquely
   personalise how you use your keyboard.
-og_image: /assets/images/2018-07-31/ergodox-ez.jpg)
 ---
 
 I love [mechanical keyboards][], and have been using an [Ergodox][] as my daily

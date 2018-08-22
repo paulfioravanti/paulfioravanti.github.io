@@ -3,6 +3,7 @@ title:  "The Curious Incident of the Shadow in the Run-Time"
 date:   2018-08-20 18:00 +1100
 categories: ruby shadowing
 header:
+  image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
   overlay_image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
   overlay_filter: 0.5
   caption: >
@@ -11,7 +12,6 @@ header:
 excerpt: >
   Coding in Ruby is full of sweetness and light, but where there is light,
   shadows are cast.
-og_image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
 ---
 
 Coding in [Ruby][] is full of sweetness and light, but where there is light,

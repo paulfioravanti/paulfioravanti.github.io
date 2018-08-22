@@ -3,11 +3,11 @@ title:  "Tmuxinator for Exercism"
 date:   2018-01-12 17:10 +1100
 categories: exercism ruby tmux tmuxinator
 header:
+  image: /assets/images/2018-01-12/ruby-logo.png
   overlay_image: /assets/images/2018-01-12/ruby-logo.png
   overlay_filter: 0.6
 excerpt: >
   Creating a template for all your exercises, in any language.
-og_image: /assets/images/2018-01-12/ruby-logo.png
 ---
 
 [Vim][] and [tmux][] are the backbone of all my development environments.

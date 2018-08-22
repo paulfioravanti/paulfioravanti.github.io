@@ -4,12 +4,12 @@ title:  "Setting up a Jekyll Blog"
 date:   2017-11-17 22:30 +1100
 categories: jekyll
 header:
+  image: /assets/images/2017-11-17/jekyll-logo.png
   overlay_image: /assets/images/2017-11-17/jekyll-logo.png
   overlay_filter: 0.5
 excerpt: >
   Setting up this blog, and creating a development environment that I was happy
   with, took longer than I expected.
-og_image: /assets/images/2017-11-17/jekyll-logo.png
 ---
 
 ## TL;DR

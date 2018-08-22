@@ -3,11 +3,11 @@ title:  "Setting up a Ruby development environment for Exercism"
 date:   2018-01-11 15:35 +1100
 categories: exercism ruby guard rubocop
 header:
+  image: /assets/images/2018-01-11/ruby-logo.png
   overlay_image: /assets/images/2018-01-11/ruby-logo.png
   overlay_filter: 0.6
 excerpt: >
   Test-drive your exercises with Guard.
-og_image: /assets/images/2018-01-11/ruby-logo.png
 ---
 
 I'm extremely late to the [Exercism][] party, but I've been having lots of fun
