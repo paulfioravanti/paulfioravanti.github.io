@@ -23,7 +23,7 @@ description              : "Text on a screen, usually with a technical bent."
 url                      : https://paulfioravanti.com
 baseurl                  : ""
 repository               : "paulfioravanti/paulfioravanti.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : /assets/images/paul-teaser.jpg
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -82,7 +82,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/social/paul-og.jpg
+og_image                 : /assets/images/paul-og.jpg
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:

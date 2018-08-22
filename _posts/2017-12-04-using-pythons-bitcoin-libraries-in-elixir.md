@@ -7,6 +7,7 @@ date:   2017-12-04 17:20 +1100
 categories: elixir bitcoin
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
+  teaser: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
   overlay_image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
   overlay_filter: 0.5
   caption: >

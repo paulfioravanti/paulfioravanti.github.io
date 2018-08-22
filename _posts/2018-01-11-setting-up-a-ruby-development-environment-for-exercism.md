@@ -4,6 +4,7 @@ date:   2018-01-11 15:35 +1100
 categories: exercism ruby guard rubocop
 header:
   image: /assets/images/2018-01-11/ruby-logo.png
+  teaser: /assets/images/2018-01-11/ruby-logo.png
   overlay_image: /assets/images/2018-01-11/ruby-logo.png
   overlay_filter: 0.6
 excerpt: >

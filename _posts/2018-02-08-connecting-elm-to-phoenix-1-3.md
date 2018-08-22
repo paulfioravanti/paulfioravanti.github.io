@@ -4,6 +4,7 @@ date:   2018-02-09 09:55 +1100
 categories: elixir phoenix elm
 header:
   image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
+  teaser: /assets/images/2018-02-08/functional_web_wallpaper.jpg
   overlay_image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
   overlay_filter: 0.5
 excerpt: >

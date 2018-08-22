@@ -5,6 +5,7 @@ date:   2017-11-17 22:30 +1100
 categories: jekyll
 header:
   image: /assets/images/2017-11-17/jekyll-logo.png
+  teaser: /assets/images/2017-11-17/jekyll-logo.png
   overlay_image: /assets/images/2017-11-17/jekyll-logo.png
   overlay_filter: 0.5
 excerpt: >

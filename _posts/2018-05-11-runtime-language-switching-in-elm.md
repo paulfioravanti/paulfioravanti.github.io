@@ -4,6 +4,7 @@ date:   2018-05-11 20:05 +1100
 categories: elm i18n
 header:
   image: /assets/images/2018-05-11/japanese-display.png
+  teaser: /assets/images/2018-05-11/japanese-display.png
   overlay_image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
   overlay_filter: 0.5
   caption: >
