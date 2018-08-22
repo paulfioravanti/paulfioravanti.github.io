@@ -9,6 +9,7 @@ header:
 excerpt: >
   Setting up this blog, and creating a development environment that I was happy
   with, took longer than I expected.
+og_image: /assets/images/2017-11-17/jekyll-logo.png
 ---
 
 ## TL;DR

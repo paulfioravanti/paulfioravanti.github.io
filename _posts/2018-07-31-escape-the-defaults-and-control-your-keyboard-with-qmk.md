@@ -8,6 +8,7 @@ header:
 excerpt: >
   Getting a keyboard with programmable firmware can enable you to uniquely
   personalise how you use your keyboard.
+og_image: /assets/images/2018-07-31/ergodox-ez.jpg)
 ---
 
 I love [mechanical keyboards][], and have been using an [Ergodox][] as my daily

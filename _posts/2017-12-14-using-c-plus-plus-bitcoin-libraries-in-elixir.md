@@ -11,6 +11,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Pass messages from Elixir to C++ with Cure.
+og_image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
 ---
 
 Following up from my previous blog post about [Using Python's Bitcoin libraries

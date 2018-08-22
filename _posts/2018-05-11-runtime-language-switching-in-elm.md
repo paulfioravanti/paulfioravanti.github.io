@@ -10,6 +10,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/language?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Internationalisation would seem to be a deceptively complex problem using Elm.
+og_image: /assets/images/2018-05-11/japanese-display.png
 ---
 
 When it comes to creating multilingual web pages, internationali[s\|z]ation

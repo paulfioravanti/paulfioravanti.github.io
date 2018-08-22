@@ -8,6 +8,7 @@ header:
 excerpt: >
   Visually explore package and module dependencies in an Elm project to help
   architect your app.
+og_image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
 ---
 
 After completing the "[Phoenix and Elm, a real use case][]" tutorial by

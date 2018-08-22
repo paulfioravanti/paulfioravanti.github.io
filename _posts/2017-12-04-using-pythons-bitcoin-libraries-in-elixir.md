@@ -13,6 +13,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Leverage Elixir ports to talk to Python with Export.
+og_image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
 ---
 
 I'm currently attempting to learn about the technical details of [Bitcoin][] and

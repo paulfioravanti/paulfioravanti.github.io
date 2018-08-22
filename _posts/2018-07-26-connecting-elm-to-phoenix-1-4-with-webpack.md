@@ -8,6 +8,7 @@ header:
 excerpt: >
   Phoenix 1.4 has changed its front end configuration framework from Brunch to
   webpack.
+og_image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
 ---
 
 As of version 1.4, [Phoenix][] has changed its front end configuration framework

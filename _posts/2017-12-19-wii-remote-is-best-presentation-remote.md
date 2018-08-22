@@ -11,6 +11,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/nintendo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Give new life to your old controllers.
+og_image: /assets/images/2017-12-19/wii-remote.jpg
 ---
 
 ![Wii Remote](/assets/images/2017-12-19/wii-remote.jpg){:class="img-responsive"}

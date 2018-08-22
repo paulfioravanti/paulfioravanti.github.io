@@ -11,6 +11,7 @@ header:
 excerpt: >
   Coding in Ruby is full of sweetness and light, but where there is light,
   shadows are cast.
+og_image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
 ---
 
 Coding in [Ruby][] is full of sweetness and light, but where there is light,

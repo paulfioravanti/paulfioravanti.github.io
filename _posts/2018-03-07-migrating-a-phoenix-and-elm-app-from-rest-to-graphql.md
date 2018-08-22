@@ -7,6 +7,7 @@ header:
   overlay_filter: 0.7
 excerpt: >
   Change your API from set menu to à la carte.
+og_image: /assets/images/2018-03-07/address-book-contacts-index.png
 ---
 
 [GraphQL][] enables consumers of an [API][] to ask for the exact data they

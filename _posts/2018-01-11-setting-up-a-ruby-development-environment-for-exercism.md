@@ -7,6 +7,7 @@ header:
   overlay_filter: 0.6
 excerpt: >
   Test-drive your exercises with Guard.
+og_image: /assets/images/2018-01-11/ruby-logo.png
 ---
 
 I'm extremely late to the [Exercism][] party, but I've been having lots of fun
