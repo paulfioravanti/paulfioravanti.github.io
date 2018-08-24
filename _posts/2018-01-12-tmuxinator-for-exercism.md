@@ -3,10 +3,13 @@ title:  "Tmuxinator for Exercism"
 date:   2018-01-12 17:10 +1100
 categories: exercism ruby tmux tmuxinator
 header:
-  image: /assets/images/2018-01-12/ruby-logo.png
-  teaser: /assets/images/2018-01-12/ruby-logo.png
-  overlay_image: /assets/images/2018-01-12/ruby-logo.png
-  overlay_filter: 0.6
+  image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
+  teaser: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
+  overlay_image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
+  overlay_filter: 0.2
+  caption: >
+    Photo by [rawpixel](https://unsplash.com/photos/rMGdXjYjkz4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/architect-plan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Creating a template for all your exercises, in any language.
 ---
