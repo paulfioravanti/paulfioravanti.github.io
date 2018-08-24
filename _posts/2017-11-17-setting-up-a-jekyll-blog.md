@@ -4,10 +4,13 @@ title:  "Setting up a Jekyll Blog"
 date:   2017-11-17 22:30 +1100
 categories: jekyll
 header:
-  image: /assets/images/2017-11-17/jekyll-logo.png
-  teaser: /assets/images/2017-11-17/jekyll-logo.png
-  overlay_image: /assets/images/2017-11-17/jekyll-logo.png
-  overlay_filter: 0.5
+  image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
+  teaser: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
+  overlay_image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
+  overlay_filter: 0.7
+  caption: >
+    Photo by [Wesley Caribe](https://unsplash.com/photos/TtN_obfWlGw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/plug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Setting up this blog, and creating a development environment that I was happy
   with, took longer than I expected.
