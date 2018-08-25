@@ -1,6 +1,7 @@
 ---
-title:  "Connecting Elm to Phoenix 1.3"
-date:   2018-02-09 09:55 +1100
+redirect_from: /blog/2018/02/08/connecting-elm-to-phoenix-1-3/
+title: "Connecting Elm to Phoenix 1.3"
+date: 2018-02-09 09:55 +1100
 categories: elixir phoenix elm
 header:
   image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
