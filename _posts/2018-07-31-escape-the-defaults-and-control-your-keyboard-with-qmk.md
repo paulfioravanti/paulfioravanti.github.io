@@ -1,6 +1,6 @@
 ---
-title:  "Escape the defaults and Control your keyboard with QMK"
-date:   2018-07-31 09:10 +1100
+title: "Escape the defaults and Control your keyboard with QMK"
+date: 2018-07-31 09:10 +1100
 categories: ergodox keyboards mechanical-keyboards qmk clang
 header:
   image: /assets/images/2018-07-31/ergodox-ez.jpg

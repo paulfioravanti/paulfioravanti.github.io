@@ -1,6 +1,6 @@
 ---
-title:  "Graph-driven Refactoring in Elm"
-date:   2018-03-17 12:15 +1100
+title: "Graph-driven Refactoring in Elm"
+date: 2018-03-17 12:15 +1100
 categories: elm refactoring architecture graphs
 header:
   image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png

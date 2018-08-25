@@ -1,7 +1,7 @@
 ---
 redirect_from: /jekyll/2017/11/08/hello-blog.html
-title:  "Hello Blog!"
-date:   2017-11-08 16:49 +1100
+title: "Hello Blog!"
+date: 2017-11-08 16:49 +1100
 categories: jekyll
 comments: false
 excerpt: >

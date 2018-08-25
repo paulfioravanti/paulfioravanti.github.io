@@ -2,8 +2,8 @@
 redirect_from:
   - /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-Elixir
   - /elixir/bitcoin/2017/12/04/using-pythons-bitcoin-libraries-in-elixir.html
-title:  "Using Python's Bitcoin libraries in Elixir"
-date:   2017-12-04 17:20 +1100
+title: "Using Python's Bitcoin libraries in Elixir"
+date: 2017-12-04 17:20 +1100
 categories: elixir bitcoin
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg

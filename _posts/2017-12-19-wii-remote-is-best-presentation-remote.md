@@ -1,7 +1,7 @@
 ---
 redirect_from: /presenting/2017/12/18/wii-remote-is-best-presentation-remote.html
-title:  "Wii Remote is Best Presentation Remote"
-date:   2017-12-19 09:40 +1100
+title: "Wii Remote is Best Presentation Remote"
+date: 2017-12-19 09:40 +1100
 categories: presentations
 header:
   image: /assets/images/2017-12-19/wii-remote.jpg

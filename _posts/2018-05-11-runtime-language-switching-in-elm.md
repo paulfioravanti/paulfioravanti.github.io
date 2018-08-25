@@ -1,6 +1,6 @@
 ---
-title:  "Runtime Language Switching in Elm"
-date:   2018-05-11 20:05 +1100
+title: "Runtime Language Switching in Elm"
+date: 2018-05-11 20:05 +1100
 categories: elm i18n
 header:
   image: /assets/images/2018-05-11/japanese-display.png

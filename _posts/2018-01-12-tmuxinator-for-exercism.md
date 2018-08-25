@@ -1,6 +1,6 @@
 ---
-title:  "Tmuxinator for Exercism"
-date:   2018-01-12 17:10 +1100
+title: "Tmuxinator for Exercism"
+date: 2018-01-12 17:10 +1100
 categories: exercism ruby tmux tmuxinator
 header:
   image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg

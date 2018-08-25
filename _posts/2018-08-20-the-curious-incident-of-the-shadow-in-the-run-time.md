@@ -1,6 +1,6 @@
 ---
-title:  "The Curious Incident of the Shadow in the Run-Time"
-date:   2018-08-20 18:00 +1100
+title: "The Curious Incident of the Shadow in the Run-Time"
+date: 2018-08-20 18:00 +1100
 categories: ruby shadowing
 header:
   image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg

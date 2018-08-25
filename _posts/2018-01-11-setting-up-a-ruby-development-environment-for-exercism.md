@@ -1,6 +1,6 @@
 ---
-title:  "Setting up a Ruby development environment for Exercism"
-date:   2018-01-11 15:35 +1100
+title: "Setting up a Ruby development environment for Exercism"
+date: 2018-01-11 15:35 +1100
 categories: exercism ruby guard rubocop
 header:
   image: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg

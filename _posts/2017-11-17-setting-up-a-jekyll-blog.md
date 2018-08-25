@@ -1,7 +1,7 @@
 ---
 redirect_from: /jekyll/2017/11/17/setting-up-a-jekyll-blog.html
-title:  "Setting up a Jekyll Blog"
-date:   2017-11-17 22:30 +1100
+title: "Setting up a Jekyll Blog"
+date: 2017-11-17 22:30 +1100
 categories: jekyll
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
