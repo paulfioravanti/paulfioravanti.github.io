@@ -20,7 +20,7 @@ group :jekyll_plugins do
   # https://dmitryrogozhny.com/blog/adding-elm-lexer-to-rouge
   # NOTE: Also, Makefile syntax is not supported under 2.x, so change that to
   # ```sh highlighting for now (see C++ bitcoin blog).
-  gem "github-pages", "191"
+  gem "github-pages", "192"
   # A Jekyll plugin that incorporates LiveReload
   gem "hawkins", "~> 2.0"
   gem "jekyll-archives", "~> 2.1"
