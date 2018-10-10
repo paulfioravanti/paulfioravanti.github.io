@@ -2,6 +2,9 @@ source "https://rubygems.org"
 ruby "2.5.1"
 
 gem "jekyll-remote-theme", "~> 0.3"
+# jekyll-include-cache needed for minimal mistakes theme.
+# See https://github.com/mmistakes/minimal-mistakes
+gem "jekyll-include-cache", "~> 0.1"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
