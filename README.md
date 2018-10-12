@@ -62,11 +62,11 @@ box with Jekyll 3.6, and was usable on [Github Pages][].
 
 | Category |                         License                           |
 |----------|-----------------------------------------------------------|
-| Content  | [![License: CC BY 4.0][license-cc-badge]][license-cc-url] |
+| Content  | [![License: CC-BY-4.0][license-cc-badge]][license-cc-url] |
 | Code     | [![License: MIT][license-mit-badge]][license-mit-url]     |
 
 Content in all blog posts is licensed under the
-[Creative Commons Attribution 4.0 license][license-cc], and all
+[Creative Commons Attribution 4.0 license][license-cc] (CC-BY-4.0), and all
 source code in this repo, and contained within any blog posts, is licensed
 under the [MIT license][license-mit].
 
