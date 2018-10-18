@@ -8,8 +8,7 @@ header:
   overlay_image: /assets/images/2018-10-18/ergodox-ez.jpg
   overlay_filter: 0.5
 excerpt: >
-  Open source firmware and software can help your Ergodox quack like a fancy
-  stenography machine.
+  QMK and Plover can get your Ergodox singing steno chords.
 ---
 
 After years of touch typing using everyone's favourite 19th century keyboard
