@@ -21,7 +21,7 @@ title_separator          : "|"
 name                     : "Paul Fioravanti"
 description              : "Text on a screen, usually with a technical bent."
 url                      : "https://paulfioravanti.com"
-baseurl                  : ""
+baseurl                  :
 repository               : "paulfioravanti/paulfioravanti.github.io"
 teaser                   : "/assets/images/paul-teaser.jpg"
 # breadcrumbs            : false # true, false (default)
@@ -268,16 +268,16 @@ defaults:
   # _posts
   - scope:
       path: ""
-      type: posts
+      type: "posts"
     values:
-      layout: single
+      layout: "single"
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
       # https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/
-      classes: wide
+      classes: "wide"
       # https://jekyllrb.com/docs/posts/#post-excerpts
       excerpt_separator: "<!--more-->"
 
