@@ -7,7 +7,7 @@
     {% when "disqus" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <!-- NOTE: Changed from section to div -->
-      <div id="disqus_thread"></section>
+      <div id="disqus_thread"></div>
     {% when "facebook" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
       <section class="fb-comments" data-href="{{ page.url | absolute_url }}" data-mobile="true" data-num-posts="{{ site.comments.facebook.num_posts | default: 5 }}" data-width="100%" data-colorscheme="{{ site.comments.facebook.colorscheme | default: 'light' }}"></section>
