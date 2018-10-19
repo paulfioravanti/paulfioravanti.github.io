@@ -20,16 +20,16 @@ title                    : "Floor and Varnish"
 title_separator          : "|"
 name                     : "Paul Fioravanti"
 description              : "Text on a screen, usually with a technical bent."
-url                      : https://paulfioravanti.com
+url                      : "https://paulfioravanti.com"
 baseurl                  : ""
 repository               : "paulfioravanti/paulfioravanti.github.io"
-teaser                   : /assets/images/paul-teaser.jpg
+teaser                   : "/assets/images/paul-teaser.jpg"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : disqus
+  provider               : "disqus"
   disqus:
-    shortname            : paulfioravanti
+    shortname            : "paulfioravanti"
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -77,12 +77,12 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               : paulfioravanti
+  username               : "paulfioravanti"
 facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : /assets/images/paul-og.jpg
+og_image                 : "/assets/images/paul-og.jpg"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -92,7 +92,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : google
+  provider               : "google"
   google:
     tracking_id          : "UA-109270947-1"
     anonymize_ip         : # true, false (default)
@@ -101,11 +101,11 @@ analytics:
 # Site Author
 author:
   name             : "Paul Fioravanti"
-  avatar           : https://s.gravatar.com/avatar/abda861707b1e78e0fce47ced55f84ee
+  avatar           : "https://s.gravatar.com/avatar/abda861707b1e78e0fce47ced55f84ee"
   bio              : "Coder, linguist, mechanical keyboard enthusiast."
   location         : "Sydney, Australia"
-  email            : paul.fioravanti@gmail.com
-  uri              : https://paulfioravanti.com
+  email            : "paul.fioravanti@gmail.com"
+  uri              : "https://paulfioravanti.com"
   home             : "/"
   bitbucket        :
   codepen          :
@@ -113,19 +113,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : paulfioravanti
+  github           : "paulfioravanti"
   gitlab           :
   google_plus      :
   keybase          :
   instagram        :
   lastfm           :
-  linkedin         : paulfioravanti
+  linkedin         : "paulfioravanti"
   pinterest        :
   soundcloud       :
-  stackoverflow    : 567863/paul-fioravanti
+  stackoverflow    : "567863/paul-fioravanti"
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : paulfioravanti
+  twitter          : "paulfioravanti"
   vine             :
   weibo            :
   xing             :
