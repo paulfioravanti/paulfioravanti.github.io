@@ -455,7 +455,7 @@ configured to listen for it.
 ![Select serial port and baud rate](/assets/images/2018-10-18/plover-serial-port-configuration.png)
 
 {:start="4"}
-4. Select a port from the "Port" dropdown. The device name may not exactly match 
+4. Select a port from the "Port" dropdown. The device name may not exactly match
    what you see in this screen shot. If you see an empty "Port" dropdown list,
    click the "Scan" button to populate it
 5. Change the "Baudrate" dropdown value to 115200
