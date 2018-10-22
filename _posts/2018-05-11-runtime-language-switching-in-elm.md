@@ -211,9 +211,7 @@ would recommend you do the same.
 
 Anyway, your page should now look like the following screen shot:
 
-![Tachyons Page Recreated](/assets/images/2018-05-11/Tachyons-Page-Recreated.png){:
-class="img-responsive"
-}
+![Tachyons Page Recreated][]{:class="img-responsive"}
 
 If it does not, check your code against
 [the `1-recreate-tachyons-doc-page` branch][1-recreate-tachyons-doc-page] of my
@@ -348,9 +346,7 @@ content =
 
 Now, your page should look like this:
 
-![Menu with current selection only](/assets/images/2018-05-11/menu-with-current-selection.png){:
-class="img-responsive"
-}
+![Menu with current selection only][]{:class="img-responsive"}
 
 The "menu" here (yes, it is currently just a `p` tag), currently does nothing,
 but we can at least confirm that it looks like it is in a good spot on the page.
@@ -426,9 +422,7 @@ dropdownListItem language =
 
 This results in:
 
-![Menu with open selection](/assets/images/2018-05-11/menu-with-open-selection.png){:
-class="img-responsive"
-}
+![Menu with open selection][]{:class="img-responsive"}
 
 - For the dropdown list, we are shoving a HTML unordered list (`ul`) right
   underneath the `p` tag, simulating a menu opening.
@@ -956,9 +950,7 @@ debugger, you will see that the language of the application is _actually_
 changing, and the translations for the language _are_ being loaded into the
 application:
 
-![Language Change](/assets/images/2018-05-11/language-change.png){:
-class="img-responsive"
-}
+![Language Change][]{:class="img-responsive"}
 
 Great! Now let's get that translated message showing on the page by letting
 the content know what translations it is supposed to be displaying:
@@ -1005,9 +997,7 @@ heading translations =
 And now, when you change language, you should see the displayed message in that
 language:
 
-![Japanese Display](/assets/images/2018-05-11/japanese-display.png){:
-class="img-responsive"
-}
+![Japanese Display][]{:class="img-responsive"}
 
 Fantastic! That covers the main functionality of language switching, but there
 is still more we can do. Before we move on though, if you cannot switch
@@ -1131,16 +1121,12 @@ in that language.
 For Chrome, you can change the language setting by opening the browser
 preferences, opening the Advanced preferences...
 
-![Chrome Advanced Preferences](/assets/images/2018-05-11/chrome-advanced-preferences.png){:
-class="img-responsive"
-}
+![Chrome Advanced Preferences][]{:class="img-responsive"}
 
 ...finding the Languages preferences, and then choosing a language to Move to
 the top of the list:
 
-![Chrome Language Preferences](/assets/images/2018-05-11/chrome-language-preferences.png){:
-class="img-responsive"
-}
+![Chrome Language Preferences][]{:class="img-responsive"}
 
 Default language not changing? Check your code against
 [the `4-detect-user-language` branch][4-detect-user-language] of my codebase.
@@ -1233,9 +1219,7 @@ Now, you should be able to switch languages, and have it stored in
 to confirm this with the following command:
 `localStorage.getItem("elm-i18n-example-language")`
 
-![Language Stored](/assets/images/2018-05-11/language-stored.png){:
-class="img-responsive"
-}
+![Language Stored][]{:class="img-responsive"}
 
 Success! But there is one small lingering issue though: if you refresh the
 browser, the application is still reverting back to the default language of
@@ -1428,6 +1412,8 @@ package), please let me know!
 [5-store-language-preference]: https://github.com/paulfioravanti/elm-i18n-example/tree/5-store-language-preference
 [6-type-safe-translations]: https://github.com/paulfioravanti/elm-i18n-example/tree/6-type-safe-translations
 [Chekhov's Gun]: https://en.wikipedia.org/wiki/Chekhov%27s_gun
+[Chrome Advanced Preferences]: /assets/images/2018-05-11/chrome-advanced-preferences.png "Chrome Advanced Preferences"
+[Chrome Language Preferences]: /assets/images/2018-05-11/chrome-language-preferences.png "Chrome Language Preferences"
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Elm]: http://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
@@ -1439,13 +1425,19 @@ package), please let me know!
 [Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
 [HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
+[Japanese Display]: /assets/images/2018-05-11/japanese-display.png "Japanese display"
 [JSON]: https://www.json.org/
 [ksol-gist]: https://gist.github.com/ksol/62b489572944ca70b4ba
+[Language Change]: /assets/images/2018-05-11/language-change.png "Language Change"
+[Language Stored]: /assets/images/2018-05-11/language-stored.png) "Language Stored"
 [`localStorage`]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[Menu with current selection only]: /assets/images/2018-05-11/menu-with-current-selection.png "Menu with current selection only"
+[Menu with open selection]: /assets/images/2018-05-11/menu-with-open-selection.png "Menu with open selection"
 [`navigator.language`]: https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language
 [`navigator.userLanguage`]: http://help.dottoro.com/ljgtasfq.php
 [Phoenix Gettext]: https://hexdocs.pm/gettext/Gettext.html
 [Rails i18n]: http://guides.rubyonrails.org/i18n.html
 [Tachyons]: http://tachyons.io/
 [Tachyons' Table of Styles]: http://tachyons.io/docs/table-of-styles/
+[Tachyons Page Recreated]: /assets/images/2018-05-11/Tachyons-Page-Recreated.png "Tachyons Page Recreated"
 [Tailwind]: https://tailwindcss.com/
