@@ -15,9 +15,9 @@ excerpt: >
   Give new life to your old controllers.
 ---
 
-![Wii Remote](/assets/images/2017-12-19/wii-remote.jpg){:class="img-responsive"}
+![Wii Remote][]{:class="img-responsive"}
 
-I use a Nintendo [Wii Remote][] as my controller whenever
+I use a Nintendo [Wii Remote][Wii Remote Wikipedia] as my controller whenever
 [I do a presentation][my-presentations].
 
 In my opinion, its form factor, number of configurable buttons, and general
@@ -67,16 +67,12 @@ was perhaps in with a chance.
 So, if you've managed to get an old `RVL-CNT-01` Wiimote and have bought
 Remote Buddy, here's how you can get connected (tested on Mac OS High Sierra):
 
-![Press Wiimote buttons](/assets/images/2017-12-19/press-buttons.png){:
-class="img-responsive"
-}
+![Press Wiimote buttons][]{:class="img-responsive"}
 
 Open Remote Buddy and you will be greeted with the message above telling you
 to "Please press 1 and 2 simultaneously on your Wiimote". You should do so.
 
-![Bluetooth Connection Request](/assets/images/2017-12-19/connection-request.png){:
-class="img-responsive"
-}
+![Bluetooth Connection Request][]{:class="img-responsive"}
 
 Then, you will get a dialog box asking you to put in a passcode to use the
 Wiimote. This is, of course, impossible since Wiimotes do not have built in
@@ -91,9 +87,7 @@ either of the following):
 - Ignore the dialog box and it will eventually go away
 - Press the "Cancel" button
 
-![Wiimote Connected](/assets/images/2017-12-19/wiimote-connected.png){:
-class="img-responsive"
-}
+![Wiimote Connected][]{:class="img-responsive"}
 
 Regardless of which option you choose, assuming everything goes well, you should
 get a successful connection dialog, and you can begin configuring the Wiimote
@@ -124,10 +118,14 @@ Bluetooth remote, or have a favourite non-standard remote you like using for
 presentations? If so, then please leave a comment as I would love to hear about
 it!
 
+[Bluetooth Connection Request]: /assets/images/2017-12-19/connection-request.png "Bluetooth Connection Request"
 [Dolphin Emulator]: https://dolphin-emu.org/
 [my-presentations]: https://github.com/paulfioravanti/presentations
+[Press Wiimote buttons]: /assets/images/2017-12-19/press-buttons.png "Press Wiimote buttons"
 [Remote Buddy]: https://www.iospirit.com/products/remotebuddy/
 [Remote Buddy's Wiimote Support Page]: https://www.iospirit.com/support/faqs/remotebuddy/category/2/Hardware-Wii-Remote/
-[Wii Remote]: https://en.wikipedia.org/wiki/Wii_Remote
+[Wiimote Connected]: /assets/images/2017-12-19/wiimote-connected.png "Wiimote Connected"
+[Wii Remote]: /assets/images/2017-12-19/wii-remote.jpg "Wii Remote"
+[Wii Remote Wikipedia]: https://en.wikipedia.org/wiki/Wii_Remote
 [Wii Remote Plus connection guide]: https://dolphin-emu.org/docs/guides/wii-remote-plus-rvl-cnt-01-tr-connection-guide/
 [Wii Remote Plus]: https://en.wikipedia.org/wiki/Wii_Remote#Wii_Remote_Plus
