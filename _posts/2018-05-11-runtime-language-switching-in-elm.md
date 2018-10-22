@@ -1429,7 +1429,7 @@ package), please let me know!
 [JSON]: https://www.json.org/
 [ksol-gist]: https://gist.github.com/ksol/62b489572944ca70b4ba
 [Language Change]: /assets/images/2018-05-11/language-change.png "Language Change"
-[Language Stored]: /assets/images/2018-05-11/language-stored.png) "Language Stored"
+[Language Stored]: /assets/images/2018-05-11/language-stored.png "Language Stored"
 [`localStorage`]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [Menu with current selection only]: /assets/images/2018-05-11/menu-with-current-selection.png "Menu with current selection only"
 [Menu with open selection]: /assets/images/2018-05-11/menu-with-open-selection.png "Menu with open selection"

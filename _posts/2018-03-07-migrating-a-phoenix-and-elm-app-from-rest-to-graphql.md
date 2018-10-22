@@ -958,7 +958,7 @@ stack moving forward, I would love to hear about it!
 [Absinthe.Phoenix]: https://github.com/absinthe-graphql/absinthe_phoenix
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
 [Address Book contacts]: /assets/images/2018-03-07/address-book-contacts-index.png "Address Book contacts"
-[Address Book contact]: /assets/images/2018-03-07/address-book-contact-show.png) "Address Book contact"
+[Address Book contact]: /assets/images/2018-03-07/address-book-contact-show.png "Address Book contact"
 [API]: https://en.wikipedia.org/wiki/Application_programming_interface
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
 [Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
