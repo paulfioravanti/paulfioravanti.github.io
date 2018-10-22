@@ -21,7 +21,7 @@ title_separator          : "|"
 name                     : "Paul Fioravanti"
 description              : "Text on a screen, usually with a technical bent."
 url                      : "https://paulfioravanti.com"
-baseurl                  :
+baseurl                  : "" # NOTE: This _needs_ to be an empty string, and not blank (`nil`)
 repository               : "paulfioravanti/paulfioravanti.github.io"
 teaser                   : "/assets/images/paul-teaser.jpg"
 # breadcrumbs            : false # true, false (default)
