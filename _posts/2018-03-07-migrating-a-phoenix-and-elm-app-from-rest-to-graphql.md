@@ -40,9 +40,7 @@ is an Address Book app that was originally created by [Ricardo García Vega][]
 over a [series of blog posts][Phoenix and Elm, a real use case]
 ([Ricardo's Github repo][Ricardo's repo]).
 
-![Address Book contacts](/assets/images/2018-03-07/address-book-contacts-index.png){:
-class="img-responsive"
-}
+![Address Book contacts][]{:class="img-responsive"}
 
 I learned a lot from coding up the app while reading those posts, and I thank
 Ricardo sincerely for putting the time into his write-ups! Afterwards, I
@@ -579,9 +577,7 @@ an ID or the query will error out.
 Let's now input that in GraphiQL and fire it off to the Phoenix app, along with
 a `contactID` parameter:
 
-![GraphiQL contact query](/assets/images/2018-03-07/GraphiQL-contact-query.png){:
-class="img-responsive"
-}
+![GraphiQL contact query][]{:class="img-responsive"}
 
 Looks pretty good to me! Now, how about for a list of contacts?
 
@@ -613,9 +609,7 @@ query($searchQuery: String!, $pageNumber: Int!) {
 
 And for a search query of `"Barn"`, the results are...
 
-![GraphiQL contacts query](/assets/images/2018-03-07/GraphiQL-contacts-query.png){:
-class="img-responsive"
-}
+![GraphiQL contacts query][]{:class="img-responsive"}
 
 ...all of the users with a first name of Barney! Great! We now know the GraphQL
 queries that we want the front end to send to the back end, and now, it's time
@@ -797,9 +791,7 @@ At this point, individual contact detail pages should be displaying, so navigate
 to the URL of a known contact (eg <http://localhost:4000/contacts/4>), and you
 should see a page that looks something like:
 
-![Address Book contact](/assets/images/2018-03-07/address-book-contact-show.png){:
-class="img-responsive"
-}
+![Address Book contact][]{:class="img-responsive"}
 
 The sample data in the app is generated randomly, so the contact you see from
 the URL above will most likely be different, but, it works! Performing a search,
@@ -965,6 +957,8 @@ stack moving forward, I would love to hear about it!
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe.Phoenix]: https://github.com/absinthe-graphql/absinthe_phoenix
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
+[Address Book contacts]: /assets/images/2018-03-07/address-book-contacts-index.png "Address Book contacts"
+[Address Book contact]: /assets/images/2018-03-07/address-book-contact-show.png) "Address Book contact"
 [API]: https://en.wikipedia.org/wiki/Application_programming_interface
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
 [Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
@@ -977,6 +971,8 @@ stack moving forward, I would love to hear about it!
 [GraphQL]: http://graphql.org/
 [`GraphQL.Client.Http`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http
 [`GraphQL.Client.Http.sendQuery`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http#sendQuery
+[GraphiQL contact query]: /assets/images/2018-03-07/GraphiQL-contact-query.png "GraphiQL contact query"
+[GraphiQL contacts query]: /assets/images/2018-03-07/GraphiQL-contacts-query.png "GraphiQL contacts query"
 [GraphQL mutations]: http://graphql.org/learn/queries/#mutations
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/

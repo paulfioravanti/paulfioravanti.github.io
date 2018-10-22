@@ -34,9 +34,7 @@ mix phx.server
 Navigate to <http://localhost:4000/> and you should see the familiar Phoenix
 welcome screen.
 
-![Welcome to Phoenix](/assets/images/2018-02-08/welcome-to-phoenix.png){:
-class="img-responsive"
-}
+![Welcome to Phoenix][]{:class="img-responsive"}
 
 No surprises here. Close down the server, and let's move on.
 
@@ -75,9 +73,7 @@ elm-app start
 Starting the Elm app should then automatically open a browser window for you at
 <http://localhost:3000/>, and you should see a message saying that...
 
-![Your Elm app is working](/assets/images/2018-02-08/elm-app-working.png){:
-class="img-responsive"
-}
+![Your Elm app is working][]{:class="img-responsive"}
 
 Note that the Elm app is running independently here: it knows nothing about the
 Phoenix environment that it's located in, and is happily using assets,
@@ -169,9 +165,7 @@ Elm.Main.embed(elmDiv);
 Now, run `mix phx.server` again and navigate to <http://localhost:4000> to see
 if we're in business:
 
-![Image broken](/assets/images/2018-02-08/phoenix-elm-broken-image.png){:
-class="img-responsive"
-}
+![Image broken][]{:class="img-responsive"}
 
 Not quite yet, it would seem: we can see that the Elm app is being rendered in
 the template, but we've got a broken image. This is because that image currently
@@ -208,9 +202,7 @@ view model =
 
 Now, at <http://localhost:4000/>, you should see the following:
 
-![Phoenix and Elm working](/assets/images/2018-02-08/phoenix-elm-working.png){:
-class="img-responsive"
-}
+![Phoenix and Elm working][]{:class="img-responsive"}
 
 Great! You're now successfully bootstrapped to start building out your new
 Phoenix-and-Elm powered app!
@@ -278,7 +270,11 @@ Elm.Main.embed(elmDiv);
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/
 [elm-brunch]: https://github.com/madsflensted/elm-brunch
+[Image broken]: /assets/images/2018-02-08/phoenix-elm-broken-image.png "Image broken"
 [Phoenix]: http://phoenixframework.org/
 [Phoenix 1.3]: http://phoenixframework.org/blog/phoenix-1-3-0-released
+[Phoenix and Elm working]: /assets/images/2018-02-08/phoenix-elm-working.png "Phoenix and Elm working"
 [phoenix-installation]: https://hexdocs.pm/phoenix/installation.html#content
 [update]: #update-2018-02-16
+[Your Elm app is working]: /assets/images/2018-02-08/elm-app-working.png "Your Elm app is working"
+[Welcome to Phoenix]: /assets/images/2018-02-08/welcome-to-phoenix.png "Welcome to Phoenix"
