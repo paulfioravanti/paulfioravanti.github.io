@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.5.1"
+ruby "2.5.3"
 
 gem "jekyll-remote-theme", "~> 0.3"
 # jekyll-include-cache needed for minimal mistakes theme.
