@@ -123,17 +123,13 @@ chmod 744 elm-module-graph.py
 Next, navigate to <https://justinmimbs.github.io/elm-module-graph/> and upload
 the generated `module-graph.json` file, and you will see something like this:
 
-![REST branch default modules](/assets/images/2018-03-17/REST-branch-default-modules.png){:
-class="img-responsive"
-}
+![REST branch default modules][]{:class="img-responsive"}
 
 The default graph display includes modules from external libraries, so let's
 hide them (by toggling the display of the external packages at the top) so that
 we can focus on the application code:
 
-![REST branch only project modules](/assets/images/2018-03-17/REST-branch-only-project-modules.png){:
-class="img-responsive"
-}
+![REST branch only project modules][]{:class="img-responsive"}
 
 ## Find Long Bars
 
@@ -142,9 +138,7 @@ is imported by many modules. Here, it is clear that the `Messages` module,
 displayed right in the middle of the graph, has the longest bar, so let's take
 a clearer look at its dependencies by clicking on it:
 
-![REST branch Messages pre-refactor](/assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png){:
-class="img-responsive"
-}
+![REST branch Messages pre-refactor][]{:class="img-responsive"}
 
 - The modules in <span style="color: red">red</span> are the modules that
   `Messages` imports into itself. These are not the relationships we need to
@@ -611,9 +605,7 @@ Re-generate the `module-graph.json` file (`./elm-module-graph.py src/Main.elm`),
 and re-upload it to <https://justinmimbs.github.io/elm-module-graph/> and let's
 see what the graph says:
 
-![REST branch Messages Contact refactored](/assets/images/2018-03-17/REST-branch-Messages-Contact-refactored.png){:
-class="img-responsive"
-}
+![REST branch Messages Contact refactored][]{:class="img-responsive"}
 
 Awesome! Modules in the `Contact` concern now have no direct dependencies with
 the top level `Messages` module!
@@ -623,9 +615,7 @@ dependencies in the `Messages` module, and you can see the results of that
 in the [`rest-refactor` branch of the Address App][Paul's repo rest-refactor]
 if you are interested.  Suffice to say, the graph now looks like:
 
-![REST branch Messages post-refactor](/assets/images/2018-03-17/REST-branch-Messages-post-refactor.png){:
-class="img-responsive"
-}
+![REST branch Messages post-refactor][]{:class="img-responsive"}
 
 Not bad! With further refactoring and re-architecting, maybe I could remove
 `ContactList.View` from this list, but I'm done fighting with types for now
@@ -654,5 +644,10 @@ some easy-to-digest information about its dependencies!
 [Migrating a Phoenix and Elm app from REST to GraphQL]: https://paulfioravanti.com/blog/2018/03/06/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
 [Phoenix and Elm, a real use case]: http://codeloveandboards.com/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1/
 [Python]: https://www.python.org/downloads/
+[REST branch default modules]: /assets/images/2018-03-17/REST-branch-default-modules.png "REST branch default modules"
+[REST branch Messages post-refactor]: /assets/images/2018-03-17/REST-branch-Messages-post-refactor.png "REST branch Messages post-refactor"
+[REST branch Messages pre-refactor]: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png "REST branch Messages pre-refactor"
+[REST branch Messages Contact refactored]: /assets/images/2018-03-17/REST-branch-Messages-Contact-refactored.png "REST branch Messages Contact refactored"
+[REST branch only project modules]: /assets/images/2018-03-17/REST-branch-only-project-modules.png "REST branch only project modules"
 [Ricardo García Vega]: https://twitter.com/bigardone
 [Ricardo's repo]: https://github.com/bigardone/phoenix-and-elm
