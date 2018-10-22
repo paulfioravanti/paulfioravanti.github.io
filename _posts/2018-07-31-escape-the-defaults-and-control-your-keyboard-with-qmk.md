@@ -15,7 +15,7 @@ excerpt: >
 I love [mechanical keyboards][], and have been using an [Ergodox][] as my daily
 driver since 2014.
 
-![Ergodox EZ](/assets/images/2018-07-31/ergodox-ez.jpg)
+![Ergodox EZ][Ergodox EZ image]{:class="img-responsive"}
 
 If you are someone who spends a lot of time using a keyboard, and are likely to
 continue to do so in the future, then I would:
@@ -30,7 +30,7 @@ firmware can enable you to personalise how you use your keyboard, allowing your
 brain (or hand muscle memory) a say in assigning functionality to keys, rather
 than you having to train yourself to adapt to some product's specification.
 
-![Massdrop Configurator](/assets/images/2018-07-31/massdrop-configurator.png)
+![Massdrop Configurator][]{:class="img-responsive"}
 
 When I got my first Ergodox, I used [Massdrop's Ergodox Configurator][] to
 generate firmware for the keyboard. As I got to know my Ergodox better, and my
@@ -81,7 +81,7 @@ Ergodoxes) to use as a base, and see about getting a feel for how to use it.
 
 ### Keyboard Layout
 
-![Ergodox Left Hand](/assets/images/2018-07-31/ergodox-left-hand.jpg)
+![Ergodox Left Hand][]{:class="img-responsive"}
 
 Below is an abbreviated part of the default layout, focusing on one layer for
 the left side of an Ergodox keyboard:
@@ -385,7 +385,7 @@ keyboard built-in to your laptop computer. If you need key mappings in that
 situation, then I can definitely recommend [Karabiner Elements][]. My mappings
 look like the following from the user interface:
 
-![Karabiner Mappings](/assets/images/2018-07-31/karabiner-mappings.png)
+![Karabiner Mappings][]{:class="img-responsive"}
 
 Some notes on these rules:
 
@@ -413,16 +413,20 @@ Happy Clacking!
 [ERB tags]: https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html#class-ERB-label-Recognized+Tags
 [Ergodox]: https://www.ergodox.io/
 [Ergodox Custom Layout]: https://github.com/paulfioravanti/ergodox-firmware/blob/custom-layout/firmware/keyboard/ergodox/layout/custom-layout.c
+[Ergodox EZ image]: /assets/images/2018-07-31/ergodox-ez.jpg "Ergodox EZ"
 [Ergodox EZ]: https://ergodox-ez.com/
 [Ergodox EZ Configurator]: https://configure.ergodox-ez.com/keyboard_layouts/new
 [ErgoDox EZ Graphical Configurator page]: https://ergodox-ez.com/pages/graphical-configurator
 [Ergodox Firmware]: https://github.com/benblazak/ergodox-firmware
+[Ergodox Left Hand]: /assets/images/2018-07-31/ergodox-left-hand.jpg "Ergodox Left Hand"
 [Feature Macro]: https://docs.qmk.fm/#/feature_macros
 [Hand Coded]: https://speakerdeck.com/paulfioravanti/hand-coded
 [Installing Build Tools]: https://docs.qmk.fm/#/getting_started_build_tools
 [`karabiner.json`]: https://github.com/paulfioravanti/dotfiles/blob/master/config/karabiner/karabiner.json
 [Karabiner Elements]: https://github.com/tekezo/Karabiner-Elements
+[Karabiner Mappings]: /assets/images/2018-07-31/karabiner-mappings.png "Karabiner Mappings"
 [Keys for Japanese Keyboards]: https://en.wikipedia.org/wiki/Language_input_keys#Keys_for_Japanese_Keyboards
+[Massdrop Configurator]: /assets/images/2018-07-31/massdrop-configurator.png "Massdrop Configurator"
 [Massdrop's Ergodox Configurator]: https://www.massdrop.com/configurator/ergodox
 [mechanical keyboards]: https://www.reddit.com/r/MechanicalKeyboards/
 [Mod Tap]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=mod-tap
