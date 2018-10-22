@@ -252,7 +252,7 @@ output.
 Open up the Plover application, select the "Enable" radio button, and try typing
 again.
 
-![Plover connected to keyboard](/assets/images/2018-10-18/plover-keyboard-connected.png)
+![Plover connected to keyboard][]{:class="img-responsive"}
 
 The output should be completely different than before, which would indicate that
 everything is working: we are typing in steno! So, what I would recommend doing
@@ -442,17 +442,17 @@ If you get any build issues, check what you have against
 Now that we have got QMK speaking in GeminiPR protocol, we need to get Plover
 configured to listen for it.
 
-![Click configure button in Plover window](/assets/images/2018-10-18/plover-configure.png)
+![Click configure button in Plover window][]{:class="img-responsive"}
 
 1. Click the "Configure..." button in the Plover window
 
-![Select GeminiPR from dropdown and click Configure button](/assets/images/2018-10-18/plover-configuration-configure.png)
+![Select GeminiPR from dropdown and click Configure button][]{:class="img-responsive"}
 
 {:start="2"}
 2. Select "Gemini PR" from the "Stenotype Machine" dropdown list
 3. Click the "Configure..." button next to the dropdown list
 
-![Select serial port and baud rate](/assets/images/2018-10-18/plover-serial-port-configuration.png)
+![Select serial port and baud rate][]{:class="img-responsive"}
 
 {:start="4"}
 4. Select a port from the "Port" dropdown. The device name may not exactly match
@@ -463,7 +463,7 @@ configured to listen for it.
 6. Click "OK"
 7. Click "Save" on the "Plover Configuration" window
 
-![GeminiPR connected](/assets/images/2018-10-18/plover-geminipr-connected.png)
+![GeminiPR connected][]{:class="img-responsive"}
 
 {:start="8"}
 8. Click "Enable" on the Plover window and you should get a message saying
@@ -501,6 +501,7 @@ As of this writing, I am currently only at 12 WPM after completing Lesson 1 of
 student with a long road ahead. So, if there are any glaring mistakes or
 omissions in this post, please let me know in the comments.
 
+[Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
 [Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#configuring-qmk-for-steno
 [DCS profile]: https://deskthority.net/wiki/Signature_Plastics_DCS_family
@@ -511,6 +512,7 @@ omissions in this post, please let me know in the comments.
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/g20-blank-keysets/
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
+[GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Google IME]: https://www.google.com/inputtools/services/features/input-method.html
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
 [Learn Plover!]: https://sites.google.com/site/ploverdoc/
@@ -519,6 +521,7 @@ omissions in this post, please let me know in the comments.
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [Open Steno Project]: http://www.openstenoproject.org/
 [Plover]: http://www.openstenoproject.org/plover/
+[Plover connected to keyboard]: /assets/images/2018-10-18/plover-keyboard-connected.png "Plover connected to keyboard"
 [Plover crash issue]: https://github.com/openstenoproject/plover/issues/573#issuecomment-256122550
 [Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
 [Plover Installation]: https://github.com/openstenoproject/plover/wiki/Installation-Guide#installation
@@ -538,6 +541,8 @@ omissions in this post, please let me know in the comments.
 [QMK NKRO Github issue]: https://github.com/qmk/qmk_firmware/issues/1695#issuecomment-328317966
 [QMK steno keycodes]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#keycode-reference
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
+[Select GeminiPR from dropdown and click Configure button]: /assets/images/2018-10-18/plover-configuration-configure.png "Select GeminiPR from dropdown and click Configure button"
+[Select serial port and baud rate]: /assets/images/2018-10-18/plover-serial-port-configuration.png "Select serial port and baud rate"
 [steno machine keymap]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys#TOC-The-Keyboard
 [Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md
 [`TC(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
