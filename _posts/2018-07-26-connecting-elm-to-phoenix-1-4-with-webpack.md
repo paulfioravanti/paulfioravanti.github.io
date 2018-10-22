@@ -49,9 +49,7 @@ mix phx.server
 Navigate to <http://localhost:4000/> and you should see the familiar Phoenix
 welcome screen.
 
-![Welcome to Phoenix](/assets/images/2018-07-26/welcome-to-phoenix.png){:
-class="img-responsive"
-}
+![Welcome to Phoenix][]{:class="img-responsive"}
 
 No surprises here. Close down the server, and let's move on.
 
@@ -90,9 +88,7 @@ elm-app start
 Starting the Elm app should then automatically open a browser window for you at
 <http://localhost:3000/>, and you should see a message saying that...
 
-![Your Elm app is working](/assets/images/2018-07-26/elm-app-working.png){:
-class="img-responsive"
-}
+![Your Elm app is working][]{:class="img-responsive"}
 
 Note that the Elm app is running independently here: it knows nothing about the
 Phoenix environment that it's located in, and is happily using assets,
@@ -177,9 +173,7 @@ Elm.Main.embed(elmDiv);
 Now, run `mix phx.server` again and navigate to <http://localhost:4000> to see
 if we're in business:
 
-![Image broken](/assets/images/2018-07-26/phoenix-elm-broken-image.png){:
-class="img-responsive"
-}
+![Image broken][]{:class="img-responsive"}
 
 Well, we're pretty much there: we can see that the Elm app is being rendered in
 the template, but we've got a broken image. This is because that image currently
@@ -216,9 +210,7 @@ view model =
 
 Now, at <http://localhost:4000/>, you should see the following:
 
-![Phoenix and Elm working](/assets/images/2018-07-26/phoenix-elm-working.png){:
-class="img-responsive"
-}
+![Phoenix and Elm working][]{:class="img-responsive"}
 
 At this point, everything is technically working, so you can happily continue
 your application bootstrapping, but if you need to have the styling on this
@@ -241,9 +233,7 @@ import "../elm/src/main.css"
 
 Re-start the app and let's see what happened...
 
-![Elm Styles Override Phoenix Styles](/assets/images/2018-07-26/elm-styles-override-phoenix-styles.png){:
-class="img-responsive"
-}
+![Elm Styles Override Phoenix Styles][]{:class="img-responsive"}
 
 Well, the Elm app styling looks like we would expect, but some of the Elm
 styles would seem to be overriding the Phoenix styles, so let's see if we can
@@ -293,9 +283,7 @@ img#elm-logo {
 
 Re-start the app, and...
 
-![Finished App](/assets/images/2018-07-26/finished-app.png){:
-class="img-responsive"
-}
+![Finished App][]{:class="img-responsive"}
 
 That looks about right. Now, you can get down to the business of ripping it all
 out again, and start building out your own Phoenix-and-Elm powered app!
@@ -306,6 +294,12 @@ out again, and start building out your own Phoenix-and-Elm powered app!
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/
 [Elm loader]: https://github.com/elm-community/elm-webpack-loader
+[Elm Styles Override Phoenix Styles]: /assets/images/2018-07-26/elm-styles-override-phoenix-styles.png "Elm Styles Override Phoenix Styles"
+[Finished App]: /assets/images/2018-07-26/finished-app.png "Finished App"
+[Image broken]: /assets/images/2018-07-26/phoenix-elm-broken-image.png "Image broken"
 [Phoenix]: https://phoenixframework.org/
+[Phoenix and Elm working]: /assets/images/2018-07-26/phoenix-elm-working.png "Phoenix and Elm working"
 [Replace brunch with webpack 4 in the installers]: https://github.com/phoenixframework/phoenix/pull/2779
 [webpack]: https://webpack.js.org/
+[Welcome to Phoenix]: /assets/images/2018-07-26/welcome-to-phoenix.png "Welcome to Phoenix"
+[Your Elm app is working]: /assets/images/2018-07-26/elm-app-working.png "Your Elm app is working"
