@@ -7,11 +7,16 @@ gem "jekyll-remote-theme", "~> 0.3"
 # See https://github.com/mmistakes/minimal-mistakes
 gem "jekyll-include-cache", "~> 0.1"
 
+
 group :development do
   # Command line tool to easily handle events on file system modifications
   gem "guard", "~> 2.14"
   # Guard extension to run cli processes
   gem "guard-process", "~> 1.2"
+end
+
+group :development, :test do
+  gem "html-proofer", "~> 3.9"
 end
 
 group :jekyll_plugins do
