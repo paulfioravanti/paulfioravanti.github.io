@@ -1,7 +1,7 @@
 ---
 title: "Migrating a Phoenix and Elm app from REST to GraphQL"
 date: 2018-03-07 09:10 +1100
-categories: elixir phoenix elm rest graphql api
+tags: elixir phoenix elm rest graphql api
 header:
   image: /assets/images/2018-03-07/address-book-contacts-index.png
   teaser: /assets/images/2018-03-07/address-book-contacts-index.png

@@ -1,7 +1,7 @@
 ---
 title: "Connecting Elm to Phoenix 1.4 with webpack"
 date: 2018-07-26 16:20 +1100
-categories: elixir phoenix elm
+tags: elixir phoenix elm
 header:
   image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
   teaser: /assets/images/2018-07-26/functional_web_wallpaper.jpg
