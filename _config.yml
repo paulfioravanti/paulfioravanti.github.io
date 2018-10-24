@@ -237,7 +237,7 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 tag_archive:
-  type: "liquid"
+  type: "jekyll-archives"
   path: "/tags/"
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
@@ -246,7 +246,7 @@ jekyll-archives:
   layouts:
     tag: "archive-taxonomy"
   permalinks:
-    tag: "/tags/#:name"
+    tag: "/tags/:name/"
 
 
 # HTML Compression
