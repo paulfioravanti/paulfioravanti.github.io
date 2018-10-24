@@ -237,16 +237,16 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 tag_archive:
-  type: liquid
-  path: /tags/
+  type: "liquid"
+  path: "/tags/"
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
   enabled:
-    - tags
+    - "tags"
   layouts:
-    tag: archive-taxonomy
+    tag: "archive-taxonomy"
   permalinks:
-    tag: /tags/:name/
+    tag: "/tags/#:name"
 
 
 # HTML Compression
