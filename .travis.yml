@@ -1,0 +1,20 @@
+# References:
+# - https://docs.travis-ci.com/user/caching/#Bundler
+sudo: false
+dist: trusty
+language: ruby
+cache: bundler
+rvm:
+  - 2.5.3
+bundler_args: --without development
+env:
+  global:
+  # speeds up installation of html-proofer
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
+script:
+  - bundle exec jekyll build
+  - htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
