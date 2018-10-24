@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 ruby "2.5.3"
 
+# Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
 gem "jekyll-remote-theme", "~> 0.3"
 # jekyll-include-cache needed for minimal mistakes theme.
 # See https://github.com/mmistakes/minimal-mistakes
@@ -26,5 +27,8 @@ group :jekyll_plugins do
   gem "github-pages", "192"
   # A Jekyll plugin that incorporates LiveReload
   gem "hawkins", "~> 2.0"
+  # Archive pages for your Jekyll tags and categories
   gem "jekyll-archives", "~> 2.1"
+  # Jekyll HTML/XML/CSS/JS Minifier utilising yui-compressor, and htmlcompressor
+  gem "jekyll-minifier", "~> 0.1"
 end
