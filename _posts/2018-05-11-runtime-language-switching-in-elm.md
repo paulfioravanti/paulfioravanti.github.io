@@ -3,8 +3,9 @@ title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
 tags: elm i18n
 header:
-  image: /assets/images/2018-05-11/japanese-display.png
-  teaser: /assets/images/2018-05-11/japanese-display.png
+  image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
+  image_description: "Wall with graffiti in multiple languages"
+  teaser: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
   overlay_image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
   overlay_filter: 0.5
   caption: >

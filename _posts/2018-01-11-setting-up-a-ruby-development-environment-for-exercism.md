@@ -4,6 +4,7 @@ date: 2018-01-11 15:35 +1100
 tags: exercism ruby guard rubocop
 header:
   image: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg
+  image_description: "Royal Guard outside building"
   teaser: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg
   overlay_image: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg
   overlay_filter: 0.5

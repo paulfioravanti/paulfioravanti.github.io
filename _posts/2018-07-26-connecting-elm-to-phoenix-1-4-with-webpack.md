@@ -4,6 +4,7 @@ date: 2018-07-26 16:20 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
+  image_description: "Logos for lambda, Elixir, Phoenix, and Elm"
   teaser: /assets/images/2018-07-26/functional_web_wallpaper.jpg
   overlay_image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
   overlay_filter: 0.5

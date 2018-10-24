@@ -5,6 +5,7 @@ date: 2017-12-14 09:03 +1100
 tags: elixir bitcoin
 header:
   image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
+  image_description: "white Lamborghini car"
   teaser: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
   overlay_image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
   overlay_filter: 0.5

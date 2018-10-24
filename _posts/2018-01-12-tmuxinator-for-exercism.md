@@ -4,6 +4,7 @@ date: 2018-01-12 17:10 +1100
 tags: exercism ruby tmux tmuxinator
 header:
   image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
+  image_description: "grayscale photography of calculator on desk"
   teaser: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
   overlay_image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
   overlay_filter: 0.2

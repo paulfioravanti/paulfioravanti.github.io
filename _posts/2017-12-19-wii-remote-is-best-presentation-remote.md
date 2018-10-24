@@ -5,6 +5,7 @@ date: 2017-12-19 09:40 +1100
 tags: presentations
 header:
   image: /assets/images/2017-12-19/wii-remote.jpg
+  image_description: "person holding Super Mushroom"
   teaser: /assets/images/2017-12-19/wii-remote.jpg
   overlay_image: /assets/images/2017-12-19/geeky-shots-687868-unsplash.jpg
   overlay_filter: 0.5

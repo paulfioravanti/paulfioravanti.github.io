@@ -7,6 +7,7 @@ date: 2017-12-04 17:20 +1100
 tags: elixir bitcoin
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
+  image_description: "orange Lamborghini vehicle closeup photography"
   teaser: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
   overlay_image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
   overlay_filter: 0.5
@@ -115,7 +116,7 @@ the following method calls:
 ## Generate Private Key
 
 {% capture katy_belcher_img %}
-![Katy Belcher Image](/assets/images/2017-12-04/katy-belcher-43836-unsplash.jpg)
+![Katy Belcher Image](/assets/images/2017-12-04/katy-belcher-43836-unsplash.jpg "gray key hanging on tree")
 {% endcapture %}
 {% capture katy_belcher_credit %}
 Photo by [Katy Belcher](https://unsplash.com/photos/uVX0tmFdNEg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

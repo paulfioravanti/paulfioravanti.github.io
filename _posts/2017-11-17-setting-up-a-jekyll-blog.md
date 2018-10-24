@@ -5,6 +5,7 @@ date: 2017-11-17 22:30 +1100
 tags: jekyll
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
+  image_description: "flat lay photography of assorted-color mechanical tool set"
   teaser: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
   overlay_image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
   overlay_filter: 0.7

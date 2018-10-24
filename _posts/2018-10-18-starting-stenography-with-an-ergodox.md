@@ -4,6 +4,7 @@ date: 2018-10-18 20:05 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/ergodox-ez.jpg
+  image_description: "Ergodox EZ keyboard"
   teaser: /assets/images/2018-10-18/ergodox-ez.jpg
   overlay_image: /assets/images/2018-10-18/ergodox-ez.jpg
   overlay_filter: 0.5

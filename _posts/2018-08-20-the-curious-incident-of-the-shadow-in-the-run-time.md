@@ -4,6 +4,7 @@ date: 2018-08-20 18:00 +1100
 tags: ruby shadowing
 header:
   image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
+  image_description: "two people standing on concrete floor"
   teaser: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
   overlay_image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
   overlay_filter: 0.5
@@ -105,7 +106,7 @@ for some interesting/confusing behaviour.
 ## Instance Method Shadowing
 
 {% capture samuel_zeller_img %}
-![Samuel Zeller Image](/assets/images/2018-08-20/samuel-zeller-15925-unsplash.jpg)
+![Samuel Zeller Image](/assets/images/2018-08-20/samuel-zeller-15925-unsplash.jpg "grayscale photography of cages")
 {% endcapture %}
 {% capture samuel_zeller_credit %}
 Photo by [Samuel Zeller](https://unsplash.com/photos/pbzWSUla7cU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
@@ -211,7 +212,7 @@ reads through the code.
 ## Schrodinger's Variable
 
 {% capture joao_silas_img %}
-![João Silas Image](/assets/images/2018-08-20/joao-silas-72563-unsplash.jpg)
+![João Silas Image](/assets/images/2018-08-20/joao-silas-72563-unsplash.jpg "person holding magnifying glass")
 {% endcapture %}
 {% capture joao_silas_credit %}
 Photo by [João Silas](https://unsplash.com/photos/UGQoo2nznz8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

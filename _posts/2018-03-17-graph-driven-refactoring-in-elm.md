@@ -4,6 +4,7 @@ date: 2018-03-17 12:15 +1100
 tags: elm refactoring architecture graphs
 header:
   image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
+  image_description: "Generated graph from elm-module-graph package"
   teaser: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
   overlay_image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
   overlay_filter: 0.8

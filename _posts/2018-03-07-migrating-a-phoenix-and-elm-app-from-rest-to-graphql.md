@@ -4,6 +4,7 @@ date: 2018-03-07 09:10 +1100
 tags: elixir phoenix elm rest graphql api
 header:
   image: /assets/images/2018-03-07/address-book-contacts-index.png
+  image_description: "GraphQL query displayed in GraphiQL"
   teaser: /assets/images/2018-03-07/address-book-contacts-index.png
   overlay_image: /assets/images/2018-03-07/GraphiQL-contact-query.png
   overlay_filter: 0.7
