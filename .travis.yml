@@ -23,11 +23,11 @@ before_install:
 jobs:
   include:
     - script:
+      - JEKYLL_ENV=production bundle exec jekyll build --destination site
       - htmllint _includes/stripped_markdown.html
       - markdownlint _posts _drafts _pages README.md
       - sass-lint --verbose --no-exit
       - bundle exec htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
-      - JEKYLL_ENV=production bundle exec jekyll build --destination site
     - stage: Github Release
       deploy:
         provider: releases
