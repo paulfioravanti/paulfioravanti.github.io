@@ -405,7 +405,7 @@ attempt to port over more code, so keep an eye out for updates!
 [Erlport]: http://erlport.org/
 [erlport-data-types-mapping]: http://erlport.org/docs/python.html#data-types-mapping
 [Export]: https://github.com/fazibear/export
-[Implementing Keys and Addresses]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#implementing-keys-and-addresses-in-python
+[Implementing Keys and Addresses]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#implementing-keys-and-addresses-in-python
 [key-to-address-elixir-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/lib/mastering_bitcoin/key_to_address_ecc_example.ex
 [key-to-address-python-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/priv/key-to-address-ecc-example.py
 [Libbitcoin]: https://github.com/libbitcoin/libbitcoin
@@ -413,12 +413,12 @@ attempt to port over more code, so keep an eye out for updates!
 [mastering-bitcoin-example-4-5]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/key-to-address-ecc-example.py
 [mastering-bitcoin-repo]: https://github.com/paulfioravanti/mastering_bitcoin
 [Pybitcointools]: https://github.com/vbuterin/pybitcointools
-[pybitcointools-secp256k1]: https://github.com/vbuterin/pybitcointools/blob/master/bitcoin/main.py#L15
+[pybitcointools-secp256k1]: https://github.com/vbuterin/pybitcointools/blob/aeb0a2bbb8bbfe421432d776c649650eaeb882a5/bitcoin/main.py#L15
 [Python]: https://www.python.org/
 [python-b-character]: https://stackoverflow.com/questions/6269765/what-does-the-b-character-do-in-front-of-a-string-literal
 [python-bytes-decode-method]: https://docs.python.org/3/library/stdtypes.html#bytes.decode
 [Ruby]: https://www.ruby-lang.org/en/
 [Secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
-[Using C++ Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir/
+[Using C++ Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/
 [Wallet Import Format]: https://en.bitcoin.it/wiki/Wallet_import_format
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A
