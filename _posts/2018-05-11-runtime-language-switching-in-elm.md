@@ -1437,7 +1437,7 @@ package), please let me know!
 [`navigator.language`]: https://developer.mozilla.org/en-US/docs/Web/API/NavigatorLanguage/language
 [`navigator.userLanguage`]: http://help.dottoro.com/ljgtasfq.php
 [Phoenix Gettext]: https://hexdocs.pm/gettext/Gettext.html
-[Rails i18n]: http://guides.rubyonrails.org/i18n.html
+[Rails i18n]: https://guides.rubyonrails.org/i18n.html
 [Tachyons]: http://tachyons.io/
 [Tachyons' Table of Styles]: http://tachyons.io/docs/table-of-styles/
 [Tachyons Page Recreated]: /assets/images/2018-05-11/Tachyons-Page-Recreated.png "Tachyons Page Recreated"

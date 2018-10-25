@@ -305,7 +305,7 @@ Jekyll site.
 [CSS]: https://en.wikipedia.org/wiki/Cascading_Style_Sheets
 [dotenv]: https://github.com/bkeepers/dotenv
 [dotenv-jekyll-gist]: https://gist.github.com/nicolashery/5756478
-[Font Awesome]: http://fontawesome.io/
+[Font Awesome]: https://fontawesome.com/
 [Font Awesome CDN]: https://cdn.fontawesome.com/
 [Github Pages]: https://pages.github.com/
 [Github Pages gem]: https://github.com/github/pages-gem
@@ -345,7 +345,7 @@ Jekyll site.
 [Node]: https://github.com/nodejs/node
 [npm]: https://www.npmjs.com/
 [paulfioravanti.com]: https://paulfioravanti.com
-[Rails]: http://rubyonrails.org/
+[Rails]: https://rubyonrails.org/
 [Ruby]: https://www.ruby-lang.org/
 [SASS]: https://en.wikipedia.org/wiki/Sass_(stylesheet_language)
 [Sass Lint]: https://github.com/sasstools/sass-lint

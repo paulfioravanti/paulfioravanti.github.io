@@ -251,6 +251,6 @@ the best solution that you can.
 [Minitest]: https://github.com/seattlerb/minitest
 [my Exercism Github repo]: https://github.com/paulfioravanti/exercism
 [negative lookbehind assertion]: http://ruby-doc.org/core-2.5.0/Regexp.html#class-Regexp-label-Anchors
-[Rails]: http://rubyonrails.org/
+[Rails]: https://rubyonrails.org/
 [Rubocop]: https://github.com/bbatsov/rubocop
 [rubocop-configuration]: http://rubocop.readthedocs.io/en/latest/configuration/
