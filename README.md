@@ -54,7 +54,7 @@ bundle exec guard
 
 ## Theme
 
-This blog currently uses the [Minimal Mistakes][] theme. Previously, it used 
+This blog currently uses the [Minimal Mistakes][] theme. Previously, it used
 the [Minima][] theme, as that seemed to be the theme that worked best out of the
 box with Jekyll 3.6, and was usable on [Github Pages][].
 
