@@ -3,8 +3,8 @@ ruby "2.5.3"
 
 # Jekyll is a blog-aware static site generator in Ruby
 # NOTE: Although this is currently deployed on Github Pages, I'm not using
-# the github-pages gem so that third-party plugins can be included in the
-# site build.
+# the github-pages gem so that non-Github-Pages-supported third-party plugins
+# can be included in the site build.
 gem "jekyll", "~> 3.8"
 
 group :development do
@@ -32,6 +32,8 @@ group :jekyll_plugins do
   # jekyll-include-cache needed for minimal mistakes theme.
   # See https://github.com/mmistakes/minimal-mistakes
   gem "jekyll-include-cache", "~> 0.1"
+  # Jekyll HTML/XML/CSS/JS Minifier utilising yui-compressor, and htmlcompressor
+  gem "jekyll-minifier", "0.1"
   # Pagination Generator for Jekyll
   gem "jekyll-paginate", "~> 1.1"
   # Seamlessly specify multiple redirections URLs for your pages and posts
