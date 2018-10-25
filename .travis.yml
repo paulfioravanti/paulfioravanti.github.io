@@ -28,7 +28,18 @@ jobs:
         - htmllint _includes/stripped_markdown.html
         - markdownlint _posts _drafts _pages README.md
         - sass-lint --verbose --no-exit
-        - bundle exec htmlproofer site --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./_site --disable-external
+        # Explanations for flags:
+        # --allow-hash-href - Build will fail on the first and last post entries
+        # if this isn't allowed since there will be previous and next buttons
+        # that have 'links to nowhere'.
+        # --url-ignore "/localhost/" - Posts have explicit references to
+        # localhost, so don't consider them proper addresses that need to go
+        # anywhere.
+        # --http-status-ignore "999" - LinkedIn doesn't seem to like crawlers,
+        # and hence sends back 999 errors, even if the link is valid.
+        # --assume-extension ./_site Jekyll 3 supports extensionless URLs, and
+        # the blog uses them, so this flag needs to be here to prevent errors.
+        - bundle exec htmlproofer --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./_site --disable-external
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
