@@ -871,7 +871,7 @@ suggestions, please leave a comment. If you want to keep tabs on my gradual
 port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Mastering Bitcoin repo][].
 
-[Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example
+[Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example
 [Cure]: https://github.com/luc-tielen/Cure
 [cure-compile-options]: https://github.com/luc-tielen/Cure#start-developing-in-cc
 [cure-helper-functions-info]: https://github.com/luc-tielen/Cure#cc-code
@@ -890,7 +890,7 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [makefile-static-usage]: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
 [makefile-variable-referencing]: https://www.gnu.org/software/make/manual/html_node/Reference.html
 [mastering-bitcoin-book]: https://bitcoinbook.info/
-[mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch04.asciidoc#addr_example_run
+[mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example_run
 [mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp
 [mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp
 [Mastering Bitcoin repo]: https://github.com/paulfioravanti/mastering_bitcoin
