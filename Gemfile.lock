@@ -156,13 +156,13 @@ DEPENDENCIES
   jekyll (~> 3.7)
   jekyll-archives (~> 2.1)
   jekyll-feed (~> 0.11)
-  jekyll-gist
+  jekyll-gist (~> 1.5)
   jekyll-include-cache (~> 0.1)
-  jekyll-paginate
-  jekyll-redirect-from
+  jekyll-paginate (~> 1.1)
+  jekyll-redirect-from (~> 0.14)
   jekyll-remote-theme (~> 0.3)
-  jekyll-sitemap
-  jemoji
+  jekyll-sitemap (~> 1.2)
+  jemoji (~> 0.10)
 
 RUBY VERSION
    ruby 2.5.3p105
