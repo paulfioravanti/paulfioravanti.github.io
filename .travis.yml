@@ -30,8 +30,6 @@ jobs:
         - sass-lint --verbose --no-exit
         - bundle exec htmlproofer site --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./site --disable-external
     - stage: Github Release
-      before_script:
-        - gem install rake
       deploy:
         provider: releases
         local-dir: ./site
