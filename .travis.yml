@@ -15,9 +15,11 @@ addons:
   apt:
     packages:
     - libcurl4-openssl-dev
+before_install:
+  - npm install -g sass-lint htmllint-cli markdownlint-cli
 script:
   - bundle exec jekyll build
-  - bundle exec htmllint _includes/stripped_markdown.html
-  - bundle exec markdownlint _posts _drafts _pages README.md
-  - bundle exec sass-lint --verbose --no-exit
+  - htmllint _includes/stripped_markdown.html
+  - markdownlint _posts _drafts _pages README.md
+  - sass-lint --verbose --no-exit
   - bundle exec htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
