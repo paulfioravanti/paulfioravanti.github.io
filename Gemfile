@@ -33,7 +33,7 @@ group :jekyll_plugins do
   # See https://github.com/mmistakes/minimal-mistakes
   gem "jekyll-include-cache", "~> 0.1"
   # Jekyll HTML/XML/CSS/JS Minifier utilising yui-compressor, and htmlcompressor
-  gem "jekyll-minifier", "0.1"
+  gem "jekyll-minifier", "~> 0.1"
   # Pagination Generator for Jekyll
   gem "jekyll-paginate", "~> 1.1"
   # Seamlessly specify multiple redirections URLs for your pages and posts
