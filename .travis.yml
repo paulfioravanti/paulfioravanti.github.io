@@ -17,4 +17,7 @@ addons:
     - libcurl4-openssl-dev
 script:
   - bundle exec jekyll build
-  - htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
+  - bundle exec htmllint _includes/stripped_markdown.html
+  - bundle exec markdownlint _posts _drafts _pages README.md
+  - bundle exec sass-lint --verbose --no-exit
+  - bundle exec htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
