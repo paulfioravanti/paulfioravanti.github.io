@@ -1422,7 +1422,7 @@ package), please let me know!
 [elm-i18next]: https://github.com/ChristophP/elm-i18next
 [Elm i18n Gen]: https://github.com/ChristophP/elm-i18n-module-generator
 [Elm Mouse package]: https://github.com/elm-lang/mouse
-[Elm Ports]: https://guide.elm-lang.org/interop/javascript.html
+[Elm Ports]: https://guide.elm-lang.org/interop/
 [Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
 [HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
