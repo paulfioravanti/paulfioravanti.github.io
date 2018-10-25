@@ -1,8 +1,11 @@
 source "https://rubygems.org"
 ruby "2.5.3"
 
-gem "jekyll"
-gem "rake"
+# Jekyll is a blog-aware static site generator in Ruby
+# NOTE: Although this is currently deployed on Github Pages, I'm not using
+# the github-pages gem so that third-party plugins can be included in the
+# site build.
+gem "jekyll", "~> 3.7"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
@@ -12,6 +15,7 @@ group :development do
 end
 
 group :development, :test do
+  # Test your rendered HTML files to make sure they're accurate
   gem "html-proofer", "~> 3.9"
 end
 
@@ -30,15 +34,15 @@ group :jekyll_plugins do
   gem "hawkins", "~> 2.0"
   # Archive pages for your Jekyll tags and categories
   gem "jekyll-archives", "~> 2.1"
-  gem "jekyll-feed"
-  gem "jekyll-gist"
+  gem "jekyll-feed", "~> 0.11"
+  gem "jekyll-gist", "~> 1.5"
   # jekyll-include-cache needed for minimal mistakes theme.
   # See https://github.com/mmistakes/minimal-mistakes
   gem "jekyll-include-cache", "~> 0.1"
-  gem "jekyll-paginate"
-  gem "jekyll-redirect-from"
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-redirect-from", "~> 0.14"
   # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
   gem "jekyll-remote-theme", "~> 0.3"
-  gem "jekyll-sitemap"
-  gem "jemoji"
+  gem "jekyll-sitemap", "~> 1.2"
+  gem "jemoji", "~> 0.10"
 end
