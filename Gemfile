@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 ruby "2.5.3"
 
+gem "jekyll"
+
 group :development do
   # Command line tool to easily handle events on file system modifications
   gem "guard", "~> 2.14"
@@ -22,14 +24,20 @@ group :jekyll_plugins do
   # https://dmitryrogozhny.com/blog/adding-elm-lexer-to-rouge
   # NOTE: Also, Makefile syntax is not supported under 2.x, so change that to
   # ```sh highlighting for now (see C++ bitcoin blog).
-  gem "github-pages", "192"
+  # gem "github-pages", "192"
   # A Jekyll plugin that incorporates LiveReload
   gem "hawkins", "~> 2.0"
   # Archive pages for your Jekyll tags and categories
   gem "jekyll-archives", "~> 2.1"
+  gem "jekyll-feed"
+  gem "jekyll-gist"
   # jekyll-include-cache needed for minimal mistakes theme.
   # See https://github.com/mmistakes/minimal-mistakes
   gem "jekyll-include-cache", "~> 0.1"
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
   # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
   gem "jekyll-remote-theme", "~> 0.3"
+  gem "jekyll-sitemap"
+  gem "jemoji"
 end
