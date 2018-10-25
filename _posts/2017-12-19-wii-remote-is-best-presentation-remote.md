@@ -124,7 +124,7 @@ it!
 [my-presentations]: https://github.com/paulfioravanti/presentations
 [Press Wiimote buttons]: /assets/images/2017-12-19/press-buttons.png "Press Wiimote buttons"
 [Remote Buddy]: https://www.iospirit.com/products/remotebuddy/
-[Remote Buddy's Wiimote Support Page]: https://www.iospirit.com/support/faqs/remotebuddy/category/2/Hardware-Wii-Remote/
+[Remote Buddy's Wiimote Support Page]: https://www.iospirit.com/support/faqs/remotebuddy
 [Wiimote Connected]: /assets/images/2017-12-19/wiimote-connected.png "Wiimote Connected"
 [Wii Remote]: /assets/images/2017-12-19/wii-remote.jpg "Wii Remote"
 [Wii Remote Wikipedia]: https://en.wikipedia.org/wiki/Wii_Remote
