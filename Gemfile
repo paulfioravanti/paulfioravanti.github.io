@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby "2.5.3"
 
 gem "jekyll"
+gem "rake"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
