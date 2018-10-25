@@ -24,15 +24,17 @@ jobs:
       before_script:
         - npm install -g sass-lint htmllint-cli markdownlint-cli
       script:
-        - JEKYLL_ENV=production bundle exec jekyll build --destination site
+        - JEKYLL_ENV=production bundle exec jekyll build
         - htmllint _includes/stripped_markdown.html
         - markdownlint _posts _drafts _pages README.md
         - sass-lint --verbose --no-exit
-        - bundle exec htmlproofer site --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./site --disable-external
+        - bundle exec htmlproofer site --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./_site --disable-external
     - stage: Github Release
+      script:
+        - JEKYLL_ENV=production bundle exec jekyll build
       deploy:
         provider: pages
-        local-dir: ./site
+        local-dir: ./_site
         target-branch: master
         name: Deployment Bot
         skip-cleanup: true
