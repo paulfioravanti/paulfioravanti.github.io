@@ -1,5 +1,7 @@
 # Blog
 
+[![Build Status][Build Status image]][Build Status url]
+
 This is the codebase for my personal blog at [`paulfioravanti.com`][].
 Created with [Jekyll][].
 
@@ -78,6 +80,8 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
 [`asdf`]: https://github.com/asdf-vm/asdf
+[Build Status image]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io.svg?branch=release
+[Build Status url]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io
 [Github Pages]: https://pages.github.com/
 [Guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
