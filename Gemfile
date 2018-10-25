@@ -1,13 +1,6 @@
 source "https://rubygems.org"
 ruby "2.5.3"
 
-# Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
-gem "jekyll-remote-theme", "~> 0.3"
-# jekyll-include-cache needed for minimal mistakes theme.
-# See https://github.com/mmistakes/minimal-mistakes
-gem "jekyll-include-cache", "~> 0.1"
-
-
 group :development do
   # Command line tool to easily handle events on file system modifications
   gem "guard", "~> 2.14"
@@ -34,4 +27,9 @@ group :jekyll_plugins do
   gem "hawkins", "~> 2.0"
   # Archive pages for your Jekyll tags and categories
   gem "jekyll-archives", "~> 2.1"
+  # jekyll-include-cache needed for minimal mistakes theme.
+  # See https://github.com/mmistakes/minimal-mistakes
+  gem "jekyll-include-cache", "~> 0.1"
+  # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
+  gem "jekyll-remote-theme", "~> 0.3"
 end
