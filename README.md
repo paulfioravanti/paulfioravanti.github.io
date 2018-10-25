@@ -15,17 +15,19 @@ bundle install
 
 ### Development Dependencies
 
-This app uses the following [Node][]-based dependencies during development:
+This app uses the following dependencies during development:
 
 - [Sass Lint][]: make sure styling syntax conforms to
-  community standards. Note that the [gem version][scss-lint] is deprecated.
+  community standards. Note that the [gem version][scss-lint] is deprecated
 - [htmllint][] (via [htmllint-cli][]): make sure HTML
-  syntax conforms to community standards.
-- [markdownlint][] (via [markdownlint-cli][]): make sure Markdown syntax conforms
-  to community standards.
+  syntax conforms to community standards
+- [markdownlint][] (via [markdownlint-cli][]): make sure Markdown syntax
+  conforms to community standards
+- [HTMLProofer][]: to make sure HTML rendered files are accurate and do not have
+  broken links etc
 
 Install dependencies in the following way, and remember to re-shim whatever
-version manager is being used for Node (I use [`asdf`][]), or add the `bin`
+version manager is being used for [Node][] (I use [`asdf`][]), or add the `bin`
 folder of the Node installation to the `$PATH`, otherwise executables like
 `sass-lint` won't be available:
 
@@ -86,6 +88,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli
+[HTMLProofer]: https://github.com/gjtorikian/html-proofer
 [`_includes`]: _includes
 [Jekyll]: https://jekyllrb.com
 [license-cc]: LICENSE-CC-BY-4.0.txt
