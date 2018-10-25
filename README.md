@@ -62,6 +62,19 @@ This blog currently uses the [Minimal Mistakes][] theme. Previously, it used
 the [Minima][] theme, as that seemed to be the theme that worked best out of the
 box with Jekyll 3.6, and was usable on [Github Pages][].
 
+## Deployment
+
+This blog is current deployed to [Github Pages][], but Github Pages
+tend to be slow at updating their Jekyll technical stack, and they only support
+a [limited set of plugins][Github Pages Supported Plugin List].
+
+So, I'm using [Travis CI][] as both a test harness and a deployment pipeline to
+bypass the limitations of the [Pages gem][], and allow Jekyll to use the latest
+gems as well as plugins not supported by Github's `safe` mode.
+
+See _[Supercharge GitHub Pages with Jekyll and Travis CI][]_ for the guide that
+I followed and built on to get my Travis-Github Pages pipeline working.
+
 ## License
 
 | Category |                         License                           |
@@ -85,6 +98,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Build Status image]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io.svg?branch=release
 [Build Status url]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io
 [Github Pages]: https://pages.github.com/
+[Github Pages Supported Plugin List]: https://pages.github.com/versions/
 [Guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli
@@ -103,10 +117,13 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Minima]: https://github.com/jekyll/minima
 [Minimal Mistakes]: https://github.com/mmistakes/minimal-mistakes
 [Node]: https://github.com/nodejs/node
+[Pages gem]: https://github.com/github/pages-gem
 [`paulfioravanti.com`]: https://paulfioravanti.com
 [Sass Lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
+[Supercharge GitHub Pages with Jekyll and Travis CI]: https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075
+[Travis CI]: https://travis-ci.org/
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
 [twitter-url]: https://twitter.com/paulfioravanti

@@ -28,7 +28,7 @@ group :red_green_refactor, halt_on_fail: true do
 
   # NOTE: This guard doesn't really seem to play nicely with the other guards
   # so just ensure that before commiting, you run the following command:
-  # htmlproofer --allow-hash-href --url-ignore "/localhost/" --assume-extension ./_site
+  # bundle exec htmlproofer --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./_site
   # The above command will be run in CI.
   # See: https://github.com/gjtorikian/html-proofer#using-with-jekyll
   # guard "process",
@@ -37,8 +37,10 @@ group :red_green_refactor, halt_on_fail: true do
   #         "--allow-hash-href",
   #         "--url-ignore",
   #         "/localhost/",
+  #         "--http-status-ignore",
+  #         "'999'",
   #         "--assume-extension",
-  #         "./site"
+  #         "./_site"
   #       ],
   #       name: "htmlproofer" do
   #   watch(%r{\A_site/.+\.html\z})
