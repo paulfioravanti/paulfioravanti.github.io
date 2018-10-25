@@ -196,7 +196,7 @@ rather than in Elm (`/logo.svg`):
 
 **`assets/elm/src/Main.elm`**
 
-```haskell
+```elm
 module Main exposing (..)
 
 -- ...
@@ -245,7 +245,7 @@ First, give the Elm logo a HTML `id` so we can target styling on it directly:
 
 **`assets/elm/src/Main.elm`**
 
-```haskell
+```elm
 module Main exposing (..)
 
 import Html exposing (Html, text, div, h1, img)

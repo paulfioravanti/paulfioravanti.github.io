@@ -188,7 +188,7 @@ rather than in Elm (`/logo.svg`):
 
 **`assets/elm/src/Main.elm`**
 
-```haskell
+```elm
 module Main exposing (..)
 
 -- ...

@@ -48,7 +48,7 @@ of the update would be immediately delegated out to `Contact.Update`.
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, ...)
 
 import Messages exposing (Msg(ContactMsg, ...))
@@ -70,7 +70,7 @@ it was only `Contact.Update` that knew what should happen when, in this case, a
 
 **`assets/elm/src/Contact/Update.elm`**
 
-```haskell
+```elm
 module Contact.Update exposing (update)
 
 import Contact.Messages exposing (ContactMsg(FetchContact))
@@ -172,7 +172,7 @@ Since `Contact` concern modules needs to know about `RemoteData`, but not
 
 **`assets/elm/src/RemoteData.elm`**
 
-```haskell
+```elm
 module RemoteData exposing (RemoteData(..))
 
 
@@ -187,7 +187,7 @@ The Elm compiler should let you know the modules in which you need to change
 `RemoteData` references to this new one, but most of the edits will consist of
 changing references like:
 
-```haskell
+```elm
 import Model
     exposing
         ( Model
@@ -197,7 +197,7 @@ import Model
 
 to something like:
 
-```haskell
+```elm
 import Model exposing (Model)
 import RemoteData
     exposing
@@ -211,7 +211,7 @@ In `Contact.View`, there is the following line:
 
 **`assets/elm/src/Contact/View.elm`**
 
-```haskell
+```elm
 import Messages exposing (Msg(NavigateTo))
 ```
 
@@ -221,7 +221,7 @@ runs a command to navigate to a new URL, and does not return a new model:
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, ...)
 
 import Navigation
@@ -244,7 +244,7 @@ messages and update handling for `Routing`:
 
 **`assets/elm/src/Routing/Messages.elm`**
 
-```haskell
+```elm
 module Routing.Messages exposing (RoutingMsg(..))
 
 import Routing exposing (Route)
@@ -256,7 +256,7 @@ type RoutingMsg
 
 **`assets/elm/src/Routing/Update.elm`**
 
-```haskell
+```elm
 module Routing.Update exposing (update)
 
 import Navigation
@@ -277,7 +277,7 @@ We will also need to allow for a `RoutingMsg` to be handled by the top-level
 
 **`assets/elm/src/Messages.elm`**
 
-```haskell
+```elm
 module Messages exposing (Msg(..))
 
 import Contact.Messages exposing (ContactMsg)
@@ -296,7 +296,7 @@ type Msg
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, ...)
 
 import Routing.Update
@@ -324,19 +324,19 @@ The Elm compiler should let you know about which modules need to have their
 `NavigateTo` references changed, but most of the edits will consist of changing
 references like:
 
-```haskell
+```elm
 import Messages exposing (Msg(NavigateTo))
 ```
 
 to something like:
 
-```haskell
+```elm
 import Messages exposing (Msg(RoutingMsg))
 ```
 
 or (depending on the file):
 
-```haskell
+```elm
 import Routing.Messages exposing (RoutingMsg(NavigateTo))
 ```
 
@@ -345,7 +345,7 @@ a `Msg`:
 
 **`assets/elm/src/Contact/View.elm`**
 
-```haskell
+```elm
 -- ...
 
 import Routing.Messages exposing (RoutingMsg(NavigateTo))
@@ -368,7 +368,7 @@ Next, there will be some messages across multiple concerns that will need to be
 
 **`assets/elm/src/ContactList/View.elm`**
 
-```haskell
+```elm
 module ContactList.View exposing (view)
 
 import Messages exposing (Msg(RoutingMsg, ...))
@@ -387,7 +387,7 @@ contactsList model page =
 
 **`assets/elm/src/View.elm`**
 
-```haskell
+```elm
 module View exposing (view)
 
 import Messages exposing (Msg(RoutingMsg))
@@ -416,7 +416,7 @@ One final minor view-related change is in the signature for
 
 **`assets/elm/src/Shared/View.elm`**
 
-```haskell
+```elm
 warningMessage : String -> String -> Html msg -> Html msg
 warningMessage iconClasses message content =
     div [ class "warning" ]
@@ -453,7 +453,7 @@ However, `Contact.Update` should only be concerned with returning a new
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, ...)
 
 import Messages exposing (Msg(ContactMsg, ...))
@@ -479,7 +479,7 @@ wants:
 
 **`assets/elm/src/Contact/Update.elm`**
 
-```haskell
+```elm
 module Contact.Update exposing (update)
 
 import Contact.Messages exposing (ContactMsg(FetchContact))
@@ -508,7 +508,7 @@ So, this is what we currently have:
 
 **`assets/elm/src/Contact/Commands.elm`**
 
-```haskell
+```elm
 module Contact.Commands exposing (fetchContact)
 
 import Commands exposing (contactsApiUrl)
@@ -532,7 +532,7 @@ fetchContact id =
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, urlUpdate)
 
 -- ...
@@ -554,7 +554,7 @@ And this is what we need to change the files to:
 
 **`assets/elm/src/Contact/Commands.elm`**
 
-```haskell
+```elm
 module Contact.Commands exposing (fetchContact)
 
 import Commands exposing (contactsApiUrl)
@@ -576,7 +576,7 @@ fetchContact id =
 
 **`assets/elm/src/Update.elm`**
 
-```haskell
+```elm
 module Update exposing (update, urlUpdate)
 
 -- ...

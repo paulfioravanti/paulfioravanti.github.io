@@ -734,7 +734,7 @@ bootstrap provided for us, add some more code so it looks like the following:
 
 **`c_src/Makefile`**
 
-```sh
+```make
 CC = g++ -std=c++11
 APP_DIR = $(shell dirname $(shell pwd))
 CURE_DEPS_DIR = $(APP_DIR)/deps/cure/c_src
