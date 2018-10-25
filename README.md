@@ -23,18 +23,20 @@ This app uses the following dependencies during development:
   syntax conforms to community standards
 - [markdownlint][] (via [markdownlint-cli][]): make sure Markdown syntax
   conforms to community standards
-- [HTMLProofer][]: to make sure HTML rendered files are accurate and do not have
+- [HTMLProofer][]: make sure HTML rendered files are accurate and do not have
   broken links etc
 
-Install dependencies in the following way, and remember to re-shim whatever
-version manager is being used for [Node][] (I use [`asdf`][]), or add the `bin`
-folder of the Node installation to the `$PATH`, otherwise executables like
-`sass-lint` won't be available:
+Install [Node][]-based dependencies in the following way, and remember to
+re-shim whatever version manager is being used for Node (I use [`asdf`][]), or
+add the `bin` folder of the Node installation to the `$PATH`, otherwise
+executables like `sass-lint` won't be available:
 
 ```sh
 npm install -g sass-lint htmllint-cli markdownlint-cli
 asdf reshim nodejs
 ```
+
+HTMLProofer is a Ruby gem and so Bundler will bring it into the project.
 
 ## Usage
 
