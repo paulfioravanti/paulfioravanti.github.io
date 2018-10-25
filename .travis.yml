@@ -31,7 +31,7 @@ jobs:
         - bundle exec htmlproofer site --allow-hash-href --url-ignore "/localhost/" --http-status-ignore "999" --assume-extension ./site --disable-external
     - stage: Github Release
       deploy:
-        provider: releases
+        provider: pages
         local-dir: ./site
         target-branch: master
         name: Deployment Bot
