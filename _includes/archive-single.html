@@ -20,12 +20,12 @@
           {% else %}
             "{{ teaser | relative_url }}"
           {% endif %}
-          {% comment %}
-            Default alt value is blank. This is the only section changed from
-            the default minimal-mistakes template.
-          alt="">
-          {% endcomment %}
-          alt="{{ post.header.image_description }}">
+          alt=
+            {% if post.header.image_description %}
+              "{{ post.header.image_description }}"
+            {% else %}
+              ""
+            {% endif %}>
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
