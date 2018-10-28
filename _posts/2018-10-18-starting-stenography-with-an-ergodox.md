@@ -3,11 +3,14 @@ title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
-  image: /assets/images/2018-10-18/ergodox-ez.jpg
-  image_description: "Ergodox EZ keyboard"
-  teaser: /assets/images/2018-10-18/ergodox-ez.jpg
-  overlay_image: /assets/images/2018-10-18/ergodox-ez.jpg
+  image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
+  image_description: "white and brown plover bird"
+  teaser: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
+  overlay_image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
   overlay_filter: 0.5
+  caption: >
+    Photo by [Phil Botha](https://unsplash.com/photos/l8AH_h8w3Hk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/plover?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   QMK and Plover can get your Ergodox singing steno chords.
 ---
@@ -37,6 +40,8 @@ However, just getting my Ergodox set up for stenography was quite an exercise in
 configuration, so that will be the focus for the remainder of this blog post,
 in hopes that it will help get the Ergodox-toting steno-curious up and running
 as quickly as possible.
+
+![Ergodox EZ][Ergodox EZ image]{:class="img-responsive"}
 
 ### What You Need
 
@@ -79,14 +84,14 @@ seen that there is already a
 [steno configuration][QMK Ergodox EZ Steno Configuration] provided, so why not
 just use that? Why go to the trouble of creating another layout? Well...
 >
-> - I tried it, and it did not work for me, so I needed another option
-- The provided layout does not take advantage of QMK's
+> - The provided layout does not take advantage of QMK's
   [built-in support for stenography][Stenography in QMK] (which we will go over
   later), and instead re-implements steno functionality from scratch using
   [custom binary key codes][QMK Ergodox EZ Steno Configuration Keymap Codes] and
   [custom functions][QMK Ergodox EZ Steno Configuration Keymap Functions]
-- The codes would seem to only work with the [TX Bolt][] steno protocol (which
-  also did not work for me, but more about that, also, later...)
+- The codes would seem to only work with the [TX Bolt][] steno protocol (which,
+  at least for me, resulted in incorrect key press processing, but more about
+  that later as well...)
 
 ## N-Key Rollover
 
@@ -510,6 +515,7 @@ omissions in this post, please let me know in the comments.
 [Ergodox]: https://www.ergodox.io/
 [Ergodox EZ]: https://ergodox-ez.com/
 [Ergodox EZ Graphical Configurator Page]: https://ergodox-ez.com/pages/graphical-configurator
+[Ergodox EZ image]: /assets/images/2018-10-18/ergodox-ez.jpg "Ergodox EZ"
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/g20-blank-keysets/
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
