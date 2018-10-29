@@ -9,8 +9,8 @@ rvm:
 bundler_args: --without development
 env:
   global:
-  # speeds up installation of htmlproofer
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+    # speeds up installation of htmlproofer
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 addons:
   apt:
     packages:
