@@ -207,11 +207,13 @@ plugins:
   - jekyll-archives
   - jekyll-feed
   - jekyll-gist
+  - jekyll-github-metadata
   - jekyll-include-cache
   - jekyll-minifier
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-remote-theme
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
 
@@ -220,11 +222,13 @@ whitelist:
   - jekyll-archives
   - jekyll-feed
   - jekyll-gist
+  - jekyll-github-metadata
   - jekyll-include-cache
   - jekyll-minifier
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-remote-theme
+  - jekyll-seo-tag
   - jekyll-sitemap
   - jemoji
 

@@ -28,6 +28,9 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.11"
   # Liquid tag for displaying GitHub Gists in Jekyll sites.
   gem "jekyll-gist", "~> 1.5"
+  # Jekyll plugin to propagate the `site.github` namespace and set default
+  # values for use with GitHub Pages
+  gem "jekyll-github-metadata", "~> 2.9"
   # A Jekyll plugin to cache the rendering of Liquid includes
   # jekyll-include-cache needed for minimal mistakes theme.
   # See https://github.com/mmistakes/minimal-mistakes
@@ -40,6 +43,9 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from", "~> 0.14"
   # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
   gem "jekyll-remote-theme", "~> 0.3"
+  # A Jekyll plugin to add metadata tags for search engines and social networks
+  # to better index and display your site's content.
+  gem "jekyll-seo", "~> 0.0"
   # Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   gem "jekyll-sitemap", "~> 1.2"
   # GitHub-flavored emoji plugin for Jekyll
