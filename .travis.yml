@@ -9,8 +9,13 @@ rvm:
 bundler_args: --without development
 env:
   global:
-  # speeds up installation of html-proofer
+  # speeds up installation of htmlproofer
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+addons:
+  apt:
+    packages:
+      # Needed for htmlproofer external link checks
+      - libcurl4-openssl-dev
 branches:
   only:
     - release
