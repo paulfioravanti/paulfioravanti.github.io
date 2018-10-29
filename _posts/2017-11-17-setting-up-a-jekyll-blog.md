@@ -2,7 +2,7 @@
 redirect_from: /jekyll/2017/11/17/setting-up-a-jekyll-blog.html
 title: "Setting up a Jekyll Blog"
 date: 2017-11-17 22:30 +1100
-tags: jekyll
+tags: jekyll ruby
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
   image_description: "flat lay photography of assorted-color mechanical tool set"
