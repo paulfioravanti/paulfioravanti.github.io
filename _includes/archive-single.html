@@ -10,6 +10,12 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% if post.header.image_description %}
+  {% assign alt = post.header.image_description %}
+{% else %}
+  {% assign alt = "" %}
+{% endif %}
+
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
@@ -20,12 +26,7 @@
           {% else %}
             "{{ teaser | relative_url }}"
           {% endif %}
-          alt=
-            {% if post.header.image_description %}
-              "{{ post.header.image_description }}"
-            {% else %}
-              ""
-            {% endif %}>
+          alt="{{ alt }}">
       </div>
     {% endif %}
     <h2 class="archive__item-title" itemprop="headline">
