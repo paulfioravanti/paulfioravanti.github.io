@@ -32,14 +32,15 @@ jobs:
         # --allow-hash-href - Build will fail on the first and last post entries
         # if this isn't allowed since there will be previous and next buttons
         # that have 'links to nowhere'.
-        # --assume-extension Jekyll 3 supports extensionless URLs, and
+        # --assume-extension - Jekyll 3 supports extensionless URLs, and
         # the blog uses them, so this flag needs to be here to prevent errors.
         # --url-ignore "/localhost/" - Posts have explicit references to
         # localhost, so don't consider them proper external links that need to
         # go anywhere.
         # --http-status-ignore "999" - LinkedIn doesn't seem to like crawlers,
         # and hence sends back 999 errors, even if the link is valid.
-        - bundle exec htmlproofer _site --allow-hash-href --assume-extension --url-ignore "/localhost/" --http-status-ignore "999"
+        # --disable-external - Only use this if the build fails unreasonably on external links
+        - bundle exec htmlproofer _site --allow-hash-href --assume-extension --url-ignore "/localhost/" --http-status-ignore "999" --disable-external
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
