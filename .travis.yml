@@ -11,10 +11,10 @@ env:
   global:
   # speeds up installation of html-proofer
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-addons:
-  apt:
-    packages:
-      - libcurl4-openssl-dev
+# addons:
+#   apt:
+#     packages:
+#       - libcurl4-openssl-dev
 branches:
   only:
     - release
@@ -48,7 +48,7 @@ jobs:
         provider: pages
         local-dir: ./_site
         target-branch: master
-        name: Deployment Bot
+        name: Travis Deployment Bot
         skip-cleanup: true
         # This token generated at https://github.com/settings/tokens and added
         # to Travis environment variables.
