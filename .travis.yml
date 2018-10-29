@@ -23,7 +23,7 @@ jobs:
   include:
     - stage: Test
       before_script:
-        - npm install -g sass-lint htmllint-cli markdownlint-cli
+        - npm install --global sass-lint htmllint-cli markdownlint-cli
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
         - htmllint _includes/stripped_markdown.html

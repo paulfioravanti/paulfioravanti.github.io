@@ -4,7 +4,7 @@ date: 2018-10-29 21:40 +1100
 tags: jekyll ruby
 header:
   image: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
-  image_description: ""
+  image_description: "set of industrial pipes"
   teaser: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
   overlay_image: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
   overlay_filter: 0.5
