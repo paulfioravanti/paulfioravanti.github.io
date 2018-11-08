@@ -39,8 +39,19 @@ CUSTOMISATION: Add in alt tag to archive__item-teaser image
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
     </h2>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% comment %}
+    CUSTOMISATION: Add in post date to layout
+    {% endcomment %}
+    {% if post.read_time and post.date %}
+      <p class="page__meta">
+        <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | date: "%b %d, %Y " }}
+        </time>
+        &nbsp;
+        <i class="far fa-clock" aria-hidden="true"></i>
+        {% include read-time.html %}
+      </p>
     {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 160 }}</p>{% endif %}
   </article>
