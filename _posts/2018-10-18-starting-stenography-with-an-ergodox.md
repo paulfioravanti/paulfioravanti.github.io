@@ -385,6 +385,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   _x_,
   _x_, STN_E,   STN_U
 )
+};
 
 // ...
 
@@ -507,6 +508,145 @@ As of this writing, I am currently only at 12 WPM after completing Lesson 1 of
 student with a long road ahead. So, if there are any glaring mistakes or
 omissions in this post, please let me know in the comments.
 
+## Update (8 Nov 2018)
+
+After working my way through [Learn Plover!][], I have come to the conclusion
+that I set the steno keys to be one row too high, and that changing keycaps made
+a big difference.
+
+### Move steno keys down a row
+
+Complex key chords for words that, say, require a right thumb press for `EU`, as
+well as a stretched right little finger press for `DZ`, caused a bit of
+discomfort in my fingers and wrists as I had to awkwardly contort my hand to
+press all the keys.
+
+So, I moved all the steno keys down a single row on the keyboard, and now all is
+well again, even with more complex chords. So, in the context of the
+`default_steno` keymap, the keymap will now look like this:
+
+**`qmk_firmware/keyboards/ergodox_ez/keymaps/default_steno/keymap.c`**
+
+```c
+// ...
+#include "keymap_steno.h"
+
+#define BASE 0 // default layer
+#define SYMB 1 // symbols
+#define MDIA 2 // media keys
+#define STEN 3 // Stenography
+
+// Helper to make keymaps a bit easier to read at a glance
+#define _x_ KC_NO
+
+// ...
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+/* Keymap 0: Basic layer
+ *
+ * ,--------------------------------------------------. ...
+ * |   =    |   1  |   2  |   3  |   4  |   5  | STEN | ...
+ * |--------+------+------+------+------+-------------| ...
+ * ...
+ */
+[BASE] = LAYOUT_ergodox(  // layer 0 : default
+  // left hand
+  KC_EQL, KC_1, KC_2, KC_3, KC_4, KC_5, TG(STEN),
+  // ...
+),
+// ...
+[SYMB] = LAYOUT_ergodox(
+  // ...
+),
+// ...
+[MDIA] = LAYOUT_ergodox(
+  // ...
+),
+/* Keymap 3: Stenography
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |        |      |      |      |      |      | BASE |           |      |      |      |      |      |      |        |
+ * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
+ * |        |   #  |   #  |   #  |   #  |   #  |      |           |      |   #  |   #  |   #  |   #  |  #   |   #    |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |   S  |   T  |   P  |   H  |   *  |------|           |------|   *  |   F  |   P  |   L  |  T   |   D    |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |        |   S  |   K  |   W  |   R  |   *  |      |           |      |   *  |   R  |   B  |   G  |  S   |   Z    |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   |      |      |      |      |      |                                       |      |      |      |      |      |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |      |      |       |      |      |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |      |      |      |       |      |      |      |
+ *                                 |  A   |   O  |------|       |------|  E   |  U   |
+ *                                 |      |      |      |       |      |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+[STEN] = LAYOUT_ergodox(  // layer 3 : Stenography
+    // left hand
+    _x_, _x_,    _x_,    _x_,    _x_,    _x_,     TG(STEN),
+    _x_, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5,  _x_,
+    _x_, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1,
+    _x_, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2, _x_,
+    _x_, _x_,    _x_,    _x_,    _x_,
+                                         _x_,     _x_,
+                                                  _x_,
+                                 STN_A,  STN_O,   _x_,
+  // right hand
+  _x_, _x_,     _x_,    _x_,    _x_,    _x_,    _x_,
+  _x_, STN_N6,  STN_N7, STN_N8, STN_N9, STN_NA, STN_NB,
+  _x_, STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR,
+       STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR,
+                _x_,    _x_,    _x_,    _x_,    _x_,
+  _x_, _x_,
+  _x_,
+  _x_, STN_E,   STN_U
+)
+};
+
+// ...
+
+// Runs just one time when the keyboard initializes.
+void matrix_init_user(void) {
+  // ...
+  steno_set_mode(STENO_MODE_GEMINI);
+};
+```
+
+I have updated the code on this post's
+[companion Github repo][QMK Ergodox Steno Example] to reflect these changes on
+the `master` branch, but kept the original "high" configuration in another
+branch for your reference. You can also see how I've incorporated this change
+in my [current personal keymaps][QMK Keymaps].
+
+### Use Steno Appropriate Keycaps
+
+Based on the [Plover Keycap Recommendations][], I picked up a set of
+[G20 Blank Keysets][] and this has made chording _much_ easier.
+
+Switching the direction of my original [DCS profile][] keys helped a little bit,
+but the flat and wide profile of the G20s makes pressing two keys with the same
+finger significantly less awkward. So, I can definitely recommend picking up a
+set if you are going to make a serious attempt at learning steno on an Ergodox,
+or really any mechanical keyboard.
+
+For Ergodox users, I would recommend picking up both the G20 Ergodox Base _and_
+Ergodox Modifier sets that [PMK][] offers. I initially only ordered a modifier
+set, thinking that I would be fine with having a mix of profiles on the board,
+but the issues with that I found were:
+
+- Having a board with multiple types of keycap profiles is kind of awkward when
+  switching back to QWERTY typing
+- The Ergodox Modifier set only contains enough keys to cover a base steno
+  layout, and not the steno number key `#` row (this may not necessarily be
+  a deal breaker for you if you plan on just using the QWERTY number row)
+- The Ergodox Modifier set does not come with any homing keys (keys with a bar
+  or dot on them to signify to your index finger that you are on home row). My
+  index fingers naturally seek out homing keys, and I could not get over not
+  having them, which is partly what prompted me to pick up the Ergodox Base set
+  (if you want the homing bars/dots but don't want the base set, you have the
+  option of just [buying a set of those keys separately][G20 Homing Bump])
+
 [Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
 [Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#configuring-qmk-for-steno
@@ -518,6 +658,7 @@ omissions in this post, please let me know in the comments.
 [Ergodox EZ image]: /assets/images/2018-10-18/ergodox-ez.jpg "Ergodox EZ"
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/g20-blank-keysets/
+[G20 Homing Bump]: https://pimpmykeyboard.com/g20-1-space-homing-bar-or-bump-pack-of-4/
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Google IME]: https://www.google.com/inputtools/services/features/input-method.html
@@ -527,11 +668,13 @@ omissions in this post, please let me know in the comments.
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [Open Steno Project]: http://www.openstenoproject.org/
+[PMK]: https://pimpmykeyboard.com/
 [Plover]: http://www.openstenoproject.org/plover/
 [Plover connected to keyboard]: /assets/images/2018-10-18/plover-keyboard-connected.png "Plover connected to keyboard"
 [Plover crash issue]: https://github.com/openstenoproject/plover/issues/573#issuecomment-256122550
 [Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
 [Plover Installation]: https://github.com/openstenoproject/plover/wiki/Installation-Guide#installation
+[Plover Keycap Recommendations]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#keycaps
 [Plover supported protocols]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#supported-protocols
 [Plover with Steno Protocol]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#plover-with-steno-protocol
 [Plover QWERTY mapping]: https://github.com/openstenoproject/plover/wiki/Beginner's-Guide:-Get-Started-with-Plover#use-the-correct-body-posture-and-finger-placement
