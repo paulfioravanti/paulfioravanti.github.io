@@ -10,6 +10,9 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% comment %}
+CUSTOMISATION: Add in alt tag to archive__item-teaser image
+{% endcomment %}
 {% if post.header.image_description %}
   {% assign alt = post.header.image_description %}
 {% else %}
