@@ -21,7 +21,7 @@ being disciplined enough to continue writing content regularly would be the main
 blog-related problem I would be dealing with.
 
 That is, until I ran [HTMLProofer][] over the site, and it spat out a
-bunch of validation issues that showed me I had a significant amount of issues
+bunch of validation issues that showed me I had a significant amount of problems
 including:
 
 - Some of the links I had in older posts were returning [`404`][HTTP 404]
