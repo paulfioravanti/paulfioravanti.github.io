@@ -152,7 +152,7 @@ which we will call `STEN`.
 
 We will then (arbitrarily) assign the top right-most key on the left hand of the
 `BASE` layer to be the toggle to turn the `STEN` layer on and off, using QMK's
-[`TC(layer)` function][]:
+[`TG(layer)` function][]:
 
 **`qmk_firmware/keyboards/ergodox_ez/keymaps/default_steno/keymap.c`**
 
@@ -695,7 +695,7 @@ but the issues with that I found were:
 [Select serial port and baud rate]: /assets/images/2018-10-18/plover-serial-port-configuration.png "Select serial port and baud rate"
 [steno machine keymap]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys#TOC-The-Keyboard
 [Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md
-[`TC(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
+[`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
 [Toggling Plover in software]: https://waleedkhan.name/blog/steno-adventures-part-2/#toggling-plover-in-software
 [TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
 [Waleed Khan]: https://waleedkhan.name
