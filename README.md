@@ -72,10 +72,10 @@ a [limited set of plugins][Github Pages Supported Plugin List].
 
 So, I'm using [Travis CI][] as both a test harness and a deployment pipeline to
 bypass the limitations of the [Pages gem][], and allow Jekyll to use the latest
-gems as well as plugins not supported by Github's `safe` mode.
+gems, as well as plugins not supported by Github's `safe` mode.
 
-See _[Supercharge GitHub Pages with Jekyll and Travis CI][]_ for the guide that
-I followed and built on to get my Travis-Github Pages pipeline working.
+See my post _[Build a CI/CD pipeline for your Jekyll site][]_ for more
+information about how to get a Travis-Github Pages test/deploy pipeline working.
 
 ## License
 
@@ -97,6 +97,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
 [`asdf`]: https://github.com/asdf-vm/asdf
+[Build a CI/CD pipeline for your Jekyll site]: https://paulfioravanti.com/blog/2018/10/29/build-a-ci-cd-pipeline-for-your-jekyll-site/
 [Build Status image]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io.svg?branch=release
 [Build Status url]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io
 [Github Pages]: https://pages.github.com/
@@ -125,7 +126,6 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [scss-lint]: https://github.com/brigade/scss-lint
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
-[Supercharge GitHub Pages with Jekyll and Travis CI]: https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075
 [Travis CI]: https://travis-ci.org/
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
 [twitter-url]: https://twitter.com/paulfioravanti
