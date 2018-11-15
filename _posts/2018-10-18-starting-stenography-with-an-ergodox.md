@@ -237,14 +237,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 > Note the uses of `_x_`and `___` here:
 >
 > - `_x_` specifically indicates that pressing the key results in a [NOOP][]:
-    the keystroke is ignored
+  the keystroke is ignored
 > - `___` is a "transparent" mapping, which in this case for the toggle key,
-    will "fall back" to the `TG(STEN)` function on the `BASE` layer. This is
-    really just a convenience so that we don't need to specify `TG(STEN)` again
-    on the `STEN` layer
+  will "fall back" to the `TG(STEN)` function on the `BASE` layer. This is
+  really just a convenience so that we don't need to specify `TG(STEN)` again
+  on the `STEN` layer
 >
 > More information about these two mappings in the [QMK Special Keys][]
-  documentation.
+documentation.
 
 Next, generate the firmware from the `qmk_firmware` directory root path:
 
