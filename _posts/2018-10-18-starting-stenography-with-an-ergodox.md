@@ -165,6 +165,7 @@ We will then (arbitrarily) assign the top right-most key on the left hand of the
 
 // Helper to make keymaps a bit easier to read at a glance
 #define _x_ KC_NO
+#define ___ KC_TRNS
 
 // ...
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -191,27 +192,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 3: Modified QWERTY for Stenography
  *
  * ,--------------------------------------------------.  ,--------------------------------------------------.
- * |        |   1  |   2  |   3  |   4  |   5  | BASE |  |      |   6  |   7  |   8  |   9  |  0   |        |
+ * |   [x]  |   1  |   2  |   3  |   4  |   5  |      |  |  [x] |   6  |   7  |   8  |   9  |   0  |  [x]   |
  * |--------+------+------+------+------+------+------|  |------+------+------+------+------+------+--------|
- * |        |   Q  |   W  |   E  |   R  |   T  |      |  |      |   Y  |   U  |   I  |   O  |  P   |   [    |
+ * |   [x]  |   Q  |   W  |   E  |   R  |   T  |      |  |      |   Y  |   U  |   I  |   O  |   P  |   [    |
+ * |--------+------+------+------+------+------|  [x] |  |  [x] |------+------+------+------+------+--------|
+ * |   [x]  |   A  |   S  |   D  |   F  |   G  |------|  |------|   H  |   J  |   K  |   L  |   ;  |   '    |
  * |--------+------+------+------+------+------|      |  |      |------+------+------+------+------+--------|
- * |        |   A  |   S  |   D  |   F  |   G  |------|  |------|   H  |   J  |   K  |   L  |  ;   |   '    |
- * |--------+------+------+------+------+------|      |  |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |  |      |      |      |      |      |      |        |
+ * |   [x]  |  [x] |  [x] |  [x] |  [x] |      |  [x] |  |  [x] |  [x] |  [x] |  [x] |  [x] |  [x] |  [x]   |
  * `--------+------+------+------+------+-------------'  `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                              |      |      |      |      |      |
+ *   | [x]  |  [x] |  [x] |  [x] |  [x] |                              |  [x] |  [x] |  [x] |  [x] |  [x] |
  *   `----------------------------------'                              `----------------------------------'
  *                                      ,-------------.  ,-------------.
- *                                      |      |      |  |      |      |
+ *                                      |  [x] |  [x] |  |  [x] |  [x] |
  *                               ,------|------|------|  |------+------+------.
- *                               |      |      |      |  |      |      |      |
- *                               |  C   |   V  |------|  |------|  N   |  M   |
- *                               |      |      |      |  |      |      |      |
+ *                               |      |      |  [x] |  |  [x] |      |      |
+ *                               |  C   |   V  |------|  |------|   N  |   M  |
+ *                               |      |      |  [x] |  |  [x] |      |      |
  *                               `--------------------'  `--------------------'
  */
 [STEN] = LAYOUT_ergodox(  // layer 3 : Modified QWERTY for Stenography
   // left hand
-  _x_, KC_1, KC_2, KC_3, KC_4, KC_5, TG(STEN),
+  _x_, KC_1, KC_2, KC_3, KC_4, KC_5, ___,
   _x_, KC_Q, KC_W, KC_E, KC_R, KC_T, _x_,
   _x_, KC_A, KC_S, KC_D, KC_F, KC_G,
   _x_, _x_,  _x_,  _x_,  _x_,  _x_,  _x_,
@@ -232,6 +233,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 // ...
 ```
+
+> Note the uses of `_x_`and `___` here:
+>
+> - `_x_` specifically indicates that pressing the key results in a [NOOP][]:
+    the keystroke is ignored
+> - `___` is a "transparent" mapping, which in this case for the toggle key,
+    will "fall back" to the `TG(STEN)` function on the `BASE` layer. This is
+    really just a convenience so that we don't need to specify `TG(STEN)` again
+    on the `STEN` layer
+>
+> More information about these two mappings in the [QMK Special Keys][]
+  documentation.
 
 Next, generate the firmware from the `qmk_firmware` directory root path:
 
@@ -321,6 +334,7 @@ Open up the keymap file and change the code so that it looks like this:
 
 // Helper to make keymaps a bit easier to read at a glance
 #define _x_ KC_NO
+#define ___ KC_TRNS
 
 // ...
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -347,27 +361,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 3: Stenography
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        |   #  |   #  |   #  |   #  |   #  | BASE |           |      |   #  |   #  |   #  |   #  |  #   |   #    |
+ * |   [x]  |   #  |   #  |   #  |   #  |   #  |      |           |  [x] |   #  |   #  |   #  |   #  |  #   |   #    |
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
- * |        |   S  |   T  |   P  |   H  |   *  |      |           |      |   *  |   F  |   P  |   L  |  T   |   D    |
+ * |   [x]  |   S  |   T  |   P  |   H  |   *  |      |           |      |   *  |   F  |   P  |   L  |   T  |   D    |
+ * |--------+------+------+------+------+------|  [x] |           |  [x] |------+------+------+------+------+--------|
+ * |   [x]  |   S  |   K  |   W  |   R  |   *  |------|           |------|   *  |   R  |   B  |   G  |   S  |   Z    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   S  |   K  |   W  |   R  |   *  |------|           |------|   *  |   R  |   B  |   G  |  S   |   Z    |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |   [x]  |  [x] |  [x] |  [x] |  [x] |  [x] |  [x] |           |  [x] |  [x] |  [x] |  [x] |  [x] |  [x] |  [x]   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                                       |      |      |      |      |      |
+ *   | [x]  |  [x] |  [x] |  [x] |  [x] |                                       |  [x] |  [x] |  [x] |  [x] |  [x] |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |      |      |       |      |      |
+ *                                        |  [x] |  [x] |       |  [x] |  [x] |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |      |
- *                                 |  A   |   O  |------|       |------|  E   |  U   |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |  [x] |       |  [x] |      |      |
+ *                                 |  A   |   O  |------|       |------|   E  |   U  |
+ *                                 |      |      |  [x] |       |  [x] |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [STEN] = LAYOUT_ergodox(  // layer 3 : Stenography
     // left hand
-    _x_, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5,  TG(STEN),
+    _x_, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5,  ___,
     _x_, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1, _x_,
     _x_, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2,
     _x_, _x_,    _x_,    _x_,    _x_,    _x_,     _x_,
@@ -538,6 +552,7 @@ well again, even with more complex chords. So, in the context of the
 
 // Helper to make keymaps a bit easier to read at a glance
 #define _x_ KC_NO
+#define ___ KC_TRNS
 
 // ...
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -564,27 +579,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 3: Stenography
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |        |      |      |      |      |      | BASE |           |      |      |      |      |      |      |        |
+ * |   [x]  |  [x] |  [x] |  [x] |  [x] |  [x] |      |           |  [x] |  [x] |  [x] |  [x] |  [x] |  [x] |  [x]   |
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
- * |        |   #  |   #  |   #  |   #  |   #  |      |           |      |   #  |   #  |   #  |   #  |  #   |   #    |
+ * |   [x]  |   #  |   #  |   #  |   #  |   #  |      |           |      |   #  |   #  |   #  |   #  |   #  |   #    |
+ * |--------+------+------+------+------+------|  [x] |           |  [x] |------+------+------+------+------+--------|
+ * |   [x]  |   S  |   T  |   P  |   H  |   *  |------|           |------|   *  |   F  |   P  |   L  |   T  |   D    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   S  |   T  |   P  |   H  |   *  |------|           |------|   *  |   F  |   P  |   L  |  T   |   D    |
- * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |   S  |   K  |   W  |   R  |   *  |      |           |      |   *  |   R  |   B  |   G  |  S   |   Z    |
+ * |   [x]  |   S  |   K  |   W  |   R  |   *  |  [x] |           |  [x] |   *  |   R  |   B  |   G  |   S  |   Z    |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |      |      |      |      |                                       |      |      |      |      |      |
+ *   | [x]  |  [x] |  [x] |  [x] |  [x] |                                       |  [x] |  [x] |  [x] |  [x] |  [x] |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        |      |      |       |      |      |
+ *                                        |  [x] |  [x] |       |  [x] |  [x] |
  *                                 ,------|------|------|       |------+------+------.
- *                                 |      |      |      |       |      |      |      |
- *                                 |  A   |   O  |------|       |------|  E   |  U   |
- *                                 |      |      |      |       |      |      |      |
+ *                                 |      |      |  [x] |       |  [x] |      |      |
+ *                                 |  A   |   O  |------|       |------|   E  |   U  |
+ *                                 |      |      |  [x] |       |  [x] |      |      |
  *                                 `--------------------'       `--------------------'
  */
 [STEN] = LAYOUT_ergodox(  // layer 3 : Stenography
     // left hand
-    _x_, _x_,    _x_,    _x_,    _x_,    _x_,     TG(STEN),
+    _x_, _x_,    _x_,    _x_,    _x_,    _x_,     ___,
     _x_, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5,  _x_,
     _x_, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1,
     _x_, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2, _x_,
@@ -667,6 +682,7 @@ but the issues with that I found were:
 [Learn Plover! Lesson 1]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
+[NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
 [Open Steno Project]: http://www.openstenoproject.org/
 [PMK]: https://pimpmykeyboard.com/
 [Plover]: http://www.openstenoproject.org/plover/
@@ -689,6 +705,7 @@ but the issues with that I found were:
 [QMK Installing Build Tools]: https://docs.qmk.fm/#/getting_started_build_tools
 [QMK Keymaps]: https://github.com/paulfioravanti/qmk_keymaps
 [QMK NKRO Github issue]: https://github.com/qmk/qmk_firmware/issues/1695#issuecomment-328317966
+[QMK Special Keys]: https://docs.qmk.fm/#/keycodes_basic?id=special-keys
 [QMK steno keycodes]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#keycode-reference
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
 [Select GeminiPR from dropdown and click Configure button]: /assets/images/2018-10-18/plover-configuration-configure.png "Select GeminiPR from dropdown and click Configure button"
