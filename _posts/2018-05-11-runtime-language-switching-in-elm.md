@@ -46,6 +46,17 @@ with Elm, so we will set about doing the following:
 
 Let's get started!
 
+> **Update (21 December 2018)**
+>
+> The version of Elm used in this post is 0.18. I still stand by the overall
+  points of the post, but some of the code is now outdated. The `master` branch
+  of the [`elm-i18n-example` repo][] has been updated to Elm 0.19, so if you are
+  following along, and you get issues, try reconciling them there with the
+  updated codebase.
+>  
+> The full original 0.18 codebase used in this post can be
+  found on the [0.18 branch][] of the repo.
+
 ## Bootstrap a New Elm Application
 
 [Create Elm App][] will help us bootstrap our app, so install it with:
@@ -1406,6 +1417,7 @@ this blog post for the time being, but if you have any better ways of doing
 things (I'd love to see an actual example of an app using the [elm-i18n][]
 package), please let me know!
 
+[0.18 branch]: https://github.com/paulfioravanti/elm-i18n-example/tree/0.18
 [1-recreate-tachyons-doc-page]: https://github.com/paulfioravanti/elm-i18n-example/tree/1-recreate-tachyons-doc-page
 [2-add-language-dropdown]: https://github.com/paulfioravanti/elm-i18n-example/tree/2-add-language-dropdown
 [3-add-language-switching]: https://github.com/paulfioravanti/elm-i18n-example/tree/3-add-language-switching
