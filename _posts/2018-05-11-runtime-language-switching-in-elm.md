@@ -49,13 +49,13 @@ Let's get started!
 > **Update (21 December 2018)**
 >
 > The version of Elm used in this post is 0.18. I still stand by the overall
-  points of the post, but some of the code is now outdated. The `master` branch
-  of the [`elm-i18n-example` repo][] has been updated to Elm 0.19, so if you are
-  following along, and you get issues, try reconciling them there with the
-  updated codebase.
->  
+> points of the post, but some of the code is now outdated. The `master` branch
+> of the [`elm-i18n-example` repo][] has been updated to Elm 0.19, so if you are
+> following along, and you get issues, try reconciling them there with the
+> updated codebase.
+>
 > The full original 0.18 codebase used in this post can be
-  found on the [0.18 branch][] of the repo.
+> found on the [0.18 branch][] of the repo.
 
 ## Bootstrap a New Elm Application
 
