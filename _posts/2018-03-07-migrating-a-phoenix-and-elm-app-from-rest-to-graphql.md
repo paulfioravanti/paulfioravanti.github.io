@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2018/03/06/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
 title: "Migrating a Phoenix and Elm app from REST to GraphQL"
 date: 2018-03-07 09:10 +1100
 tags: elixir phoenix elm rest graphql api

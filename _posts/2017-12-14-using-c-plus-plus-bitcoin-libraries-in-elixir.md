@@ -1,5 +1,6 @@
 ---
 redirect_from: /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir.html
+redirect_from: /blog/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir/
 title: "Using C++ Bitcoin libraries in Elixir"
 date: 2017-12-14 09:03 +1100
 tags: elixir bitcoin clang
