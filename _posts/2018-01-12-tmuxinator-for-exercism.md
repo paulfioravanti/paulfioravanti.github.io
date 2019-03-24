@@ -9,8 +9,8 @@ header:
   overlay_image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
   overlay_filter: 0.2
   caption: >
-    Photo by [rawpixel](https://unsplash.com/photos/rMGdXjYjkz4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/architect-plan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    Photo originally by rawpixel on
+    [Unsplash](https://unsplash.com/search/photos/architect-plan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Creating a template for all your exercises, in any language.
 ---
