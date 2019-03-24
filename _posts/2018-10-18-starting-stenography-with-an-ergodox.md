@@ -89,7 +89,7 @@ just use that? Why go to the trouble of creating another layout? Well...
   later), and instead re-implements steno functionality from scratch using
   [custom binary key codes][QMK Ergodox EZ Steno Configuration Keymap Codes] and
   [custom functions][QMK Ergodox EZ Steno Configuration Keymap Functions]
-- The codes would seem to only work with the [TX Bolt][] steno protocol (which,
+> - The codes would seem to only work with the [TX Bolt][] steno protocol (which,
   at least for me, resulted in incorrect key press processing, but more about
   that later as well...)
 
