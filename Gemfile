@@ -47,7 +47,7 @@ group :jekyll_plugins do
   # to better index and display your site's content.
   gem "jekyll-seo-tag", "~> 2.5"
   # Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site
-  gem "jekyll-sitemap", "~> 1.2"
+  gem "jekyll-sitemap", "~> 1.3"
   # GitHub-flavored emoji plugin for Jekyll
   gem "jemoji", "~> 0.10"
 end
