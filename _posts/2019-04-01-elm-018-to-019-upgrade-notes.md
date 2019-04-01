@@ -548,6 +548,7 @@ into a future version of Elm...?
     }
   })
   ```
+
 - For an application that does not accept flags, I like to now be able to write
   the type signature for its flags with the unit type:
   `main : Program () Model Msg`, rather than `main : Program Never Model Msg`
