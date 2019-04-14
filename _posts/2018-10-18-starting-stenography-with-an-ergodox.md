@@ -1,6 +1,7 @@
 ---
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
+last_modified_at: 2018-11-08 00:00 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg

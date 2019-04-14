@@ -2,6 +2,7 @@
 redirect_from: /blog/2018/02/08/connecting-elm-to-phoenix-1-3/
 title: "Connecting Elm to Phoenix 1.3"
 date: 2018-02-09 09:55 +1100
+last_modified_at: 2018-02-16 00:00 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
@@ -13,7 +14,7 @@ excerpt: >
   Configuring Elm for use in a Phoenix 1.3 app using Brunch.
 ---
 
-Want to start using [Elm][] on the front end of a [Phoenix][] app (in this
+Want to start using [Elm][] 0.18 on the front end of a [Phoenix][] app (in this
 case, [Phoenix 1.3][])? This blog post will go over the steps I use to get
 these two talking to each other.
 

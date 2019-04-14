@@ -1,6 +1,7 @@
 ---
 title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
+last_modified_at: 2018-12-21 00:00 +1100
 tags: elm i18n
 header:
   image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
