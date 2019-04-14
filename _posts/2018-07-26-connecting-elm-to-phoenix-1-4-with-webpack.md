@@ -1,6 +1,7 @@
 ---
 title: "Connecting Elm to Phoenix 1.4 with webpack"
 date: 2018-07-26 16:20 +1100
+last_modified_at: 2019-04-14 20:45 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
@@ -136,7 +137,9 @@ module.exports = (env, options) => ({
         loader: "elm-webpack-loader",
         options: {
           debug: true,
-          warn: true,
+          // NOTE: `warn` option was removed in Elm 0.19.
+          // Re-enable if desired for use in Elm 0.18.
+          // warn: true,
           cwd: path.resolve(__dirname, "elm")
         }
       }
@@ -163,12 +166,24 @@ app:
 
 **`assets/js/app.js`**
 
+### Elm 0.18
+
 ```js
 // ...
 import Elm from "../elm/src/Main.elm"
 
-const elmDiv = document.getElementById("elm-main");
-Elm.Main.embed(elmDiv);
+const elmDiv = document.getElementById("elm-main")
+Elm.Main.embed(elmDiv)
+```
+
+### Elm 0.19
+
+```js
+// ...
+import { Elm } from "../elm/src/Main.elm"
+
+const elmDiv = document.getElementById("elm-main")
+Elm.Main.init({ node: elmDiv })
 ```
 
 Now, run `mix phx.server` again and navigate to <http://localhost:4000> to see
@@ -266,6 +281,8 @@ Then, give the Elm styles some minor tweaks from their defaults...
 **`assets/elm/src/main.css`**
 
 ```css
+/* ... */
+
 body {
   text-align: center;
 }
