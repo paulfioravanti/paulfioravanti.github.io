@@ -61,7 +61,7 @@
       {% endif %}
       {% for badge in page.badges %}
         <a href="{{ badge.link }}" style="text-decoration: none;">
-          <img src="{{ badge.image }}" />
+          <img src="{{ badge.image }}" alt="{{ badge.alt }}" />
         </a>
       {% endfor %}
       {% if page.header.cta_url %}

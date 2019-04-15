@@ -11,6 +11,7 @@ header:
   overlay_filter: 0.5
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%23108-blueviolet.svg
+    alt: "Elixir Weekly #108"
     link: https://elixirweekly.net/issues/108
 excerpt: >
   Phoenix 1.4 has changed its front end configuration framework from Brunch to

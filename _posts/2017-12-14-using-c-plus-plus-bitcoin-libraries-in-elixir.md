@@ -16,6 +16,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2376-blueviolet.svg
+    alt: "Elixir Weekly #76"
     link: https://elixirweekly.net/issues/76
 excerpt: >
   Pass messages from Elixir to C++ with Cure.

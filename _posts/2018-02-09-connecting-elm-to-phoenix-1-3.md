@@ -12,8 +12,10 @@ header:
   overlay_filter: 0.5
 badges:
   - image: https://img.shields.io/badge/Elixir%20Radar-%23131-blueviolet.svg
+    alt: "Elixir Radar #131"
     link: https://app.rdstation.com.br/mail/9d20f32f-ecc7-40b8-821d-1edfe16fedf8
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2384-blueviolet.svg
+    alt: "Elixir Weekly #84"
     link: https://elixirweekly.net/issues/84
 excerpt: >
   Configuring Elm for use in a Phoenix 1.3 app using Brunch.

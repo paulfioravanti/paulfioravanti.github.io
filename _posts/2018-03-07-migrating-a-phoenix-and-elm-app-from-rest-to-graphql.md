@@ -12,8 +12,10 @@ header:
   overlay_filter: 0.7
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2387-blueviolet.svg
+    alt: "Elixir Weekly #87"
     link: https://elixirweekly.net/issues/87
   - image: https://img.shields.io/badge/GraphQL%20Weekly-%2388-ff69b4.svg
+    alt: "GraphQL Weekly #88"
     link: https://www.graphqlweekly.com/issues/88/
 excerpt: >
   Change your API from set menu to à la carte.

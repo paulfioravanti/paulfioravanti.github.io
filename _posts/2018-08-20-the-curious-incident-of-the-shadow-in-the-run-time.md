@@ -14,6 +14,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 badges:
   - image: https://img.shields.io/badge/Ruby%20Weekly-%23413-red.svg
+    alt: "Ruby Weekly #413"
     link: https://rubyweekly.com/issues/413
 excerpt: >
   Coding in Ruby is full of sweetness and light, but where there is light,

@@ -17,6 +17,7 @@ header:
     on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2374-blueviolet.svg
+    alt: "Elixir Weekly #74"
     link: https://elixirweekly.net/issues/74
 excerpt: >
   Leverage Elixir ports to talk to Python with Export.
