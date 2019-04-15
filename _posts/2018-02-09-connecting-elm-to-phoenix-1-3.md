@@ -10,6 +10,11 @@ header:
   teaser: /assets/images/2018-02-08/functional_web_wallpaper.jpg
   overlay_image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
   overlay_filter: 0.5
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Radar-%23131-blueviolet.svg
+    link: https://app.rdstation.com.br/mail/9d20f32f-ecc7-40b8-821d-1edfe16fedf8
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%2384-blueviolet.svg
+    link: https://elixirweekly.net/issues/84
 excerpt: >
   Configuring Elm for use in a Phoenix 1.3 app using Brunch.
 ---
@@ -264,21 +269,12 @@ Elm.Main.embed(elmDiv);
 
 [Back to "Display Elm app in Phoenix template"][]
 
----
-
-### Press Links
-
-- [Elixir Radar #131][]
-- [Elixir Weekly #84][]
-
 [Back to "Display Elm app in Phoenix template"]: #display-elm-app-in-phoenix-template
 [Brunch]: http://brunch.io/
 [Brunch's file config documentation]: http://brunch.io/docs/config#-files-
 [Connecting Elm to Phoenix 1.4 with webpack]: https://paulfioravanti.com/blog/2018/07/26/connecting-elm-to-phoenix-1-4-with-webpack/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
-[Elixir Radar #131]: https://app.rdstation.com.br/mail/9d20f32f-ecc7-40b8-821d-1edfe16fedf8
-[Elixir Weekly #84]: https://elixirweekly.net/issues/84
 [Elm]: http://elm-lang.org/
 [elm-brunch]: https://github.com/madsflensted/elm-brunch
 [Image broken]: /assets/images/2018-02-08/phoenix-elm-broken-image.png "Image broken"

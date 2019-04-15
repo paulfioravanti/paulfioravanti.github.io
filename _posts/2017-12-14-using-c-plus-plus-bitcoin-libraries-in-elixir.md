@@ -14,6 +14,9 @@ header:
   caption: >
     Photo by [Matt Antonioli](https://unsplash.com/photos/c8QJ7dhHP9Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%2376-blueviolet.svg
+    link: https://elixirweekly.net/issues/76
 excerpt: >
   Pass messages from Elixir to C++ with Cure.
 ---
@@ -872,12 +875,6 @@ that I'm doing it wrong when it comes to C++, so if you have any improvement
 suggestions, please leave a comment. If you want to keep tabs on my gradual
 port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Mastering Bitcoin repo][].
-
----
-
-### Press Links
-
-- [Elixir Weekly #76][]
 
 [Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example
 [Cure]: https://github.com/luc-tielen/Cure

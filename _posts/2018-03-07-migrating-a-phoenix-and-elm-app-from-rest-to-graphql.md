@@ -10,6 +10,11 @@ header:
   teaser: /assets/images/2018-03-07/address-book-contacts-index.png
   overlay_image: /assets/images/2018-03-07/GraphiQL-contact-query.png
   overlay_filter: 0.7
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%2387-blueviolet.svg
+    link: https://elixirweekly.net/issues/87
+  - image: https://img.shields.io/badge/GraphQL%20Weekly-%2388-ff69b4.svg
+    link: https://www.graphqlweekly.com/issues/88/
 excerpt: >
   Change your API from set menu to à la carte.
 ---
@@ -956,13 +961,6 @@ However, I hope that you enjoyed this small taste of Phoenix, Elm, and GraphQL
 working together, and if you join me in making further inroads with this fully
 functional tech stack moving forward, I would love to hear about it!
 
----
-
-### Press Links
-
-- [Elixir Weekly #87][]
-- [GraphQL Weekly #88][]
-
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe.Phoenix]: https://github.com/absinthe-graphql/absinthe_phoenix
 [Absinthe PragProg Book]: https://pragprog.com/book/wwgraphql/craft-graphql-apis-in-elixir-with-absinthe
@@ -972,7 +970,6 @@ functional tech stack moving forward, I would love to hear about it!
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
 [Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
 [ContactList Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/ContactList/Model.elm
-[Elixir Weekly #87]: https://elixirweekly.net/issues/87
 [Elm]: http://elm-lang.org/
 [`elm-graphql`]: https://github.com/jamesmacaulay/elm-graphql
 [Elm hipster stack repo]: https://github.com/carleryd/elm-hipster-stack
@@ -987,7 +984,6 @@ functional tech stack moving forward, I would love to hear about it!
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
 [GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
-[GraphQL Weekly #88]: https://www.graphqlweekly.com/issues/88/
 [`Http`]: https://github.com/elm-lang/http
 [JSON]: https://www.json.org/
 [`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode

@@ -46,7 +46,7 @@
         <p class="page__lead">{{ page.excerpt | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       {% endif %}
       {% comment %}
-      CUSTOMISATION: Add in post date to layout
+      CUSTOMISATION: Add in post date, and badges if available, to layout
       {% endcomment %}
       {% if page.read_time and page.date %}
         <p class="page__meta">
@@ -59,6 +59,11 @@
           {% include read-time.html %}
         </p>
       {% endif %}
+      {% for badge in page.badges %}
+        <a href="{{ badge.link }}" style="text-decoration: none;">
+          <img src="{{ badge.image }}" />
+        </a>
+      {% endfor %}
       {% if page.header.cta_url %}
         <p><a href="{{ cta_path }}" class="btn btn--light-outline btn--large">{{ page.header.cta_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
       {% endif %}

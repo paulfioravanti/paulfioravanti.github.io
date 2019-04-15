@@ -9,6 +9,9 @@ header:
   teaser: /assets/images/2018-07-26/functional_web_wallpaper.jpg
   overlay_image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
   overlay_filter: 0.5
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%23108-blueviolet.svg
+    link: https://elixirweekly.net/issues/108
 excerpt: >
   Phoenix 1.4 has changed its front end configuration framework from Brunch to
   webpack.
@@ -306,17 +309,10 @@ Re-start the app, and...
 That looks about right. Now, you can get down to the business of ripping it all
 out again, and start building out your own Phoenix-and-Elm powered app!
 
----
-
-### Press Links
-
-- [Elixir Weekly #108][]
-
 [Brunch]: https://brunch.io/
 [Connecting Elm to Phoenix 1.3]: https://paulfioravanti.com/blog/2018/02/08/connecting-elm-to-phoenix-1-3/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
-[Elixir Weekly #108]: https://elixirweekly.net/issues/108
 [Elm]: http://elm-lang.org/
 [Elm loader]: https://github.com/elm-community/elm-webpack-loader
 [Elm Styles Override Phoenix Styles]: /assets/images/2018-07-26/elm-styles-override-phoenix-styles.png "Elm Styles Override Phoenix Styles"

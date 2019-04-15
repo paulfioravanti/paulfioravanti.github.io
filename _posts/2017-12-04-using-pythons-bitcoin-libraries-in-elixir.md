@@ -15,6 +15,9 @@ header:
   caption: >
     Photo by [Drew Stock](https://unsplash.com/photos/K-he2HgZVCA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%2374-blueviolet.svg
+    link: https://elixirweekly.net/issues/74
 excerpt: >
   Leverage Elixir ports to talk to Python with Export.
 ---
@@ -394,12 +397,6 @@ at [my Mastering Bitcoin Github repository][mastering-bitcoin-repo]:
 The repository is still a work in progress as I read through the book and
 attempt to port over more code, so keep an eye out for updates!
 
----
-
-### Press Links
-
-- [Elixir Weekly #74][]
-
 [elixir-binary]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
 [Bitcoin]: https://bitcoin.org/en/
 [Bitcoin Address]: https://en.bitcoin.it/wiki/Address
@@ -408,7 +405,6 @@ attempt to port over more code, so keep an eye out for updates!
 [C++]: https://isocpp.org/
 [Elliptic Curve Digital Signature Algorithm]: https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm
 [Elixir]: http://elixir-lang.github.io/
-[Elixir Weekly #74]: https://elixirweekly.net/issues/74
 [Erlang]: https://www.erlang.org/
 [Erlport]: http://erlport.org/
 [erlport-data-types-mapping]: http://erlport.org/docs/python.html#data-types-mapping

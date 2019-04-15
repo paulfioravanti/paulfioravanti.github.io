@@ -12,6 +12,9 @@ header:
   caption: >
     Photo by [Matthew Ansley](https://unsplash.com/photos/6AQxBtaIYOk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Ruby%20Weekly-%23413-red.svg
+    link: https://rubyweekly.com/issues/413
 excerpt: >
   Coding in Ruby is full of sweetness and light, but where there is light,
   shadows are cast.
@@ -527,12 +530,6 @@ a comment explaining why.
 - [A Ruby shadowing bug in the wild][] - The blog post that originally got me
   scratching the surface of Ruby shadowing.
 
----
-
-### Press Links
-
-- [Ruby Weekly #413][]
-
 [A Ruby shadowing bug in the wild]: https://thomasleecopeland.com/2017/04/20/shadowing-bug-in-the-wild.html
 [Behaviours of a Ruby local variable shadowing an instance method]: https://stackoverflow.com/questions/46597191/behaviours-of-a-ruby-local-variable-shadowing-an-instance-method
 [Binding]: https://ruby-doc.org/core-2.5.1/Binding.html
@@ -544,7 +541,6 @@ a comment explaining why.
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby shadowing a bad habit]: https://bugs.ruby-lang.org/issues/12490#note-2
 [Ruby's syntax documentation]: https://docs.ruby-lang.org/en/2.5.0/syntax_rdoc.html
-[Ruby Weekly #413]: https://rubyweekly.com/issues/413
 [`ShadowingOuterLocalVariable` cop]: https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ShadowingOuterLocalVariable
 [variable shadowing]: https://en.wikipedia.org/wiki/Variable_shadowing
 [What does "shadowing" mean in Ruby?]: https://stackoverflow.com/questions/6259314/what-does-shadowing-mean-in-ruby
