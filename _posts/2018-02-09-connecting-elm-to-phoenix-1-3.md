@@ -2,7 +2,7 @@
 redirect_from: /blog/2018/02/08/connecting-elm-to-phoenix-1-3/
 title: "Connecting Elm to Phoenix 1.3"
 date: 2018-02-09 09:55 +1100
-last_modified_at: 2018-02-16 00:00 +1100
+last_modified_at: 2019-04-15 14:45 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-02-08/functional_web_wallpaper.jpg
@@ -211,7 +211,7 @@ Phoenix-and-Elm powered app!
 
 <br />
 
-----
+---
 
 <br />
 
@@ -264,12 +264,21 @@ Elm.Main.embed(elmDiv);
 
 [Back to "Display Elm app in Phoenix template"][]
 
+---
+
+### Press Links
+
+- [Elixir Radar #131][]
+- [Elixir Weekly #84][]
+
 [Back to "Display Elm app in Phoenix template"]: #display-elm-app-in-phoenix-template
 [Brunch]: http://brunch.io/
 [Brunch's file config documentation]: http://brunch.io/docs/config#-files-
 [Connecting Elm to Phoenix 1.4 with webpack]: https://paulfioravanti.com/blog/2018/07/26/connecting-elm-to-phoenix-1-4-with-webpack/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
+[Elixir Radar #131]: https://app.rdstation.com.br/mail/9d20f32f-ecc7-40b8-821d-1edfe16fedf8
+[Elixir Weekly #84]: https://elixirweekly.net/issues/84
 [Elm]: http://elm-lang.org/
 [elm-brunch]: https://github.com/madsflensted/elm-brunch
 [Image broken]: /assets/images/2018-02-08/phoenix-elm-broken-image.png "Image broken"

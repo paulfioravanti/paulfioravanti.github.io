@@ -2,6 +2,7 @@
 redirect_from: /blog/2018/03/06/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
 title: "Migrating a Phoenix and Elm app from REST to GraphQL"
 date: 2018-03-07 09:10 +1100
+last_modified_at: 2019-04-15 14:45 +1100
 tags: elixir phoenix elm rest graphql api
 header:
   image: /assets/images/2018-03-07/address-book-contacts-index.png
@@ -953,8 +954,14 @@ modifying server-side data (though take a look at the
 
 However, I hope that you enjoyed this small taste of Phoenix, Elm, and GraphQL
 working together, and if you join me in making further inroads with this fully
-functional tech
-stack moving forward, I would love to hear about it!
+functional tech stack moving forward, I would love to hear about it!
+
+---
+
+### Press Links
+
+- [Elixir Weekly #87][]
+- [GraphQL Weekly #88][]
 
 [Absinthe]: https://github.com/absinthe-graphql/absinthe
 [Absinthe.Phoenix]: https://github.com/absinthe-graphql/absinthe_phoenix
@@ -965,6 +972,7 @@ stack moving forward, I would love to hear about it!
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
 [Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
 [ContactList Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/ContactList/Model.elm
+[Elixir Weekly #87]: https://elixirweekly.net/issues/87
 [Elm]: http://elm-lang.org/
 [`elm-graphql`]: https://github.com/jamesmacaulay/elm-graphql
 [Elm hipster stack repo]: https://github.com/carleryd/elm-hipster-stack
@@ -979,6 +987,7 @@ stack moving forward, I would love to hear about it!
 [GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
 [GraphQL schemas and types]: http://graphql.org/learn/schema/
 [GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
+[GraphQL Weekly #88]: https://www.graphqlweekly.com/issues/88/
 [`Http`]: https://github.com/elm-lang/http
 [JSON]: https://www.json.org/
 [`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode

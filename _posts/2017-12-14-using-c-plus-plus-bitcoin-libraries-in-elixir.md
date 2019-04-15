@@ -3,6 +3,7 @@ redirect_from: /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in
 redirect_from: /blog/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir/
 title: "Using C++ Bitcoin libraries in Elixir"
 date: 2017-12-14 09:03 +1100
+last_modified_at: 2019-04-15 14:45 +1100
 tags: elixir bitcoin clang
 header:
   image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
@@ -872,6 +873,12 @@ suggestions, please leave a comment. If you want to keep tabs on my gradual
 port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Mastering Bitcoin repo][].
 
+---
+
+### Press Links
+
+- [Elixir Weekly #76][]
+
 [Creating a Base58Check-encoded bitcoin address from a private key]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example
 [Cure]: https://github.com/luc-tielen/Cure
 [cure-compile-options]: https://github.com/luc-tielen/Cure#start-developing-in-cc
@@ -880,6 +887,7 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Elixir]: http://elixir-lang.github.io/
 [Elixir binaries]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
 [elixir-interop-examples]: https://github.com/asbaker/elixir-interop-examples
+[Elixir Weekly #76]: https://elixirweekly.net/issues/76
 [erlang-guide-ports]: https://erlang.mk/guide/ports.html
 [Export]: https://github.com/fazibear/export
 [`g++`]: https://www.cprogramming.com/g++.html
