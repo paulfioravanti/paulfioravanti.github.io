@@ -1,7 +1,7 @@
 ---
 title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
-last_modified_at: 2018-12-21 00:00 +1100
+last_modified_at: 2019-04-17 07:30 +1100
 tags: elm i18n
 header:
   image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
@@ -12,6 +12,10 @@ header:
   caption: >
     Photo by [Ameet Dhanda](https://unsplash.com/photos/ojVfHwrBlP4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/search/photos/language?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elm%20Weekly-%2359-green.svg
+    alt: "Elm Weekly #59"
+    link: http://www.elmweekly.nl/issues/elm-weekly-issue-59-172288
 excerpt: >
   Internationalisation would seem to be a deceptively complex problem using Elm.
 ---
