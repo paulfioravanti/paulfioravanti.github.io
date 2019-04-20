@@ -3,10 +3,10 @@ title: "Build a CI/CD pipeline for your Jekyll site"
 date: 2018-10-29 21:40 +1100
 tags: jekyll ruby
 header:
-  image: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
+  image: /assets/images/2018-10-29/samuel-sianipar-1082943-unsplash.jpg
   image_description: "set of industrial pipes"
-  teaser: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
-  overlay_image: /assets/images/2018-10-28/samuel-sianipar-1082943-unsplash.jpg
+  teaser: /assets/images/2018-10-29/samuel-sianipar-1082943-unsplash.jpg
+  overlay_image: /assets/images/2018-10-29/samuel-sianipar-1082943-unsplash.jpg
   overlay_filter: 0.5
   caption: >
     Photo by [Samuel Sianipar](https://unsplash.com/photos/scUBcasSvbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
@@ -73,7 +73,7 @@ should:
 Let's see about getting this done!
 
 {% capture fancycrave_img %}
-![Fancycrave Image](/assets/images/2018-10-28/fancycrave-252351-unsplash.jpg
+![Fancycrave Image](/assets/images/2018-10-29/fancycrave-252351-unsplash.jpg
 "gray metal part lot")
 {% endcapture %}
 {% capture fancycrave_credit %}

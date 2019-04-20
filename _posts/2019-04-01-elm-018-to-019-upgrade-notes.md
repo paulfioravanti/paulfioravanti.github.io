@@ -3,10 +3,10 @@ title: "Elm 0.18 to 0.19 upgrade notes"
 date: 2019-04-01 14:20 +1100
 tags: elm upgrade elm-0.18 elm-0.19
 header:
-  image: /assets/images/2019-03-25/david-travis-547046-unsplash.jpg
+  image: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
   image_description: "brown fountain pen on notebook"
-  teaser: /assets/images/2019-03-25/david-travis-547046-unsplash.jpg
-  overlay_image: /assets/images/2019-03-25/david-travis-547046-unsplash.jpg
+  teaser: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
+  overlay_image: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
   overlay_filter: 0.5
   caption: >
     Photo by [David Travis](https://unsplash.com/photos/5bYxXawHOQg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
