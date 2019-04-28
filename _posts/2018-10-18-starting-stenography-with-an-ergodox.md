@@ -1,7 +1,7 @@
 ---
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2018-11-08 00:00 +1100
+last_modified_at: 2019-04-28 12:00 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -65,8 +65,14 @@ use Plover for now][Plover crash issue]".
 For this post, we will use the [QMK default Ergodox EZ keymap][] as a base, and
 make changes to it to add functionality for stenography. Feel free to follow
 along as-is, or make appropriate changes to your own custom keymaps. You can
-also see the finished layout on this post's companion
-[QMK Ergodox Steno Example][] Github repository.
+also see the finished layouts in this post's companion keymaps on my
+[QMK example keymaps Github repository][]:
+
+- [QWERTY Steno][QMK Ergodox QWERTY Steno]
+- [Default Steno High][QMK Ergodox Default Steno High]
+- [Default Steno][QMK Ergodox Default Steno]
+
+(These keymap names will make more sense as you read through the post).
 
 After [installing the build tools][QMK Installing Build Tools] for your
 operating system, make a clone of the QMK Firmware repository from Github if you
@@ -93,6 +99,14 @@ just use that? Why go to the trouble of creating another layout? Well...
 > - The codes would seem to only work with the [TX Bolt][] steno protocol (which,
   at least for me, resulted in incorrect key press processing, but more about
   that later as well...)
+>
+> **UPDATE 28-04-2019**: The issue with TX Bolt is
+[now fixed][qmk/qmk_firmware #5229], and the [current QMK Ergodox EZ steno
+configuration][QMK Ergodox EZ Steno Configuration Current] does [now use QMK's
+built-in support for stenography][qmk/qmk_firmware #5220]. I may be biased, but
+I think the rest of this post still has value, with the added benefit of now
+having less configuration to do if you decide to adapt QMK's current Ergodox
+steno configuration for your own needs.
 
 ## N-Key Rollover
 
@@ -255,7 +269,7 @@ make ergodox_ez:default_steno
 
 This should generate an `ergodox_ez_default_steno.hex` file, which you can then
 use to flash your Ergodox firmware. If you get any build issues, check what you
-have against [my example code for this layer][QMK Ergodox Steno Example modified-qwerty-layer].
+have against [my example code for this layer][QMK Ergodox QWERTY Steno].
 
 Once you've flashed your keyboard firmware, open up your favourite text editor,
 press the top right-most key on the left hand to toggle the steno layer, and
@@ -421,7 +435,8 @@ Some notes about these changes:
   [TX Bolt][] (`STENO_MODE_BOLT`) for the parameter, as QMK apparently
   [speaks that protocol by default][Plover with Steno Protocol], but I found
   that key presses did not come in (or were not processed) properly, while
-  GeminiPR worked as expected
+  GeminiPR worked as expected (**Update 28-04-2019**: This issue [has been
+  fixed][qmk/qmk_firmware #5229])
 
 We will also need to update the rules file due to a few quirks of using
 steno-specific functionality in QMK:
@@ -696,16 +711,21 @@ but the issues with that I found were:
 [Plover with Steno Protocol]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#plover-with-steno-protocol
 [Plover QWERTY mapping]: https://github.com/openstenoproject/plover/wiki/Beginner's-Guide:-Get-Started-with-Plover#use-the-correct-body-posture-and-finger-placement
 [QMK default Ergodox EZ keymap]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/default
-[QMK Ergodox EZ Steno Configuration]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps/steno
-[QMK Ergodox EZ Steno Configuration Keymap Codes]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/steno/keymap.c#L140
-[QMK Ergodox EZ Steno Configuration Keymap Functions]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/steno/keymap.c#L260
+[QMK Ergodox Default Steno]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno
+[QMK Ergodox Default Steno High]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno_high
+[QMK Ergodox EZ Steno Configuration]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno
+[QMK Ergodox EZ Steno Configuration Current]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps/steno
+[QMK Ergodox EZ Steno Configuration Keymap Codes]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L140
+[QMK Ergodox EZ Steno Configuration Keymap Functions]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L256
 [QMK Ergodox keymaps list]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps
-[QMK Ergodox Steno Example]: https://github.com/paulfioravanti/qmk_ergodox_steno_example
-[QMK Ergodox Steno Example modified-qwerty-layer]: https://github.com/paulfioravanti/qmk_ergodox_steno_example/tree/modified-qwerty-layer/keyboards/ergodox_ez/keymaps/default_steno
+[QMK Ergodox QWERTY Steno]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/qwerty_steno
+[QMK Example keymaps Github repository]: https://github.com/paulfioravanti/qmk_example_keymaps
 [QMK Firmware]: https://qmk.fm/
 [QMK Installing Build Tools]: https://docs.qmk.fm/#/getting_started_build_tools
 [QMK Keymaps]: https://github.com/paulfioravanti/qmk_keymaps
 [QMK NKRO Github issue]: https://github.com/qmk/qmk_firmware/issues/1695#issuecomment-328317966
+[qmk/qmk_firmware #5220]: https://github.com/qmk/qmk_firmware/pull/5220
+[qmk/qmk_firmware #5229]: https://github.com/qmk/qmk_firmware/pull/5229
 [QMK Special Keys]: https://docs.qmk.fm/#/keycodes_basic?id=special-keys
 [QMK steno keycodes]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#keycode-reference
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
