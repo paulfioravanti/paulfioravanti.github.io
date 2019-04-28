@@ -1,7 +1,7 @@
 ---
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
-last_modified_at: 2019-04-28 12:00 +1100
+last_modified_at: 2019-04-28 12:20 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography
 header:
   image: /assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg
