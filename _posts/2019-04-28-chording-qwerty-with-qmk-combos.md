@@ -1,6 +1,7 @@
 ---
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
+last_modified_at: 2019-04-28 12:00 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography
 header:
   image: /assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg
@@ -80,7 +81,7 @@ For this post, we will use the [QMK default Ergodox EZ keymap][] as a base, and
 make changes to it to add functionality for QWERTY chording. Feel free to follow
 along as-is, or make appropriate changes to your own custom keymaps. You can
 also see the finished layout on this post's companion
-[QMK Ergodox Chorded QWERTY Example][] Github repository.
+[QMK Ergodox Chorded QWERTY Example][] keymap.
 
 After [installing the build tools][QMK Installing Build Tools] for your
 operating system, make a clone of the QMK Firmware repository from Github if you
@@ -538,7 +539,7 @@ Although all of the combos we have created so far have been two-key combos, you
 are certainly not limited to just two keys. To demonstrate this, let's create a
 combo that mimics the chord needed to output a full stop (`.`) on a
 [stenotype keyboard][steno machine keymap] (yes, I know this is not particularly
-useful on this layout, but play along just for this example).
+practical on this layout, but play along just for this example).
 
 The chord for a full stop in steno is `TP-LT`, meaning that the "T" and "P" keys
 on the left half of the keyboard, and the "L" and "T" keys on the right half of
@@ -594,8 +595,12 @@ probably the following reasons:
   a keyboard like the Georgi, where there is no physical full-size QWERTY
   keyboard available, and I am forced to adapt.
 
-So, ultimately, your mileage may vary for chorded QWERTY, but if you use QMK
-combos for anything interesting, please do reach out and let me know!
+So, ultimately, your mileage may vary for chorded QWERTY, but I really like QMK
+combos themselves, and look forward to experimenting with them: perhaps by
+replacing some keyboard shortcuts with chords instead.
+
+If you do use QMK combos for anything interesting, please do reach out and let
+me know!
 
 [Chorded QWERTY image]: /assets/images/2019-04-28/chorded-qwerty.png
 [`COMBO_END`]: https://github.com/qmk/qmk_firmware/blob/bc536b9b6d98e5428a28f6e6ba69675bd77b79cc/quantum/process_keycode/process_combo.h#L49
@@ -617,7 +622,7 @@ combos for anything interesting, please do reach out and let me know!
 [QMK basic keycodes]: https://docs.qmk.fm/#/keycodes_basic
 [QMK Combos]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
 [QMK default Ergodox EZ keymap]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/default
-[QMK Ergodox Chorded QWERTY Example]: https://github.com/paulfioravanti/qmk_ergodox_chorded_qwerty_example
+[QMK Ergodox Chorded QWERTY Example]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/chorded_qwerty
 [QMK Installing Build Tools]: https://docs.qmk.fm/#/getting_started_build_tools
 [QMK firmware]: https://qmk.fm/
 [QMK's list of supported keyboards]: https://github.com/qmk/qmk_firmware/tree/master/keyboards
