@@ -11,6 +11,10 @@ header:
   caption: >
     Photo by [David Travis](https://unsplash.com/photos/5bYxXawHOQg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/search/photos/notes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elm%20Weekly-%2362-green.svg
+    alt: "Elm Weekly #62"
+    link: http://www.elmweekly.nl/issues/elm-weekly-issue-62-176112
 excerpt: >
   Quite a lot has changed in the Elm ecosystem between version 0.18 and
   0.19, so here are some notes I jotted down while upgrading a few small apps.
@@ -471,7 +475,7 @@ update msg model =
                             ( model, Navigation.pushUrl key (Url.toString url) )
 
                         Nothing ->
-                            Cmd.none
+                            ( model, Cmd.none )
 
                 Browser.External href ->
                     ( model, Navigation.load href )
