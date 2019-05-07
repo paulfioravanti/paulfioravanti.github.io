@@ -1,6 +1,7 @@
 ---
 title: "Elm 0.18 to 0.19 upgrade notes"
 date: 2019-04-01 14:20 +1100
+last_modified_at: 2019-05-08 07:45 +1100
 tags: elm upgrade elm-0.18 elm-0.19
 header:
   image: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
