@@ -77,7 +77,7 @@ Let's see about getting this done!
 "gray metal part lot")
 {% endcapture %}
 {% capture fancycrave_credit %}
-Photo by [Fancycrave](https://unsplash.com/photos/HFG53IIJ8y0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo originally by Fancycrave
 on [Unsplash](https://unsplash.com/search/photos/repair?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 {% endcapture %}
 <figure>
