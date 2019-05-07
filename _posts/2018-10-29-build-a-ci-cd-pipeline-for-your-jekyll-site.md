@@ -9,8 +9,8 @@ header:
   overlay_image: /assets/images/2018-10-29/samuel-sianipar-1082943-unsplash.jpg
   overlay_filter: 0.5
   caption: >
-    Photo originally by Samuel Sianipar on
-    [Unsplash](https://unsplash.com/search/photos/pipes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    Photo by [Samuel Sianipar](https://unsplash.com/photos/scUBcasSvbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/search/photos/pipes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Confidently test your Jekyll site, and bypass the Github Pages gem to publish
   the site that _you_ want to production.
