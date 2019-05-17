@@ -45,7 +45,7 @@ group :jekyll_plugins do
   gem "jekyll-remote-theme", "~> 0.3"
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
-  gem "jekyll-seo-tag", "~> 2.5"
+  gem "jekyll-seo-tag", "~> 2.6"
   # Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   gem "jekyll-sitemap", "~> 1.3"
   # GitHub-flavored emoji plugin for Jekyll
