@@ -1,7 +1,7 @@
 ---
 title: "Elm 0.18 to 0.19 upgrade notes"
 date: 2019-04-01 14:20 +1100
-last_modified_at: 2019-05-08 07:45 +1100
+last_modified_at: 2019-05-17 17:10 +1100
 tags: elm upgrade elm-0.18 elm-0.19
 header:
   image: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
@@ -276,15 +276,15 @@ based on values in it.
 However, as of this writing, in Elm 0.19 it would seem that is no longer
 the case. Even after updating [`Mouse.clicks`][] in the above code to use
 [`Browser.Events.onClick`][] from [`elm/browser`][], the dropdown menu would
-seem to not close, and `showAvailableLanguages` would seem get updated
-"out-of-sync" to the application state I was seeing in the Elm debugger.
+not close, and `showAvailableLanguages` would seem to get updated "out-of-sync"
+to the application state I was seeing in the Elm debugger.
 
 After finding [this Github issue][elm/compiler/issues/1776], I realised that the
 problem may be with the Elm compiler itself. So, I ended up completely
 removing the conditional subscription from the Elm 0.19 version of the app, and
-replacing it with an `onMouseLeave` event directly on the dropdown menu `div`
-element that would send the `CloseAvailableLanguages` message, which I now
-actually prefer. Something like:
+replacing it with an [`Html.Events.onMouseLeave`][] event directly on the
+dropdown menu `div` element that would send the `CloseAvailableLanguages`
+message, which I now actually prefer. Something like:
 
 **`LanguageSelector/View.elm`**
 
@@ -600,6 +600,7 @@ into a future version of Elm...?
 [`Html`]: https://package.elm-lang.org/packages/elm/html/latest/Html
 [Html Anchors]: https://en.wikipedia.org/wiki/HTML_element#Anchor
 [`Html.Events.custom`]: https://package.elm-lang.org/packages/elm/html/1.0.0/Html-Events#custom
+[`Html.Events.onMouseLeave`]: https://package.elm-lang.org/packages/elm/html/latest/Html-Events#onMouseLeave
 [`Html.Events.onWithOptions`]: https://package.elm-lang.org/packages/elm-lang/html/latest/Html-Events#onWithOptions
 [`Html.Html`]: https://package.elm-lang.org/packages/elm/html/latest/Html#Html
 [Jumping to fragments does not work in a good way in `Browser.application`]: https://github.com/elm/browser/issues/39
