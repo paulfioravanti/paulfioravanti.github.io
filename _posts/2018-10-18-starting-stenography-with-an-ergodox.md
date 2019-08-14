@@ -472,7 +472,7 @@ make ergodox_ez:default_steno
 ```
 
 If you get any build issues, check what you have against
-[my example code for this layer][QMK Ergodox Steno Example].
+[my example code for this layer][QMK Ergodox Default Steno].
 
 ## Configure Plover for GeminiPR
 
@@ -645,10 +645,11 @@ void matrix_init_user(void) {
 ```
 
 I have updated the code on this post's
-[companion Github repo][QMK Ergodox Steno Example] to reflect these changes on
-the `master` branch, but kept the original "high" configuration in another
-branch for your reference. You can also see how I've incorporated this change
-in my [current personal keymaps][QMK Keymaps].
+[companion Github repo][QMK Ergodox Default Steno] to reflect these
+changes, but kept the original "high" configuration in
+[another directory][QMK Ergodox Default Steno High] for your reference. You can
+also see how I've incorporated this change in my
+[current personal keymaps][QMK Keymaps].
 
 ### Use Steno Appropriate Keycaps
 
