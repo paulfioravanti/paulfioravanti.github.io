@@ -54,10 +54,11 @@ jobs:
         # NOTE 3: The minimal-mistakes-generated 404 page seems to have a #main
         # hash href to nowhere, so ignore all #main hash links for now; I don't
         # have any that I've created in any pages that I control.
-        - bundle exec htmlproofer _site \
-          --allow-hash-href \
-          --assume-extension \
-          --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main" \
+        - >
+          bundle exec htmlproofer _site
+          --allow-hash-href
+          --assume-extension
+          --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
           --http-status-ignore "999" # --disable-external
     - stage: Github Release
       script:
