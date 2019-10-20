@@ -115,8 +115,8 @@ for some interesting/confusing behaviour.
 "grayscale photography of cages")
 {% endcapture %}
 {% capture samuel_zeller_credit %}
-Photo by [Samuel Zeller](https://unsplash.com/photos/pbzWSUla7cU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on [Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo by Samuel Zeller on
+[Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 {% endcapture %}
 <figure>
   {% include stripped_markdown.html markdown=samuel_zeller_img %}
