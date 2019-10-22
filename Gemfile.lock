@@ -1,16 +1,17 @@
 GIT
   remote: https://github.com/benbalter/jekyll-remote-theme.git
-  revision: 3338e7c73bdf62aab8f2d89ecf2b8aeb8c78f1fb
+  revision: fbb801effbf51b6a8ab7c481af97ba05d89c8f93
   branch: master
   specs:
-    jekyll-remote-theme (0.3.1)
+    jekyll-remote-theme (0.4.1)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
-      rubyzip (>= 1.3.0)
+      jekyll-sass-converter (>= 1.0, <= 3.0.0, != 2.0.0)
+      rubyzip (>= 1.3.0, < 3.0)
 
 GIT
   remote: https://github.com/jekyll/github-metadata.git
-  revision: 46db5d7a760648124794c68d06bcd6d5e6a9ebca
+  revision: 9353743dc9ad6de2f522923d57eb8eb00f87abf6
   specs:
     jekyll-github-metadata (2.12.1)
       jekyll (>= 3.4, < 5.0)
@@ -44,7 +45,7 @@ GEM
     formatador (0.2.5)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
-    guard (2.15.1)
+    guard (2.16.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       lumberjack (>= 1.0.12, < 2.0)
@@ -130,17 +131,17 @@ GEM
     mercenary (0.3.6)
     method_source (0.9.2)
     mini_portile2 (2.4.0)
-    minimal-mistakes-jekyll (4.17.1)
+    minimal-mistakes-jekyll (4.17.2)
       jekyll (>= 3.6, < 5.0)
       jekyll-feed (~> 0.1)
       jekyll-gist (~> 1.5)
       jekyll-include-cache (~> 0.1)
       jekyll-paginate (~> 1.1)
       jekyll-sitemap (~> 1.3)
-    minitest (5.12.2)
+    minitest (5.13.0)
     multipart-post (2.1.1)
     nenv (0.3.0)
-    nokogiri (1.10.4)
+    nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -181,7 +182,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.6.0)
     yell (2.2.0)
-    zeitwerk (2.2.0)
+    zeitwerk (2.2.1)
 
 PLATFORMS
   ruby

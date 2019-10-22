@@ -43,7 +43,7 @@ HTMLProofer is a Ruby gem and so Bundler will bring it into the project.
 ### Start blog server
 
 ```sh
-bundle exec jekyll liveserve --drafts
+bundle exec jekyll serve --incremental --drafts --port 5000 --livereload
 ```
 
 Then, navigate to [`localhost:4000`][].
