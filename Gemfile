@@ -7,10 +7,6 @@ ruby "2.6.5"
 # can be included in the site build.
 gem "jekyll", "~> 4.0"
 
-# Jekyll theme for building a personal site, blog,
-# project documentation, or portfolio
-gem "minimal-mistakes-jekyll", "~> 4.17.0"
-
 group :development do
   # Command line tool to easily handle events on file system modifications
   gem "guard", "~> 2.14"
