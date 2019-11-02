@@ -32,7 +32,7 @@ add the `bin` folder of the Node installation to the `$PATH`, otherwise
 executables like `sass-lint` won't be available:
 
 ```sh
-npm install -g sass-lint htmllint-cli markdownlint-cli
+npm install --global sass-lint htmllint-cli markdownlint-cli
 asdf reshim nodejs
 ```
 
@@ -46,7 +46,7 @@ HTMLProofer is a Ruby gem and so Bundler will bring it into the project.
 bundle exec jekyll serve --incremental --drafts --port 5000 --livereload
 ```
 
-Then, navigate to [`localhost:4000`][].
+Then, navigate to <http://localhost:4000>
 
 ### Monitor files
 
@@ -114,7 +114,6 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [license-mit]: LICENSE-MIT.txt
 [license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
 [license-mit-url]: https://opensource.org/licenses/MIT
-[`localhost:4000`]: http://localhost:4000/
 [markdownlint]: https://github.com/DavidAnson/markdownlint
 [markdownlint-cli]: https://github.com/igorshubovych/markdownlint-cli
 [Minima]: https://github.com/jekyll/minima
