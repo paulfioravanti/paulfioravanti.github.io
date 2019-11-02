@@ -13,7 +13,7 @@ header:
     Photo by [Nareeta Martin](https://unsplash.com/@splashabout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/s/photos/country-flags?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
-  Change your application locale without a full-page reload or having to write Javascript.
+  Change your application locale without a full-page reload or having to write (much) Javascript.
 ---
 
 In a previous blog post, _[Runtime Language Switching in Elm][]_, I re-created
