@@ -1,0 +1,485 @@
+<!doctype html> <html lang="en" class="no-js"> <head> <meta charset="utf-8"> <title>Using C++ Bitcoin libraries in Elixir | Floor and Varnish</title> <meta name="description" content="Pass messages from Elixir to C++ with Cure."> <meta name="author" content="Paul Fioravanti"> <meta property="og:type" content="article"> <meta property="og:locale" content="en_US"> <meta property="og:site_name" content="Floor and Varnish"> <meta property="og:title" content="Using C++ Bitcoin libraries in Elixir"> <meta property="og:url" content="https://paulfioravanti.com/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/"> <meta property="og:description" content="Pass messages from Elixir to C++ with Cure."> <meta property="og:image" content="https://paulfioravanti.com/assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg"> <meta name="twitter:site" content="@paulfioravanti"> <meta name="twitter:title" content="Using C++ Bitcoin libraries in Elixir"> <meta name="twitter:description" content="Pass messages from Elixir to C++ with Cure."> <meta name="twitter:url" content="https://paulfioravanti.com/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:image" content="https://paulfioravanti.com/assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg"> <meta name="twitter:creator" content="@paulfioravanti"> <meta property="article:published_time" content="2017-12-14T09:03:00+11:00"> <meta property="article:modified_time" content="2019-04-15T13:45:00+10:00"> <link rel="canonical" href="https://paulfioravanti.com/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/"> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Paul Fioravanti",
+      "url": "https://paulfioravanti.com/"
+    
+  }
+</script> <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Floor and Varnish Feed"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/g,"")+" js ";</script> <link rel="stylesheet" href="/assets/css/main.css"> <!--[if IE]><style>.greedy-nav .site-title{padding-right:3em}.greedy-nav button{position:absolute;top:0;right:0;height:100%}</style><![endif]--> </head> <body class="layout--single wide"> <nav class="skip-links"> <h2 class="screen-reader-text">Skip links</h2> <ul> <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li> <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li> <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li> </ul> </nav> <!--[if lt IE 9]><div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]--> <div class="masthead"> <div class="masthead__inner-wrap"> <div class="masthead__menu"> <nav id="site-nav" class="greedy-nav"> <a class="site-title" href="/"> Floor and Varnish </a> <ul class="visible-links"></ul> <button class="greedy-nav__toggle hidden" type="button"> <span class="visually-hidden">Toggle menu</span> <div class="navicon"></div> </button> <ul class="hidden-links hidden"></ul> </nav> </div> </div> </div> <div class="initial-content"> <div class="page__hero--overlay" style=" background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg');"> <div class="wrapper"> <h1 id="page-title" class="page__title" itemprop="headline"> Using C++ Bitcoin libraries in Elixir </h1> <p class="page__lead">Pass messages from Elixir to C++ with Cure. </p> <p class="page__meta"> <i class="fa fa-calendar-alt" aria-hidden="true"></i> <time datetime="2017-12-14T09:03:00+11:00"> December 14, 2017 </time> &nbsp; <i class="far fa-clock" aria-hidden="true"></i> 16 minute read </p> <a href="https://elixirweekly.net/issues/76" style="text-decoration: none;"> <img src="https://img.shields.io/badge/Elixir%20Weekly-%2376-blueviolet.svg" alt="Elixir Weekly #76"/> </a> </div> <span class="page__hero-caption">Photo by <a href="https://unsplash.com/photos/c8QJ7dhHP9Y?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Matt Antonioli</a> on <a href="https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a> </span> </div> <div id="main" role="main"> <div class="sidebar sticky"> <div itemscope itemtype="https://schema.org/Person"> <div class="author__avatar"> <a href="/"> <img src="https://s.gravatar.com/avatar/abda861707b1e78e0fce47ced55f84ee" alt="Paul Fioravanti" itemprop="image"> </a> </div> <div class="author__content"> <a href="/"><h3 class="author__name" itemprop="name">Paul Fioravanti</h3></a> <div class="author__bio" itemprop="description"> <p>Coder, linguist, mechanical keyboard enthusiast.</p> </div> </div> <div class="author__urls-wrapper"> <button class="btn btn--inverse">Follow</button> <ul class="author__urls social-icons"> <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place"> <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Sydney, Australia</span> </li> <li> <a href="https://paulfioravanti.com" itemprop="url"> <i class="fas fa-fw fa-link" aria-hidden="true"></i> Website </a> </li> <li> <a href="mailto:paul.fioravanti@gmail.com"> <meta itemprop="email" content="paul.fioravanti@gmail.com"/> <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email </a> </li> <li> <a href="https://twitter.com/paulfioravanti" itemprop="sameAs" rel="nofollow noopener noreferrer"> <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter </a> </li> <li> <a href="https://www.linkedin.com/in/paulfioravanti" itemprop="sameAs" rel="nofollow noopener noreferrer"> <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn </a> </li> <li> <a href="https://github.com/paulfioravanti" itemprop="sameAs" rel="nofollow noopener noreferrer"> <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub </a> </li> <li> <a href="https://stackoverflow.com/users/567863/paul-fioravanti" itemprop="sameAs" rel="nofollow noopener noreferrer"> <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i> Stack Overflow </a> </li> </ul> </div> </div> </div> <article class="page" itemscope itemtype="https://schema.org/CreativeWork"> <meta itemprop="headline" content="Using C++ Bitcoin libraries in Elixir"> <meta itemprop="description" content="Pass messages from Elixir to C++ with Cure."> <meta itemprop="datePublished" content="December 14, 2017"> <meta itemprop="dateModified" content="April 15, 2019"> <div class="page__inner-wrap"> <section class="page__content" itemprop="text"> <p>Following up from my previous blog post about <a href="https://paulfioravanti.com/blog/2017/12/04/using-pythons-bitcoin-libraries-in-elixir/">Using Python’s Bitcoin libraries in Elixir</a>, I initially mentioned that I was having trouble figuring out a way to get Elixir talking to C++ code, specifically to use the <a href="https://github.com/libbitcoin/libbitcoin">Libbitcoin</a> toolkit. After looking through a bunch of libraries that purport to solve this problem, some using <a href="http://erlang.org/doc/tutorial/nif.html">Native Implemented Functions</a> (NIFs) under the hood, others using <a href="https://hexdocs.pm/elixir/Port.html">Ports</a>, I finally got the results I was after using an Elixir library called <a href="https://github.com/luc-tielen/Cure">Cure</a> (which uses Ports).</p> <p>This blog post will focus on getting Elixir to talk to C++ code that will interface with Libbitcoin, within the context of the <a href="https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example">Creating a Base58Check-encoded bitcoin address from a private key</a> section in Chapter 4 of <em><a href="https://bitcoinbook.info/">Mastering Bitcoin: Programming the Open Blockchain</a></em>, using the code in <a href="https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp">Example 4-3</a>. We’ll create a new project and create a solution in two main steps:</p> <ul> <li>Confirm that we can simply compile and run the C++ code as-is (read: as a shell command) within Elixir using the <a href="https://github.com/alco/porcelain">Porcelain</a> library, collect the output, and print it to screen: creating essentially an Elixir wrapper around running the C++ code.</li> <li>Introduce <a href="https://github.com/luc-tielen/Cure">Cure</a> to actually get Elixir and C++ to be able to handle message passing between each other, which will require significant changes to the C++ code.</li> </ul> <blockquote> <p>Disclaimer: I am not a C/C++ programmer and am likely Doing It Wrong when I’m on that side of the fence, so please don’t consider any code there to be in any way idiomatic or the way it Should Be Done.</p> </blockquote> <h2 id="install-libbitcoin">Install Libbitcoin</h2> <p>Before starting with Elixir, let’s install the Libbitcoin toolkit. For Mac OS, you can simply install it using <a href="https://brew.sh/">Homebrew</a>:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>libbitcoin
+</code></pre></div></div> <p>For other operating systems, please refer to <a href="https://github.com/libbitcoin/libbitcoin#installation">Libbitcoin’s installation instructions</a>.</p> <h2 id="new-project">New Project</h2> <p>Create a new <code class="highlighter-rouge">mix</code> project:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mix new libbitcoin
+<span class="nb">cd </span>libbitcoin
+</code></pre></div></div> <h2 id="install-and-configure-porcelain">Install and configure Porcelain</h2> <p>Open up the project in your favourite text editor, and add Porcelain as a dependency to your <code class="highlighter-rouge">mix.exs</code> file:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Mixfile</span> <span class="k">do</span>
+  <span class="c1"># ...</span>
+  <span class="k">defp</span> <span class="n">deps</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="c1"># Work with external processes</span>
+      <span class="p">{</span><span class="ss">:porcelain</span><span class="p">,</span> <span class="s2">"~&gt; 2.0"</span><span class="p">}</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Install Porcelain:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mix deps.get
+</code></pre></div></div> <p>Then, configure the driver to use for Porcelain by adding the following line in <code class="highlighter-rouge">config/config.exs</code>:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">config</span> <span class="ss">:porcelain</span><span class="p">,</span> <span class="ss">driver:</span> <span class="no">Porcelain</span><span class="o">.</span><span class="no">Driver</span><span class="o">.</span><span class="no">Basic</span>
+</code></pre></div></div> <p>Porcelain can also be used with the <a href="https://github.com/alco/goon">Goon</a> driver, which is not something that seems to be needed for this project, so we just tell Porcelain to use its basic driver.</p> <h2 id="confirm-c-code-can-be-compiled-and-run">Confirm C++ code can be compiled and run</h2> <p>Next, create a <code class="highlighter-rouge">c_src/</code> directory in the project, and copy the code from the book’s <a href="https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp"><code class="highlighter-rouge">addr.cpp</code></a> file into <code class="highlighter-rouge">c_src/addr.cpp</code>, and create a <code class="highlighter-rouge">priv/</code> directory, which is where we will output compiled C++ executable files.</p> <p>Having C source code in a <code class="highlighter-rouge">c_src/</code> directory is <a href="https://erlang.mk/guide/ports.html">Erlang convention for the location of C source code</a>, but for artefacts that are needed in production (ie those compiled C++ executables), <a href="https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A">the Elixir convention is to have them in a <code class="highlighter-rouge">priv/</code> folder</a>, so that’s how we’ll roll.</p> <p><a href="https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example_run">According to the book</a>, we should be able to compile the code using <a href="https://www.cprogramming.com/g++.html"><code class="highlighter-rouge">g++</code></a> in the following way:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-o</span> priv/addr c_src/addr.cpp <span class="si">$(</span>pkg-config <span class="nt">--cflags</span> <span class="nt">--libs</span> libbitcoin<span class="si">)</span>
+</code></pre></div></div> <p>If running this command as-is works for you, then that’s great, but on my computer, that runs Mac OS High Sierra, I got a screen full of errors. In order to fix this, I had to add the <code class="highlighter-rouge">-std=</code> flag, to determine the standard language for compilation, which in my case needed to be <code class="highlighter-rouge">c++11</code>: The 2011 ISO C++ standard plus amendments (see <a href="https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html">Options Controlling C Dialect</a> for more information). So, the compilation command needed to be changed to:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++11 <span class="nt">-o</span> priv/addr c_src/addr.cpp <span class="si">$(</span>pkg-config <span class="nt">--cflags</span> <span class="nt">--libs</span> libbitcoin<span class="si">)</span>
+</code></pre></div></div> <p>Running the generated <code class="highlighter-rouge">priv/addr</code> executable outputs the following result:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./priv/addr
+Public key: 0202a406624211f2abbdc68da3df929f938c3399dd79fac1b51b0e4ad1d26a47aa
+Address: 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
+</code></pre></div></div> <h2 id="create-elixir-wrapper-around-c-file">Create Elixir wrapper around C++ file</h2> <p>Now that we’ve confirmed we can run the C++ file, let’s write the Elixir wrapper that will compile the file and run the executable. Create a <code class="highlighter-rouge">lib/libbitcoin</code> directory in your project and then create an <code class="highlighter-rouge">addr.ex</code> file inside of it:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Addr</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="sd">"""
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """</span>
+
+  <span class="nv">@cpp_compile</span> <span class="sd">"""
+  g++ -std=c++11 $(pkg-config --cflags --libs libbitcoin) \
+  c_src/addr.cpp -o priv/addr
+  """</span>
+  <span class="nv">@cpp_executable</span> <span class="s2">"priv/addr"</span>
+
+  <span class="k">def</span> <span class="n">run</span> <span class="k">do</span>
+    <span class="no">Porcelain</span><span class="o">.</span><span class="n">shell</span><span class="p">(</span><span class="nv">@cpp_compile</span><span class="p">)</span>
+
+    <span class="nv">@cpp_executable</span>
+    <span class="o">|&gt;</span> <span class="no">Porcelain</span><span class="o">.</span><span class="n">shell</span><span class="p">()</span>
+    <span class="o">|&gt;</span> <span class="no">Map</span><span class="o">.</span><span class="n">fetch!</span><span class="p">(</span><span class="ss">:out</span><span class="p">)</span>
+    <span class="o">|&gt;</span> <span class="no">IO</span><span class="o">.</span><span class="n">write</span><span class="p">()</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Then, open up an <code class="highlighter-rouge">iex</code> console and run the module:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iex <span class="nt">-S</span> mix
+iex<span class="o">(</span>1<span class="o">)&gt;</span> Libbitcoin.Addr.run<span class="o">()</span>
+Public key: 0202a406624211f2abbdc68da3df929f938c3399dd79fac1b51b0e4ad1d26a47aa
+Address: 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
+:ok
+</code></pre></div></div> <p>It works! We’ve now been able to get Elixir to output the result of running the C++ executable, but Elixir isn’t really talking directly (sending and receiving messages) to the code yet, so let’s work on that next.</p> <h2 id="install-and-configure-cure">Install and configure Cure</h2> <p>Add Cure as a dependency to your <code class="highlighter-rouge">mix.exs</code> file, and then run <code class="highlighter-rouge">mix deps.get</code>:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defp</span> <span class="n">deps</span> <span class="k">do</span>
+  <span class="p">[</span>
+    <span class="c1"># Interface C-code with Erlang/Elixir using Ports</span>
+    <span class="p">{</span><span class="ss">:cure</span><span class="p">,</span> <span class="s2">"~&gt; 0.4.0"</span><span class="p">},</span>
+    <span class="c1"># Work with external processes</span>
+    <span class="p">{</span><span class="ss">:porcelain</span><span class="p">,</span> <span class="s2">"~&gt; 2.0"</span><span class="p">}</span>
+  <span class="p">]</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Then, get Cure to generate the necessary base files to communicate between C++ and Elixir:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mix cure.bootstrap
+</code></pre></div></div> <p>This command will add the following files to the <code class="highlighter-rouge">c_src</code> directory:</p> <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>c_src
+├── Makefile
+├── main.c
+└── main.h
+</code></pre></div></div> <ul> <li><code class="highlighter-rouge">Makefile</code>: a template to automatically build a C++ executable including Cure’s libraries. We’ll leave this for now, but get back to it later on.</li> <li><code class="highlighter-rouge">main.c</code>: Cure’s base C file to communicate between C/C++ and Elixir.</li> <li><code class="highlighter-rouge">main.h</code>: The header file for <code class="highlighter-rouge">main.c</code></li> </ul> <h2 id="hello-c">Hello C++</h2> <p>Before going straight into talking to Libbitcoin, let’s do a quick spike to confirm that we are able to pass messages back and forth from Elixir to C++.</p> <p>We are going to need the original <code class="highlighter-rouge">addr.cpp</code> code for reference, so let’s first store a copy of the original:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>c_src/addr.cpp c_src/addr.cpp.orig
+</code></pre></div></div> <p>Next, we’ll move over the Cure-generated files to the be the new <code class="highlighter-rouge">addr</code> files:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>c_src/main.h c_src/addr.h
+<span class="nb">mv </span>c_src/main.c c_src/addr.cpp
+</code></pre></div></div> <p>Yes, it’s okay for the <code class="highlighter-rouge">.c</code> file to become a <code class="highlighter-rouge">.cpp</code> file for our purposes.</p> <p>Next, open up each of the files and change them so that they look like the following:</p> <h3 id="c_srcaddrh"><strong><code class="highlighter-rouge">c_src/addr.h</code></strong></h3> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
+#define ADDR_H
+#include &lt;elixir_comm.h&gt;
+</span>
+<span class="c1">// TODO put your own functions/includes here.</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div> <h3 id="c_srcaddrcpp"><strong><code class="highlighter-rouge">c_src/addr.cpp</code></strong></h3> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;string&gt;
+#include "addr.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">;</span>
+  <span class="n">byte</span> <span class="n">buffer</span><span class="p">[</span><span class="n">MAX_BUFFER_SIZE</span><span class="p">];</span>
+
+  <span class="k">while</span> <span class="p">((</span><span class="n">bytes_read</span> <span class="o">=</span> <span class="n">read_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">param</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">buffer</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s">"Hello "</span> <span class="o">+</span> <span class="n">param</span> <span class="o">+</span> <span class="s">" from C++"</span><span class="p">;</span>
+
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">greeting</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span> <span class="n">greeting</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
+    <span class="n">send_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">greeting</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>The code here reads in the message (an array of bytes) that gets brought in from Elixir via the <code class="highlighter-rouge">read_msg</code> function that Cure provides, stores it in a <code class="highlighter-rouge">buffer</code>, copies it into a C++ <code class="highlighter-rouge">param</code> string, interpolates it into a <code class="highlighter-rouge">greeting</code> message, copies the <code class="highlighter-rouge">greeting</code> back into the <code class="highlighter-rouge">buffer</code>, and finally sends it back to Elixir via the <code class="highlighter-rouge">send_msg</code> function, also provided by Cure. More information about the I/O functions provided by Cure can be found <a href="https://github.com/luc-tielen/Cure#cc-code">here</a>.</p> <p>Next, change the Elixir code to use Cure to send messages to C++:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Addr</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="sd">"""
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """</span>
+
+  <span class="n">alias</span> <span class="no">Cure</span><span class="o">.</span><span class="no">Server</span><span class="p">,</span> <span class="ss">as:</span> <span class="no">Cure</span>
+
+  <span class="nv">@cpp_compile</span> <span class="sd">"""
+  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 \
+  $(pkg-config --cflags --libs libbitcoin) \
+  -x c++ ./deps/cure/c_src/elixir_comm.c \
+  c_src/addr.cpp -o priv/addr
+  """</span>
+  <span class="nv">@cpp_executable</span> <span class="s2">"priv/addr"</span>
+
+  <span class="k">def</span> <span class="n">run</span> <span class="k">do</span>
+    <span class="no">Porcelain</span><span class="o">.</span><span class="n">shell</span><span class="p">(</span><span class="nv">@cpp_compile</span><span class="p">)</span>
+
+    <span class="n">with</span> <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="n">pid</span><span class="p">}</span> <span class="o">&lt;-</span> <span class="no">Cure</span><span class="o">.</span><span class="n">start_link</span><span class="p">(</span><span class="nv">@cpp_executable</span><span class="p">),</span>
+         <span class="n">greeting</span> <span class="o">&lt;-</span> <span class="n">hello_world</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span> <span class="k">do</span>
+      <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+      <span class="ss">:ok</span> <span class="o">=</span> <span class="no">Cure</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">hello_world</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span> <span class="k">do</span>
+    <span class="no">Cure</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="s2">"Elixir"</span><span class="p">,</span> <span class="ss">:once</span><span class="p">)</span>
+    <span class="k">receive</span> <span class="k">do</span>
+      <span class="p">{</span><span class="ss">:cure_data</span><span class="p">,</span> <span class="n">response</span><span class="p">}</span> <span class="o">-&gt;</span>
+        <span class="n">response</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Some things to note about this code:</p> <ul> <li>The compile command has changed quite significantly, and getting it to work was mostly a case of going through the <code class="highlighter-rouge">c_src/Makefile</code> that Cure generated as part of its bootstrapping process, and reconstructing the compilation command to include all the necessary Cure headers and libraries.</li> <li><code class="highlighter-rouge">-x c++ ./deps/cure/c_src/elixir_comm.c</code> is telling the compiler to treat Cure’s generated <code class="highlighter-rouge">elixir_comm.c</code> file as a C++ file (otherwise the <code class="highlighter-rouge">g++</code> compiler will output warnings).</li> <li>Cure’s default way of opening a port to a C++ program is by the use of the <code class="highlighter-rouge">Cure.load()</code> API, which “starts a supervisor which supervises all of its children (a child in this case is a GenServer that communicates with a C/C++ program). That seemed like overkill for this situation, so I simply used <code class="highlighter-rouge">Cure.Server.start_link()</code> instead to just start a GenServer.</li> <li><code class="highlighter-rouge">Cure.send_data(pid, "Elixir", :once)</code> will only allow one response to be received back from the C++ code, which is all we need for this case. However, if multiple responses from C++ need to be processed by Elixir, then the <code class="highlighter-rouge">:permanent</code> mode flag could be used instead. More examples of the different kinds of modes can be found on <a href="https://github.com/luc-tielen/Cure#example">Cure’s README</a>.</li> </ul> <p>Let’s now open up an <code class="highlighter-rouge">iex</code> console again and see if we have a conversation going:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iex <span class="nt">-S</span> mix
+iex<span class="o">(</span>1<span class="o">)&gt;</span> Libbitcoin.Addr.run<span class="o">()</span>
+Hello Elixir from C++
+:ok
+</code></pre></div></div> <p>Excellent! Now that we have Elixir and C++ talking to each other, it’s time to actually get Elixir talking with Libbitcoin.</p> <h2 id="working-with-libbitcoin">Working with Libbitcoin</h2> <p>Looking at the code in <code class="highlighter-rouge">c_src/addr.cpp.orig</code> (the original code from the book), it would seem that it performs two main actions:</p> <ul> <li>Generate a public key from a private key</li> <li>Create a bitcoin address from a public key</li> </ul> <p>So, let’s separate those two concerns into their own functions in our C++ code, porting over the code mostly as-is:</p> <p><strong><code class="highlighter-rouge">c_src/addr.h</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
+#define ADDR_H
+#include "elixir_comm.h"
+</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div> <p><strong><code class="highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;string&gt;
+#include "addr.h"
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+ <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">ec_secret</span> <span class="n">decoded</span><span class="p">;</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">decode_base16</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">priv_key</span><span class="p">);</span>
+
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_private</span> <span class="n">secret</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_private</span><span class="o">::</span><span class="n">mainnet_p2kh</span><span class="p">);</span>
+
+  <span class="c1">// Get public key.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span> <span class="n">public_key</span><span class="p">(</span><span class="n">secret</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">public_key</span><span class="p">.</span><span class="n">encoded</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span> <span class="n">public_key</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span><span class="o">::</span><span class="n">ec_public</span><span class="p">(</span><span class="n">pub_key</span><span class="p">);</span>
+  <span class="c1">// Compute hash of public key for P2PKH address.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">data_chunk</span> <span class="n">public_key_data</span><span class="p">;</span>
+  <span class="n">public_key</span><span class="p">.</span><span class="n">to_data</span><span class="p">(</span><span class="n">public_key_data</span><span class="p">);</span>
+  <span class="k">const</span> <span class="k">auto</span> <span class="n">hash</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">bitcoin_short_hash</span><span class="p">(</span><span class="n">public_key_data</span><span class="p">);</span>
+
+  <span class="n">bc</span><span class="o">::</span><span class="n">data_chunk</span> <span class="n">unencoded_address</span><span class="p">;</span>
+  <span class="c1">// Reserve 25 bytes</span>
+  <span class="c1">//   [ version:1  ]</span>
+  <span class="c1">//   [ hash:20    ]</span>
+  <span class="c1">//   [ checksum:4 ]</span>
+  <span class="n">unencoded_address</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+  <span class="c1">// Version byte, 0 is normal BTC address (P2PKH).</span>
+  <span class="n">unencoded_address</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="c1">// Hash data</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">extend_data</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">,</span> <span class="n">hash</span><span class="p">);</span>
+  <span class="c1">// Checksum is computed by hashing data, and adding 4 bytes from hash.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">append_checksum</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">);</span>
+  <span class="c1">// Finally we must encode the result in Bitcoin's base58 encoding.</span>
+  <span class="n">assert</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">25</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">address</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">encode_base58</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">address</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>So, that’s all well and good (probably), but how can we get Elixir to tell C++ to call these functions? It would be nice if there was some kind of <a href="https://github.com/fazibear/export">Export</a>-style interface where we could pass the C++ function name that we want called as a string from Elixir. Alas, there aren’t any (that I know of), so we’ll have to get a bit more creative.</p> <p>While searching Github for examples that used Cure, I came across the <a href="https://github.com/asbaker/elixir-interop-examples">elixir-interop-examples</a> repo, which provided me with some inspiration on how to tackle this problem: get Elixir to send an integer as the first byte of the message to C++. This integer will represent the function to be called, and C++ can <code class="highlighter-rouge">switch</code> on it to determine what action needs to be performed. <a href="http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings">Elixir binaries</a> make it straightforward to be able to tinker with the innards of a sequence of bytes, so that’s how we can proceed by updating the C++ code as follows:</p> <p><strong><code class="highlighter-rouge">c_src/addr.h</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ...</span>
+
+<span class="c1">// Helper functions</span>
+<span class="c1">// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/serial.c</span>
+<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
+<span class="c1">// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/erl_comm.h</span>
+<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div> <p><strong><code class="highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bitcoin/bitcoin.hpp&gt;
+#include "addr.h"
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">GENERATE_PUBLIC_KEY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">CREATE_BITCOIN_ADDRESS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">;</span>
+  <span class="n">byte</span> <span class="n">buffer</span><span class="p">[</span><span class="n">MAX_BUFFER_SIZE</span><span class="p">];</span>
+
+  <span class="k">while</span> <span class="p">((</span><span class="n">bytes_read</span> <span class="o">=</span> <span class="n">read_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">process_command</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Process the command dependent on the integer value given in the message</span>
+<span class="c1">// sent from Elixir</span>
+<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">function</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="kt">char</span> <span class="n">arg</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+  <span class="n">get_string_arg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">retval</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">bytes_read</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="n">GENERATE_PUBLIC_KEY</span><span class="p">:</span>
+        <span class="n">retval</span> <span class="o">=</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">CREATE_BITCOIN_ADDRESS</span><span class="p">:</span>
+        <span class="n">retval</span> <span class="o">=</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="nl">default:</span>
+        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"not a valid function %i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">function</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">retval</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span> <span class="n">retval</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
+    <span class="n">send_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">retval</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"no command given"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">arg</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">buffer</span><span class="p">[</span><span class="n">bytes_read</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+  <span class="n">strcpy</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">buffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>The <code class="highlighter-rouge">main</code> function now immediately delegates off to <code class="highlighter-rouge">process_command</code>, which extracts the <code class="highlighter-rouge">function</code> indicator and <code class="highlighter-rouge">arg</code> argument from the bytes passed to it by Elixir, calls the appropriate function, and sends its return value (<code class="highlighter-rouge">retval</code>) back to Elixir.</p> <p>On the Elixir side, the code looks like the following:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Addr</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="sd">"""
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """</span>
+
+  <span class="n">alias</span> <span class="no">Cure</span><span class="o">.</span><span class="no">Server</span><span class="p">,</span> <span class="ss">as:</span> <span class="no">Cure</span>
+
+  <span class="nv">@cpp_compile</span> <span class="sd">"""
+  g++ -std=c++11 -I./deps/cure/c_src -L./deps/cure/c_src -O3 \
+  $(pkg-config --cflags --libs libbitcoin) \
+  -x c++ ./deps/cure/c_src/elixir_comm.c \
+  c_src/addr.cpp -o priv/addr
+  """</span>
+  <span class="nv">@cpp_executable</span> <span class="s2">"priv/addr"</span>
+  <span class="c1"># Private secret key string as base16</span>
+  <span class="nv">@private_key</span> <span class="sd">"""
+  038109007313a5807b2eccc082c8c3fbb988a973cacf1a7df9ce725c31b14776\
+  """</span>
+
+  <span class="c1"># Integers representing C++ methods</span>
+  <span class="nv">@generate_public_key</span> <span class="mi">1</span>
+  <span class="nv">@create_bitcoin_address</span> <span class="mi">2</span>
+
+  <span class="k">def</span> <span class="n">run</span> <span class="k">do</span>
+    <span class="no">Porcelain</span><span class="o">.</span><span class="n">shell</span><span class="p">(</span><span class="nv">@cpp_compile</span><span class="p">)</span>
+
+    <span class="n">with</span> <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="n">pid</span><span class="p">}</span> <span class="o">&lt;-</span> <span class="no">Cure</span><span class="o">.</span><span class="n">start_link</span><span class="p">(</span><span class="nv">@cpp_executable</span><span class="p">),</span>
+         <span class="n">public_key</span> <span class="o">&lt;-</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">pid</span><span class="p">),</span>
+         <span class="n">bitcoin_address</span> <span class="o">&lt;-</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">public_key</span><span class="p">)</span> <span class="k">do</span>
+      <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s2">"Public key: </span><span class="si">#{</span><span class="n">inspect</span><span class="p">(</span><span class="n">public_key</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s2">"Address: </span><span class="si">#{</span><span class="n">inspect</span><span class="p">(</span><span class="n">bitcoin_address</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="ss">:ok</span> <span class="o">=</span> <span class="no">Cure</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="nv">@generate_public_key</span><span class="p">,</span> <span class="nv">@private_key</span><span class="o">&gt;&gt;</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">public_key</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="nv">@create_bitcoin_address</span><span class="p">,</span> <span class="n">public_key</span> <span class="p">::</span> <span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="k">do</span>
+    <span class="no">Cure</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="ss">:once</span><span class="p">)</span>
+    <span class="k">receive</span> <span class="k">do</span>
+      <span class="p">{</span><span class="ss">:cure_data</span><span class="p">,</span> <span class="n">response</span><span class="p">}</span> <span class="o">-&gt;</span>
+        <span class="n">response</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div> <ul> <li>Both <code class="highlighter-rouge">generate_public_key</code> and <code class="highlighter-rouge">create_bitcoin_address</code> send separate requests out to the C++ code via Cure, in the same way that you might call some other external service. Each of the binary messages has an integer as its first byte, and a string taking up the rest of the message.</li> <li>The <code class="highlighter-rouge">@generate_public_key 1</code> and <code class="highlighter-rouge">@create_bitcoin_address 2</code> module attributes mirror the similarly named constants in the C++ code, so they are coupled quite tightly out of necessity.</li> <li>We’re now keeping the private key on the Elixir side and passing in to C++ as a parameter, rather than have its definition be on the C++ side.</li> </ul> <p>Before seeing if this actually works, for clarity’s sake, here are the full C++ code samples:</p> <p><strong><code class="highlighter-rouge">c_src/addr.h</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
+#define ADDR_H
+#include "elixir_comm.h"
+</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">);</span>
+
+<span class="c1">// Helper functions</span>
+<span class="c1">// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/serial.c</span>
+<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
+<span class="c1">// REF: https://github.com/asbaker/elixir-interop-examples/blob/master/serial_ports/c_src/erl_comm.h</span>
+<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div> <p><strong><code class="highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bitcoin/bitcoin.hpp&gt;
+#include "addr.h"
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">GENERATE_PUBLIC_KEY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">CREATE_BITCOIN_ADDRESS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">;</span>
+  <span class="n">byte</span> <span class="n">buffer</span><span class="p">[</span><span class="n">MAX_BUFFER_SIZE</span><span class="p">];</span>
+
+  <span class="k">while</span> <span class="p">((</span><span class="n">bytes_read</span> <span class="o">=</span> <span class="n">read_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">process_command</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Process the command dependent on the integer value given in the message</span>
+<span class="c1">// sent from Elixir</span>
+<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span> <span class="n">function</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="kt">char</span> <span class="n">arg</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+  <span class="n">get_string_arg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">retval</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">bytes_read</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">function</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="n">GENERATE_PUBLIC_KEY</span><span class="p">:</span>
+        <span class="n">retval</span> <span class="o">=</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="k">case</span> <span class="n">CREATE_BITCOIN_ADDRESS</span><span class="p">:</span>
+        <span class="n">retval</span> <span class="o">=</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">arg</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+      <span class="nl">default:</span>
+        <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"not a valid function %i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">function</span><span class="p">);</span>
+        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">memcpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">retval</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span> <span class="n">retval</span><span class="p">.</span><span class="n">length</span><span class="p">());</span>
+    <span class="n">send_msg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">retval</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"no command given"</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">buffer</span><span class="p">[</span><span class="n">bytes_read</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+  <span class="n">strcpy</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">buffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">ec_secret</span> <span class="n">decoded</span><span class="p">;</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">decode_base16</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">priv_key</span><span class="p">);</span>
+
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_private</span> <span class="n">secret</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_private</span><span class="o">::</span><span class="n">mainnet_p2kh</span><span class="p">);</span>
+
+  <span class="c1">// Get public key.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span> <span class="n">public_key</span><span class="p">(</span><span class="n">secret</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">public_key</span><span class="p">.</span><span class="n">encoded</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Create Bitcoin address.</span>
+  <span class="c1">// Normally you can use:</span>
+  <span class="c1">//    bc::wallet::payment_address payaddr =</span>
+  <span class="c1">//        public_key.to_payment_address(</span>
+  <span class="c1">//            bc::wallet::ec_public::mainnet_p2kh);</span>
+  <span class="c1">//  const std::string address = payaddr.encoded();</span>
+
+  <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span> <span class="n">public_key</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span><span class="o">::</span><span class="n">ec_public</span><span class="p">(</span><span class="n">pub_key</span><span class="p">);</span>
+  <span class="c1">// Compute hash of public key for P2PKH address.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">data_chunk</span> <span class="n">public_key_data</span><span class="p">;</span>
+  <span class="n">public_key</span><span class="p">.</span><span class="n">to_data</span><span class="p">(</span><span class="n">public_key_data</span><span class="p">);</span>
+  <span class="k">const</span> <span class="k">auto</span> <span class="n">hash</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">bitcoin_short_hash</span><span class="p">(</span><span class="n">public_key_data</span><span class="p">);</span>
+
+  <span class="n">bc</span><span class="o">::</span><span class="n">data_chunk</span> <span class="n">unencoded_address</span><span class="p">;</span>
+  <span class="c1">// Reserve 25 bytes</span>
+  <span class="c1">//   [ version:1  ]</span>
+  <span class="c1">//   [ hash:20    ]</span>
+  <span class="c1">//   [ checksum:4 ]</span>
+  <span class="n">unencoded_address</span><span class="p">.</span><span class="n">reserve</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+  <span class="c1">// Version byte, 0 is normal BTC address (P2PKH).</span>
+  <span class="n">unencoded_address</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+  <span class="c1">// Hash data</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">extend_data</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">,</span> <span class="n">hash</span><span class="p">);</span>
+  <span class="c1">// Checksum is computed by hashing data, and adding 4 bytes from hash.</span>
+  <span class="n">bc</span><span class="o">::</span><span class="n">append_checksum</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">);</span>
+  <span class="c1">// Finally we must encode the result in Bitcoin's base58 encoding.</span>
+  <span class="n">assert</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">==</span> <span class="mi">25</span><span class="p">);</span>
+  <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">address</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">encode_base58</span><span class="p">(</span><span class="n">unencoded_address</span><span class="p">);</span>
+  <span class="k">return</span> <span class="n">address</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p>Now, the moment of truth. Open up an <code class="highlighter-rouge">iex</code> console and let’s see if we can talk to Libbitcoin:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iex <span class="nt">-S</span> mix
+iex<span class="o">(</span>1<span class="o">)&gt;</span> Libbitcoin.Addr.run<span class="o">()</span>
+Public key: <span class="s2">"0202a406624211f2abbdc68da3df929f938c3399dd79fac1b51b0e4ad1d26a47aa"</span>
+Address: <span class="s2">"1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK"</span>
+:ok
+</code></pre></div></div> <p>Success! This may not be the most elegant way to talk to C++ code, but, for this use case, it works!</p> <h2 id="improve-build-automation-with-a-makefile">Improve Build Automation with a Makefile</h2> <p>Now that we have everything working as expected, we can make the build process more maintainable for the future if we take the compile command that we currently have in the Elixir <code class="highlighter-rouge">@cpp_compile</code> module attribute, and put it back in C-land inside the <code class="highlighter-rouge">Makefile</code>. So, building on the <code class="highlighter-rouge">Makefile</code> that Cure bootstrap provided for us, add some more code so it looks like the following:</p> <p><strong><code class="highlighter-rouge">c_src/Makefile</code></strong></p> <div class="language-make highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">CC</span> <span class="o">=</span> g++ <span class="nt">-std</span><span class="o">=</span>c++11
+<span class="nv">APP_DIR</span> <span class="o">=</span> <span class="nf">$(</span><span class="nb">shell</span> <span class="nb">dirname</span> <span class="nf">$(</span><span class="nb">shell</span> <span class="nb">pwd</span><span class="nf">))</span>
+<span class="nv">CURE_DEPS_DIR</span> <span class="o">=</span> <span class="nv">$(APP_DIR)</span>/deps/cure/c_src
+<span class="nv">CURE_DEPS</span> <span class="o">=</span> <span class="nt">-I</span><span class="nv">$(CURE_DEPS_DIR)</span> <span class="nt">-L</span><span class="nv">$(CURE_DEPS_DIR)</span>
+<span class="nv">ELIXIR_COMM_C</span> <span class="o">=</span> <span class="nt">-x</span> c++ <span class="nv">$(CURE_DEPS_DIR)</span>/elixir_comm.c
+<span class="nv">LIBBITCOIN_DEPS</span> <span class="o">=</span> <span class="nf">$(</span><span class="nb">shell</span> pkg-config <span class="nt">--cflags</span> <span class="nt">--libs</span> libbitcoin<span class="nf">)</span>
+<span class="nv">C_FLAGS</span> <span class="o">=</span> <span class="nv">$(CURE_DEPS)</span> <span class="nv">$(ELIXIR_COMM_C)</span> <span class="nv">$(LIBBITCOIN_DEPS)</span> <span class="nt">-O3</span>
+<span class="nv">PRIV_DIR</span> <span class="o">=</span> <span class="nv">$(APP_DIR)</span>/priv
+<span class="nv">C_SRC_DIR</span> <span class="o">=</span> <span class="nv">$(APP_DIR)</span>/c_src
+<span class="nv">EXECUTABLES</span> <span class="o">=</span> addr
+
+<span class="nl">all</span><span class="o">:</span> <span class="nf">$(EXECUTABLES)</span>
+<span class="c"># REF: https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage
+# $&lt; - prerequisite file, $@ - executable file
+</span><span class="nl">$(EXECUTABLES)</span><span class="o">:</span> <span class="nf">%: %.cpp</span>
+	<span class="nv">$(CC)</span> <span class="nv">$(C_FLAGS)</span> <span class="nv">$(C_SRC_DIR)</span>/<span class="nv">$&lt;</span> <span class="nt">-o</span> <span class="nv">$(PRIV_DIR)</span>/<span class="nv">$@</span>
+</code></pre></div></div> <p>A few notes about this <code class="highlighter-rouge">Makefile</code> that I learned when figuring out its correct incantations:</p> <ul> <li>When you want to call a shell function inside a <code class="highlighter-rouge">Makefile</code> that would normally look something like <code class="highlighter-rouge">$(ls)</code> on the command line, since the <code class="highlighter-rouge">$()</code> syntax is used for Makefile internal <a href="https://www.gnu.org/software/make/manual/html_node/Reference.html">variable referencing</a>, the syntax then becomes <code class="highlighter-rouge">$(shell ls)</code> (see <a href="https://www.gnu.org/software/make/manual/html_node/Shell-Function.html">The <code class="highlighter-rouge">shell</code> function</a>).</li> <li>Set up of the <code class="highlighter-rouge">EXECUTABLES</code> statement, and the code below it, means that when <code class="highlighter-rouge">make all</code> is run, for each of the filenames in that <code class="highlighter-rouge">EXECUTABLES</code> list (ie this list could be added to: <code class="highlighter-rouge">EXECUTABLES = addr foo bar</code>), the <code class="highlighter-rouge">$(CC) $(C_FLAGS) $(C_SRC_DIR)/$&lt; -o $(PRIV_DIR)/$@</code> command gets run for each of them (for example <code class="highlighter-rouge">$&lt;</code> gets subbed out for <code class="highlighter-rouge">addr.cpp</code> and <code class="highlighter-rouge">$@</code> gets subbed out for <code class="highlighter-rouge">addr</code>). More information about this code structure for a <code class="highlighter-rouge">Makefile</code> can be found in Makefile’s <a href="https://www.gnu.org/software/make/manual/html_node/Static-Usage.html#Static-Usage">Static Usage documentation</a>.</li> </ul> <p>Now, you can get Cure to compile all your C++ executables for you via <code class="highlighter-rouge">mix</code>:</p> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mix compile.cure
+</code></pre></div></div> <p>If you want to have this done automatically when you compile your Elixir code, you can add the Cure compiler to the list of your project’s compilers in <code class="highlighter-rouge">mix.exs</code>:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Mixfile</span> <span class="k">do</span>
+  <span class="kn">use</span> <span class="no">Mix</span><span class="o">.</span><span class="no">Project</span>
+
+  <span class="k">def</span> <span class="n">project</span> <span class="k">do</span>
+    <span class="p">[</span>
+      <span class="c1"># ...</span>
+      <span class="ss">compilers:</span> <span class="no">Mix</span><span class="o">.</span><span class="n">compilers</span> <span class="o">++</span> <span class="p">[</span><span class="ss">:cure</span><span class="p">,</span> <span class="ss">:"cure.deps"</span><span class="p">]</span>
+    <span class="p">]</span>
+  <span class="k">end</span>
+
+  <span class="c1"># ...</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Note, though, that if you do this, <em>every time</em> a process calls <code class="highlighter-rouge">mix compile</code>, the C++ executables will be re-compiled. So, it may end up slowing down, say, the running of a set of tasks in a <a href="https://github.com/lpil/mix-test.watch">mix test.watch</a> process, as each task will end up re-compiling the C++ code (potentially unnecessarily) before it runs. In this case, it may be best to just add a <code class="highlighter-rouge">compile.cure</code> task to run before any of the others. For other Cure-based compilation options see its <a href="https://github.com/luc-tielen/Cure#start-developing-in-cc">README</a>.</p> <p>Since we’ve now moved all the responsibility for C compilation into the <code class="highlighter-rouge">Makefile</code>, we can cull some code from <code class="highlighter-rouge">addr.ex</code> to create the final file:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Addr</span> <span class="k">do</span>
+  <span class="nv">@moduledoc</span> <span class="sd">"""
+  Example 4-3. Creating a Base58Check-encoded bitcoin address from a
+  private key.
+  """</span>
+
+  <span class="n">alias</span> <span class="no">Cure</span><span class="o">.</span><span class="no">Server</span><span class="p">,</span> <span class="ss">as:</span> <span class="no">Cure</span>
+
+  <span class="nv">@cpp_executable</span> <span class="s2">"priv/addr"</span>
+  <span class="c1"># Private secret key string as base16</span>
+  <span class="nv">@private_key</span> <span class="sd">"""
+  038109007313a5807b2eccc082c8c3fbb988a973cacf1a7df9ce725c31b14776\
+  """</span>
+
+  <span class="c1"># Integers representing C++ methods</span>
+  <span class="nv">@generate_public_key</span> <span class="mi">1</span>
+  <span class="nv">@create_bitcoin_address</span> <span class="mi">2</span>
+
+  <span class="k">def</span> <span class="n">run</span> <span class="k">do</span>
+    <span class="n">with</span> <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="n">pid</span><span class="p">}</span> <span class="o">&lt;-</span> <span class="no">Cure</span><span class="o">.</span><span class="n">start_link</span><span class="p">(</span><span class="nv">@cpp_executable</span><span class="p">),</span>
+         <span class="n">public_key</span> <span class="o">&lt;-</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">pid</span><span class="p">),</span>
+         <span class="n">bitcoin_address</span> <span class="o">&lt;-</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">public_key</span><span class="p">)</span> <span class="k">do</span>
+      <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s2">"Public key: </span><span class="si">#{</span><span class="n">inspect</span><span class="p">(</span><span class="n">public_key</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="no">IO</span><span class="o">.</span><span class="n">puts</span><span class="p">(</span><span class="s2">"Address: </span><span class="si">#{</span><span class="n">inspect</span><span class="p">(</span><span class="n">bitcoin_address</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+      <span class="ss">:ok</span> <span class="o">=</span> <span class="no">Cure</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="nv">@generate_public_key</span><span class="p">,</span> <span class="nv">@private_key</span><span class="o">&gt;&gt;</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">public_key</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="nv">@create_bitcoin_address</span><span class="p">,</span> <span class="n">public_key</span> <span class="p">::</span> <span class="n">binary</span><span class="o">&gt;&gt;</span><span class="p">)</span>
+  <span class="k">end</span>
+
+  <span class="k">defp</span> <span class="n">cure_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span> <span class="k">do</span>
+    <span class="no">Cure</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">pid</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="ss">:once</span><span class="p">)</span>
+    <span class="k">receive</span> <span class="k">do</span>
+      <span class="p">{</span><span class="ss">:cure_data</span><span class="p">,</span> <span class="n">response</span><span class="p">}</span> <span class="o">-&gt;</span>
+        <span class="n">response</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div> <p>Elixir now needs to know nothing about C++ source code compilation: only that it needs to target a <code class="highlighter-rouge">@cpp_executable</code> file when it wants to talk with C++. Porcelain also now has nothing specifically to do any more, so it can be safely removed from the project <code class="highlighter-rouge">mix.exs</code> file, and its configuration removed from <code class="highlighter-rouge">config.exs</code>.</p> <h2 id="final-thoughts">Final Thoughts</h2> <p>This blog post was borne out of a lot of trial and error and frustration, mostly due to me not being able to C++ my way out of a paper bag without a <a href="https://stackoverflow.com/">Stack Overflow</a> safety net. Regardless, I hope it at least assists someone who may be attempting to try something similar, or is reading <em><a href="https://bitcoinbook.info/">Mastering Bitcoin</a></em> as well. I have no doubt that I’m doing it wrong when it comes to C++, so if you have any improvement suggestions, please leave a comment. If you want to keep tabs on my gradual port over of <em>Mastering Bitcoin</em> code over to Elixir, check out my <a href="https://github.com/paulfioravanti/mastering_bitcoin">Mastering Bitcoin repo</a>.</p> </section> <footer class="page__meta"> <p class="page__taxonomy"> <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong> <span itemprop="keywords"> <a href="/tags/bitcoin" class="page__taxonomy-item" rel="tag">bitcoin</a><span class="sep">, </span> <a href="/tags/clang" class="page__taxonomy-item" rel="tag">clang</a><span class="sep">, </span> <a href="/tags/elixir" class="page__taxonomy-item" rel="tag">elixir</a> </span> </p> <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-04-15">April 15, 2019</time></p> </footer> <section class="page__share"> <a href="https://twitter.com/intent/tweet?via=paulfioravanti&text=Using+C%2B%2B+Bitcoin+libraries+in+Elixir%20https%3A%2F%2Fpaulfioravanti.com%2Fblog%2F2017%2F12%2F14%2Fusing-c-plus-plus-bitcoin-libraries-in-elixir%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a> <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpaulfioravanti.com%2Fblog%2F2017%2F12%2F14%2Fusing-c-plus-plus-bitcoin-libraries-in-elixir%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a> <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fpaulfioravanti.com%2Fblog%2F2017%2F12%2F14%2Fusing-c-plus-plus-bitcoin-libraries-in-elixir%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a> </section> <nav class="pagination"> <a href="/blog/2017/12/04/using-pythons-bitcoin-libraries-in-elixir/" class="pagination--pager" title="Using Python’s Bitcoin libraries in Elixir ">Previous</a> <a href="/blog/2017/12/19/wii-remote-is-best-presentation-remote/" class="pagination--pager" title="Wii Remote is Best Presentation Remote ">Next</a> </nav> </div> <div class="page__comments"> <h4 class="page__comments-title">Comments</h4> <section id="disqus_thread"></section> </div> </article> <div class="page__related"> <h4 class="page__related-title">You May Also Enjoy</h4> <div class="grid__wrapper"> <div class="grid__item"> <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"> <div class="archive__item-teaser"> <img src="/assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg" alt="multicolored buntings on pathway"> </div> <h2 class="archive__item-title" itemprop="headline"> <a href="/blog/2019/11/03/internationalisation-with-phoenix-liveview/" rel="permalink">Internationalisation with Phoenix LiveView </a> </h2> <p class="page__meta"> <i class="fa fa-calendar-alt" aria-hidden="true"></i> <time datetime="2019-11-03T00:00:00+11:00"> Nov 03, 2019 </time> &nbsp; <i class="far fa-clock" aria-hidden="true"></i> 42 minute read </p> <p class="archive__item-excerpt" itemprop="description">Change your application locale without a full-page reload or having to write Javascript. </p> </article> </div> <div class="grid__item"> <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"> <div class="archive__item-teaser"> <img src="/assets/images/2019-06-22/drew-beamer-692664-unsplash.jpg" alt="black rolling chairs beside brown table"> </div> <h2 class="archive__item-title" itemprop="headline"> <a href="/blog/2019/06/22/resume-as-code/" rel="permalink">Resume as Code </a> </h2> <p class="page__meta"> <i class="fa fa-calendar-alt" aria-hidden="true"></i> <time datetime="2019-06-22T21:00:00+10:00"> Jun 22, 2019 </time> &nbsp; <i class="far fa-clock" aria-hidden="true"></i> 10 minute read </p> <p class="archive__item-excerpt" itemprop="description">Bring some fun back into the document that sells you to the world. </p> </article> </div> <div class="grid__item"> <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"> <div class="archive__item-teaser"> <img src="/assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg" alt="close-up photography of yellow typewriter"> </div> <h2 class="archive__item-title" itemprop="headline"> <a href="/blog/2019/04/28/chording-qwerty-with-qmk-combos/" rel="permalink">Chording QWERTY with QMK Combos </a> </h2> <p class="page__meta"> <i class="fa fa-calendar-alt" aria-hidden="true"></i> <time datetime="2019-04-28T00:30:00+10:00"> Apr 28, 2019 </time> &nbsp; <i class="far fa-clock" aria-hidden="true"></i> 17 minute read </p> <p class="archive__item-excerpt" itemprop="description">Why let stenographers have all the fun? Get more keyboard output using less keys. </p> </article> </div> <div class="grid__item"> <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork"> <div class="archive__item-teaser"> <img src="/assets/images/2019-04-01/david-travis-547046-unsplash.jpg" alt="brown fountain pen on notebook"> </div> <h2 class="archive__item-title" itemprop="headline"> <a href="/blog/2019/04/01/elm-018-to-019-upgrade-notes/" rel="permalink">Elm 0.18 to 0.19 upgrade notes </a> </h2> <p class="page__meta"> <i class="fa fa-calendar-alt" aria-hidden="true"></i> <time datetime="2019-04-01T14:20:00+11:00"> Apr 01, 2019 </time> &nbsp; <i class="far fa-clock" aria-hidden="true"></i> 14 minute read </p> <p class="archive__item-excerpt" itemprop="description">Quite a lot has changed in the Elm ecosystem between version 0.18 and 0.19, so here are some notes I jotted down while upgrading a few small apps. </p> </article> </div> </div> </div> </div> </div> <div id="footer" class="page__footer"> <footer> <div class="page__footer-follow"> <ul class="social-icons"> <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li> </ul> </div> <div class="page__footer-copyright">&copy; 2019 Paul Fioravanti. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div> </footer> </div> <script src="/assets/js/main.min.js"></script> <script src="https://kit.fontawesome.com/4eee35f757.js"></script> <script>var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-109270947-1"]),_gaq.push(["_trackPageview"]),function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();</script> <script>var disqus_config=function(){this.page.url="https://paulfioravanti.com/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/",this.page.identifier="/blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir"};!function(){var i=document,t=i.createElement("script");t.src="https://paulfioravanti.disqus.com/embed.js",t.setAttribute("data-timestamp",+new Date),(i.head||i.body).appendChild(t)}();</script> <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> </body> </html>

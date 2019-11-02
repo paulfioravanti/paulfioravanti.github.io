@@ -1,5 +1,0 @@
-{% comment %}
-This is a custom function for changing a Markdown string into HTML, stripping
-out unnecessary tags.
-{% endcomment %}
-{{ include.markdown | markdownify | remove: "<p>" | remove: "</p>" }}
