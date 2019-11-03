@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2019-11-03 00:00 +1100
+last_modified_at: 2019-11-03 16:23 +1100
 tags: elixir phoenix liveview i18n
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -79,7 +79,7 @@ Generate and install dependencies of a new Phoenix application. We will not be
 using a database, so pass in the `--no-ecto` flag to make sure we do not
 generate any unneeded [Ecto][] configuration:
 
-```elixir
+```text
 mix phx.new phx_i18n_example --no-ecto
 cd phx_i18n_example
 mix deps.get
@@ -106,7 +106,7 @@ available in Phoenix.
 
 First, install it with [npm][]:
 
-```sh
+```text
 npm install --save-dev tachyons@4.11.1 --prefix assets
 ```
 
@@ -140,14 +140,14 @@ tell it about the desired state of the application.
 For example, if we want the locale to be Japanese, we could send a
 `locale` URL parameter to tell the application to switch to Japanese:
 
-```sh
+```text
 http://localhost:4000/?locale=ja
 ```
 
 Since we are not using Javascript, we will also have to use URL parameters to
 let the application know if we want to open or close the locale dropdown menu:
 
-```sh
+```text
 http://localhost:4000/?show_available_locales=true
 http://localhost:4000/?show_available_locales=false
 ```
@@ -720,7 +720,7 @@ Now that we know all of the two places where we need the `gettext` macro, we
 can generate translation placeholders for all of our known locales using the
 following commands:
 
-```sh
+```text
 mix gettext.extract
 mix gettext.merge priv/gettext --locale en
 mix gettext.merge priv/gettext --locale it
@@ -1425,7 +1425,11 @@ Add LiveView to the [Node][] dependencies:
 }
 ```
 
-Install the dependencies with: `npm install --prefix assets`
+Install the dependencies with:
+
+```text
+npm install --prefix assets
+```
 
 Finally, enable connecting to a LiveView socket from Javascript:
 
