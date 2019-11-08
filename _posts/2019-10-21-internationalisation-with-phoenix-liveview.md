@@ -12,6 +12,10 @@ header:
   caption: >
     Photo by [Nareeta Martin](https://unsplash.com/@splashabout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/s/photos/country-flags?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%23174-blueviolet.svg
+    alt: "Elixir Weekly #174"
+    link: https://elixirweekly.net/issues/174
 excerpt: >
   Change your application locale without a full-page reload or having to write (much) Javascript.
 ---
