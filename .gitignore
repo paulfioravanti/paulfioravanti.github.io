@@ -4,4 +4,5 @@ _site
 .jekyll-metadata
 .jekyll-cache
 .tool-versions*
+.*.tool-versions
 tmux-*.log
