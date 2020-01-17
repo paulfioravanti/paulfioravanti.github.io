@@ -1,22 +1,3 @@
-GIT
-  remote: https://github.com/benbalter/jekyll-remote-theme.git
-  revision: fbb801effbf51b6a8ab7c481af97ba05d89c8f93
-  branch: master
-  specs:
-    jekyll-remote-theme (0.4.1)
-      addressable (~> 2.0)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-sass-converter (>= 1.0, <= 3.0.0, != 2.0.0)
-      rubyzip (>= 1.3.0, < 3.0)
-
-GIT
-  remote: https://github.com/jekyll/github-metadata.git
-  revision: 7e042d42404152aae4bbab2543204311d637c72e
-  specs:
-    jekyll-github-metadata (2.12.1)
-      jekyll (>= 3.4, < 5.0)
-      octokit (~> 4.0, != 4.4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -41,7 +22,7 @@ GEM
     execjs (2.7.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.11.3)
+    ffi (1.12.1)
     formatador (0.2.5)
     forwardable-extended (2.6.0)
     gemoji (3.0.1)
@@ -71,7 +52,7 @@ GEM
       yell (~> 2.0)
     htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
-    i18n (1.7.1)
+    i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     jekyll (4.0.0)
       addressable (~> 2.4)
@@ -94,6 +75,9 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-gist (1.5.0)
       octokit (~> 4.2)
+    jekyll-github-metadata (2.13.0)
+      jekyll (>= 3.4, < 5.0)
+      octokit (~> 4.0, != 4.4.0)
     jekyll-include-cache (0.2.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-minifier (0.1.10)
@@ -105,6 +89,10 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.15.0)
       jekyll (>= 3.3, < 5.0)
+    jekyll-remote-theme (0.4.1)
+      addressable (~> 2.0)
+      jekyll (>= 3.5, < 5.0)
+      rubyzip (>= 1.3.0)
     jekyll-sass-converter (2.0.1)
       sassc (> 2.0.1, < 3.0)
     jekyll-seo-tag (2.6.1)
@@ -127,7 +115,7 @@ GEM
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
-    lumberjack (1.1.0)
+    lumberjack (1.1.1)
     mercenary (0.3.6)
     method_source (0.9.2)
     mini_portile2 (2.4.0)
@@ -138,7 +126,7 @@ GEM
       jekyll-include-cache (~> 0.1)
       jekyll-paginate (~> 1.1)
       jekyll-sitemap (~> 1.3)
-    minitest (5.13.0)
+    minitest (5.14.0)
     multipart-post (2.1.1)
     nenv (0.3.0)
     nokogiri (1.10.7)
@@ -162,7 +150,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rouge (3.14.0)
+    rouge (3.15.0)
     rubyzip (2.0.0)
     safe_yaml (1.0.5)
     sassc (2.2.1)
@@ -183,8 +171,8 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    unicode-display_width (1.6.0)
-    yell (2.2.0)
+    unicode-display_width (1.6.1)
+    yell (2.2.1)
     zeitwerk (2.2.2)
 
 PLATFORMS
@@ -198,12 +186,12 @@ DEPENDENCIES
   jekyll-archives (~> 2.1)
   jekyll-feed (~> 0.11)
   jekyll-gist (~> 1.5)
-  jekyll-github-metadata!
+  jekyll-github-metadata (~> 2.13)
   jekyll-include-cache (~> 0.1)
   jekyll-minifier (~> 0.1)
   jekyll-paginate (~> 1.1)
   jekyll-redirect-from (~> 0.14)
-  jekyll-remote-theme!
+  jekyll-remote-theme (~> 0.4)
   jekyll-seo-tag (~> 2.6)
   jekyll-sitemap (~> 1.3)
   jemoji (~> 0.10)

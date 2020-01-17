@@ -32,10 +32,7 @@ group :jekyll_plugins do
   gem "jekyll-gist", "~> 1.5"
   # Jekyll plugin to propagate the `site.github` namespace and set default
   # values for use with GitHub Pages
-  # NOTE: Currently pointing this gem at master for now since there hasn't been
-  # a release in a while.
-  # REF: https://github.com/jekyll/github-metadata/issues/169#issuecomment-526169725
-  gem "jekyll-github-metadata", github: "jekyll/github-metadata"
+  gem "jekyll-github-metadata", "~> 2.13"
   # A Jekyll plugin to cache the rendering of Liquid includes
   # jekyll-include-cache needed for minimal mistakes theme.
   # See https://github.com/mmistakes/minimal-mistakes
@@ -47,10 +44,7 @@ group :jekyll_plugins do
   # Seamlessly specify multiple redirections URLs for your pages and posts
   gem "jekyll-redirect-from", "~> 0.14"
   # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
-  # NOTE: Currently pointing this gem at master for now since there hasn't been
-  # a release in a while.
-  # REF: https://github.com/benbalter/jekyll-remote-theme/issues/58#issuecomment-533292411
-  gem "jekyll-remote-theme", github: "benbalter/jekyll-remote-theme", branch: "master"
+  gem "jekyll-remote-theme", "~> 0.4"
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   gem "jekyll-seo-tag", "~> 2.6"
