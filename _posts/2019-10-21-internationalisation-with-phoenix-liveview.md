@@ -2358,7 +2358,7 @@ next Phoenix project, where possible, I will very likely be reaching for
 LiveView first before Javascript, and only resort to the Javascript when I hit
 the limits of what LiveView is able to do, wherever they happen to be.
 
-## Update (17 January 2020)
+## Update (18 January 2020)
 
 It was brought to my attention that the application, as it stands, has a bit of
 an issue. Open up the application in two separate browsers and see if you can
