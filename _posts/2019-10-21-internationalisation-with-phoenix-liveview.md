@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2019-11-03 16:23 +1100
+last_modified_at: 2020-01-18 23:15 +1100
 tags: elixir phoenix liveview i18n
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -2358,6 +2358,288 @@ next Phoenix project, where possible, I will very likely be reaching for
 LiveView first before Javascript, and only resort to the Javascript when I hit
 the limits of what LiveView is able to do, wherever they happen to be.
 
+## Update (17 January 2020)
+
+It was brought to my attention that the application, as it stands, has a bit of
+an issue. Open up the application in two separate browsers and see if you can
+spot it.
+
+![PubSub Static Channel Issue][]
+
+That's right: if you change the locale in one browser, then the locale changes
+for _every_ client that is using the application. If we are using the
+application at the same time, I really should not be able to control what
+language you are viewing, and vice versa.
+
+Furthermore, the language dropdown menu itself is not aware of what is going on
+because it is not listening out for locale-change events; it believes that _it_
+is the sole source of locale-change events, and not some other parallel-universe
+language dropdown menu that is reaching across its barrier and pulling the
+language rug out from underneath it.
+
+So, what is the cause of this issue?
+
+## Static PubSub Channels
+
+Currently, all the LiveView files are broadcasting and subscribing to exactly
+the same static channels. For example:
+
+**`lib/phx_i18n_example_web/live/language_dropdown_live.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.LanguageDropdownLive do
+  # ...
+
+  @locale_changes "locale-changes"
+  @dropdown_changes "dropdown-changes"
+
+  def mount(%{locale: locale}, socket) do
+    Endpoint.subscribe(@dropdown_changes)
+    # ...
+  end
+
+  # ...
+
+  def handle_event("locale-changed", %{"locale" => locale}, socket) do
+    Endpoint.broadcast_from(self(), @locale_changes, "change-locale", %{
+      locale: locale
+    })
+    # ..
+  end
+
+  # ...
+end
+```
+
+`Endpoint.subscribe/1` and `Endpoint.broadcast_from/4` are using only the static
+string channel names defined in the `@locale_changes` and `@dropdown_changes`
+module attributes. Consequently, all clients are subscribing and broadcasting
+message changes to the same channel, resulting in all the unexpected state
+sharing issues.
+
+## Arbitrary User IDs
+
+This kind of behaviour might be desired in some situations, but for this
+application, we want PubSub actions to be siloed to specific users: channel
+names should look something like `@locale_changes <> id`, where `id`
+is some identifier unique to the browser client or user, so that PubSub messages
+and updates would only apply for that client/user.
+
+In some Phoenix applications, this could take the form of the database ID of a
+`User` or `Account`, but for something as trivial as this application, we do not
+have a concept of "users" or "accounts".
+
+So, in the absence of database-backed users with unique IDs, let's create the
+next best thing with the lowest barrier to entry, and arbitrarily assign a
+unique "`user_id`" to each application browser connection. We will need this ID
+in both the `conn` and the `session` to make sure all the application LiveViews
+can utilise it. So, let's handle the `user_id` problem in a similar way to how
+we handled the `locale`: generate it in a Plug.
+
+First, tell the router that we will use a `UserIdPlug` in the `browser`
+pipeline:
+
+**`lib/phx_i18n_example_web/router.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.Router do
+  use PhxI18nExampleWeb, :router
+  alias PhxI18nExampleWeb.{LocalePlug, UserIdPlug}
+
+  pipeline :browser do
+    # ...
+    plug UserIdPlug
+    plug LocalePlug
+  end
+
+  # ...
+end
+```
+
+Next define the plug: generate a random ID and assign it to the `conn` and the
+`session`:
+
+**`lib/phx_i18n_example_web/plugs/user_id_plug.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.UserIdPlug do
+  alias Plug.Conn
+  @behaviour Plug
+
+  @num_bytes 16
+
+  @impl Plug
+  def init(_opts), do: nil
+
+  @impl Plug
+  def call(conn, _opts) do
+    random_id =
+      @num_bytes
+      |> :crypto.strong_rand_bytes()
+      |> Base.encode64()
+
+    conn
+    |> Conn.assign(:user_id, random_id)
+    |> Conn.put_session(:user_id, random_id)
+  end
+end
+```
+
+Then, provide the `user_id` to the LiveView `session`:
+
+**`lib/phx_i18n_example_web/router.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.Router do
+  # ...
+
+  scope "/", PhxI18nExampleWeb do
+    pipe_through :browser
+    live "/", PageLive, session: [:locale, :user_id]
+  end
+end
+```
+
+The `user_id` is now available in `PageLive` via the `session`, and in
+the `app.html.eex` layout via the `conn`, so we can pass it off to `TitleLive`
+and `LanguageDropdownLive`. Let's first make sure that the LiveViews rendered
+from the layout get given a `user_id`:
+
+**`lib/phx_i18n_example_web/templates/layout/app.html.eex`**
+
+```elixir
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ... -->
+    <%= live_render @conn,
+                    TitleLive,
+                    session: %{locale: @locale, user_id: @user_id} %>
+    <!-- ... -->
+  </head>
+  <body class="<%= body() %>">
+    <%= live_render @conn,
+                    LanguageDropdownLive,
+                    session: %{locale: @locale, user_id: @user_id} %>
+    <!-- ... -->
+  </body>
+</html>
+```
+
+Now, for each LiveView, add the `user_id` to the static PubSub channel names,
+as well as make any other minor adjustments to make everything work:
+
+**`lib/phx_i18n_example_web/live/title_live.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.TitleLive do
+  # ...
+
+  @locale_changes "locale-changes:"
+
+  def mount(%{locale: locale, user_id: user_id}, socket) do
+    Endpoint.subscribe(@locale_changes <> user_id)
+    socket = assign(socket, %{locale: locale})
+    {:ok, socket}
+  end
+
+  # ...
+end
+```
+
+**`lib/phx_i18n_example_web/live/language_dropdown_live.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.LanguageDropdownLive do
+  # ...
+  @locale_changes "locale-changes:"
+  @dropdown_changes "dropdown-changes:"
+
+  def mount(%{locale: locale, user_id: user_id}, socket) do
+    Endpoint.subscribe(@dropdown_changes <> user_id)
+    socket = init_dropdown_state(socket, locale, user_id)
+    {:ok, socket}
+  end
+
+  # ...
+
+  def handle_event("locale-changed", %{"locale" => locale}, socket) do
+    %{assigns: %{user_id: user_id}} = socket
+
+    Endpoint.broadcast_from(
+      self(),
+      @locale_changes <> user_id,
+      "change-locale",
+      %{locale: locale}
+    )
+
+    socket = init_dropdown_state(socket, locale, user_id)
+    {:noreply, socket}
+  end
+
+  defp init_dropdown_state(socket, locale, user_id) do
+    selectable_locales = List.delete(@locales, locale)
+
+    assign(
+      socket,
+      %{
+        user_id: user_id,
+        locale: locale,
+        selectable_locales: selectable_locales,
+        show_available_locales: false
+      }
+    )
+  end
+end
+```
+
+**`lib/phx_i18n_example_web/live/page_live.ex`**
+
+```elixir
+defmodule PhxI18nExampleWeb.PageLive do
+  # ...
+
+  @locale_changes "locale-changes:"
+  @dropdown_changes "dropdown-changes:"
+
+  def mount(%{locale: locale, user_id: user_id}, socket) do
+    Endpoint.subscribe(@locale_changes <> user_id)
+    socket = assign(socket, %{locale: locale, user_id: user_id})
+    {:ok, socket}
+  end
+
+  def handle_event("hide-dropdown", _value, socket) do
+    %{assigns: %{user_id: user_id}} = socket
+
+    Endpoint.broadcast_from(
+      self(),
+      @dropdown_changes <> user_id,
+      "hide-dropdown",
+      %{}
+    )
+
+    {:noreply, socket}
+  end
+
+  # ...
+end
+```
+
+Note that `user_id` is deliberately not passed into the `socket` in `TitleLive`,
+since it is only ever used in `mount/2` when setting up its subscriptions, as
+opposed to the other LiveViews which need the `user_id` when they send out
+broadcasts.
+
+Now, when you use the application with multiple browsers, you should see that it
+works as expected:
+
+![PubSub Static Channel Issue Fixed][]
+
+You can find the code for this iteration of the application in this post's
+[companion Github repo][phx_i18n_example] on the [`05-liveview-fix` branch][].
+The branch is also deployed [here][phx-i18n-05-liveview-fix] in its own
+environment.
+
 [`01-client-server` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/01-client-server
 [01-client-server Implementation]: /assets/images/2019-11-03/01-client-server.gif "Client-Server Implementation"
 [`02-js-sprinkles` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/02-js-sprinkles
@@ -2365,6 +2647,7 @@ the limits of what LiveView is able to do, wherever they happen to be.
 [`03-js-takeover` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/03-js-takeover
 [03-js-takeover Implementation]: /assets/images/2019-11-03/03-js-takeover.gif "Javascript Takeover Implementation"
 [`04-liveview` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/04-liveview
+[`05-liveview-fix` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/05-liveview-fix
 [AJAX]: https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started
 [`Document.cookie`]: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 [Ecto]: https://github.com/elixir-ecto/ecto
@@ -2420,8 +2703,11 @@ the limits of what LiveView is able to do, wherever they happen to be.
 [phx-i18n-02-js-sprinkles]: https://phx-i18n-02-js-sprinkles.herokuapp.com/
 [phx-i18n-03-js-takeover]: https://phx-i18n-03-js-takeover.herokuapp.com/
 [phx-i18n-04-liveview]: https://phx-i18n-04-liveview.herokuapp.com/
+[phx-i18n-05-liveview-fix]: https://phx-i18n-05-liveview-fix.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [`Plug.Conn.put_session/3`]: https://hexdocs.pm/plug/Plug.Conn.html#put_session/3
+[PubSub Static Channel Issue]: /assets/images/2019-11-03/pubsub-static-channel-issue.gif "PubSub Static Channel Issue"
+[PubSub Static Channel Issue Fixed]: /assets/images/2019-11-03/pubsub-static-channel-issue-fixed.gif "PubSub Static Channel Issue Fixed"
 [Query string]: https://en.wikipedia.org/wiki/Query_string
 [Runtime Language Switching in Elm]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
 [Tachyons]: http://tachyons.io/
