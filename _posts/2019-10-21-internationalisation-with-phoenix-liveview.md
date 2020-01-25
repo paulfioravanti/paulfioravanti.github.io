@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2020-01-20 16:35 +1100
+last_modified_at: 2020-01-27 10:00 +1100
 tags: elixir phoenix liveview i18n
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -2647,6 +2647,9 @@ You can find the code for this iteration of the application in this post's
 The branch is also deployed [here][phx-i18n-05-liveview-fix] in its own
 environment.
 
+Follow the next steps of this application's journey in _[Internationalisation
+with Phoenix LiveComponents][]_!
+
 [`01-client-server` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/01-client-server
 [01-client-server Implementation]: /assets/images/2019-11-03/01-client-server.gif "Client-Server Implementation"
 [`02-js-sprinkles` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/02-js-sprinkles
@@ -2674,6 +2677,7 @@ environment.
 [`History.replaceState`]: https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [IIFE]: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+[Internationalisation with Phoenix LiveComponents]: https://paulfioravanti.com/blog/2020/01/27/internationalisation-with-phoenix-live-components/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [Javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [Javascript object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects

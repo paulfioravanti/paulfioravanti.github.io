@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveComponents"
-date: 2020-01-20 22:00 +1100
-last_modified_at: 2020-01-20 22:00 +1100
+date: 2020-01-27 10:00 +1100
+last_modified_at: 2020-01-27 27:00 +1100
 tags: elixir phoenix liveview live-components i18n
 header:
   image: /assets/images/2020-01-20/jason-leung-jCBzW_Q_UGI-unsplash.jpg
@@ -84,7 +84,7 @@ mix deps.upgrade --all
 ```
 
 Updating Javascript asset dependencies should not be an issue for introducing
-LiveComponents, but if you do find you have front end issues or you just need
+LiveComponents, but if you do find you have front end issues, or you just need
 to have all the latest packages all the time, then by all means, check what's
 outdated and update to your heart's content:
 
@@ -94,9 +94,9 @@ npm outdated --prefix assets
 
 ### Enabling LiveComponent Functions
 
-In order to be able to use LiveComponents from LiveViews, we are going to need
-access to the [`Phoenix.LiveView.Helpers.live_component/4`][] function (and its
-lower [arity][] cousins), so add it to the list of LiveView-related imports:
+In order to use LiveComponents from LiveViews, we are going to need access to
+the [`Phoenix.LiveView.Helpers.live_component/4`][] function (and its lower
+[arity][] cousins), so add it to the list of LiveView-related imports:
 
 **`lib/phx_i18n_example_web.ex`**
 
@@ -158,7 +158,8 @@ updating its state, handling messages etc:
   occasionally needs help from its parent for things it cannot do
 
 Anyway, regardless of my opinions about the current naming, use of shared
-language is important to express thoughts, so Stateless and Stateful it is.
+language is important to convey information coherently, so Stateless and
+Stateful it is.
 
 ## Update to Stateless Component
 
@@ -352,9 +353,12 @@ finally clicked:
 So, if my understanding is correct, the `id` for the `socket` is the same since
 it is the same process, but the `assigns` states of the LiveView and
 LiveComponent are isolated from each other, and we essentially get a "blank
-slate" socket in the LiveComponent. The `assigns` values we pass in to
-`live_component` (in this case `locale: @locale`), get `assign`ed to the
-LiveComponent `socket` when `update/2` gets called by the parent LiveView.
+slate" socket in the LiveComponent.
+
+The `assigns` values we pass in to the `live_component` function (in this case
+`locale: @locale`), become available to us in `update/2` (which the parent
+LiveView will call during the initialisation process), where we can then
+assign them to the LiveComponent `socket`.
 
 ## Finishing Up Stateless
 
@@ -598,7 +602,7 @@ callback"][LiveComponent as the source of truth], and so this is one of the
 areas where a stateful LiveComponent must depend on its parent.
 
 Technically, we could have moved the `Endpoint.subscribe/1` function into the
-LiveComponent and it would have worked, but I think the demarcation lines of
+LiveComponent, and it would have worked, but I think the demarcation lines of
 responsibility are clearer if we say that the parent LiveView is entirely
 responsible for handling external [PubSub][Phoenix PubSub] communication.
 
@@ -652,7 +656,7 @@ end
 ```
 
 Like `TitleLiveView`, there is some external PubSub message handling here around
-`"change-locale"` messages that we need to leave in the parent LiveView, but
+`"change-locale"` events that we need to leave in the parent LiveView, but
 handling `"hide-dropdown"` events is definitely something that a LiveComponent
 can perform, so let's extract the `handle_event/3` code out to
 `PageLiveComponent`:
@@ -939,7 +943,7 @@ end
 The LiveComponent now has responsibilities over:
 
 - Manually handling updating its state by overriding the `update/2` function,
-  as the LiveComponent default implementation does not cut it any more
+  since the LiveComponent default implementation does not cut it any more
 - Handling the two different flavours of `update` that the component needs to
   know about (via the `update` function heads):
   - when the `locale` is updated, upon which it needs to re-initialise its
@@ -949,7 +953,26 @@ The LiveComponent now has responsibilities over:
     `LanguageDropdownLiveView` calls `send_update/2`), at which point the menu
     needs to be hidden
 - Handling _all_ its local events
-- Broadcasting `"change-locale"` messages
+- Broadcasting `"change-locale"` messages when it gets a `"locale-changed"`
+  message
+
+Easily the most independent of the three LiveComponents in the application.
+
+## Stateless or Stateful?
+
+In this application, I think the benefits of using Stateless versus Stateful
+LiveComponents are largely subjective, and really depend on personal preferences
+about how to divide up logic between LiveViews and LiveComponents.
+
+If you have an application that has more moving parts and complexity, like
+fetching from a database to populate multiple LiveComponents on a
+page, in which you may need to consider [preloading][Preloading and update]
+using [`preload/1`][] (not covered in this blog post), then the decision to
+specifically use Stateful components may become clearer.
+
+Regardless of your preferred flavour of LiveComponent, I think they are a
+welcome addition to the Phoenix's Live Toolbox, and I'm sure I will be making
+more use of them in the future.
 
 [`05-liveview-fix` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/05-liveview-fix
 [`06-live-stateless` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/06-live-stateless
@@ -963,6 +986,8 @@ The LiveComponent now has responsibilities over:
 [`Phoenix.LiveView.Helpers.live_component/4`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.Helpers.html#live_component/4
 [phx-i18n-06-live-stateless]: https://phx-i18n-06-live-stateless.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
+[`preload/1`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#c:preload/1
+[Preloading and update]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-preloading-and-update
 [`send_update/2`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#send_update/2
 [Stateless Components]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-stateless-components-life-cycle
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
