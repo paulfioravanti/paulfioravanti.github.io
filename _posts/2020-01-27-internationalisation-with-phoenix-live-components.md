@@ -137,7 +137,7 @@ in the absence of any set conventions, we shall:
 - Re-name all LiveView files from `FooLive` to `FooLiveView`, and change all
   of their references throughout the application (specifically, do search and
   replaces for `TitleLive` -> `TitleLiveView`, `LanguageDropdownLive` ->
-  `LanguageLiveView`, and `PageLive` -> `PageLiveView`)
+  `LanguageDropdownLiveView`, and `PageLive` -> `PageLiveView`)
 - Create an empty `live/components/` directory to store LiveComponent files
 
 Once you have done that, check to see that the application still runs without
@@ -353,7 +353,7 @@ finally clicked:
 So, if my understanding is correct, the `id` for the `socket` is the same since
 it is the same process, but the `assigns` states of the LiveView and
 LiveComponent are isolated from each other, and we essentially get a "blank
-slate" socket in the LiveComponent.
+slate" socket `assigns` in the LiveComponent.
 
 The `assigns` values we pass in to the `live_component` function (in this case
 `locale: @locale`), become available to us in `update/2` (which the parent
@@ -379,11 +379,9 @@ defmodule PhxI18nExampleWeb.LanguageDropdownLiveView do
   alias PhxI18nExampleWeb.{Endpoint, LanguageDropdownView}
 
   # ...
-
   def render(assigns) do
     LanguageDropdownView.render("language_dropdown.html", assigns)
   end
-
   # ...
 end
 ```
@@ -396,7 +394,6 @@ defmodule PhxI18nExampleWeb.LanguageDropdownLiveView do
   alias PhxI18nExampleWeb.{Endpoint, LanguageDropdownLiveComponent}
 
   # ...
-
   def render(assigns) do
     ~L"""
     <%= live_component @socket,
@@ -406,7 +403,6 @@ defmodule PhxI18nExampleWeb.LanguageDropdownLiveView do
                        show_available_locales: @show_available_locales %>
     """
   end
-
   # ...
 end
 ```
@@ -436,11 +432,9 @@ defmodule PhxI18nExampleWeb.PageLiveView do
   alias PhxI18nExampleWeb.{Endpoint, PageView}
 
   # ...
-
   def render(assigns) do
     PageView.render("index.html", assigns)
   end
-
   # ...
 end
 ```
@@ -453,13 +447,11 @@ defmodule PhxI18nExampleWeb.PageLiveView do
   alias PhxI18nExampleWeb.{Endpoint, PageLiveComponent}
 
   # ...
-
   def render(assigns) do
     ~L"""
     <%= live_component @socket, PageLiveComponent, locale: @locale %>
     """
   end
-
   # ...
 end
 ```
@@ -541,7 +533,7 @@ end
 <%= live_component @socket, PageLiveComponent, locale: @locale %>
 ```
 
-This refactor works, but, to me at least, it just feels awkward to have this few
+This refactor works, but, to me at least, it just feels awkward to have such few
 lines of code spread out over multiple files, not to mention the even more
 awkward `PageLiveViewView` naming.
 
@@ -553,9 +545,9 @@ determine if this kind of refactor is to your benefit or liking.
 ## Update to Stateful Components
 
 Now, we will move on to giving our LiveComponents more responsibility for
-managing their own state, by making them Stateful. Like before, let's start with
-the least complex LiveView/LiveComponent set for the page title. Here is the
-finished product:
+managing their own state, by making them [Stateful Components][]. Like before,
+let's start with the least complex LiveView/LiveComponent set for the page
+title. Here is the finished product:
 
 **`lib/phx_i18n_example_web/live/views/title_live_view.ex`**
 
@@ -601,19 +593,19 @@ handle `"change-locale"` messages, ["components do not have a `handle_info/2`
 callback"][LiveComponent as the source of truth], and so this is one of the
 areas where a stateful LiveComponent must depend on its parent.
 
-Technically, we could have moved the `Endpoint.subscribe/1` function into the
-LiveComponent, and it would have worked, but I think the demarcation lines of
-responsibility are clearer if we say that the parent LiveView is entirely
+Technically, we could have moved the `Endpoint.subscribe/1` function call into
+the LiveComponent, and it would have worked, but I think the demarcation lines
+of responsibility are clearer if we say that the parent LiveView is entirely
 responsible for handling external [PubSub][Phoenix PubSub] communication.
 
 Therefore, for this particular LiveView/LiveComponent set, there is probably not
 much value in making it Stateful.
 
-## Moving on...
+## Moving on
 
 So, that was rather anti-climactic. Let's move on to the `PageLiveView` where
-we will hopefully have luck with making at least some consequential changes.
-Currently, it looks like:
+we will hopefully have more luck with making at least some consequential
+changes.  Currently, it looks like:
 
 **`lib/phx_i18n_example_web/live/views/page_live_view.ex`**
 
@@ -660,7 +652,6 @@ Like `TitleLiveView`, there is some external PubSub message handling here around
 handling `"hide-dropdown"` events is definitely something that a LiveComponent
 can perform, so let's extract the `handle_event/3` code out to
 `PageLiveComponent`:
-
 
 **`lib/phx_i18n_example_web/live/components/page_live_component.ex`**
 
@@ -945,7 +936,7 @@ The LiveComponent now has responsibilities over:
 - Manually handling updating its state by overriding the `update/2` function,
   since the LiveComponent default implementation does not cut it any more
 - Handling the two different flavours of `update` that the component needs to
-  know about (via the `update` function heads):
+  know about (via the `update` function heads), which are:
   - when the `locale` is updated, upon which it needs to re-initialise its
     state (which, by the by, the parent LiveView does not need to know anything
     about)
@@ -989,5 +980,6 @@ more use of them in the future.
 [`preload/1`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#c:preload/1
 [Preloading and update]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-preloading-and-update
 [`send_update/2`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#send_update/2
+[Stateful Components]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-stateful-components-life-cycle
 [Stateless Components]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-stateless-components-life-cycle
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub

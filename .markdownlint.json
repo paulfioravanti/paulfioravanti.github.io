@@ -17,6 +17,6 @@
     ]
   },
   "no-trailing-punctuation": {
-    "punctuation": ".{1},;:!"
+    "punctuation": ".,;:!"
   }
 }

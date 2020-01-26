@@ -9,7 +9,7 @@ gem "jekyll", "~> 4.0"
 
 # Jekyll theme for building a personal site, blog,
 # project documentation, or portfolio
-gem "minimal-mistakes-jekyll", "~> 4.17.0"
+gem "minimal-mistakes-jekyll", "~> 4.18.0"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
