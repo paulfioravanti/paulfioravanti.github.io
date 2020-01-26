@@ -4,10 +4,10 @@ date: 2020-01-27 10:00 +1100
 last_modified_at: 2020-01-27 27:00 +1100
 tags: elixir phoenix liveview live-components i18n
 header:
-  image: /assets/images/2020-01-20/jason-leung-jCBzW_Q_UGI-unsplash.jpg
+  image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
   image_description: "photo of assorted-color nation flags on wall during daytime"
-  teaser: /assets/images/2020-01-20/jason-leung-jCBzW_Q_UGI-unsplash.jpg
-  overlay_image: /assets/images/2020-01-20/jason-leung-jCBzW_Q_UGI-unsplash.jpg
+  teaser: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
+  overlay_image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
   overlay_filter: 0.5
   caption: >
     Photo by [Jason Leung](https://unsplash.com/@ninjason?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
@@ -968,7 +968,7 @@ more use of them in the future.
 [`05-liveview-fix` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/05-liveview-fix
 [`06-live-stateless` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/06-live-stateless
 [arity]: https://en.wikipedia.org/wiki/Arity
-[I18n Application]: /assets/images/2020-01-20/i18n-application.gif "Internationalisation Application"
+[I18n Application]: /assets/images/2020-01-27/i18n-application.gif "Internationalisation Application"
 [Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
