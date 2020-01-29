@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
-last_modified_at: 2020-01-27 27:00 +1100
+last_modified_at: 2020-01-29 16:15 +1100
 tags: elixir phoenix liveview live-components i18n
 header:
   image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
@@ -949,6 +949,11 @@ The LiveComponent now has responsibilities over:
 
 Easily the most independent of the three LiveComponents in the application.
 
+You can find the code for this iteration of the application in this post's
+[companion Github repo][phx_i18n_example] on the [`07-live-stateful` branch][].
+The branch is also deployed [here][phx-i18n-07-live-stateful] in its own
+environment.
+
 ## Stateless or Stateful?
 
 In this application, I think the benefits of using Stateless versus Stateful
@@ -965,21 +970,76 @@ Regardless of your preferred flavour of LiveComponent, I think they are a
 welcome addition to the Phoenix's Live Toolbox, and I'm sure I will be making
 more use of them in the future.
 
+## Update (29-01-2020)
+
+Well, the cracking pace of development on new libraries like LiveView can mean
+that even minor version changes can result in having the rug pulled out from
+under you, and this application is no exception.
+
+On updating the application to LiveView [version 0.6.0][LiveView version 0.6.0],
+everything stopped working, and my LiveComponents mysteriously stopped handling
+events.
+
+If you are following along, [here is the diff][07-live-stateful and
+08-live-stateful-0-6 diff] between the [`07-live-stateful` branch][] you have
+already seen, and a new [`08-live-stateful-0-6` branch][], all updated and
+working with LiveView 0.6.0 (with a couple of small refactors).
+
+It is not worth going into the deep details of how to upgrade, since I think the
+diff, as well as the [LiveView 0.6 Installation instructions][] and the
+[Changelog][LiveView version 0.6.0], provide enough information, but I will
+outline a few points:
+
+- The socket `session` now accepts only string keys. This affected code in Plugs
+  as well as LiveViews. It does seem a bit strange now to have
+  `Conn.assign(:locale, locale)` with an atom key, and
+  `Conn.put_session("locale", locale)` with a string key
+- I think it's great that any `session` variables set in plugs are available
+  automatically in LiveViews now, without having to explicitly indicate a set of
+  session keys in the route. (eg
+  `live "/", PageLiveView, session: [:locale, :user_id]`). You could explicitly
+  override values here using a map, though, if you wanted to (eg
+  `live "/", PageLiveView, session: %{"locale" => "en"}`)
+- [Targeting Component Events][] is where the Stateful LiveComponent trip ups
+  occurred. With 0.6.0, if template code managed by a LiveComponent does not
+  have a `phx-target` attribute, then the LiveComponent's `handle_event/3`
+  function that previously may have worked will now _not_ pick up the event, and
+  instead event handling will go straight to the parent LiveView. In this case,
+  I got an error complaining that I did not have `handle_event/3`
+  implementations in the LiveView to handle the events that it was receiving.
+  See the [Targeting Component Events][] documentation and the `.eex`/`.leex`
+  template files in [the diff][07-live-stateful and 08-live-stateful-0-6 diff]
+  for details on getting your Stateful LiveComponents back on the job of
+  handling events
+
+You can find the code for this iteration of the application in this post's
+[companion Github repo][phx_i18n_example] on the
+[`08-live-stateful-0-6` branch][]. The branch is also deployed
+[here][phx-i18n-08-live-stateful-0-6] in its own environment.
+
 [`05-liveview-fix` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/05-liveview-fix
 [`06-live-stateless` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/06-live-stateless
+[`07-live-stateful` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/07-live-stateful
+[07-live-stateful and 08-live-stateful-0-6 diff]: https://github.com/paulfioravanti/phx_i18n_example/compare/07-live-stateful...08-live-stateful-0-6
+[`08-live-stateful-0-6` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/08-live-stateful-0-6
 [arity]: https://en.wikipedia.org/wiki/Arity
 [I18n Application]: /assets/images/2020-01-27/i18n-application.gif "Internationalisation Application"
 [Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
 [LiveComponent as the source of truth]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-livecomponent-as-the-source-of-truth
+[LiveView 0.6 Installation instructions]: https://github.com/phoenixframework/phoenix_live_view/blob/924fe4aa53e690751cdc063883a356b7c8165f08/guides/introduction/installation.md
+[LiveView version 0.6.0]: https://github.com/phoenixframework/phoenix_live_view/blob/master/CHANGELOG.md#deprecations
 [Phoenix LiveView]: https://github.com/phoenixframework/phoenix_live_view
 [`Phoenix.LiveView.Helpers.live_component/4`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.Helpers.html#live_component/4
+[Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
 [phx-i18n-06-live-stateless]: https://phx-i18n-06-live-stateless.herokuapp.com/
+[phx-i18n-07-live-stateful]: https://phx-i18n-07-live-stateful.herokuapp.com/
+[phx-i18n-08-live-stateful-0-6]: https://phx-i18n-08-live-stateful-0-6.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [`preload/1`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#c:preload/1
 [Preloading and update]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-preloading-and-update
 [`send_update/2`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#send_update/2
 [Stateful Components]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-stateful-components-life-cycle
 [Stateless Components]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-stateless-components-life-cycle
-[Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
+[Targeting Component Events]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-targeting-component-events
