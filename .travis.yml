@@ -57,12 +57,12 @@ jobs:
         # ** NOTE: For whatever reason, htmlproofer doesn't seem to be working
         # at the moment, so deactivate it until it can be confirmed working
         # again.
-        - >
-          bundle exec htmlproofer _site
-          --allow-hash-href
-          --assume-extension
-          --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
-          --http-status-ignore "999" # --disable-external
+        # - >
+        #   bundle exec htmlproofer _site
+        #   --allow-hash-href
+        #   --assume-extension
+        #   --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
+        #   --http-status-ignore "999" # --disable-external
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
