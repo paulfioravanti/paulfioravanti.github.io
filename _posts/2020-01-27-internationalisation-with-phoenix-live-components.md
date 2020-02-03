@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
-last_modified_at: 2020-01-29 16:15 +1100
+last_modified_at: 2020-02-03 17:00 +1100
 tags: elixir phoenix liveview live-components i18n
 header:
   image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
@@ -17,9 +17,13 @@ excerpt: >
   LiveComponents.
 ---
 
-In _[Internationalisation with Phoenix LiveView][]_, we created a small
-[I18n][Internationalization Naming] application using [Phoenix LiveView][] that
-can change the language of text on a page via a dropdown menu:
+This blog post is the second in a series on the creation of a small
+[I18n][Internationalization Naming] application using [Phoenix LiveView][],
+which updates page content based on the language chosen from a dropdown menu:
+
+1. _[Internationalisation with Phoenix LiveView][]_
+2. _Internationalisation with Phoenix LiveComponents_
+3. _[Internationalisation with Phoenix Live Layouts][]_
 
 {: refdef: style="text-align: center;"}
 ![I18n Application][]
@@ -1017,6 +1021,9 @@ You can find the code for this iteration of the application in this post's
 [`08-live-stateful-0-6` branch][]. The branch is also deployed
 [here][phx-i18n-08-live-stateful-0-6] in its own environment.
 
+Follow the next steps of this application's journey in _[Internationalisation
+with Phoenix Live Layouts][]_!
+
 [`05-liveview-fix` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/05-liveview-fix
 [`06-live-stateless` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/06-live-stateless
 [`07-live-stateful` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/07-live-stateful
@@ -1025,6 +1032,7 @@ You can find the code for this iteration of the application in this post's
 [arity]: https://en.wikipedia.org/wiki/Arity
 [I18n Application]: /assets/images/2020-01-27/i18n-application.gif "Internationalisation Application"
 [Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
+[Internationalisation with Phoenix Live Layouts]: https://paulfioravanti.com/blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
 [LiveComponent as the source of truth]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-livecomponent-as-the-source-of-truth

@@ -1,7 +1,7 @@
 ---
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2020-01-27 10:00 +1100
+last_modified_at: 2020-02-03 17:00 +1100
 tags: elixir phoenix liveview i18n
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -19,6 +19,18 @@ badges:
 excerpt: >
   Change your application locale without a full-page reload or having to write (much) Javascript.
 ---
+
+This blog post is the first in a series on the creation of a small
+[I18n][Internationalization Naming] application using [Phoenix LiveView][],
+which updates page content based on the language chosen from a dropdown menu:
+
+1. _Internationalisation with Phoenix LiveView_
+2. _[Internationalisation with Phoenix LiveComponents][]_
+3. _[Internationalisation with Phoenix Live Layouts][]_
+
+{: refdef: style="text-align: center;"}
+![I18n Application][]
+{: refdef}
 
 In a previous blog post, _[Runtime Language Switching in Elm][]_, I re-created
 the [Tachyons][] [Full Screen Centered Title component documentation page][] in
@@ -2676,8 +2688,10 @@ with Phoenix LiveComponents][]_!
 [GlobalEventHandlers.onclick]: https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick
 [`History.replaceState`]: https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[I18n Application]: /assets/images/2019-11-03/i18n-application.gif "Internationalisation Application"
 [IIFE]: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 [Internationalisation with Phoenix LiveComponents]: https://paulfioravanti.com/blog/2020/01/27/internationalisation-with-phoenix-live-components/
+[Internationalisation with Phoenix Live Layouts]: https://paulfioravanti.com/blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [Javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [Javascript object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
