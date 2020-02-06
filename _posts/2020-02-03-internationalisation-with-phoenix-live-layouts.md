@@ -12,6 +12,10 @@ header:
   caption: >
     Photo by [Kyle Glenn](https://unsplash.com/@kylejglenn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     on [Unsplash](https://unsplash.com/s/photos/international?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+badges:
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%23187-blueviolet.svg
+    alt: "Elixir Weekly #187"
+    link: https://elixirweekly.net/issues/187
 excerpt: >
   Phoenix layouts are now live-powered, giving LiveViews more flexibility and
   control over a template's surrounding content.
