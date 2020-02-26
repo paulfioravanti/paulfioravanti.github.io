@@ -1,7 +1,7 @@
 ---
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2019-04-28 12:00 +1100
+last_modified_at: 2020-02-27 9:10 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -689,7 +689,7 @@ but the issues with that I found were:
 [Ergodox EZ Graphical Configurator Page]: https://ergodox-ez.com/pages/graphical-configurator
 [Ergodox EZ image]: /assets/images/2018-10-18/ergodox-ez.jpg "Ergodox EZ"
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
-[G20 Blank Keysets]: https://pimpmykeyboard.com/g20-blank-keysets/
+[G20 Blank Keysets]: https://pimpmykeyboard.com/all-products/keycaps/singles-packs/?search_query=&page=1&limit=51&sort=newest&Profile=G20&category=30&is_category_page=1
 [G20 Homing Bump]: https://pimpmykeyboard.com/g20-1-space-homing-bar-or-bump-pack-of-4/
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"

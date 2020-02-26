@@ -11,7 +11,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     coderay (1.1.2)
     colorator (1.1.0)
-    concurrent-ruby (1.1.5)
+    concurrent-ruby (1.1.6)
     cssminify2 (2.0.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
@@ -151,7 +151,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rouge (3.15.0)
+    rouge (3.16.0)
     rubyzip (2.2.0)
     safe_yaml (1.0.5)
     sassc (2.2.1)
@@ -173,7 +173,7 @@ GEM
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.6.1)
-    yell (2.2.1)
+    yell (2.2.2)
     zeitwerk (2.2.2)
 
 PLATFORMS

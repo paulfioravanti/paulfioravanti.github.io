@@ -1,7 +1,7 @@
 ---
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
-last_modified_at: 2019-04-28 12:20 +1100
+last_modified_at: 2020-02-27 09:10 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography
 header:
   image: /assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg
@@ -607,7 +607,7 @@ me know!
 [Ergodox]: https://www.ergodox.io/
 [Ergodox EZ Graphical Configurator Page]: https://ergodox-ez.com/pages/graphical-configurator
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
-[G20]: https://pimpmykeyboard.com/g20-blank-keysets/
+[G20]: https://pimpmykeyboard.com/all-products/keycaps/singles-packs/?search_query=&page=1&limit=51&sort=newest&Profile=G20&category=30&is_category_page=1
 [Georgi]: https://www.gboards.ca/product/georgi
 [Georgi image]: /assets/images/2019-04-28/georgi.jpg
 [Georgi is the most nonQMK layout]: https://github.com/qmk/qmk_firmware/blob/9c98fef4f6d35d9e07865b119550f6e7e9e6610d/keyboards/georgi/keymaps/default/keymap.c#L2
