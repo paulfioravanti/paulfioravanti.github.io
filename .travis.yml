@@ -71,13 +71,15 @@ jobs:
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
+      # Use dpl v2
+      # https://docs.travis-ci.com/user/deployment-v2
+      # https://docs.travis-ci.com/user/deployment-v2/providers/pages/
       deploy:
-        provider: pages
+        provider: pages:git
+        edge: true
         local_dir: ./_site
         target_branch: master
         name: Travis Deployment Bot
-        skip_cleanup: true
-        strategy: git
         # This token generated at https://github.com/settings/tokens and added
         # to Travis environment variables.
         token: $GITHUB_TOKEN
