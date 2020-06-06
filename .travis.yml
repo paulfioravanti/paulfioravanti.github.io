@@ -6,7 +6,7 @@ language: ruby
 cache: bundler
 rvm:
   - 2.7.1
-node_js:
+nvm:
   - 14.3.0
 bundler_args: --without development
 before_install:
