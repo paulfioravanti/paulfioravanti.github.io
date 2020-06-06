@@ -20,7 +20,10 @@ addons:
   apt:
     packages:
       # Needed for htmlproofer external link checks
-      # - libcurl4-openssl-dev
+      - libcurl4-openssl-dev
+      # Added for "Peer certificate cannot be authenticated with given
+      # CA certificates" errors
+      - ca-certificates
 branches:
   only:
     - release
