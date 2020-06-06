@@ -1,6 +1,6 @@
 # References:
 # - https://docs.travis-ci.com/user/caching/#Bundler
-sudo: false
+os: linux
 dist: trusty
 language: ruby
 cache: bundler
@@ -70,13 +70,14 @@ jobs:
         - JEKYLL_ENV=production bundle exec jekyll build
       deploy:
         provider: pages
-        local-dir: ./_site
-        target-branch: master
+        local_dir: ./_site
+        target_branch: master
         name: Travis Deployment Bot
-        skip-cleanup: true
+        cleanup: false
+        strategy: git
         # This token generated at https://github.com/settings/tokens and added
         # to Travis environment variables.
-        github-token: $GITHUB_TOKEN
-        keep-history: true
+        token: $GITHUB_TOKEN
+        keep_history: true
         on:
           branch: release
