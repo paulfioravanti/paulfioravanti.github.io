@@ -542,6 +542,6 @@ a comment explaining why.
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby shadowing a bad habit]: https://bugs.ruby-lang.org/issues/12490#note-2
 [Ruby's syntax documentation]: https://docs.ruby-lang.org/en/2.5.0/syntax_rdoc.html
-[`ShadowingOuterLocalVariable` cop]: https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Lint/ShadowingOuterLocalVariable
+[`ShadowingOuterLocalVariable` cop]: https://rubocop.readthedocs.io/en/latest/cops_lint/#lintshadowingouterlocalvariable
 [variable shadowing]: https://en.wikipedia.org/wiki/Variable_shadowing
 [What does "shadowing" mean in Ruby?]: https://stackoverflow.com/questions/6259314/what-does-shadowing-mean-in-ruby
