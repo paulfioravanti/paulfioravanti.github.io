@@ -222,7 +222,7 @@ reads through the code.
 "person holding magnifying glass")
 {% endcapture %}
 {% capture joao_silas_credit %}
-Photo by [João Silas](https://unsplash.com/photos/UGQoo2nznz8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo by João Silas
 on [Unsplash](https://unsplash.com/search/photos/magnifying-glass?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 {% endcapture %}
 <figure>
