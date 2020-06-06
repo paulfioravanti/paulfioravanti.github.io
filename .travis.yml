@@ -76,7 +76,7 @@ jobs:
         local_dir: ./_site
         target_branch: master
         name: Travis Deployment Bot
-        cleanup: false
+        skip_cleanup: true
         strategy: git
         # This token generated at https://github.com/settings/tokens and added
         # to Travis environment variables.
