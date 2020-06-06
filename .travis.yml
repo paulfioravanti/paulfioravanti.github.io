@@ -22,8 +22,6 @@ addons:
       # Needed for htmlproofer external link checks
       - libcurl4-openssl-dev
       # Added for "Peer certificate cannot be authenticated with given
-      # CA certificates" errors
-      - ca-certificates
 branches:
   only:
     - release
@@ -67,7 +65,9 @@ jobs:
           --allow-hash-href
           --assume-extension
           --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
-          --http-status-ignore "999" # --disable-external
+          --http-status-ignore "999"
+          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+          # --disable-external
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
