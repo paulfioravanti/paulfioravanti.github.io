@@ -10,7 +10,7 @@ header:
   overlay_image: /assets/images/2020-01-08/allie-smith-vuWCq1bXZy0-unsplash.jpg
   overlay_filter: 0.5
   caption: >
-    Photo by [Allie Smith](https://unsplash.com/@creativegangsters?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    Photo by Allie Smith
     on [Unsplash](https://unsplash.com/s/photos/laptop-cafe?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Small thoughts on remote working.
