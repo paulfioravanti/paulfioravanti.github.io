@@ -1,7 +1,7 @@
 ---
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2020-02-27 9:10 +1100
+last_modified_at: 2020-06-8 14:35 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -651,7 +651,7 @@ changes, but kept the original "high" configuration in
 also see how I've incorporated this change in my
 [current personal keymaps][QMK Keymaps].
 
-### Use Steno Appropriate Keycaps
+### Use Steno-Appropriate Keycaps
 
 Based on the [Plover Keycap Recommendations][], I picked up a set of
 [G20 Blank Keysets][] and this has made chording _much_ easier.
@@ -679,6 +679,114 @@ but the issues with that I found were:
   (if you want the homing bars/dots but don't want the base set, you have the
   option of just [buying a set of those keys separately][G20 Homing Bump])
 
+## Update (8 Jun 2020)
+
+### Use Steno-Appropriate Switches (if possible)
+
+A few months ago from this writing, I had occasion to pick up a new
+[Ergodox EZ][]. While I have played with a variety of [keyboard switches][] on
+other people's keyboards, I have only ever used [Cherry MX Browns][] and
+[Gateron Browns][] on a regular basis.  So, I decided to look into more
+steno-friendly keyswitch types for the new board.
+
+Based on advice in the [Plover keyswitch guide][], I looked at the
+[Ergodox EZ keyswitches][] page to see which ones provide a "light actuation
+force on a linear switch". Judging by the page comparison charts,
+[Kailh Speed Silver][] switches seemed the most appropriate, so that's what I
+got.
+
+After practising with Kailh Silvers, I can definitely recommend them over
+Cherry/Gateron Browns for stenography. Chording is noticeably easier due to the
+lighter touch, and I have found that my hands are a bit less fatigued after a
+practice session.
+
+However, I would probably not recommend buying a brand new Ergodox
+_specifically_ to get new keyswitches, especially if you are still a learner
+and your current board works fine.  If you have a newer Ergodox that has
+[changeable switches][], then you have the option to just buy some Kailh Speed
+Silvers (or any of the other switches the Plover guide mentions).
+
+If you are like me, though, and your older board needs replacing, or you are
+considering buying/building your first Ergodox, then the path I took is open to
+you.
+
+### Number "Bar" versus Button
+
+I have found chording numbers quite challenging, and have wondered if there was
+perhaps an easier way to stroke them.
+
+The [QMK Ergodox EZ steno configuration][QMK Ergodox EZ Steno Configuration 2020-06-08],
+as of this writing, re-creates a stenography machine [number bar][] over 11
+separate keys. However, looking at the layout of a modern keyboard made
+specifically for stenography, the [Georgi][] ([QMK layout][Georgi QMK config]),
+it uses a single number key on each of its thumb clusters, presumably to be used
+in the same vein as the asterisk key.
+
+It makes a lot of sense to me to palm off number duty to your thumbs in order
+to keep your other fingers from ever moving away from steno home row, so I have
+modified my own layout to have number keys in two extra places on the Ergodox:
+
+- under the `R` keys on both halves
+- above the `O` and `E` keys
+
+Applied to the layout used above, it would look like the following, using the
+`STN_NC` keycode for all the keys since it has not been used yet:
+
+**`qmk_firmware/keyboards/ergodox_ez/keymaps/default_steno/keymap.c`**
+
+```c
+// ...
+/* Keymap 3: Stenography
+ *
+ * ,--------------------------------------------------.           ,--------------------------------------------------.
+ * |   [x]  |  [x] |  [x] |  [x] |  [x] |  [x] |      |           |  [x] |  [x] |  [x] |  [x] |  [x] |  [x] |  [x]   |
+ * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
+ * |   [x]  |   #  |   #  |   #  |   #  |   #  |      |           |      |   #  |   #  |   #  |   #  |   #  |   #    |
+ * |--------+------+------+------+------+------|  [x] |           |  [x] |------+------+------+------+------+--------|
+ * |   [x]  |   S  |   T  |   P  |   H  |   *  |------|           |------|   *  |   F  |   P  |   L  |   T  |   D    |
+ * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
+ * |   [x]  |   S  |   K  |   W  |   R  |   *  |  [x] |           |  [x] |   *  |   R  |   B  |   G  |   S  |   Z    |
+ * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
+ *   | [x]  |  [x] |  [x] |  [x] |   #  |                                       |   #  |  [x] |  [x] |  [x] |  [x] |
+ *   `----------------------------------'                                       `----------------------------------'
+ *                                        ,-------------.       ,-------------.
+ *                                        |   #  |  [x] |       |  [x] |   #  |
+ *                                 ,------|------|------|       |------+------+------.
+ *                                 |      |      |  [x] |       |  [x] |      |      |
+ *                                 |  A   |   O  |------|       |------|   E  |   U  |
+ *                                 |      |      |  [x] |       |  [x] |      |      |
+ *                                 `--------------------'       `--------------------'
+ */
+[STEN] = LAYOUT_ergodox(  // layer 3 : Stenography
+    // left hand
+    _x_, _x_,    _x_,    _x_,    _x_,    _x_,     ___,
+    _x_, STN_N1, STN_N2, STN_N3, STN_N4, STN_N5,  _x_,
+    _x_, STN_S1, STN_TL, STN_PL, STN_HL, STN_ST1,
+    _x_, STN_S2, STN_KL, STN_WL, STN_RL, STN_ST2, _x_,
+    _x_, _x_,    _x_,    _x_,    STN_NC,
+                                         STN_NC,  _x_,
+                                                  _x_,
+                                 STN_A,  STN_O,   _x_,
+  // right hand
+  _x_, _x_,     _x_,    _x_,    _x_,    _x_,    _x_,
+  _x_, STN_N6,  STN_N7, STN_N8, STN_N9, STN_NA, STN_NB,
+  _x_, STN_ST3, STN_FR, STN_PR, STN_LR, STN_TR, STN_DR,
+       STN_ST4, STN_RR, STN_BR, STN_GR, STN_SR, STN_ZR,
+                STN_NC, _x_,    _x_,    _x_,    _x_,
+  _x_, STN_NC,
+  _x_,
+  _x_, STN_E,   STN_U
+)
+// ...
+```
+
+I am not sure which of these thumb-based number keys I will end up using yet
+(if any), so I am planning on letting my hands decide what feels right. See
+[my personal QMK keymap][QMK Keymaps] for more details and code to copy if you
+want to try this layout as well.
+
+[changeable switches]: https://ergodox-ez.com/pages/change-it-yourself
+[Cherry MX Browns]: https://www.cherrymx.de/en/mx-original/mx-brown.html
 [Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
 [Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#configuring-qmk-for-steno
@@ -688,18 +796,25 @@ but the issues with that I found were:
 [Ergodox EZ]: https://ergodox-ez.com/
 [Ergodox EZ Graphical Configurator Page]: https://ergodox-ez.com/pages/graphical-configurator
 [Ergodox EZ image]: /assets/images/2018-10-18/ergodox-ez.jpg "Ergodox EZ"
+[Ergodox EZ keyswitches]: https://ergodox-ez.com/pages/keyswitches
 [Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/all-products/keycaps/singles-packs/?search_query=&page=1&limit=51&sort=newest&Profile=G20&category=30&is_category_page=1
 [G20 Homing Bump]: https://pimpmykeyboard.com/g20-1-space-homing-bar-or-bump-pack-of-4/
+[Gateron Browns]: https://mechanicalkeyboards.com/switches/index.php?switch=Gateron-Brown
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
+[Georgi]: https://www.gboards.ca/product/georgi
+[Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/georgi
 [Google IME]: https://www.google.com/inputtools/services/features/input-method.html
+[Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
+[keyboard switches]: https://mechanicalkeyboards.com/switches/
 [Learn Plover!]: https://sites.google.com/site/ploverdoc/
 [Learn Plover! Lesson 1]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
+[number bar]: http://qwertysteno.com/Intermediate/Numbers.php
 [Open Steno Project]: http://www.openstenoproject.org/
 [PMK]: https://pimpmykeyboard.com/
 [Plover]: http://www.openstenoproject.org/plover/
@@ -708,6 +823,7 @@ but the issues with that I found were:
 [Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
 [Plover Installation]: https://github.com/openstenoproject/plover/wiki/Installation-Guide#installation
 [Plover Keycap Recommendations]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#keycaps
+[Plover keyswitch guide]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#which-type-of-key-switch-should-i-choose
 [Plover supported protocols]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#supported-protocols
 [Plover with Steno Protocol]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#plover-with-steno-protocol
 [Plover QWERTY mapping]: https://github.com/openstenoproject/plover/wiki/Beginner's-Guide:-Get-Started-with-Plover#use-the-correct-body-posture-and-finger-placement
@@ -715,6 +831,7 @@ but the issues with that I found were:
 [QMK Ergodox Default Steno]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno
 [QMK Ergodox Default Steno High]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno_high
 [QMK Ergodox EZ Steno Configuration]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno
+[QMK Ergodox EZ Steno Configuration 2020-06-08]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno
 [QMK Ergodox EZ Steno Configuration Current]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps/steno
 [QMK Ergodox EZ Steno Configuration Keymap Codes]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L140
 [QMK Ergodox EZ Steno Configuration Keymap Functions]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L256
