@@ -38,5 +38,5 @@ So, hello (again) blog, and here's to a new start :beers:
 [learn-enough-css-repo]: https://github.com/paulfioravanti/learn_enough_css
 [learn-enough-css-heroku]: http://learn-enough-css.herokuapp.com/
 [mhartl]: https://twitter.com/mhartl
-[technical-blogging]: https://pragprog.com/book/actb/technical-blogging
+[technical-blogging]: https://pragprog.com/titles/actb2/
 [wordpress]: https://wordpress.com/
