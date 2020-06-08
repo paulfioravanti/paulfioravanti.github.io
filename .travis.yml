@@ -75,9 +75,9 @@ jobs:
       # https://docs.travis-ci.com/user/deployment-v2
       # https://docs.travis-ci.com/user/deployment-v2/providers/pages/
       deploy:
-        provider: pages:git
+        provider: "pages:git"
         edge: true
-        local_dir: ./_site
+        local_dir: "./_site"
         target_branch: master
         name: Travis Deployment Bot
         # This token generated at https://github.com/settings/tokens and added
