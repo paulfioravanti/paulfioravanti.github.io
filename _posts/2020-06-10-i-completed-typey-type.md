@@ -1,7 +1,7 @@
 ---
 title: "I Completed Typey Type"
-date: 2020-06-10 9:00 +1100
-last_modified_at: 2020-06-10 9:00 +1100
+date: 2020-06-10 22:00 +1100
+last_modified_at: 2020-06-10 22:00 +1100
 tags: stenography keyboards ergodox mechanical-keyboards plover
 header:
   image: /assets/images/2020-06-10/stenotype.jpg
