@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2018/07/26/connecting-elm-to-phoenix-1-4-with-webpack/
 title: "Connecting Elm to Phoenix 1.4 with webpack"
 date: 2018-07-26 16:20 +1100
 last_modified_at: 2019-04-15 14:45 +1100
@@ -311,7 +312,7 @@ That looks about right. Now, you can get down to the business of ripping it all
 out again, and start building out your own Phoenix-and-Elm powered app!
 
 [Brunch]: https://brunch.io/
-[Connecting Elm to Phoenix 1.3]: https://paulfioravanti.com/blog/2018/02/08/connecting-elm-to-phoenix-1-3/
+[Connecting Elm to Phoenix 1.3]: https://paulfioravanti.com/blog/connecting-elm-to-phoenix-1-3/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/

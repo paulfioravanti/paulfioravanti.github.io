@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2018/10/29/build-a-ci-cd-pipeline-for-your-jekyll-site/
 title: "Build a CI/CD pipeline for your Jekyll site"
 date: 2018-10-29 21:40 +1100
 tags: jekyll ruby
@@ -282,7 +283,7 @@ restrictions, to Github Pages! :tada:
 [LinkedIn]: https://www.linkedin.com/
 [my Jekyll Github repository]: https://github.com/paulfioravanti/paulfioravanti.github.io
 [search engine optimisation]: https://en.wikipedia.org/wiki/Search_engine_optimization
-[Setting up a Jekyll Blog]: https://paulfioravanti.com/blog/2017/11/17/setting-up-a-jekyll-blog/
+[Setting up a Jekyll Blog]: https://paulfioravanti.com/blog/setting-up-a-jekyll-blog/
 [Setting up Travis CI to build and deploy the site]: https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075#14a9
 [Supercharge GitHub Pages with Jekyll and Travis CI]: https://medium.com/@mcred/supercharge-github-pages-with-jekyll-and-travis-ci-699bc0bde075
 [supported Jekyll plugins on Github Pages]: https://pages.github.com/versions/

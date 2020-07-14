@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2020/01/08/employee-sans-office/
 title: "Employee Sans Office"
 date: 2020-01-08 16:45 +1100
 last_modified_at: 2020-01-08 16:45 +1100

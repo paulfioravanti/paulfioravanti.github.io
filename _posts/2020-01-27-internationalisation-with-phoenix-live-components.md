@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2020/01/27/internationalisation-with-phoenix-live-components/
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
 last_modified_at: 2020-02-03 17:00 +1100
@@ -1031,8 +1032,8 @@ with Phoenix Live Layouts][]_!
 [`08-live-stateful-0-6` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/08-live-stateful-0-6
 [arity]: https://en.wikipedia.org/wiki/Arity
 [I18n Application]: /assets/images/2020-01-27/i18n-application.gif "Internationalisation Application"
-[Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
-[Internationalisation with Phoenix Live Layouts]: https://paulfioravanti.com/blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
+[Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
+[Internationalisation with Phoenix Live Layouts]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-live-layouts/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
 [LiveComponent as the source of truth]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-livecomponent-as-the-source-of-truth

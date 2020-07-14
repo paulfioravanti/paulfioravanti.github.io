@@ -1,5 +1,7 @@
 ---
-redirect_from: /jekyll/2017/11/17/setting-up-a-jekyll-blog.html
+redirect_from:
+  - /jekyll/2017/11/17/setting-up-a-jekyll-blog.html
+  - /blog/2017/11/17/setting-up-a-jekyll-blog/
 title: "Setting up a Jekyll Blog"
 date: 2017-11-17 22:30 +1100
 tags: jekyll ruby

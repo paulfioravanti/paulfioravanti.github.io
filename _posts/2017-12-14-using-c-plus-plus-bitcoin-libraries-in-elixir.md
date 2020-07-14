@@ -1,6 +1,8 @@
 ---
-redirect_from: /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir.html
-redirect_from: /blog/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir/
+redirect_from:
+  - /elixir/bitcoin/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir.html
+  - /blog/2017/12/13/using-c-plus-plus-bitcoin-libraries-in-elixir/
+  - /blog/2017/12/14/using-c-plus-plus-bitcoin-libraries-in-elixir/
 title: "Using C++ Bitcoin libraries in Elixir"
 date: 2017-12-14 09:03 +1100
 last_modified_at: 2019-04-15 14:45 +1100
@@ -907,5 +909,5 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
 [Stack Overflow]: https://stackoverflow.com/
-[Using Python's Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/2017/12/04/using-pythons-bitcoin-libraries-in-elixir/
+[Using Python's Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/using-pythons-bitcoin-libraries-in-elixir/
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A

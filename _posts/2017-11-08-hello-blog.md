@@ -1,5 +1,7 @@
 ---
-redirect_from: /jekyll/2017/11/08/hello-blog.html
+redirect_from:
+  - /jekyll/2017/11/08/hello-blog.html
+  - /blog/2017/11/08/hello-blog/
 title: "Hello Blog!"
 date: 2017-11-08 16:49 +1100
 tags: jekyll

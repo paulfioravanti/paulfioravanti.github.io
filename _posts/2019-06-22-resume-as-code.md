@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2019/06/22/resume-as-code/
 title: "Resume as Code"
 date: 2019-06-22 22:00 +1100
 last_modified_at: 2019-06-22 22:00 +1100

@@ -1,4 +1,5 @@
 ---
+redirect_from: /blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
 title: "Internationalisation with Phoenix Live Layouts"
 date: 2020-02-03 17:00 +1100
 last_modified_at: 2020-02-03 17:00 +1100
@@ -521,8 +522,8 @@ moving forward!
 [`09-live-layout` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/09-live-layout
 [I18n Application]: /assets/images/2020-02-03/i18n-application.gif "Internationalisation Application"
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
-[Internationalisation with Phoenix LiveComponents]: http://paulfioravanti.com/blog/2020/01/27/internationalisation-with-phoenix-live-components/
-[Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/2019/11/03/internationalisation-with-phoenix-liveview/
+[Internationalisation with Phoenix LiveComponents]: http://paulfioravanti.com/blog/internationalisation-with-phoenix-live-components/
+[Internationalisation with Phoenix LiveView]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
 [Live Layout Issue]: /assets/images/2020-02-03/live-layout-issue.gif "Live Layout Issue"
 [Live Layouts]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#module-live-layouts

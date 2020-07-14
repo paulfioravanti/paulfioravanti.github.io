@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/07/30/escape-the-defaults-and-control-your-keyboard-with-qmk/
+redirect_from:
+  - /blog/2018/07/30/escape-the-defaults-and-control-your-keyboard-with-qmk/
+  - /blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 title: "Escape the defaults and Control your keyboard with QMK"
 date: 2018-07-31 09:10 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang
