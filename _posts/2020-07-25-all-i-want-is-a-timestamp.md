@@ -16,7 +16,9 @@ excerpt: >
 Inserting the current date and time into a [Google Sheets][] cell can be done
 with the following [keyboard shortcut][Google Sheets keyboard shortcuts]:
 
-{: refdef: style="margin: auto; width: 50%; font-size: larger; margin-bottom: 1rem;"}
+{: refdef:
+  style="margin: auto; width: 50%; font-size: larger; margin-bottom: 1rem;"
+}
 | Platform | Shortcut              |
 |:--------:|:---------------------:|
 | PC       | Ctrl + Alt + Shift + ;|
@@ -34,7 +36,9 @@ keyboards. Still with me? Read on...
 
 ## To-Do List
 
-![To-Do List][]{: style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"}
+![To-Do List][]{:
+  style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"
+}
 
 Using Google Sheets, I wanted to have a task list, similar to this screenshot,
 where I could log the start and end times of my tasks.
@@ -42,7 +46,9 @@ where I could log the start and end times of my tasks.
 I made the assumption that there was a built-in function that could generate
 a timestamp for me, and when I went looking, I found [`NOW`][].
 
-![Start Now][]{: style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"}
+![Start Now][]{:
+  style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"
+}
 
 Using it in the spreadsheet would seem to have given me what I wanted, formatted
 in the way that I expect. Great!
@@ -51,7 +57,9 @@ When a task is finished, all I should have to do is make another call to
 `NOW`, and I would get a new generated date and time, right? Well, that
 happened, but also...
 
-![Finish Now][]{: style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"}
+![Finish Now][]{:
+  style="width: 50%; float: right; margin-left: 1rem; margin-bottom: 1rem;"
+}
 
 ...the _start time_ also got re-generated, ending up the same value as the
 finish time!
@@ -80,7 +88,7 @@ for the job:
   spreadsheet, and can hurt spreadsheet performance.
 > - NOW will always represent the current date and time the last time the
   spreadsheet was recalculated, rather than remaining at the date and time when
-  it was first entered. 
+  it was first entered.
 
 Now that I know I have a _dynamic_ values problem, I wonder if there is any way
 to get a _static_ datetime _value_, rather than what seems like a reference to a
@@ -139,6 +147,7 @@ function onEdit(e) {
 ```
 
 This function does the following:
+
 - Whenever an edit occurs in the spreadsheet, the content of the cell is checked
   to see if it contains the string `"_now"` (technically, the value of the
   [range][] of the [event object][] `e` is checked)
