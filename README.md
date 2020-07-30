@@ -46,7 +46,7 @@ HTMLProofer is a Ruby gem and so Bundler will bring it into the project.
 bundle exec jekyll serve --incremental --drafts --port 5000 --livereload
 ```
 
-Then, navigate to <http://localhost:4000>
+Then, navigate to <http://localhost:5000>
 
 ### Monitor files
 
@@ -108,10 +108,10 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [HTMLProofer]: https://github.com/gjtorikian/html-proofer
 [`_includes`]: _includes
 [Jekyll]: https://jekyllrb.com
-[license-cc]: LICENSE-CC-BY-4.0.txt
+[license-cc]: ./LICENSE.md
 [license-cc-badge]: https://licensebuttons.net/l/by/4.0/80x15.png
 [license-cc-url]: https://creativecommons.org/licenses/by/4.0/
-[license-mit]: LICENSE-MIT.txt
+[license-mit]: ./LICENSE-MIT.md
 [license-mit-badge]: https://img.shields.io/badge/License-MIT-lightgrey.svg
 [license-mit-url]: https://opensource.org/licenses/MIT
 [markdownlint]: https://github.com/DavidAnson/markdownlint
