@@ -2,7 +2,7 @@
 redirect_from: /blog/2018/10/18/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2020-06-8 14:35 +1100
+last_modified_at: 2020-08-29 20:30 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -809,7 +809,7 @@ want to try this layout as well.
 [Google IME]: https://www.google.com/inputtools/services/features/input-method.html
 [Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
-[keyboard switches]: https://mechanicalkeyboards.com/switches/
+[keyboard switches]: https://thegamingsetup.com/gaming-keyboard/buying-guides/keyboard-switch-chart-table
 [Learn Plover!]: https://sites.google.com/site/ploverdoc/
 [Learn Plover! Lesson 1]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
