@@ -270,16 +270,17 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "single"
       author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
       # https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/
       classes: "wide"
+      comments: true
       # https://jekyllrb.com/docs/posts/#post-excerpts
       excerpt_separator: "<!--more-->"
+      layout: "single"
+      read_time: true
+      related: true
+      share: true
+      show_date: true
 
 # https://github.com/github/pages-gem/issues/399#issuecomment-301827749
 github: [metadata]
