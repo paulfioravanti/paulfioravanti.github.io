@@ -2,7 +2,7 @@
 redirect_from: /blog/2018/08/20/the-curious-incident-of-the-shadow-in-the-run-time/
 title: "The Curious Incident of the Shadow in the Run-Time"
 date: 2018-08-20 18:00 +1100
-last_modified_at: 2019-04-15 14:45 +1100
+last_modified_at: 2020-10-15 22:00 +1100
 tags: ruby shadowing
 header:
   image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
@@ -535,14 +535,14 @@ a comment explaining why.
 [A Ruby shadowing bug in the wild]: https://thomasleecopeland.com/2017/04/20/shadowing-bug-in-the-wild.html
 [Behaviours of a Ruby local variable shadowing an instance method]: https://stackoverflow.com/questions/46597191/behaviours-of-a-ruby-local-variable-shadowing-an-instance-method
 [Binding]: https://ruby-doc.org/core-2.5.1/Binding.html
-[`defined?`]: https://docs.ruby-lang.org/en/2.5.0/syntax/miscellaneous_rdoc.html#label-defined-3F
-[Local Variables and Methods Assignment]: https://docs.ruby-lang.org/en/2.5.0/syntax/assignment_rdoc.html#label-Local+Variables+and+Methods
+[`defined?`]: https://docs.ruby-lang.org/en/2.4.0/syntax/miscellaneous_rdoc.html#label-defined-3F
+[Local Variables and Methods Assignment]: https://docs.ruby-lang.org/en/2.4.0/syntax/assignment_rdoc.html#label-Local+Variables+and+Methods
 [Matz]: https://en.wikipedia.org/wiki/Yukihiro_Matsumoto
 [Pry]: https://github.com/pry/pry
 [Rubocop]: https://github.com/rubocop-hq/rubocop
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby shadowing a bad habit]: https://bugs.ruby-lang.org/issues/12490#note-2
-[Ruby's syntax documentation]: https://docs.ruby-lang.org/en/2.5.0/syntax_rdoc.html
+[Ruby's syntax documentation]: https://docs.ruby-lang.org/en/2.4.0/syntax_rdoc.html
 [`ShadowingOuterLocalVariable` cop]: https://rubocop.readthedocs.io/en/latest/cops_lint/#lintshadowingouterlocalvariable
 [variable shadowing]: https://en.wikipedia.org/wiki/Variable_shadowing
 [What does "shadowing" mean in Ruby?]: https://stackoverflow.com/questions/6259314/what-does-shadowing-mean-in-ruby
