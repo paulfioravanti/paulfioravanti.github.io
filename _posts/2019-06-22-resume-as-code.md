@@ -2,7 +2,7 @@
 redirect_from: /blog/2019/06/22/resume-as-code/
 title: "Resume as Code"
 date: 2019-06-22 22:00 +1100
-last_modified_at: 2019-06-22 22:00 +1100
+last_modified_at: 2020-10-15 22:00 +1100
 tags: pdf prawn resume ruby
 header:
   image: /assets/images/2019-06-22/drew-beamer-692664-unsplash.jpg
@@ -292,11 +292,14 @@ Japanese text cannot be rendered with Prawn's built-in fonts, and you will need
 to rely on external [TrueType][] font files (extension `.ttf`) to display text.
 
 When you attempt to generate my resume in Japanese, Ruby goes and fetches font
-files from my Dropbox account, that are originally from the
-[Information-Technology Promotion Agency][] (IPA), and downloads them to your
-`tmp` directory. Specifically, the "4 fonts package" listed on
+files from my Dropbox account, and downloads them into your `tmp` directory.
+These files were originally provided by the
+[Information-Technology Promotion Agency][] (IPA), but are now the concern
+of the [Character Information Technology & Promotion Council][] (CITPC).
+The specific set of font files are the "4 fonts package" (4書体パック) listed on
 [this page][Download IPA fonts], which contains the IPA Mincho and IPA Gothic
-fonts.
+fonts. The latest versions of these fonts can be found on the
+[IPAex Font Downloads page][].
 
 I used the IPAPMincho font (`ipamp.ttf`) for "normal" font, and IPAPGothic
 (`ipagp.ttf`) for "bold"; they are different fonts, but one worked for me as
@@ -353,12 +356,14 @@ interviewing!
 
 [Base64]: https://en.wikipedia.org/wiki/Base64
 [Buzzword bingo]: https://en.wikipedia.org/wiki/Buzzword_bingo
-[Download IPA Fonts]: https://ipafont.ipa.go.jp/old/ipafont/download.html#en
+[Character Information Technology & Promotion Council]: https://moji.or.jp/
+[Download IPA Fonts]: https://moji.or.jp/ipafont/ipa00303/
 [half-width kana]: https://en.wikipedia.org/wiki/Half-width_kana
 [IKEA effect]: https://en.wikipedia.org/wiki/IKEA_effect
 [image links]: /assets/images/2019-06-22/image_links.gif
 [Information-technology Promotion Agency]: https://www.ipa.go.jp/
 [interactive resume]: http://www.rleonardi.com/interactive-resume/
+[IPAex Font Downloads page]: https://moji.or.jp/ipafont/ipafontdownload/
 [IRB]: https://en.wikipedia.org/wiki/Interactive_Ruby_Shell
 [JSON]: https://en.wikipedia.org/wiki/JSON
 [LinkedIn]: https://www.linkedin.com/
