@@ -1,0 +1,28 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* CUSTOMISATION: Add colors around a Reddit social sharing button.
+ * Rather than copy the entire Minimal Mistakes _sass/ directory into the local
+ * app as mentioned here (https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/),
+ * instead copy code that generates the styles for the social media links from
+ * https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
+ * and just customise explicitly for Reddit. Note that $reddit-color already
+ * exists within the MM theme.
+ */
+.btn--reddit {
+  @include yiq-contrasted($reddit-color);
+
+  &:visited {
+    @include yiq-contrasted($reddit-color);
+  }
+
+  &:hover {
+    @include yiq-contrasted(mix(#000, $reddit-color, 20%));
+  }
+}
