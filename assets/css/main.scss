@@ -12,17 +12,19 @@
  * app as mentioned here (https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/),
  * instead copy code that generates the styles for the social media links from
  * https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
- * and just customise explicitly for Reddit. Note that $reddit-color already
- * exists within the MM theme.
+ * and just customise explicitly for Reddit.
+ * NOTE: I wanted to use $reddit-color, which already exists within the MM theme,
+ * but it didn't seem to register in production, so I've resorted to just
+ * inlining the hex colour.
  */
 .btn--reddit {
-  @include yiq-contrasted($reddit-color);
+  @include yiq-contrasted(#ff4500);
 
   &:visited {
-    @include yiq-contrasted($reddit-color);
+    @include yiq-contrasted(#ff4500);
   }
 
   &:hover {
-    @include yiq-contrasted(mix(#000, $reddit-color, 20%));
+    @include yiq-contrasted(mix(#000, #ff4500, 20%));
   }
 }
