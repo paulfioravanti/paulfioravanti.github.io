@@ -88,7 +88,11 @@ og_image                 : "/assets/images/paul-og.jpg"
 social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  links:
+    - "https://twitter.com/paulfioravanti"
+    - "https://www.linkedin.com/in/paulfioravanti"
+    - "https://github.com/paulfioravanti"
+    - "https://stackoverflow.com/users/567863/paul-fioravanti"
 
 # Analytics
 analytics:
