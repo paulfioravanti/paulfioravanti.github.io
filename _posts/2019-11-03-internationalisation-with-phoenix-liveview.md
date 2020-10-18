@@ -3,7 +3,7 @@ redirect_from: /blog/2019/11/03/internationalisation-with-phoenix-liveview/
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
 last_modified_at: 2020-02-03 17:00 +1100
-tags: elixir phoenix liveview i18n
+tags: elixir phoenix liveview i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
   image_description: "multicolored buntings on pathway"

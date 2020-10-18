@@ -3,7 +3,7 @@ redirect_from: /blog/2020/01/27/internationalisation-with-phoenix-live-component
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
 last_modified_at: 2020-02-03 17:00 +1100
-tags: elixir phoenix liveview live-components i18n
+tags: elixir phoenix liveview live-components i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
   image_description: "photo of assorted-color nation flags on wall during daytime"

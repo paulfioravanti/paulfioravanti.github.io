@@ -4,7 +4,7 @@ redirect_from:
   - /blog/2018/07/31/escape-the-defaults-and-control-your-keyboard-with-qmk/
 title: "Escape the defaults and Control your keyboard with QMK"
 date: 2018-07-31 09:10 +1100
-tags: ergodox keyboards mechanical-keyboards qmk clang
+tags: ergodox keyboards mechanical-keyboards qmk clang japanese 日本語
 header:
   image: /assets/images/2018-07-31/ergodox-ez.jpg
   image_description: "Ergodox EZ keyboard"

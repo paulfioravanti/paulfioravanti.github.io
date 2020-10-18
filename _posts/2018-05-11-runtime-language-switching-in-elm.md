@@ -3,7 +3,7 @@ redirect_from: /blog/2018/05/11/runtime-language-switching-in-elm/
 title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
 last_modified_at: 2019-04-17 07:30 +1100
-tags: elm i18n
+tags: elm i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
   image_description: "Wall with graffiti in multiple languages"

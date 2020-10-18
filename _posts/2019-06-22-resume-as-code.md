@@ -3,7 +3,7 @@ redirect_from: /blog/2019/06/22/resume-as-code/
 title: "Resume as Code"
 date: 2019-06-22 22:00 +1100
 last_modified_at: 2020-10-15 22:00 +1100
-tags: pdf prawn resume ruby
+tags: pdf prawn resume ruby japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-06-22/drew-beamer-692664-unsplash.jpg
   image_description: "black rolling chairs beside brown table"
