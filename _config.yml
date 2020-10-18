@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Floor and Varnish"
 title_separator          : "|"
 name                     : "Paul Fioravanti"
-description              : "Text on a screen, usually with a technical bent."
+description              : "The permanent drafts folder and container for brain dumps of Paul Fioravanti"
 url                      : "https://paulfioravanti.com"
 baseurl                  : "" # NOTE: This _needs_ to be an empty string, and not blank (`nil`)
 repository               : "paulfioravanti/paulfioravanti.github.io"
@@ -102,7 +102,7 @@ analytics:
 author:
   name             : "Paul Fioravanti"
   avatar           : "https://s.gravatar.com/avatar/abda861707b1e78e0fce47ced55f84ee"
-  bio              : "Coder, linguist, mechanical keyboard enthusiast."
+  bio              : ":heart: code / :heart: languages :it: :jp: / :heart: mech :keyboard: / Learning stenography / Work: <a href='https://twitter.com/teamalembic'>@teamalembic</a> / Meetups: <a href='https://twitter.com/elixirsydney'>@elixirsydney</a>, <a href='https://twitter.com/graphqlsydney'>@graphqlsydney</a>, <a href='https://twitter.com/elmsydney'>@elmsydney</a>"
   location         : "Sydney, Australia"
   email            : "paul.fioravanti@gmail.com"
   uri              : "https://paulfioravanti.com"
