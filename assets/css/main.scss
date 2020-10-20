@@ -28,3 +28,15 @@
     @include yiq-contrasted(mix(#000, #ff4500, 20%));
   }
 }
+
+/* CUSTOMISATION: Make the Mailchimp signup form have the same background
+ * as the MM theme.
+ */
+#mc_embed_signup {
+  background: #eee !important;
+  padding-top: 10px;
+
+  > form {
+    background: #eee;
+  }
+}
