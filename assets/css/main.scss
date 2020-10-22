@@ -6,37 +6,4 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-
-/* CUSTOMISATION: Add colors around a Reddit social sharing button.
- * Rather than copy the entire Minimal Mistakes _sass/ directory into the local
- * app as mentioned here (https://mmistakes.github.io/minimal-mistakes/docs/stylesheets/),
- * instead copy code that generates the styles for the social media links from
- * https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
- * and just customise explicitly for Reddit.
- * NOTE: I wanted to use $reddit-color, which already exists within the MM theme,
- * but it didn't seem to register in production, so I've resorted to just
- * inlining the hex colour.
- */
-.btn--reddit {
-  @include yiq-contrasted(#ff4500);
-
-  &:visited {
-    @include yiq-contrasted(#ff4500);
-  }
-
-  &:hover {
-    @include yiq-contrasted(mix(#000, #ff4500, 20%));
-  }
-}
-
-/* CUSTOMISATION: Make the Mailchimp signup form have the same background
- * as the MM theme.
- */
-#mc_embed_signup {
-  background: #eee !important;
-  padding-top: 10px;
-
-  > form {
-    background: #eee;
-  }
-}
+@import "custom"; // _sass/_custom.scss

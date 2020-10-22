@@ -1,0 +1,28 @@
+/* CUSTOMISATION: Add colors around a Reddit social sharing button.
+ * Copy code that generates the styles for the social media links from
+ * https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
+ * and customise explicitly for Reddit button.
+ */
+.btn--reddit {
+  @include yiq-contrasted($reddit-color);
+
+  &:visited {
+    @include yiq-contrasted($reddit-color);
+  }
+
+  &:hover {
+    @include yiq-contrasted(mix(#000, $reddit-color, 20%));
+  }
+}
+
+/* CUSTOMISATION: Make the Mailchimp signup form have the same background
+ * as the MM theme.
+ */
+#mc_embed_signup {
+  background: #eee !important;
+  padding-top: 10px;
+
+  > form {
+    background: #eee;
+  }
+}
