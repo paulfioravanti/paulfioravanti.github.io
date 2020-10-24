@@ -1,8 +1,7 @@
-/* CUSTOMISATION: Add colors around a Reddit social sharing button.
- * Copy code that generates the styles for the social media links from
- * https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
- * and customise explicitly for Reddit button.
- */
+// CUSTOMISATION: Add colors around a Reddit social sharing button.
+// Copy code that generates the styles for the social media links from
+// https://github.com/mmistakes/minimal-mistakes/blob/master/_sass/minimal-mistakes/_buttons.scss#L45
+// and customise explicitly for Reddit button.
 .btn--reddit {
   @include yiq-contrasted($reddit-color);
 
@@ -15,21 +14,22 @@
   }
 }
 
-/* CUSTOMISATION: Make the Mailchimp signup form have the same background
- * as the MM theme. Initial styles are copy/pasted from Mailchimp-provided
- * form.
- */
+// CUSTOMISATION: Make the Mailchimp signup form have the same background
+// as the MM theme. Initial styles are copy/pasted from Mailchimp-provided
+// form.
+// sass-lint:disable no-ids
 #mc_embed_signup {
-  background: #eee;
+  background: $background-color;
   clear: left;
-  font: 14px Helvetica,Arial,sans-serif;
+  font: 14px Helvetica, Arial, sans-serif;
   width: 100%;
 
   form {
-    background: #eee;
+    background: $background-color;
 
-    input.email {
+    .email {
       width: 90%;
     }
   }
 }
+// sass-lint:enable no-ids
