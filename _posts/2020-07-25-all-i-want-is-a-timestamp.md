@@ -1,7 +1,7 @@
 ---
 title: "All I want is a Timestamp"
 date: 2020-07-25 18:35 +1100
-last_modified_at: 2020-07-25 18:35 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: google-sheets javascript keyboards ergodox mechanical-keyboards
 header:
   image: /assets/images/2020-07-25/all-i-want-is-a-timestamp.png
@@ -278,11 +278,11 @@ have a solution, make sure to read every bit of documentation you can find
 before reaching for that text editor!
 
 [Automate tasks in Google Sheets]: https://support.google.com/docs/answer/7665004
-[Chording QWERTY with QMK Combos]: https://paulfioravanti.com/blog/chording-qwerty-with-qmk-combos/
+[Chording QWERTY with QMK Combos]: https://www.paulfioravanti.com/blog/chording-qwerty-with-qmk-combos/
 [custom functions]: https://developers.google.com/apps-script/guides/sheets/functions
 [`DATEVALUE`]: https://support.google.com/docs/answer/3093039
 [Ergodox EZ]: https://ergodox-ez.com/
-[Escape the defaults and Control your keyboard with QMK]: https://paulfioravanti.com/blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
+[Escape the defaults and Control your keyboard with QMK]: https://www.paulfioravanti.com/blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [event object]: https://developers.google.com/apps-script/guides/triggers/events
 [Finish Now]: /assets/images/2020-07-25/finish-now.gif
 [Google Sheets]: https://www.google.com/sheets/about/

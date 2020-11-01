@@ -2,7 +2,7 @@
 redirect_from: /blog/2020/06/10/i-completed-typey-type/
 title: "I Completed Typey Type"
 date: 2020-06-10 22:00 +1100
-last_modified_at: 2020-06-10 22:00 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: stenography keyboards ergodox mechanical-keyboards plover
 header:
   image: /assets/images/2020-06-10/stenotype.jpg
@@ -204,7 +204,7 @@ Good luck in your steno adventures!
 [Plover 3.1.1]: https://github.com/openstenoproject/plover/releases/tag/v3.1.1
 [Plover Installation Guide]: https://github.com/openstenoproject/plover/wiki/Installation-Guide
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
-[Starting Stenography with an Ergodox]: https://paulfioravanti.com/blog/starting-stenography-with-an-ergodox/
+[Starting Stenography with an Ergodox]: https://www.paulfioravanti.com/blog/starting-stenography-with-an-ergodox/
 [stenography]: https://en.wikipedia.org/wiki/Shorthand
 [Typey Type]: https://didoesdigital.com/typey-type/
 [Typey Type's mis-stroke dictionary]: https://github.com/didoesdigital/steno-dictionaries/blob/master/dictionaries/misstrokes.json

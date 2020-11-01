@@ -2,8 +2,8 @@
 
 [![Build Status][Build Status image]][Build Status url]
 
-This is the codebase for my personal blog at [`paulfioravanti.com`][].
-Created with [Jekyll][].
+This is the codebase for my personal blog at
+<https://www.paulfioravanti.com>. Created with [Jekyll][].
 
 ## Install
 
@@ -97,7 +97,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
 
 [`asdf`]: https://github.com/asdf-vm/asdf
-[Build a CI/CD pipeline for your Jekyll site]: https://paulfioravanti.com/blog/2018/10/29/build-a-ci-cd-pipeline-for-your-jekyll-site/
+[Build a CI/CD pipeline for your Jekyll site]: https://www.paulfioravanti.com/blog/build-a-ci-cd-pipeline-for-your-jekyll-site/
 [Build Status image]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io.svg?branch=release
 [Build Status url]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io
 [Github Pages]: https://pages.github.com/
@@ -120,7 +120,6 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Minimal Mistakes]: https://github.com/mmistakes/minimal-mistakes
 [Node]: https://github.com/nodejs/node
 [Pages gem]: https://github.com/github/pages-gem
-[`paulfioravanti.com`]: https://paulfioravanti.com
 [Sass Lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png

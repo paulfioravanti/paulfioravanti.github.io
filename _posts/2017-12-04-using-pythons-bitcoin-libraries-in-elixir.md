@@ -5,7 +5,7 @@ redirect_from:
   - /blog/2017/12/04/using-pythons-bitcoin-libraries-in-elixir/
 title: "Using Python's Bitcoin libraries in Elixir"
 date: 2017-12-04 17:20 +1100
-last_modified_at: 2019-04-15 14:45 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: elixir bitcoin python
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
@@ -425,6 +425,6 @@ attempt to port over more code, so keep an eye out for updates!
 [python-bytes-decode-method]: https://docs.python.org/3/library/stdtypes.html#bytes.decode
 [Ruby]: https://www.ruby-lang.org/en/
 [Secp256k1]: https://en.bitcoin.it/wiki/Secp256k1
-[Using C++ Bitcoin libraries in Elixir]: https://paulfioravanti.com/blog/using-c-plus-plus-bitcoin-libraries-in-elixir/
+[Using C++ Bitcoin libraries in Elixir]: https://www.paulfioravanti.com/blog/using-c-plus-plus-bitcoin-libraries-in-elixir/
 [Wallet Import Format]: https://en.bitcoin.it/wiki/Wallet_import_format
 [what-is-priv]: https://groups.google.com/forum/#!topic/elixir-lang-talk/LJwtXMQoF0A

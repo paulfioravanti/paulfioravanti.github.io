@@ -2,7 +2,7 @@
 redirect_from: /blog/2019/11/03/internationalisation-with-phoenix-liveview/
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2020-02-03 17:00 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: elixir phoenix liveview i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -2691,8 +2691,8 @@ with Phoenix LiveComponents][]_!
 [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
 [I18n Application]: /assets/images/2019-11-03/i18n-application.gif "Internationalisation Application"
 [IIFE]: https://developer.mozilla.org/en-US/docs/Glossary/IIFE
-[Internationalisation with Phoenix LiveComponents]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-live-components/
-[Internationalisation with Phoenix Live Layouts]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-live-layouts/
+[Internationalisation with Phoenix LiveComponents]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-live-components/
+[Internationalisation with Phoenix Live Layouts]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-live-layouts/
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [Javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [Javascript object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects
@@ -2735,7 +2735,7 @@ with Phoenix LiveComponents][]_!
 [PubSub Static Channel Issue]: /assets/images/2019-11-03/pubsub-static-channel-issue.gif "PubSub Static Channel Issue"
 [PubSub Static Channel Issue Fixed]: /assets/images/2019-11-03/pubsub-static-channel-issue-fixed.gif "PubSub Static Channel Issue Fixed"
 [Query string]: https://en.wikipedia.org/wiki/Query_string
-[Runtime Language Switching in Elm]: https://paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
+[Runtime Language Switching in Elm]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
 [Tachyons]: http://tachyons.io/
 [Tachyons Elm]: /assets/images/2019-11-03/tachyons-elm.gif "Animated GIF of Tachyons page implemented in Elm"
 [TitleLive Events]: /assets/images/2019-11-03/title-live-events.jpg "TitleLive Events"

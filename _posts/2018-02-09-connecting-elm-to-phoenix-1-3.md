@@ -4,7 +4,7 @@ redirect_from:
   - /blog/2018/02/09/connecting-elm-to-phoenix-1-3/
 title: "Connecting Elm to Phoenix 1.3"
 date: 2018-02-09 09:55 +1100
-last_modified_at: 2019-04-15 14:45 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-02-09/functional_web_wallpaper.jpg
@@ -276,7 +276,7 @@ Elm.Main.embed(elmDiv);
 [Back to "Display Elm app in Phoenix template"]: #display-elm-app-in-phoenix-template
 [Brunch]: http://brunch.io/
 [Brunch's file config documentation]: http://brunch.io/docs/config#-files-
-[Connecting Elm to Phoenix 1.4 with webpack]: https://paulfioravanti.com/blog/connecting-elm-to-phoenix-1-4-with-webpack/
+[Connecting Elm to Phoenix 1.4 with webpack]: https://www.paulfioravanti.com/blog/connecting-elm-to-phoenix-1-4-with-webpack/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/

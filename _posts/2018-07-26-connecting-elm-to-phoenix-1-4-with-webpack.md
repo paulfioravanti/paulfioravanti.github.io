@@ -312,7 +312,7 @@ That looks about right. Now, you can get down to the business of ripping it all
 out again, and start building out your own Phoenix-and-Elm powered app!
 
 [Brunch]: https://brunch.io/
-[Connecting Elm to Phoenix 1.3]: https://paulfioravanti.com/blog/connecting-elm-to-phoenix-1-3/
+[Connecting Elm to Phoenix 1.3]: https://www.paulfioravanti.com/blog/connecting-elm-to-phoenix-1-3/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
 [Elm]: http://elm-lang.org/

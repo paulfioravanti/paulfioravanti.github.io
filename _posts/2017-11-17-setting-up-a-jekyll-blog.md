@@ -4,6 +4,7 @@ redirect_from:
   - /blog/2017/11/17/setting-up-a-jekyll-blog/
 title: "Setting up a Jekyll Blog"
 date: 2017-11-17 22:30 +1100
+last_modified_at: 2020-11-01 22:00 +1100
 tags: jekyll ruby
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
@@ -244,11 +245,11 @@ of the blog's life.
 Since I had my own custom name domain, I wanted to use it with the Jekyll blog
 on Github Pages rather than the default domain of `<username>.github.io`.
 
-Luckily, [Namecheap][], my registrar for [paulfioravanti.com][], has a fantastic
-[article in their knowledge base][namecheap-github-pages] that took me through
-all the steps I needed to link my domain to Github Pages. Although specific
-to Namecheap, I would wager the information is generic enough to help anyone
-else wanting to do the same thing.
+Luckily, [Namecheap][], my registrar for <https://www.paulfioravanti.com>, has a
+fantastic [article in their knowledge base][namecheap-github-pages] that took me
+through all the steps I needed to link my domain to Github Pages. Although
+specific to Namecheap, I would wager the information is generic enough to help
+anyone else wanting to do the same thing.
 
 ## SSL Setup
 
@@ -266,7 +267,7 @@ site hosted on Github Pages can be found [here][cloudflare-ssl-goyllo-blog] and
 As a post-script to this post, I thought I'd share the result of my time barking
 up the wrong tree when wanting to have Jekyll use `ENV` variables.
 
-I wanted to use icons from [Font Awesome][] on [my About page][blog-about-page],
+I wanted to use icons from [Font Awesome][] on my About page,
 and I wanted to load them from the [Font Awesome CDN][] so I wouldn't have to
 download them all into my project directory. Loading them from the Font Awesome
 CDN requires registering an account, upon which you are allocated an Embed Code.
@@ -300,7 +301,6 @@ Jekyll site.
 
 [Apple Touch Icon]: https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html
 [asdf]: https://github.com/asdf-vm/asdf
-[blog-about-page]: https://paulfioravanti.com/about/
 [Cloudflare]: https://www.cloudflare.com/
 [cloudflare-ssl-cloudflare-blog]: https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
 [cloudflare-ssl-goyllo-blog]: https://www.goyllo.com/cloudflare-ssl-for-github-pages/
@@ -346,7 +346,6 @@ Jekyll site.
 [namecheap-github-pages]: https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages
 [Node]: https://github.com/nodejs/node
 [npm]: https://www.npmjs.com/
-[paulfioravanti.com]: https://paulfioravanti.com
 [Rails]: https://rubyonrails.org/
 [Ruby]: https://www.ruby-lang.org/
 [SASS]: https://en.wikipedia.org/wiki/Sass_(stylesheet_language)
