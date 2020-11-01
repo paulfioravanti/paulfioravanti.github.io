@@ -8,7 +8,7 @@ The privacy of visitors to <https://www.paulfioravanti.com> is extremely importa
 This Privacy Policy outlines the types of personal information that is received
 and collected through this site and how it is used.
 
-# Methods of Personal Data Collection
+### Methods of Personal Data Collection
 
 ## Log Files
 
