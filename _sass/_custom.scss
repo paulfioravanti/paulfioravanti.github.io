@@ -27,9 +27,17 @@
   form {
     background: $background-color;
 
-    .email {
+    input.email {
       width: 90%;
     }
   }
 }
 // sass-lint:enable no-ids
+
+// CUSTOMISATION: Footer icons have no colour by default, so make it white for
+// this theme.
+.social-icons {
+  .fa-user-shield {
+    color: white;
+  }
+}

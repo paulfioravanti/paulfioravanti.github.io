@@ -266,26 +266,40 @@ compress_html:
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
   # _posts
   - scope:
       path: ""
-      type: "posts"
+      type: posts
     values:
       author_profile: true
       # https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/
-      classes: "wide"
+      classes: wide
       comments: true
       # https://jekyllrb.com/docs/posts/#post-excerpts
       excerpt_separator: "<!--more-->"
-      layout: "single"
+      layout: single
       read_time: true
       related: true
       share: true
       show_date: true
       signup: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: true
+      classes: wide
+      layout: single
+      show_date: true
+
+footer:
+  links:
+    - label: "Privacy Policy"
+      icon: "fas fa-user-shield"
+      url: "/privacy"
 
 # https://github.com/github/pages-gem/issues/399#issuecomment-301827749
 github: [metadata]
