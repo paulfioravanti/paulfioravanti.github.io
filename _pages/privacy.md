@@ -59,7 +59,7 @@ The data retention policy for these analytics is 26 months.
 
 ### Disqus
 
-Blog post comments are handled by [Disqus][] ([Disqus Privacy Policy][]), which
+Blog post comments are handled by [Disqus][] ([Privacy Policy][]), which
 provides a centralised discussion platform for websites.
 
 ## Updates
