@@ -294,6 +294,7 @@ defaults:
       classes: wide
       layout: single
       show_date: true
+      signup: true
 
 footer:
   links:
