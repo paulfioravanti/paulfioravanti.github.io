@@ -3,8 +3,11 @@ title: "About"
 permalink: /about/
 ---
 
+{% capture paul_img %}
+![Paul Image](/assets/images/paul-about.jpg)
+{% endcapture %}
 <figure style="width:30%; float: right; margin-top: 0; margin-bottom: 0;">
-  <img src="/assets/images/paul-about.jpg" alt="Paul Fioravanti photo" title="Paul Fioravanti" />
+  {% include stripped_markdown.html markdown=paul_img %}
 </figure>
 
 Hi, there! Thanks for your interest about the human behind these writings.
