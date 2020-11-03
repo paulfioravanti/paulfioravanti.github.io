@@ -29,7 +29,7 @@ identifiable.
 ## Subscription Forms
 
 Your information is collected through a subscription form provided by
-[Mailchimp][] ([Privacy Policy][Mailchimp Privacy Policy]), which acts as the
+[Buttondown][] ([Privacy Policy][Buttondown Privacy Policy]), which acts as the
 data processor for this site.
 
 When you subscribe to this site, you give permission to email you information
@@ -69,9 +69,9 @@ This web site is a work in progress, and so this Privacy Policy may be updated
 from time to time in order to reflect changes to the site, or for other
 operational, legal, or regulatory reasons.
 
+[Buttondown]: https://buttondown.email
+[Buttondown Privacy Policy]: https://buttondown.email/privacy
 [Disqus]: https://disqus.com/
 [Disqus Privacy Policy]: https://help.disqus.com/en/articles/1717103-disqus-privacy-policy
 [Google Analytics]: https://analytics.google.com/analytics/web/
 [Google Analytics Privacy Policy]: https://policies.google.com/privacy
-[Mailchimp]: https://mailchimp.com/
-[Mailchimp Privacy Policy]: https://mailchimp.com/legal/privacy/
