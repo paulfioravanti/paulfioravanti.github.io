@@ -296,11 +296,5 @@ defaults:
       show_date: true
       signup: true
 
-footer:
-  links:
-    - label: "Privacy Policy"
-      icon: "fas fa-user-shield"
-      url: "/privacy"
-
 # https://github.com/github/pages-gem/issues/399#issuecomment-301827749
 github: [metadata]
