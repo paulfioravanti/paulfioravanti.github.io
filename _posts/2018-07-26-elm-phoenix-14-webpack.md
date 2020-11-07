@@ -2,6 +2,7 @@
 redirect_from:
   - /blog/2018/07/26/connecting-elm-to-phoenix-1-4-with-webpack/
   - /blog/connecting-elm-to-phoenix-1-4-with-webpack/
+  - /blog/connecting-elm-phoenix-14-webpack/
 title: "Connecting Elm to Phoenix 1.4 with webpack"
 date: 2018-07-26 16:20 +1100
 last_modified_at: 2019-04-15 14:45 +1100
