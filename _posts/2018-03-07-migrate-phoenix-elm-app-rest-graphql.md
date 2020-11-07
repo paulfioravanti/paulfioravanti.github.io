@@ -2,6 +2,7 @@
 redirect_from:
   - /blog/2018/03/06/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
   - /blog/2018/03/07/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
+  - /blog/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
 title: "Migrating a Phoenix and Elm app from REST to GraphQL"
 date: 2018-03-07 09:10 +1100
 last_modified_at: 2019-04-15 14:45 +1100

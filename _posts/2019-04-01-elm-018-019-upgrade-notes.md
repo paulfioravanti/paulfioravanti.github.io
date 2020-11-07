@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2019/04/01/elm-018-to-019-upgrade-notes/
+redirect_from:
+  - /blog/2019/04/01/elm-018-to-019-upgrade-notes/
+  - /blog/elm-018-to-019-upgrade-notes/
 title: "Elm 0.18 to 0.19 upgrade notes"
 date: 2019-04-01 14:20 +1100
 last_modified_at: 2019-05-17 17:10 +1100

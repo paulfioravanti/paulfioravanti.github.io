@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2019/04/28/chording-qwerty-with-qmk-combos/
+redirect_from:
+  - /blog/2019/04/28/chording-qwerty-with-qmk-combos/
+  - /blog/chording-qwerty-with-qmk-combos/
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
 last_modified_at: 2020-11-01 22:00 +1100

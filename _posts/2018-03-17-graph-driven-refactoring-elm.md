@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/03/17/graph-driven-refactoring-in-elm/
+redirect_from:
+  - /blog/2018/03/17/graph-driven-refactoring-in-elm/
+  - /blog/graph-driven-refactoring-in-elm/
 title: "Graph-driven Refactoring in Elm"
 date: 2018-03-17 12:15 +1100
 last_modified_at: 2020-11-01 22:00 +1100

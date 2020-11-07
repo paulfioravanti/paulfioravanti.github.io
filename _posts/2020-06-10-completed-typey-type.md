@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2020/06/10/i-completed-typey-type/
+redirect_from:
+  - /blog/2020/06/10/i-completed-typey-type/
+  - /blog/i-completed-typey-type/
 title: "I Completed Typey Type"
 date: 2020-06-10 22:00 +1100
 last_modified_at: 2020-11-01 22:00 +1100

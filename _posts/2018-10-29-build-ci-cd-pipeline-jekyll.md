@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/10/29/build-a-ci-cd-pipeline-for-your-jekyll-site/
+redirect_from:
+  - /blog/2018/10/29/build-a-ci-cd-pipeline-for-your-jekyll-site/
+  - /blog/build-a-ci-cd-pipeline-for-your-jekyll-site/
 title: "Build a CI/CD pipeline for your Jekyll site"
 date: 2018-10-29 21:40 +1100
 last_modified_at: 2020-11-01 22:00 +1100

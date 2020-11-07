@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2020/01/27/internationalisation-with-phoenix-live-components/
+redirect_from:
+  - /blog/2020/01/27/internationalisation-with-phoenix-live-components/
+  - /blog/internationalisation-with-phoenix-live-components/
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
 last_modified_at: 2020-11-01 22:00 +1100

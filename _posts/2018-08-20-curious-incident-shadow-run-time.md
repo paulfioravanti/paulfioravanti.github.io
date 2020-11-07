@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/08/20/the-curious-incident-of-the-shadow-in-the-run-time/
+redirect_from:
+  - /blog/2018/08/20/the-curious-incident-of-the-shadow-in-the-run-time/
+  - /blog/the-curious-incident-of-the-shadow-in-the-run-time/
 title: "The Curious Incident of the Shadow in the Run-Time"
 date: 2018-08-20 18:00 +1100
 last_modified_at: 2020-10-15 22:00 +1100

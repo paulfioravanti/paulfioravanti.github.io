@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/05/11/runtime-language-switching-in-elm/
+redirect_from:
+  - /blog/2018/05/11/runtime-language-switching-in-elm/
+  - /blog/runtime-language-switching-in-elm/
 title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
 last_modified_at: 2019-04-17 07:30 +1100

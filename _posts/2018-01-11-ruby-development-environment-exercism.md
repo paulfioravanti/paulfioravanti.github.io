@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/01/11/setting-up-a-ruby-development-environment-for-exercism/
+redirect_from:
+  - /blog/2018/01/11/setting-up-a-ruby-development-environment-for-exercism/
+  - /blog/setting-up-a-ruby-development-environment-for-exercism/
 title: "Setting up a Ruby development environment for Exercism"
 date: 2018-01-11 15:35 +1100
 tags: exercism ruby guard rubocop

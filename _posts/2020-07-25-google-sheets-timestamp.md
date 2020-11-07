@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /blog/all-i-want-is-a-timestamp/
 title: "All I want is a Timestamp"
 date: 2020-07-25 18:35 +1100
 last_modified_at: 2020-11-01 22:00 +1100

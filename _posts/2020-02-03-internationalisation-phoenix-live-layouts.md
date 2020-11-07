@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
+redirect_from:
+  - /blog/2020/02/03/internationalisation-with-phoenix-live-layouts/
+  - /blog/internationalisation-with-phoenix-live-layouts/
 title: "Internationalisation with Phoenix Live Layouts"
 date: 2020-02-03 17:00 +1100
 last_modified_at: 2020-11-01 22:00 +1100

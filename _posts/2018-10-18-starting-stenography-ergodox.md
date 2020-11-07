@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/10/18/starting-stenography-with-an-ergodox/
+redirect_from:
+  - /blog/2018/10/18/starting-stenography-with-an-ergodox/
+  - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
 last_modified_at: 2020-11-01 22:00 +1100

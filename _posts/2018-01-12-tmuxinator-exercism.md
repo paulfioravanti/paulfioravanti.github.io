@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2018/01/12/tmuxinator-for-exercism/
+redirect_from:
+  - /blog/2018/01/12/tmuxinator-for-exercism/
+  - /blog/tmuxinator-for-exercism/
 title: "Tmuxinator for Exercism"
 date: 2018-01-12 17:10 +1100
 last_modified_at: 2020-11-01 22:00 +1100

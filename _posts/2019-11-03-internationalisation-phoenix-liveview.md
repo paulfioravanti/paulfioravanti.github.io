@@ -1,5 +1,7 @@
 ---
-redirect_from: /blog/2019/11/03/internationalisation-with-phoenix-liveview/
+redirect_from:
+  - /blog/2019/11/03/internationalisation-with-phoenix-liveview/
+  - /blog/internationalisation-with-phoenix-liveview/
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
 last_modified_at: 2020-11-01 22:00 +1100
