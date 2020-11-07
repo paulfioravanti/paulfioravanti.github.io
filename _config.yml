@@ -19,7 +19,7 @@ locale                   : "en-US"
 title                    : "Floor and Varnish"
 title_separator          : "|"
 name                     : "Paul Fioravanti"
-description              : "The permanent drafts folder and container for brain dumps of Paul Fioravanti"
+description              : "The permanent drafts folder for brain dumps of Paul Fioravanti"
 url                      : "https://www.paulfioravanti.com"
 baseurl                  : "" # NOTE: This _needs_ to be an empty string, and not blank (`nil`)
 repository               : "paulfioravanti/paulfioravanti.github.io"
