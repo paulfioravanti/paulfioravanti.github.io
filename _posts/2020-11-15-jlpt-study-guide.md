@@ -9,25 +9,32 @@ header:
   teaser: /assets/images/2020-11-15/abi-schreider-yb16pT5F_jE-unsplash.jpg
   overlay_image: /assets/images/2020-11-15/abi-schreider-yb16pT5F_jE-unsplash.jpg
   overlay_filter: 0.6
+  caption: >
+    Photo by [Abi Schreider](https://unsplash.com/@abischreider?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/@abischreider?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 excerpt: >
   Level N1 of The Japanese Language Proficiency Test is a tough nut to crack,
   but these study methods got me over the line.
 ---
 
-In my life, I have failed the highest level of Japanese Language Proficiency
-Test (JLPT) 7 times.
-
-Reading that sentence back to myself is quite embarrassing.
+In my life, I have failed the highest level of the [Japanese Language
+Proficiency Test][] (JLPT) 7 times.
 
 Five of my attempts on the old Level 1 exam (before it became N1) were when I
 was living and working in Japan, using Japanese full-time. I felt like my
 abilities were improving, so every 不合格 (Failure) notification stung a little
 harder than the last, but, well...maybe I would pass it the following year.
 
+Five of my attempts on the [old Level 1 exam][JLPT Previous Format] (before it
+became [N1][JLPT Level Summary]) were when I was living and working in
+Japan, using Japanese full-time. I felt like my abilities were improving, so
+every 不合格 (Failure) notification stung a little harder than the last, but,
+well...maybe I would pass it the following year.
+
 As the time came for me to leave Japan, I wanted to pass the JLPT _just_ once
 to get a certificate. So, I cut my losses, attempted the old Level 2 exam,
 passed it, and appeased myself with the relief that I would finally be free of
-exams.
+exams, and I at least had _something_ to show for it.
 
 Fast forward 8 years.
 
@@ -43,6 +50,10 @@ Here is what got me over the line.
 
 ## Mindset Change
 
+But, looking back, those failures were indicative of the amount of effort, or
+lack thereof, that I put in to dedicated study of Japanese _specifically for the
+purpose of passing the JLPT_.
+
 ## Establish a Strict Study Cadence
 
 ## Buy Textbooks
@@ -53,11 +64,11 @@ Here is what got me over the line.
 
 ## Practice Exams
 
-But, looking back, those failures were indicative of the amount of effort, or
-lack thereof, that I put in to dedicated study of Japanese _specifically for the
-purpose of passing the JLPT_.
 
 > For anyone confused about the meaning of the main image in this post, I would
 direct you to Wikipedia's entry for [Kit Kats in Japan][] :mortar_board:
 
+[Japanese Language Proficiency Test]: https://www.jlpt.jp/e/
+[JLPT Level Summary]: https://www.jlpt.jp/e/about/levelsummary.html
+[JLPT Previous Format]: https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test#Previous_format_(1984%E2%80%932009)
 [Kit Kats in Japan]: https://en.wikipedia.org/wiki/Kit_Kats_in_Japan
