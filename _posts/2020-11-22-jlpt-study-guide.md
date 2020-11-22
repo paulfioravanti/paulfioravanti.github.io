@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2020-11-22 23:05 +1100
+last_modified_at: 2020-11-23 09:15 +1100
 tags: japanese jlpt anki html css javascript 日本語
 header:
   image: /assets/images/2020-11-22/abi-schreider-yb16pT5F_jE-unsplash.jpg
@@ -176,16 +176,22 @@ After creating the three decks, I would revise each of them every day at the
 pace that Anki dictated, and slot in listening and reading comprehension study
 once Anki preventing me from revising the decks further.
 
-Creating the actual decks can be a bit confusing, especially if you do
-not have a coding background, so I have shared
+During commutes to work, I would continue to revise the cards using
+[AnkiMobile][].  You may think that AnkiMobile is pricey for "just an app", but,
+in my opinion, it is absolutely worth it given the objective you are trying to
+achieve, and the price of failure. I highly recommended using it if you can, and
+you can feel good about helping to support keeping Anki itself free.
+
+Creating the actual flash card decks can be a bit confusing, especially if you
+do not have a coding background, so I have shared
 [my JLPT Anki templates][paulfioravanti/jlpt], which you are free to use to
 create your own cards and/or customise to your liking. Each deck has an example
 card to get your started.
 
-Regardless of my desire to want to share the entire content of the decks online,
-since they are a straight port of copyrighted content, it would not be fair to
-the book authors, and I am sure the book publishers would not be so happy with
-me if I did.
+I have deliberately not shared my own decks on AnkiWeb, or anywhere else, as
+they are a straight port of copyrighted content. It would not be fair to the
+book authors, and I am sure their publishers would not be so happy with me if I
+did. So, definitely roll your own decks.
 
 ## Results
 
@@ -252,6 +258,7 @@ language media that you like reading/watching, please let me know in a comment!
 [analysis paralysis]: https://en.wikipedia.org/wiki/Analysis_paralysis
 [Anki]: https://apps.ankiweb.net/
 [Anki Kanji Back Template]: /assets/images/2020-11-22/kanji-back-template.jpg
+[AnkiMobile]: https://apps.apple.com/au/app/ankimobile-flashcards/id373493387
 [AnkiWeb]: https://ankiweb.net/about
 [AnkiWeb JLPT]: https://ankiweb.net/shared/decks/jlpt
 [Eat That Frog]: https://www.briantracy.com/blog/time-management/the-truth-about-frogs/
