@@ -251,7 +251,7 @@ language media that you like reading/watching, please let me know in a comment!
 
 [analysis paralysis]: https://en.wikipedia.org/wiki/Analysis_paralysis
 [Anki]: https://apps.ankiweb.net/
-[Anki Kanji Back Template]: /assets/images/2020-11-15/kanji-back-template.jpg
+[Anki Kanji Back Template]: /assets/images/2020-11-22/kanji-back-template.jpg
 [AnkiWeb]: https://ankiweb.net/about
 [AnkiWeb JLPT]: https://ankiweb.net/shared/decks/jlpt
 [Eat That Frog]: https://www.briantracy.com/blog/time-management/the-truth-about-frogs/
