@@ -13,7 +13,9 @@
       "figcaption",
       "figure",
       "p",
-      "span"
+      "span",
+      "ruby",
+      "rt"
     ]
   },
   "no-trailing-punctuation": {
