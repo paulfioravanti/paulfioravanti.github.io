@@ -2,7 +2,7 @@
 redirect_from: /blog/2020/01/08/employee-sans-office/
 title: "Employee Sans Office"
 date: 2020-01-08 16:45 +1100
-last_modified_at: 2020-01-08 16:45 +1100
+last_modified_at: 2020-11-26 16:48 +1100
 tags: remote-working
 header:
   image: /assets/images/2020-01-08/allie-smith-vuWCq1bXZy0-unsplash.jpg
@@ -17,10 +17,10 @@ excerpt: >
   Small thoughts on remote working.
 ---
 
-> I originally wrote this blog post for [RemoteBase][] on
-  [December 15, 2016][RemoteBase web archive].  It seems that RemoteBase shut
-  down in 2018, and since my thoughts on remote working have not changed, I
-  figure this post can now live on the internet here.
+> I originally wrote this blog post for [RemoteBase][] on December 15, 2016.
+  It seems that RemoteBase shut down in 2018, and since my thoughts on remote
+  working have not changed, I figure this post can now live on the internet
+  here.
 
 I'm a company employee, but I can't go to my office, even for a visit.
 It simply doesn't exist.
@@ -108,4 +108,3 @@ of the most important activities in your life.
 [reinteractive]: https://reinteractive.com/
 [Remote: Office not Required]: https://37signals.com/remote
 [RemoteBase]: http://remotebase.io/
-[RemoteBase web archive]: https://web.archive.org/web/20170515124452/https://remotebase.io/blog/
