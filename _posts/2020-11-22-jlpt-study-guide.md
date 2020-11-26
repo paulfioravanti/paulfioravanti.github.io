@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2020-11-23 09:15 +1100
+last_modified_at: 2020-11-26 15:10 +1100
 tags: japanese jlpt anki html css javascript 日本語
 header:
   image: /assets/images/2020-11-22/abi-schreider-yb16pT5F_jE-unsplash.jpg
@@ -200,15 +200,40 @@ practice exams a couple of weeks before the day of the JLPT, and eventually
 entered the exam with a feeling of contentedness knowing that I did all I could
 possibly have done.
 
-The exam was still really tough, and I left the exam giving myself a 50-50
-chance of passing, since the brutal time limitations still left me having to
-rush through some sections and guess at some problems.
+The exam was still really tough, and I left it giving myself a 50-50 chance of
+passing, since the brutal time limitations still left me having to rush through
+some sections and guess at some problems.
 
 But on that attempt, on attempt number eight, I finally got it. So, with
 apologies to [Vitas Gerulaitis][]:
 
 > And let that be a lesson to you all. No JLPT exam beats Paul Fioravanti 8
 times in a row.
+
+## Worth it?
+
+In order to relieve my poor shoulder of the giant JLPT-shaped chip that had
+obviously been laying dormant there for years, the effort put in to finally
+getting that passing mark was absolutely worth it.
+
+From a career perspective, not having Level 1 (or any level) ever stopped me
+from getting a job while I was living in Japan. I found that most
+employment-based language "testing" ended up being litmus tests during
+face-to-face interviews to see if you had any degree of conversational and
+_kanji_-reading fluency.
+
+I guess that if you are planning on doing [an activity where passing JLPT N1 is
+a pre-requisite][JLPT Acceptance in Japan], then passing it represents a hard
+barrier that you must cross. But, back in Australia, my work requires no
+Japanese at all, so the JLPT qualification is simply a nice feather in my hat,
+and something I can write a blog post about.
+
+From a language perspective, I absolutely did learn a lot of interesting new
+words, grammar, and _kanji_. There may be a lot of content examined in the JLPT
+that is not used much in everyday Japanese, but learning it _was_ valuable.
+From that point of view, you could say that studying for the JLPT forced my hand
+in learning Japanese I would not have picked up of my own volition, for which I
+am thankful.
 
 ## Postscript: After N1
 
@@ -266,12 +291,13 @@ language media that you like reading/watching, please let me know in a comment!
 [Google Chrome]: https://www.google.com/intl/en_au/chrome/
 [Hitoshi Matsumoto]: https://twitter.com/matsu_bouzu
 [Japanese Language Proficiency Test]: https://www.jlpt.jp/e/
+[JLPT Acceptance in Japan]: https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test#Acceptance_in_Japan
+[JLPT Level Summary]: https://www.jlpt.jp/e/about/levelsummary.html
+[JLPT Previous Format]: https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test#Previous_format_(1984%E2%80%932009)
 [JST]: https://en.wikipedia.org/wiki/Japan_Standard_Time
 [kanji]: https://en.wikipedia.org/wiki/Kanji
 [Kinokuniya]: https://australia.kinokuniya.com/
 [Kinokuniya JLPT books]: https://australia.kinokuniya.com/t/hobby-and-goods/jlpt
-[JLPT Level Summary]: https://www.jlpt.jp/e/about/levelsummary.html
-[JLPT Previous Format]: https://en.wikipedia.org/wiki/Japanese-Language_Proficiency_Test#Previous_format_(1984%E2%80%932009)
 [Maximum the Hormone]: https://en.wikipedia.org/wiki/Maximum_the_Hormone
 [paulfioravanti/jlpt]: https://github.com/paulfioravanti/jlpt
 [rikaikun]: https://chrome.google.com/webstore/detail/rikaikun/jipdnfibhldikgcjhfnomkfpcebammhp?hl=en
