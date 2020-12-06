@@ -1,30 +1,23 @@
 ---
 title: "Privacy Policy"
 permalink: /privacy/
-last_modified_at: 2020-11-02 23:00 +1100
+last_modified_at: 2020-12-06 18:40 +1100
 ---
 
-The privacy of visitors to <https://www.paulfioravanti.com> is extremely important.
-This Privacy Policy outlines the types of personal information that is received
-and collected through this site and how it is used.
+The privacy of visitors to <https://www.paulfioravanti.com> is extremely
+important.  This Privacy Policy outlines the types of personal information that
+is received and collected through this site and how it is used.
 
-### Methods of Personal Data Collection
+## Methods of Personal Data Collection
 
-## Log Files
+## Hosting Service
 
-Like many other websites, this site uses log files to help learn about when,
-from where, and how often traffic flows to this site. The information in these
-log files include:
+This site is hosted at [GitHub Pages][]
+([Privacy Policy][GitHub Pages Privacy Policy]).
 
-- Internet Protocol (IP) addresses
-- Types of browser
-- Internet Service Provider (ISP)
-- Date and time stamp
-- Referring and exit pages
-- Number of clicks
-
-All of this information is not linked to anything that is personally
-identifiable.
+GitHub may collect information about visitors to this site, including logs of
+visitor Internet Protocol (IP) addresses, to comply with legal obligations, and
+to maintain the security and integrity of the website and service.
 
 ## Subscription Forms
 
@@ -73,5 +66,7 @@ operational, legal, or regulatory reasons.
 [Buttondown Privacy Policy]: https://buttondown.email/privacy
 [Disqus]: https://disqus.com/
 [Disqus Privacy Policy]: https://help.disqus.com/en/articles/1717103-disqus-privacy-policy
+[GitHub Pages]: https://pages.github.com/
+[GitHub Pages Privacy Policy]: https://docs.github.com/en/free-pro-team@latest/github/site-policy/github-privacy-statement#github-pages
 [Google Analytics]: https://analytics.google.com/analytics/web/
 [Google Analytics Privacy Policy]: https://policies.google.com/privacy
