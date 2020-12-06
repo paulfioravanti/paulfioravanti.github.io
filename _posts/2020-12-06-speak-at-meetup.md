@@ -11,8 +11,7 @@ header:
   overlay_filter: 0.4
 excerpt: >
   Worked on a project or learned something new that others might not know about?
-  Here's why you should consider sharing your knowledge with your peers at a
-  local meetup.
+  Share your knowledge with your peers at a local meetup!
 ---
 
 Meetups are great! The best ones provide a sense of community where the curious
