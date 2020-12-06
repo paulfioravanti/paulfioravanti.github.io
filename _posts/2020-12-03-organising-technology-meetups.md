@@ -8,7 +8,7 @@ header:
   image_description: "The Ruby on Rails Oceania (RORO) meetup at Airtasker offices"
   teaster: /assets/images/2020-12-03/roro.jpg
   overlay_image: /assets/images/2020-12-03/roro.jpg
-  overlay_filter: 0.6
+  overlay_filter: 0.5
 excerpt: >
   Meetups are a great way to enrich your technical journey outside of your
   daily endeavours. You may even want to start your own. So, here's a set of
