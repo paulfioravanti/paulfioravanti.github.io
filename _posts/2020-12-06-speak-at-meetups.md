@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /blog/speak-at-meetup/
 title: "Speak at a Meetup"
 date: 2020-12-06 19:05 +1100
 last_modified_at: 2020-12-06 19:05 +1100
