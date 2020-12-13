@@ -18,34 +18,101 @@ actively participating and delivering talks at your local technical meetup is A
 Good Thing that you definitely Want To Try.
 
 I will assume the pitch was a :sparkles: great success :sparkles:, and you have
-been attending, participating, and even speaking at meetups; receiving accolades
-and the admiration of your peers.
+been attending, participating, and even speaking at meetups; receiving
+accolades, and the admiration of your peers.
 
-Perhaps you would like to stretch your meetup wings a bit further, give back
-to your community, or even just get some event management experience. Becoming
-a meetup organiser ticks all of those boxes, and so this post aims to:
+Now, perhaps, you would like to stretch your meetup wings a bit further, give
+back to your community, or even just get some event management experience.
+
+Well, becoming a meetup organiser ticks all of those boxes! So, this post aims
+to:
 
 - Pitch the benefits of becoming a meetup organiser
 - Share some anecdotes and experiences of my time as an organiser
 - Share my ideas and opinions around preparing for and holding meetups for your
   consideration
 
-## A Word about the Plague
-
-With the advent of [COVID-19][], meetup dynamics changed completely from
-in-person to online.
-
-As of this writing, I would certainly not feel comfortable hosting in-person
+> ## A Word about the Plague
+>
+> With the advent of [COVID-19][], meetup dynamics changed completely from
+in-person to online-only.
+>
+> As of this writing, I would certainly not feel comfortable hosting in-person
 events, for the sake of all participants, even if any of the venues who have
-graciously allowed us to use their facilities in the past would permit them. The
-logistics of hosting an online meetup are simpler than in-person, but new
-challenges arise around keeping your community coming back to events.
-
-My hope is that in-person meetups have not become obsolete, and will return in
+graciously allowed us to use their facilities in the past would permit them.
+>
+> The logistics of hosting an online meetup are comparatively simpler than
+in-person, but new challenges arise around keeping your community coming back to
+events.
+>
+> My hope is that in-person meetups have not become obsolete, and will return in
 the near future (and hence the following information about them will become
 relevant again), but even when they do, there are definitely elements from
 online meetups that I intend to bring into [meatspace][], which I will further
 elaborate on later.
+
+## Why become an organiser?
+
+At a past [Ruby on Rails Oceania Sydney (RORO)][] meetup, the organisers
+starting asking some participants if they would consider becoming organisers
+themselves, and effectively take over running the meetup (I seem to recall
+the reasons being due to the demands of raising a young family, and competing
+time commitments for work, which is fair enough).
+
+Before being asked, organising was not something I had thought about doing at
+all. It was great being a participant and a member of a community, and I did not
+feel actively compelled to seek out what seemed like more work. However, by the
+end of the meetup, I had signed up for the following reasons:
+
+- It would be a new experience. I had never done any other kind of event
+  organising before, so I decided to silence all internal dissenting voices,
+  throw myself out of my comfort zone, see what would happen, and hopefully
+  learn something along the way.
+- Giving back would be a good thing. The very evening I moved permanently to
+  Sydney, Australia, a place where I had no family and few friends, I made a
+  beeline directly for the [Ruby][] community, and was welcomed. Over time,
+  I gave talks, mentored new developers, made new friends, and had lots of fun.
+  I felt that this was a community worth maintaining and contributing to.
+- More public speaking. I figured that becoming an organiser would essentially
+  force me to have a regular speaking gig, and help keep those vocal skills
+  sharp.
+
+After nearly two years of being a RORO organiser, I took on further organiser
+roles at the [Elixir Sydney][], [GraphQL Sydney][], and [Elm Sydney][] meetups,
+of which I am still an organiser of at the time of this writing. This required
+me to pass on my RORO torch on to a new team of amazing people; four meetups
+became a bit too much for me to handle (it is good to be cognizant of your
+personal limits!).
+
+I have no regrets on having travelled down the organiser path, and find that I
+still enjoy doing it. I get tremendous personal satisfaction from being able to
+provide a platform for others to speak about all the awesome stuff they have
+been doing, helping them in constructing their talks, or just being a sound
+board for works-in-progress.
+
+So, if you ever have the opportunity to be the enabler of those sparks of
+enthusiasm, I would encourage you to give it a try! You certainly do not have to
+do it forever (set your own term limits), nor do you have to go it alone (see
+if you can join an existing team; they will most likely appreciate offers of
+assistance)! Meetups are all about community, and their management teams benefit
+greatly from a wide range of ideas and experiences, including yours.
+
+If you want to know what kind of things you could help out with, or you want
+some ideas around what to include when starting your own meetup, read on, and
+hopefully the following will be of some reference as you take the reins and
+start leading your community.
+
+## Information Source of Truth
+
+Technical meetups generate a bunch of information:
+
+- That people gathered together at a specific time and place for a purpose
+- A list of speakers, their talk summaries, and the materials they used for
+  their talks
+- Typically, a meetup organiser slide deck
+- Artefacts like videos
+
+- Github repo, not Meetup.com
 
 ## Meetup should exist as its own entity
 
@@ -53,9 +120,6 @@ elaborate on later.
 
 - Not required, but it would be nice to get one
 
-## Meetup Information Source of Truth
-
-- Github repo, not Meetup.com
 
 ## Presentation Deck
 
@@ -189,6 +253,16 @@ We manage all our talks on our Github repo here: https://github.com/rails-oceani
 ## Insurance?
 - RORO insurance
 
+## Community outreach
+
+## Succession Planning
+
+## Steal from other meetups
+
+- SydCSS
+- SydJS
+- React Sydney
+
 ## Mum's meetup
 
 
@@ -205,10 +279,7 @@ make us money, get us a job, or generally be of use to us in the future somehow
 (though that is a not uncommon side effect of enthusiastic nerds sharing their
 interests).
 
-The very evening that I moved permanently to Sydney (Australia), a place where I
-had no family and few friends, I made a beeline directly for the Ruby community,
-and was welcomed. Over the years, I gave talks, mentored new developers, made
-new friends, and had lots of fun. Eventually, I became an organiser for the
+Eventually, I became an organiser for the
 [Ruby on Rails Oceania Sydney (RORO)][] meetup, and after a couple of years,
 added [Elixir Sydney][], [GraphQL Sydney][], and [Elm Sydney][] to my organiser
 mix (I had to pass the RORO torch on to a new team, as four meetups became a bit
@@ -225,6 +296,7 @@ local tech communities (and maybe even start your own...?).
 [Elm Sydney]: https://www.meetup.com/Sydney-Elm-Meetup/
 [GraphQL Sydney]: https://www.meetup.com/GraphQL-Sydney/
 [meatspace]: https://en.wiktionary.org/wiki/meatspace
+[Ruby]: https://www.ruby-lang.org/en/
 [Ruby on Rails Oceania Sydney (RORO)]: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
 [Speak at a Meetup]: https://www.paulfioravanti.com/blog/speak-at-meetups/
 [Trestle Table]: https://en.wikipedia.org/wiki/Trestle_table
