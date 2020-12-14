@@ -80,7 +80,7 @@ end of the meetup, I had signed up for the following reasons:
 After nearly two years of being a RORO organiser, I took on further organiser
 roles at the [Elixir Sydney][], [GraphQL Sydney][], and [Elm Sydney][] meetups,
 of which I am still an organiser of at the time of this writing. This required
-me to pass on my RORO torch on to a new team of amazing people; four meetups
+me to pass on my RORO torch on to a new team of amazing people, as four meetups
 became a bit too much for me to handle (it is good to be cognizant of your
 personal limits!).
 
@@ -90,17 +90,49 @@ provide a platform for others to speak about all the awesome stuff they have
 been doing, helping them in constructing their talks, or just being a sound
 board for works-in-progress.
 
-So, if you ever have the opportunity to be the enabler of those sparks of
-enthusiasm, I would encourage you to give it a try! You certainly do not have to
-do it forever (set your own term limits), nor do you have to go it alone (see
-if you can join an existing team; they will most likely appreciate offers of
-assistance)! Meetups are all about community, and their management teams benefit
-greatly from a wide range of ideas and experiences, including yours.
+Meetups are all about community, and their management teams benefit greatly from
+a wide range of ideas and experiences, including yours. So, if you ever have the
+opportunity to be the enabler of those sparks of enthusiasm, I would encourage
+you to give it a try!
+
+### Okay, I'm In! Now what?
 
 If you want to know what kind of things you could help out with, or you want
 some ideas around what to include when starting your own meetup, read on, and
 hopefully the following will be of some reference as you take the reins and
 start leading your community.
+
+## Content is King
+
+No half measures, let's start with what I consider the hardest part of
+organising a technical meetup, regardless of whether it is in-person or online:
+sourcing talks.
+
+The dream for an organiser is to have a full pipeline of talks by willing and
+able speakers on a wide variety of topics that will cover multiple months worth
+of meetups. You then have the luxury of being able to do things like grouping
+talks by theme or technology.
+
+I remember I once had a pipeline of talks that covered a present _and_
+subsequent month's meetups, and it felt _amazing_! Good times...
+
+So, yes, few organisers get to live the dream, but I am certainly not
+discouraged by that. Regardless of how much I may regurgitate the benefits I
+pitch in _[Speak at a Meetup][]_, I know I am making a Big Ask when I canvass
+the community for presentations. I am essentially asking you to:
+
+- take time out of your schedule to work for free by creating a talk (sorry,
+  neither myself nor sponsors can pay you)
+- take more time out of your schedule to refine and practice your talk
+- maybe take even more time out of your schedule to have companion technical
+  materials like code repositories available
+- do something that you may not have experience doing and initially may be
+  uncomfortable, or just not like, doing
+- feel gratified that content creation is its own reward, and believe that the
+  audience response will justify your time and effort
+
+I know I'm just some guy on the internet, but would you do that for me...? Maybe
+next month, then...? Well, have a think about it and let's talk again later!
 
 ## Information Source of Truth
 
@@ -111,7 +143,6 @@ Technical meetups generate a bunch of information:
   their talks
 - Typically, a meetup organiser slide deck
 - Artefacts like videos
-
 - Github repo, not Meetup.com
 
 ## Meetup should exist as its own entity
