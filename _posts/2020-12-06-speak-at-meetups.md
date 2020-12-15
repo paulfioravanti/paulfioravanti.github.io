@@ -175,7 +175,7 @@ out!
 ![Paul Hello][]
 
 [COVID-19]: https://en.wikipedia.org/wiki/Coronavirus_disease_2019
-[demo gods]: https://www.yourictmagazine.com/blog/498-preparing-for-a-demo-have-you-appeased-the-gods.html
+[demo gods]: http://www2.rdrop.com/~paulmck/DemoGods/
 [Elixir Australia Online]: /assets/images/2020-12-06/elixir-australia.jpg
 [Elixir Sydney]: https://www.meetup.com/elixir-sydney
 [Elixir Sydney Nerves talk]: /assets/images/2020-12-06/elixir-sydney.jpg
