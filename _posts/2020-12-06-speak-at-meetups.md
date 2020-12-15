@@ -39,7 +39,7 @@ Presenting at a meetup is a win/win situation.
 
 ![Elixir Sydney Nerves talk][]
 
-You, the speaker, get to practice public speaking, a skill that may not be
+You, the speaker, get to practise public speaking, a skill that may not be
 exercised much in your day to day activities, and your audience gets to leverage
 your knowledge to learn new things that can potentially help them in their own
 activities.
@@ -89,9 +89,9 @@ that you'd like input and/or discussion around.
 Discussion about any thought-provoking issues have often continued after the
 meetup ends, and _you_ get to take the credit for being the catalyst!
 
-### Practice Demoing
+### Practise Demoing
 
-If you are up to the challenge, doing a talk can be a catalyst to practice
+If you are up to the challenge, doing a talk can be a catalyst to practise
 demoing something in front of an audience, which is significantly different to
 just showing someone else what is currently on your screen.
 
