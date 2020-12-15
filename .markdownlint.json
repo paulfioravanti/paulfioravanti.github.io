@@ -9,9 +9,11 @@
   },
   "no-inline-html": {
     "allowed_elements": [
+      "a",
       "br",
       "figcaption",
       "figure",
+      "img",
       "p",
       "span",
       "ruby",
