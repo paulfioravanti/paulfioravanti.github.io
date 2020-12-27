@@ -5,10 +5,7 @@ dist: trusty
 language: ruby
 cache: bundler
 rvm:
-  # NOTE: RVM set to ruby-head and not 3.0.0 because of a GPG key issue with
-  # RVM. Using ruby-head would seem to ensure that a new key is imported:
-  # https://github.com/travis-ci/travis-build/pull/1634
-  - ruby-head
+  - 3.0.0
 bundler_args: --without development
 before_install:
   - nvm install 15.5.0
