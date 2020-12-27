@@ -7,9 +7,6 @@ cache: bundler
 rvm:
   - 3.0.0
 bundler_args: --without development
-before_script:
-  # NOTE: Needed for RVM install issues
-  - gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 before_install:
   - nvm install 15.5.0
   - nvm use 15.5.0
@@ -31,6 +28,9 @@ branches:
 jobs:
   include:
     - stage: Test
+      before_install:
+        # NOTE: Needed for RVM install issues
+        - gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
       before_script:
         - npm install --global sass-lint htmllint-cli markdownlint-cli
       script:
@@ -74,6 +74,9 @@ jobs:
         #   --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
     - stage: Github Release
+      before_install:
+        # NOTE: Needed for RVM install issues
+        - gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
       # Use dpl v2
