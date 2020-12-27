@@ -5,11 +5,11 @@ dist: trusty
 language: ruby
 cache: bundler
 rvm:
-  - 2.7.2
+  - 3.0.0
 bundler_args: --without development
 before_install:
-  - nvm install 14.5.0
-  - nvm use 14.5.0
+  - nvm install 15.5.0
+  - nvm use 15.5.0
   - gem update --system
   - gem install bundler
 env:
@@ -60,13 +60,15 @@ jobs:
         # NOTE 4: The minimal-mistakes-generated 404 page seems to have a #main
         # hash href to nowhere, so ignore all #main hash links for now; I don't
         # have any that I've created in any pages that I control.
-        - >
-          bundle exec htmlproofer _site
-          --allow-hash-href
-          --assume-extension
-          --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
-          --http-status-ignore "999"
-          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+        # NOTE 5: https://github.com/gjtorikian/html-proofer/pull/613
+        # Not currently working with Ruby 3.0. Follow the above PR.
+        # - >
+        #   bundle exec htmlproofer _site
+        #   --allow-hash-href
+        #   --assume-extension
+        #   --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
+        #   --http-status-ignore "999"
+        #   --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           # --disable-external
     - stage: Github Release
       script:
