@@ -8,6 +8,8 @@ rvm:
   - 3.0.0
 bundler_args: --without development
 before_install:
+  # NOTE: Needed for RVM install issues
+  - gpg2 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
   - nvm install 15.5.0
   - nvm use 15.5.0
   - gem update --system
