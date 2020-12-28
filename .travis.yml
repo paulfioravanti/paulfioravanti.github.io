@@ -1,7 +1,7 @@
 # References:
 # - https://docs.travis-ci.com/user/caching/#Bundler
 os: linux
-dist: trusty
+dist: bionic
 language: ruby
 cache: bundler
 rvm:
