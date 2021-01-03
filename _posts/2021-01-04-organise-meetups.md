@@ -1,7 +1,7 @@
 ---
 title: "Organise a Meetup"
-date: 2021-01-04 09:20 +1100
-last_modified_at: 2021-01-04 09:00 +1100
+date: 2021-01-04 10:00 +1100
+last_modified_at: 2021-01-04 10:00 +1100
 tags: meetups public-speaking
 header:
   image: /assets/images/2021-01-04/roro.jpg
@@ -13,7 +13,7 @@ excerpt: >
   Looking to take your love of meetups to the next level? Try organising!
 ---
 
-In my previous post, _[Speak at a Meetup][]_, I attempted to convince you that
+In a previous post, _[Speak at a Meetup][]_, I attempted to convince you that
 actively participating and delivering talks at your local technical meetup is A
 Good Thing that you definitely Want To Try.
 
@@ -31,7 +31,7 @@ to:
 - Share some anecdotes and experiences of my time as an organiser
 - Share my ideas and opinions around preparing for and holding meetups, for your
   consideration
-- Basically just brain dump everything I know about organising meetups
+- Basically just [brain dump][] everything I know about organising meetups
 
 There is a lot to go over, so strap yourself in.
 
@@ -165,12 +165,12 @@ Finding talk content for meetups is a treasure hunt, and the ["X" that marks the
 spot][X Marks the Spot] on your map is a moving target, but I have been able
 to strike gold at the following places:
 
-- **Own meetups**. After talks are finished at every meetup, make sure to take
-  some time to let participants know that you are _always_ looking for talks,
-  especially from first-time speakers. After proceedings, I have had many people
-  ask whether a topic they want to talk about has been done before, or whether
-  it would be interesting or not. Harness that interest and curiosity and guide
-  it towards becoming a talk submission.
+- **Your own meetups**. After talks are finished at every meetup, make sure to
+  take some time to let participants know that you are _always_ looking for
+  talks, especially from first-time speakers. After proceedings, I have had many
+  people ask whether a topic they want to talk about has been done before, or
+  whether it would be interesting or not. Harness that interest and curiosity
+  and guide it towards becoming a talk submission.
 - **Other meetups**. See a talk you liked at another meetup that your community
   might also like or benefit from? Reach out to that speaker and see if they
   want to get more mileage out of their talk with another audience. [Write once,
@@ -463,11 +463,11 @@ online access, these limitations fade into irrelevance.
 {: refdef}
 
 It gives me great joy now when we say hello to new attendees, and find fellow
-tech enthusiasts from all over the world have joined our "local meetup". Now
-though, I think "local" only really applies to that nice community "feel" of a
-meetup, since any open online meetup is global by default. As long as you are
-awake during [AEST][]/[AEDT][] time zone evenings, you are welcome at any meetup
-that I host! :smiley:
+tech enthusiasts from all over the world have joined our "local meetup". These
+days, though, "local" seems to only really apply to that nice community "feel"
+of a meetup, since any open online meetup is global by default. As long as you
+are awake during [AEST][]/[AEDT][] time zone evenings, you are welcome at any
+online meetup that I host, no matter where you are reading this! :smiley:
 
 So, as a meetup organiser, you have the opportunity to choose how high you would
 like the fences around your meetup to be: as low as [live streaming][], or as
@@ -504,47 +504,49 @@ hopefully this list will serve as some reference:
 - **Email**. Create a new meetup-specific email account with a service like
   [Gmail][], store its credentials somewhere safe (like a password manager), and
   share them with any co-organisers you have via services like [Keybase][]. Use
-  this email to create accounts for all of the other third party services you
-  need for the meetup, and correspond with speakers and venues with it (where
-  email is needed to do that).<br />
+  this email address to create accounts for all of the other third party
+  services you need for the meetup, and correspond with speakers and venues with
+  it (where email is needed to do that).<br />
   The benefits of doing this, rather than using your personal email, are the
-  transparency, and burden-sharing, of communications with any co-organisers you
-  may have. Also, should the time come when you want to step back as an
-  organiser and relinquish the meetup to someone else, having this account
-  separate from you personally will make handover significantly easier.
-  I would recommend taking the viewpoint that the meetup should exist as its own
-  entity, and not being tied tightly to you, personally.
+  transparency and burden-sharing with your co-organisers for any external
+  communications that may need to occur. Also, should the time come when you
+  want to step back as an organiser and relinquish the meetup to someone else,
+  having this account separate from you personally will make handover
+  significantly easier. I would recommend taking the viewpoint that the meetup
+  should exist as its own entity, and not being tied tightly to you, personally.
 - **[Meetup.com][]**. Regardless of your opinions of this site (and some
   technical people have pretty strong opinions about it), I would say that as of
   this writing, if your audience is in the English-speaking world, and you want
   your meetup to be found on the internet, you are going to need a paid account
   here (try and get a sponsor to pay for it, if possible).<br />
-  You do not need to revolve your meetup around Meetup.com. I only use its very
-  basic features: discoverability via search, scheduling, RSVP management,
-  and very occasionally member emails. I want the key information about the
-  meetup to be separate from, and accessible out of, Meetup.com, and so I use
-  other services for this.
+  You do not need to revolve your meetup around Meetup.com. I know of some
+  organisers that use it just to springboard their audience to other systems,
+  like [Eventbrite][]. I only use its very basic features: discoverability via
+  search, scheduling, RSVP management, and very occasionally member emails. I
+  want the key information about the meetup to be separate from, and accessible
+  out of, Meetup.com (in case it ever disappears or I want to change platforms),
+  and so I use other services for this.
 - **[Github][]**. As a developer you probably use GitHub (or one of its
   source-control competitors) every day and are intimately familiar with its
-  workflows. I use it for both the [source of truth][] for meetup information
-  (so it doesn't have to be Meetup.com), and for handling the life-cycle of a
-  talk submission (using [Issues][GitHub Issues]).<br />
-  A meetup has its own
-  dedicated [organisation][GitHub Organizations] and repository, and each
-  individual meetup is represented by a folder in the repository. It contains a
-  `README` file with meetup information (which gets _copied_ over to
-  Meetup.com), as well as the host presentation materials for that meetup.<br />
+  workflows. I use it as the [source of truth][] for meetup information (so it
+  doesn't have to be Meetup.com), and for handling the life-cycle of talk
+  submissions (using [Issues][GitHub Issues]).<br />
+  A meetup has its own dedicated [organisation][GitHub Organizations] and
+  repository, and each individual meetup is represented by a folder in the
+  repository. It contains a `README` file with meetup information (which gets
+  _copied_ over to Meetup.com), as well as the host presentation materials for
+  that meetup.<br />
   [Issue templates][Github Issue Templates] are used to guide people
   through the creation of full-length talk, lightning talk, and talk request
   submissions, and outline the general definitions and expectations of them
   (eg for this meetup, a "full-length" talk means no more than 40 minutes long
   and a "lightning talk" is typically about 5 minutes etc). Every meetup has its
   own milestone that issues are marked against to symbolically "lock in" a talk
-  for that meetup. Once a meetup has concluded, I encourage speakers to share
-  their presentation materials publicly somewhere, then close the meetup issues,
-  and their corresponding milestone. You can see examples of all this in the
-  repositories for [RORO Sydney][RORO Sydney GitHub],
-  [Elixir Sydney][Elixir Sydney GitHub],
+  for that meetup.<br />
+  Once a meetup has concluded, I encourage speakers to share their presentation
+  materials publicly somewhere, then close the meetup issues, and their
+  corresponding milestone. You can see examples of all this in the repositories
+  for [RORO Sydney][RORO Sydney GitHub], [Elixir Sydney][Elixir Sydney GitHub],
   [GraphQL Sydney][GraphQL Sydney GitHub], or [Elm Sydney][Elm Sydney GitHub].
 - **[Twitter][]**. The most widely used social media platform for technical
   people would seem to currently be Twitter. So, each of the meetups I organise
@@ -589,6 +591,7 @@ have a meetup host slide deck to be point of reference for the event itself.
 I typically include slides covering the following areas:
 
 - Welcome participants to the meetup
+- Housekeeping
 - Summarise the meetup content
 - Inform participants if any particular behaviour is expected of them (eg your
   meetup may have a [Code of Conduct][])
@@ -611,10 +614,10 @@ I typically include slides covering the following areas:
 
 This might seem like a long list, but within the context of running the meetup,
 some of these slides might only be up on screen for a matter of seconds. The
-order that these slides go in is also up to you: for example, you may want to
-have your jobs slide before the talks, so that any recruiters present can say
-their piece and feel free to leave if they do not want to sit through any
-technical content.
+order that these slides are displayed is also up to you: for example, you may
+want to have your jobs slide before the talks, so that any recruiters present
+can say their piece, and then feel free to leave if they do not want to sit
+through any technical content.
 
 Ultimately, though, no one comes to a meetup for the host deck, so I have found
 it best to attempt to deliver all necessary information as briskly as possible,
@@ -690,8 +693,7 @@ embarrassment in front of everyone).
 
 I think that everyone should be able to feel undaunted about giving a talk to
 their peers, knowing that they have the support of the room. The benefits of
-a no-heckling policy far outweigh the weight of any charges of being a
-[killjoy][].
+a no-heckling policy far outweigh any charges of being a [killjoy][].
 
 ### Speaker Issues
 
@@ -713,15 +715,15 @@ speaker's talk is likely to be at the meetup itself. For the meetups I organise,
 this has not been an issue, aside from the very rare cases when it is.
 
 Specifics are not relevant, and "bad" is subjective. But, ultimately, if you
-think that content delivered by a speaker at a meetup you organise (or _anyone_
-who has been given the floor to address the audience, including those pitching
-jobs) has had a negative effect on your audience, could reflect badly on you as
-the organiser, or your ability to get an audience to a future meetup, then I
-think you are within your rights to either reject further submissions from them,
-or at least insist on a dry run of any talk prior to being accepted, where you
-can give feedback in the same way you would if they had actively requested it of
-you. If the content delivered is just patently offensive or inappropriate, you
-have no obligation to let a speaker finish their talk.
+think that content delivered by a speaker at a meetup you organise (or by
+_anyone_ who has been given the floor to address the audience, including those
+pitching jobs) has had a negative effect on your audience, could reflect badly
+on you as the organiser, or your ability to get an audience to a future meetup,
+then I think you are within your rights to either reject further submissions
+from them, or at least insist on a dry run of any talk prior to being accepted,
+where you can give feedback in the same way you would if they had actively
+requested it of you. If the content delivered is just patently offensive or
+inappropriate, you have no obligation to let a speaker finish their talk.
 
 For the record, I have never had to outright reject someone's future submissions
 nor eject a speaker before they finished their talk (Sydney tech communities are
@@ -782,6 +784,9 @@ perhaps some intuitive on-the-fly problem solving skills you naturally develop
 after having actually organised and run a few meetups (and are impossible for me
 to enumerate coherently in this post).
 
+I hope you are able to contribute to creating the kinds of communities you would
+like to see exist and thrive.
+
 My thanks go out to you for reading this all the way to the end, and also to
 all the previous and current organisers of meetups I am currently involved with,
 or have been previously involved with, whose shoulders I stand on:
@@ -792,14 +797,17 @@ or have been previously involved with, whose shoulders I stand on:
 - [Elm Sydney][]
 
 Thanks also go to the organisers of other particular meetups I attend, and have
-been inspired by, or flagrantly stolen ideas from:
+been inspired by, or flagrantly stolen ideas from (no surprises that they are
+also web development-focused groups):
 
 - [SydCSS][]
 - [SydJS][]
 - [React Sydney][]
 
-I hope you are able to contribute to creating the kinds of communities you would
-like to see exist and thrive.
+There are so many differing opinions about the ways to run meetups, that I have
+no doubt that there are ways I can improve the way I run mine. So, if you have
+any feedback, suggestions, or ideas, by all means please leave a comment or
+reach out to me directly.
 
 ![image roro-at-airtasker][]
 
@@ -826,6 +834,7 @@ like to see exist and thrive.
 [Elixir Sydney GitHub]: https://github.com/elixirsydney/elixirsydney/
 [Elm Sydney]: https://www.meetup.com/Sydney-Elm-Meetup/
 [Elm Sydney GitHub]: https://github.com/elmsydney/elmsydney
+[Eventbrite]: https://www.eventbrite.com/
 [Exercism]: https://exercism.io/
 [gelato]: https://en.wikipedia.org/wiki/Gelato
 [Git]: https://git-scm.com/
