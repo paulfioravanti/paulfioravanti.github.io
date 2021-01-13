@@ -6,7 +6,7 @@ tags: beginner learning java c-plus-plus cpp
 header:
   image: /assets/images/2021-01-06/anakin-naboo-battle.png
   image_description: "Anakin Skywalker piloting a Naboo fighter"
-  teaser: /assets/images/2021-01-06/learner-porsche.jpg
+  teaser: /assets/images/2021-01-06/anakin-naboo-battle.png
   overlay_image: /assets/images/2021-01-06/anakin-naboo-battle.png
   overlay_filter: 0.2
 excerpt: >
