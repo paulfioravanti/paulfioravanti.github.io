@@ -2,7 +2,7 @@
 title: "Your Code: Episode I - The Phantom Repository"
 date: 2021-01-06 17:25 +1100
 last_modified_at: 2021-01-06 17:25 +1100
-tags:
+tags: beginner learning java c-plus-plus cpp
 header:
   image: /assets/images/2021-01-06/anakin-naboo-battle.png
   image_description: "Anakin Skywalker piloting a Naboo fighter"
