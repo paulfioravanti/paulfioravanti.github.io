@@ -15,13 +15,15 @@ excerpt: >
 ---
 
 As a present to myself for ["completing" Typey Type][I Completed Typey Type], I
-picked up a [Georgi][] keyboard, and since mid-July 2020, it has replaced my
-[Ergodox EZ][] as my daily driver for practising [Plover stenography][].
+picked up a [Georgi][] keyboard, and since mid-July 2020, I have been using it
+as my daily driver for practising [Plover stenography][].
 
 The Georgi's [Kailh Choc Linear][] key switches with [12g ultra light springs][]
-make [chording][] a breeze. However, its compact form factor means there is no
-[number bar][], but rather a set of number (`#`) keys in the thumb clusters of
-both halves of the keyboard.
+make [chording][] a breeze. However, its compact form factor means it has
+a set of number (`#`) keys in the thumb clusters of both halves of the
+keyboard, rather than a [number bar][] (or row of keys that effectively
+substitute for a number bar if you are using a traditional keyboard, rather than
+a [stenotype machine][Stenotype]).
 
 {: refdef: style="text-align: center;"}
 ![img number-bar][]{: style="margin-right: 0.5rem; width: 45%;"}
@@ -47,6 +49,24 @@ You can download a PDF containing all the images in the animated GIF above at
 the following link:
 
 - [georgi-numbers.pdf][pdf georgi-numbers]
+
+Also, here are some compare and contrast videos of stroking Plover steno numbers
+on both a Georgi and an [Ergodox EZ][] (which I originally [started
+stenography][Starting Stenography with an Ergodox] on):
+
+<div style="display: flex;">
+  <div style="width: 50%; margin-left: 0.5rem;">
+    {% include video id="Xz0aqwlIHvg" provider="youtube" %}
+  </div>
+  <div style="width: 50%; margin-left: 0.5rem;">
+    {% include video id="Y1zQEEmivxc" provider="youtube" %}
+  </div>
+</div>
+
+> I am still learning, so I am definitely not fast, and just know it took me
+  tens of takes to record each video until I was able to not make any major
+  mistakes and have Typey Type not deduct percentage points off me (and even
+  then, they are not perfect runs).
 
 ## Rules
 
@@ -125,6 +145,12 @@ So, here is what I came up with:
    ![img 900-tiny][]{: style="margin-left: 0.5rem;" }
    {: refdef}
 
+  Plover does offer the `#EUT` outline to avoid needing to perform a Philly
+  shift, but I do not find the Philly shift that awkward to stroke given that
+  the `#` keys are already moving my hands out of standard steno positions
+  anyway, and I want keep building muscle memory on the `-Z` pattern and not
+  have to remember this one potential exception to the 100s rule.
+
 ## All that just for numbers?
 
 You may be reeling in horror at the need to remember so much just to chord
@@ -168,4 +194,6 @@ you think would work better, please reach out to me or leave a comment!
 ["Philly shift"]: https://www.artofchording.com/layout/d-and-z.html#the-d-and-z-keys
 [Plover stenography]: http://www.openstenoproject.org/
 [ring finger]: https://en.wikipedia.org/wiki/Ring_finger
+[Starting Stenography with an Ergodox]: https://www.paulfioravanti.com/blog/starting-stenography-ergodox/
 [steno order]: https://sites.google.com/site/learnplover/lesson-2-steno-order#TOC-Steno-Order
+[Stenotype]: https://en.wikipedia.org/wiki/Stenotype
