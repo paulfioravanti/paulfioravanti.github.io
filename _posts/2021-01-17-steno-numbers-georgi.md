@@ -1,13 +1,13 @@
 ---
 title: "Stenography Numbers on a Georgi"
-date: 2021-01-14 18:00 +1100
-last_modified_at: 2021-01-14 18:00 +1100
+date: 2021-01-17 18:15 +1100
+last_modified_at: 2021-01-17 18:15 +1100
 tags: stenography georgi mechanical-keyboards
 header:
-  image: /assets/images/2021-01-14/georgi.jpg
+  image: /assets/images/2021-01-17/georgi.jpg
   image_description: "Georgi keyboard for stenography."
-  teaser: /assets/images/2021-01-14/georgi.jpg
-  overlay_image: /assets/images/2021-01-14/georgi-cropped.jpg
+  teaser: /assets/images/2021-01-17/georgi.jpg
+  overlay_image: /assets/images/2021-01-17/georgi-cropped.jpg
   overlay_filter: 0.2
 excerpt: >
   Adapt your steno habits from using a number bar to a set of thumb cluster
@@ -170,20 +170,20 @@ you think would work better, please reach out to me or leave a comment!
 [Ergodox EZ]: https://ergodox-ez.com/
 [Georgi]: https://www.gboards.ca/product/georgi
 [I Completed Typey Type]: https://www.paulfioravanti.com/blog/completed-typey-type/
-[img 013-tiny]: /assets/images/2021-01-14/013-tiny.png
-[img 022-tiny]: /assets/images/2021-01-14/022-tiny.png
-[img 031-tiny]: /assets/images/2021-01-14/031-tiny.png
-[img 048-tiny]: /assets/images/2021-01-14/048-tiny.png
-[img 060-tiny]: /assets/images/2021-01-14/060-tiny.png
-[img 066-tiny]: /assets/images/2021-01-14/066-tiny.png
-[img 084-tiny]: /assets/images/2021-01-14/084-tiny.png
-[img 090-tiny]: /assets/images/2021-01-14/090-tiny.png
-[img 100-tiny]: /assets/images/2021-01-14/100-tiny.png
-[img 700-tiny]: /assets/images/2021-01-14/700-tiny.png
-[img 900-tiny]: /assets/images/2021-01-14/900-tiny.png
-[img georgi-numbers-small]: /assets/images/2021-01-14/georgi-numbers-small.gif
-[img number-bar]: /assets/images/2021-01-14/number-bar.png
-[img number-keys]: /assets/images/2021-01-14/number-keys.png
+[img 013-tiny]: /assets/images/2021-01-17/013-tiny.png
+[img 022-tiny]: /assets/images/2021-01-17/022-tiny.png
+[img 031-tiny]: /assets/images/2021-01-17/031-tiny.png
+[img 048-tiny]: /assets/images/2021-01-17/048-tiny.png
+[img 060-tiny]: /assets/images/2021-01-17/060-tiny.png
+[img 066-tiny]: /assets/images/2021-01-17/066-tiny.png
+[img 084-tiny]: /assets/images/2021-01-17/084-tiny.png
+[img 090-tiny]: /assets/images/2021-01-17/090-tiny.png
+[img 100-tiny]: /assets/images/2021-01-17/100-tiny.png
+[img 700-tiny]: /assets/images/2021-01-17/700-tiny.png
+[img 900-tiny]: /assets/images/2021-01-17/900-tiny.png
+[img georgi-numbers-small]: /assets/images/2021-01-17/georgi-numbers-small.gif
+[img number-bar]: /assets/images/2021-01-17/number-bar.png
+[img number-keys]: /assets/images/2021-01-17/number-keys.png
 [inversion]: https://sites.google.com/site/learnplover/lesson-2-steno-order#TOC-Inversion
 [Kailh Choc Linear]: http://www.kailh.com/en/Products/Ks/CS/
 [Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
