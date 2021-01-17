@@ -21,7 +21,8 @@
 $signup-form-border-color: #999;
 $signup-form-background-color: #aaa;
 $signup-form-button-color: #fff;
-$signup-form-button-hover-color: #777;
+$signup-form-button-background-color: #009900;
+$signup-form-button-hover-color: #006600;
 $signup-form-input-focus-color: #333;
 
 #bd_embed_signup {
@@ -67,7 +68,7 @@ $signup-form-input-focus-color: #333;
       }
 
       &.button {
-        background-color: $signup-form-background-color;
+        background-color: $signup-form-button-background-color;
         border: 0 none;
         border-radius: 4px;
         clear: both;
