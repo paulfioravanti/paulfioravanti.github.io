@@ -51,7 +51,7 @@ the following link:
 - [georgi-numbers.pdf][pdf georgi-numbers]
 
 Also, here are some compare and contrast videos of stroking Plover steno numbers
-on both a Georgi and an [Ergodox EZ][] (which I originally [started
+on both a Georgi and an [Ergodox EZ][] (which I originally [started learning
 stenography][Starting Stenography with an Ergodox] on):
 
 <div style="display: flex;">
@@ -63,10 +63,10 @@ stenography][Starting Stenography with an Ergodox] on):
   </div>
 </div>
 
-> I am still learning, so I am definitely not fast, and just know it took me
-  tens of takes to record each video until I was able to not make any major
-  mistakes and have Typey Type not deduct percentage points off me (and even
-  then, they are not perfect runs).
+> I am still learning, so I am definitely not fast. Also, these videos are not
+  representative of my current accuracy: it took me tens of takes to record each
+  video until I was able to not make any major mistakes (and even then, they are
+  not perfect runs).
 
 ## Rules
 
@@ -105,7 +105,7 @@ So, here is what I came up with:
 - The thumb cluster rule: where a number outline requires non-`#` keys in the
   thumb clusters (ie `A`, `O`, `E`, `U`), wherever possible, aim to _only_ use
   your thumbs to stroke those keys. This generally limits you to stroking the
-  following adjacent chords for number outlines: `#A`, `AO`, and `EU`.
+  following adjacent keys for number outlines: `#A`, `AO`, and `EU`.
 
 ### Exceptions
 
@@ -146,7 +146,7 @@ So, here is what I came up with:
    {: refdef}
 
   Plover does offer the `#EUT` outline to avoid needing to perform a Philly
-  shift, but I do not find the Philly shift that awkward to stroke given that
+  shift, but I do not find the Philly shift _that_ awkward to stroke given that
   the `#` keys are already moving my hands out of standard steno positions
   anyway, and I want keep building muscle memory on the `-Z` pattern and not
   have to remember this one potential exception to the 100s rule.
