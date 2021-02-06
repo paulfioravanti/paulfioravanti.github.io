@@ -24,8 +24,7 @@ end
 
 group :development, :test do
   # Test your rendered HTML files to make sure they're accurate
-  # NOTE: https://github.com/gjtorikian/html-proofer/pull/613
-  # gem "html-proofer", "~> 3.18"
+  gem "html-proofer", "~> 3.18"
 end
 
 group :jekyll_plugins do
