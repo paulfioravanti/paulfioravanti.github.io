@@ -4,7 +4,7 @@ redirect_from:
   - /blog/chording-qwerty-with-qmk-combos/
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2021-02-19 23:20 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography
 header:
   image: /assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg
@@ -605,6 +605,67 @@ replacing some keyboard shortcuts with chords instead.
 If you do use QMK combos for anything interesting, please do reach out and let
 me know!
 
+### Update (19 February 2021)
+
+Twitter user [@azulee][] asked about [whether NKRO was actually needed in order
+to perform combos][azulee NKRO Twitter thread].
+
+I think I must have just assumed it was without confirming, so I changed and
+commented out some of my configuration to explicitly disable NKRO, and ran a
+check:
+
+**`qmk_firmware/keyboards/ergodox_ez/keymaps/chorded_qwerty/rules.mk`**
+
+```sh
+# FORCE_NKRO = yes
+NKRO_ENABLE = no
+COMBO_ENABLE = yes
+```
+
+**`qmk_firmware/keyboards/ergodox_ez/keymaps/chorded_qwerty/config.h`**
+
+```c
+#include "../../config.h"
+
+// #define FORCE_NKRO
+// ...
+```
+
+After re-compiling and re-flashing the firmware, all the combos in this blog
+post still worked! So, NKRO is _not_ specifically needed in order to use QMK
+Combos.
+
+I did wonder, though, whether combos that used more than 6 keys could still be
+performed without NKRO enabled. So, as a test, I added a new combo to my layout,
+in which the 8 `ASDFJKL;` keys would output a hash (`#`) when pressed together:
+
+**`qmk_firmware/keyboards/ergodox_ez/keymaps/chorded_qwerty/keymap.c`**
+
+```c
+enum combos {
+  // ...
+  ASDFJKLSCOLON
+};
+
+// ...
+const uint16_t PROGMEM eightkey_combo[] = {
+  KC_A, KC_S, KC_D, KC_F, KC_J, KC_K, KC_L, KC_SCOLON, COMBO_END
+};
+
+combo_t key_combos[COMBO_COUNT] = {
+  // ...
+  [ASDFJKLSCOLON] = COMBO(eightkey_combo, KC_HASH)
+};
+```
+
+...and this combo also worked without NKRO enabled on the Ergodox EZ!
+
+So, it would seem that even if you do not want to enable NKRO in your keyboard
+firmware, you are not prevented from using combos, even if their length may make
+it seem like it would be required.
+
+[@azulee]: https://twitter.com/azulee
+[azulee NKRO Twitter thread]: https://twitter.com/azulee/status/1362458780374458368
 [Chorded QWERTY image]: /assets/images/2019-04-28/chorded-qwerty.png
 [`COMBO_END`]: https://github.com/qmk/qmk_firmware/blob/bc536b9b6d98e5428a28f6e6ba69675bd77b79cc/quantum/process_keycode/process_combo.h#L49
 [Ergodox]: https://www.ergodox.io/
