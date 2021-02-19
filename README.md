@@ -67,9 +67,9 @@ worked best out of the box with Jekyll 3.6, and was usable on [Github Pages][].
 
 ## Deployment
 
-This blog is current deployed to [Github Pages][], but Github Pages
-tend to be slow at updating their Jekyll technical stack, and they only support
-a [limited set of plugins][Github Pages Supported Plugin List].
+This blog is current deployed to [Github Pages][], but Github Pages tend to be
+slow at updating their Jekyll technical stack, and they only support a
+[limited set of plugins][Github Pages Supported Plugin List].
 
 So, I'm using [Travis CI][] as both a test harness and a deployment pipeline to
 bypass the limitations of the [Pages gem][], and allow Jekyll to use the latest
