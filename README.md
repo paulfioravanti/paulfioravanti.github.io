@@ -125,6 +125,6 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [scss-lint]: https://github.com/brigade/scss-lint
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
-[Travis CI]: https://travis-ci.org/
+[Travis CI]: https://travis-ci.com/
 [twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
 [twitter-url]: https://twitter.com/paulfioravanti
