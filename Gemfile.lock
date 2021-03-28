@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.3)
+    activesupport (6.1.3.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -92,7 +92,7 @@ GEM
     jekyll-paginate (1.1.0)
     jekyll-redirect-from (0.16.0)
       jekyll (>= 3.3, < 5.0)
-    jekyll-remote-theme (0.4.2)
+    jekyll-remote-theme (0.4.3)
       addressable (~> 2.0)
       jekyll (>= 3.5, < 5.0)
       jekyll-sass-converter (>= 1.0, <= 3.0.0, != 2.0.0)
@@ -112,12 +112,12 @@ GEM
     json (2.5.1)
     json-minify (0.0.3)
       json (> 0)
-    kramdown (2.3.0)
+    kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.4.1)
+    listen (3.5.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     lumberjack (1.2.8)
@@ -133,9 +133,9 @@ GEM
     minitest (5.14.4)
     multipart-post (2.1.1)
     nenv (0.3.0)
-    nokogiri (1.11.1-x86_64-darwin)
+    nokogiri (1.11.2-x86_64-darwin)
       racc (~> 1.4)
-    nokogumbo (2.0.4)
+    nokogumbo (2.0.5)
       nokogiri (~> 1.8, >= 1.8.4)
     notiffany (0.1.3)
       nenv (~> 0.1)
@@ -209,4 +209,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.13
+   2.2.15
