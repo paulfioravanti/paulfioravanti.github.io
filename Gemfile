@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.0.0"
+ruby "3.0.1"
 
 # Jekyll is a blog-aware static site generator in Ruby
 # NOTE: Although this is currently deployed on Github Pages, I'm not using
