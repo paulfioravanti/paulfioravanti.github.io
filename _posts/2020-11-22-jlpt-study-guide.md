@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2020-11-26 15:10 +1100
+last_modified_at: 2021-05-02 20:00 +1100
 tags: japanese jlpt anki html css javascript 日本語
 header:
   image: /assets/images/2020-11-22/abi-schreider-yb16pT5F_jE-unsplash.jpg
@@ -255,12 +255,30 @@ every day, so here is a random list of the forms that that takes.
   being talked about in Japan currently. There is no official way to view the
   show outside of Japan, but you can always find a channel on YouTube that
   streams it live at 10:00am [JST][] Sundays.
-- There are a lot of great YouTube channels originating from Japan. Here is a
-  selection of a few in my subscriptions:
+- There are a lot of great YouTube and online video channels originating from
+  Japan. Here is a selection of a few in my subscriptions:
   - [<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>森<rt>もり</rt></ruby>][]:
     _Nihongo no Mori_, the Japanese Forest, is a fantastic resource for JLPT
     videos. If you are actively studying, or you just want the occasional
     refresher, you want to subscribe to this channel.
+  - [あかね<ruby>的<rt>てき</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby>][]
+    (Akane's Japanese classroom): Akane's lessons are great for learning
+    contextual Japanese. She roleplays through various situations like job
+    interviewing, talking on the phone, going out to eat, and checking in at
+    a hotel, so there is plenty of practical Japanese to learn from her videos.
+  - [Easy Japanese for Work しごとのにほんご][]: If you are planning to work in
+    Japan, or you would just like to learn about use of Japanese in a working
+    environment context, this series of videos by [NHK World][], is an
+    _excellent_ supplement to any formal Japanese studies, with plenty of
+    phrases and cultural nuances you may not find in your textbooks. NHK World's
+    [YouTube channel][NHK World YouTube] does not have the full set of these
+    videos, so be sure to view them directly on their website.
+  - [やっすんのエンジニア<ruby>大学<rt>だいがく</rt></ruby>][]: If, like me, you
+    are a computer programmer, or you are involved in technological fields
+    involving software, you will definitely appreciate Yasun's channel as he
+    goes on deep dives with a variety of different technologies. Your Japanese
+    technical vocabulary will doubtlessly improve as a result of watching his
+    videos.
   - [エガちゃんねる EGA-CHANNEL][]: The official channel of [Egashira 2:50][],
     probably the nicest completely bonkers comedian in Japan.
   - [マキシマム ザ ホルモン<ruby>公式<rt>こうしき</rt></ruby>][]: The official
@@ -287,6 +305,7 @@ language media that you like reading/watching, please let me know in a comment!
 [AnkiWeb]: https://ankiweb.net/about
 [AnkiWeb JLPT]: https://ankiweb.net/shared/decks/jlpt
 [Eat That Frog]: https://www.briantracy.com/blog/time-management/the-truth-about-frogs/
+[Easy Japanese for Work しごとのにほんご]: https://www3.nhk.or.jp/nhkworld/en/ondemand/program/video/easyjapaneseforwork
 [Egashira 2:50]: https://en.wikipedia.org/wiki/Egashira_2:50
 [Google Chrome]: https://www.google.com/intl/en_au/chrome/
 [Hitoshi Matsumoto]: https://twitter.com/matsu_bouzu
@@ -299,12 +318,15 @@ language media that you like reading/watching, please let me know in a comment!
 [Kinokuniya]: https://australia.kinokuniya.com/
 [Kinokuniya JLPT books]: https://australia.kinokuniya.com/t/hobby-and-goods/jlpt
 [Maximum the Hormone]: https://en.wikipedia.org/wiki/Maximum_the_Hormone
+[NHK World]: https://www3.nhk.or.jp/nhkworld/
+[NHK World YouTube]: https://www.youtube.com/c/NHKWORLDJAPAN
 [paulfioravanti/jlpt]: https://github.com/paulfioravanti/jlpt
 [rikaikun]: https://chrome.google.com/webstore/detail/rikaikun/jipdnfibhldikgcjhfnomkfpcebammhp?hl=en
 [Shibuya]: https://en.wikipedia.org/wiki/Shibuya
 [Vitas Gerulaitis]: https://en.wikipedia.org/wiki/Vitas_Gerulaitis#Quote
 [Web 1.0]: https://en.wikipedia.org/wiki/Web_2.0#Web_1.0
 [Yahoo Japan News]: https://news.yahoo.co.jp/
+[あかね<ruby>的<rt>てき</rt></ruby><ruby>日本語<rt>にほんご</rt></ruby><ruby>教室<rt>きょうしつ</rt></ruby>]: https://www.youtube.com/channel/UCh-GhnQ7qDQmS6Bz3pGc1Mw
 [<ruby>新完全<rt>しんかんぜん</rt></ruby>マスター]: https://www.3anet.co.jp/np/list.html?series_id=4
 [<ruby>日本語<rt>にほんご</rt>能力<rt>のうりょく</rt>試験<rt>しけん</rt>公式<rt>こうしき</rt>問題集<rt>もんだいしゅう</rt></ruby>]: https://www.bonjinsha.com/goods/detail?id=12862
 [ワイドナショー]: https://www.fujitv.co.jp/widna-show/
@@ -314,3 +336,4 @@ language media that you like reading/watching, please let me know in a comment!
 [ヒカル（Hikaru）]: https://www.youtube.com/channel/UCaminwG9MTO4sLYeC3s6udA
 [ラファエル Raphael]: https://www.youtube.com/channel/UCgQgMOBZOJ1ZDtCZ4hwP1uQ
 [<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>森<rt>もり</rt></ruby>]: https://www.youtube.com/channel/UCVx6RFaEAg46xfAsD2zz16w
+[やっすんのエンジニア<ruby>大学<rt>だいがく</rt></ruby>]: https://www.youtube.com/channel/UCajrdoGzHzDogrNrLYYmGsg
