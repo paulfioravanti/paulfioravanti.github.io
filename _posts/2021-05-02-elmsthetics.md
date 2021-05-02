@@ -1,13 +1,13 @@
 ---
 title: "░▒▓ＥＬＭＳＴＨＥＴＩＣＳ▓▒░"
-date: 2021-03-08 21:30 +1100
-last_modified_at: 2021-03-08 21:30 +1100
+date: 2021-05-02 14:30 +1100
+last_modified_at: 2021-05-02 14:30 +1100
 tags: elm synthwave retrowave 80s functional-programming soundcloud giphy
 header:
-  image: /assets/images/2021-03-08/synthwave-3941721_1280.jpg
+  image: /assets/images/2021-05-02/synthwave-3941721_1280.jpg
   image_description: "Synthwave, Retrowave, Synth, Technology, Abstract"
-  teaser: /assets/images/2021-03-08/synthwave-3941721_1280.jpg
-  overlay_image: /assets/images/2021-03-08/synthwave-3941721_1280_cropped.jpg
+  teaser: /assets/images/2021-05-02/synthwave-3941721_1280.jpg
+  overlay_image: /assets/images/2021-05-02/synthwave-3941721_1280_cropped.jpg
   overlay_filter: 0.1
   caption: >
     Image by [iywbr](https://pixabay.com/users/iywbr-11282422/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3941721)
@@ -28,7 +28,7 @@ thread].
 
 <div style="margin: auto; text-align: center; width: 90%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-03-08/80sfy-screenshot.png"
+    <img src="/assets/images/2021-05-02/80sfy-screenshot.png"
          alt="80sfy.com screenshot" />
   </figure>
 </div>
@@ -38,7 +38,7 @@ decided to re-create it using [Elm][] because why not, but also just because...
 
 <div style="margin: auto; text-align: center; width: 80%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-03-08/programming-in-elm-is-rad.jpg"
+    <img src="/assets/images/2021-05-02/programming-in-elm-is-rad.jpg"
          alt="Programming in Elm is pretty rad!" />
     <figcaption style="text-align: center;">
       Retro Wave at <a href="https://photofunia.com/categories/all_effects/retro-wave">PhotoFunia</a>
@@ -61,7 +61,7 @@ follow along.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/chunk-glitched.png"
+    <img src="/assets/images/2021-05-02/chunk-glitched.png"
          alt="Chunk from the Goonies" />
   </figure>
 </div>
@@ -109,7 +109,7 @@ n</span>, and the SoundCloud player "skips" over to track
 
 <div style="margin: auto; text-align: center; width: 100%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-03-08/andy-organ-glitched.png"
+    <img src="/assets/images/2021-05-02/andy-organ-glitched.png"
          alt="The Goonies on the bone piano" />
   </figure>
 </div>
@@ -355,7 +355,7 @@ real `Tag` code][Tag] for the details on picking random tags).
 
 <div style="margin: auto; text-align: center; width: 100%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-03-08/goonies-end-scene-glitched.png"
+    <img src="/assets/images/2021-05-02/goonies-end-scene-glitched.png"
          alt="The Goonies looking out at the Inferno" />
   </figure>
 </div>
@@ -370,7 +370,7 @@ your mind a bit.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/luke-skywalker-glitched.png"
+    <img src="/assets/images/2021-05-02/luke-skywalker-glitched.png"
          alt="I am a Jedi, like my father before me." />
   </figure>
 </div>
@@ -426,7 +426,7 @@ compared to Alex's blog post, to get it all making sense in my own head.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/anakin-redeemed-glitched.png"
+    <img src="/assets/images/2021-05-02/anakin-redeemed-glitched.png"
          alt="Anakin redeemed" />
   </figure>
 </div>
@@ -636,7 +636,7 @@ passed down further into child components.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/chewbacca-ewoks-glitched.png"
+    <img src="/assets/images/2021-05-02/chewbacca-ewoks-glitched.png"
          alt="Chewbacca and Ewoks" />
   </figure>
 </div>
@@ -756,7 +756,7 @@ internal-to-`AudioPlayer`, returning a concrete `Msg` type.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/leia-truth-glitched.png"
+    <img src="/assets/images/2021-05-02/leia-truth-glitched.png"
          alt="Leia learns the truth" />
   </figure>
 </div>
@@ -906,7 +906,7 @@ supplied to the `onClick` function, we can see that:
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/battle-of-endor-glitched.png"
+    <img src="/assets/images/2021-05-02/battle-of-endor-glitched.png"
          alt="Battle of Endor" />
   </figure>
 </div>
@@ -925,7 +925,7 @@ and your application.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/say-hello-to-my-little-friend-glitched.png"
+    <img src="/assets/images/2021-05-02/say-hello-to-my-little-friend-glitched.png"
          alt="Say hello to my little friend" />
   </figure>
 </div>
@@ -1117,7 +1117,7 @@ and I currently think that this kind of structure can help in that goal.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/you-can-be-my-wingman-glitched.png"
+    <img src="/assets/images/2021-05-02/you-can-be-my-wingman-glitched.png"
          alt="You can be my wingman anytime" />
   </figure>
 </div>
@@ -1168,7 +1168,7 @@ codebase and wrapped every type I could that made sense, resulting in a total of
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/maverick-thumbs-up-glitched.png"
+    <img src="/assets/images/2021-05-02/maverick-thumbs-up-glitched.png"
          alt="Maverick thumbs up." />
   </figure>
 </div>
@@ -1317,7 +1317,7 @@ giving them a try in your own Elm codebases!
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/we-dont-need-roads-glitched.png"
+    <img src="/assets/images/2021-05-02/we-dont-need-roads-glitched.png"
          alt="Roads? Where we're going we don't need roads" />
   </figure>
 </div>
@@ -1459,7 +1459,7 @@ Notes]:
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/bttf2-newspaper-glitched.png"
+    <img src="/assets/images/2021-05-02/bttf2-newspaper-glitched.png"
          alt="Doc and Marty reading a newspaper" />
   </figure>
 </div>
@@ -1666,7 +1666,7 @@ function initOutboundPortMessageHandling(scPlayer, ports) {
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/biffs-gang-glitched.png"
+    <img src="/assets/images/2021-05-02/biffs-gang-glitched.png"
          alt="Biff's gang" />
   </figure>
 </div>
@@ -1860,7 +1860,7 @@ Some notes about this module:
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/flying-delorean-glitched.png"
+    <img src="/assets/images/2021-05-02/flying-delorean-glitched.png"
          alt="Flying DeLorean" />
   </figure>
 </div>
@@ -1875,7 +1875,7 @@ at going down for your own Elm application.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/your-heart-dies-glitched.png"
+    <img src="/assets/images/2021-05-02/your-heart-dies-glitched.png"
          alt="When you grow up your heart dies" />
   </figure>
 </div>
@@ -1965,7 +1965,7 @@ And...it worked. Same behaviour across browsers now. Go figure ¯\\_(ツ)_/¯
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/breakfast-club-group-glitched.png"
+    <img src="/assets/images/2021-05-02/breakfast-club-group-glitched.png"
          alt="The Breakfast Club" />
   </figure>
 </div>
@@ -2075,7 +2075,7 @@ function bindSoundCloudWidgetEvents(scPlayer, ports) {
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/breakfast-club-fist-pump-glitched.png"
+    <img src="/assets/images/2021-05-02/breakfast-club-fist-pump-glitched.png"
          alt="Breakfast Club fist pump" />
   </figure>
 </div>
@@ -2087,7 +2087,7 @@ I hope you save yourself some time if you encounter similar issues!
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
-    <img src="/assets/images/2021-03-08/tears-in-rain-glitched.png"
+    <img src="/assets/images/2021-05-02/tears-in-rain-glitched.png"
          alt="All these moments will be lost in time. Like tears in rain." />
   </figure>
 </div>
