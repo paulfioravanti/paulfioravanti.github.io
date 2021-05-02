@@ -1,7 +1,7 @@
 ---
 title: "░▒▓ＥＬＭＳＴＨＥＴＩＣＳ▓▒░"
-date: 2021-05-02 14:30 +1100
-last_modified_at: 2021-05-02 14:30 +1100
+date: 2021-05-02 14:40 +1100
+last_modified_at: 2021-05-02 14:40 +1100
 tags: elm synthwave retrowave 80s functional-programming soundcloud giphy
 header:
   image: /assets/images/2021-05-02/synthwave-3941721_1280.jpg
