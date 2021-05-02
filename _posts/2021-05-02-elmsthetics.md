@@ -1732,19 +1732,19 @@ been requested".
 > _JS_:
 >
 > ```js
-  function initTrackFinished(scPlayer, ports) {
-    scPlayer.bind(SC.Widget.Events.FINISH, () => {
-      // Calling `send` on a port with no parameters is invalid, apparently...
-      ports.nextTrackNumberRequested.send()
-    })
-  }
-  ```
+>  function initTrackFinished(scPlayer, ports) {
+>    scPlayer.bind(SC.Widget.Events.FINISH, () => {
+>      // Calling `send` on a port with no parameters is invalid, apparently...
+>      ports.nextTrackNumberRequested.send()
+>    })
+>  }
+>  ```
 >
 > _Elm_:
 >
 > ```elm
-  port nextTrackNumberRequested : (() -> msg) -> Sub msg
-  ```
+>  port nextTrackNumberRequested : (() -> msg) -> Sub msg
+>  ```
 >
 > The port receives no parameters, so having `()` as the parameter is correct,
   right...? (Spoiler: Nope.)
@@ -1754,13 +1754,13 @@ been requested".
 > _JS_:
 >
 > ```js
-  function initTrackFinished(scPlayer, ports) {
-    scPlayer.bind(SC.Widget.Events.FINISH, () => {
-      // Needing to send an explicit `null` seems a bit strange to me...
-      ports.nextTrackNumberRequested.send(null)
-    })
-  }
-  ```
+>  function initTrackFinished(scPlayer, ports) {
+>    scPlayer.bind(SC.Widget.Events.FINISH, () => {
+>      // Needing to send an explicit `null` seems a bit strange to me...
+>      ports.nextTrackNumberRequested.send(null)
+>    })
+>  }
+>  ```
 >
 > The only documentation I could find regarding needing to do this was [this
   Stack Overflow answer][Stack Overflow
