@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2021-05-05 9:00 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -62,6 +62,27 @@ any kind of error message, you may need to check your operating system-level
 keyboard input source. If you use [Google IME][] or a symbolic language like
 Japanese or Korean, you will probably "[have to change to a QWERTY/US layout to
 use Plover for now][Plover crash issue]".
+
+#### _UPDATE 05 May 2021_: Oryx now supports steno!
+
+The [Oryx][] online keyboard layout configuration tool by [ZSA Technology
+Labs][], makers of the Ergodox EZ, now supports configuring stenography keys!
+
+This means that rather than get your hands dirty with code, you can use the nice
+web-based user interface to create your steno firmware.
+
+Here is a layout I created using Oryx based on the one described in this blog
+post:
+
+- [My Oryx Steno Layout][]
+
+Feel free to take whatever you would like from it, or use it as a base to build
+out your own configuration!
+
+If you are interested in coding up your own layout or getting in to some
+technical details, then definitely read on. Otherwise, you can probably skim the
+rest of this post, and only focus on the sections that involve configuring the
+Plover application itself.
 
 ## Initial Setup
 
@@ -815,10 +836,12 @@ want to try this layout as well.
 [Learn Plover!]: https://sites.google.com/site/ploverdoc/
 [Learn Plover! Lesson 1]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
+[My Oryx Steno Layout]: https://configure.zsa.io/ergodox-ez/layouts/rOgol/latest/2
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
 [number bar]: http://qwertysteno.com/Intermediate/Numbers.php
 [Open Steno Project]: http://www.openstenoproject.org/
+[Oryx]: https://configure.zsa.io/
 [PMK]: https://pimpmykeyboard.com/
 [Plover]: http://www.openstenoproject.org/plover/
 [Plover connected to keyboard]: /assets/images/2018-10-18/plover-keyboard-connected.png "Plover connected to keyboard"
@@ -859,3 +882,4 @@ want to try this layout as well.
 [TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
 [Waleed Khan]: https://waleedkhan.name
 [Workman]: https://workmanlayout.org/
+[ZSA Technology Labs]: https://ergodox-ez.com/
