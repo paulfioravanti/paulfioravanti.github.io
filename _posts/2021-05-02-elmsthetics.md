@@ -12,6 +12,10 @@ header:
   caption: >
     Image by [iywbr](https://pixabay.com/users/iywbr-11282422/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3941721)
     from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3941721)
+badges:
+  - image: https://img.shields.io/badge/Elm%20Weekly-%23159-green.svg
+    alt: "Elm Weekly #159"
+    link: http://www.elmweekly.nl/issues/elm-weekly-issue-159-582848
 excerpt: >
   Tech moves pretty fast. If you don't stop and do a side project once in a
   while, you could miss it.
