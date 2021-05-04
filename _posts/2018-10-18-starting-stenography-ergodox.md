@@ -882,4 +882,4 @@ want to try this layout as well.
 [TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
 [Waleed Khan]: https://waleedkhan.name
 [Workman]: https://workmanlayout.org/
-[ZSA Technology Labs]: https://ergodox-ez.com/
+[ZSA Technology Labs]: https://www.zsa.io/
