@@ -2,7 +2,8 @@
   "first-header-h1": false,
   "first-line-h1": false,
   "line-length": {
-    "code_blocks": false
+    "code_blocks": false,
+    "tables": false
   },
   "no-hard-tabs": {
     "code_blocks": false
@@ -22,6 +23,6 @@
     ]
   },
   "no-trailing-punctuation": {
-    "punctuation": ",;:"
+    "punctuation": ",;"
   }
 }
