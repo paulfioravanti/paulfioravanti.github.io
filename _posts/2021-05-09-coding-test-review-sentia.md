@@ -1,13 +1,13 @@
 ---
 title: "Coding Test Review: Sentia"
-date: 2021-05-06 20:30 +1100
-last_modified_at: 2021-05-06 20:30 +1100
+date: 2021-05-09 18:50 +1100
+last_modified_at: 2021-05-09 18:50 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching
 header:
-  image: /assets/images/2021-05-06/jedi-archives.png
+  image: /assets/images/2021-05-09/jedi-archives.png
   image_description: "Jocasta helps Obi-wan in the Jedi Archives"
-  teaser: /assets/images/2021-05-06/jocasta-helps-obi-wan.png
-  overlay_image: /assets/images/2021-05-06/jedi-archives.png
+  teaser: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
+  overlay_image: /assets/images/2021-05-09/jedi-archives.png
   overlay_filter: 0.1
 excerpt: >
   A long SQL query in a database far, far away....
@@ -206,7 +206,7 @@ acceptable format.
 
 <div style="margin: auto; text-align: center; width: 90%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-05-06/perhaps-archives-incomplete.jpg"
+    <img src="/assets/images/2021-05-09/perhaps-archives-incomplete.jpg"
          alt="80sfy.com screenshot" />
   </figure>
 </div>
@@ -575,7 +575,7 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [Hash]: https://ruby-doc.org/core/Hash.html
 [`helper_method`]: https://api.rubyonrails.org/classes/AbstractController/Helpers/ClassMethods.html#method-i-helper_method
 [Hutt]: https://starwars.fandom.com/wiki/Hutt
-[img screenshot]: /assets/images/2021-05-06/screenshot.png
+[img screenshot]: /assets/images/2021-05-09/screenshot.png
 [Imposter Syndrome]: https://en.wikipedia.org/wiki/Impostor_syndrome
 [inheritance]: https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)
 [Jabba the Hutt]: https://en.wikipedia.org/wiki/Jabba_the_Hutt
