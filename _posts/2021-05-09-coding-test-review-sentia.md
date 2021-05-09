@@ -4,7 +4,7 @@ date: 2021-05-09 18:50 +1100
 last_modified_at: 2021-05-09 18:50 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching
 header:
-  image: /assets/images/2021-05-09/jedi-archives.png
+  image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
   image_description: "Jocasta helps Obi-wan in the Jedi Archives"
   teaser: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
   overlay_image: /assets/images/2021-05-09/jedi-archives.png
