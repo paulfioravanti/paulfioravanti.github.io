@@ -11,6 +11,10 @@ gem "jekyll", "~> 4.0"
 # project documentation, or portfolio
 gem "minimal-mistakes-jekyll", "~> 4.22.0"
 
+# NOTE: For whatever reason, the jekyll build fails in production mode with
+# version 2.8.0. Fix currently unknown.
+gem "execjs", "2.7.0"
+
 group :development do
   # Command line tool to easily handle events on file system modifications
   gem "guard", "~> 2.14"
