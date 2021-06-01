@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2021-05-05 9:00 +1100
+last_modified_at: 2021-06-01 22:10 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -63,7 +63,7 @@ keyboard input source. If you use [Google IME][] or a symbolic language like
 Japanese or Korean, you will probably "[have to change to a QWERTY/US layout to
 use Plover for now][Plover crash issue]".
 
-#### _UPDATE 05 May 2021_: Oryx now supports steno!
+#### UPDATE 5 May 2021: Oryx now supports steno!
 
 The [Oryx][] online keyboard layout configuration tool by [ZSA Technology
 Labs][], makers of the Ergodox EZ, now supports configuring stenography keys!
@@ -124,7 +124,7 @@ just use that? Why go to the trouble of creating another layout? Well...
   at least for me, resulted in incorrect key press processing, but more about
   that later as well...)
 >
-> **UPDATE 28-04-2019**: The issue with TX Bolt is
+> **UPDATE 28 Apr 2019**: The issue with TX Bolt is
 [now fixed][qmk/qmk_firmware #5229], and the [current QMK Ergodox EZ steno
 configuration][QMK Ergodox EZ Steno Configuration Current] does [now use QMK's
 built-in support for stenography][qmk/qmk_firmware #5220]. I may be biased, but
@@ -459,7 +459,7 @@ Some notes about these changes:
   [TX Bolt][] (`STENO_MODE_BOLT`) for the parameter, as QMK apparently
   [speaks that protocol by default][Plover with Steno Protocol], but I found
   that key presses did not come in (or were not processed) properly, while
-  GeminiPR worked as expected (**Update 28-04-2019**: This issue [has been
+  GeminiPR worked as expected (**UPDATE 28 Apr 2019**: This issue [has been
   fixed][qmk/qmk_firmware #5229])
 
 We will also need to update the rules file due to a few quirks of using
@@ -487,6 +487,25 @@ Some notes about these changes:
   lot of use of mouse movements and clicks via your keyboard, you may want to
   consider going back and using the modified QWERTY steno keymap. For me
   personally, I can live without using my keyboard as a mouse.
+
+> #### UPDATE 1 Jun 2021
+>
+> I recently found out that this limitation with the virtual serial ports would
+> seem to have been removed, or at least mitigated. It is now possible to have
+> steno and mouse/media keys use "shared endpoints" (essentially sharing their
+> virtual serial ports) with the use of a `KEYBOARD_SHARED_EP = yes` directive.
+> So, the `rules.mk` file can be changed to:
+>
+> **`qmk_firmware/keyboards/ergodox_ez/keymaps/default_steno/rules.mk`**
+> 
+> ```sh
+> STENO_ENABLE = yes
+> VIRTSER_ENABLE = yes
+> FORCE_NKRO = yes
+> MOUSEKEY_ENABLE = yes
+> KEYBOARD_SHARED_EP = yes
+> ```
+> See QMK's [USB Endpoint Limitations][] documentation for details.
 
 Now, let's re-generate the `ergodox_ez_default_steno.hex` and flash our
 firmware:
@@ -562,7 +581,7 @@ As of this writing, I am currently only at 12 WPM after completing Lesson 1 of
 student with a long road ahead. So, if there are any glaring mistakes or
 omissions in this post, please let me know in the comments.
 
-## Update (8 Nov 2018)
+## UPDATE 8 Nov 2018
 
 After working my way through [Learn Plover!][], I have come to the conclusion
 that I set the steno keys to be one row too high, and that changing keycaps made
@@ -703,7 +722,7 @@ but the issues with that I found were:
   (if you want the homing bars/dots but don't want the base set, you have the
   option of just [buying a set of those keys separately][G20 Homing Bump])
 
-## Update (8 Jun 2020)
+## UPDATE 8 Jun 2020
 
 ### Use Steno-Appropriate Switches (if possible)
 
@@ -880,6 +899,7 @@ want to try this layout as well.
 [`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
 [Toggling Plover in software]: https://waleedkhan.name/blog/steno-adventures-part-2/#toggling-plover-in-software
 [TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
+[USB Endpoint Limitations]: https://docs.qmk.fm/#/config_options?id=usb-endpoint-limitations
 [Waleed Khan]: https://waleedkhan.name
 [Workman]: https://workmanlayout.org/
 [ZSA Technology Labs]: https://www.zsa.io/
