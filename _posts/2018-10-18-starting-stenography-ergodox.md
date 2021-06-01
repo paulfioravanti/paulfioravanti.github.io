@@ -488,7 +488,7 @@ Some notes about these changes:
   consider going back and using the modified QWERTY steno keymap. For me
   personally, I can live without using my keyboard as a mouse.
 
-> #### UPDATE 1 Jun 2021
+> ### UPDATE 1 Jun 2021
 >
 > I recently found out that this limitation with the virtual serial ports would
 > seem to have been removed, or at least mitigated. It is now possible to have
@@ -497,7 +497,7 @@ Some notes about these changes:
 > So, the `rules.mk` file can be changed to:
 >
 > **`qmk_firmware/keyboards/ergodox_ez/keymaps/default_steno/rules.mk`**
-> 
+>
 > ```sh
 > STENO_ENABLE = yes
 > VIRTSER_ENABLE = yes
@@ -505,6 +505,7 @@ Some notes about these changes:
 > MOUSEKEY_ENABLE = yes
 > KEYBOARD_SHARED_EP = yes
 > ```
+>
 > See QMK's [USB Endpoint Limitations][] documentation for details.
 
 Now, let's re-generate the `ergodox_ez_default_steno.hex` and flash our
