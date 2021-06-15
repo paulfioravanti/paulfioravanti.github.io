@@ -2737,7 +2737,7 @@ with Phoenix LiveComponents][]_!
 [PubSub Static Channel Issue]: /assets/images/2019-11-03/pubsub-static-channel-issue.gif "PubSub Static Channel Issue"
 [PubSub Static Channel Issue Fixed]: /assets/images/2019-11-03/pubsub-static-channel-issue-fixed.gif "PubSub Static Channel Issue Fixed"
 [Query string]: https://en.wikipedia.org/wiki/Query_string
-[Runtime Language Switching in Elm]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
+[Runtime Language Switching in Elm]: https://www.paulfioravanti.com/blog/runtime-language-switching-elm/
 [Tachyons]: http://tachyons.io/
 [Tachyons Elm]: /assets/images/2019-11-03/tachyons-elm.gif "Animated GIF of Tachyons page implemented in Elm"
 [TitleLive Events]: /assets/images/2019-11-03/title-live-events.jpg "TitleLive Events"
