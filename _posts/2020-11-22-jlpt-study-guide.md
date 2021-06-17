@@ -186,7 +186,7 @@ Creating the actual flash card decks can be a bit confusing, especially if you
 do not have a coding background, so I have shared
 [my JLPT Anki templates][paulfioravanti/jlpt], which you are free to use to
 create your own cards and/or customise to your liking. Each deck has an example
-card to get your started.
+card to get you started.
 
 I have deliberately not shared my own decks on AnkiWeb, or anywhere else, as
 they are a straight port of copyrighted content. It would not be fair to the
