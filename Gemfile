@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "3.0.1"
+ruby "3.0.2"
 
 # Jekyll is a blog-aware static site generator in Ruby
 # NOTE: Although this is currently deployed on Github Pages, I'm not using
@@ -9,7 +9,7 @@ gem "jekyll", "~> 4.0"
 
 # Jekyll theme for building a personal site, blog,
 # project documentation, or portfolio
-gem "minimal-mistakes-jekyll", "~> 4.23"
+gem "minimal-mistakes-jekyll", "~> 4.24"
 
 group :development do
   # Command line tool to easily handle events on file system modifications
