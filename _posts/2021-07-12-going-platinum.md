@@ -1,13 +1,13 @@
 ---
 title: "Going Platinum"
-date: 2021-07-05 20:25 +1100
-last_modified_at: 2021-07-05 20:25 +1100
+date: 2021-07-12 18:35 +1100
+last_modified_at: 2021-07-12 18:35 +1100
 tags: plover stenography
 header:
-  image: /assets/images/2021-07-05/platinum-558086_1920.jpg
+  image: /assets/images/2021-07-12/platinum-558086_1920.jpg
   image_description: "Platinum record"
-  teaser: /assets/images/2021-07-05/platinum-558086_1920.jpg
-  overlay_image: /assets/images/2021-07-05/platinum-558086_1920.jpg
+  teaser: /assets/images/2021-07-12/platinum-558086_1920.jpg
+  overlay_image: /assets/images/2021-07-12/platinum-558086_1920.jpg
   overlay_filter: 0.2
   caption: >
     Image by [Pixa_01](https://pixabay.com/users/pixa_01-563986/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=558086) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=558086)
@@ -93,7 +93,7 @@ rest of this post)!
 
 If you are going to go the open and free route with learning steno as a
 beginner, then Plover theory is currently your only viable choice. This is not
-a bad thing (I love Plover!), and I think the theory that the PS lessons use
+a bad thing (I :heart: Plover!), and I think the theory that the PS lessons use
 is not really important compared to the value provided by their content.
 
 Although Plover theory and [its software][Plover Github], can enable you to
@@ -115,7 +115,7 @@ fun learning! The rest of this post will happily wait for your return...
 
 <div style="margin: auto; text-align: center; width: 90%;">
   <figure style="display: block">
-    <img src="/assets/images/2021-07-05/scott-webb-habqOl7e_S8-unsplash.jpg"
+    <img src="/assets/images/2021-07-12/scott-webb-habqOl7e_S8-unsplash.jpg"
          alt="woman looking on trees" />
     <figcaption style="text-align: center;">
       Photo by
@@ -131,21 +131,20 @@ fun learning! The rest of this post will happily wait for your return...
 </div>
 
 ...Welcome back! You now have a high degree of fluency in Plover, and have had
-lots of practice chording keystrokes, right? Great! So, it is time to
-re-consider looking at PS theory lessons.
+lots of practice chording keystrokes, right? Great! Time to re-consider looking
+at PS theory lessons!
 
 Wait, I'm recommending that you go _back_ to theory? Didn't you do all that
 already? Yes, you did! The core steno theory concepts in PS will end
 up just being revision for you, and the fact that they use StenEd theory will
 now not be a cause for any potential confusion thanks to your solid foundation
 in Plover! So, you will be able to focus more on the content that the PS theory
-lessons provide that, at least I think, is unique to them.
+lessons provide that I think is unique to them.
 
 ## Platinum Club Benefits
 
 The most important elements in determining the success of any educational
-courses are its delivery and content, and I think PS excels in both of these
-areas.
+courses are its delivery and content, and PS excels in both of these areas.
 
 ### Delivery
 
@@ -169,23 +168,24 @@ Jill!
 
 During the course of the lessons, I definitely got some value out of doing
 more in-depth revision of core steno concepts. More importantly, though, the
-lessons served as motivation for creating my own personal learning materials,
-and broadening my knowledge of steno:
+lessons served as motivation for creating my own learning materials, and
+broadening my knowledge of steno:
 
 - The lessons contained a lot of vocabulary, including [proper nouns][], that I
   had not encountered in Plover learning materials, and in some cases were not
   contained in the default Plover dictionary. This became the catalyst for the
   creation of [my personal dictionaries][paulfioravanti/steno_dictionaries]:
   to augment what Plover provided with outlines that made sense to me.<br />
-  I would either take outlines directly from the PS lessons that made sense to
-  me and put them in my dictionaries, or just make up outlines for new words
-  that felt "Plover-esque" to me (doing Plover theory first helped me gain the
-  intuition and confidence to do that).
+  I would either take outlines directly from the PS lessons that I liked and put
+  them in my dictionaries, or just make up outlines for new words that felt
+  "Plover-esque" to me (doing Plover theory first helped me gain the intuition
+  and confidence to do that).
 - As I went through each lesson, I took the time to annotate each of the
-  vocabulary outlines on the PS materials with the Plover equivalents (which
-  blew out the time to finish each lesson significantly for me; feel free to do
-  this mentally if you wish...). Sometimes, the outlines for StenEd and Plover
-  would be the same, but when they were not, I used the following note style:
+  vocabulary outlines on the PS written materials with the Plover equivalents
+  which blew out the time to finish each lesson significantly for me; feel free
+  to do this mentally if you wish...). Sometimes, the outlines for StenEd and
+  Plover would be the same, but when they were not, I used the following note
+  style:
 
   ![img theory-edits][]{: style="width: 50%;"}
 
@@ -200,15 +200,16 @@ and broadening my knowledge of steno:
      single-stroke `TKEURPB`.
   3. An outline written in square-brackets, `[]`, indicates that the actual word
      does not exist in the default Plover dictionary, and so a custom outline
-     was required to be created. In this case, as of this writing, Plover has no
-     entry for "[Doberman][]", and although I could have used the provided
-     `TKOEB/ER/PHAPB` outline, I decided to create a new one to shave off a
-     stroke: `TKOERB/PHAPB`.
+     was required to be created. As of this writing, Plover has no entry for
+     "[Doberman][]", and although I could have used the provided
+     `TKOEB/ER/PHAPB` outline since it looks reasonable, I decided to create a
+     new one to shave off a stroke: `TKOERB/PHAPB`.
 - There is a lot of emphasis in the PS lessons on being able to stroke basic
   multi-word briefs with a single chord (eg "I have", "did you", "that he was",
   "do you have the" etc). As well as building muscle memory in areas that will
   assist in getting higher speeds, this led to the addition of over 150 new
-  briefs to [my personal brief dictionary][briefs.json].
+  briefs to [my personal brief dictionary][briefs.json], so I hope they'll serve
+  me well (and maybe even you?) in the future.
 - I learned about the concept of [Q&A][], which took the form of dictation
   exercises involving legal cross-examination of witnesses by attorneys in a
   courtroom setting.<br/>
@@ -219,12 +220,12 @@ and broadening my knowledge of steno:
   conversation occurs (I have no idea how much commonality there is between
   different types of courts around the English-speaking world for legal record
   writing conventions).<br />
-  If, like me, you take the viewpoint of learning steno being like learning
-  another language, I think that the Q&A parts of the PS lessons can almost be
-  considered their "cultural studies". You will rarely learn a human language in
-  isolation from all the cultural elements that helped form and shape it, and I
-  believe this to be the case with Q&A as well, given steno's long history with
-  the legal profession.<br />
+  If, like me, you think of learning steno like learning another language, I
+  think that the Q&A parts of the PS lessons could be considered their "cultural
+  studies". You will rarely learn a human language in isolation from all the
+  cultural elements that helped form and shape it, and I believe this to be the
+  case with Q&A as well, given steno's long history with the legal
+  profession.<br />
   I also made a [Q&A dictionary][] that, I believe, can help Plover mimic the
   software that PS uses for this. Hopefully it can be of assistance to any
   Plover users who also decide to learn some Q&A!
@@ -250,7 +251,7 @@ past my QWERTY speeds, and beyond!
 [briefs.json]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/briefs.json
 [court reporters]: https://en.wikipedia.org/wiki/Court_reporter
 [Doberman]: https://en.wikipedia.org/wiki/Dobermann
-[img theory-edits]: /assets/images/2021-07-05/theory-edits.jpg
+[img theory-edits]: /assets/images/2021-07-12/theory-edits.jpg
 [Learn Plover!]: https://sites.google.com/site/learnplover/
 [open-source software]: https://en.wikipedia.org/wiki/Open-source_software
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
