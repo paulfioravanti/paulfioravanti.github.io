@@ -1,11 +1,11 @@
 # References:
 # - https://docs.travis-ci.com/user/caching/#Bundler
 os: linux
-dist: bionic
+dist: focal
 language: ruby
 cache: bundler
 rvm:
-  - 3.0.1
+  - 3.0.2
 bundler_args: --without development
 before_install:
   - rvm get stable
