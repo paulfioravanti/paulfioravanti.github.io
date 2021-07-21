@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 # NOTE: Travis currently blocking upgrade to Ruby 3.0.2
-ruby "3.0.2"
+ruby "3.0.1"
 
 # Jekyll is a blog-aware static site generator in Ruby
 # NOTE: Although this is currently deployed on Github Pages, I'm not using
