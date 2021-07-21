@@ -84,6 +84,17 @@ technical details, then definitely read on. Otherwise, you can probably skim the
 rest of this post, and only focus on the sections that involve configuring the
 Plover application itself.
 
+#### UPDATE 21 July 2021: ZSA Guest Blog Post
+
+Following on from ZSA supporting stenography in Oryx, I wrote a guest blog post
+for the [ZSA blog][] on how to use it, and get Plover up and running:
+
+_[Stenography with ZSA Keyboards: A Tutorial][]_
+
+Check it out if you are a steno-curious ZSA keyboard owner!
+
+Now, back to the original post...
+
 ## Initial Setup
 
 For this post, we will use the [QMK default Ergodox EZ keymap][] as a base, and
@@ -897,10 +908,12 @@ want to try this layout as well.
 [Select serial port and baud rate]: /assets/images/2018-10-18/plover-serial-port-configuration.png "Select serial port and baud rate"
 [steno machine keymap]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys#TOC-The-Keyboard
 [Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md
+[Stenography with ZSA Keyboards: A Tutorial]: https://blog.zsa.io/2107-steno-tutorial/
 [`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
 [Toggling Plover in software]: https://waleedkhan.name/blog/steno-adventures-part-2/#toggling-plover-in-software
 [TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
 [USB Endpoint Limitations]: https://docs.qmk.fm/#/config_options?id=usb-endpoint-limitations
 [Waleed Khan]: https://waleedkhan.name
 [Workman]: https://workmanlayout.org/
+[ZSA Blog]: https://blog.zsa.io/
 [ZSA Technology Labs]: https://www.zsa.io/
