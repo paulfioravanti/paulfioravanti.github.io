@@ -5,7 +5,8 @@ dist: focal
 language: ruby
 cache: bundler
 rvm:
-  - 3.0.2
+  # NOTE: Looks like RVM doesn't currently have Ruby 3.0.2
+  - 3.0.1
 bundler_args: --without development
 before_install:
   - rvm get stable
