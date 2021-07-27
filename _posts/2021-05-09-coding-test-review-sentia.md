@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Sentia"
 date: 2021-05-09 18:50 +1100
-last_modified_at: 2021-05-09 18:50 +1100
+last_modified_at: 2021-07-28 09:10 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching
 header:
   image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
@@ -227,11 +227,14 @@ the CSV file to their correct values:
 ```ruby
 MISSPELLINGS = {
   "Yoda's Hutt" => "Yoda's Hut",
-  "Naboo N-1 Starfigher" => "Naboo N-1 Starfighter"
-}
+  "Naboo N-1 Starfigher" => "Naboo N-1 Starfighter",
+  "Jabba's Sale Barge" => "Jabba's Sail Barge",
+  "Tiefighter" => "TIE Fighter"
+}.freeze
 ```
 
-I am pretty sure that [Yoda][] does not own a pet [Jabba][Jabba the Hutt].
+I am pretty sure that [Yoda][] does not own a pet [Jabba][Jabba the Hutt], nor
+is Jabba's [mode of transport][Sail barge] a retail outlet.
 
 Anyway, it is not possible for me to tell whether the introduction of these
 mis-spellings was deliberate in order to see if a candidate picked up on them,
@@ -600,6 +603,7 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [Rails helpers]: https://api.rubyonrails.org/classes/ActionController/Helpers.html
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby on Rails]: http://rubyonrails.org/
+[Sail barge]: https://starwars.fandom.com/wiki/Sail_barge
 [sample-csv-link]: https://github.com/paulfioravanti/sentia-coding-test/blob/main/test/fixtures/files/SentiaCodingTestData.csv
 [SCSS]: https://sass-lang.com/documentation/syntax
 [Sentia]: https://www.sentia.com.au/
