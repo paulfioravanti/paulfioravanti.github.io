@@ -446,8 +446,7 @@ class Person < ApplicationRecord
 
   def self.search(search)
     query =
-      includes(:locations, :affiliations)
-        .references(:locations, :affiliations)
+      preload(:locations, :affiliations)
 
     search ? Search.query(query, search) : query
   end
