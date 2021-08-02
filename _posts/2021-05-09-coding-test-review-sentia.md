@@ -1,8 +1,8 @@
 ---
 title: "Coding Test Review: Sentia"
 date: 2021-05-09 18:50 +1100
-last_modified_at: 2021-07-28 09:10 +1100
-tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching
+last_modified_at: 2021-08-03 16:30 +1100
+tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching lateral-join preloading
 header:
   image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
   image_description: "Jocasta helps Obi-wan in the Jedi Archives"
@@ -436,17 +436,14 @@ class Person < ApplicationRecord
   )
 
   has_many :loyalties
-  has_many :affiliations,
-           -> { order("affiliations.name ASC") },
-           through: :loyalties
+  has_many :affiliations, -> { order(:name) }, through: :loyalties
   has_many :residences
-  has_many :locations,
-           -> { order("locations.name ASC") },
-           through: :residences
+  has_many :locations, -> { order(:name) }, through: :residences
 
   def self.search(search)
     query =
-      preload(:locations, :affiliations)
+      includes(:locations, :affiliations)
+        .references(:locations, :affiliations)
 
     search ? Search.query(query, search) : query
   end
@@ -505,16 +502,18 @@ A few notes about this code:
   class Person
     module Search
       SEARCH_QUERY =
-        "prefix ILIKE :search "\
-        "OR first_name ILIKE :search "\
-        "OR last_name ILIKE :search "\
-        "OR suffix ILIKE :search "\
-        "OR locations.name::text ILIKE :search "\
-        "OR species::text ILIKE :search "\
-        "OR gender::text ILIKE :search "\
-        "OR affiliations.name::text ILIKE :search "\
-        "OR weapon::text ILIKE :search "\
-        "OR vehicle::text ILIKE :search"
+        <<~SQL.squish
+          prefix ILIKE :search
+          OR first_name ILIKE :search
+          OR last_name ILIKE :search
+          OR suffix ILIKE :search
+          OR locations.name::text ILIKE :search
+          OR species::text ILIKE :search
+          OR gender::text ILIKE :search
+          OR affiliations.name::text ILIKE :search
+          OR weapon::text ILIKE :search
+          OR vehicle::text ILIKE :search
+        SQL
       private_constant :SEARCH_QUERY
 
       module_function
@@ -548,6 +547,347 @@ positive impression of it since it was the catalyst for me to:
 So, if you are looking to up your coding game whilst padding your online
 portfolio, I can definitely recommend using coding tests as a way to do so!
 
+## UPDATE 2 August 2021: Ordering in the Database
+
+My friend [Aaron][@aarondeadman] left [a comment][Aaron's comment] asking about
+my statement concerning ordering on associated records:
+
+> "the fact that sorting needed to happen on values contained in a
+> Person’s associations (locations and affiliations) made it [sorting using
+> the database] untenable."
+>
+> **Is this a limitation of ActiveRecord? It seems like Postgres should be able
+> to handle this but I might be missing some of the nuance.**
+
+My rationale for not being able to sort the list of `Person` records based on
+values in their associations was that those values were essentially _unknowable_
+to the `Person` query: it would only be _after_ its associations were fetched
+from the database that we would be able to loop over them, using Ruby in this
+case, to find out the exact values of the first affiliation and location names.
+
+But, was this rationale correct? I could not help myself, so I took the bait and
+dove down this rabbit hole to find out. First, though, a minor detour down a
+separate, but slightly shallower, rabbit hole.
+
+### Ordering was broken anyway
+
+On re-opening this codebase, I realised that in my haste to be done with it, I
+had failed to notice that the location and affiliation names were not _always_
+displaying in alphabetical order as expected.
+
+There did not seem to be an obvious reason as to why...until I went for a dive
+in Rails' Github repo, where it became apparent that there is a [very
+long-running issue][rails#6769] regarding ordering clauses on `has_many`
+relationships being ignored or lost when using an [`includes`][] statement,
+which I definitely was in the `Person.search` method.
+
+Using `includes` would seem to [delegate your query generation strategy to Rails
+itself][stackoverflow#11947303] (ie let Rails decide whether to load
+association data in a separate query, or in one big join-based query), which is
+a probably a good rule-of-thumb, because who could just instinctively know that?
+(Not me). Anyway, it would seem that this ordering issue would require some
+manual intervention.
+
+Figuring out [which flavour of association preloading][Rails 4 preloading] would
+not cause an error, give me the output I expected, and not cause any N+1 issues,
+was mostly trial and error. I finally got to [`preload`][], and my house of
+cards gained a bit of stability with the following change:
+
+**`app/models/person.rb`**
+
+```ruby
+class Person < ApplicationRecord
+  # ...
+  def self.search(search)
+    query = preload(:locations, :affiliations)
+    search ? Search.query(query, search) : query
+  end
+end
+```
+
+Great! Side quest over, and we are back to zero! Time to get back to the main
+mission!
+
+### Lateral Support
+
+So, can [Postgres][] do something akin to what we have done with the current
+Ruby-based sorting code and essentially ["loop over each entry in a result set
+and evaluate a subquery using that row as a parameter"][PostgreSQL's Powerful
+New Join Type: LATERAL]?
+
+It certainly can: with [`LATERAL` subqueries][], introduced back in Postgres
+version 9.3, so it seems like I have not been keeping up to date with
+improvements in the database world! Anyway, let's see how we can leverage it to
+push more query logic out of Ruby-land and into database-land.
+
+#### Add `attribute`s
+
+First, though, since we are now planning for the database to give us a
+`Person`'s `first_affiliation_name` and `first_location_name`, we will be able
+to treat them just like any of `Person`'s other fields. Therefore, let's add
+some virtual [`attribute`][]s to the `Person` model to hold that information for
+when we receive it, and remove the original `first_x_name` methods:
+
+**`app/models/person.rb`**
+
+```ruby
+class Person < ApplicationRecord
+  # ...
+  attribute :first_affiliation_name, :string
+  attribute :first_location_name, :string
+end
+```
+
+#### Create association queries
+
+Now, let's create some queries that intend to populate those `attribute`s. Since
+both the queries will be similar in nature, let's give them the same name on
+each model: `Affiliation.first_name` and `Location.first_name`. We will start
+with the `Affiliation` query, build it out, and then replicate the logic across
+to the `Location` query.
+
+For the first affiliation name of any given person, we want to:
+
+- join the people table on the given person's ID
+- order the affiliations by their name
+- limit the number of affiliations to 1 to get only the first one
+- select only that affiliation's name
+
+Here is what a first cut of that method might look like:
+
+**`app/models/affiliation.rb`**
+
+```ruby
+class Affiliation < ApplicationRecord
+  # ...
+  def self.first_name(id)
+    joins(:people)
+      .where("people.id = ?", id)
+      .order(:name)
+      .limit(1)
+      .select(:name)
+  end
+end
+```
+
+Let's give it a try in a Rails console with a `Person` whom we know has multiple
+affiliations, Leia Organa:
+
+```ruby
+irb(main)> p = Person.find_by(first_name: "Leia")
+=> #<Person:0x00007fd427581bc0
+...
+irb(main)> Affiliation.first_name(p.id)
+=> [#<Affiliation:0x00007fd3f70afcf8 id: nil, name: "Galactic Republic">]
+```
+
+Okay, this looks like the correct information is at least being returned and
+populated, so it is a good start.
+
+The problem now is that we cannot use this method as-is moving forward: the
+database is not going to be able to execute this Ruby-land method, passing in
+an `id` parameter. We need to have the database fill it in during the course of
+a lateral join (which will make it _unknowable_ to Ruby). Also, since the join
+is over a `has_many :through` relationship, we will have to change the `joins`
+target to be the join-table (in this case `loyalties`).
+
+Here is how the method will need to change:
+
+**`app/models/affiliation.rb`**
+
+```ruby
+class Affiliation < ApplicationRecord
+  # ...
+  def self.first_name
+    joins(:loyalties)
+      .where("loyalties.person_id = people.id")
+      .order(:name)
+      .limit(1)
+      .select(:name)
+  end
+end
+```
+
+The `Affiliation.first_name` method can now _not_ be run in isolation in
+Ruby-land, as there is no context on where `people.id` comes from:
+
+```ruby
+irb(main)> Affiliation.first_name
+(Object doesn't support #inspect)
+=>
+```
+
+The `people.id` essentially stands in for a database-land local loop variable
+that will be "passed in" from some other (as-yet unknown) outer query that will
+laterally join with it, and provide the context for a `people` table.
+
+The query in `Location` will change in a similar way:
+
+```ruby
+class Location < ApplicationRecord
+  # ...
+  def self.first_name
+    joins(:residences)
+      .where("residences.person_id = people.id")
+      .order(:name)
+      .limit(1)
+      .select(:name)
+  end
+end
+```
+
+#### Lateral Joining
+
+Now that we have our association subqueries created, let's see how the
+`Person.search` code will change when it uses them:
+
+**`app/models/person.rb`**
+
+```ruby
+class Person < ApplicationRecord
+  # ...
+  def self.search(search, column, direction)
+    query =
+      preload(:affiliations, :locations)
+        .then(&Lateral.method(:join_first_association_names))
+        .order(column => direction, Sort::DEFAULT_SORT_COLUMN => direction)
+
+      search.present? ? Search.query(query, search) : query
+  end
+end
+```
+
+After the `:affiliations` and `:locations` have been `preload`ed, the query is
+piped into a new method, `join_first_association_names`, inside of a new
+`Lateral` module (naming things is hard...) that is `private` to the `Person`
+model:
+
+**`app/models/person/lateral.rb`**
+
+```ruby
+class Person
+  module Lateral
+    FIRST_ASSOCIATION_NAME =
+      lambda do |query, table_alias, field|
+        <<~SQL.squish
+          JOIN LATERAL (#{query.to_sql})
+          AS #{table_alias}(#{field})
+          ON true
+        SQL
+      end
+    private_constant :FIRST_ASSOCIATION_NAME
+
+    module_function
+
+    def join_first_association_names(query)
+      query
+        .joins(first_affiliation_name)
+        .joins(first_location_name)
+    end
+
+    private_class_method def first_affiliation_name
+      FIRST_ASSOCIATION_NAME.call(
+        Affiliation.first_name,
+        :affiliation,
+        :first_affiliation_name
+      )
+    end
+
+    private_class_method def first_location_name
+      FIRST_ASSOCIATION_NAME.call(
+        Location.first_name,
+        :location,
+        :first_location_name
+      )
+    end
+  end
+  private_constant :Lateral
+end
+```
+
+There is currently no nice ActiveRecord database-agnostic API that wraps around
+lateral joins, so we need to resort to direct string interpolation in the
+`FIRST_ASSOCIATION_NAME` lambda, which generates the lateral join subquery. It
+does the following:
+
+- Converts the `first_name` association queries we built earlier into SQL
+  statements and marks it as the target for the lateral join
+- Specifies the field name that the result of the query should be returned as.
+  In this case, they have been named the same as the `attribute`s in the
+  `Person` model where that information is intended to be stored:
+  `first_affiliation_name` and `first_location_name`
+- Specifies a [table alias][], needed by the join to extract the returned
+  `first_x_name` (otherwise it looks like the ["lateral join is returning a
+  value with parenthesis"][stackoverflow#67047907]). The names given in the
+  methods for the `table_alias` parameter have no special meaning. They could
+  have been named `t1` and `t2`: they just need to be unique
+- Indicates via the `ON true` clause that there is no filtering condition, and
+  that the full result of the lateral join should be returned, which in this
+  case is only that single name value.
+
+#### Fixing Search
+
+The final major change that now needs to happen to make everything work as
+expected is to update the `Search.query` method in the `Person` class with
+a `joins` and `group` clause, so that it can still perform searches on
+associated data, and is aware of the `Person`'s new `attribute`s:
+
+**`app/models/person/search.rb`**
+
+```ruby
+class Person
+  module Search
+    SEARCH_QUERY =
+      # ...
+
+    module_function
+
+    def query(query, search)
+      query
+        .joins(:affiliations, :locations)
+        .where(SEARCH_QUERY, search: "%#{search}%")
+        .group(:id, :first_affiliation_name, :first_location_name)
+    end
+  end
+  private_constant :Search
+end
+```
+
+### Code Clean Up
+
+Now that the database is doing the heavy lifting on ordering associations, a
+swath of related Ruby code can now be confidently deleted:
+
+- The `PeopleSorter` module now has no reason to exist, so it can be removed
+- Since we are now paginating a `Person::ActiveRecord_Relation` now, rather than
+  an array that got returned by the `PeopleSorter`, the `Paginator` module that
+  was created to wrap around the `Kaminari.paginate_array` method, can also be
+  removed
+
+These two changes have now reduced the `index` code in the `PeopleController`
+to be just:
+
+**`app/controllers/people_controller.rb`**
+
+```ruby
+class PeopleController < ApplicationController
+  def index
+    @people =
+      Person.search(params[:search], sort_column, sort_direction)
+        .page(params[:page])
+        .then(&method(:decorate_people))
+  end
+
+  # ...
+end
+```
+
+Less code, less to maintain! All these changes have been pushed up to the
+[Sentia Coding Test codebase][], so feel free to have a browse or run the code
+for yourself.
+
+[Aaron's comment]: https://www.paulfioravanti.com/blog/coding-test-review-sentia/#comment-5454123121
+[@aarondeadman]: https://twitter.com/aarondeadman
 [ackchyually]: https://knowyourmeme.com/memes/ackchyually
 [Action View]: https://guides.rubyonrails.org/action_view_overview.html
 [Active Record]: https://guides.rubyonrails.org/active_record_basics.html
@@ -557,6 +897,7 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [`app/models/person/`]: https://github.com/paulfioravanti/sentia-coding-test/tree/main/app/models/person
 [`app/services/data_importer/person_parser.rb`]: https://github.com/paulfioravanti/sentia-coding-test/blob/main/app/services/data_importer/person_parser.rb
 [`@apply`]: https://tailwindcss.com/docs/functions-and-directives#apply
+[`attribute`]: https://api.rubyonrails.org/classes/ActiveRecord/Attributes/ClassMethods.html#method-i-attribute
 [C-3PO]: https://en.wikipedia.org/wiki/C-3PO
 [composition]: https://en.wikipedia.org/wiki/Object_composition
 [CSV]: https://en.wikipedia.org/wiki/Comma-separated_values
@@ -579,6 +920,7 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [Hutt]: https://starwars.fandom.com/wiki/Hutt
 [img screenshot]: /assets/images/2021-05-09/screenshot.png
 [Imposter Syndrome]: https://en.wikipedia.org/wiki/Impostor_syndrome
+[`includes`]: https://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-includes
 [inheritance]: https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)
 [Jabba the Hutt]: https://en.wikipedia.org/wiki/Jabba_the_Hutt
 [Jar Jar Binks]: https://en.wikipedia.org/wiki/Jar_Jar_Binks
@@ -589,17 +931,23 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [`Kernel#yield_self`]: https://ruby-doc.org/core/Kernel.html#method-i-yield_self
 [Knights of Ren]: https://starwars.fandom.com/wiki/Knights_of_Ren
 [Kylo Ren]: https://en.wikipedia.org/wiki/Kylo_Ren
+[`LATERAL` subqueries]: https://www.postgresql.org/docs/13/queries-table-expressions.html#QUERIES-LATERAL
 [Leia Organa]: https://en.wikipedia.org/wiki/Princess_Leia
 [munged]: https://en.wikipedia.org/wiki/Data_wrangling
 [pagination]: https://en.wikipedia.org/wiki/Pagination
 [partial class]: https://en.wikipedia.org/wiki/Class_(computer_programming)#Partial
 [pattern matching]: https://docs.ruby-lang.org/en/3.0.0/doc/syntax/pattern_matching_rdoc.html
 [plug and play]: https://en.wikipedia.org/wiki/Plug_and_play
+[Postgres]: https://www.postgresql.org/
 [Postgres Enumerated Types]: https://www.postgresql.org/docs/current/datatype-enum.html
+[PostgreSQL's Powerful New Join Type: LATERAL]: https://heap.io/blog/postgresqls-powerful-new-join-type-lateral
+[`preload`]: https://api.rubyonrails.org/classes/ActiveRecord/QueryMethods.html#method-i-preload
 [presentation logic]: https://en.wikipedia.org/wiki/Presentation_logic
 [`private_constant`]: https://ruby-doc.org/core/Module.html#method-i-private_constant
+[Rails 4 preloading]: https://blog.arkency.com/2013/12/rails4-preloading/
 [Rails concerns]: https://api.rubyonrails.org/classes/ActiveSupport/Concern.html
 [Rails helpers]: https://api.rubyonrails.org/classes/ActionController/Helpers.html
+[rails#6769]: https://github.com/rails/rails/issues/6769
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby on Rails]: http://rubyonrails.org/
 [Sail barge]: https://starwars.fandom.com/wiki/Sail_barge
@@ -611,8 +959,11 @@ portfolio, I can definitely recommend using coding tests as a way to do so!
 [Sentia tests]: https://github.com/search?l=Ruby&p=1&q=sentia&type=Repositories
 [separation of concerns]: https://en.wikipedia.org/wiki/Separation_of_concerns
 [Stack Overflow]: https://stackoverflow.com/users/567863/paul-fioravanti
+[stackoverflow#11947303]: https://stackoverflow.com/a/11947303/567863
+[stackoverflow#67047907]: https://stackoverflow.com/q/67047907/567863
 [Suffix]: https://en.wikipedia.org/wiki/Suffix_(name)
 [superclass]: https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)#Subclasses_and_superclasses
+[table alias]: https://www.postgresql.org/docs/current/rowtypes.html#ROWTYPES-USAGE
 [Tachyons]: https://tachyons.io/
 [Tailwind CSS]: https://tailwindcss.com/
 [Tailwind UI]: https://tailwindui.com/
