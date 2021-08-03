@@ -1,6 +1,6 @@
 ---
 title: "Plover For the Record"
-date: 2021-07-25 20:25 +1100
+date: 2021-10-25 20:25 +1100
 last_modified_at: 2021-07-25 20:25 +1100
 tags: plover stenography court-reporting
 header:
