@@ -547,7 +547,7 @@ positive impression of it since it was the catalyst for me to:
 So, if you are looking to up your coding game whilst padding your online
 portfolio, I can definitely recommend using coding tests as a way to do so!
 
-## UPDATE 2 August 2021: Ordering in the Database
+## UPDATE 3 August 2021: Ordering in the Database
 
 My friend [Aaron][@aarondeadman] left [a comment][Aaron's comment] asking about
 my statement concerning ordering on associated records:
