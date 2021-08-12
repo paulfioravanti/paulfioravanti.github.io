@@ -19,7 +19,12 @@
       "p",
       "span",
       "ruby",
-      "rt"
+      "rt",
+      "table",
+      "td",
+      "th",
+      "thead",
+      "tr"
     ]
   },
   "no-trailing-punctuation": {

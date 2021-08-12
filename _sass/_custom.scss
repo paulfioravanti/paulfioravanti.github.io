@@ -111,3 +111,62 @@ $privacy-policy-icon-color: #fff;
     color: $privacy-policy-icon-color;
   }
 }
+
+// CUSTOMISATION: Steno-related font and outline styles.
+$steno-transcript-tagline-color: #fff;
+$steno-transcript-tagline-text-shadow: rgb(0, 0, 0.5);
+
+@font-face {
+  font-family: Stenodisplay-LetterFont;
+  src: url("../fonts/Stenodisplay-LetterFont.ttf");
+}
+
+.steno-font {
+  line-height: normal;
+  text-align: center;
+
+  span {
+    font-family: Stenodisplay-LetterFont, monospace;
+    font-size: 5em;
+  }
+}
+
+.steno-outline {
+  text-align: center;
+
+  span {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 1.5em;
+  }
+}
+
+.steno-table {
+  display: inline-table;
+  font-size: medium;
+  margin-bottom: 1rem;
+
+  th {
+    &:nth-of-type(4) {
+      width: 35%;
+    }
+  }
+}
+
+.steno-transcript {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+.steno-transcript-tagline {
+  color: $steno-transcript-tagline-color;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  text-shadow: 1px 1px 4px $steno-transcript-tagline-text-shadow;
+
+  span {
+    font-size: 1.25em;
+  }
+}
+
+.steno-video {
+  height: 351px;
+  width: 560px;
+}
