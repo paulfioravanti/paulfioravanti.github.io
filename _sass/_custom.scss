@@ -146,7 +146,7 @@ $steno-transcript-tagline-text-shadow: rgb(0, 0, 0.5);
   margin-bottom: 1rem;
 
   th {
-    &:nth-of-type(4) {
+    &:nth-last-of-type(1) {
       width: 35%;
     }
   }
