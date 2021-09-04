@@ -1,0 +1,9 @@
+// CUSTOMISATION: Footer icons have no colour by default, so make it white for
+// this theme.
+$privacy-policy-icon-color: #fff;
+
+.social-icons {
+  .fa-user-shield {
+    color: $privacy-policy-icon-color;
+  }
+}

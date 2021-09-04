@@ -97,11 +97,11 @@ ante with 4-Voice.
 
 ## 2-Voice
 
-<div style="margin: auto; text-align: center; width: 80%;">
-  <figure style="display: block">
+<div class="plover-for-the-record-image">
+  <figure>
     <img src="/assets/images/2021-09-04/phoenix-and-maya.jpg"
          alt="Phoenix Wright and Maya cosplay" />
-    <figcaption style="text-align: center;">
+    <figcaption>
       Photo by
       <a href="https://www.deviantart.com/vivienovo">
         VivianOVO
@@ -125,8 +125,8 @@ outlines known as question and answer "banks", which PS defines as follows:
   <thead>
     <tr>
       <th>Stroke</th>
-      <th style="text-align: center;">Outline</th>
-      <th style="text-align: center;">Keymap</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
     </tr>
   </thead>
   <tr>
@@ -231,8 +231,8 @@ in a more flexible way:
   <thead>
     <tr>
       <th>Stroke</th>
-      <th style="text-align: center;">Outline</th>
-      <th style="text-align: center;">Keymap</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
       <th>Notes</th>
     </tr>
   </thead>
@@ -411,9 +411,9 @@ quite straightforward and slow. One thing to note, though, is that it begins
 with the questioner making a statement, necessitating use of the `R-FRPBLGTS`
 outline.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="xpJNxsOjFZs" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1JymsW65Q2joKCSJxNd5HS4mOX6TznrN77fGRnJKrM6o/edit?usp=sharing">
       Platinum Steno Theory Lesson 27 Q&A #1
@@ -429,9 +429,9 @@ spell their name, a technique called "stitching" is used. As apposed to
 [fingerspelling][], stitching deliberately separates letters with dashes to
 indicate that a speaker is verbally spelling out a word letter by letter.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="y-RBNZCvQLM" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1NGcSJzptb7JiIB0VYg-Cv-zCHtONjtdJDgtXsMNY2J4/edit?usp=sharing">
       Platinum Steno Theory Lesson 28 Q&A #2
@@ -445,9 +445,9 @@ indicate that a speaker is verbally spelling out a word letter by letter.
 In the next video, note the use of the `STKPWHR-F` outline when the witness asks
 the lawyer a question, and `R-FRPBLGTS` for when the lawyer answers.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="xl7xyRHTErY" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1AFuxkNO26ooOVC4zEnDHsi_CWlkOfcPuVp5nyZ8CQJY/edit?usp=sharing">
       Platinum Steno Theory Lesson 29 Q&A #3
@@ -458,9 +458,9 @@ the lawyer a question, and `R-FRPBLGTS` for when the lawyer answers.
 In the final 2-Voice demo, note the use of the `STKPWHR-RB` outline when the
 lawyer interrupts the witness.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="6MwMO76V_zA" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1cTU4qt0HjiGPXOBd4eN-u9nkMpJAw1CWCaa53MXucn8/edit?usp=sharing">
       Platinum Steno Theory Lesson 30 Q&A #4
@@ -474,11 +474,11 @@ conversation.
 
 ## 4-Voice
 
-<div style="margin: auto; text-align: center; width: 90%;">
-  <figure style="display: block">
+<div class="plover-for-the-record-image" style="width: 90%;">
+  <figure>
     <img src="/assets/images/2021-09-04/ace-attorney-courtroom-judge.jpg"
          alt="Phoenix, Franziska, and Judge" />
-    <figcaption style="text-align: center;">
+    <figcaption>
       Photo by
       <a href="https://www.deviantart.com/mandyneko">
         MandyNeko
@@ -504,10 +504,10 @@ their designated outlines:
   <thead>
     <tr>
       <th>Person</th>
-      <th style="text-align: center;">Outline</th>
-      <th style="text-align: center;">Keymap</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
       <th>Output</th>
-      <th style="max-width: 15%;">Notes</th>
+      <th class="limited-width-heading">Notes</th>
     </tr>
   </thead>
   <tr>
@@ -698,11 +698,11 @@ we will have a look at later:
 
 ### Bylines
 
-<div style="margin: auto; text-align: center; width: 70%;">
-  <figure style="display: block">
+<div class="plover-for-the-record-image" style="width: 70%;">
+  <figure>
     <img src="/assets/images/2021-09-04/briefcase-battle.jpg"
          alt="Phoenix Wright and Miles Edgeworth briefcase battle cosplay" />
-    <figcaption style="text-align: center;">
+    <figcaption>
       Photo by
       <a href="https://www.deviantart.com/kazzu">
         KaZzu
@@ -743,8 +743,8 @@ lawyers, but they follow the same pattern):
   <thead>
     <tr>
       <th>Stroke</th>
-      <th style="text-align: center;">Outline</th>
-      <th style="text-align: center;">Keymap</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
       <th>Notes</th>
     </tr>
   </thead>
@@ -864,9 +864,9 @@ questions, since that statement is not a question directed at the witness, it is
 not transcribed with a <span class="steno-transcript">Q</span>, but as a named
 statement under their own byline.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="vdQXdKy0im8" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1ggOzm94IAh5IRKLo14qdsvLnCHoBXoislsZitnF4xEQ/edit?usp=sharing">
       Platinum Steno Theory Lesson 31 Q&A #5
@@ -877,9 +877,9 @@ statement under their own byline.
 The next video is more of the same, but actually using human names for the
 lawyers.
 
-<div style="width: 80%; margin: 0 auto;">
+<div class="steno-video">
   {% include video id="ccxfO0W96wA" provider="youtube" %}
-  <figcaption style="text-align: center;">
+  <figcaption>
     Transcript:
     <a href="https://docs.google.com/document/d/1gcfaP6JoHuu5u08zlapQqnDLA0aASk3iazaLQX0Rqko/edit?usp=sharing">
       Platinum Steno Theory Lesson 32 Q&A #6

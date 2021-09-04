@@ -1,0 +1,84 @@
+// CUSTOMISATION: Steno-related font and outline styles.
+$steno-transcript-tagline-color: #fff;
+$steno-transcript-tagline-text-shadow: rgb(0, 0, 0.5);
+
+@font-face {
+  font-family: Stenodisplay-LetterFont;
+  src: url("../fonts/Stenodisplay-LetterFont.ttf");
+}
+
+.centered-heading {
+  text-align: center;
+}
+
+.limited-width-heading {
+  max-width: 15%;
+}
+
+.plover-for-the-record-image {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+
+  figure {
+    display: block;
+
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+
+.steno-font {
+  line-height: normal;
+  text-align: center;
+
+  span {
+    font-family: Stenodisplay-LetterFont, monospace;
+    font-size: 5em;
+  }
+}
+
+.steno-outline {
+  text-align: center;
+
+  span {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    font-size: 1.5em;
+  }
+}
+
+.steno-table {
+  display: inline-table;
+  font-size: medium;
+  margin-bottom: 1rem;
+
+  th {
+    &:nth-last-of-type(1) {
+      width: 35%;
+    }
+  }
+}
+
+.steno-transcript {
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+.steno-transcript-tagline {
+  color: $steno-transcript-tagline-color;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  text-shadow: 1px 1px 4px $steno-transcript-tagline-text-shadow;
+
+  span {
+    font-size: 1.25em;
+  }
+}
+
+.steno-video {
+  margin: 0 auto;
+  width: 80%;
+
+  figcaption {
+    text-align: center;
+  }
+}

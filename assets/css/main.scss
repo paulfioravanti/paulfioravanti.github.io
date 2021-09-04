@@ -6,4 +6,8 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
-@import "custom"; // _sass/_custom.scss
+// Custom CSS
+@import "reddit-button"; //_sass/_reddit-button.scss
+@import "signup-form"; //_sass/signup-form.scss
+@import "privacy-policy"; //_sass/privacy-policy.scss
+@import "posts/_plover-for-the-record"; // _sass/posts/_plover-for-the-record.scss
