@@ -4,7 +4,7 @@ redirect_from:
   - /blog/i-completed-typey-type/
 title: "I Completed Typey Type"
 date: 2020-06-10 22:00 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2021-09-04 21:17 +1100
 tags: stenography keyboards ergodox mechanical-keyboards plover
 header:
   image: /assets/images/2020-06-10/stenotype.jpg
@@ -14,6 +14,10 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo from [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Stenotype_advertisement.jpg)
+badges:
+  - image: https://img.shields.io/badge/Plover%20Blog-June%2013%202020-5F7F78.svg
+    alt: "Plover Blog June 13, 2020"
+    link: http://plover.stenoknight.com/2020/06/he-completed-typey-type.html
 excerpt: >
   So, am I a stenographer now, or what?
 ---
