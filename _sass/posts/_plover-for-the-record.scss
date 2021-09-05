@@ -32,6 +32,9 @@ $steno-transcript-tagline-text-shadow: rgb(0, 0, 0.5);
 .steno-font {
   line-height: normal;
   text-align: center;
+  // NOTE: This line needed to keep Safari from breaking
+  // steno fonts on the hyphen.
+  word-break: keep-all;
 
   span {
     font-family: Stenodisplay-LetterFont, monospace;
