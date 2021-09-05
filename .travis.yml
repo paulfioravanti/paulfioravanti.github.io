@@ -9,8 +9,8 @@ rvm:
 bundler_args: --without development
 before_install:
   - rvm get stable
-  - nvm install 16.4.2
-  - nvm use 16.4.2
+  - nvm install 16.8.0
+  - nvm use 16.8.0
   - gem update --system
   - gem install bundler
 env:
