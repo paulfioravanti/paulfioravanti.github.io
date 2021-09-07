@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2021-09-04 17:00 +1100
+last_modified_at: 2021-09-07 15:00 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -11,6 +11,10 @@ header:
   overlay_filter: 0.7
   caption: >
     Photo by [William Tung](https://www.flickr.com/photos/28277470@N05/) from [Flickr](https://www.flickr.com/photos/28277470@N05/17049616945/in/album-72157651718557466/)
+badges:
+  - image: https://img.shields.io/badge/Plover%20Blog-Sep%2006%202021-5F7F78.svg
+    alt: "Plover Blog September 06, 2021"
+    link: http://plover.stenoknight.com/2021/09/plover-for-legal-material.html
 excerpt: >
   Want to try recording legal testimony with just your computer keyboard?
   With Plover, court is in session.
