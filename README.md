@@ -5,6 +5,14 @@
 This is the codebase for my personal blog at
 <https://www.paulfioravanti.com>. Created with [Jekyll][].
 
+## Meta
+
+I have written about setting up various facets of this blog, which you can find
+at the following posts:
+
+- _[Setting up a Jekyll Blog][]_
+- _[Build a CI/CD pipeline for your Jekyll site][]_
+
 ## Install
 
 ```sh
@@ -123,6 +131,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Pages gem]: https://github.com/github/pages-gem
 [Sass Lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
+[Setting up a Jekyll Blog]: https://www.paulfioravanti.com/blog/set-up-jekyll-blog/
 [stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
 [stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
 [Travis CI]: https://travis-ci.com/
