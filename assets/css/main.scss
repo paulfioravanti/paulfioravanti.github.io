@@ -12,3 +12,17 @@
 @import "privacy-policy"; //_sass/_privacy-policy.scss
 @import "author-profile-custom-links"; //_sass/_author-profile-custom-links.scss
 @import "posts/_plover-for-the-record"; // _sass/posts/_plover-for-the-record.scss
+
+.centered-image {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+
+  figure {
+    display: block;
+
+    figcaption {
+      text-align: center;
+    }
+  }
+}
