@@ -397,7 +397,9 @@ A few notes about this code:
 - I would have liked to have had the database do the sorting for me, rather than
   do it in Ruby-land, but the fact that sorting needed to happen on values
   contained in a `Person`'s associations (locations and affiliations), made it
-  untenable.
+  untenable.<br />
+  **UPDATE 3 August 2021** _Narrator: [it wasn't untenable][Ordering
+  in the Database]_
 - I originally had the implementation code for `sort_direction` up in the
   `ApplicationController`, since it is not specific to a `Person`; putting
   it there would, I think, be considered Rails convention for code of that
@@ -934,6 +936,7 @@ for yourself.
 [`LATERAL` subqueries]: https://www.postgresql.org/docs/13/queries-table-expressions.html#QUERIES-LATERAL
 [Leia Organa]: https://en.wikipedia.org/wiki/Princess_Leia
 [munged]: https://en.wikipedia.org/wiki/Data_wrangling
+[Ordering in the Database]: https://www.paulfioravanti.com/blog/coding-test-review-sentia/#update-3-august-2021-ordering-in-the-database
 [pagination]: https://en.wikipedia.org/wiki/Pagination
 [partial class]: https://en.wikipedia.org/wiki/Class_(computer_programming)#Partial
 [pattern matching]: https://docs.ruby-lang.org/en/3.0.0/doc/syntax/pattern_matching_rdoc.html
