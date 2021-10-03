@@ -8,6 +8,7 @@
 @import "minimal-mistakes"; // main partials
 // Custom CSS
 @import "reddit-button"; //_sass/_reddit-button.scss
-@import "signup-form"; //_sass/signup-form.scss
-@import "privacy-policy"; //_sass/privacy-policy.scss
+@import "signup-form"; //_sass/_signup-form.scss
+@import "privacy-policy"; //_sass/_privacy-policy.scss
+@import "author-profile-custom-links"; //_sass/_author-profile-custom-links.scss
 @import "posts/_plover-for-the-record"; // _sass/posts/_plover-for-the-record.scss
