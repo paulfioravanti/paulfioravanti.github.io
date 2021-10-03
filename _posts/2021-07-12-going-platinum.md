@@ -1,7 +1,7 @@
 ---
 title: "Going Platinum"
 date: 2021-07-12 18:35 +1100
-last_modified_at: 2021-07-12 18:35 +1100
+last_modified_at: 2021-10-03 17:37 +1100
 tags: plover stenography
 header:
   image: /assets/images/2021-07-12/platinum-558086_1920.jpg
@@ -182,7 +182,7 @@ broadening my knowledge of steno:
   and confidence to do that).
 - As I went through each lesson, I took the time to annotate each of the
   vocabulary outlines on the PS written materials with the Plover equivalents
-  which blew out the time to finish each lesson significantly for me; feel free
+  which blew out the time to finish each lesson significantly for me (feel free
   to do this mentally if you wish...). Sometimes, the outlines for StenEd and
   Plover would be the same, but when they were not, I used the following note
   style:
@@ -190,7 +190,7 @@ broadening my knowledge of steno:
   ![img theory-edits][]{: style="width: 50%;"}
 
   1. An outline written as-is under a word would signify that the PS outline
-     cannot be used in Plover, and the new outline must be used. In this case,
+     _cannot_ be used in Plover, and the new outline must be used. In this case,
      `PWUT/ER` is not a valid outline for "butter" in Plover theory, so I chose
      my preferred Plover outline to put here: `PWAOURT` (though the `*`-flagged
      `PWUT/*ER` _is_ valid in Plover).
@@ -208,8 +208,8 @@ broadening my knowledge of steno:
   multi-word briefs with a single chord (eg "I have", "did you", "that he was",
   "do you have the" etc). As well as building muscle memory in areas that will
   assist in getting higher speeds, this led to the addition of over 150 new
-  briefs to [my personal brief dictionary][briefs.json], so I hope they'll serve
-  me well (and maybe even you?) in the future.
+  phrase briefs to my personal dictionaries, so I hope they'll serve me well
+  (and maybe even you?) in the future.
 - I learned about the concept of [Q&A][], which took the form of dictation
   exercises involving legal cross-examination of witnesses by attorneys in a
   courtroom setting.<br/>
@@ -228,7 +228,9 @@ broadening my knowledge of steno:
   profession.<br />
   I also made a [Q&A dictionary][] that, I believe, can help Plover mimic the
   software that PS uses for this. Hopefully it can be of assistance to any
-  Plover users who also decide to learn some Q&A!
+  Plover users who also decide to learn some Q&A!<br />
+  **UPDATE 3 Oct 2021**: I wrote in-depth about doing Q&A with Plover in another
+  blog post, _[Plover for the Record][]_.
 
 ## Conclusion
 
@@ -264,6 +266,7 @@ past my QWERTY speeds, and beyond!
 [Plover]: http://www.openstenoproject.org/
 [Plover's Learning Resources Wiki page]: https://github.com/openstenoproject/plover/wiki/Learning-Stenography
 [Plover Discord]: https://discord.me/plover
+[Plover For the Record]: https://www.paulfioravanti.com/blog/plover-for-the-record/
 [Plover Github]: https://github.com/openstenoproject/plover/releases
 [proper nouns]: https://en.wikipedia.org/wiki/Proper_and_common_nouns
 [Q&A]: https://www.youtube.com/watch?v=tEgaJ7hWIvg
