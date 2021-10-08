@@ -1,5 +1,9 @@
-.fa-strava {
-  color: #e34a00 !important;
-  text-align: center;
-  width: 1.25em;
+$strava-color: #e34a00;
+
+.fab {
+  &.fa-strava {
+    color: $strava-color;
+    text-align: center;
+    width: 1.25em;
+  }
 }
