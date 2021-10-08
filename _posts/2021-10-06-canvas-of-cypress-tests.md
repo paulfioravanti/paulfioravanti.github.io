@@ -11,6 +11,10 @@ header:
   overlay_filter: 0.3
   caption: >
     "A Wheatfield with Cypresses", Vincent Van Gogh, June 1889
+badges:
+  - image: https://img.shields.io/badge/Test%20Automation%20Weekly-%23115-4C625F.svg
+    alt: "Test Automation Weekly #15"
+    link: https://www.testautomationweekly.com/post/issue-15/
 excerpt: >
   "I have a canvas of Cypress tests with apps of Elm, some Elixir, a browser
   like a preview of executed commands"
