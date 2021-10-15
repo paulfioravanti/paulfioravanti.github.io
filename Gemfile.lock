@@ -16,7 +16,7 @@ GEM
     em-websocket (0.5.2)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    ethon (0.14.0)
+    ethon (0.15.0)
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     execjs (2.8.1)
@@ -123,7 +123,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.5.1)
+    json (2.6.0)
     json-minify (0.0.3)
       json (> 0)
     kramdown (2.3.1)
@@ -223,4 +223,4 @@ RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.2.28
+   2.2.29
