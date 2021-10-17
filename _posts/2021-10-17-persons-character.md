@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
-last_modified_at: 2021-10-17 16:14 +1100
+last_modified_at: 2021-10-17 20:40 +1100
 tags: japanese 日本語
 header:
   image: /assets/images/2021-10-17/kinpachi-sensei.jpg
@@ -91,8 +91,8 @@ Kinpachi writes "人" on the classroom blackboard, and says to his students:
 > </rt></ruby>で<ruby>人間<rt>にんげん</rt></ruby>として<ruby>磨<rt>みが</rt>
 > </ruby>かれていくんです。<br />
 >
-> Can I have your attention? So, the character for "person" consists of one
-> person holding up and sustaining another person. In other words, it is a
+> Can I have your attention, please. So, the character for "person" consists of
+> one person holding up and sustaining another person. In other words, it is a
 > "person" precisely _because_ a person and another person are supporting each
 > other. A person gets support from other people and their community, and
 > through that support, grows and develops as a human.
@@ -140,8 +140,9 @@ directly infers how the character of "人" is derived. Rather, it's just a short
 bit of fanciful flourish that I think conveys enough meaning for the time given
 without having to impart all the details given in this blog post.
 
-Feel free to use or riff on this if you ever find yourself in a similar
-wedding-speech-interpreting situation!
+So, if you ever somehow find yourself in a similar wedding-speech-interpreting
+situation, feel free to use or riff on my translation, and hopefully that will
+at least reduce your number of potential awkward pauses by one.
 
 [4th special episode]: https://www.tbs.co.jp/tbs-ch/item/d1111/
 [a complete lie]: https://news.yahoo.co.jp/articles/709a167033b56d303ec2f93ce5609892e7309d62
