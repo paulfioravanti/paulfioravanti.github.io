@@ -1,7 +1,7 @@
 ---
 title: "Organise a Meetup"
 date: 2021-01-04 10:00 +1100
-last_modified_at: 2021-01-04 10:00 +1100
+last_modified_at: 2021-10-18 18:40 +1100
 tags: meetups public-speaking
 header:
   image: /assets/images/2021-01-04/roro.jpg
