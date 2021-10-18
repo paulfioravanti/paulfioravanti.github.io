@@ -112,16 +112,18 @@ No half measures, let's start with what I consider the hardest part of
 organising a technical meetup, regardless of whether it is in-person or online:
 sourcing talks.
 
-<figure>
-  <img src="/assets/images/2021-01-04/graphql-schedule.jpg"
-       alt="GraphQL Sydney" />
-  <figcaption>
-    Photo by
-    <a href="https://twitter.com/tommarmstrong/status/872737400409268224">
-      Tomasso Armstrong
-    </a>
-  </figcaption>
-</figure>
+<div class="centered-image" style="width: 100%;">
+  <figure>
+    <img src="/assets/images/2021-01-04/graphql-schedule.jpg"
+         alt="GraphQL Sydney" />
+    <figcaption>
+      Photo by
+      <a href="https://twitter.com/tommarmstrong/status/872737400409268224">
+        Tomasso Armstrong
+      </a>
+    </figcaption>
+  </figure>
+</div>
 
 The dream for an organiser is to have a full pipeline of talks by willing and
 able speakers on a wide variety of topics that will cover multiple months worth
