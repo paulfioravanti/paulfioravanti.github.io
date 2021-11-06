@@ -69,7 +69,7 @@ GEM
       yell (~> 2.0)
     htmlcompressor (0.4.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jekyll (4.2.1)
       addressable (~> 2.4)
@@ -123,7 +123,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.6.0)
+    json (2.6.1)
     json-minify (0.0.3)
       json (> 0)
     kramdown (2.3.1)
@@ -164,7 +164,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (4.0.6)
-    racc (1.5.2)
+    racc (1.6.0)
     rainbow (3.0.0)
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
@@ -194,7 +194,7 @@ GEM
     unicode-display_width (1.8.0)
     webrick (1.7.0)
     yell (2.2.2)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   x86_64-darwin-20
@@ -223,4 +223,4 @@ RUBY VERSION
    ruby 3.0.2p107
 
 BUNDLED WITH
-   2.2.29
+   2.2.30
