@@ -115,8 +115,8 @@ Hence, "人" represented the new form their relationship had evolved into.
 
 The kicker to this romantic notion? It was [a complete lie][].
 
-Takeda confirmed as much in an appearance he made in 2021 on [ワイドナショー][]
-(The Wide Show), a news and entertainment television program.
+Takeda confirmed as much in an appearance he made in 2021 on The Wide Show
+([ワイドナショー][]), a Japanese news and entertainment television program.
 
 But, the meme has had decades to burrow into the collective consciousness of a
 generation, and regardless of the generally accepted [glyph origin of 人][] to
