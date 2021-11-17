@@ -55,9 +55,9 @@ space, the organiser rushed over, welcomed her with a big smile, and introduced
 her to some of the other members of the group.
 
 First impressions from the initial meetup were so good that Mum started
-regularly participating almost immediately. All the new people that she met at
-the meetup, the places they went to, and the activities they did together became
-a staple feature of our conversations.
+regularly attending almost immediately. All the new people she met at the
+meetup, the places they went to, and the activities they did together, became a
+staple feature of our conversations.
 
 Frequent participation at the meetup events led Mum to become well-known and
 trusted. It was not long before she was invited into the leadership team,
@@ -70,17 +70,17 @@ gatherings to cultural excursions to dinner parties.
 
 Between running her own events, helping others run theirs, scouting new venues
 for future potential meetups, handling new memberships (including dealing with
-financials), general [cat herding][], and managing with the drama associated
-with large social groups of people with various personalities and temperaments,
-there is no doubt I would define it as a full-time job.
+financials), general [cat herding][], and managing the drama found in large
+social groups of people with various personalities and temperaments, there
+is no doubt I would define it as a full-time job.
 
 Mum and I essentially became peers in this meetup space, though the amount of
 effort involved in her meetups leaves my own credentials as a so-called
 "organiser" of some [dinky][] technical meetups once a month in the dust!
 
 I am glad to have been shown up, though, as Mum's passion and enthusiasm for
-meetup organisation and bringing people together led to her to become a happier
-and even more outgoing person.
+meetup organisation and bringing people together led to her to become a happier,
+and even more outgoing, person.
 
 ---
 
