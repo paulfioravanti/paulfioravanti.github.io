@@ -18,6 +18,13 @@ excerpt: >
   Time to attempt to start another blog.
 ---
 
+<div class="post-audio">
+  {% include video id="KNGnlJ5735Q" provider="youtube" %}
+  <figcaption>
+    Play post audio
+  </figcaption>
+</div>
+
 After finishing [_Learn Enough CSS & Layout to Be Dangerous_][learn-enough-css]
 by [Michael Hartl][mhartl], where you create CSS styling and HTML templates for
 a [Jekyll][jekyll] blog, I decided that it was probably for the best that I
