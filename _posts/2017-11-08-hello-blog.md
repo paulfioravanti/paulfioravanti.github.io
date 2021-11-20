@@ -2,10 +2,18 @@
 redirect_from:
   - /jekyll/2017/11/08/hello-blog.html
   - /blog/2017/11/08/hello-blog/
-title: "Hello Blog!"
+title: "Hello, Blog!"
 date: 2017-11-08 16:49 +1100
+last_modified_at: 2021-11-20 13:10 +1100
 tags: jekyll
-comments: false
+header:
+  image: /assets/images/2017-11-08/drew-beamer-3SIXZisims4-unsplash.jpg
+  image_description: "pink and yellow hello neon light"
+  teaser: /assets/images/2017-11-08/drew-beamer-3SIXZisims4-unsplash.jpg
+  overlay_image: /assets/images/2017-11-08/drew-beamer-3SIXZisims4-unsplash.jpg
+  overlay_filter: 0.5
+  caption: >
+    Photo by <a href="https://unsplash.com/@drew_beamer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Drew Beamer</a> on <a href="https://unsplash.com/s/photos/hello?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 excerpt: >
   Time to attempt to start another blog.
 ---
