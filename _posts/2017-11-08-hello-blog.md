@@ -19,10 +19,13 @@ excerpt: >
 ---
 
 <div class="post-audio">
-  {% include video id="KNGnlJ5735Q" provider="youtube" %}
-  <figcaption>
-    Play post audio
-  </figcaption>
+  <div class="post-audio-video">
+    {% include video id="KNGnlJ5735Q" provider="youtube" %}
+  </div>
+  <div class="spacer"></div>
+  <div class="text">
+    :studio_microphone: This post has audio narration
+  </div>
 </div>
 
 After finishing [_Learn Enough CSS & Layout to Be Dangerous_][learn-enough-css]

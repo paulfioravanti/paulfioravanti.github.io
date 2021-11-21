@@ -1,9 +1,68 @@
 .post-audio {
-  float: right;
-  margin-left: 10px;
-  width: 25%;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+  background: #e6e6e6;
+  display: flex;
+  margin-bottom: 15px;
+  width: 100%;
 
-  figcaption {
-    text-align: center;
+  .post-audio-video {
+    flex: 1.5;
+
+    // override style from {% include video %} macro
+    .responsive-video-container {
+      margin-bottom: 0;
+    }
+  }
+
+  .spacer {
+    flex: 2;
+  }
+
+  .text {
+    color: #222831;
+    flex: 6.5;
+    font-size: x-large;
+    font-weight: 300;
+
+    .emoji {
+      padding-bottom: 6px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .post-audio {
+    .post-audio-video {
+      flex: 2.5;
+    }
+
+    .spacer {
+      flex: 0;
+    }
+
+    .text {
+      flex: 7.5;
+      font-size: medium;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .post-audio {
+    .post-audio-video {
+      flex: 2.5;
+    }
+
+    .spacer {
+      flex: 0;
+    }
+
+    .text {
+      flex: 7.5;
+      font-size: x-large;
+      text-align: center;
+    }
   }
 }
