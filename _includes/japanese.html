@@ -1,0 +1,25 @@
+{% assign text-align = include.furigana-align | default: 'center' %}
+{% assign padding-left = include.furigana-left-padding | default: 0 %}
+{% if text-align == "left" %}
+  {% assign ruby-align = "start" %}
+{% else %}
+  {% assign ruby-align = "center" %}
+{% endif %}
+
+<ruby class="japanese">
+  <rb>
+    {% if include.word and include.furigana %}
+      <ruby>
+        <rb>{{ include.word }}</rb>
+        <rt style="text-align: {{ text-align }}; padding-left: {{ padding-left }}; ruby-align: {{ ruby-align }};">
+          {{ include.furigana }}
+        </rt>
+      </ruby>
+    {% elsif include.word %}
+      {{ include.word }}
+    {% endif %}
+  </rb>
+  {% if include.romaji %}
+    <rt class="romaji">{{ include.romaji }}</rt>
+  {% endif %}
+</ruby>

@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
-last_modified_at: 2021-10-17 20:40 +1100
+last_modified_at: 2021-11-23 17:20 +1100
 tags: japanese 日本語
 header:
   image: /assets/images/2021-10-17/kinpachi-sensei.jpg
@@ -28,8 +28,8 @@ life together.
 
 The father then did something that completely threw me off guard.
 
-He raised his two hands up to form a representation of "[人][]", the _[kanji][]_
-character for "person", kind of like this:
+He raised his two hands up to form a representation of "[人][]" (_hito_), the
+_[kanji][]_ character for "person":
 
 <div class="centered-image">
   <figure>
@@ -40,11 +40,17 @@ character for "person", kind of like this:
 
 He then said:
 
-{: refdef: style="font-size: xx-large;"}
-> <ruby>人<rt>ひと</rt></ruby>の<ruby>漢字<rt>かんじ</rt></ruby>はこうだからね。<br />
-> (_Hito no kanji wa kou dakara ne_)<br />
-> **The _kanji_ for "person" looks like this.**
-{: refdef}
+<blockquote style="font-size: xx-large;">
+  {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
+  {% include japanese.html word="の" romaji="no" %}
+  {% include japanese.html word="漢字" furigana="かんじ" romaji="kanji" %}
+  {% include japanese.html word="は" romaji="wa" %}
+  {% include japanese.html word="こう" romaji="kō" %}
+  {% include japanese.html word="だから" romaji="dakara" %}
+  {% include japanese.html word="ね。" romaji="ne." %}
+  <br />
+  <strong>The <em>kanji</em> for "person" looks like this.</strong>
+</blockquote>
 
 The Japanese in the audience smiled knowingly and laughed politely.
 
@@ -82,20 +88,66 @@ _kanji_ characters to reveal their deeper hidden meanings.
 During a scene in _Kinpachi-sensei_'s [4th special episode][], aired in 1985,
 Kinpachi writes "人" on the classroom blackboard, and says to his students:
 
-> <ruby>君<rt>きみ</rt></ruby>たちいいですか〜。
-> <ruby>人<rt>ひと</rt></ruby>という<ruby>字<rt>じ</rt>
-> </ruby>はねぇ、ひとりの「人」がもうひとりの「人」を<ruby>支<rt>ささ</rt>
-> </ruby>えている字です。つまり、人と人が<ruby>支<rt>ささ</rt>
-> </ruby>え<ruby>合<rt>あ</rt>
-> </ruby>ってるから人なんです。人は人によって支えられ、人の<ruby>間<rt>あいだ
-> </rt></ruby>で<ruby>人間<rt>にんげん</rt></ruby>として<ruby>磨<rt>みが</rt>
-> </ruby>かれていくんです。<br />
->
-> Can I have your attention, please. So, the character for "person" consists of
-> one person holding up and sustaining another person. In other words, it is a
-> "person" precisely _because_ a person and another person are supporting each
-> other. A person gets support from other people and their community, and
-> through that support, grows and develops as a human.
+<blockquote>
+  <div class="annotated-japanese">
+    {% include japanese.html word="君" furigana="きみ" romaji="Kimi" %}
+    {% include japanese.html word="たち" romaji="tachi" %}
+    {% include japanese.html word="いい" romaji="ii" %}
+    {% include japanese.html word="です" romaji="desu" %}
+    {% include japanese.html word="か〜。" romaji="ka~." %}
+    {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
+    {% include japanese.html word="と" romaji="to" %}
+    {% include japanese.html word="いう" romaji="iu" %}
+    {% include japanese.html word="字" furigana="じ" romaji="ji" %}
+    {% include japanese.html word="は" romaji="wa" %}
+    {% include japanese.html word="ねぇ、" romaji="nē," %}
+    {% include japanese.html word="ひとり" romaji="hitori" %}
+    {% include japanese.html word="の" romaji="no" %}
+    {% include japanese.html word="「人」" furigana="ひと" romaji="\"hito\"" furigana-left-padding="8px" %}
+    {% include japanese.html word="が" romaji="ga" %}
+    {% include japanese.html word="もう" romaji="mō" %}
+    {% include japanese.html word="ひとり" romaji="hitori" %}
+    {% include japanese.html word="の" romaji="no" %}
+    {% include japanese.html word="「人」" furigana="ひと" romaji="\"hito\"" furigana-left-padding="8px" %}
+    {% include japanese.html word="を" romaji="wo" %}
+    {% include japanese.html word="支えて" furigana="ささ" romaji="sasaete" furigana-align="left" %}
+    {% include japanese.html word="いる" romaji="iru" %}
+    {% include japanese.html word="字" furigana="じ" romaji="ji" %}
+    {% include japanese.html word="です。" romaji="desu." %}
+    {% include japanese.html word="つまり、" romaji="Tsumari," %}
+    {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
+    {% include japanese.html word="と" romaji="to" %}
+    {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
+    {% include japanese.html word="が" romaji="ga" %}
+    {% include japanese.html word="支え" furigana="ささ" romaji="sasae" furigana-align="left" %}
+    {% include japanese.html word="合ってる" furigana="あ" romaji="atteru" furigana-align="left" furigana-left-padding="8px" %}
+    {% include japanese.html word="から" romaji="kara" %}
+    {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
+    {% include japanese.html word="なん" romaji="nan" %}
+    {% include japanese.html word="です。" romaji="desu." %}
+    {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
+    {% include japanese.html word="は" romaji="wa" %}
+    {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
+    {% include japanese.html word="に" romaji="ni" %}
+    {% include japanese.html word="よって" romaji="yotte" %}
+    {% include japanese.html word="支えられ、" furigana="ささ" romaji="sasaerare," furigana-align="left" %}
+    {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
+    {% include japanese.html word="の" romaji="no" %}
+    {% include japanese.html word="間" furigana="あいだ" romaji="aida" %}
+    {% include japanese.html word="で" romaji="de" %}
+    {% include japanese.html word="人間" furigana="にんげん" romaji="ningen" %}
+    {% include japanese.html word="として" romaji="toshite" %}
+    {% include japanese.html word="磨かれて" furigana="みが" romaji="migakarete" furigana-align="left" %}
+    {% include japanese.html word="いくん" romaji="ikun" %}
+    {% include japanese.html word="です。" romaji="desu." %}
+  </div>
+
+  Can I have your attention, please. So, the character for "person" consists of
+  one person holding up and sustaining another person. In other words, it is a
+  "person" precisely <em>because</em> a person and another person are supporting
+  each other. A person gets support from other people and their community, and
+  through that support, grows and develops as a human.
+</blockquote>
 
 So, our expectations about the composition of this character are flipped on
 learning this new information: "人" is not a single character or "person", but
