@@ -11,13 +11,16 @@
   "no-inline-html": {
     "allowed_elements": [
       "a",
+      "blockquote",
       "br",
       "div",
+      "em",
       "figcaption",
       "figure",
       "img",
       "p",
       "span",
+      "strong",
       "ruby",
       "rt",
       "table",
