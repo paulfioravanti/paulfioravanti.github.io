@@ -916,6 +916,265 @@ be sure to reach out!
 > Wondering where that cool steno keyboard font came from? Go get it from
 > [Kathy][]'s [Steno Display Font Github repository][]!
 
+## UPDATE 25 November 2021: Immediate Responses
+
+I am now at the stage where I have completed PS's [60WPM speed building video
+list][] (it only took me _five_ months, and I still do not think I am at 60WPM;
+the grind continues...), and during the Q&A exercises there were enough repeated
+scenarios that came up that I felt a few new outlines were in order.
+
+They all revolve around providing immediate output for common responses to a
+<span class="steno-transcript">Q</span> or
+<span class="steno-transcript">A</span> upon switching speakers.
+
+### Witnesses
+
+For example, some common words and phrases that begin an answer from witnesses
+are:
+
+- Affirmative statements: "Yes.", "Yes, sir.", "Yeah.", "Correct.", "Right.",
+  "Sure.", "Uh-huh."
+- Negative statements: "No.", "No, sir."
+- Unsure statements: "I don't know."
+
+Being able to immediately output any of these after an
+<span class="steno-transcript">A</span> would be really handy.
+
+> Notice that all of the examples above are terminated with a period.
+>
+> According to PS, these initial statements in isolation are considered
+> _the answer_ to a question, with any further statements being extraneous
+> information or just further elaborative context.
+>
+> So, where you may write "Yes, I did." in standard English, in a legal
+> transcript, this would instead be "Yes. I did." ([YMMV][])
+
+Given the examples above, here is a sample of some new outlines that I added to
+[my custom Q&A dictionary][Paul's Q&A dictionary] for use with a witness:
+
+<table class="steno-table">
+  <thead>
+    <tr>
+      <th>Stroke</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>"Yes." and elaborate</td>
+    <td class="steno-outline">
+      <span>KWR-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>KWR-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from the <code>KWR</code> outline for the letter "Y" for "yes",
+      then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Yes, sir." and elaborate</td>
+    <td class="steno-outline">
+      <span>SKWR-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>SKWR-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from <code>KWR</code> with an inverted <code>S</code> to make
+      <code>YS</code> for "yes, sir", then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Yeah." and elaborate</td>
+    <td class="steno-outline">
+      <span>KWREFRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>KWREFRPBLGTS</span>
+    </td>
+    <td>
+      Derived from Plover's <code>KWR*E</code> outline for "yeah", then the
+      answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Correct." and elaborate</td>
+    <td class="steno-outline">
+      <span>KR-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>KR-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from Plover's <code>KREBGT</code> outline for "correct", then the
+      answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Right." and elaborate</td>
+    <td class="steno-outline">
+      <span>TR-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>TR-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from a truncated and inverted version of Plover's
+      <code>RAOEUT</code> outline for "right", then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Sure." and elaborate</td>
+    <td class="steno-outline">
+      <span>SH-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>SH-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from a truncated version of Plover's <code>SHUR</code> outline for
+      "sure", then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"Uh-huh." and elaborate</td>
+    <td class="steno-outline">
+      <span>HUFRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>HUFRPBLGTS</span>
+    </td>
+    <td>
+      Awkwardly derived from Plover's <code>*U/H*U</code> outline for "uh-huh",
+      then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"No.", and elaborate</td>
+    <td class="steno-outline">
+      <span>TPH-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>TPH-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from the <code>TPH</code> outline for the letter "N" for "no",
+      then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"No, sir.", and elaborate</td>
+    <td class="steno-outline">
+      <span>STPH-FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>STPH-FRPBLGTS</span>
+    </td>
+    <td>
+      Derived from <code>TPH</code> with an inverted <code>S</code> to make
+      <code>NS</code> for "no, sir", then the answer bank.
+    </td>
+  </tr>
+  <tr>
+    <td>"I don't know.", and elaborate</td>
+    <td class="steno-outline">
+      <span>KWROEFRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>KWROEFRPBLGTS</span>
+    </td>
+    <td>
+      Derived partly from Plover's <code>KWROEPB</code> outline for "I don't
+      know", then the answer bank.
+    </td>
+  </tr>
+</table>
+
+Sometimes, the statements above are the only thing a witness says before the
+lawyer begins the next question. Therefore, I have also added complementary
+`*`-flagged outlines for each of the examples above that instantly yield control
+back to the questioner once the answer has been given, and output a new
+<span class="steno-transcript">Q</span>. See the Q&A dictionary file for
+details.
+
+### Lawyers
+
+For lawyers, things are a bit simpler. The only common phrases I have noticed
+said after a witness answers are:
+
+- Answer acknowledgements: "Okay.", "All right."
+- Question versions of those acknowledgements: "Okay?", "All right?"
+
+The question versions, being questions, will immediately yield control over to
+the witness to answer. And so, here is a set of outlines for use with a lawyer:
+
+<table class="steno-table">
+  <thead>
+    <tr>
+      <th>Stroke</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>"Okay." and elaborate</td>
+    <td class="steno-outline">
+      <span>STKPWHR-BG</span>
+    </td>
+    <td class="steno-font">
+      <span>STKPWHR-BG</span>
+    </td>
+    <td>
+      Derived from the question bank, and then <code>-BG</code> for a "K" sound.
+    </td>
+  </tr>
+  <tr>
+    <td>"Okay?", and yield control</td>
+    <td class="steno-outline">
+      <span>STKPWHR*BG</span>
+    </td>
+    <td class="steno-font">
+      <span>STKPWHR*BG</span>
+    </td>
+    <td>
+      Just the <code>*</code>-flagged version of <code>STKPWHR-BG</code>.
+    </td>
+  </tr>
+  <tr>
+    <td>"All right." and elaborate</td>
+    <td class="steno-outline">
+      <span>STKPWHR-RT</span>
+    </td>
+    <td class="steno-font">
+      <span>STKPWHR-RT</span>
+    </td>
+    <td>
+      Derived from the question bank, and then <code>-RT</code> for a truncated
+      version of Plover's <code>RAOEUT</code> outline for "right".
+    </td>
+  </tr>
+  <tr>
+    <td>"All right?" and yield control</td>
+    <td class="steno-outline">
+      <span>STKPWHR*RT</span>
+    </td>
+    <td class="steno-font">
+      <span>STKPWHR*RT</span>
+    </td>
+    <td>
+      Just the <code>*</code>-flagged version of <code>STKPWHR-RT</code>.
+    </td>
+  </tr>
+</table>
+
+As before, see [my custom Q&A dictionary][Paul's Q&A dictionary] file for these
+details, and keep a periodic eye on it on Github as that is where I will make
+any updates if more come to mind.
+
 ---
 
 ## Appendix A: Formatting the Record
@@ -1109,6 +1368,7 @@ the [Plover Stitching Plugin][] may provide a more viable option.
 
 G-o-o-d L-u-c-k!
 
+[60WPM speed building video list]: https://www.youtube.com/playlist?list=PL85Y9t9lANyCGo0H6O5gSUlu3hT62XjrA
 [Ab Initio]: https://en.wikipedia.org/wiki/Ab_initio
 [Adjournment _sine die_]: https://en.wikipedia.org/wiki/Adjournment_sine_die
 [Appendix A: Formatting the Record]: #appendix-a-formatting-the-record
@@ -1151,3 +1411,4 @@ G-o-o-d L-u-c-k!
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
 [Tab key]: https://en.wikipedia.org/wiki/Tab_key
 [Tetris]: https://en.wikipedia.org/wiki/Tetris
+[YMMV]: https://dictionary.cambridge.org/dictionary/english/ymmv
