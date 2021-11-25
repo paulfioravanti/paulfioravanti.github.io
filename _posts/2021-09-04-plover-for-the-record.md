@@ -949,7 +949,7 @@ Being able to immediately output any of these after an
 > So, where you may write "Yes, I did." in standard English, in a legal
 > transcript, this would instead be "Yes. I did." ([YMMV][])
 
-Given the examples above, here is a sample of some new outlines that I added to
+Given the examples above, here is the set of new outlines that I added to
 [my custom Q&A dictionary][Paul's Q&A dictionary] for use with a witness:
 
 <table class="steno-table">
@@ -1094,11 +1094,50 @@ Given the examples above, here is a sample of some new outlines that I added to
 </table>
 
 Sometimes, the statements above are the only thing a witness says before the
-lawyer begins the next question. Therefore, I have also added complementary
-`*`-flagged outlines for each of the examples above that instantly yield control
-back to the questioner once the answer has been given, and output a new
-<span class="steno-transcript">Q</span>. See the Q&A dictionary file for
-details.
+lawyer begins the next question.
+
+Therefore, I have also added complementary `*`-flagged outlines for each of the
+examples above that instantly yield control back to the questioner once the
+answer has been given, and output a new <span class="steno-transcript">Q</span>.
+
+Here is a sample:
+
+<table class="steno-table">
+  <thead>
+    <tr>
+      <th>Stroke</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>"Yes." and yield control</td>
+    <td class="steno-outline">
+      <span>KWR*FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>KWR*FRPBLGTS</span>
+    </td>
+    <td>
+      <code>*</code>-flagged version of <code>KWR-FRPBLGTS</code>.
+    </td>
+  </tr>
+  <tr>
+    <td>"No.", and yield control</td>
+    <td class="steno-outline">
+      <span>TPH*FRPBLGTS</span>
+    </td>
+    <td class="steno-font">
+      <span>TPH*FRPBLGTS</span>
+    </td>
+    <td>
+      <code>*</code>-flagged version of <code>TPH-FRPBLGTS</code>.
+    </td>
+  </tr>
+</table>
+
+See the Q&A dictionary file for full set.
 
 ### Lawyers
 
@@ -1141,7 +1180,7 @@ the witness to answer. And so, here is a set of outlines for use with a lawyer:
       <span>STKPWHR*BG</span>
     </td>
     <td>
-      Just the <code>*</code>-flagged version of <code>STKPWHR-BG</code>.
+      <code>*</code>-flagged version of <code>STKPWHR-BG</code>.
     </td>
   </tr>
   <tr>
@@ -1166,7 +1205,7 @@ the witness to answer. And so, here is a set of outlines for use with a lawyer:
       <span>STKPWHR*RT</span>
     </td>
     <td>
-      Just the <code>*</code>-flagged version of <code>STKPWHR-RT</code>.
+      <code>*</code>-flagged version of <code>STKPWHR-RT</code>.
     </td>
   </tr>
 </table>
