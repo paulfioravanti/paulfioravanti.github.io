@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2021-09-07 15:00 +1100
+last_modified_at: 2021-11-25 23:00 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
