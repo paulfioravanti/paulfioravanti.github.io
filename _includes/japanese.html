@@ -5,21 +5,30 @@
 {% else %}
   {% assign ruby-align = "center" %}
 {% endif %}
+{% capture rt-style %}
+text-align: {{ text-align }};
+ padding-left: {{ padding-left }};
+ ruby-align: {{ ruby-align }};
+{% endcapture %}
 
 <ruby class="japanese">
-  <rb>
-    {% if include.word and include.furigana %}
-      <ruby>
-        <rb>{{ include.word }}</rb>
-        <rt style="text-align: {{ text-align }}; padding-left: {{ padding-left }}; ruby-align: {{ ruby-align }};">
-          {{ include.furigana }}
-        </rt>
-      </ruby>
-    {% elsif include.word %}
+  {% if include.word and include.furigana %}
+    <ruby>
       {{ include.word }}
-    {% endif %}
-  </rb>
+      <rp>(</rp>
+      <rt style="{{ rt-style | strip_newlines }}">
+        {{ include.furigana }}
+      </rt>
+      <rp>)</rp>
+    </ruby>
+  {% elsif include.word %}
+    {{ include.word }}
+  {% endif %}
   {% if include.romaji %}
-    <rt class="romaji">{{ include.romaji }}</rt>
+    <rp>[</rp>
+    <rt class="romaji">
+      {{ include.romaji }}
+    </rt>
+    <rp>]</rp>
   {% endif %}
 </ruby>

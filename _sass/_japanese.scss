@@ -2,17 +2,10 @@ ruby {
   &.japanese {
     display: inline-flex;
     flex-direction: column;
-
-    rt {
-      &.romaji {
-        text-align: center;
-      }
-    }
   }
-}
 
-.annotated-japanese {
-  ruby {
-    margin-bottom: 20px;
+  .romaji {
+    margin-bottom: 10px;
+    text-align: center;
   }
 }
