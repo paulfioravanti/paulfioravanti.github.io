@@ -1,7 +1,7 @@
 ---
 title: "Mum's Meetup"
 date: 2021-11-17 13:05 +1100
-last_modified_at: 2021-11-17 13:05 +1100
+last_modified_at: 2021-11-27 23:05 +1100
 tags: meetups
 header:
   image: /assets/images/2021-11-17/daniel-kuberek-ijL9kGvjO-E-unsplash.jpg
@@ -14,6 +14,8 @@ header:
 excerpt: >
   Organising a meetup gave my Mum a new lease on life.
 ---
+
+{% include audio-narration-banner.html video-id="Ehi-ett4PWM" %}
 
 When you run a meetup, one of the more difficult things to gauge can be whether
 you're actually doing it right.
@@ -117,7 +119,7 @@ unlikely to save a life in my mind, but, ultimately, who's to say?
 
 You may not know, nor ever know, the impact on others of whatever you put out in
 the world. I think as long as the effort is worth the intrinsic value you get
-from it, it's okay to just keep on doing it.
+from it, it's okay to just keep doing it.
 
 In times of plague, it has admittedly been tough to keep up a feeling of
 community when we are all apart, and the interface to meetups is the same as
