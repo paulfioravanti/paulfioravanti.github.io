@@ -2,6 +2,10 @@ ruby {
   &.japanese {
     display: inline-flex;
     flex-direction: column;
+
+    span {
+      display: flex;
+    }
   }
 
   .romaji {

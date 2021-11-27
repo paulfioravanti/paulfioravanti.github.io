@@ -1,0 +1,17 @@
+{% assign padding-left = include.furigana-left-padding | default: 0 %}
+{% capture initial-style %}
+ruby-align: {{ include.ruby-align }};
+ text-align: {{ include.furigana-align }};
+ padding-left: {{ padding-left }};
+{% endcapture %}
+{% assign furigana-style = initial-style | strip_newlines %}
+
+{% if include.word and include.furigana %}
+  {% include japanese/word-with-furigana.html
+             word=include.word
+             furigana=include.furigana
+             furigana-style=furigana-style %}
+{% elsif include.word %}
+  {{ include.word }}
+{% endif %}
+{% include japanese/romaji.html romaji=include.romaji %}

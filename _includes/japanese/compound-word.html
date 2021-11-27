@@ -1,0 +1,28 @@
+{% assign words = include.words | split: ", " %}
+{% assign furigana-set = include.furigana | split: ", " %}
+{% assign furigana-left-padding = include.furigana-left-padding | split: ", " %}
+{% capture initial-style %}
+ruby-align: {{ include.ruby-align }};
+ text-align: {{ include.furigana-align }};
+ padding-left:
+{% endcapture %}
+
+<span>
+  {% for word in words %}
+    {% comment %}
+    https://shopify.dev/api/liquid/objects/for-loops#forloop-index0
+    {% endcomment %}
+    {% assign furigana = furigana-set[forloop.index0] %}
+    {% assign padding-left = furigana-left-padding[forloop.index0]
+                             | default: "0"
+                             | append: ";" %}
+    {% assign furigana-style = initial-style
+                               | append: padding-left
+                               | strip_newlines %}
+    {% include japanese/word-with-furigana.html
+               word=word
+               furigana=furigana
+               furigana-style=furigana-style %}
+  {% endfor %}
+</span>
+{% include japanese/romaji.html romaji=include.romaji %}
