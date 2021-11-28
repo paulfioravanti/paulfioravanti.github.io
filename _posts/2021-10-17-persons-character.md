@@ -13,6 +13,8 @@ excerpt: >
   "人" may be the _kanji_ for person, but its simplicity masks a deeper meaning.
 ---
 
+{% include audio-narration-banner.html video-id="TlkoRxyb7E4" %}
+
 The father of the bride was making his wedding toast. He recounted how his
 daughter had left Japan alone to embark on an adventure to Australia, where she
 met the man she would eventually marry.
