@@ -3,6 +3,7 @@ title: "Test-Driven Fairy Tale"
 date: 2021-02-20 21:30 +1100
 last_modified_at: 2021-11-29 14:50 +1100
 tags: ruby rspec minitest testing
+audio_narration: true
 header:
   image: /assets/images/2021-02-20/wolf.png
   image_description: "An illustration of The Big Bad Wolf from The Three Little Pigs"

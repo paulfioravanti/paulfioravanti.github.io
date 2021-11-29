@@ -3,6 +3,7 @@ title: "Mum's Meetup"
 date: 2021-11-17 13:05 +1100
 last_modified_at: 2021-11-27 23:05 +1100
 tags: meetups
+audio_narration: true
 header:
   image: /assets/images/2021-11-17/daniel-kuberek-ijL9kGvjO-E-unsplash.jpg
   image_description: "bottle near water"

@@ -3,6 +3,7 @@ title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
 last_modified_at: 2021-11-23 17:20 +1100
 tags: japanese 日本語
+audio_narration: true
 header:
   image: /assets/images/2021-10-17/kinpachi-sensei.jpg
   image_description: "Kinpachi-sensei teaches the meaning of the character for 'person'."
