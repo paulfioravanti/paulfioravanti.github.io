@@ -4,6 +4,7 @@ title: "Employee Sans Office"
 date: 2020-01-08 16:45 +1100
 last_modified_at: 2020-11-26 16:48 +1100
 tags: remote-working
+audio_narration: true
 header:
   image: /assets/images/2020-01-08/allie-smith-vuWCq1bXZy0-unsplash.jpg
   image_description: "cup of coffee on laptop"
@@ -16,6 +17,8 @@ header:
 excerpt: >
   Small thoughts on remote working.
 ---
+
+{% include audio-narration-banner.html video-id="M-zR48qERdE" %}
 
 > I originally wrote this blog post for [RemoteBase][] on December 15, 2016.
   It seems that RemoteBase shut down in 2018, and since my thoughts on remote
