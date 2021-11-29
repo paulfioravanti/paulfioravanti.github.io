@@ -1,7 +1,7 @@
 ---
 title: "Your Code: Episode I - The Phantom Repository"
 date: 2021-01-06 17:25 +1100
-last_modified_at: 2021-01-06 17:25 +1100
+last_modified_at: 2021-11-29 17:30 +1100
 tags: beginner learning java c-plus-plus cpp
 header:
   image: /assets/images/2021-01-06/anakin-naboo-battle.png
@@ -13,6 +13,8 @@ excerpt: >
   Every Developer Learns To Program. Every Journey Has A First Step. Every
   Coding Saga Has A Beginning.
 ---
+
+{% include audio-narration-banner.html video-id="MtPpTPyRxKI" %}
 
 Where is your beginner's code? You know, the code you wrote when you were first
 learning how to program.
