@@ -1,7 +1,7 @@
 ---
 title: "Test-Driven Fairy Tale"
 date: 2021-02-20 21:30 +1100
-last_modified_at: 2021-02-20 21:30 +1100
+last_modified_at: 2021-11-29 14:50 +1100
 tags: ruby rspec minitest testing
 header:
   image: /assets/images/2021-02-20/wolf.png
@@ -15,6 +15,8 @@ excerpt: >
   Will the Big Bad Wolf thwart The Three Little Pigs from getting a passing
   test suite?
 ---
+
+{% include audio-narration-banner.html video-id="Tw2QuzIErQ0" %}
 
 > _This story takes place when pigs spoke rhyme_<br />
 > _And monkeys chewed tobacco,_<br />
