@@ -44,14 +44,15 @@ _[kanji][]_ character for "person":
 He then said:
 
 <blockquote style="font-size: xx-large;">
-  {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
-  {% include japanese.html word="の" romaji="no" %}
-  {% include japanese.html word="漢字" furigana="かんじ" romaji="kanji" %}
-  {% include japanese.html word="は" romaji="wa" %}
-  {% include japanese.html word="こう" romaji="kō" %}
-  {% include japanese.html word="だから" romaji="dakara" %}
-  {% include japanese.html word="ね。" romaji="ne." %}
-  <br />
+  <div class="japanese-with-furigana">
+    {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
+    {% include japanese.html word="の" romaji="no" %}
+    {% include japanese.html word="漢字" furigana="かんじ" romaji="kanji" %}
+    {% include japanese.html word="は" romaji="wa" %}
+    {% include japanese.html word="こう" romaji="kō" %}
+    {% include japanese.html word="だから" romaji="dakara" %}
+    {% include japanese.html word="ね。" romaji="ne." %}
+  </div>
   <strong>The <em>kanji</em> for "person" looks like this.</strong>
 </blockquote>
 
@@ -92,18 +93,20 @@ During a scene in _Kinpachi-sensei_'s [4th special episode][], aired in 1985,
 Kinpachi writes "人" on the classroom blackboard, and says to his students:
 
 <blockquote>
-  <div>
+  <div class="japanese-with-furigana">
   {% include japanese.html word="君" furigana="きみ" romaji="Kimi" %}
   {% include japanese.html word="たち" romaji="tachi" %}
   {% include japanese.html word="いい" romaji="ii" %}
   {% include japanese.html word="です" romaji="desu" %}
-  {% include japanese.html word="か〜。" romaji="ka~." %}
+  {% include japanese.html word="か" romaji="ka~." %}
+  {% include japanese.html word="〜。" %}
   {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
   {% include japanese.html word="と" romaji="to" %}
   {% include japanese.html word="いう" romaji="iu" %}
   {% include japanese.html word="字" furigana="じ" romaji="ji" %}
   {% include japanese.html word="は" romaji="wa" %}
-  {% include japanese.html word="ねぇ、" romaji="nē," %}
+  {% include japanese.html word="ねぇ" romaji="nē," %}
+  {% include japanese.html word="、" %}
   {% include japanese.html word="ひとり" romaji="hitori" %}
   {% include japanese.html word="の" romaji="no" %}
   {% include japanese.html
@@ -128,32 +131,42 @@ Kinpachi writes "人" on the classroom blackboard, and says to his students:
              furigana-align="left" %}
   {% include japanese.html word="いる" romaji="iru" %}
   {% include japanese.html word="字" furigana="じ" romaji="ji" %}
-  {% include japanese.html word="です。" romaji="desu." %}
-  {% include japanese.html word="つまり、" romaji="Tsumari," %}
+  {% include japanese.html word="です" romaji="desu." %}
+  {% include japanese.html word="。" %}
+  {% include japanese.html word="つまり" romaji="Tsumari," %}
+  {% include japanese.html word="、" %}
   {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
   {% include japanese.html word="と" romaji="to" %}
   {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
   {% include japanese.html word="が" romaji="ga" %}
   {% include japanese.html
-             words="支え, 合ってる"
-             furigana="ささ, あ"
-             romaji="sasae atteru"
+             word="支え"
+             furigana="ささ"
+             romaji="sasae"
              furigana-align="left"
-             furigana-left-padding="2px, 8px" %}
+             furigana-left-padding="2px" %}
+  {% include japanese.html
+             word="合ってる"
+             furigana="あ"
+             romaji="atteru"
+             furigana-align="left"
+             furigana-left-padding="8px" %}
   {% include japanese.html word="から" romaji="kara" %}
   {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
   {% include japanese.html word="なん" romaji="nan" %}
-  {% include japanese.html word="です。" romaji="desu." %}
+  {% include japanese.html word="です" romaji="desu." %}
+  {% include japanese.html word="。" %}
   {% include japanese.html word="人" furigana="ひと" romaji="Hito" %}
   {% include japanese.html word="は" romaji="wa" %}
   {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
   {% include japanese.html word="に" romaji="ni" %}
   {% include japanese.html word="よって" romaji="yotte" %}
   {% include japanese.html
-             word="支えられ、"
+             word="支えられ"
              furigana="ささ"
              romaji="sasaerare,"
              furigana-align="left" %}
+  {% include japanese.html word="、" %}
   {% include japanese.html word="人" furigana="ひと" romaji="hito" %}
   {% include japanese.html word="の" romaji="no" %}
   {% include japanese.html word="間" furigana="あいだ" romaji="aida" %}
@@ -166,7 +179,8 @@ Kinpachi writes "人" on the classroom blackboard, and says to his students:
              romaji="migakarete"
              furigana-align="left" %}
   {% include japanese.html word="いくん" romaji="ikun" %}
-  {% include japanese.html word="です。" romaji="desu." %}
+  {% include japanese.html word="です" romaji="desu." %}
+  {% include japanese.html word="。" %}
   </div>
   <br />
 
