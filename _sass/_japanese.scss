@@ -1,11 +1,12 @@
-.japanese-with-furigana {
-  display: table-row-group;
+.japanese-with-furigana-romaji {
+  letter-spacing: -1em;
 }
 
 ruby {
   &.japanese {
     display: inline-flex;
     flex-direction: column;
+    letter-spacing: normal;
 
     span {
       display: flex;
