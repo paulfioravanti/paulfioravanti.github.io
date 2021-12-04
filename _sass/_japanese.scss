@@ -2,15 +2,17 @@
   letter-spacing: -1em;
 }
 
+span {
+  &.japanese-compound-word {
+    display: flex;
+  }
+}
+
 ruby {
   &.japanese {
     display: inline-flex;
     flex-direction: column;
     letter-spacing: normal;
-
-    span {
-      display: flex;
-    }
   }
 
   .romaji {

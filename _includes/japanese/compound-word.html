@@ -1,13 +1,14 @@
 {% assign words = include.words | split: ", " %}
 {% assign furigana-set = include.furigana | split: ", " %}
 {% assign furigana-left-padding = include.furigana-left-padding | split: ", " %}
+{% assign romaji-set = include.romaji | split: ", " %}
 {% capture initial-style %}
 ruby-align: {{ include.ruby-align }};
  text-align: {{ include.furigana-align }};
  padding-left:
 {% endcapture %}
 
-<span>
+<span class="japanese-compound-word">
   {% for word in words %}
     {% comment %}
     https://shopify.dev/api/liquid/objects/for-loops#forloop-index0
@@ -19,10 +20,13 @@ ruby-align: {{ include.ruby-align }};
     {% assign furigana-style = initial-style
                                | append: padding-left
                                | strip_newlines %}
-    {% include japanese/word-with-furigana.html
-               word=word
-               furigana=furigana
-               furigana-style=furigana-style %}
+    {% assign romaji = romaji-set[forloop.index0] %}
+    <ruby class="japanese">
+      {% include japanese/word-with-furigana.html
+                 word=word
+                 furigana=furigana
+                 furigana-style=furigana-style %}
+      {% include japanese/romaji.html romaji=romaji %}
+    </ruby>
   {% endfor %}
 </span>
-{% include japanese/romaji.html romaji=include.romaji %}
