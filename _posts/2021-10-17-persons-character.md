@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
-last_modified_at: 2021-12-04 11:45 +1100
+last_modified_at: 2021-12-04 14:00 +1100
 tags: japanese 日本語
 audio_narration: true
 header:
@@ -57,7 +57,8 @@ He then said:
     {% include japanese.html word="は" romaji="wa" %}
     {% include japanese.html word="こう" romaji="kō" %}
     {% include japanese.html word="だから" romaji="dakara" %}
-    {% include japanese.html word="ね。" romaji="ne." %}
+    {% include japanese.html word="ね" romaji="ne." %}
+    {% include japanese.html word="。" %}
   </div>
   <strong>The <em>kanji</em> for "person" looks like this.</strong>
 </blockquote>
