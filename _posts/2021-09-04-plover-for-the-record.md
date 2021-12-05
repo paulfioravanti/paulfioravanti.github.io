@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2021-11-25 23:00 +1100
+last_modified_at: 2021-12-05 23:05 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -1403,9 +1403,17 @@ presented here as a single set for ease of viewing:
 Which ever way you prefer to do steno stitching (if you even need to do it at
 all!), hopefully this has given you some food for thought on some potential
 options to get it working. If neither of these options suit your tastes, perhaps
-the [Plover Stitching Plugin][] may provide a more viable option.
+[Ted Morin][]'s [Plover Stitching Plugin][] may provide a more viable option.
 
 G-o-o-d L-u-c-k!
+
+## UPDATE 5 December 2021: Plover Stitching Plugin Recommended
+
+Forget the outlines in the dictionary above: it's definitely better, and more
+straightforward, to use the [Plover Stitching Plugin][].
+
+You can see how I've leveraged it in my [custom stitching dictionary][Paul's
+stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 
 [60WPM speed building video list]: https://www.youtube.com/playlist?list=PL85Y9t9lANyCGo0H6O5gSUlu3hT62XjrA
 [Ab Initio]: https://en.wikipedia.org/wiki/Ab_initio
@@ -1429,6 +1437,7 @@ G-o-o-d L-u-c-k!
 [Orthography]: https://en.wikipedia.org/wiki/Orthography
 [Paul's Q&A dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/q-and-a.json
 [Paul's brief overrides dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/7191ce5a00/dictionaries/overrides/briefs.json
+[Paul's Plover Overrides]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/dictionaries/override
 [Paul's stitching dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/stitching.json
 [Phonetics]: https://en.wikipedia.org/wiki/Phonetics
 [plaintiff]: https://en.wikipedia.org/wiki/Plaintiff
@@ -1449,5 +1458,6 @@ G-o-o-d L-u-c-k!
 [Steno Display Font Github repository]: https://github.com/Kaoffie/steno_font
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
 [Tab key]: https://en.wikipedia.org/wiki/Tab_key
+[Ted Morin]: https://twitter.com/morinted
 [Tetris]: https://en.wikipedia.org/wiki/Tetris
 [YMMV]: https://dictionary.cambridge.org/dictionary/english/ymmv
