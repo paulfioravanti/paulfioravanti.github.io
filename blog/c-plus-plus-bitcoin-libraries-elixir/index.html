@@ -71,13 +71,13 @@ Address: 1PRTTaJesdNovgne6Ehcdu1fpEdX7913CK
 <span class="nb">mv </span>c_src/main.c c_src/addr.cpp
 </code></pre></div></div> <p>Yes, it’s okay for the <code class="language-plaintext highlighter-rouge">.c</code> file to become a <code class="language-plaintext highlighter-rouge">.cpp</code> file for our purposes.</p> <p>Next, open up each of the files and change them so that they look like the following:</p> <h3 id="c_srcaddrh"><strong><code class="language-plaintext highlighter-rouge">c_src/addr.h</code></strong></h3> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
 #define ADDR_H
-#include &lt;elixir_comm.h&gt;
+#include</span> <span class="cpf">&lt;elixir_comm.h&gt;</span><span class="cp">
 </span>
 <span class="c1">// TODO put your own functions/includes here.</span>
 
 <span class="cp">#endif
-</span></code></pre></div></div> <h3 id="c_srcaddrcpp"><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></h3> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;string&gt;
-#include "addr.h"
+</span></code></pre></div></div> <h3 id="c_srcaddrcpp"><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></h3> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+#include</span> <span class="cpf">"addr.h"</span><span class="cp">
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">;</span>
@@ -133,14 +133,14 @@ Hello Elixir from C++
 :ok
 </code></pre></div></div> <p>Excellent! Now that we have Elixir and C++ talking to each other, it’s time to actually get Elixir talking with Libbitcoin.</p> <h2 id="working-with-libbitcoin">Working with Libbitcoin</h2> <p>Looking at the code in <code class="language-plaintext highlighter-rouge">c_src/addr.cpp.orig</code> (the original code from the book), it would seem that it performs two main actions:</p> <ul> <li>Generate a public key from a private key</li> <li>Create a bitcoin address from a public key</li> </ul> <p>So, let’s separate those two concerns into their own functions in our C++ code, porting over the code mostly as-is:</p> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.h</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
 #define ADDR_H
-#include "elixir_comm.h"
+#include</span> <span class="cpf">"elixir_comm.h"</span><span class="cp">
 </span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">);</span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">);</span>
 
 <span class="cp">#endif
-</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;string&gt;
-#include "addr.h"
+</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+#include</span> <span class="cpf">"addr.h"</span><span class="cp">
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
  <span class="c1">// ...</span>
@@ -190,8 +190,8 @@ Hello Elixir from C++
 <span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
 
 <span class="cp">#endif
-</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bitcoin/bitcoin.hpp&gt;
-#include "addr.h"
+</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bitcoin/bitcoin.hpp&gt;</span><span class="cp">
+#include</span> <span class="cpf">"addr.h"</span><span class="cp">
 </span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">GENERATE_PUBLIC_KEY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">CREATE_BITCOIN_ADDRESS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
@@ -301,7 +301,7 @@ Hello Elixir from C++
 <span class="k">end</span>
 </code></pre></div></div> <ul> <li>Both <code class="language-plaintext highlighter-rouge">generate_public_key</code> and <code class="language-plaintext highlighter-rouge">create_bitcoin_address</code> send separate requests out to the C++ code via Cure, in the same way that you might call some other external service. Each of the binary messages has an integer as its first byte, and a string taking up the rest of the message.</li> <li>The <code class="language-plaintext highlighter-rouge">@generate_public_key 1</code> and <code class="language-plaintext highlighter-rouge">@create_bitcoin_address 2</code> module attributes mirror the similarly named constants in the C++ code, so they are coupled quite tightly out of necessity.</li> <li>We’re now keeping the private key on the Elixir side and passing in to C++ as a parameter, rather than have its definition be on the C++ side.</li> </ul> <p>Before seeing if this actually works, for clarity’s sake, here are the full C++ code samples:</p> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.h</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef ADDR_H
 #define ADDR_H
-#include "elixir_comm.h"
+#include</span> <span class="cpf">"elixir_comm.h"</span><span class="cp">
 </span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">);</span>
 <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">);</span>
@@ -313,8 +313,8 @@ Hello Elixir from C++
 <span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">);</span>
 
 <span class="cp">#endif
-</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;bitcoin/bitcoin.hpp&gt;
-#include "addr.h"
+</span></code></pre></div></div> <p><strong><code class="language-plaintext highlighter-rouge">c_src/addr.cpp</code></strong></p> <div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;bitcoin/bitcoin.hpp&gt;</span><span class="cp">
+#include</span> <span class="cpf">"addr.h"</span><span class="cp">
 </span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">GENERATE_PUBLIC_KEY</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">CREATE_BITCOIN_ADDRESS</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
