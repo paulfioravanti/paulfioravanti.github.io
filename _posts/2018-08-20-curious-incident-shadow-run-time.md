@@ -4,7 +4,7 @@ redirect_from:
   - /blog/the-curious-incident-of-the-shadow-in-the-run-time/
 title: "The Curious Incident of the Shadow in the Run-Time"
 date: 2018-08-20 18:00 +1100
-last_modified_at: 2020-10-15 22:00 +1100
+last_modified_at: 2022-02-26 22:20 +1100
 tags: ruby shadowing
 header:
   image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
@@ -113,20 +113,18 @@ for some interesting/confusing behaviour.
 
 ## Instance Method Shadowing
 
-{% capture samuel_zeller_img %}
-![Samuel Zeller Image](/assets/images/2018-08-20/samuel-zeller-15925-unsplash.jpg
-"grayscale photography of cages")
-{% endcapture %}
-{% capture samuel_zeller_credit %}
-Photo by Samuel Zeller on
-[Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-{% endcapture %}
-<figure>
-  {% include stripped_markdown.html markdown=samuel_zeller_img %}
-  <figcaption>
-    {% include stripped_markdown.html markdown=samuel_zeller_credit %}
-  </figcaption>
-</figure>
+<div class="centered-image" style="width: 95%;">
+  <figure>
+    <img src="/assets/images/2018-08-20/samuel-zeller-15925-unsplash.jpg"
+         alt="grayscale photography of cages">
+    <figcaption>
+      Photo by Samuel Zeller on
+      <a href="https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+        Unsplash
+      </a>
+    </figcaption>
+  </figure>
+</div>
 
 The [Local Variables and Methods Assignment][] section of
 [Ruby's syntax documentation][] says that:
@@ -220,20 +218,18 @@ reads through the code.
 
 ## Schrodinger's Variable
 
-{% capture joao_silas_img %}
-![João Silas Image](/assets/images/2018-08-20/joao-silas-72563-unsplash.jpg
-"person holding magnifying glass")
-{% endcapture %}
-{% capture joao_silas_credit %}
-Photo by João Silas
-on [Unsplash](https://unsplash.com/search/photos/magnifying-glass?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-{% endcapture %}
-<figure>
-  {% include stripped_markdown.html markdown=joao_silas_img %}
-  <figcaption>
-    {% include stripped_markdown.html markdown=joao_silas_credit %}
-  </figcaption>
-</figure>
+<div class="centered-image" style="width: 95%;">
+  <figure>
+    <img src="/assets/images/2018-08-20/joao-silas-72563-unsplash.jpg"
+         alt="person holding magnifying glass">
+    <figcaption>
+      Photo by João Silas on
+      <a href="https://unsplash.com/search/photos/magnifying-glass?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+        Unsplash
+      </a>
+    </figcaption>
+  </figure>
+</div>
 
 We will use the [Pry][] debugger to see if we can follow `name`'s journey from
 instance method to local variable. After you
@@ -295,7 +291,7 @@ weird Pry thing? So many questions...
 
 Well, regardless of having our expectations flipped, let's follow this through
 to the end. Since we now have `nil`, I would expect that our next stop will be
-at line 14, where `"Unknown"` _does_ get assigned to `name`. Let's get Pry go to
+at line 14, where `"Unknown"` _does_ get assigned to `name`. Let's let Pry go to
 the next execution statement:
 
 ```sh
