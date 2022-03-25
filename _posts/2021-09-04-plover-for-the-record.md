@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2021-12-05 23:05 +1100
+last_modified_at: 2022-03-25 17:00 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -201,9 +201,11 @@ For example, when you switch from a question to an answer by stroking
 `-FRPBLGTS`, that outline is expected to:
 
 - Finish the question with a "<span class="steno-transcript">?</span>"
-- Perform a [line break][newline], insert a tab, type
-  <span class="steno-transcript">A</span>, insert another tab, and make sure the
-  next word will start with a capital letter
+- Perform a [line break][newline]
+- insert a tab
+- type <span class="steno-transcript">A</span>
+- insert another tab
+- make sure the next word will start with a capital letter
 
 The rule is the same when switching from an answer back to a question, but with
 an ending "<span class="steno-transcript">.</span>" and a beginning
@@ -215,7 +217,7 @@ determination about whether a question was asked or an answer given, and adds in
 appropriate question/answer punctuation as it deems appropriate.
 
 PS does say that this determination is not perfect, and hence you may end up
-with question marks at the end of answers or periods that the end of questions
+with question marks at the end of answers, or periods that the end of questions
 (which may be correct for the sentence sometimes since lawyers can make
 statements, and witnesses can ask questions). The workaround to this issue, it
 would seem, is to just fix the punctuation _[post-hoc][]_ when you proofread
@@ -739,7 +741,7 @@ questioning, they are signed in separately. If, as you saw in the transcript
 above, a line of questioning is interrupted, when it re-begins again, the same
 lawyer gets re-signed in.
 
-Here is a set of outlines that can be used for bylines for Plaintiff Lawyer 1
+Here is a set of outlines that can be used for the bylines of Plaintiff Lawyer 1
 and Defense Lawyer 1 (check the custom Q&A dictionary for details of the other
 lawyers, but they follow the same pattern):
 
@@ -855,7 +857,7 @@ lawyers, but they follow the same pattern):
 ## 4-Voice Demos
 
 Now that you have been formally introduced to the cast of characters in our
-courtroom drama and how they interact with each other, let's see how that all
+courtroom drama, and how they interact with each other, let's see how that all
 plays out in some video demos.
 
 The first demo shows a basic 4-Voice example using the lawyer name placeholders.
@@ -929,8 +931,7 @@ They all revolve around providing immediate output for common responses to a
 
 ### Witnesses
 
-For example, some common words and phrases that begin an answer from witnesses
-are:
+Some common words and phrases that begin an answer from witnesses are:
 
 - Affirmative statements: "Yes.", "Yes, sir.", "Yeah.", "Correct.", "Right.",
   "Sure.", "Uh-huh."
