@@ -1,7 +1,7 @@
 ---
 title: "A Canvas of Cypress Tests"
 date: 2021-10-06 22:50 +1100
-last_modified_at: 2021-10-06 22:50 +1100
+last_modified_at: 2022-03-25 15:40 +1100
 tags: javascript mocha chai cypress elixir phoenix elm testing i18n
 header:
   image: /assets/images/2021-10-06/van-gogh-wheatfield-with-cypresses-june-1889.jpg
@@ -66,7 +66,7 @@ The entire feature set consists of the following use cases:
    - If you click the current language, the menu opens.
    - When the menu is open:
        - if you click the current language, the menu closes
-       - if you click anywhere else on the pager, the menu closes
+       - if you click anywhere else on the page, the menu closes
        - if you click another language, the menu closes
 3. **Changing language**
    - For any language selectable in the dropdown menu, when you click that
@@ -716,8 +716,9 @@ When attempting to write an "integration test" in Elm, you are able to
 initialise a model and pass it into a view to render.
 
 However, unlike a LiveView, it is not possible to trigger multiple events on
-a view (eg click language dropdown, then select a language) that then updates
-the state of a model, or the view itself, and then make assertions on it.
+a view (eg click language dropdown, _and then_ select a language) that then
+updates the state of a model, or the view itself, so that assertions can be made
+on it.
 
 It is not even possible to do this for a single event: the only assertions we
 can make based off of an event being triggered are _that_ a certain type of
@@ -882,8 +883,8 @@ Instead, it is much more helpful to have some kind of external tool that can run
 over your codebase and translation files to inform you on whether:
 
 - you have any missing translations in certain languages
-- whether you have translations for strings that are not referenced in the
-  application anymore (ie they are obsolete)
+- you have translations for strings that are not referenced in the application
+  anymore (ie they are obsolete)
 
 My favourite local developer tool I have used in the past to do this has
 actually been a [Ruby][] gem, [i18n-tasks][]. If you do [Ruby on Rails][]
