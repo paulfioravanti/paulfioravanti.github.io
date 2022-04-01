@@ -11,7 +11,9 @@ $post-audio-text-color: #222831;
   width: 100%;
 
   .post-audio-video {
-    flex: 1.5;
+    // This width is just enough to have the YouTube
+    // play/pause controls visible.
+    flex: 1.7;
 
     // override style from {% include video %} macro
     .responsive-video-container {
@@ -35,10 +37,12 @@ $post-audio-text-color: #222831;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
   .post-audio {
+    // This width is just enough to have the YouTube
+    // play/pause controls visible.
     .post-audio-video {
-      flex: 2.5;
+      flex: 7;
     }
 
     .spacer {
@@ -47,13 +51,13 @@ $post-audio-text-color: #222831;
 
     .text {
       flex: 7.5;
-      font-size: medium;
+      font-size: x-large;
       text-align: center;
     }
   }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 992px) {
+@media only screen and (min-width: 661px) and (max-width: 1180px) {
   .post-audio {
     .post-audio-video {
       flex: 2.5;
