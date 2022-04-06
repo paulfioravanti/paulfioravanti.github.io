@@ -30,9 +30,13 @@ mix.
 I currently feed myself by working as a Principal Consultant for [Alembic][],
 where I make my client's digital dreams come true.
 
-This blog is entirely independent of my paid employment: my posts and comments
-are solely my own, and do not necessarily represent my employer's positions,
-strategies, or opinions.
+This blog is entirely independent of any paid employment: my posts and comments
+are solely my own, and do not necessarily represent any of my current or
+previous employer's positions, strategies, or opinions.
+
+### Other About Links
+
+- Short interview for the [Lookahead Search email newsletter][]
 
 [Alembic]: https://alembic.com.au/
 [Elixir]: https://elixir-lang.org/
@@ -42,6 +46,7 @@ strategies, or opinions.
 [Ergodox]: https://www.ergodox.io/
 [Georgi]: https://www.gboards.ca/product/georgi
 [GraphQL Sydney]: https://www.meetup.com/GraphQL-Sydney/
+[Lookahead Search email newsletter]: https://lookahead.cmail20.com/t/ViewEmail/t/CAD62C4D2C61E0092540EF23F30FEDED/6DAE94E03260CAA16D5E5F9A8728A5A6
 [Plover]: https://www.openstenoproject.org/plover/
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby on Rails Oceania (RORO) Sydney]: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
