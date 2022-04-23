@@ -6,13 +6,12 @@ language: ruby
 cache: bundler
 rvm:
   # https://rubies.travis-ci.org/
-  # Note: 3.1.1 not currently available
-  - 3.1.0
+  - 3.1.2
 bundler_args: --without development
 before_install:
   - rvm get stable
-  - nvm install 17.6.0
-  - nvm use 17.6.0
+  - nvm install 18.0.0
+  - nvm use 18.0.0
   - gem update --system
   - gem install bundler
 env:
