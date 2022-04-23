@@ -4,8 +4,9 @@ redirect_from:
   - /blog/i-completed-typey-type/
 title: "I Completed Typey Type"
 date: 2020-06-10 22:00 +1100
-last_modified_at: 2021-09-04 21:17 +1100
+last_modified_at: 2022-04-23 23:37 +1100
 tags: stenography keyboards ergodox mechanical-keyboards plover
+audio_narration: true
 header:
   image: /assets/images/2020-06-10/stenotype.jpg
   image_description: "Stenotype advertisement by La Salle Extension University in 'Lady's Circle magazine's November 1965 issue"
@@ -21,6 +22,8 @@ badges:
 excerpt: >
   So, am I a stenographer now, or what?
 ---
+
+{% include audio-narration-banner.html video-id="lc7voR3QyMQ" %}
 
 I first got into [stenography][] in late 2018, and wrote up a blog post about
 _[Starting Stenography with an Ergodox][]_, which outlines how I started my
@@ -82,11 +85,11 @@ writing.
 And so, after five months of practice, I finally reached **100% completion**,
 meaning I have been able to type 10,000 words without mis-strokes.
 
-I was initially worried that I was not hitting goals fast enough since I read of
-people who were, say, getting up to 50 words-per-minute (WPM) after just a month
-or two of steno practice. Maybe they had the luxury to dedicate their entire
-full-time schedule to stenography, or maybe they were super-geniuses, or maybe
-a bit of both....
+I was initially worried that I was not hitting goals fast enough since I had
+read of people who were, say, getting up to 50 words-per-minute (WPM) after just
+a month or two of steno practice. Maybe they had the luxury to dedicate their
+entire full-time schedule to stenography, or maybe they were super-geniuses, or
+maybe a bit of both....
 
 Regardless, I needed to consciously ignore all this, not compare myself to
 anyone else (real or imagined), and just _keep up the routine_. It may have
