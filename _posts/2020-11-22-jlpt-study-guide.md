@@ -1,8 +1,9 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2021-05-02 20:00 +1100
+last_modified_at: 2022-04-24 23:15 +1100
 tags: japanese jlpt anki html css javascript 日本語
+audio_narration: true
 header:
   image: /assets/images/2020-11-22/abi-schreider-yb16pT5F_jE-unsplash.jpg
   image_description: "two green ceramic cups with chocolate bar on top"
@@ -16,6 +17,8 @@ excerpt: >
   Level N1 of The Japanese Language Proficiency Test is a tough nut to crack,
   but these study methods got me over the line.
 ---
+
+{% include audio-narration-banner.html video-id="jcHX3PowK_w" %}
 
 In my life, I have failed the highest level of the [Japanese Language
 Proficiency Test][] (JLPT) 7 times.
@@ -44,8 +47,8 @@ and actually execute them: _properly_, this time.
 
 Here is what got me over the line.
 
-> The following contains to my personal opinions and experiences with the N1
-exam specifically: nothing is meant to be prescriptive (since everyone learns
+> The following contains my personal opinions and experiences with the N1 exam
+specifically: nothing is meant to be prescriptive (since everyone learns
 differently), and the approaches may not be relevant for all levels of the JLPT.
 My hope is that you will find at least something of reference as you formulate
 your own study plan.
@@ -179,7 +182,7 @@ once Anki preventing me from revising the decks further.
 During commutes to work, I would continue to revise the cards using
 [AnkiMobile][].  You may think that AnkiMobile is pricey for "just an app", but,
 in my opinion, it is absolutely worth it given the objective you are trying to
-achieve, and the price of failure. I highly recommended using it if you can, and
+achieve, and the price of failure. I highly recommend using it if you can, and
 you can feel good about helping to support keeping Anki itself free.
 
 Creating the actual flash card decks can be a bit confusing, especially if you
@@ -285,10 +288,10 @@ every day, so here is a random list of the forms that that takes.
     channel of band [Maximum the Hormone][]. Their music is awesome, but in
     particular, their ガチンコ ザ ホルモン series where they held auditions to
     create a second "outlet" of their band
-    (２<ruby>号店<rt>ごうてん</rt></ruby>) is novel and excellent viewing.
+    (２<ruby>号店<rt>ごうてん</rt></ruby>) is novel and exciting viewing.
   - [<ruby>禁断<rt>きんだん</rt></ruby>ボーイズ][]: The channel for Kindan
     (Prohibited) Boys. The interviews this team of 4 comedians do in places like
-    [Shibuya][] provide a great insight into the minds of young Japanese. The
+    [Shibuya][] provides a great insight into the minds of young Japanese. The
     "Cinderella" dating show they did for one of their members, "Messiah"
     (めさいあシンデレラ), is one of the channel highlights.
   - Popular YouTubers [ヒカル（Hikaru）][] and [ラファエル Raphael][] have some
