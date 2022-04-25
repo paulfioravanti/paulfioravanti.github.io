@@ -3,6 +3,7 @@ title: "Going Platinum"
 date: 2021-07-12 18:35 +1100
 last_modified_at: 2021-10-03 17:37 +1100
 tags: plover stenography
+audio_narration: true
 header:
   image: /assets/images/2021-07-12/platinum-558086_1920.jpg
   image_description: "Platinum record"
@@ -15,6 +16,8 @@ excerpt: >
   New to stenography and wondering if you should do the Platinum Steno theory
   courses? Here's how they can fit into your learning mix.
 ---
+
+{% include audio-narration-banner.html video-id="qNJmV5mXzFA" %}
 
 It took nearly 4 months, but I finally finished [Platinum Steno][]'s [video
 theory lessons][Platinum Steno Theory playlist].
@@ -84,7 +87,7 @@ However, you now have some new questions:
   need an expensive [stenotype machine][] to run it?
 
 If you have made the plunge to formally enrol in a steno school which uses
-StenEd theory, then perhaps all the issues outlined above are irrelevant, and
+StenEd theory, then perhaps all of the issues outlined above are irrelevant, and
 you can, indeed, easily augment your studies with PS's materials.
 This is fantastic! Definitely go for it (and feel free to ignore most of the
 rest of this post)!
