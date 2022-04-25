@@ -1,8 +1,9 @@
 ---
 title: "Stenography Numbers on a Georgi"
 date: 2021-01-17 18:15 +1100
-last_modified_at: 2021-01-17 18:15 +1100
+last_modified_at: 2022-04-25 14:24 +1100
 tags: stenography georgi mechanical-keyboards
+audio_narration: true
 header:
   image: /assets/images/2021-01-17/georgi.jpg
   image_description: "Georgi keyboard for stenography."
@@ -13,6 +14,8 @@ excerpt: >
   Adapt your steno habits from using a number bar to a set of thumb cluster
   number keys.
 ---
+
+{% include audio-narration-banner.html video-id="bdJtRvq7vvo" %}
 
 As a present to myself for ["completing" Typey Type][I Completed Typey Type], I
 picked up a [Georgi][] keyboard, and since mid-July 2020, I have been using it
