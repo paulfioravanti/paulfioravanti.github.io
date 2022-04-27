@@ -1,8 +1,9 @@
 ---
 title: "Organise a Meetup"
 date: 2021-01-04 10:00 +1100
-last_modified_at: 2021-10-18 18:40 +1100
+last_modified_at: 2022-04-27 23:15 +1100
 tags: meetups public-speaking
+audio_narration: true
 header:
   image: /assets/images/2021-01-04/roro.jpg
   image_description: "The Ruby on Rails Oceania (RORO) meetup at Airtasker offices"
@@ -12,6 +13,8 @@ header:
 excerpt: >
   Looking to take your love of meetups to the next level? Try organising!
 ---
+
+{% include audio-narration-banner.html video-id="YYq28jNE19o" %}
 
 In a previous post, _[Speak at a Meetup][]_, I attempted to convince you that
 actively participating and delivering talks at your local technical meetup is A
@@ -84,10 +87,10 @@ end of the meetup, I had signed up for the following reasons:
 
 After nearly two years of being a RORO organiser, I took on further organiser
 roles at the [Elixir Sydney][], [GraphQL Sydney][], and [Elm Sydney][] meetups,
-of which I am still an organiser of at the time of this writing. This required
-me to pass on my RORO torch on to a new team of amazing people, as four meetups
-became a bit too much for me to handle (it is good to be cognizant of your
-personal limits!).
+where I am still an organiser at the time of this writing. This required me
+to pass on my RORO torch to a new team of amazing people, as four meetups became
+a bit too much for me to handle (it is good to be cognizant of your personal
+limits!).
 
 I have no regrets on having travelled down the organiser path, and still find
 that I enjoy doing it. I get tremendous personal satisfaction from being able to
@@ -101,7 +104,7 @@ you to give it a try!
 
 ### Okay, I'm interested! Now what?
 
-If you want to know what kind of things you could help out with, or you want
+If you want to know what kinds of things you could help out with, or you want
 some ideas around what to include when starting your own meetup, read on, and
 hopefully the following will be of some reference as you take the reins and
 start leading your community.
@@ -218,7 +221,7 @@ their level of experience or confidence with preparing talks, you may need, or
 be asked, to assist them with their content preparation, [dry runs][dry run],
 timing, or generally be a [sounding board][]. Relish these requests as your
 speaker's success also becomes your own (and the meetup's), and doing this often
-leads to a [virtuous circle][] that leads even more new content.
+leads to a [virtuous circle][] that then leads to even more new content.
 
 ### What if I get no content?
 
@@ -264,7 +267,7 @@ can gather to see all the wonderful content on offer. Depending on factors like
 how established your meetup is, and how many [RSVP][]s you receive, your
 meetup's venue requirements will be different.
 
-Regardless or which kind of venue you intend to host your meetup at, I would
+Regardless of which kind of venue you intend to host your meetup at, I would
 implore you to have a think about, and explicitly make a note of, the minimum
 conditions that a venue must meet in order for you to be able to run your meetup
 successfully: the must-haves and the nice-to-haves.
@@ -411,7 +414,7 @@ though, I can recommend the following:
 - Keep inclusivity in mind when ordering food and drink: include vegetarian and
   vegan options for food, and if you do have alcohol at your meetup, ensure that
   you also have non-alcoholic options (including water!).
-- Watch out for food hogs that pile their plates insanely high, leaving less for
+- Watch out for food hogs that pile their plate insanely high, leaving less for
   other participants. As an organiser, sometimes you have to be an enforcer of
   decorum.
 - Encourage people to bring empty food containers to your events to take home
@@ -426,7 +429,7 @@ it on that internet thing we all know and love.
 
 ![image elixir-australia][]
 
-As of this writing, [Zoom][] is the tool [du jour][] for remote meetings and
+As of this writing, [Zoom][] is the tool _[du jour][]_ for remote meetings and
 video conferences, and I have been utilising it to keep meetups active while
 in-person meetups remain infeasible. However, it is not just meetup continuance
 that has been achieved in the move to online-only. Significant value has been
@@ -515,7 +518,7 @@ hopefully this list will serve as some reference:
   want to step back as an organiser and relinquish the meetup to someone else,
   having this account separate from you personally will make handover
   significantly easier. I would recommend taking the viewpoint that the meetup
-  should exist as its own entity, and not being tied tightly to you, personally.
+  should exist as its own entity, and not be tied tightly to you, personally.
 - **[Meetup.com][]**. Regardless of your opinions of this site (and some
   technical people have pretty strong opinions about it), I would say that as of
   this writing, if your audience is in the English-speaking world, and you want
@@ -528,7 +531,7 @@ hopefully this list will serve as some reference:
   want the key information about the meetup to be separate from, and accessible
   out of, Meetup.com (in case it ever disappears or I want to change platforms),
   and so I use other services for this.
-- **[Github][]**. As a developer you probably use GitHub (or one of its
+- **[GitHub][]**. As a developer you probably use GitHub (or one of its
   source-control competitors) every day and are intimately familiar with its
   workflows. I use it as the [source of truth][] for meetup information (so it
   doesn't have to be Meetup.com), and for handling the life-cycle of talk
@@ -538,13 +541,13 @@ hopefully this list will serve as some reference:
   repository. It contains a `README` file with meetup information (which gets
   _copied_ over to Meetup.com), as well as the host presentation materials for
   that meetup.<br />
-  [Issue templates][Github Issue Templates] are used to guide people
+  [Issue templates][GitHub Issue Templates] are used to guide people
   through the creation of full-length talk, lightning talk, and talk request
   submissions, and outline the general definitions and expectations of them
   (eg for this meetup, a "full-length" talk means no more than 40 minutes long
   and a "lightning talk" is typically about 5 minutes etc). Every meetup has its
-  own milestone that issues are marked against to symbolically "lock in" a talk
-  for that meetup.<br />
+  own dated GitHub milestone that issues are marked against to symbolically
+  "lock in" a talk for that meetup.<br />
   Once a meetup has concluded, I encourage speakers to share their presentation
   materials publicly somewhere, then close the meetup issues, and their
   corresponding milestone. You can see examples of all this in the repositories
@@ -558,7 +561,7 @@ hopefully this list will serve as some reference:
   scheduled to occur.
 - **[Dropbox][]**. Used essentially as an asset host for media contained in the
   meetup host presentation slide deck (so, not like an asset host would
-  be used if images were being serving on a web page that gets lots of hits).
+  be used if images were being served on a web page that gets lots of hits).
 - **[Slack][]**. There are official Slack workspaces for the programming
   languages the meetups I organise cover, and so I promote meetups in the
   `#australia` channels there, as well as in other programming community
@@ -574,7 +577,7 @@ hopefully this list will serve as some reference:
   Also, be understanding of times when you may be asked to either _not_ upload a
   video, or take one down. Speakers may have let information slip out that they
   didn't mean to (or regret in hindsight), or maybe they think the talk just did
-  not go well enough to want it on their permanent record. Regardless of the
+  not go well enough to want on their permanent record. Regardless of the
   reason, remove the video from the meetup channel. Meetup organisers are meant
   to spread community cheer and knowledge, not role-play as investigative
   journalists busting suspects on tape.
@@ -656,7 +659,7 @@ future...).
 {: refdef}
 
 Deckset's export to PDF functionality is great, and I find that the PDF slides
-_actually_ reflect how the slides look when viewed in the application. In my
+_actually_ reflect how the slides looked when viewed in the application. In my
 experience, this is not always the case with other applications, which is why I
 _always_ export a PDF copy of the deck and [commit][git-commit] it along with
 the original Markdown file.
@@ -745,7 +748,7 @@ policy? I am sure that the answer to this can vary drastically by jurisdiction
 and country, but I am wondering if there are any general rules of thumb to
 follow here, or maybe if I am worrying too much.
 
-If you are knowledgeable about these kinds of issues, please reach out to me
+If you are knowledgeable about these kinds of things, please reach out to me
 privately or share your experience or expertise in a comment. It would be great
 to learn more about this while in-person meetups are on hiatus.
 
@@ -774,10 +777,10 @@ to have:
   not hit that yet. Having said that, the biggest meetup organisational team I
   have worked on has been three people, which has been a fine number.
 - **Long Goodbyes**. If you manage to recruit another organiser because you plan
-  to step down, try not hand them the keys to the meetup, wish them the best for
-  the next one, and then disappear. I would recommend having them [shadow][] you
-  for a meetup or two, then take an organiser back seat for the next one or two
-  as your successor takes the lead, and _then_ fade away into the night.
+  to step down, try not to hand them the keys to the meetup, wish them the best
+  for the next one, and then disappear. I would recommend having them [shadow][]
+  you for a meetup or two, then take an organiser back seat for the next one or
+  two as your successor takes the lead, and _then_ fade away into the night.
 
 ## Conclusion
 
