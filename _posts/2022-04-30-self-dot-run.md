@@ -3,6 +3,7 @@ title: "`self.run`"
 date: 2022-05-01 20:45 +1100
 last_modified_at: 2022-05-01 20:45 +1100
 tags: fitness running
+audio_narration: true
 header:
   image: /assets/images/2022-05-01/chander-r-o7SNCEiMJiM-unsplash.jpg
   image_description: "man wearing blue tank top running under bridge"
