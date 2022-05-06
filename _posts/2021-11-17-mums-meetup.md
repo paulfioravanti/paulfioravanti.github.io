@@ -3,7 +3,7 @@ title: "Mum's Meetup"
 date: 2021-11-17 13:05 +1100
 last_modified_at: 2021-11-27 23:05 +1100
 tags: meetups
-audio_narration: true
+narration_video_id: "Ehi-ett4PWM"
 header:
   image: /assets/images/2021-11-17/daniel-kuberek-ijL9kGvjO-E-unsplash.jpg
   image_description: "bottle near water"
@@ -16,7 +16,7 @@ excerpt: >
   Organising a meetup gave my Mum a new lease on life.
 ---
 
-{% include audio-narration-banner.html video-id="Ehi-ett4PWM" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 When you run a meetup, one of the more difficult things to gauge can be whether
 you're actually doing it right.

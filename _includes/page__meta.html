@@ -31,9 +31,9 @@
     {% comment %}
     CUSTOMISATION: Add in audio narration information if present.
     {% endcomment %}
-    {% if document.read_time and document.show_date and document.audio_narration %}<span class="page__meta-sep"></span>{% endif %}
+    {% if document.read_time and document.show_date and document.narration_video_id %}<span class="page__meta-sep"></span>{% endif %}
 
-    {% if document.audio_narration %}
+    {% if document.narration_video_id %}
       <i class="fas fa-microphone" aria-hidden="true"></i>
       Audio Narration
     {% endif %}

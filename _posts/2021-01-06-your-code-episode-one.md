@@ -3,7 +3,7 @@ title: "Your Code: Episode I - The Phantom Repository"
 date: 2021-01-06 17:25 +1100
 last_modified_at: 2021-11-29 17:30 +1100
 tags: beginner learning java c-plus-plus cpp
-audio_narration: true
+narration_video_id: "MtPpTPyRxKI"
 header:
   image: /assets/images/2021-01-06/anakin-naboo-battle.png
   image_description: "Anakin Skywalker piloting a Naboo fighter"
@@ -15,7 +15,7 @@ excerpt: >
   Coding Saga Has A Beginning.
 ---
 
-{% include audio-narration-banner.html video-id="MtPpTPyRxKI" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 Where is your beginner's code? You know, the code you wrote when you were first
 learning how to program.

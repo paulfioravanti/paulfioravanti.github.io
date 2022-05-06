@@ -3,7 +3,7 @@ title: "Test-Driven Fairy Tale"
 date: 2021-02-20 21:30 +1100
 last_modified_at: 2021-11-29 14:50 +1100
 tags: ruby rspec minitest testing
-audio_narration: true
+narration_video_id: "Tw2QuzIErQ0"
 header:
   image: /assets/images/2021-02-20/wolf.png
   image_description: "An illustration of The Big Bad Wolf from The Three Little Pigs"
@@ -17,7 +17,7 @@ excerpt: >
   test suite?
 ---
 
-{% include audio-narration-banner.html video-id="Tw2QuzIErQ0" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 > _This story takes place when pigs spoke rhyme_<br />
 > _And monkeys chewed tobacco,_<br />

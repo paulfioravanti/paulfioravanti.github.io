@@ -3,7 +3,7 @@ title: "Going Platinum"
 date: 2021-07-12 18:35 +1100
 last_modified_at: 2022-04-25 11:50 +1100
 tags: plover stenography
-audio_narration: true
+narration_video_id: "qNJmV5mXzFA" 
 header:
   image: /assets/images/2021-07-12/platinum-558086_1920.jpg
   image_description: "Platinum record"
@@ -17,7 +17,7 @@ excerpt: >
   courses? Here's how they can fit into your learning mix.
 ---
 
-{% include audio-narration-banner.html video-id="qNJmV5mXzFA" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 It took nearly 4 months, but I finally finished [Platinum Steno][]'s [video
 theory lessons][Platinum Steno Theory playlist].

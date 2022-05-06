@@ -3,7 +3,7 @@ title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
 last_modified_at: 2021-12-04 14:00 +1100
 tags: japanese 日本語
-audio_narration: true
+narration_video_id: "TlkoRxyb7E4"
 header:
   image: /assets/images/2021-10-17/kinpachi-sensei.jpg
   image_description: "Kinpachi-sensei teaches the meaning of the character for 'person'."
@@ -14,7 +14,7 @@ excerpt: >
   "人" may be the _kanji_ for person, but its simplicity masks a deeper meaning.
 ---
 
-{% include audio-narration-banner.html video-id="TlkoRxyb7E4" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 The father of the bride was making his wedding toast. He recounted how his
 daughter had left Japan alone to embark on an adventure to Australia, where she

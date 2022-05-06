@@ -8,7 +8,7 @@ title: "Wii Remote is Best Presentation Remote"
 date: 2017-12-19 09:40 +1100
 last_modified_at: 2022-04-25 15:55 +1100
 tags: presentations
-audio_narration: true
+narration_video_id: "leVyAXhdaB8"
 header:
   image: /assets/images/2017-12-19/wii-remote.jpg
   image_description: "person holding Super Mushroom"
@@ -24,7 +24,7 @@ excerpt: >
 
 ![Wii Remote][]{:class="img-responsive"}
 
-{% include audio-narration-banner.html video-id="leVyAXhdaB8" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 I use a Nintendo [Wii Remote][Wii Remote Wikipedia] as my controller whenever
 [I do a presentation][my-presentations].

@@ -3,7 +3,7 @@ title: "Stenography Numbers on a Georgi"
 date: 2021-01-17 18:15 +1100
 last_modified_at: 2022-04-25 14:24 +1100
 tags: stenography georgi mechanical-keyboards
-audio_narration: true
+narration_video_id: "bdJtRvq7vvo"
 header:
   image: /assets/images/2021-01-17/georgi.jpg
   image_description: "Georgi keyboard for stenography."
@@ -15,7 +15,7 @@ excerpt: >
   number keys.
 ---
 
-{% include audio-narration-banner.html video-id="bdJtRvq7vvo" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 As a present to myself for ["completing" Typey Type][I Completed Typey Type], I
 picked up a [Georgi][] keyboard, and since mid-July 2020, I have been using it

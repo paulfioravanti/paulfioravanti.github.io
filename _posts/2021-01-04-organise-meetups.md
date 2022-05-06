@@ -3,7 +3,7 @@ title: "Organise a Meetup"
 date: 2021-01-04 10:00 +1100
 last_modified_at: 2022-04-27 23:15 +1100
 tags: meetups public-speaking
-audio_narration: true
+narration_video_id: "YYq28jNE19o"
 header:
   image: /assets/images/2021-01-04/roro.jpg
   image_description: "The Ruby on Rails Oceania (RORO) meetup at Airtasker offices"
@@ -14,7 +14,7 @@ excerpt: >
   Looking to take your love of meetups to the next level? Try organising!
 ---
 
-{% include audio-narration-banner.html video-id="YYq28jNE19o" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 In a previous post, _[Speak at a Meetup][]_, I attempted to convince you that
 actively participating and delivering talks at your local technical meetup is A

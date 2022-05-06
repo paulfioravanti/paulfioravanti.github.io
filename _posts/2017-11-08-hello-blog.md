@@ -6,7 +6,7 @@ title: "Hello, Blog!"
 date: 2017-11-08 16:49 +1100
 last_modified_at: 2021-11-20 13:10 +1100
 tags: jekyll
-audio_narration: true
+narration_video_id: "KNGnlJ5735Q"
 header:
   image: /assets/images/2017-11-08/drew-beamer-3SIXZisims4-unsplash.jpg
   image_description: "pink and yellow hello neon light"
@@ -19,7 +19,7 @@ excerpt: >
   Time to attempt to start another blog.
 ---
 
-{% include audio-narration-banner.html video-id="KNGnlJ5735Q" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 After finishing [_Learn Enough CSS & Layout to Be Dangerous_][learn-enough-css]
 by [Michael Hartl][mhartl], where you create CSS styling and HTML templates for

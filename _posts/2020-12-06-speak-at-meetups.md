@@ -5,7 +5,7 @@ title: "Speak at a Meetup"
 date: 2020-12-06 19:05 +1100
 last_modified_at: 2022-04-25 17:25 +1100
 tags: meetups public-speaking
-audio_narration: true
+narration_video_id: "_Wm5YTycoYU"
 header:
   image: /assets/images/2020-12-06/roro-paul.jpg
   image_description: "Paul Fioravanti speaking at a Ruby on Rails Oceania Sydney meetup"
@@ -17,7 +17,7 @@ excerpt: >
   Share your knowledge with your peers at a local meetup!
 ---
 
-{% include audio-narration-banner.html video-id="_Wm5YTycoYU" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 Meetups are great! The best ones provide a sense of community where the curious
 and the enthusiastic can engage together to create a great experience that draws

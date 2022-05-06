@@ -3,7 +3,7 @@ title: "`self.run`"
 date: 2022-05-01 20:45 +1100
 last_modified_at: 2022-05-01 20:45 +1100
 tags: fitness running
-audio_narration: true
+narration_video_id: "L_cNTVWBIIc"
 header:
   image: /assets/images/2022-05-01/chander-r-o7SNCEiMJiM-unsplash.jpg
   image_description: "man wearing blue tank top running under bridge"
@@ -17,7 +17,7 @@ excerpt: >
   tolerate it.
 ---
 
-{% include audio-narration-banner.html video-id="L_cNTVWBIIc" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 Coming back home from picking up dinner, I arrived at my front door out of
 breath, heart beating rapidly, and just generally feeling unpleasant.

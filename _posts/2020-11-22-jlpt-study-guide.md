@@ -3,7 +3,7 @@ title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
 last_modified_at: 2022-04-24 23:15 +1100
 tags: japanese jlpt anki html css javascript 日本語
-audio_narration: true
+narration_video_id: "jcHX3PowK_w"
 header:
   image: /assets/images/2020-11-22/abi-schreider-yb16pT5F_jE-unsplash.jpg
   image_description: "two green ceramic cups with chocolate bar on top"
@@ -18,7 +18,7 @@ excerpt: >
   but these study methods got me over the line.
 ---
 
-{% include audio-narration-banner.html video-id="jcHX3PowK_w" %}
+{% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 In my life, I have failed the highest level of the [Japanese Language
 Proficiency Test][] (JLPT) 7 times.
