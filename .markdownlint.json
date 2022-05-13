@@ -19,6 +19,8 @@
       "figcaption",
       "figure",
       "img",
+      "li",
+      "ol",
       "p",
       "span",
       "strong",
