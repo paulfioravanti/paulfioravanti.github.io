@@ -1,7 +1,7 @@
 ---
 title: "Flashing Georgi Firmware"
 date: 2022-05-18 17:00:00 +1100
-last_modified_at: 2022-05-18 17:00:00 +1100
+last_modified_at: 2022-05-19 09:20:00 +1100
 tags: steno mechanical-keyboard qmk
 header:
   image: /assets/images/2022-05-18/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
@@ -458,6 +458,10 @@ chord! Time to make sure everything compiles correctly:
 ```console
 qmk compile -kb georgi -km my_keymap
 ```
+
+Now, if you check in your `qmk_firmware` directory, you will see a newly
+created HEX file named `gboards_georgi_my_keymap.hex` for you to use when
+flashing. Different keymap compilations generate a separate firmware file.
 
 If you get any errors, trace back and see if you may have missed a step, or
 perhaps made a mistake in the code. If you get similar output to when you
