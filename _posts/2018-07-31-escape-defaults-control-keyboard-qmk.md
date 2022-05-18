@@ -5,6 +5,7 @@ redirect_from:
   - /blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
 title: "Escape the defaults and Control your keyboard with QMK"
 date: 2018-07-31 09:10 +1100
+last_modified_at: 2022-05-16 08:49:00 1100
 tags: ergodox keyboards mechanical-keyboards qmk clang japanese 日本語
 header:
   image: /assets/images/2018-07-31/ergodox-ez.jpg
@@ -150,9 +151,9 @@ combination you want to perform?
 
 Let's say that on the layout above, instead of having the top left corner key be
 the "=" character (ie `KC_EQL`) when tapped, you would like it to perform some
-custom combination of key presses, which we'll name `MY_KEY_COMBO`.
+custom combination of key presses, which we'll name `MY_KEYCODE`.
 
-Where does `MY_KEY_COMBO` get declared, and where do we define what it is
+Where does `MY_KEYCODE` get declared, and where do we define what it is
 supposed to actually do? Well, there are three main steps for this, but before
 we do them, let's create a copy of the default keymap folder, put it into a
 `custom` directory, and make our edits on that:
@@ -161,7 +162,7 @@ we do them, let's create a copy of the default keymap folder, put it into a
 cp -r qmk_firmware/keyboards/ergodox_ez/keymaps/default qmk_firmware/keyboards/ergodox_ez/keymaps/custom
 ```
 
-First, we need to add a new `MY_KEY_COMBO` type to the existing
+First, we need to add a new `MY_KEYCODE` type to the existing
 `custom_keycodes` enumerated types list, which is declared towards the top of
 the keymap file:
 
@@ -170,17 +171,17 @@ the keymap file:
 ```c
 enum custom_keycodes {
   // ...
-  MY_KEY_COMBO
+  MY_KEYCODE
 };
 ```
 
-Now, we can replace `KC_EQL` with `MY_KEY_COMBO` in the keyboard layout:
+Now, we can replace `KC_EQL` with `MY_KEYCODE` in the keyboard layout:
 
 ```c
 // ...
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
   // left hand
-  MY_KEY_COMBO, KC_1, KC_2, KC_3, KC_4, KC_5, KC_LEFT,
+  MY_KEYCODE, KC_1, KC_2, KC_3, KC_4, KC_5, KC_LEFT,
   // ...
 ```
 
@@ -191,9 +192,9 @@ keymap file:
 ```c
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
-    case MY_KEY_COMBO:
+    case MY_KEYCODE:
       if (record->event.pressed) {
-        // Do whatever it is that MY_KEY_COMBO is supposed to do when pressed
+        // Do whatever it is that MY_KEYCODE is supposed to do when pressed
       }
       return false;
       break;

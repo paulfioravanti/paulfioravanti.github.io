@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2022-05-13 18:25:00 1100
+last_modified_at: 2022-05-15 09:28:00 1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -136,7 +136,7 @@ All paid up and ready to go? Great! Go to the game detail page for your copy of
 _The Ultimate Doom_ and let's have a look at the files that are available to
 download.
 
-<div class="centered-image" style="width: 80%">
+<div class="centered-image" style="width: 90%">
   <figure>
     <img src="/assets/images/2022-05-13/gog-doom-download.jpg"
          alt="Download the Doom Offline Backup Game Installers from GOG.com">

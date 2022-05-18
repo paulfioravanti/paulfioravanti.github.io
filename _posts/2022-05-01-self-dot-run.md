@@ -13,6 +13,8 @@ header:
   caption: >
     Photo by <a href="https://unsplash.com/@chanderr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chander R</a> on <a href="https://unsplash.com/s/photos/running-sydney?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 excerpt: >
+  The act of running is boring, so I grinded until I could tolerate it.
+tagline: >
   The act of running is boring, so I grinded until I <del>liked</del> could
   tolerate it.
 ---
