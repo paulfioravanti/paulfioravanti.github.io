@@ -1,13 +1,13 @@
 ---
 title: "Flashing Georgi Firmware"
-date: 2022-05-14 21:33:22 +1100
-last_modified_at: 2022-05-14 21:33:22 1100
+date: 2022-05-18 17:00:00 +1100
+last_modified_at: 2022-05-18 17:00:00 1100
 tags: steno mechanical-keyboard qmk
 header:
-  image: /assets/images/2022-05-14/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
+  image: /assets/images/2022-05-18/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
   image_description: "macro photography of black circuit board"
-  teaser: /assets/images/2022-05-14/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
-  overlay_image: /assets/images/2022-05-14/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
+  teaser: /assets/images/2022-05-18/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
+  overlay_image: /assets/images/2022-05-18/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
   overlay_filter: 0.4
   caption: >
     Photo by <a href="https://unsplash.com/@alexkixa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandre Debiève</a> on <a href="https://unsplash.com/s/photos/hardware?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -23,7 +23,7 @@ currently does not.
 
 <div class="centered-image" style="width: 90%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi.jpg"
+    <img src="/assets/images/2022-05-18/georgi.jpg"
          alt="Georgi keyboard">
   </figure>
 </div>
@@ -43,7 +43,7 @@ having to touch any [C][] code. But, in the configurator[^1]...
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/qmk-configurator.jpg"
+    <img src="/assets/images/2022-05-18/qmk-configurator.jpg"
          alt="QMK Configurator">
   </figure>
 </div>
@@ -83,7 +83,7 @@ the source code (recommended), or download its [ZIP][] file.
 
 <div class="centered-image" style="width: 100%">
   <figure style="margin-bottom: 0">
-    <img src="/assets/images/2022-05-14/qmk-firmware-github.jpg"
+    <img src="/assets/images/2022-05-18/qmk-firmware-github.jpg"
          alt="QMK Firmware GitHub page">
   </figure>
 </div>
@@ -141,7 +141,7 @@ generated HEX file.
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/qmk-toolbox-select-firmware.jpg"
+    <img src="/assets/images/2022-05-18/qmk-toolbox-select-firmware.jpg"
          alt="QMK Toolbox Select Firmware">
     <figcaption>
       Screenshot is macOS version of QMK Toolbox. May differ slightly for other
@@ -159,7 +159,7 @@ job.
 
 <div class="centered-image" style="width: 80%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-flash-button.jpg"
+    <img src="/assets/images/2022-05-18/georgi-flash-button.jpg"
          alt="Press button to put Georgi in DFU mode">
     <figcaption>
       Tray ejector tools are not just for mobile phones.
@@ -173,7 +173,7 @@ you know that you have successfully connected a device in DFU mode, and the
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/qmk-toolbox-dfu-device-connected.jpg"
+    <img src="/assets/images/2022-05-18/qmk-toolbox-dfu-device-connected.jpg"
          alt="QMK Toolbox DFU mode device successfully connected">
   </figure>
 </div>
@@ -183,7 +183,7 @@ that looks something like this:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/qmk-toolbox-flashing-successful.jpg"
+    <img src="/assets/images/2022-05-18/qmk-toolbox-flashing-successful.jpg"
          alt="QMK Toolbox device successfully flashed">
   </figure>
 </div>
@@ -192,7 +192,7 @@ The Georgi has now been taken out of DFU mode, and can be reconnected to Plover.
 
 <div class="centered-image" style="width: 60%">
   <figure>
-    <img src="/assets/images/2022-05-14/reconnect-plover.jpg"
+    <img src="/assets/images/2022-05-18/reconnect-plover.jpg"
          alt="Reconnect Georgi to Plover">
     <figcaption>
     My Georgi shows up as <code>/dev/cu.usbmodem14202</code> in Plover's
@@ -234,7 +234,7 @@ layouts:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-steno-layer.png"
+    <img src="/assets/images/2022-05-18/georgi-steno-layer.png"
          alt="Steno (and QWERTY and Symbol) layer">
     <figcaption>
     Steno Layer (includes QWERTY and Symbol pseudo-layers; not shown above, but
@@ -246,7 +246,7 @@ layouts:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-gaming-layer-1.png"
+    <img src="/assets/images/2022-05-18/georgi-gaming-layer-1.png"
          alt="Gaming Layer 1">
     <figcaption>
     Gaming Layer 1
@@ -256,7 +256,7 @@ layouts:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-gaming-layer-2.png"
+    <img src="/assets/images/2022-05-18/georgi-gaming-layer-2.png"
          alt="Gaming Layer 2">
     <figcaption>
     Gaming Layer 2
@@ -268,7 +268,7 @@ In order to change from the Steno layer to Gaming layer 1, the default chord is:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-steno-layer-gaming-chord.png"
+    <img src="/assets/images/2022-05-18/georgi-steno-layer-gaming-chord.png"
          alt="Enter Gaming Mode chord">
     <figcaption>
     Enter Gaming Mode chord
@@ -281,7 +281,7 @@ is:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-gaming-layer-steno-key.png"
+    <img src="/assets/images/2022-05-18/georgi-gaming-layer-steno-key.png"
          alt="Return to Steno Mode key">
     <figcaption>
     Return to Steno Mode key
@@ -305,7 +305,7 @@ to include a Georgi-specific key (`FN` or `PWR`). Therefore, I am thinking a
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-14/georgi-simple-gaming-chord.png"
+    <img src="/assets/images/2022-05-18/georgi-simple-gaming-chord.png"
          alt="Steno/Gaming toggle chord">
     <figcaption>
     Candidate Steno/Gaming "toggle" chord
