@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2022-05-15 09:28:00 1100
+last_modified_at: 2022-05-15 09:28:00 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg

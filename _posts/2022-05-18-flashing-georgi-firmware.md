@@ -1,7 +1,7 @@
 ---
 title: "Flashing Georgi Firmware"
 date: 2022-05-18 17:00:00 +1100
-last_modified_at: 2022-05-18 17:00:00 1100
+last_modified_at: 2022-05-18 17:00:00 +1100
 tags: steno mechanical-keyboard qmk
 header:
   image: /assets/images/2022-05-18/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg
