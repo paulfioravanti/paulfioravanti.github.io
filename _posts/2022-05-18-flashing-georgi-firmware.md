@@ -11,7 +11,6 @@ header:
   overlay_filter: 0.4
   caption: >
     Photo by <a href="https://unsplash.com/@alexkixa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexandre Debiève</a> on <a href="https://unsplash.com/s/photos/hardware?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
 excerpt: >
   Make your steno keyboard do your bidding by codifying your preferences.
 ---
