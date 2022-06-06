@@ -1,10 +1,12 @@
 {
+  "code-block-style": false,
   "first-header-h1": false,
   "first-line-h1": false,
   "line-length": {
     "code_blocks": false,
     "tables": false
   },
+  "no-alt-text": false,
   "no-hard-tabs": {
     "code_blocks": false
   },
@@ -19,6 +21,7 @@
       "figcaption",
       "figure",
       "img",
+      "kbr",
       "li",
       "ol",
       "p",
