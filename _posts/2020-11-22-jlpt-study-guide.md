@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2022-04-24 23:15 +1100
+last_modified_at: 2022-06-06 11:40 +1100
 tags: japanese jlpt anki html css javascript 日本語
 narration_video_id: "jcHX3PowK_w"
 header:
@@ -66,13 +66,13 @@ improvements in the language gained during the year, was zero.
 Therein lies the need for the mindset change: **JLPT N1 does not test your
 Japanese abilities so much as it tests your ability to pass JLPT N1**.
 
-The exam demands that:
+The exam demands that you:
 
-- you remember a lot of grammar patterns, _[kanji][]_, and vocabulary that are
+- remember a lot of grammar patterns, _[kanji][]_, and vocabulary that are
   used infrequently in everyday Japanese
-- you speed-read excerpts from novels and articles and be able to interpret and
+- speed-read excerpts from novels and articles and be able to interpret and
   answer nuanced questions about them
-- you keep a mental track of the results of multiple weaving threads of
+- keep a mental track of the results of multiple weaving threads of
   conversations (which feel like they are deliberately engineered to trick you)
   before finding out which one is related to the question
 
@@ -257,7 +257,7 @@ every day, so here is a random list of the forms that that takes.
   that the programme is good to help get a view on what stories and issues are
   being talked about in Japan currently. There is no official way to view the
   show outside of Japan, but you can always find a channel on YouTube that
-  streams it live at 10:00am [JST][] Sundays.
+  streams it live on Sundays, 10:00am [JST][].
 - There are a lot of great YouTube and online video channels originating from
   Japan. Here is a selection of a few in my subscriptions:
   - [<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>森<rt>もり</rt></ruby>][]:
@@ -286,14 +286,16 @@ every day, so here is a random list of the forms that that takes.
     probably the nicest completely bonkers comedian in Japan.
   - [マキシマム ザ ホルモン<ruby>公式<rt>こうしき</rt></ruby>][]: The official
     channel of band [Maximum the Hormone][]. Their music is awesome, but in
-    particular, their ガチンコ ザ ホルモン series where they held auditions to
+    particular, their ガチンコ ザ ホルモン series
+    ([Season 1][ガチンコ ザ ホルモン Season 1],
+    [Season 2][ガチンコ ザ ホルモン Season 2]) where they held auditions to
     create a second "outlet" of their band
     (２<ruby>号店<rt>ごうてん</rt></ruby>) is novel and exciting viewing.
   - [<ruby>禁断<rt>きんだん</rt></ruby>ボーイズ][]: The channel for Kindan
     (Prohibited) Boys. The interviews this team of 4 comedians do in places like
     [Shibuya][] provides a great insight into the minds of young Japanese. The
     "Cinderella" dating show they did for one of their members, "Messiah"
-    (めさいあシンデレラ), is one of the channel highlights.
+    ([めさいあシンデレラ][]), is one of the channel highlights.
   - Popular YouTubers [ヒカル（Hikaru）][] and [ラファエル Raphael][] have some
     interesting content in their channels, and I would recommend sorting by
     "Most popular" to see if what they offer is of interest to you.
@@ -335,8 +337,11 @@ language media that you like reading/watching, please let me know in a comment!
 [ワイドナショー]: https://www.fujitv.co.jp/widna-show/
 [エガちゃんねる EGA-CHANNEL]: https://www.youtube.com/channel/UCL6JY2DXJNDOIqCP1CRADng
 [マキシマム ザ ホルモン<ruby>公式<rt>こうしき</rt></ruby>]: https://www.youtube.com/channel/UCbb9FsCRA83-6vdgXn2KSyA
+[めさいあシンデレラ]: https://www.youtube.com/watch?v=74XzlmCOvdc&list=PLdC8guD1vmAUVdDmhl0JKC34E4OXScyOT
 [<ruby>禁断<rt>きんだん</rt></ruby>ボーイズ]: https://www.youtube.com/channel/UCvtK7490fPF0TacbsvQ2H3g
 [ヒカル（Hikaru）]: https://www.youtube.com/channel/UCaminwG9MTO4sLYeC3s6udA
 [ラファエル Raphael]: https://www.youtube.com/channel/UCgQgMOBZOJ1ZDtCZ4hwP1uQ
 [<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>森<rt>もり</rt></ruby>]: https://www.youtube.com/channel/UCVx6RFaEAg46xfAsD2zz16w
 [やっすんのエンジニア<ruby>大学<rt>だいがく</rt></ruby>]: https://www.youtube.com/channel/UCajrdoGzHzDogrNrLYYmGsg
+[ガチンコ ザ ホルモン Season 1]: https://www.youtube.com/watch?v=2nHn8hNeo0w&list=PL2110GL-5A_HzpNpZIpWBXJosL_Y27SZs
+[ガチンコ ザ ホルモン Season 2]: https://www.youtube.com/watch?v=jE82MmZkpSY&list=PL2110GL-5A_HpjvTAj2qidcMA8otSwCv4
