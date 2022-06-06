@@ -9,6 +9,10 @@ header:
   teaser: /assets/images/2022-05-13/doom-mac-desktop.jpg
   overlay_image: /assets/images/2022-05-13/doom-mac-desktop.jpg
   overlay_filter: 0.4
+badges:
+  - image: https://img.shields.io/badge/HN%20Blog%20Newsletter-16%2F5%2F22-ED702E.svg
+    alt: "Hacker News Blogs Newsletter 16/5/22"
+    link: https://hnblogs.substack.com/p/hn-blogs-16522
 excerpt: >
   Send <a href="https://en.wikipedia.org/wiki/Doomguy">Doomguy</a> to hell
   without having to migrate to Windows.
