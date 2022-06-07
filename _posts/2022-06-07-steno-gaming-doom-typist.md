@@ -1,13 +1,13 @@
 ---
 title: "Steno Gaming: Doom Typist"
-date: 2022-05-21 21:19:17 +1100
-last_modified_at: 2022-05-21 21:19:17 1100
+date: 2022-06-07 23:41:00 +1100
+last_modified_at: 2022-06-07 23:41:00 +1100
 tags: retro-gaming georgi steno doom qmk
 header:
-  image: /assets/images/2022-05-21/doom-typist.jpg
+  image: /assets/images/2022-06-07/doom-typist.jpg
   image_description: "description"
-  teaser: /assets/images/2022-05-21/doom-typist-close-up.jpg
-  overlay_image: /assets/images/2022-05-21/doom-typist.jpg
+  teaser: /assets/images/2022-06-07/doom-typist-close-up.jpg
+  overlay_image: /assets/images/2022-06-07/doom-typist.jpg
 excerpt: >
   Demon hordes are no match for steno chords!
 ---
@@ -37,7 +37,12 @@ Doom, [Doom II][], [Heretic][], [Hexen][], and [others][List of notable WADs]).
 Here is a video of me doing some off-rails shooting with Doom Typist, using a
 [Georgi][] stenographic keyboard.
 
-**\<insert video here\>**
+<div class="steno-video">
+  {% include video id="OWnSjpOIT8s" provider="youtube" %}
+  <figcaption>
+    Doom Typist - Episode 1 Map 1
+  </figcaption>
+</div>
 
 Want to give it a try yourself? Read on!
 
@@ -78,7 +83,7 @@ So, prepare your [boomstick][] and let's begin!
 
 <div class="centered-image" style="width: 75%">
   <figure>
-    <img src="/assets/images/2022-05-21/follow_your_dreams_by_azakachi_rd_17_d6of6bm.jpg"
+    <img src="/assets/images/2022-06-07/follow_your_dreams_by_azakachi_rd_17_d6of6bm.jpg"
          alt="Doom: Follow Your Dreams">
     <figcaption>
       Art by
@@ -162,7 +167,7 @@ would have actually used during gameplay.
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/doom-manual-controls.jpg"
+    <img src="/assets/images/2022-06-07/doom-manual-controls.jpg"
          alt="Doom Manual Controls">
     <figcaption>
       Commands and Shortcuts section from the original
@@ -194,7 +199,7 @@ The way I configured movement is based on [ESDF keys][] on the left side, and
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/movement-controls.png"
+    <img src="/assets/images/2022-06-07/movement-controls.png"
          alt="Doom Georgi Movement Controls">
   </figure>
 </div>
@@ -212,7 +217,7 @@ Those keys get mapped in-game on the Customize Action Controls screen:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/customize-action-controls.jpg"
+    <img src="/assets/images/2022-06-07/customize-action-controls.jpg"
          alt="GZDoom Customize Action Controls">
     <figcaption>
       Stripped down action controls
@@ -271,7 +276,7 @@ steno number chords for 0-9 to select them, even in Gaming mode.
 
 <div class="centered-image" style="width: 70%">
   <figure>
-    <img src="/assets/images/2022-05-21/georgi-numbers-small-looping.gif"
+    <img src="/assets/images/2022-06-07/georgi-numbers-small-looping.gif"
          alt="Georgi Numbers 0-9">
     <figcaption>
       Steno number chords for 0-9 using the <kbr>#</kbr> modifier key
@@ -292,7 +297,7 @@ steno layer:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/number-chords.png"
+    <img src="/assets/images/2022-06-07/number-chords.png"
          alt="Momentarily active Gaming Layer 2 to access number keys">
   </figure>
 </div>
@@ -398,7 +403,7 @@ time to shift our focus over to adapting the [Typist.pk3 controls][].
 
 <div class="centered-image" style="width: 80%">
   <figure>
-    <img src="/assets/images/2022-05-21/typist-controls.jpg"
+    <img src="/assets/images/2022-06-07/typist-controls.jpg"
          alt="Typist.pk3 configurable controls">
     <figcaption>
     </figcaption>
@@ -437,7 +442,7 @@ with a `-RBGS` "dash chord":
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/dash-chords.png"
+    <img src="/assets/images/2022-06-07/dash-chords.png"
          alt="Doom Typist 'dash chords'">
   </figure>
 </div>
@@ -624,7 +629,7 @@ this:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/georgi-steno-layer-gaming-chord.png"
+    <img src="/assets/images/2022-06-07/georgi-steno-layer-gaming-chord.png"
          alt="Enter Gaming Mode chord">
     <figcaption>
       <code>(PWR | FN | ST4 | ST3)</code>
@@ -639,7 +644,7 @@ simpler chord, which ended up being just the bottom half of the original one:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/georgi-simple-gaming-chord.png"
+    <img src="/assets/images/2022-06-07/georgi-simple-gaming-chord.png"
          alt="Simpler Steno/Gaming toggle chord">
     <figcaption>
       <code>(PWR | ST4)</code>
@@ -707,7 +712,7 @@ Georgi's QWERTY mode, a "pseudo-layer" within the steno keymap layer:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/georgi-change-to-qwerty-mode.png"
+    <img src="/assets/images/2022-06-07/georgi-change-to-qwerty-mode.png"
          alt="Switch to QWERTY mode">
   </figure>
 </div>
@@ -723,7 +728,7 @@ change seemed to be mirroring the Steno-Gaming chord:
 
 <div class="centered-image" style="width: 100%">
   <figure>
-    <img src="/assets/images/2022-05-21/georgi-change-to-qwerty-mode-chord.png"
+    <img src="/assets/images/2022-06-07/georgi-change-to-qwerty-mode-chord.png"
          alt="Switch to QWERTY mode chord">
     <figcaption>
       <code>(FN | ST3)</code>
@@ -786,7 +791,7 @@ get Brutal Doom and Typist.pk3 to load together!
 
 <div class="centered-image" style="width: 50%">
   <figure>
-    <img src="/assets/images/2022-05-21/gzdoom-multiple-wad-files.jpg"
+    <img src="/assets/images/2022-06-07/gzdoom-multiple-wad-files.jpg"
          alt="GZDoom multiple WAD files">
     <figcaption>
       Multiple WAD files loaded: Typist.pk3, Brutal Doom itself, its new
@@ -800,7 +805,7 @@ Typist a shot, just remember to always play the game in "Purist" mode:
 
 <div class="centered-image" style="width: 90%">
   <figure>
-    <img src="/assets/images/2022-05-21/purist-mode.jpg"
+    <img src="/assets/images/2022-06-07/purist-mode.jpg"
          alt="Brutal Doom Purist mode">
   </figure>
 </div>
@@ -810,6 +815,15 @@ but Brutal Doom does. Unfortunately, it will not autoaim your typing shots at
 enemies in high places when you get put in
 <span style="color: red">Combat Mode</span>, leading to never being able to
 defeat them. In Purist (Oldschool Mode), you get the expected "autoaim".
+
+Here's a video of me attempting to play Brutal Doom Typist with a Georgi:
+
+<div class="steno-video">
+  {% include video id="LyeWSzbBfhY" provider="youtube" %}
+  <figcaption>
+    Brutal Doom Typist - Episode 1 Map 1
+  </figcaption>
+</div>
 
 ### Multiplayer Steno Dooming...?
 
@@ -860,7 +874,7 @@ it's 1993! :musical_keyboard:
 [Cargo Crisis]: http://qwertysteno.com/Games/CargoCrisis.php
 [chainsaw]: https://doom.fandom.com/wiki/Chainsaw
 [Chording QWERTY with QMK Combos]: https://www.paulfioravanti.com/blog/chording-qwerty-qmk-combos/
-[Combat Mode]: /assets/images/2022-05-21/combat-mode.jpg "Combat Mode"
+[Combat Mode]: /assets/images/2022-06-07/combat-mode.jpg "Combat Mode"
 [Defining a New Keycode]: https://github.com/qmk/qmk_firmware/blob/master/docs/custom_quantum_functions.md#defining-a-new-keycode
 [Doom]: https://en.wikipedia.org/wiki/Doom_(1993_video_game)
 [Doom II]: https://en.wikipedia.org/wiki/Doom_II
@@ -868,7 +882,7 @@ it's 1993! :musical_keyboard:
 [Doom-Typist-specific dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/gaming/gaming-gzdoom-typist.json
 [Epistory - Typing Chronicles]: https://en.wikipedia.org/wiki/Epistory_-_Typing_Chronicles
 [ESDF keys]: https://en.wikipedia.org/wiki/Arrow_keys#ESDF_keys
-[Exploration Mode]: /assets/images/2022-05-21/exploration-mode.jpg "Exploration Mode"
+[Exploration Mode]: /assets/images/2022-06-07/exploration-mode.jpg "Exploration Mode"
 [fingerspelling]: https://www.artofchording.com/sounds/fingerspelling.html
 [firmware]: https://en.wikipedia.org/wiki/Firmware
 [Flannel]: https://en.wikipedia.org/wiki/Flannel
