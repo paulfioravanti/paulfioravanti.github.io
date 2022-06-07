@@ -123,10 +123,10 @@ For playing Doom Typist with steno on a Georgi, this means you can:
 
 - Use Gaming Mode when you are in <span style="color: blue">Exploration
   Mode</span> (walking around, opening doors, flipping switches)
-  ![][Exploration Mode]{:width="12%"}
+  ![Exploration Mode][Exploration Mode]{:width="12%"}
 - Use Steno Mode when you are in <span style="color: red">Combat Mode</span>
   (typing answers to hit your targets, dashing)
-  ![][Combat Mode]{:width="30%"}
+  ![Combat Mode][Combat Mode]{:width="30%"}
 
 I have found some of the challenges around having one foot in steno-land, and
 the other in standard-keyboard-land, within a high-tension environment that
