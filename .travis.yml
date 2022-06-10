@@ -85,6 +85,7 @@ jobs:
         # This token generated at https://github.com/settings/tokens and added
         # to Travis environment variables.
         token: $GITHUB_TOKEN
+        # NOTE: Created as a personal access token
         deploy_key: $GITHUB_DEPLOY_KEY
         keep_history: true
         on:
