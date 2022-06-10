@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2022-03-25 17:00 +1100
+last_modified_at: 2022-06-10 20:30 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -1431,7 +1431,7 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [Google Docs]: https://docs.google.com/
 [Kathy]: https://github.com/Kaoffie
 [Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
-[Line Numbers for Google Docs plugin]: https://linenumbers.app/#/?id=line-numbers-for-google-docs
+[Line Numbers for Google Docs plugin]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension
 [Line Numbers for Google Docs Installation instructions]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension/issues/33#issuecomment-894842650
 [monospaced font]: https://en.wikipedia.org/wiki/Monospaced_font
 [newline]: https://en.wikipedia.org/wiki/Newline

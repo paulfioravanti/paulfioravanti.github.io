@@ -4,7 +4,7 @@ redirect_from:
   - /blog/internationalisation-with-phoenix-liveview/
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2022-05-16 08:49:00 1100
 tags: elixir phoenix liveview i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -2725,8 +2725,8 @@ with Phoenix LiveComponents][]_!
 [`Phoenix.LiveView.render/3`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#live_render/3
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
 [Phoenix Routing Pipelines]: https://hexdocs.pm/phoenix/routing.html#pipelines
-[`Phoenix.View.render_many/4`]: https://hexdocs.pm/phoenix/Phoenix.View.html#render_many/4
-[`Phoenix.View.render/3`]: https://hexdocs.pm/phoenix/Phoenix.View.html#render/3
+[`Phoenix.View.render_many/4`]: https://hexdocs.pm/phoenix_view/Phoenix.View.html#render_many/4
+[`Phoenix.View.render/3`]: https://hexdocs.pm/phoenix_view/Phoenix.View.html#render/3
 [phx-i18n-01-client-server]: https://phx-i18n-01-client-server.herokuapp.com/
 [phx-i18n-02-js-sprinkles]: https://phx-i18n-02-js-sprinkles.herokuapp.com/
 [phx-i18n-03-js-takeover]: https://phx-i18n-03-js-takeover.herokuapp.com/

@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2021-06-01 22:10 +1100
+last_modified_at: 2022-06-10 20:30 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -841,7 +841,7 @@ I am not sure which of these thumb-based number keys I will end up using yet
 want to try this layout as well.
 
 [changeable switches]: https://ergodox-ez.com/pages/change-it-yourself
-[Cherry MX Browns]: https://www.cherrymx.de/en/mx-original/mx-brown.html
+[Cherry MX Browns]: https://www.cherrymx.de/en/cherry-mx/mx-original/mx-brown.html
 [Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
 [Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#configuring-qmk-for-steno

@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Sentia"
 date: 2021-05-09 18:50 +1100
-last_modified_at: 2021-08-03 16:30 +1100
+last_modified_at: 2022-06-10 20:30 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching lateral-join preloading
 header:
   image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
@@ -939,7 +939,7 @@ for yourself.
 [Ordering in the Database]: https://www.paulfioravanti.com/blog/coding-test-review-sentia/#update-3-august-2021-ordering-in-the-database
 [pagination]: https://en.wikipedia.org/wiki/Pagination
 [partial class]: https://en.wikipedia.org/wiki/Class_(computer_programming)#Partial
-[pattern matching]: https://docs.ruby-lang.org/en/3.0.0/doc/syntax/pattern_matching_rdoc.html
+[pattern matching]: https://docs.ruby-lang.org/en/master/syntax/pattern_matching_rdoc.html
 [plug and play]: https://en.wikipedia.org/wiki/Plug_and_play
 [Postgres]: https://www.postgresql.org/
 [Postgres Enumerated Types]: https://www.postgresql.org/docs/current/datatype-enum.html

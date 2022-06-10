@@ -4,6 +4,7 @@ redirect_from:
   - /blog/setting-up-a-ruby-development-environment-for-exercism/
 title: "Setting up a Ruby development environment for Exercism"
 date: 2018-01-11 15:35 +1100
+last_modified_at: 2022-06-10 20:30:00 +1100
 tags: exercism ruby guard rubocop
 header:
   image: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg
@@ -245,7 +246,7 @@ the best solution that you can.
 [Exercism]: http://exercism.io/
 [exercism-ruby-track]: https://exercism.io/tracks/ruby
 [exercism-profile-link]: https://exercism.io/profiles/paulfioravanti
-[`Gemfile`]: http://bundler.io/v1.5/gemfile.html
+[`Gemfile`]: https://bundler.io/gemfile.html
 [Guard]: https://github.com/guard/guard
 [guard-rubocop]: https://github.com/yujinakayama/guard-rubocop
 [guard-rubocop-advanced-tips]: https://github.com/yujinakayama/guard-rubocop#advanced-tips

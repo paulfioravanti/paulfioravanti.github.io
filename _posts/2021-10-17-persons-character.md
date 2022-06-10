@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
-last_modified_at: 2021-12-04 14:00 +1100
+last_modified_at: 2022-06-10 20:30 +1100
 tags: japanese 日本語
 narration_video_id: "TlkoRxyb7E4"
 header:
@@ -273,7 +273,7 @@ situation, feel free to use or riff on my translation, and hopefully that will
 at least reduce your number of potential awkward pauses by one.
 
 [4th special episode]: https://www.tbs.co.jp/tbs-ch/item/d1111/
-[a complete lie]: https://news.yahoo.co.jp/articles/709a167033b56d303ec2f93ce5609892e7309d62
+[a complete lie]: https://www.oricon.co.jp/news/2206715/full/
 ["It takes a village to raise a child"]: https://en.wikipedia.org/wiki/It_takes_a_village
 [glyph origin of 人]: https://en.wiktionary.org/wiki/%E4%BA%BA/derived_terms#Glyph_origin
 [kanji]: https://en.wikipedia.org/wiki/Kanji

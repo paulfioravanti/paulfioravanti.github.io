@@ -1,7 +1,7 @@
 ---
 title: "Organise a Meetup"
 date: 2021-01-04 10:00 +1100
-last_modified_at: 2022-04-27 23:15 +1100
+last_modified_at: 2022-06-10 20:30 +1100
 tags: meetups public-speaking
 narration_video_id: "YYq28jNE19o"
 header:
@@ -848,7 +848,7 @@ reach out to me directly.
 [GitHub Issues]: https://guides.github.com/features/issues/
 [GitHub Issue Templates]: https://docs.github.com/en/free-pro-team@latest/github/building-a-strong-community/configuring-issue-templates-for-your-repository
 [GitHub Organizations]: https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-organizations-and-teams/about-organizations
-[GitPitch]: https://gitpitch.com/
+[GitPitch]: https://gitpitch.github.io/gitpitch
 [good faith]: https://www.merriam-webster.com/dictionary/good%20faith
 [Gmail]: https://www.gmail.com
 [GraphQL Sydney]: https://www.meetup.com/GraphQL-Sydney/
