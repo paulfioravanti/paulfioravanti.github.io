@@ -69,7 +69,7 @@ jobs:
           --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
-          --disable-external
+          # --disable-external
     - stage: Github Release
       script:
         - JEKYLL_ENV=production bundle exec jekyll build
