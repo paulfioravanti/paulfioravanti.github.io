@@ -69,4 +69,9 @@ jobs:
       #     --http-status-ignore "999,429,403"
       #     --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
         # --disable-external
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4.3.3
+        with:
+          branch: master
+          folder: _site
 
