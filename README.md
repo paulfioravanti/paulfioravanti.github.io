@@ -107,8 +107,8 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 
 [`asdf`]: https://github.com/asdf-vm/asdf
 [Build a CI/CD pipeline for your Jekyll site]: https://www.paulfioravanti.com/blog/build-a-ci-cd-pipeline-for-your-jekyll-site/
-[Build Status image]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io.svg?branch=release
-[Build Status url]: https://travis-ci.org/paulfioravanti/paulfioravanti.github.io
+[Build Status image]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml/badge.svg
+[Build Status url]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml
 [Github Pages]: https://pages.github.com/
 [Github Pages Supported Plugin List]: https://pages.github.com/versions/
 [Guard]: https://github.com/guard/guard
