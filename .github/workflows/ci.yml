@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 18
       - name: Install Global npm packages
-        run: npm install --global sass-lint htmllint-cli markdownlint-cli
+        run: npm install --location=global sass-lint htmllint-cli markdownlint-cli
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Run htmllint
@@ -68,5 +68,5 @@ jobs:
           --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
           --http-status-ignore "999"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
-          # --disable-external
+        # --disable-external
 
