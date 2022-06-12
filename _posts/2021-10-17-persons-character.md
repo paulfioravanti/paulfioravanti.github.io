@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
 date: 2021-10-17 16:14 +1100
-last_modified_at: 2022-06-10 20:30 +1100
+last_modified_at: 2022-06-12 19:00 +1100
 tags: japanese 日本語
 narration_video_id: "TlkoRxyb7E4"
 header:
@@ -87,11 +87,11 @@ but left me completely blindsided?
 ## Kinpachi-sensei
 
 The answer lies with _[Kinpachi-sensei][]_
-([3<ruby>年<rt>ねん</rt></ruby>B<ruby>組金八先生<rt>ぐみきんぱちせんせい</rt></ruby>][],
+([3<ruby>年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B<ruby>組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>][],
 _San-nen B-gumi Kinpachi-sensei_), a long-running Japanese television drama that
 portrays a variety of social issues faced by junior high school students.
 
-[Tetsuya Takeda][] ([<ruby>武田<rt>たけだ</rt></ruby><ruby>鉄矢<rt>てつや</rt></ruby>][])
+[Tetsuya Takeda][] ([<ruby>武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby>鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
 plays the titular role of school teacher Kinpachi Sakamoto, who sometimes
 illustrates points of morality to his students by deconstructing parts of
 _kanji_ characters to reveal their deeper hidden meanings.
@@ -280,7 +280,7 @@ at least reduce your number of potential awkward pauses by one.
 [Kinpachi-sensei]: https://en.wikipedia.org/wiki/Kinpachi-sensei
 [non sequitur]: https://www.merriam-webster.com/dictionary/non%20sequitur
 [Tetsuya Takeda]: https://en.wikipedia.org/wiki/Tetsuya_Takeda
-[3<ruby>年<rt>ねん</rt></ruby>B<ruby>組金八先生<rt>ぐみきんぱちせんせい</rt></ruby>]: https://ja.wikipedia.org/wiki/3%E5%B9%B4B%E7%B5%84%E9%87%91%E5%85%AB%E5%85%88%E7%94%9F
-[<ruby>武田<rt>たけだ</rt></ruby><ruby>鉄矢<rt>てつや</rt></ruby>]: https://ja.wikipedia.org/wiki/%E6%AD%A6%E7%94%B0%E9%89%84%E7%9F%A2
+[3<ruby>年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B<ruby>組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>]: https://ja.wikipedia.org/wiki/3%E5%B9%B4B%E7%B5%84%E9%87%91%E5%85%AB%E5%85%88%E7%94%9F
+[<ruby>武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby>鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>]: https://ja.wikipedia.org/wiki/%E6%AD%A6%E7%94%B0%E9%89%84%E7%9F%A2
 [ワイドナショー]: https://www.fujitv.co.jp/widna-show/
 [人]: https://en.wiktionary.org/wiki/%E4%BA%BA
