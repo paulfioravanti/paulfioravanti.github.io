@@ -1,7 +1,7 @@
 ---
 title: "AppleScript Records: Strings as Keys"
 date: 2022-06-10 15:30:00 +1100
-last_modified_at: 2022-06-10 15:30:00 +1100
+last_modified_at: 2022-06-14 11:15:00 +1100
 tags: hash dictionary apple scripting
 header:
   image: /assets/images/2022-06-10/anita-jankovic-Xh-Xr7_fxBI-unsplash-header.jpg
@@ -37,15 +37,17 @@ However, a big difference is that while many other languages will allow you to
 use any kind of data type as a key ([strings][String], [integers][Integer] etc),
 record keys can only be [Properties][Property], which are ["effectively tokens
 created by AppleScript at compile time"][Record Properties], and essentially act
-like [constants][Constant]. Therefore, this kind of record is not legal:
+like [constants][Constant] (which also means there's no chance to, say,
+"[constantize][]" a string received at run time). Therefore, this kind of record
+is not legal:
 
 ```applescript
 {"product":"pen", 5:2.34}
 ```
 
-This means that a script must always know in advance what keys it plans to use
-to look up values in a record: no lookup is possible using, say, some variable
-that references a string.
+The result of this is that a script must always know in advance what keys it
+plans to use to look up values in a record: no lookup is possible using, say,
+some variable that references a string.
 
 This is unfortunate, because I wanted to perform dynamic lookups on a record by
 fetching values from it based on some string I would receive from the result of
@@ -165,6 +167,7 @@ case of mapping [stenography][] chords to macOS keyboard shortcuts, check out my
 [API]: https://en.wikipedia.org/wiki/API
 [AppleScript]: https://en.wikipedia.org/wiki/AppleScript
 [Constant]: https://en.wikipedia.org/wiki/Constant_(computer_programming)
+[constantize]: https://api.rubyonrails.org/classes/String.html#method-i-constantize
 [Dictionary]: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
 [Foundation]: https://developer.apple.com/documentation/foundation
 [handler]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_about_handlers.html#//apple_ref/doc/uid/TP40000983-CH206-CJBIDBJH
