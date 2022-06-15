@@ -8,6 +8,10 @@ header:
   image_description: "description"
   teaser: /assets/images/2022-06-07/doom-typist-close-up.jpg
   overlay_image: /assets/images/2022-06-07/doom-typist.jpg
+badges:
+  - image: https://img.shields.io/badge/Plover%20Blog-Jun%2013%202022-5F7F78.svg
+    alt: "Plover Blog June 13, 2022"
+    link: http://plover.stenoknight.com/2022/06/stenodoom.html
 excerpt: >
   Demon hordes are no match for steno chords!
 ---
