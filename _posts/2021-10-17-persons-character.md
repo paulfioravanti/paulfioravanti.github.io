@@ -87,13 +87,12 @@ but left me completely blindsided?
 ## Kinpachi-sensei
 
 The answer lies with _[Kinpachi-sensei][]_
-([3<ruby lang="ja">年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B
-<ruby lang="ja">組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>][],
+([3<ruby lang="ja">年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B<ruby lang="ja">組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>][],
 _San-nen B-gumi Kinpachi-sensei_), a long-running Japanese television drama that
 portrays a variety of social issues faced by junior high school students.
 
-[Tetsuya Takeda][] ([<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp>
-</ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
+[Tetsuya Takeda][]
+([<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
 plays the titular role of school teacher Kinpachi Sakamoto, who sometimes
 illustrates points of morality to his students by deconstructing parts of
 _kanji_ characters to reveal their deeper hidden meanings.
