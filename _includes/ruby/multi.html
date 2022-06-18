@@ -5,7 +5,5 @@
   https://shopify.dev/api/liquid/objects/for-loops#forloop-index0
   {% endcomment -%}
   {% assign annotation = annotations[forloop.index0] -%}
-  {% include ruby/single.html lang=include.lang
-                              word=word
-                              annotation=annotation -%}
+  {% include ruby/single.html word=word annotation=annotation -%}
 {% endfor -%}

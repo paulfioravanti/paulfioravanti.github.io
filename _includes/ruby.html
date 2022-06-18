@@ -2,12 +2,10 @@
 {% capture ruby -%}
 <ruby lang="{{ lang }}">
 {% if include.words and include.annotations -%}
-  {% include ruby/multi.html lang=lang
-                             words=include.words
+  {% include ruby/multi.html words=include.words
                              annotations=include.annotations -%}
 {% else -%}
-  {% include ruby/single.html lang=lang
-                              word=include.word
+  {% include ruby/single.html word=include.word
                               annotation=include.annotation
                               annotation-style=include.annotation-style -%}
 {% endif -%}
