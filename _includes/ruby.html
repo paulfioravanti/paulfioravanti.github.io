@@ -8,7 +8,8 @@
 {% else -%}
   {% include ruby/single.html lang=lang
                               word=include.word
-                              annotation=include.annotation -%}
+                              annotation=include.annotation
+                              annotation-style=include.annotation-style -%}
 {% endif -%}
 </ruby>
 {% endcapture -%}
