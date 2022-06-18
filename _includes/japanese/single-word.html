@@ -7,11 +7,13 @@ ruby-align: {{ include.ruby-align }};
 {% assign furigana-style = initial-style | strip_newlines %}
 
 {% if include.word and include.furigana %}
-  {% include japanese/word-with-furigana.html
+  {% include ruby.html
              word=include.word
-             furigana=include.furigana
-             furigana-style=furigana-style %}
+             annotation=include.furigana
+             annotation-style=furigana-style %}
 {% elsif include.word %}
   {{ include.word }}
 {% endif %}
-{% include japanese/romaji.html romaji=include.romaji %}
+{% if include.romaji %}
+  {% include japanese/romaji.html romaji=include.romaji %}
+{% endif %}

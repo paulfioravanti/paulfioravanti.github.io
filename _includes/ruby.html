@@ -1,0 +1,10 @@
+{% assign lang = include.lang | default: "ja" %}
+{% assign annotation-style = include.annotation-style | default: "" %}
+<ruby lang="{{ lang }}">
+  {{ include.word }}
+  <rp>(</rp>
+  <rt style="{{ annotation-style }}">
+    {{ include.annotation }}
+  </rt>
+  <rp>)</rp>
+</ruby>

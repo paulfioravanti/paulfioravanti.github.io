@@ -91,8 +91,7 @@ The answer lies with _[Kinpachi-sensei][]_
 _San-nen B-gumi Kinpachi-sensei_), a long-running Japanese television drama that
 portrays a variety of social issues faced by junior high school students.
 
-[Tetsuya Takeda][]
-([<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
+[Tetsuya Takeda][] ([<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
 plays the titular role of school teacher Kinpachi Sakamoto, who sometimes
 illustrates points of morality to his students by deconstructing parts of
 _kanji_ characters to reveal their deeper hidden meanings.

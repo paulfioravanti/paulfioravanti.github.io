@@ -22,11 +22,13 @@ ruby-align: {{ include.ruby-align }};
                                | strip_newlines %}
     {% assign romaji = romaji-set[forloop.index0] %}
     <ruby lang="ja" class="japanese">
-      {% include japanese/word-with-furigana.html
+      {% include ruby.html
                  word=word
-                 furigana=furigana
-                 furigana-style=furigana-style %}
-      {% include japanese/romaji.html romaji=romaji %}
+                 annotation=furigana
+                 annotation-style=furigana-style %}
+      {% if romaji %}
+        {% include japanese/romaji.html romaji=romaji %}
+      {% endif %}
     </ruby>
   {% endfor %}
 </span>
