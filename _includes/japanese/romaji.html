@@ -1,5 +1,4 @@
-<rp>[</rp>
-<rt class="romaji">
+{% assign font-size = include.font-size | default: "50%" %}
+<rt class="romaji" style="font-size: {{ font-size }}">
   {{ include.romaji }}
 </rt>
-<rp>]</rp>

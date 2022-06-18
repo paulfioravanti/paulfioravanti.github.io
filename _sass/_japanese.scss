@@ -1,11 +1,14 @@
-.japanese-with-furigana-romaji {
-  letter-spacing: -1em;
+.japanese-hero {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: xxx-large;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  text-align: center;
 }
 
-span {
-  &.japanese-compound-word {
-    display: flex;
-  }
+.japanese-with-furigana-romaji {
+  letter-spacing: -1em;
 }
 
 ruby {
@@ -17,6 +20,11 @@ ruby {
 
   .romaji {
     margin-bottom: 10px;
-    text-align: center;
+  }
+}
+
+span {
+  &.japanese-compound-word {
+    display: inline-flex;
   }
 }

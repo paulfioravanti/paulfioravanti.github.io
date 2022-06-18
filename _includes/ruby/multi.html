@@ -1,5 +1,5 @@
-{% assign words = include.words | split: ", " -%}
-{% assign annotations = include.annotations | split: ", " -%}
+{% assign words = include.words | split: "," -%}
+{% assign annotations = include.annotations | split: "," -%}
 {% for word in words -%}
   {% comment -%}
   https://shopify.dev/api/liquid/objects/for-loops#forloop-index0

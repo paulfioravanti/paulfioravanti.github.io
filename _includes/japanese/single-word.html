@@ -1,19 +1,37 @@
-{% assign padding-left = include.furigana-left-padding | default: 0 %}
+{% assign furigana-left-padding = include.furigana-left-padding | split: "," %}
 {% capture initial-style %}
 ruby-align: {{ include.ruby-align }};
  text-align: {{ include.furigana-align }};
- padding-left: {{ padding-left }};
+ font-size: {{ include.furigana-size }};
+ padding-left:
 {% endcapture %}
-{% assign furigana-style = initial-style | strip_newlines %}
 
 {% if include.word and include.furigana %}
-  {% include ruby.html
-             word=include.word
-             annotation=include.furigana
-             annotation-style=furigana-style %}
+  {% assign word-chunks = include.word | split: "," -%}
+  {% assign furigana-chunks = include.furigana | split: "," -%}
+  <span style="display: flex;">
+    {% for word-chunk in word-chunks -%}
+      {% comment %}
+      https://shopify.dev/api/liquid/objects/for-loops#forloop-index0
+      {% endcomment %}
+      {% assign furigana-chunk = furigana-chunks[forloop.index0] -%}
+      {% assign padding-left = furigana-left-padding[forloop.index0]
+                               | default: "0"
+                               | append: ";" %}
+      {% assign furigana-style = initial-style
+                                 | append: padding-left
+                                 | strip_newlines %}
+      {% include ruby.html
+                 word=word-chunk
+                 annotation=furigana-chunk
+                 annotation-style=furigana-style %}
+    {% endfor -%}
+  </span>
 {% elsif include.word %}
   {{ include.word }}
 {% endif %}
 {% if include.romaji %}
-  {% include japanese/romaji.html romaji=include.romaji %}
+  {% include japanese/romaji.html
+             romaji=include.romaji
+             font-size=include.romaji-size %}
 {% endif %}

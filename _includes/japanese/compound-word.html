@@ -1,10 +1,11 @@
-{% assign words = include.words | split: ", " %}
-{% assign furigana-set = include.furigana | split: ", " %}
-{% assign furigana-left-padding = include.furigana-left-padding | split: ", " %}
-{% assign romaji-set = include.romaji | split: ", " %}
+{% assign words = include.words | split: "," %}
+{% assign furigana-set = include.furigana | split: "," %}
+{% assign furigana-left-padding = include.furigana-left-padding | split: "," %}
+{% assign romaji-set = include.romaji | split: "," %}
 {% capture initial-style %}
 ruby-align: {{ include.ruby-align }};
  text-align: {{ include.furigana-align }};
+ font-size: {{ include.furigana-size }};
  padding-left:
 {% endcapture %}
 
@@ -27,7 +28,9 @@ ruby-align: {{ include.ruby-align }};
                  annotation=furigana
                  annotation-style=furigana-style %}
       {% if romaji %}
-        {% include japanese/romaji.html romaji=romaji %}
+        {% include japanese/romaji.html
+                   romaji=romaji
+                   font-size=include.romaji-size %}
       {% endif %}
     </ruby>
   {% endfor %}

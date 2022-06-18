@@ -145,7 +145,7 @@ Kinpachi writes "人" on the classroom blackboard, and says to his students:
                              furigana="ひと"
                              romaji="\"hito\""
                              furigana-left-padding="8px" %}
-    {% include japanese.html word="を" romaji="wo" %}
+    {% include japanese.html word="を" romaji="o" %}
     {% include japanese.html word="支えて"
                              furigana="ささ"
                              romaji="sasaete"
@@ -170,11 +170,11 @@ Kinpachi writes "人" on the classroom blackboard, and says to his students:
                              romaji="hito"
                              furigana-left-padding="4px" %}
     {% include japanese.html word="が" romaji="ga" %}
-    {% include japanese.html words="支え, 合ってる"
-                             furigana="ささ, あ"
-                             romaji="sasae, atteru"
+    {% include japanese.html words="支え,合ってる"
+                             furigana="ささ,あ"
+                             romaji="sasae,atteru"
                              furigana-align="left"
-                             furigana-left-padding="3px, 8px" %}
+                             furigana-left-padding="3px,8px" %}
     {% include japanese.html word="から" romaji="kara" %}
     {% include japanese.html word="人"
                              furigana="ひと"

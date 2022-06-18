@@ -4,6 +4,9 @@
   "first-line-h1": false,
   "line-length": false,
   "no-alt-text": false,
+  "no-duplicate-header": {
+    "allow_different_nesting": true
+  },
   "no-hard-tabs": {
     "code_blocks": false
   },
@@ -25,8 +28,10 @@
       "span",
       "strong",
       "ruby",
+      "rb",
       "rp",
       "rt",
+      "rtc",
       "table",
       "td",
       "th",

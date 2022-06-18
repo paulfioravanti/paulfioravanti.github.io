@@ -1,26 +1,33 @@
-{% assign furigana-align = include.furigana-align | default: 'center' %}
-{% if furigana-align == "left" %}
-  {% assign ruby-align = "start" %}
-{% else %}
-  {% assign ruby-align = "center" %}
-{% endif %}
-
-<ruby lang="ja" class="japanese">
-  {% if include.words %}
-    {% include japanese/compound-word.html
-               words=include.words
-               furigana=include.furigana
-               romaji=include.romaji
-               furigana-align=furigana-align
-               ruby-align=ruby-align
-               furigana-left-padding=include.furigana-left-padding %}
-  {% else %}
-    {% include japanese/single-word.html
-               word=include.word
-               furigana=include.furigana
-               romaji=include.romaji
-               furigana-align=furigana-align
-               ruby-align=ruby-align
-               furigana-left-padding=include.furigana-left-padding %}
-  {% endif %}
-</ruby>
+{% assign furigana-align = include.furigana-align | default: 'center' -%}
+{% if furigana-align == "left" -%}
+  {% assign ruby-align = "start" -%}
+{% else -%}
+  {% assign ruby-align = "center" -%}
+{% endif -%}
+{% assign furigana-size = include.furigana-size | default: "50%" -%}
+{% capture ruby -%}
+  <ruby lang="ja" class="japanese">
+    {% if include.words %}
+      {% include japanese/compound-word.html
+                 words=include.words
+                 furigana=include.furigana
+                 romaji=include.romaji
+                 romaji-size=include.romaji-size
+                 furigana-align=furigana-align
+                 furigana-size=furigana-size
+                 ruby-align=ruby-align
+                 furigana-left-padding=include.furigana-left-padding %}
+    {% else %}
+      {% include japanese/single-word.html
+                 word=include.word
+                 furigana=include.furigana
+                 romaji=include.romaji
+                 romaji-size=include.romaji-size
+                 furigana-align=furigana-align
+                 furigana-size=furigana-size
+                 ruby-align=ruby-align
+                 furigana-left-padding=include.furigana-left-padding %}
+    {% endif %}
+  </ruby>
+{% endcapture -%}
+{{ ruby | strip_newlines -}}
