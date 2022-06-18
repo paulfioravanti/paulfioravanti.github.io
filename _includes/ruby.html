@@ -1,10 +1,15 @@
-{% assign lang = include.lang | default: "ja" %}
-{% assign annotation-style = include.annotation-style | default: "" %}
+{% assign lang = include.lang | default: "ja" -%}
+{% capture ruby -%}
 <ruby lang="{{ lang }}">
-  {{ include.word }}
-  <rp>(</rp>
-  <rt style="{{ annotation-style }}">
-    {{ include.annotation }}
-  </rt>
-  <rp>)</rp>
+{% if include.words and include.annotations -%}
+  {% include ruby/multi.html lang=lang
+                             words=include.words
+                             annotations=include.annotations -%}
+{% else -%}
+  {% include ruby/single.html lang=lang
+                              word=include.word
+                              annotation=include.annotation -%}
+{% endif -%}
 </ruby>
+{% endcapture -%}
+{{ ruby | strip_newlines -}}

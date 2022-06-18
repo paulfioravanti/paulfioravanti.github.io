@@ -1,0 +1,11 @@
+{% assign words = include.words | split: ", " -%}
+{% assign annotations = include.annotations | split: ", " -%}
+{% for word in words -%}
+  {% comment -%}
+  https://shopify.dev/api/liquid/objects/for-loops#forloop-index0
+  {% endcomment -%}
+  {% assign annotation = annotations[forloop.index0] -%}
+  {% include ruby/single.html lang=include.lang
+                              word=word
+                              annotation=annotation -%}
+{% endfor -%}

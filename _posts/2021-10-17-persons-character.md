@@ -1,7 +1,7 @@
 ---
 title: "A Person's Character (人という字は)"
-date: 2021-10-17 16:14 +1100
-last_modified_at: 2022-06-12 19:00 +1100
+date: 2021-10-17 17:30 +1100
+last_modified_at: 2022-06-18 16:25 +1100
 tags: japanese 日本語
 narration_video_id: "TlkoRxyb7E4"
 header:
@@ -86,15 +86,23 @@ but left me completely blindsided?
 
 ## Kinpachi-sensei
 
-The answer lies with _[Kinpachi-sensei][]_
-([3<ruby lang="ja">年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B<ruby lang="ja">組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>][],
-_San-nen B-gumi Kinpachi-sensei_), a long-running Japanese television drama that
-portrays a variety of social issues faced by junior high school students.
+{% capture kinpachi-sensei -%}
+3{% include ruby.html word="年" annotation="ねん" -%}
+B{% include ruby.html word="組金八先生" annotation="ぐみきんぱちせんせい" -%}
+{% endcapture %}
 
-[Tetsuya Takeda][] ([<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>][])
-plays the titular role of school teacher Kinpachi Sakamoto, who sometimes
-illustrates points of morality to his students by deconstructing parts of
-_kanji_ characters to reveal their deeper hidden meanings.
+The answer lies with _[Kinpachi-sensei][]_ ([{{ kinpachi-sensei }}][], _San-nen
+B-gumi Kinpachi-sensei_), a long-running Japanese television drama that portrays
+a variety of social issues faced by junior high school students.
+
+{% capture takeda-tetsuya -%}
+{% include ruby.html words="武田, 鉄矢" annotations="たけだ, てつや" -%}
+{% endcapture %}
+
+[Tetsuya Takeda][] ([{{ takeda-tetsuya }}][]) plays the titular role of school
+teacher Kinpachi Sakamoto, who sometimes illustrates points of morality to his
+students by deconstructing parts of _kanji_ characters to reveal their deeper
+hidden meanings.
 
 During a scene in _Kinpachi-sensei_'s [4th special episode][], aired in 1985,
 Kinpachi writes "人" on the classroom blackboard, and says to his students:
@@ -280,7 +288,7 @@ at least reduce your number of potential awkward pauses by one.
 [Kinpachi-sensei]: https://en.wikipedia.org/wiki/Kinpachi-sensei
 [non sequitur]: https://www.merriam-webster.com/dictionary/non%20sequitur
 [Tetsuya Takeda]: https://en.wikipedia.org/wiki/Tetsuya_Takeda
-[3<ruby lang="ja">年<rp>(</rp><rt>ねん</rt><rp>)</rp></ruby>B<ruby lang="ja">組金八先生<rp>(</rp><rt>ぐみきんぱちせんせい</rt><rp>)</rp></ruby>]: https://ja.wikipedia.org/wiki/3%E5%B9%B4B%E7%B5%84%E9%87%91%E5%85%AB%E5%85%88%E7%94%9F
-[<ruby lang="ja">武田<rp>(</rp><rt>たけだ</rt><rp>)</rp></ruby><ruby lang="ja">鉄矢<rp>(</rp><rt>てつや</rt><rp>)</rp></ruby>]: https://ja.wikipedia.org/wiki/%E6%AD%A6%E7%94%B0%E9%89%84%E7%9F%A2
+[{{ kinpachi-sensei }}]: https://ja.wikipedia.org/wiki/3%E5%B9%B4B%E7%B5%84%E9%87%91%E5%85%AB%E5%85%88%E7%94%9F
+[{{ takeda-tetsuya }}]: https://ja.wikipedia.org/wiki/%E6%AD%A6%E7%94%B0%E9%89%84%E7%9F%A2
 [ワイドナショー]: https://www.fujitv.co.jp/widna-show/
 [人]: https://en.wiktionary.org/wiki/%E4%BA%BA
