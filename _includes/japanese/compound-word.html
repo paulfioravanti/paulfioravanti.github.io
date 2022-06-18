@@ -21,7 +21,7 @@ ruby-align: {{ include.ruby-align }};
                                | append: padding-left
                                | strip_newlines %}
     {% assign romaji = romaji-set[forloop.index0] %}
-    <ruby class="japanese">
+    <ruby lang="ja" class="japanese">
       {% include japanese/word-with-furigana.html
                  word=word
                  furigana=furigana
