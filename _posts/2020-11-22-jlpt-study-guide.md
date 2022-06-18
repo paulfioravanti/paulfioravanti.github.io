@@ -265,14 +265,11 @@ every day, so here is a random list of the forms that that takes.
   streams it live on Sundays, 10:00am [JST][].
 - There are a lot of great YouTube and online video channels originating from
   Japan. Here is a selection of a few in my subscriptions:
-  - [<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
-    </ruby>の<ruby lang="ja">森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>][]:
+  - [<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby lang="ja">森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>][]:
     _Nihongo no Mori_, the Japanese Forest, is a fantastic resource for JLPT
     videos. If you are actively studying, or you just want the occasional
     refresher, you want to subscribe to this channel.
-  - [あかね<ruby lang="ja">的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby>
-    <ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
-    </ruby><ruby lang="ja">教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>][]
+  - [あかね<ruby lang="ja">的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby><ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><ruby lang="ja">教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>][]
     (Akane's Japanese classroom): Akane's lessons are great for learning
     contextual Japanese. She roleplays through various situations like job
     interviewing, talking on the phone, going out to eat, and checking in at
