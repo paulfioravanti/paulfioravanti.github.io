@@ -26,9 +26,9 @@ Proficiency Test][] (JLPT) 7 times.
 Five of my attempts on the [old Level 1 exam][JLPT Previous Format] (before it
 became [N1][JLPT Level Summary]) were when I was living and working in
 Japan, using Japanese full-time. I felt like my abilities were improving, so
-every <ruby>不合格<rp>(</rp><rt>ふごうかく</rt><rp>)</rp></ruby> (Failure)
-notification stung a little harder than the last, but, well...maybe I would pass
-it the following year.
+every <ruby lang="ja">不合格<rp>(</rp><rt>ふごうかく</rt><rp>)</rp></ruby>
+(Failure) notification stung a little harder than the last, but, well...maybe I
+would pass it the following year.
 
 As the time came for me to move out of Japan, I wanted to pass the JLPT _just
 once_ to get a certificate. So, I cut my losses, attempted the old Level 2 exam,
@@ -89,7 +89,7 @@ barbells (books) that you use, and N1 barbells are not lightweight.
 ## Buy Textbooks
 
 A cursory search on any internet book seller's site for
-"<ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
+"<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
 能力<rp>(</rp><rt>のうりょく</rt><rp>)</rp>
 試験<rp>(</rp><rt>しけん</rt><rp>)</rp></ruby>"
 yields more options than you could possibly read through, and a further search
@@ -100,15 +100,17 @@ I cannot help decide which textbooks would be right for you, but what I can say
 is that I used the following books in order to get a passing grade for N1 (and
 can personally recommend them):
 
-- The [<ruby>新完全<rp>(</rp><rt>しんかんぜん</rt><rp>)</rp></ruby>マスター][]
+- The [<ruby lang="ja">新完全<rp>(</rp><rt>しんかんぜん</rt><rp>)</rp></ruby>マスター][]
   (_Shin Kanzen Master_) series of books. There is five in the set: one each for
-  grammar (<ruby>文法<rp>(</rp><rt>ぶんぽう</rt><rp>)</rp></ruby>), reading
-  comprehension (<ruby>読解<rp>(</rp><rt>どっかい</rt><rp>)</rp></ruby>),
-  _kanji_ (<ruby>漢字<rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>), vocabulary
-  (<ruby>語彙<rp>(</rp><rt>ごい</rt><rp>)</rp></ruby>), and listening
-  comprehension (<ruby>聴解<rp>(</rp><rt>ちょうかい</rt><rp>)</rp></ruby>). Get
-  them all.
-- The [<ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>能力<rp>(</rp><rt>のうりょく</rt><rp>)</rp>試験<rp>(</rp><rt>しけん</rt><rp>)</rp>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp>問題集<rp>(</rp><rt>もんだいしゅう</rt><rp>)</rp></ruby>][]
+  grammar (<ruby lang="ja">文法<rp>(</rp><rt>ぶんぽう</rt><rp>)</rp></ruby>),
+  reading comprehension
+  (<ruby lang="ja">読解<rp>(</rp><rt>どっかい</rt><rp>)</rp></ruby>),
+  _kanji_ (<ruby lang="ja">漢字<rp>(</rp><rt>かんじ</rt><rp>)</rp></ruby>),
+  vocabulary (<ruby lang="ja">語彙<rp>(</rp><rt>ごい</rt><rp>)</rp></ruby>), and
+  listening comprehension
+  (<ruby lang="ja">聴解<rp>(</rp><rt>ちょうかい</rt><rp>)</rp></ruby>). Get them
+  all.
+- The [<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>能力<rp>(</rp><rt>のうりょく</rt><rp>)</rp>試験<rp>(</rp><rt>しけん</rt><rp>)</rp>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp>問題集<rp>(</rp><rt>もんだいしゅう</rt><rp>)</rp></ruby>][]
   (JLPT Official Practice Workbook). This book contains practice exams that you
   will absolutely want to attempt, under exam conditions, about 1-2 weeks before
   the actual exam. It's all well and good to study in a vacuum, but you will
@@ -263,11 +265,14 @@ every day, so here is a random list of the forms that that takes.
   streams it live on Sundays, 10:00am [JST][].
 - There are a lot of great YouTube and online video channels originating from
   Japan. Here is a selection of a few in my subscriptions:
-  - [<ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby>森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>][]:
+  - [<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
+    </ruby>の<ruby lang="ja">森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>][]:
     _Nihongo no Mori_, the Japanese Forest, is a fantastic resource for JLPT
     videos. If you are actively studying, or you just want the occasional
     refresher, you want to subscribe to this channel.
-  - [あかね<ruby>的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby><ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><ruby>教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>][]
+  - [あかね<ruby lang="ja">的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby>
+    <ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>
+    </ruby><ruby lang="ja">教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>][]
     (Akane's Japanese classroom): Akane's lessons are great for learning
     contextual Japanese. She roleplays through various situations like job
     interviewing, talking on the phone, going out to eat, and checking in at
@@ -279,7 +284,7 @@ every day, so here is a random list of the forms that that takes.
     phrases and cultural nuances you may not find in your textbooks. NHK World's
     [YouTube channel][NHK World YouTube] does not have the full set of these
     videos, so be sure to view them directly on their website.
-  - [やっすんのエンジニア<ruby>大学<rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>][]:
+  - [やっすんのエンジニア<ruby lang="ja">大学<rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>][]:
     If, like me, you are a computer programmer, or you are involved in
     technological fields involving software, you will definitely appreciate
     Yasun's channel as he goes on deep dives with a variety of different
@@ -287,16 +292,16 @@ every day, so here is a random list of the forms that that takes.
     a result of watching his videos.
   - [エガちゃんねる EGA-CHANNEL][]: The official channel of [Egashira 2:50][],
     probably the nicest completely bonkers comedian in Japan.
-  - [マキシマム ザ ホルモン<ruby>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp></ruby>][]:
+  - [マキシマム ザ ホルモン<ruby lang="ja">公式<rp>(</rp><rt>こうしき</rt><rp>)</rp></ruby>][]:
     The official channel of band [Maximum the Hormone][]. Their music is
     awesome, but in particular, their ガチンコ ザ ホルモン series
     ([Season 1][ガチンコ ザ ホルモン Season 1],
     [Season 2][ガチンコ ザ ホルモン Season 2]) where they held auditions to
     create a second "outlet" of their band
-    (２<ruby>号店<rp>(</rp><rt>ごうてん</rt><rp>)</rp></ruby>) is novel and
+    (２<ruby lang="ja">号店<rp>(</rp><rt>ごうてん</rt><rp>)</rp></ruby>) is novel and
     exciting viewing.
-  - [<ruby>禁断<rp>(</rp><rt>きんだん</rt><rp>)</rp></ruby>ボーイズ][]: The
-    channel for Kindan (Prohibited) Boys. The interviews this team of 4
+  - [<ruby lang="ja">禁断<rp>(</rp><rt>きんだん</rt><rp>)</rp></ruby>ボーイズ][]:
+    The channel for Kindan (Prohibited) Boys. The interviews this team of 4
     comedians do in places like [Shibuya][] provides a great insight into the
     minds of young Japanese. The "Cinderella" dating show they did for one of
     their members, "Messiah" ([めさいあシンデレラ][]), is one of the channel
@@ -336,17 +341,17 @@ language media that you like reading/watching, please let me know in a comment!
 [Vitas Gerulaitis]: https://en.wikipedia.org/wiki/Vitas_Gerulaitis#Quote
 [Web 1.0]: https://en.wikipedia.org/wiki/Web_2.0#Web_1.0
 [Yahoo Japan News]: https://news.yahoo.co.jp/
-[あかね<ruby>的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby><ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><ruby>教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCh-GhnQ7qDQmS6Bz3pGc1Mw
-[<ruby>新完全<rp>(</rp><rt>しんかんぜん</rt><rp>)</rp></ruby>マスター]: https://www.3anet.co.jp/np/list.html?series_id=4
-[<ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>能力<rp>(</rp><rt>のうりょく</rt><rp>)</rp>試験<rp>(</rp><rt>しけん</rt><rp>)</rp>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp>問題集<rp>(</rp><rt>もんだいしゅう</rt><rp>)</rp></ruby>]: https://www.bonjinsha.com/goods/detail?id=12862
+[あかね<ruby lang="ja">的<rp>(</rp><rt>てき</rt><rp>)</rp></ruby><ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby><ruby lang="ja">教室<rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCh-GhnQ7qDQmS6Bz3pGc1Mw
+[<ruby lang="ja">新完全<rp>(</rp><rt>しんかんぜん</rt><rp>)</rp></ruby>マスター]: https://www.3anet.co.jp/np/list.html?series_id=4
+[<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp>能力<rp>(</rp><rt>のうりょく</rt><rp>)</rp>試験<rp>(</rp><rt>しけん</rt><rp>)</rp>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp>問題集<rp>(</rp><rt>もんだいしゅう</rt><rp>)</rp></ruby>]: https://www.bonjinsha.com/goods/detail?id=12862
 [ワイドナショー]: https://www.fujitv.co.jp/widna-show/
 [エガちゃんねる EGA-CHANNEL]: https://www.youtube.com/channel/UCL6JY2DXJNDOIqCP1CRADng
-[マキシマム ザ ホルモン<ruby>公式<rp>(</rp><rt>こうしき</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCbb9FsCRA83-6vdgXn2KSyA
+[マキシマム ザ ホルモン<ruby lang="ja">公式<rp>(</rp><rt>こうしき</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCbb9FsCRA83-6vdgXn2KSyA
 [めさいあシンデレラ]: https://www.youtube.com/watch?v=74XzlmCOvdc&list=PLdC8guD1vmAUVdDmhl0JKC34E4OXScyOT
-[<ruby>禁断<rp>(</rp><rt>きんだん</rt><rp>)</rp></ruby>ボーイズ]: https://www.youtube.com/channel/UCvtK7490fPF0TacbsvQ2H3g
+[<ruby lang="ja">禁断<rp>(</rp><rt>きんだん</rt><rp>)</rp></ruby>ボーイズ]: https://www.youtube.com/channel/UCvtK7490fPF0TacbsvQ2H3g
 [ヒカル（Hikaru）]: https://www.youtube.com/channel/UCaminwG9MTO4sLYeC3s6udA
 [ラファエル Raphael]: https://www.youtube.com/channel/UCgQgMOBZOJ1ZDtCZ4hwP1uQ
-[<ruby>日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby>森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCVx6RFaEAg46xfAsD2zz16w
-[やっすんのエンジニア<ruby>大学<rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCajrdoGzHzDogrNrLYYmGsg
+[<ruby lang="ja">日本語<rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>の<ruby lang="ja">森<rp>(</rp><rt>もり</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCVx6RFaEAg46xfAsD2zz16w
+[やっすんのエンジニア<ruby lang="ja">大学<rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>]: https://www.youtube.com/channel/UCajrdoGzHzDogrNrLYYmGsg
 [ガチンコ ザ ホルモン Season 1]: https://www.youtube.com/watch?v=2nHn8hNeo0w&list=PL2110GL-5A_HzpNpZIpWBXJosL_Y27SZs
 [ガチンコ ザ ホルモン Season 2]: https://www.youtube.com/watch?v=jE82MmZkpSY&list=PL2110GL-5A_HpjvTAj2qidcMA8otSwCv4
