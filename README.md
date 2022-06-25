@@ -12,6 +12,7 @@ at the following posts:
 
 - _[Setting up a Jekyll Blog][]_
 - _[Build a CI/CD pipeline for your Jekyll site][]_
+- _[Flexbox Furigana][]_
 
 ## Install
 
@@ -109,6 +110,7 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Build a CI/CD pipeline for your Jekyll site]: https://www.paulfioravanti.com/blog/build-a-ci-cd-pipeline-for-your-jekyll-site/
 [Build Status image]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml/badge.svg
 [Build Status url]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml
+[Flexbox Furigana]: https://www.paulfioravanti.com/blog/flexbox-furigana/
 [Github Pages]: https://pages.github.com/
 [Github Pages Supported Plugin List]: https://pages.github.com/versions/
 [Guard]: https://github.com/guard/guard
