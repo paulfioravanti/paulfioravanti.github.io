@@ -31,11 +31,12 @@ span {
   }
 }
 
+// sass-lint:disable no-vendor-prefixes
 // NOTE: Safari-specific hacks
-@media not all and (min-resolution:.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   // Safari does not support font-size: xxx-large keyword
   // https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#browser_compatibility
-  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     .japanese-hero {
       font-size: xx-large;
 
@@ -64,3 +65,4 @@ span {
     }
   }
 }
+// sass-lint:enable no-vendor-prefixes
