@@ -1,5 +1,7 @@
+$japanese-hero-background-color: rgba(0, 0, 0, 0.05);
+
 .japanese-hero {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: $japanese-hero-background-color;
   font-size: xxx-large;
   margin-bottom: 10px;
   padding-bottom: 10px;
