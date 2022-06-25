@@ -55,3 +55,12 @@ span {
     }
   }
 }
+
+// NOTE: Firefox-specific hacks
+@-moz-document url-prefix() {
+  ruby {
+    .romaji {
+      text-align: center;
+    }
+  }
+}
