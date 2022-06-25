@@ -30,3 +30,28 @@ span {
     display: inline-flex;
   }
 }
+
+// NOTE: Safari-specific hacks
+@media not all and (min-resolution:.001dpcm) {
+  // Safari does not support font-size: xxx-large keyword
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#browser_compatibility
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .japanese-hero {
+      font-size: xx-large;
+
+      ruby > rt {
+        text-align: center;
+      }
+    }
+
+    .japanese-with-furigana-romaji {
+      letter-spacing: initial;
+    }
+
+    ruby {
+      .romaji {
+        text-align: center;
+      }
+    }
+  }
+}

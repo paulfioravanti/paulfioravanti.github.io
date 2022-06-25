@@ -28,16 +28,14 @@ As a simple example, let's say we have a character like this[^1]:
 _Furigana_ for the _kanji_, written with _[hiragana][]_[^2], can be placed above
 it[^3]:
 
-<div class="japanese-hero">
-  <ruby lang="ja" class="japanese">
-    <ruby lang="ja">
-      車
-      <rp>(</rp>
-      <rt style="ruby-align: center; text-align: center; font-size: medium;">
-        くるま
-      </rt>
-      <rp>)</rp>
-    </ruby>
+<div class="japanese-hero" style="padding-top: 20px;">
+  <ruby lang="ja">
+    車
+    <rp>(</rp>
+    <rt style="ruby-align: center; text-align: center; font-size: medium;">
+      くるま
+    </rt>
+    <rp>)</rp>
   </ruby>
 </div>
 
@@ -56,7 +54,7 @@ _furigana_-style annotation:
       </rt>
       <rp>, </rp>
     </ruby>
-    <rt style="margin-top: -15px; font-style: italic; font-size: medium;">
+    <rt style="font-style: italic; font-size: medium;">
       kuruma
     </rt>
     <rp>)</rp>
@@ -78,12 +76,12 @@ meaning:
         </rt>
         <rp>, </rp>
       </ruby>
-      <rt style="margin-top: -15px; font-style: italic; font-size: medium;">
+      <rt style="font-style: italic; font-size: medium;">
         kuruma
       </rt>
       <rp>, </rp>
     </ruby>
-    <rt lang="en" style="font-weight: bold;">
+    <rt lang="en" style="font-weight: bold; text-align: center;">
       car
     </rt>
     <rp>) </rp>
@@ -1045,7 +1043,8 @@ So, let's try the markup with a good example of this, the surname _Hozumi_:
 I think this display of ほずみ[^5] looks fine. The spacing of the _furigana_ may
 look a bit strange, but since there is no correlation between the annotation and
 the pronunciation of each individual _kanji_, having them spread out evenly
-across the top of the word is probably the most logical way to display them.
+across the top of the word, or center-aligned, is probably the most logical way
+to display them.
 
 ## Markup Reuse
 
