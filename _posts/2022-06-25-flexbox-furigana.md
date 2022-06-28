@@ -1,7 +1,7 @@
 ---
 title: "Flexbox Furigana"
 date: 2022-06-25 11:30:00 +1100
-last_modified_at: 2022-06-25 11:30:00 +1100
+last_modified_at: 2022-06-28 10:00:00 +1100
 tags: japan japanese 日本語 振り仮名 ふりがな annotation
 header:
   image: /assets/images/2022-06-25/menu-with-furigana.jpg
@@ -63,7 +63,7 @@ _furigana_-style annotation:
 
 Okay, but what does this word actually mean? We could put an English translation
 to the right of the word, or pile on _yet another_ annotation for the English
-meaning:
+meaning[^4]:
 
 <div class="japanese-hero">
   <ruby lang="en" class="japanese">
@@ -252,7 +252,7 @@ on the web.
   </figcaption>
 </div>
 
-_Furigana_ is a type of [Ruby character][] annotation[^4], and is marked up in
+_Furigana_ is a type of [Ruby character][] annotation[^5], and is marked up in
 HTML using the [`<ruby>`][] tag.
 
 Searching the internet for how to mark-up `<ruby>` elements leads to a
@@ -1040,7 +1040,7 @@ So, let's try the markup with a good example of this, the surname _Hozumi_:
   </ruby>
 </div>
 
-I think this display of ほずみ[^5] looks fine. The spacing of the _furigana_ may
+I think this display of ほずみ[^6] looks fine. The spacing of the _furigana_ may
 look a bit strange, but since there is no correlation between the annotation and
 the pronunciation of each individual _kanji_, having them spread out evenly
 across the top of the word, or center-aligned, is probably the most logical way
@@ -1097,7 +1097,7 @@ in this post are:
 ```
 
 Going through the details of these functions is something I will leave up to the
-interested reader[^6]. You can find all the code in the
+interested reader[^7]. You can find all the code in the
 [`_includes/` directory][] of this blog's codebase.
 
 ## Much Ado About Annotations
@@ -1152,17 +1152,23 @@ let me know!
       (_[yokogaki][]_), but placed to the right when written right-to-left
       vertically (_[tategaki][]_).
 
-[^4]: The name of which is from an old British typography type that had a height
+[^4]: Or, you could use a browser extension like [Rikaichan][] or [Rikaikun][],
+      which display pop-up kanji readings and English translations when you
+      mouse over them, making any lack of annotations irrelevant. For purposes
+      of this post, we'll pretend they do not exist (I still absolutely
+      recommend using them, though!).
+
+[^5]: The name of which is from an old British typography type that had a height
       of 5.5 [points][point], and not to be confused with anything related to
       the [Ruby][] programming language.
 
-[^5]: As well as {% include japanese.html word="ほずみ" romaji="Hozumi" %},
+[^6]: As well as {% include japanese.html word="ほずみ" romaji="Hozumi" %},
       八月一日 can be read as
       {% include japanese.html word="ほづみ" romaji="Hozumi" %},
       {% include japanese.html word="やぶみ" romaji="Yabumi" %}, and
       {% include japanese.html word="はっさく" romaji="Hassaku" %}.
 
-[^6]: It was tough to keep my own interest up with Liquid since I found using
+[^7]: It was tough to keep my own interest up with Liquid since I found using
       it so frustrating, even after changing my mindset to thinking of it as
       ["smart HTML rather than dumb Ruby"][Multi-Dimensional and Associative
       Arrays in Shopify Liquid]. Nevertheless, I got what I wanted in the end
@@ -1206,6 +1212,8 @@ let me know!
 [`padding-left`]: https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left
 [point]: https://en.wikipedia.org/wiki/Point_(typography)
 [`<rb>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rb
+[Rikaichan]: https://addons.thunderbird.net/en-us/firefox/addon/rikaichan/
+[Rikaikun]: https://chrome.google.com/webstore/detail/rikaikun/jipdnfibhldikgcjhfnomkfpcebammhp?hl=en
 [romaji]: https://en.wikipedia.org/wiki/Romanization_of_Japanese
 [`<rp>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rp
 [`<rt>`]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/rt
