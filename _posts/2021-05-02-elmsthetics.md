@@ -2119,7 +2119,7 @@ just [ｒｅｌａｘ][80sfy Elm].
 [80sfy Elm codebase]: https://github.com/paulfioravanti/80sfy
 [80sfy Reddit thread]: https://www.reddit.com/r/outrun/comments/5rdvks/my_boyfriend_made_a_website_that_plays_synthwave/
 [active voice]: https://en.wikipedia.org/wiki/Active_voice
-[Alex Lew]: http://alexlew.net
+[Alex Lew]: https://twitter.com/alexanderklew
 [API]: https://en.wikipedia.org/wiki/API
 [Arizona drinks]: https://drinkarizona.com/collections/drinks
 [Art Sangurai]: http://www.digitalbloc.com/
