@@ -6,7 +6,7 @@ tags: japan work overwork software japanization j10n feature-phones 日本 ガ�
 narration_video_id: "_nkqjga6doM"
 header:
   image: /assets/images/2022-07-03/working-late.jpg
-  image_description: ""
+  image_description: "On the beers, working late in a hotel room"
   teaser: /assets/images/2022-07-03/working-late.jpg
   overlay_image: /assets/images/2022-07-03/working-late-header.jpg
   overlay_filter: 0.4
