@@ -60,15 +60,15 @@ jobs:
         # NOTE 4: The minimal-mistakes-generated 404 page seems to have a #main
         # hash href to nowhere, so ignore all #main hash links for now; I don't
         # have any that I've created in any pages that I control.
-      # - name: Run htmlproofer
-      #   run: >
-      #     bundle exec htmlproofer _site
-      #     --allow-hash-href
-      #     --assume-extension
-      #     --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
-      #     --http-status-ignore "999,429,403,0"
-      #     --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
-      #   # --disable-external
+      - name: Run htmlproofer
+        run: >
+          bundle exec htmlproofer _site
+          --allow-hash-href
+          --assume-extension
+          --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
+          --http-status-ignore "999,429,403,0"
+          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+        # --disable-external
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
