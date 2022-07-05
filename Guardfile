@@ -7,7 +7,17 @@ group :red_green_refactor, halt_on_fail: true do
         # and htmllint has a sad. Also, only lint files that I have direct
         # control over and are not theme override files.
         # command: ["htmllint", "_includes/*.html"],
-        command: ["htmllint", "_includes/stripped_markdown.html"],
+        command: [
+          "htmllint",
+          "_includes/japanese/*",
+          "_includes/ruby/*",
+          "_includes/audio-narration-banner.html",
+          "_includes/audio-profile-custom-links.html",
+          "_includes/japanese.html",
+          "_includes/ruby.html",
+          "_includes/signup-form.html",
+          "_includes/stripped_markdown.html",
+        ],
         name: "htmllint" do
     watch(%r{\A_includes/.+\.html\z})
   end
