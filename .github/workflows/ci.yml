@@ -45,6 +45,7 @@ jobs:
 
       - name: Build Jekyll site
         run: JEKYLL_ENV=production bundle exec jekyll build
+
         # Explanations for flags:
         # --allow-hash-href - Build will fail on the first and last post entries
         # if this isn't allowed since there will be previous and next buttons
