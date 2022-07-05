@@ -43,6 +43,8 @@ jobs:
       - name: Run sass-lint
         run: sass-lint --verbose --no-exit
 
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build
         # Explanations for flags:
         # --allow-hash-href - Build will fail on the first and last post entries
         # if this isn't allowed since there will be previous and next buttons
@@ -77,9 +79,6 @@ jobs:
           --http-status-ignore "999,429,403,0"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
         # --disable-external
-
-      - name: Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build
 
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
