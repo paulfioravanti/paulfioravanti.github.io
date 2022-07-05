@@ -6,6 +6,9 @@ on:
   pull_request:
     branches:
       - release
+concurrency:
+  group: ci-tests-${{ github.ref }}-1
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,26 +18,31 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.2
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
+
       - name: Set up Node JS
         uses: actions/setup-node@v3
         with:
           node-version: 18
+
       - name: Install Global npm packages
         run: npm install --location=global sass-lint htmllint-cli markdownlint-cli
-      - name: Build Jekyll site
-        run: JEKYLL_ENV=production bundle exec jekyll build
+
       - name: Run htmllint
-        run: htmllint _includes/stripped_markdown.html
+        run: htmllint _includes/japanese/* _includes/ruby/* _includes/audio-narration-banner.html _includes/audio-profile-custom-links.html _includes/japanese.html _includes/ruby.html _includes/signup-form.html _includes/stripped_markdown.html
+
       - name: Run markdownlint
         run: markdownlint _posts _drafts _pages README.md
+
       - name: Run sass-lint
         run: sass-lint --verbose --no-exit
+
         # Explanations for flags:
         # --allow-hash-href - Build will fail on the first and last post entries
         # if this isn't allowed since there will be previous and next buttons
@@ -69,6 +77,10 @@ jobs:
           --http-status-ignore "999,429,403,0"
           --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
         # --disable-external
+
+      - name: Build Jekyll site
+        run: JEKYLL_ENV=production bundle exec jekyll build
+
       - name: Deploy to Github Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:

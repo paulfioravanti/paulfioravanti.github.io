@@ -1,3 +1,4 @@
+<!-- htmllint indent-width="false" -->
 {% assign furigana-left-padding = include.furigana-left-padding | split: "," %}
 {% capture initial-style %}
 ruby-align: {{ include.ruby-align }};
@@ -9,7 +10,7 @@ ruby-align: {{ include.ruby-align }};
 {% if include.word and include.furigana %}
   {% assign word-chunks = include.word | split: "," -%}
   {% assign furigana-chunks = include.furigana | split: "," -%}
-  <span style="display: flex;">
+  <span class="japanese-single-word">
     {% for word-chunk in word-chunks -%}
       {% comment %}
       https://shopify.dev/api/liquid/objects/for-loops#forloop-index0

@@ -29,6 +29,10 @@ span {
   &.japanese-compound-word {
     display: inline-flex;
   }
+
+  &.japanese-single-word {
+    display: flex;
+  }
 }
 
 // sass-lint:disable no-vendor-prefixes
