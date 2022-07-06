@@ -1,7 +1,7 @@
 ---
 title: "Steno Gaming: Doom Typist"
 date: 2022-06-07 23:41:00 +1100
-last_modified_at: 2022-06-07 23:41:00 +1100
+last_modified_at: 2022-07-06 18:40:00 +1100
 tags: retro-gaming georgi steno doom qmk
 header:
   image: /assets/images/2022-06-07/doom-typist.jpg
@@ -563,8 +563,8 @@ to have a version of "partial chording"[^5] in Gaming mode, where I could keep
 the "dash chord" held down, and just press the direction keys in rapid
 succession to easily make quick getaways in any direction.
 
-This meant that, like with `moving_backward` earlier, the `process_record_user`
-function would need to keep track of whether we are `dashing` or not:
+This meant that the `process_record_user` function would need to keep track of
+whether we are `dashing` or not:
 
 - `true` if the "dash chord", or any of the directional dash chords, are being
   pressed,
