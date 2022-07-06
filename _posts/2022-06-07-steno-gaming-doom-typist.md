@@ -601,7 +601,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             dashing = false;
         }
         return false;
-    //
+    // ...
     case KC_E:
         if (record->event.pressed && dashing) {
             SEND_STRING("/df" SS_TAP(X_ENTER));
