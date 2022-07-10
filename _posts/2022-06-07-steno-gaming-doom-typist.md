@@ -883,7 +883,7 @@ it's 1993! :musical_keyboard:
 [Doom]: https://en.wikipedia.org/wiki/Doom_(1993_video_game)
 [Doom II]: https://en.wikipedia.org/wiki/Doom_II
 [Doom Manual]: https://www.starehry.eu/download/action3d/docs/Doom-Manual.pdf
-[Doom-Typist-specific dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/gaming/gaming-gzdoom-typist.json
+[Doom-Typist-specific dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b670b12696b656488a8850a490884b9337884ceb/dictionaries/gaming/gaming-doom-typist.json
 [Epistory - Typing Chronicles]: https://en.wikipedia.org/wiki/Epistory_-_Typing_Chronicles
 [ESDF keys]: https://en.wikipedia.org/wiki/Arrow_keys#ESDF_keys
 [Exploration Mode]: /assets/images/2022-06-07/exploration-mode.jpg "Exploration Mode"
