@@ -273,7 +273,7 @@ past my QWERTY speeds, and beyond!
 [Plover Github]: https://github.com/openstenoproject/plover/releases
 [proper nouns]: https://en.wikipedia.org/wiki/Proper_and_common_nouns
 [Q&A]: https://www.youtube.com/watch?v=tEgaJ7hWIvg
-[Q&A dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/q-and-a.json
+[Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b5b97066862bb5868ff4ce2dd8fe149e0c198291/dictionaries/q-and-a.json
 [StenEd]: https://www.stenedsource.com/
 [stenotype machine]: https://en.wikipedia.org/wiki/Stenotype#Modern_hardware
 [Typey Type]: https://didoesdigital.com/typey-type/
