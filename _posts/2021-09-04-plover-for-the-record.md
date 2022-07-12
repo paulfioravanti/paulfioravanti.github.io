@@ -1438,7 +1438,7 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [Orthography]: https://en.wikipedia.org/wiki/Orthography
 [Paul's Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b5b97066862bb5868ff4ce2dd8fe149e0c198291/dictionaries/q-and-a.json
 [Paul's brief overrides dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/7191ce5a00/dictionaries/overrides/briefs.json
-[Paul's Plover Overrides]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/dictionaries/override
+[Paul's Plover Overrides]: https://github.com/paulfioravanti/steno-dictionaries/tree/8d90588af11e7c3a4007012bd525523e432e1d06/dictionaries/override
 [Paul's stitching dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/969e0f9d179276fd0fba7bfa4e94d2f428fa6302/dictionaries/stitching.json
 [Phonetics]: https://en.wikipedia.org/wiki/Phonetics
 [plaintiff]: https://en.wikipedia.org/wiki/Plaintiff
