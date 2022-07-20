@@ -3,6 +3,7 @@
   "first-header-h1": false,
   "first-line-h1": false,
   "line-length": false,
+  "link-image-reference-definitions": false,
   "no-alt-text": false,
   "no-duplicate-header": {
     "allow_different_nesting": true
@@ -41,5 +42,6 @@
   },
   "no-trailing-punctuation": {
     "punctuation": ",;"
-  }
+  },
+  "reference-links-images": false
 }
