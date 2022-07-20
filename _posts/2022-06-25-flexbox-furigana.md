@@ -945,7 +945,7 @@ Finally, let's just confirm the markup works for some exceptional circumstances.
 ## Long and Short _Furigana_
 
 There are some words in Japanese where up to five syllables can be represented
-by a single _kanji_. Let's use the markup with _uketamawaru_ and word that fits
+by a single _kanji_. Let's use the markup with _uketamawaru_ a word that fits
 these conditions, and means "to be told" or "to receive (an order)":
 
 ```html
