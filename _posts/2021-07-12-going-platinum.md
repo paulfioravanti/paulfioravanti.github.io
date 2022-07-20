@@ -177,7 +177,7 @@ broadening my knowledge of steno:
 - The lessons contained a lot of vocabulary, including [proper nouns][], that I
   had not encountered in Plover learning materials, and in some cases were not
   contained in the default Plover dictionary. This became the catalyst for the
-  creation of [my personal dictionaries][paulfioravanti/steno_dictionaries]:
+  creation of [my personal dictionaries][paulfioravanti/steno-dictionaries]:
   to augment what Plover provided with outlines that made sense to me.<br />
   I would either take outlines directly from the PS lessons that I liked and put
   them in my dictionaries, or just make up outlines for new words that felt
@@ -260,7 +260,7 @@ past my QWERTY speeds, and beyond!
 [Learn Plover!]: https://sites.google.com/site/learnplover/
 [open-source software]: https://en.wikipedia.org/wiki/Open-source_software
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
-[paulfioravanti/steno_dictionaries]: https://github.com/paulfioravanti/steno_dictionaries
+[paulfioravanti/steno-dictionaries]: https://github.com/paulfioravanti/steno-dictionaries
 [Platinum Steno]: https://platinumsteno.com/
 [Platinum Steno Facebook page]: https://www.facebook.com/platinumsteno
 [Platinum Steno Facebook post]: https://www.facebook.com/platinumsteno/posts/1390445521301220
