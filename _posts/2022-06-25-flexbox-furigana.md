@@ -1162,8 +1162,11 @@ let me know!
       of 5.5 [points][point], and not to be confused with anything related to
       the [Ruby][] programming language.
 
-[^6]: As well as ほずみ (Hozumi), 八月一日 can be read as ほづみ (Hozumi),
-      やぶみ (Yabumi), and はっさく(Hassaku).
+[^6]: As well as {% include japanese.html word="ほずみ" romaji="Hozumi" %},
+      八月一日 can be read as
+      {% include japanese.html word="ほづみ" romaji="Hozumi" %},
+      {% include japanese.html word="やぶみ" romaji="Yabumi" %}, and
+      {% include japanese.html word="はっさく" romaji="Hassaku" %}.
 
 [^7]: It was tough to keep my own interest up with Liquid since I found using
       it so frustrating, even after changing my mindset to thinking of it as

@@ -1,5 +1,5 @@
 <!-- htmllint indent-width="false" -->
-{% assign furigana-align = include.furigana-align | default: 'center' -%}
+{%- assign furigana-align = include.furigana-align | default: 'center' -%}
 {% if furigana-align == "left" -%}
   {% assign ruby-align = "start" -%}
 {% else -%}
