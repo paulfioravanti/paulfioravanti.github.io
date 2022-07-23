@@ -55,7 +55,7 @@ jobs:
         # --url-ignore "/localhost/" - Posts have explicit references to
         # localhost, so don't consider them proper external links that need to
         # go anywhere.
-        # --http-status-ignore "999" - LinkedIn doesn't seem to like crawlers,
+        # --ignore-status-codes "999" - LinkedIn doesn't seem to like crawlers,
         # and hence sends back 999 errors, even if the link is valid.
         # --disable-external - Only use this if the build fails unreasonably on
         # external links
@@ -77,8 +77,8 @@ jobs:
           --allow-hash-href
           --assume-extension
           --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
-          --http-status-ignore "999,429,403,0"
-          --typhoeus-config '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
+          --ignore-status-codes "999,429,403,0"
+          --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
         # --disable-external
 
       - name: Deploy to Github Pages
