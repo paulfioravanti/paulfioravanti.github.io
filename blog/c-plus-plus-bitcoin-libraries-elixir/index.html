@@ -146,7 +146,7 @@ Hello Elixir from C++
  <span class="c1">// ...</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">ec_secret</span> <span class="n">decoded</span><span class="p">;</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">decode_base16</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">priv_key</span><span class="p">);</span>
 
@@ -157,7 +157,7 @@ Hello Elixir from C++
   <span class="k">return</span> <span class="n">public_key</span><span class="p">.</span><span class="n">encoded</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span> <span class="n">public_key</span> <span class="o">=</span> <span class="n">bc</span><span class="o">::</span><span class="n">wallet</span><span class="o">::</span><span class="n">ec_public</span><span class="o">::</span><span class="n">ec_public</span><span class="p">(</span><span class="n">pub_key</span><span class="p">);</span>
   <span class="c1">// Compute hash of public key for P2PKH address.</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">data_chunk</span> <span class="n">public_key_data</span><span class="p">;</span>
@@ -209,7 +209,7 @@ Hello Elixir from C++
 
 <span class="c1">// Process the command dependent on the integer value given in the message</span>
 <span class="c1">// sent from Elixir</span>
-<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="n">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">function</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
   <span class="kt">char</span> <span class="n">arg</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
   <span class="n">get_string_arg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
@@ -235,16 +235,16 @@ Hello Elixir from C++
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">arg</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="n">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">arg</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">buffer</span><span class="p">[</span><span class="n">bytes_read</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
   <span class="n">strcpy</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">buffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// ...</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// ...</span>
 <span class="p">}</span>
 </code></pre></div></div> <p>The <code class="language-plaintext highlighter-rouge">main</code> function now immediately delegates off to <code class="language-plaintext highlighter-rouge">process_command</code>, which extracts the <code class="language-plaintext highlighter-rouge">function</code> indicator and <code class="language-plaintext highlighter-rouge">arg</code> argument from the bytes passed to it by Elixir, calls the appropriate function, and sends its return value (<code class="language-plaintext highlighter-rouge">retval</code>) back to Elixir.</p> <p>On the Elixir side, the code looks like the following:</p> <div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">defmodule</span> <span class="no">Libbitcoin</span><span class="o">.</span><span class="no">Addr</span> <span class="k">do</span>
@@ -332,7 +332,7 @@ Hello Elixir from C++
 
 <span class="c1">// Process the command dependent on the integer value given in the message</span>
 <span class="c1">// sent from Elixir</span>
-<span class="kt">void</span> <span class="nf">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="n">process_command</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">function</span> <span class="o">=</span> <span class="n">buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
   <span class="kt">char</span> <span class="n">arg</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
   <span class="n">get_string_arg</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">bytes_read</span><span class="p">);</span>
@@ -358,12 +358,12 @@ Hello Elixir from C++
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="nf">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="n">get_string_arg</span><span class="p">(</span><span class="n">byte</span><span class="o">*</span> <span class="n">buffer</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">string</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bytes_read</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">buffer</span><span class="p">[</span><span class="n">bytes_read</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
   <span class="n">strcpy</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">buffer</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">generate_public_key</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">priv_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">ec_secret</span> <span class="n">decoded</span><span class="p">;</span>
   <span class="n">bc</span><span class="o">::</span><span class="n">decode_base16</span><span class="p">(</span><span class="n">decoded</span><span class="p">,</span> <span class="n">priv_key</span><span class="p">);</span>
 
@@ -374,7 +374,7 @@ Hello Elixir from C++
   <span class="k">return</span> <span class="n">public_key</span><span class="p">.</span><span class="n">encoded</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="nf">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">create_bitcoin_address</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">pub_key</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// Create Bitcoin address.</span>
   <span class="c1">// Normally you can use:</span>
   <span class="c1">//    bc::wallet::payment_address payaddr =</span>
