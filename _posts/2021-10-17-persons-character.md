@@ -87,17 +87,17 @@ but left me completely blindsided?
 ## Kinpachi-sensei
 
 {% capture kinpachi-sensei -%}
-3{% include ruby.html word="年" annotation="ねん" -%}
-B{% include ruby.html word="組金八先生" annotation="ぐみきんぱちせんせい" -%}
-{% endcapture %}
+3{%- include japanese.html word="年" furigana="ねん" -%}
+B{%- include japanese.html word="組金八先生" furigana="ぐみきんぱちせんせい" -%}
+{%- endcapture -%}
 
 The answer lies with _[Kinpachi-sensei][]_ ([{{ kinpachi-sensei }}][], _San-nen
 B-gumi Kinpachi-sensei_), a long-running Japanese television drama that portrays
 a variety of social issues faced by junior high school students.
 
 {% capture takeda-tetsuya -%}
-{% include ruby.html words="武田, 鉄矢" annotations="たけだ, てつや" -%}
-{% endcapture %}
+{%- include japanese.html words="武田, 鉄矢" furigana="たけだ, てつや" -%}
+{%- endcapture -%}
 
 [Tetsuya Takeda][] ([{{ takeda-tetsuya }}][]) plays the titular role of school
 teacher Kinpachi Sakamoto, who sometimes illustrates points of morality to his

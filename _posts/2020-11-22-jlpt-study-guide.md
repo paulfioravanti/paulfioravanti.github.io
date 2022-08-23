@@ -100,12 +100,12 @@ is that I used the following books in order to get a passing grade for N1 (and
 can personally recommend them):
 
 {% capture shin-kanzen-master -%}
-{%- include ruby.html word="新完全" annotation="しんかんぜん" -%}マスター
+{%- include japanese.html word="新完全" furigana="しんかんぜん" -%}マスター
 {%- endcapture -%}
 {% capture jlpt-official-practice-workbook -%}
-{% include ruby.html words="日本語, 能力, 試験, 公式, 問題集"
-                     annotations="にほんご, のうりょく, しけん, こうしき, もんだいしゅう" -%}
-{% endcapture -%}
+{%- include japanese.html words="日本語, 能力, 試験, 公式, 問題集"
+                     furigana="にほんご, のうりょく, しけん, こうしき, もんだいしゅう" -%}
+{%- endcapture -%}
 
 - The [{{ shin-kanzen-master }}][] (_Shin Kanzen Master_) series of books. There
   is five in the set: one each for grammar
@@ -253,24 +253,24 @@ I do not study Japanese formally any more, but I do keep up my language practice
 every day, so here is a random list of the forms that that takes.
 
 {% capture nihongo-no-mori -%}
-{% include ruby.html word="日本語" annotation="にほんご" -%}
-の{% include ruby.html word="森" annotation="もり" -%}
-{% endcapture %}
+{%- include japanese.html word="日本語" furigana="にほんご" -%}
+の{%- include japanese.html word="森" furigana="もり" -%}
+{%- endcapture %}
 {% capture akane-teki-nihongo-kyoushitsu -%}
 あかね
-{%- include ruby.html words="的, 日本語, 教室"
-                     annotations="てき, にほんご, きょうしつ" -%}
-{% endcapture %}
+{%- include japanese.html words="的, 日本語, 教室"
+                     furigana="てき, にほんご, きょうしつ" -%}
+{%- endcapture %}
 {% capture yassun-engineer-daigaku -%}
-やっすんのエンジニア{%- include ruby.html word="大学" annotation="だいがく" -%}
+やっすんのエンジニア{%- include japanese.html word="大学" furigana="だいがく" -%}
 {% endcapture %}
 {% capture maximum-the-hormone -%}
-マキシマム ザ ホルモン{%- include ruby.html word="公式"
-                                            annotation="こうしき" -%}
+マキシマム ザ ホルモン{%- include japanese.html word="公式"
+                                            furigana="こうしき" -%}
 {% endcapture %}
 {% capture kindan-boys %}
-{%- include ruby.html word="禁断" annotation="きんだん" %}ボーイズ
-{%- endcapture %}
+{%- include japanese.html word="禁断" furigana="きんだん" -%}ボーイズ
+{%- endcapture -%}
 
 - I have a Japanese spouse, and my spoken language at home is Japanese. I'm not
   saying you should marry a Japanese to keep up your language skills, of course,
