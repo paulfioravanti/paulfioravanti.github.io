@@ -247,8 +247,9 @@ in the following order:
 - Then, compile all other AppleScript files that reference the Script Libraries
   (but are not, themselves, Script Libraries) into `.scpt` files
 
-> (I think running `.scpt` files is faster than running `.applescript`
-> files...maybe...I cannot seem to find a conclusive answer on the internet...).
+> (I'm assuming that running `.scpt` files are faster than `.applescript` files
+> since they are compiled, but I cannot seem to find conclusive evidence to back
+> up that assumption on the internet, which is weird...).
 
 The `.scpt` scripts are executed by shell commands that run [`osascript`][]
 commands, which are contained in steno chord entries in the repo's
