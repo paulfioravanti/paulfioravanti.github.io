@@ -89,8 +89,9 @@ barbells (books) that you use, and N1 barbells are not lightweight.
 ## Buy Textbooks
 
 A cursory search on any internet book seller's site for
-"{% include ruby.html words="日本語, 能力, 試験"
-                      annotations="にほんご, のうりょく, しけん" %}"
+"{% include japanese.html words="日本語, 能力, 試験"
+                          furigana="にほんご, のうりょく, しけん"
+                          furigana-align="initial" -%}"
 yields more options than you could possibly read through, and a further search
 querying which set of books are "the best" will likely net you enough opinions
 to cause [analysis paralysis][].
@@ -104,17 +105,19 @@ can personally recommend them):
 {%- endcapture -%}
 {% capture jlpt-official-practice-workbook -%}
 {%- include japanese.html words="日本語, 能力, 試験, 公式, 問題集"
-                     furigana="にほんご, のうりょく, しけん, こうしき, もんだいしゅう" -%}
+                          furigana="にほんご, のうりょく, しけん, こうしき, もんだいしゅう"
+                          furigana-align="initial" -%}"
 {%- endcapture -%}
 
 - The [{{ shin-kanzen-master }}][] (_Shin Kanzen Master_) series of books. There
   is five in the set: one each for grammar
-  ({% include ruby.html word="文法" annotation="ぶんぽう" %}), reading
-  comprehension ({% include ruby.html word="読解" annotation="どっかい" %}),
-  _kanji_ ({% include ruby.html word="漢字" annotation="かんじ" %}), vocabulary
-  ({% include ruby.html word="語彙" annotation="ごい" %}), and listening
-  comprehension ({% include ruby.html word="聴解" annotation="ちょうかい" %}).
-  Get them all.
+  ({% include japanese.html word="文法" furigana="ぶんぽう" %}), reading
+  comprehension ({% include japanese.html word="読解" furigana="どっかい" %}),
+  _kanji_ ({% include japanese.html word="漢字" furigana="かんじ" %}),
+  vocabulary
+  ({% include japanese.html word="語彙" furigana="ごい" furigana-align="initial" %}),
+  and listening comprehension
+  ({% include japanese.html word="聴解" furigana="ちょうかい" %}). Get them all.
 - The [{{ jlpt-official-practice-workbook }}][] (JLPT Official Practice
   Workbook). This book contains practice exams that you will absolutely want to
   attempt, under exam conditions, about 1-2 weeks before the actual exam. It's
@@ -253,13 +256,16 @@ I do not study Japanese formally any more, but I do keep up my language practice
 every day, so here is a random list of the forms that that takes.
 
 {% capture nihongo-no-mori -%}
-{%- include japanese.html word="日本語" furigana="にほんご" -%}
+{%- include japanese.html word="日本語"
+                          furigana="にほんご"
+                          furigana-align="initial" -%}
 の{%- include japanese.html word="森" furigana="もり" -%}
 {%- endcapture %}
 {% capture akane-teki-nihongo-kyoushitsu -%}
 あかね
 {%- include japanese.html words="的, 日本語, 教室"
-                     furigana="てき, にほんご, きょうしつ" -%}
+                     furigana="てき, にほんご, きょうしつ"
+                     furigana-align="initial" -%}
 {%- endcapture %}
 {% capture yassun-engineer-daigaku -%}
 やっすんのエンジニア{%- include japanese.html word="大学" furigana="だいがく" -%}
@@ -316,7 +322,7 @@ every day, so here is a random list of the forms that that takes.
     ガチンコ ザ ホルモン series ([Season 1][ガチンコ ザ ホルモン Season 1],
     [Season 2][ガチンコ ザ ホルモン Season 2]) where they held auditions to
     create a second "outlet" of their band
-    (２{%- include ruby.html word="号店" annotation="ごうてん" -%}) is novel and
+    (２{%- include japanese.html word="号店" furigana="ごうてん" -%}) is novel and
     exciting viewing.
   - [{{ kindan-boys }}][]:
     The channel for Kindan (Prohibited) Boys. The interviews this team of 4

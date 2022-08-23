@@ -2,6 +2,8 @@
 {%- assign furigana-align = include.furigana-align | default: 'center' -%}
 {% if furigana-align == "left" -%}
   {% assign ruby-align = "start" -%}
+{% elsif furigana-align == "initial" -%}
+  {% assign ruby-align = "initial" -%}
 {% else -%}
   {% assign ruby-align = "center" -%}
 {% endif -%}
