@@ -67,9 +67,9 @@ stenography][Starting Stenography with an Ergodox] on):
 </div>
 
 > I am still learning, so I am definitely not fast. Also, these videos are not
-  representative of my current accuracy: it took me tens of takes to record each
-  video until I was able to not make any major mistakes (and even then, they are
-  not perfect runs).
+> representative of my current accuracy: it took me tens of takes to record each
+> video until I was able to not make any major mistakes (and even then, they are
+> not perfect runs).
 
 ## Rules
 

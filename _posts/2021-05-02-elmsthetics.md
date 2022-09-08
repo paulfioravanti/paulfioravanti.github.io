@@ -166,7 +166,7 @@ generate playlistLength =
         trackList =
             List.range 0 (playlistLength - 1)
 
-        generator : Generator (List Int) 
+        generator : Generator (List Int)
         generator =
             Random.List.shuffle trackList
     in
@@ -943,8 +943,8 @@ boundaries and reach down with impunity into the internals of another part of a
 system it has no business knowing about.
 
 > There are no natural barriers to handing out this kind of impunity in Elm, but
-  at least the [elm-review-indirect-internal][] rule, for use with the fantastic
-  [elm-review][] tool, can slap you on the wrist if you attempt to try.
+> at least the [elm-review-indirect-internal][] rule, for use with the fantastic
+> [elm-review][] tool, can slap you on the wrist if you attempt to try.
 
 In the previous section, you saw part of how I tried to put a "hard" interface
 in the `AudioPlayer` module. Let's go back and re-open up that file, but instead
@@ -1457,9 +1457,9 @@ was greeted by this guidance buried down in the [Notes section][Elm Guide Ports
 Notes]:
 
 > Definitely do not try to make a port for every JS function you need. You may
-  really like Elm and want to do everything in Elm no matter the cost, but ports
-  are not designed for that. Instead, focus on questions like "who owns the
-  state?" and use one or two ports to send messages back and forth.
+> really like Elm and want to do everything in Elm no matter the cost, but ports
+> are not designed for that. Instead, focus on questions like "who owns the
+> state?" and use one or two ports to send messages back and forth.
 
 <div style="margin: auto; width: 95%;">
   <figure style="display: block;">
@@ -1727,22 +1727,22 @@ valid: essentially just a message telling Elm that "the next track number has
 been requested".
 
 > I think that sending this `data`-less payload object is a preferable option to
- the original implementation, which explicitly required needing to `send` a
- `null` back to Elm, when the objective was really to call `send` _without_ any
- parameters:
+> the original implementation, which explicitly required needing to `send` a
+> `null` back to Elm, when the objective was really to call `send` _without_ any
+> parameters:
 >
 > **What I wanted to do in the original code:**
 >
 > _JS_:
 >
 > ```js
->  function initTrackFinished(scPlayer, ports) {
->    scPlayer.bind(SC.Widget.Events.FINISH, () => {
->      // Calling `send` on a port with no parameters is invalid, apparently...
->      ports.nextTrackNumberRequested.send()
->    })
->  }
->  ```
+> function initTrackFinished(scPlayer, ports) {
+>   scPlayer.bind(SC.Widget.Events.FINISH, () => {
+>     // Calling `send` on a port with no parameters is invalid, apparently...
+>     ports.nextTrackNumberRequested.send()
+>   })
+> }
+> ```
 >
 > _Elm_:
 >
@@ -1751,7 +1751,7 @@ been requested".
 >  ```
 >
 > The port receives no parameters, so having `()` as the parameter is correct,
-  right...? (Spoiler: Nope.)
+> right...? (Spoiler: Nope.)
 >
 > **What I ended up needing to do to make it go:**
 >
@@ -1767,13 +1767,13 @@ been requested".
 >  ```
 >
 > The only documentation I could find regarding needing to do this was [this
-  Stack Overflow answer][Stack Overflow
-  elm-define-subscription-port-with-no-parameters], so this information would be
-  a nice addition to the Elm Guide.
+> Stack Overflow answer][Stack Overflow
+> elm-define-subscription-port-with-no-parameters], so this information would be
+> a nice addition to the Elm Guide.
 >
 > Anyway, using `Payload`s means this issue is now irrelevant, so let's get back
-  to Elm-land to see how messages coming through on the single `inbound` port
-  are being handled.
+> to Elm-land to see how messages coming through on the single `inbound` port
+> are being handled.
 
 The `inbound` port definition lives in the top-level `Ports` module, making sure
 that knowledge about `port module`s (and hence the world outside of the Elm) are
@@ -1943,8 +1943,8 @@ cause of this issue led to [this Gist comment][Gist
 1780598#gistcomment-2609301], where:
 
 > For me, adding a 0 second timeout...made it work in Firefox. The problem seems
-  to be that, at the time Firefox fires the blur event, it has not yet updated
-  the `document.activeElement` [the iframe], so it evaluates to `false`.
+> to be that, at the time Firefox fires the blur event, it has not yet updated
+> the `document.activeElement` [the iframe], so it evaluates to `false`.
 
 Trying that led to this code:
 
@@ -2110,8 +2110,8 @@ GIFs, man. Grab an [ice tea][Arizona drinks], don't think about it too hard, and
 just [ｒｅｌａｘ][80sfy Elm].
 
 > For anyone who is curious about the glitched images, I used [Photo Mosh][] to
-  initially add scanlines and some other effects, and then [Image Glitch Tool][]
-  for the glitching.
+> initially add scanlines and some other effects, and then [Image Glitch Tool][]
+> for the glitching.
 
 [80sfy.com]: http://www.80sfy.com/
 [80sfy codebase repo]: https://bitbucket.org/asangurai/80sfy/src/master/

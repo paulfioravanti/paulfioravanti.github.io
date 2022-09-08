@@ -21,9 +21,9 @@ excerpt: >
 {% include audio-narration-banner.html video-id=page.narration_video_id %}
 
 > I originally wrote this blog post for [RemoteBase][] on December 15, 2016.
-  It seems that RemoteBase shut down in 2018, and since my thoughts on remote
-  working have not changed, I figure this post can now live on the internet
-  here.
+> It seems that RemoteBase shut down in 2018, and since my thoughts on remote
+> working have not changed, I figure this post can now live on the internet
+> here.
 
 I'm a company employee, but I can't go to my office, even for a visit.
 It simply doesn't exist.

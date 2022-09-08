@@ -37,15 +37,15 @@ Here are the public links for the deployed application and codebase:
 - [Sentia Coding Test codebase][]
 
 > Disclaimer: I am not, nor have ever been, an employee of Sentia, nor have I
-  ever applied for employment there, nor is this post some kind of attempt to
-  get them to employ me; I just did their coding test for my own definition of
-  "fun".
+> ever applied for employment there, nor is this post some kind of attempt to
+> get them to employ me; I just did their coding test for my own definition of
+> "fun".
 >
 > If you are applying there, or plan to in the future, you may want to stop
-  reading, and consider pretending that this blog post (and [all the other
-  solutions people have posted][Sentia tests]) does not exist, so you
-  can greet their coding test with fresh eyes (assuming this one is still being
-  used...)
+> reading, and consider pretending that this blog post (and [all the other
+> solutions people have posted][Sentia tests]) does not exist, so you
+> can greet their coding test with fresh eyes (assuming this one is still being
+> used...)
 
 ## Original Requirements
 

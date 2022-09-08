@@ -854,7 +854,7 @@ it's 1993! :musical_keyboard:
       ```json
       "R*R": "{:COMMAND:SHELL:osascript -e 'tell application \"System Events\" to keystroke return'}"
       ```
-      
+
       and that _still_ did not work with GZDoom during Doom gameplay.
 
 [^3]: Even if you have already supercharged your steno firmware with

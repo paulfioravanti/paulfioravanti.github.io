@@ -355,7 +355,7 @@ LiveComponent! What happened here?  This is when a part of the
 finally clicked:
 
 > "A LiveComponent provides similar functionality to LiveView, except
-  they run in the same process as the LiveView, with its own encapsulated state"
+> they run in the same process as the LiveView, with its own encapsulated state"
 
 So, if my understanding is correct, the `id` for the `socket` is the same since
 it is the same process, but the `assigns` states of the LiveView and

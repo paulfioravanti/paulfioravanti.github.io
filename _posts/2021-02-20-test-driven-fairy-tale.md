@@ -61,14 +61,7 @@ story.
 So, gather round your monitors and devices, and let's re-visit this classic
 fairy tale together, which begins Once Upon A Time...
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube-nocookie.com/embed/4NrU1YMd1qE"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+{% include video id="4NrU1YMd1qE" provider="youtube" %}
 
 [fable]: https://en.wikipedia.org/wiki/Fable
 [img three-little-pigs]: /assets/images/2021-02-20/three-little-pigs.png

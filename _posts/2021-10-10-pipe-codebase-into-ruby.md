@@ -36,7 +36,7 @@ over being banished to [Slack][]'s archives:
 > # frozen_string_literal: true
 >
 > name = gets&.strip
-> 
+>
 > puts "Hello, #{name || 'World'}!"
 > ```
 >
