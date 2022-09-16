@@ -19,6 +19,9 @@ badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%23187-blueviolet.svg
     alt: "Elixir Weekly #187"
     link: https://elixirweekly.net/issues/187
+  - image: https://img.shields.io/badge/Elixir%20Weekly-%23210-blueviolet.svg
+    alt: "Elixir Weekly #210"
+    link: https://elixirweekly.net/issues/210
 excerpt: >
   Phoenix layouts are now live-powered, giving LiveViews more flexibility and
   control over a template's surrounding content.
