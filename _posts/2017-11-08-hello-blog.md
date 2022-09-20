@@ -5,7 +5,7 @@ redirect_from:
 title: "Hello, Blog!"
 date: 2017-11-08 16:49 +1100
 last_modified_at: 2021-11-20 13:10 +1100
-tags: jekyll
+tags: jekyll meta blog
 narration_video_id: "KNGnlJ5735Q"
 header:
   image: /assets/images/2017-11-08/drew-beamer-3SIXZisims4-unsplash.jpg

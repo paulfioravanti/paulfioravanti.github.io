@@ -2,7 +2,7 @@
 title: "Flexbox Furigana"
 date: 2022-06-25 11:30:00 +1100
 last_modified_at: 2022-06-28 10:00:00 +1100
-tags: japan japanese 日本語 振り仮名 ふりがな annotation
+tags: japan japanese 日本語 振り仮名 ふりがな annotation blog jekyll
 header:
   image: /assets/images/2022-06-25/menu-with-furigana.jpg
   image_description: "大和田鮨"

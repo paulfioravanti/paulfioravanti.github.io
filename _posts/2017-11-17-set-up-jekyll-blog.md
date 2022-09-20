@@ -6,7 +6,7 @@ redirect_from:
 title: "Setting up a Jekyll Blog"
 date: 2017-11-17 22:30 +1100
 last_modified_at: 2020-11-01 22:00 +1100
-tags: jekyll ruby
+tags: jekyll ruby meta blog
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
   image_description: "flat lay photography of assorted-color mechanical tool set"
