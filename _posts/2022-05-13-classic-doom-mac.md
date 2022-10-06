@@ -46,7 +46,9 @@ an involved process, so here is the missing manual to get you up and running.
 > I currently use an [Intel-based Macbook Pro][] running [macOS Monterey][], so
 > that is what the following guide has been tested on.  The process should still
 > hopefully work for [Apple Silicon][]-based Macs and/or other macOS versions,
-> but [your mileage may vary][].
+> but [your mileage may vary][].<br />
+> **Update 6 October 2022**: I now use a [M1][] Macbook Pro, and Doom with
+> GZDoom works just fine. Apple Silicon-based Mac users can keep reading.
 
 ## Get GZDoom
 
@@ -316,6 +318,7 @@ back to Mars for some classic [2.5D][] fragging fun!
 [Intel-based Macbook Pro]: https://en.wikipedia.org/wiki/MacBook_Pro_(Intel-based)
 [List_of_Doom_ports#macOS]: https://en.wikipedia.org/wiki/List_of_Doom_ports#macOS
 [list of notable WADs]: https://doom.fandom.com/wiki/List_of_notable_WADs
+[M1]: https://en.wikipedia.org/wiki/Apple_M1
 [macOS Monterey]: https://en.wikipedia.org/wiki/MacOS_Monterey
 [moniker]: https://www.merriam-webster.com/dictionary/moniker
 [official site]: https://zdoom.org/index
