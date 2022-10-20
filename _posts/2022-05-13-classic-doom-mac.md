@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2022-05-15 09:28:00 +1100
+last_modified_at: 2022-10-20 17:51:00 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -155,7 +155,7 @@ users only, and cannot be used on a Mac.
 
 What we want is the less obvious "Offline Backup Game Installer". Download the
 file linked from there, which will have a name like
-`setup_final_doom_1.9_(28044).exe`. Although we cannot directly use this `.exe`
+`setup_the_ultimate_doom_1.9_(28044).exe`. Although we cannot directly use this `.exe`
 file on Mac, it contains the Doom WAD file that we seek to extract.
 
 ## Extract WAD File
