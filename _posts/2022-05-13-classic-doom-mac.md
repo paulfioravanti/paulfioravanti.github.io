@@ -227,7 +227,7 @@ For the directory and installer filename above, that would be:
 
 ```console
 cd ~/Desktop/TheUltimateDoom
-innoextract setup_final_doom_1.9_(28044).exe
+innoextract setup_the_ultimate_doom_1.9_(28044).exe
 ```
 
 If everything is successful, you will get a whole bunch of output on your
