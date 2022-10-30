@@ -1,7 +1,7 @@
 ---
 title: "Going Platinum"
 date: 2021-07-12 18:35 +1100
-last_modified_at: 2022-04-25 11:50 +1100
+last_modified_at: 2022-10-30 21:00 +1100
 tags: plover stenography
 narration_video_id: "qNJmV5mXzFA" 
 header:
@@ -251,12 +251,41 @@ Thanks to Platinum Steno for providing such a great cache of material to budding
 learners of stenography, and I look forward to being able to gradually improve
 past my QWERTY speeds, and beyond!
 
+### UPDATE 30 October 2022: Platinum Steno Dictionary Released! :tada:
+
+On 12 October 2022, Platinum Steno released their [Platinum Steno Theory
+Dictionary (NCRS Theory)][] as a [Rich Text Format][] (`.rtf`) file. Like the
+rest of the lesson materials, you can just go through their checkout process for
+$0 to get it.
+
+The Plover application understands RTF files, so once you have downloaded the
+dictionary, you can click the "`Add Dictionaries (+)`" button on the Plover
+main window to load it in and use it.
+
+If you want to examine the dictionary entries in a more human-readable way, you
+can export them as a [JSON][] (JavaScript Object Notation) file in the following
+way:
+
+- Clicking the imported dictionary entry in the Plover main window
+- Open Plover's `Edit` menu
+- Select "`Save Dictionaries as...`", then "`Create a copy of each dictionary`"
+- Select "`JSON dictionaries (*.json)`" from the file type dropdown menu
+
+Once you have generated the JSON file, you should be able to open it up with
+your favourite text editor.
+
+Personally, I will still be sticking with Plover theory, but will very likely
+cherry-pick entries from the PS dictionary that resonate with me, and add them
+to my [custom dictionaries][paulfioravanti/steno-dictionaries].
+
+
 [Art of Chording]: https://www.artofchording.com/
 [Art of Chording Plover Theory]: https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory
 [briefs.json]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/briefs.json
 [court reporters]: https://en.wikipedia.org/wiki/Court_reporter
 [Doberman]: https://en.wikipedia.org/wiki/Dobermann
 [img theory-edits]: /assets/images/2021-07-12/theory-edits.jpg
+[JSON]: https://en.wikipedia.org/wiki/JSON
 [Learn Plover!]: https://sites.google.com/site/learnplover/
 [open-source software]: https://en.wikipedia.org/wiki/Open-source_software
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
@@ -264,6 +293,7 @@ past my QWERTY speeds, and beyond!
 [Platinum Steno]: https://platinumsteno.com/
 [Platinum Steno Facebook page]: https://www.facebook.com/platinumsteno
 [Platinum Steno Facebook post]: https://www.facebook.com/platinumsteno/posts/1390445521301220
+[Platinum Steno Theory Dictionary (NCRS Theory)]: https://platinumsteno.com/downloads/platinum-steno-ncrs-theory-dictionary/
 [Platinum Steno Theory playlist]: https://www.youtube.com/playlist?list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU
 [Platinum Steno YouTube channel]: https://www.youtube.com/c/platinumsteno
 [Plover]: http://www.openstenoproject.org/
@@ -274,6 +304,7 @@ past my QWERTY speeds, and beyond!
 [proper nouns]: https://en.wikipedia.org/wiki/Proper_and_common_nouns
 [Q&A]: https://www.youtube.com/watch?v=tEgaJ7hWIvg
 [Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b5b97066862bb5868ff4ce2dd8fe149e0c198291/dictionaries/q-and-a.json
+[Rich Text Format]: https://en.wikipedia.org/wiki/Rich_Text_Format
 [StenEd]: https://www.stenedsource.com/
 [stenotype machine]: https://en.wikipedia.org/wiki/Stenotype#Modern_hardware
 [Typey Type]: https://didoesdigital.com/typey-type/
