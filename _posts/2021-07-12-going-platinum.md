@@ -278,7 +278,6 @@ Personally, I will still be sticking with Plover theory, but will very likely
 cherry-pick entries from the PS dictionary that resonate with me, and add them
 to my [custom dictionaries][paulfioravanti/steno-dictionaries].
 
-
 [Art of Chording]: https://www.artofchording.com/
 [Art of Chording Plover Theory]: https://www.artofchording.com/introduction/theories-and-dictionaries.html#plover-theory
 [briefs.json]: https://github.com/paulfioravanti/steno_dictionaries/blob/main/dictionaries/briefs.json
