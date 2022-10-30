@@ -78,7 +78,7 @@ jobs:
       #     bundle exec htmlproofer _site
       #     --allow-hash-href
       #     --assume-extension
-      #     --url-ignore "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
+      #     --ignore-urls "/localhost/,/facebook.com\/sharer\/sharer.php/,/herokuapp/,#main"
       #     --ignore-status-codes "999,429,403,0"
       #     --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
       #   # --disable-external
