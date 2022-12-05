@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2022-10-20 17:51:00 +1100
+last_modified_at: 2022-12-05 20:09:00 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -288,6 +288,18 @@ process, and you should also be able to play them in GZDoom.
 But for now, don your helmet and armour, load your shotgun, and get yourself
 back to Mars for some classic [2.5D][] fragging fun!
 
+---
+
+### More Doom-Related Content
+
+Check out my _[Steno Gaming: Doom Typist][]_ post to see how to turn Doom into
+a typing game with [Typist.pk3][], and then use it with [Plover stenography][].
+Here it is in action!
+
+<div class="steno-video">
+  {% include video id="fxxDAYuciD8" provider="youtube" %}
+</div>
+
 [^1]: GZDoom is named after [Graf Zahl][], the German name for [Sesame Street][]
      character [Count von Count][], which [Christoph Oelckers][], GZDoom's coder
      and maintainer, uses as an online [moniker][].
@@ -323,13 +335,16 @@ back to Mars for some classic [2.5D][] fragging fun!
 [moniker]: https://www.merriam-webster.com/dictionary/moniker
 [official site]: https://zdoom.org/index
 [package manager]: https://en.wikipedia.org/wiki/Package_manager
+[Plover stenography]: http://www.openstenoproject.org/
 [REALLY stupid Zdoom Question.]: https://forum.zdoom.org/viewtopic.php?t=290
 [Sesame Street]: https://en.wikipedia.org/wiki/Sesame_Street
 [source port]: https://zdoom.org/wiki/Source_port
 [Steam The Ultimate Doom]: https://store.steampowered.com/app/2280/Ultimate_Doom/
+[Steno Gaming: Doom Typist]: https://www.paulfioravanti.com/blog/steno-gaming-doom-typist/
 [Terminal]: https://en.wikipedia.org/wiki/Terminal_(macOS)
 [terminal emulator]: https://en.wikipedia.org/wiki/Terminal_emulator
 [The Ultimate Doom]: https://doomwiki.org/wiki/The_Ultimate_Doom
+[Typist.pk3]: https://github.com/mmaulwurff/typist.pk3
 [WAD]: https://doomwiki.org/wiki/WAD
 [Why is ZDOOM called "Z"DOOM?]: https://forum.zdoom.org/viewtopic.php?t=1112
 [Why the name ZDoom?]: https://forum.zdoom.org/viewtopic.php?t=3761
