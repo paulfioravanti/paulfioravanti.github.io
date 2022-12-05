@@ -1,7 +1,7 @@
 ---
 title: "Steno Gaming: Doom Typist"
 date: 2022-06-07 23:41:00 +1100
-last_modified_at: 2022-07-06 18:40:00 +1100
+last_modified_at: 2022-12-05 19:44:00 +1100
 tags: retro-gaming georgi steno doom qmk
 header:
   image: /assets/images/2022-06-07/doom-typist.jpg
@@ -38,13 +38,20 @@ the best typing game of them all: [Typist.pk3][][^1], a "mod for [Doom][]
 games" are ones that can run inside a Doom [source port][] like [GZDoom][] (eg
 Doom, [Doom II][], [Heretic][], [Hexen][], and [others][List of notable WADs]).
 
-Here is a video of me doing some off-rails shooting with Doom Typist, using a
-[Georgi][] stenographic keyboard.
+Here are some videos of me doing some off-rails shooting with Doom Typist using
+a [Georgi][] stenographic keyboard.
 
 <div class="steno-video">
   {% include video id="OWnSjpOIT8s" provider="youtube" %}
   <figcaption>
-    Doom Typist - Episode 1 Map 1
+    Doom Typist - Episode 1 Map 1 (Short)
+  </figcaption>
+</div>
+
+<div class="steno-video">
+  {% include video id="fxxDAYuciD8" provider="youtube" %}
+  <figcaption>
+    Doom Typist - Episode 1 Full Playthrough (Long)
   </figcaption>
 </div>
 
