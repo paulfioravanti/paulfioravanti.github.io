@@ -1215,6 +1215,164 @@ As before, see [my custom Q&A dictionary][Paul's Q&A dictionary] file for these
 details, and keep a periodic eye on it on Github as that is where I will make
 any updates if more come to mind.
 
+## UPDATE 23 December 2022: Addition of NCRA Default Speakers
+
+Platinum Steno has publicly released their [Platinum Steno Theory Dictionary][],
+which you can use with Plover (instructions on how to are [here][Going Platinum
+Platinum Steno Dictionary Released]). Looking through the dictionary, you can
+find the Q&A outlines used in the PS videos directly, but you may also notice
+that there are similar outlines for people with other specific roles who may
+end up speaking during court proceedings. They are:
+
+- Videographer
+- Court Reporter
+- Clerk
+- Bailiff
+
+Outlines for these four roles are apparently provided by default in the theory
+used by the [National Court Reporters Association][] (NCRA), and are hence
+included in PS's dictionary. In the interest of completeness, I have also added
+sets of outlines for those roles to [my Q&A dictionary][Paul's Markdown Q&A
+dictionary] in two different flavours:
+
+1. Outlines based on the NCRA outline for each individual role
+2. Custom variations on `THE COURT` outline (`STPHAOEUFPLT`) for each role, with
+   the reasoning being that since each of the four roles works with or for the
+   Court, their outlines can be grouped together
+
+### NCRA Outlines
+
+<table class="steno-table">
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Videographer</td>
+    <td class="steno-outline">
+      <span>SREUD/SREUD</span>
+    </td>
+    <td class="steno-font">
+      <span>SREUD/SREUD</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE VIDEOGRAPHER</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Court Reporter</td>
+    <td class="steno-outline">
+      <span>RORP/RORP</span>
+    </td>
+    <td class="steno-font">
+      <span>RORP/RORP</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE COURT REPORTER</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Clerk</td>
+    <td class="steno-outline">
+      <span>KHRERBG/KHRERBG</span>
+    </td>
+    <td class="steno-font">
+      <span>KHRERBG/KHRERBG</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE CLERK</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Bailiff</td>
+    <td class="steno-outline">
+      <span>PWHR-F/PWHR-F</span>
+    </td>
+    <td class="steno-font">
+      <span>PWHR-F/PWHR-F</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE BAILIFF</span>
+    </td>
+  </tr>
+</table>
+
+### Custom Outlines
+
+<table class="steno-table">
+  <thead>
+    <tr>
+      <th>Person</th>
+      <th class="centered-heading">Outline</th>
+      <th class="centered-heading">Keymap</th>
+      <th>Output</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Videographer</td>
+    <td class="steno-outline">
+      <span>STPHAEUFPLT</span>
+    </td>
+    <td class="steno-font">
+      <span>STPHAEUFPLT</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE VIDEOGRAPHER</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Court Reporter</td>
+    <td class="steno-outline">
+      <span>STPHOEUFPLT</span>
+    </td>
+    <td class="steno-font">
+      <span>STPHOEUFPLT</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE COURT REPORTER</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Clerk</td>
+    <td class="steno-outline">
+      <span>STPHAOEFPLT</span>
+    </td>
+    <td class="steno-font">
+      <span>STPHAOEFPLT</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE CLERK</span>
+    </td>
+  </tr>
+  <tr>
+    <td>Bailiff</td>
+    <td class="steno-outline">
+      <span>STPHAOUFPLT</span>
+    </td>
+    <td class="steno-font">
+      <span>STPHAOUFPLT</span>
+    </td>
+    <td>
+      <span class="steno-transcript">THE BAILIFF</span>
+    </td>
+  </tr>
+</table>
+
+A couple of notes about these outlines:
+
+- None of the roles are involved with questioning a witness, so they do not get
+  bylines, and hence have a similar outline set to those for `THE COURT` or `THE
+  WITNESS`.
+- The ordering of the roles is based on [Plover Speaker ID][]
+
+See [my Q&A dictionary][Paul's Markdown Q&A dictionary] for details on
+the outline variations for when the role first speaks, speaks after a question
+or answer, or interrupts.
+
 ---
 
 ## Appendix A: Formatting the Record
@@ -1428,29 +1586,34 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [dramatis personae]: https://en.wikipedia.org/wiki/Dramatis_personae
 [fingerspelling]: https://www.artofchording.com/sounds/fingerspelling.html#fingerspelling-alphabet
 [Going Platinum]: https://www.paulfioravanti.com/blog/going-platinum/
+[Going Platinum Platinum Steno Dictionary Released]: https://www.paulfioravanti.com/blog/going-platinum/#update-30-october-2022-platinum-steno-dictionary-released-tada
 [Google Docs]: https://docs.google.com/
 [Kathy]: https://github.com/Kaoffie
 [Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
 [Line Numbers for Google Docs plugin]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension
 [Line Numbers for Google Docs Installation instructions]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension/issues/33#issuecomment-894842650
 [monospaced font]: https://en.wikipedia.org/wiki/Monospaced_font
+[National Court Reporters Association]: https://www.ncra.org/
 [newline]: https://en.wikipedia.org/wiki/Newline
 [Orthography]: https://en.wikipedia.org/wiki/Orthography
-[Paul's Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b5b97066862bb5868ff4ce2dd8fe149e0c198291/dictionaries/q-and-a.json
 [Paul's brief overrides dictionary]: https://github.com/paulfioravanti/steno_dictionaries/blob/7191ce5a00/dictionaries/overrides/briefs.json
+[Paul's Markdown Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/9da82652830bd76a9ef075a6050cfef703003b95/dictionaries/q-and-a.md
 [Paul's Plover Overrides]: https://github.com/paulfioravanti/steno-dictionaries/tree/8d90588af11e7c3a4007012bd525523e432e1d06/dictionaries/override
+[Paul's Q&A dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/b5b97066862bb5868ff4ce2dd8fe149e0c198291/dictionaries/q-and-a.json
 [Paul's stitching dictionary]: https://github.com/paulfioravanti/steno-dictionaries/blob/969e0f9d179276fd0fba7bfa4e94d2f428fa6302/dictionaries/stitching.json
 [Phonetics]: https://en.wikipedia.org/wiki/Phonetics
 [plaintiff]: https://en.wikipedia.org/wiki/Plaintiff
 [Platinum Steno]: https://platinumsteno.com/
 [Platinum Steno Lesson 27 QA]: https://www.youtube.com/watch?v=tEgaJ7hWIvg&list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU&index=61
 [Platinum Steno Lesson 31]: https://www.youtube.com/watch?v=ABd5JcmOmg0&list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU&index=70
+[Platinum Steno Theory Dictionary]: https://platinumsteno.com/downloads/platinum-steno-ncrs-theory-dictionary/
 [Platinum Steno Theory playlist]: https://www.youtube.com/playlist?list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU
 [Plover]: http://www.openstenoproject.org/
 [Plover glue operator]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#glue-operator-numbers-fingerspelling
 [Plover Keyboard Shortcuts]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#keyboard-shortcuts
 [Plover's Dictionary Format]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format
 [Plover's main dictionary]: https://raw.githubusercontent.com/openstenoproject/plover/master/plover/assets/main.json
+[Plover Speaker ID]: https://github.com/sammdot/plover-speaker-id
 [Plover Stitching Plugin]: https://github.com/morinted/plover_stitching
 [Plover Undoable Line Breaks and Tabs]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#undoable-line-breaks-and-tabs
 [post-hoc]: https://en.wikipedia.org/wiki/Post_hoc
