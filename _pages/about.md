@@ -18,9 +18,13 @@ I am a web application software developer, with a particular affinity for the
 I love human languages, too, particularly Japanese (I have previously lived in
 Japan for 10 years), and Italian (family background).
 
-I am heavily involved in the technical meetup scene in Sydney, being a current
-organiser of [Elixir Sydney][], [Elm Sydney][], and [GraphQL Sydney][], as well
-as a previous organiser of [Ruby on Rails Oceania (RORO) Sydney][].
+I have been heavily involved in the technical meetup scene in Sydney, being a
+previous organiser of the following meetups:
+
+- [Elixir Sydney][]
+- [Elm Sydney][]
+- [GraphQL Sydney][]
+- [Ruby on Rails Oceania (RORO) Sydney][]
 
 Mechanical keyboards are an awesome thing that I am too interested in for my
 own good, being a long-time [Ergodox][] user. I am currently attempting to learn
