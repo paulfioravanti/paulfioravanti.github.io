@@ -31,18 +31,16 @@ own good, being a long-time [Ergodox][] user. I am currently attempting to learn
 [Plover][] [stenography][], which led me to add the [Georgi][] to my keyboard
 mix.
 
-I currently feed myself by working as a Principal Consultant for [Alembic][],
-where I make my client's digital dreams come true.
-
 This blog is entirely independent of any paid employment: my posts and comments
 are solely my own, and do not necessarily represent any of my current or
 previous employer's positions, strategies, or opinions.
 
-### Other About Links
+### Other Stuff I've Done Recently
 
-- Short interview for the [Lookahead Search email newsletter][]
+- _March 2023_ Elixir Mix Podcast: [The Use Of Stenography In Elixir][]
+- _January 2023_ Elixir Sydney video talk: [Stenography and Elixir][]
+- _December 2021_ Interview: [Lookahead Search email newsletter][]
 
-[Alembic]: https://alembic.com.au/
 [Elixir]: https://elixir-lang.org/
 [Elixir Sydney]: https://www.meetup.com/elixir-sydney/
 [Elm]: https://elm-lang.org/
@@ -55,3 +53,5 @@ previous employer's positions, strategies, or opinions.
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby on Rails Oceania (RORO) Sydney]: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
+[Stenography and Elixir]: https://www.youtube.com/watch?v=ZQO-5KfnCi4
+[The Use Of Stenography In Elixir]: https://topenddevs.com/podcasts/elixir-mix/episodes/the-use-of-stenography-in-elixir-with-paul-fioravanti-emx-209
