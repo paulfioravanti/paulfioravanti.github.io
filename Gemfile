@@ -49,6 +49,12 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from", "~> 0.14"
   # Jekyll plugin for building Jekyll sites with any GitHub-hosted theme
   gem "jekyll-remote-theme", "~> 0.4"
+  # Jekyll plugin to let Jekyll build your Sass and SCSS.
+  # In order to not get server deprecation warnings about new Dart CSS syntax,
+  # this needs to be pinned to 2.2. See:
+  # https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1371015867
+  # https://github.com/jekyll/jekyll-sass-converter/issues/145#issuecomment-1363069829
+  gem "jekyll-sass-converter", "~> 2.2"
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
   gem "jekyll-seo-tag", "~> 2.6"
