@@ -38,7 +38,7 @@ bridge the gap on these issues fell directly on them.
 During the worst periods, we were working literal 18-22 hour days. There were
 periods where I had no time to actually go home, and had to get my partner to
 physically bring me changes of clothes to the office; I had to grab showers, and
-maybe a couple of hours sleep, at my teammate's apartment closeby.
+maybe a couple of hours sleep, at my teammate's apartment close by.
 
 Many weeks were spent on a schedule of getting an earful of frustration from the
 customer about the software product during the day (as well as from our own
