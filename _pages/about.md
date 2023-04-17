@@ -37,6 +37,7 @@ previous employer's positions, strategies, or opinions.
 
 ### Other Stuff I've Done Recently
 
+- _April 2023_ Ruby Sydney video talk: [Stenography and Ruby][]
 - _March 2023_ Elixir Mix Podcast: [The Use Of Stenography In Elixir][]
 - _January 2023_ Elixir Sydney video talk: [Stenography and Elixir][]
 - _December 2021_ Interview: [Lookahead Search email newsletter][]
@@ -54,4 +55,5 @@ previous employer's positions, strategies, or opinions.
 [Ruby on Rails Oceania (RORO) Sydney]: https://www.meetup.com/Ruby-On-Rails-Oceania-Sydney
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
 [Stenography and Elixir]: https://www.youtube.com/watch?v=ZQO-5KfnCi4
+[Stenography and Ruby]: https://www.youtube.com/watch?v=3W9_k2CXrXE
 [The Use Of Stenography In Elixir]: https://topenddevs.com/podcasts/elixir-mix/episodes/the-use-of-stenography-in-elixir-with-paul-fioravanti-emx-209
