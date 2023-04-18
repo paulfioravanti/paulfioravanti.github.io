@@ -20,6 +20,10 @@ ruby {
     letter-spacing: normal;
   }
 
+  a & {
+    text-decoration: underline;
+  }
+
   .romaji {
     margin-bottom: 10px;
   }
