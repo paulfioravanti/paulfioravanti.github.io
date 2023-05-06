@@ -76,6 +76,8 @@ yandex_site_verification :
 naver_site_verification  :
 
 # Social Sharing
+strava:
+  username               : "paulfioravanti"
 twitter:
   username               : "paulfioravanti"
 facebook:
@@ -133,7 +135,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          : "https://www.youtube.com/channel/UC_ObnUGtIfRRq6vbxFYRpUg"
+  youtube          : "https://www.youtube.com/@paulfioravanti"
 
 
 # Reading Files
