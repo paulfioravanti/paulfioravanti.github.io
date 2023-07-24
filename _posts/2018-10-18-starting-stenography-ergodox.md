@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2023-07-24 16:36 +1100
+last_modified_at: 2023-07-24 18:10 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -732,7 +732,7 @@ but the issues with that I found were:
   index fingers naturally seek out homing keys, and I could not get over not
   having them, which is partly what prompted me to pick up the Ergodox Base set
   (if you want the homing bars/dots but don't want the base set, you have the
-  option of just [buying a set of those keys separately][G20 Homing Bump])
+  option of just buying a set of those keys separately)
 
 ## UPDATE 8 Jun 2020
 
@@ -853,13 +853,12 @@ want to try this layout as well.
 [Ergodox EZ image]: /assets/images/2018-10-18/ergodox-ez.jpg "Ergodox EZ"
 [Ergodox EZ keyswitches]: https://ergodox-ez.com/pages/keyswitches
 [Escape the defaults and Control your keyboard with QMK]: https://www.paulfioravanti.com/blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
-[G20 Blank Keysets]: https://pimpmykeyboard.com/all-products/keycaps/singles-packs/?search_query=&page=1&limit=51&sort=newest&Profile=G20&category=30&is_category_page=1
-[G20 Homing Bump]: https://pimpmykeyboard.com/g20-1-space-homing-bar-or-bump-pack-of-4/
+[G20 Blank Keysets]: https://pimpmykeyboard.com/sp-g20-blank-keys/
 [Gateron Browns]: https://mechanicalkeyboards.com/switches/index.php?switch=Gateron-Brown
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Georgi]: https://www.gboards.ca/product/georgi
-[Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/georgi
+[Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/gboards/georgi
 [Google IME]: https://www.google.com/inputtools/services/features/input-method.html
 [Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
