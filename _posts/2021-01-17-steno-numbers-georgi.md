@@ -187,16 +187,16 @@ you think would work better, please reach out to me or leave a comment!
 [img georgi-numbers-small]: /assets/images/2021-01-17/georgi-numbers-small.gif
 [img number-bar]: /assets/images/2021-01-17/number-bar.png
 [img number-keys]: /assets/images/2021-01-17/number-keys.png
-[inversion]: https://sites.google.com/site/learnplover/lesson-2-steno-order#TOC-Inversion
+[inversion]: https://www.openstenoproject.org/learn-plover/lesson-2-steno-order.html#TOC-Inversion
 [Kailh Choc Linear]: http://www.kailh.com/en/Products/Ks/CS/
-[Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
+[Learn Plover! Glossary]: https://www.openstenoproject.org/learn-plover/glossary.html
 [little finger]: https://en.wikipedia.org/wiki/Little_finger
 [muscle memory]: https://en.wikipedia.org/wiki/Muscle_memory
-[number bar]: https://sites.google.com/site/learnplover/lesson-8-numbers#TOC-The-Number-Bar
+[number bar]: https://www.openstenoproject.org/learn-plover/lesson-8-numbers#TOC-The-Number-Bar
 [pdf georgi-numbers]: https://www.dropbox.com/s/5d7n1hix84mkrlz/georgi-numbers.pdf?dl=1
 ["Philly shift"]: https://www.artofchording.com/layout/d-and-z.html#the-d-and-z-keys
 [Plover stenography]: https://www.openstenoproject.org/
 [ring finger]: https://en.wikipedia.org/wiki/Ring_finger
 [Starting Stenography with an Ergodox]: https://www.paulfioravanti.com/blog/starting-stenography-ergodox/
-[steno order]: https://sites.google.com/site/learnplover/lesson-2-steno-order#TOC-Steno-Order
+[steno order]: https://www.openstenoproject.org/learn-plover/lesson-2-steno-order#TOC-Steno-Order
 [Stenotype]: https://en.wikipedia.org/wiki/Stenotype

@@ -1589,7 +1589,7 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [Going Platinum Platinum Steno Dictionary Released]: https://www.paulfioravanti.com/blog/going-platinum/#update-30-october-2022-platinum-steno-dictionary-released-tada
 [Google Docs]: https://docs.google.com/
 [Kathy]: https://github.com/Kaoffie
-[Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
+[Learn Plover! Glossary]: https://www.openstenoproject.org/learn-plover/glossary
 [Line Numbers for Google Docs plugin]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension
 [Line Numbers for Google Docs Installation instructions]: https://github.com/Line-Numbers-for-Google-Docs/chrome-extension/issues/33#issuecomment-894842650
 [monospaced font]: https://en.wikipedia.org/wiki/Monospaced_font

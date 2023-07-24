@@ -916,7 +916,7 @@ it's 1993! :musical_keyboard:
 [Installation and execution of ZDoom]: https://zdoom.org/wiki/Installation_and_execution_of_ZDoom
 [Joshua Grams]: https://github.com/JoshuaGrams
 [LAN party]: https://en.wikipedia.org/wiki/LAN_party
-[Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
+[Learn Plover! Glossary]: https://www.openstenoproject.org/learn-plover/glossary
 [LED]: https://en.wikipedia.org/wiki/Light-emitting_diode
 [List of notable WADs]: https://doom.fandom.com/wiki/List_of_notable_WADs
 [`LT(layer, kc)`]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_layers.md#switching-and-toggling-layers-idswitching-and-toggling-layers

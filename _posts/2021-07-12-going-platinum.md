@@ -285,7 +285,7 @@ to my [custom dictionaries][paulfioravanti/steno-dictionaries].
 [Doberman]: https://en.wikipedia.org/wiki/Dobermann
 [img theory-edits]: /assets/images/2021-07-12/theory-edits.jpg
 [JSON]: https://en.wikipedia.org/wiki/JSON
-[Learn Plover!]: https://sites.google.com/site/learnplover/
+[Learn Plover!]: https://www.openstenoproject.org/learn-plover/home.html
 [open-source software]: https://en.wikipedia.org/wiki/Open-source_software
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [paulfioravanti/steno-dictionaries]: https://github.com/paulfioravanti/steno-dictionaries

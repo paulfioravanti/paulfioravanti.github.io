@@ -202,10 +202,10 @@ Good luck in your steno adventures!
 [didoesdigital/steno-dictionaries]: https://github.com/didoesdigital/steno-dictionaries
 [Eat That Frog]: https://www.briantracy.com/blog/time-management/the-truth-about-frogs/
 [Ergodox EZ]: https://ergodox-ez.com/
-[fingerspelling]: https://sites.google.com/site/learnplover/lesson-3-english-sounds/fingerspelling
+[fingerspelling]: https://www.openstenoproject.org/learn-plover/lesson-3-english-sounds/fingerspelling
 [Git]: https://git-scm.com/
 [Github]: https://github.com/
-[Learn Plover! Glossary]: https://sites.google.com/site/learnplover/glossary
+[Learn Plover! Glossary]: https://www.openstenoproject.org/learn-plover/glossary
 [Mastering Issues]: https://guides.github.com/features/issues/#:~:text=Issues%20are%20a%20great%20way,own%20section%20in%20every%20repository.
 [OMGGG!!! Finally!!!! 100 WPM on simple exercise broken after a MAJOR down period!!!]: https://www.reddit.com/r/Plover/comments/gdtmaj/omggg_finally_100_wpm_on_simple_exercise_broken/
 [open source software]: https://en.wikipedia.org/wiki/Open-source_software

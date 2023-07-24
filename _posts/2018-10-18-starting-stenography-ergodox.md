@@ -864,8 +864,8 @@ want to try this layout as well.
 [Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
 [keyboard switches]: https://thegamingsetup.com/gaming-keyboard/buying-guides/keyboard-switch-chart-table
-[Learn Plover!]: https://sites.google.com/site/ploverdoc/
-[Learn Plover! Lesson 1]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys
+[Learn Plover!]: https://www.openstenoproject.org/learn-plover/home.html
+[Learn Plover! Lesson 1]: https://www.openstenoproject.org/learn-plover/lesson-1-fingers-and-keys.html
 [Massdrop Ergodox Kit]: https://www.massdrop.com/buy/infinity-ergodox?mode=guest_open
 [My Oryx Steno Layout]: https://configure.zsa.io/ergodox-ez/layouts/rOgol/latest/2
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
@@ -906,7 +906,7 @@ want to try this layout as well.
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
 [Select GeminiPR from dropdown and click Configure button]: /assets/images/2018-10-18/plover-configuration-configure.png "Select GeminiPR from dropdown and click Configure button"
 [Select serial port and baud rate]: /assets/images/2018-10-18/plover-serial-port-configuration.png "Select serial port and baud rate"
-[steno machine keymap]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys#TOC-The-Keyboard
+[steno machine keymap]: https://www.openstenoproject.org/learn-plover/lesson-1-fingers-and-keys.html#TOC-The-Keyboard
 [Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md
 [Stenography with ZSA Keyboards: A Tutorial]: https://blog.zsa.io/2107-steno-tutorial/
 [`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers

@@ -692,7 +692,7 @@ it seem like it would be required.
 [QMK's list of supported keyboards]: https://github.com/qmk/qmk_firmware/tree/master/keyboards
 [QMK Mod-Tap]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=mod-tap
 [Starting Stenography with an Ergodox]: https://www.paulfioravanti.com/blog/starting-stenography-with-an-ergodox/
-[steno machine keymap]: https://sites.google.com/site/ploverdoc/lesson-1-fingers-and-keys#TOC-The-Keyboard
+[steno machine keymap]: https://www.openstenoproject.org/learn-plover/lesson-1-fingers-and-keys.html#TOC-The-Keyboard
 [Stenotype]: https://en.wikipedia.org/wiki/Stenotype
-[stenotype number bar]: https://sites.google.com/site/ploverdoc/lesson-8-numbers
+[stenotype number bar]: https://www.openstenoproject.org/learn-plover/lesson-8-numbers.html
 [`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
