@@ -593,7 +593,7 @@ into a future version of Elm...?
 [elm-lang/html Html-Attributes#style]: https://package.elm-lang.org/packages/elm-lang/html/latest/Html-Attributes#style
 [`elm-lang/mouse`]: https://github.com/elm-lang/mouse
 [Elm navigation example]: https://guide.elm-lang.org/webapps/navigation.html#example
-[Elm Slack]: https://elmlang.herokuapp.com/
+[Elm Slack]: https://elm-lang.org/community/slack
 [`elm-upgrade`]: https://github.com/avh4/elm-upgrade
 [`elm/url`]: https://package.elm-lang.org/packages/elm/url/latest/Url
 [`evancz/url-parser`]: https://package.elm-lang.org/packages/evancz/url-parser/latest/
