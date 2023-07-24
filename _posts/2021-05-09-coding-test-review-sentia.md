@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Sentia"
 date: 2021-05-09 18:50 +1100
-last_modified_at: 2023-07-24 15:30 +1100
+last_modified_at: 2023-07-24 16:50 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching lateral-join preloading
 header:
   image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
@@ -947,7 +947,7 @@ for yourself.
 [Rails helpers]: https://api.rubyonrails.org/classes/ActionController/Helpers.html
 [rails#6769]: https://github.com/rails/rails/issues/6769
 [Ruby]: https://www.ruby-lang.org/en/
-[Ruby on Rails]: http://rubyonrails.org/
+[Ruby on Rails]: https://rubyonrails.org/
 [Sail barge]: https://starwars.fandom.com/wiki/Sail_barge
 [sample-csv-link]: https://github.com/paulfioravanti/sentia-coding-test/blob/main/test/fixtures/files/SentiaCodingTestData.csv
 [SCSS]: https://sass-lang.com/documentation/syntax

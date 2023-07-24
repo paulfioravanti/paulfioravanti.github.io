@@ -682,7 +682,7 @@ it seem like it would be required.
 [NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
 [Planck]: https://olkb.com/planck
 [Plover]: https://www.openstenoproject.org/plover/
-[Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
+[Plover in-browser steno demo]: https://www.openstenoproject.org/demo/
 [QMK basic keycodes]: https://docs.qmk.fm/#/keycodes_basic
 [QMK Combos]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
 [QMK default Ergodox EZ keymap]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/default

@@ -4,7 +4,7 @@ redirect_from:
   - /blog/resume-as-code/
 title: "Resume as Code"
 date: 2019-06-22 22:00 +1100
-last_modified_at: 2020-10-15 22:00 +1100
+last_modified_at: 2023-07-24 16:50 +1100
 tags: pdf prawn resume ruby japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-06-22/drew-beamer-692664-unsplash.jpg
@@ -375,8 +375,8 @@ interviewing!
 [paulfioravanti/resume#configure]: https://github.com/paulfioravanti/resume/blob/6f2cca5df12b8166b2dafa98089d97f481dbeb8a/lib/resume/pdf/font.rb#L17
 [PDF file]: https://en.wikipedia.org/wiki/PDF
 [Prawn]: https://github.com/prawnpdf/prawn
-[Prawn's API]: http://prawnpdf.org/api-docs/
-[Prawn document cursor]: http://prawnpdf.org/api-docs/2.0/Prawn/Document.html#cursor-instance_method
+[Prawn's API]: https://prawnpdf.org/api-docs/
+[Prawn document cursor]: https://prawnpdf.org/api-docs/2.0/Prawn/Document.html#cursor-instance_method
 [Should You Use Prawn?]: https://github.com/prawnpdf/prawn/tree/c5842a27b15f912f2f0ad5818a9ef38992978b3c#should-you-use-prawn
 [rails gem prawn, image and anchor]: https://stackoverflow.com/questions/8289031/rails-gem-prawn-image-and-anchor
 [resume top half in Japanese]: /assets/images/2019-06-22/resume_first_half_japanese.jpg

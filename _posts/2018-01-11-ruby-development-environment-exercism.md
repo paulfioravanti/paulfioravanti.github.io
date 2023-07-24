@@ -4,7 +4,7 @@ redirect_from:
   - /blog/setting-up-a-ruby-development-environment-for-exercism/
 title: "Setting up a Ruby development environment for Exercism"
 date: 2018-01-11 15:35 +1100
-last_modified_at: 2022-06-10 20:30:00 +1100
+last_modified_at: 2023-07-24 16:50 +1100
 tags: exercism ruby guard rubocop
 header:
   image: /assets/images/2018-01-11/toa-heftiba-183789-unsplash.jpg
@@ -241,9 +241,9 @@ over your shoulder while you're solving the exercises, helping you to submit
 the best solution that you can.
 
 [asdf]: https://github.com/asdf-vm/asdf
-[Bundler]: http://bundler.io/
+[Bundler]: https://bundler.io/
 [default gems file]: https://github.com/asdf-vm/asdf-ruby#default-gems
-[Exercism]: http://exercism.io/
+[Exercism]: https://exercism.org/
 [exercism-ruby-track]: https://exercism.io/tracks/ruby
 [exercism-profile-link]: https://exercism.io/profiles/paulfioravanti
 [`Gemfile`]: https://bundler.io/gemfile.html
@@ -257,4 +257,4 @@ the best solution that you can.
 [negative lookbehind assertion]: https://ruby-doc.org/core-2.5.0/Regexp.html#class-Regexp-label-Anchors
 [Rails]: https://rubyonrails.org/
 [Rubocop]: https://github.com/bbatsov/rubocop
-[rubocop-configuration]: http://rubocop.readthedocs.io/en/latest/configuration/
+[rubocop-configuration]: https://docs.rubocop.org/rubocop/configuration.html

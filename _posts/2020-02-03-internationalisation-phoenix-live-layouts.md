@@ -525,7 +525,7 @@ moving forward!
 [`09-live-layout` branch]: https://github.com/paulfioravanti/phx_i18n_example/tree/09-live-layout
 [I18n Application]: /assets/images/2020-02-03/i18n-application.gif "Internationalisation Application"
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
-[Internationalisation with Phoenix LiveComponents]: http://www.paulfioravanti.com/blog/internationalisation-with-phoenix-live-components/
+[Internationalisation with Phoenix LiveComponents]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-live-components/
 [Internationalisation with Phoenix LiveView]: https://www.paulfioravanti.com/blog/internationalisation-with-phoenix-liveview/
 [LiveComponent]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html
 [Live Layout Issue]: /assets/images/2020-02-03/live-layout-issue.gif "Live Layout Issue"

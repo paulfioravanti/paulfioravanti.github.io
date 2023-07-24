@@ -413,7 +413,7 @@ Happy Clacking!
 
 [Alfred]: https://www.alfredapp.com/
 [Ben Blazak]: https://github.com/benblazak
-[Divvy]: http://mizage.com/divvy/
+[Divvy]: https://mizage.com/divvy/
 [Elixir]: https://elixir-lang.org/
 [Elixir Pipe Operator]: https://hexdocs.pm/elixir/Kernel.html#%7C%3E/2
 [ERB tags]: https://ruby-doc.org/stdlib-2.5.1/libdoc/erb/rdoc/ERB.html#class-ERB-label-Recognized+Tags

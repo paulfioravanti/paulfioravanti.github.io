@@ -6,7 +6,7 @@ redirect_from:
   - /blog/using-pythons-bitcoin-libraries-in-elixir/
 title: "Using Python's Bitcoin libraries in Elixir"
 date: 2017-12-04 17:20 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 17:09 +1100
 tags: elixir bitcoin python
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
@@ -400,14 +400,14 @@ at [my Mastering Bitcoin Github repository][mastering-bitcoin-repo]:
 The repository is still a work in progress as I read through the book and
 attempt to port over more code, so keep an eye out for updates!
 
-[elixir-binary]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
+[elixir-binary]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
 [Bitcoin]: https://bitcoin.org/en/
 [Bitcoin Address]: https://en.bitcoin.it/wiki/Address
 [bitcoin-elixir]: https://github.com/comboy/bitcoin-elixir
 [bitcoin-private-key]: https://en.bitcoin.it/wiki/Private_key
 [C++]: https://isocpp.org/
 [Elliptic Curve Digital Signature Algorithm]: https://en.bitcoin.it/wiki/Elliptic_Curve_Digital_Signature_Algorithm
-[Elixir]: http://elixir-lang.github.io/
+[Elixir]: https://elixir-lang.org/
 [Erlang]: https://www.erlang.org/
 [Erlport]: http://erlport.org/
 [erlport-data-types-mapping]: http://erlport.org/docs/python.html#data-types-mapping

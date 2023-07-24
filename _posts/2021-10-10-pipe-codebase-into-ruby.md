@@ -325,7 +325,7 @@ comments!
 [grouping commands]: https://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html
 [hard requirement]: https://www.linkedin.com/pulse/why-requirements-cause-discomfort-dennis-vervoorn/#:~:text=and%20concept%20selection.-,Hard%20requirements,-Hard%20requirements%20are
 [Pipeline (Unix)]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
-[process substitution]: http://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution
+[process substitution]: https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html#Process-Substitution
 [redirection]: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby Australia]: https://ruby.org.au/

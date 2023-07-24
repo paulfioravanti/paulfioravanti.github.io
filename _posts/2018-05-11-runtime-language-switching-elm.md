@@ -4,7 +4,7 @@ redirect_from:
   - /blog/runtime-language-switching-in-elm/
 title: "Runtime Language Switching in Elm"
 date: 2018-05-11 20:05 +1100
-last_modified_at: 2019-04-17 07:30 +1100
+last_modified_at: 2023-07-24 17:02 +1100
 tags: elm i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2018-05-11/ameet-dhanda-476959-unsplash.jpg
@@ -18,7 +18,7 @@ header:
 badges:
   - image: https://img.shields.io/badge/Elm%20Weekly-%2359-green.svg
     alt: "Elm Weekly #59"
-    link: http://www.elmweekly.nl/issues/elm-weekly-issue-59-172288
+    link: https://www.elmweekly.nl/p/elm-weekly-issue-59-172288
 excerpt: >
   Internationalisation would seem to be a deceptively complex problem using Elm.
 ---
@@ -1436,14 +1436,14 @@ package), please let me know!
 [Chrome Advanced Preferences]: /assets/images/2018-05-11/chrome-advanced-preferences.png "Chrome Advanced Preferences"
 [Chrome Language Preferences]: /assets/images/2018-05-11/chrome-language-preferences.png "Chrome Language Preferences"
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
-[Elm]: http://elm-lang.org/
+[Elm]: https://elm-lang.org/
 [elm-i18n]: https://github.com/iosphere/elm-i18n
 [`elm-i18n-example` repo]: https://github.com/paulfioravanti/elm-i18n-example
 [elm-i18next]: https://github.com/ChristophP/elm-i18next
 [Elm i18n Gen]: https://github.com/ChristophP/elm-i18n-module-generator
 [Elm Mouse package]: https://github.com/elm-lang/mouse
 [Elm Ports]: https://guide.elm-lang.org/interop/
-[Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
+[Full Screen Centered Title component documentation page]: https://tachyons.io/components/layout/full-screen-centered-title/index.html
 [HTTP in Elm]: https://github.com/elm-lang/http
 [Internationalization naming]: https://en.wikipedia.org/wiki/Internationalization_and_localization#Naming
 [Japanese Display]: /assets/images/2018-05-11/japanese-display.png "Japanese display"
@@ -1458,7 +1458,7 @@ package), please let me know!
 [`navigator.userLanguage`]: http://help.dottoro.com/ljgtasfq.php
 [Phoenix Gettext]: https://hexdocs.pm/gettext/Gettext.html
 [Rails i18n]: https://guides.rubyonrails.org/i18n.html
-[Tachyons]: http://tachyons.io/
-[Tachyons' Table of Styles]: http://tachyons.io/docs/table-of-styles/
+[Tachyons]: https://tachyons.io/
+[Tachyons' Table of Styles]: https://tachyons.io/docs/table-of-styles/
 [Tachyons Page Recreated]: /assets/images/2018-05-11/Tachyons-Page-Recreated.png "Tachyons Page Recreated"
 [Tailwind]: https://tailwindcss.com/

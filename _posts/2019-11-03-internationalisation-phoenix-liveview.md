@@ -2669,9 +2669,9 @@ with Phoenix LiveComponents][]_!
 [Elixir]: https://elixir-lang.org/
 [Elixir Gettext]: https://github.com/elixir-gettext/gettext
 [Elixir Plug]: https://github.com/elixir-plug/plug
-[Elm]: http://elm-lang.org/
+[Elm]: https://elm-lang.org/
 [Elm I18n Example]: https://github.com/paulfioravanti/elm-i18n-example
-[Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
+[Full Screen Centered Title component documentation page]: https://tachyons.io/components/layout/full-screen-centered-title/index.html
 [gettext]: https://www.gnu.org/software/gettext/
 [`Gettext.get_locale/0`]: https://hexdocs.pm/gettext/Gettext.html#get_locale/0
 [`Gettext.put_locale/1`]: https://hexdocs.pm/gettext/Gettext.html#put_locale/1
@@ -2722,6 +2722,6 @@ with Phoenix LiveComponents][]_!
 [PubSub Static Channel Issue Fixed]: /assets/images/2019-11-03/pubsub-static-channel-issue-fixed.gif "PubSub Static Channel Issue Fixed"
 [Query string]: https://en.wikipedia.org/wiki/Query_string
 [Runtime Language Switching in Elm]: https://www.paulfioravanti.com/blog/runtime-language-switching-elm/
-[Tachyons]: http://tachyons.io/
+[Tachyons]: https://tachyons.io/
 [Tachyons Elm]: /assets/images/2019-11-03/tachyons-elm.gif "Animated GIF of Tachyons page implemented in Elm"
 [TitleLive Events]: /assets/images/2019-11-03/title-live-events.jpg "TitleLive Events"

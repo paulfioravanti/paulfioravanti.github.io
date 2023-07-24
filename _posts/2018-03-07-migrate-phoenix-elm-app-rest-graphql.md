@@ -6,7 +6,7 @@ redirect_from:
   - /blog/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
 title: "Migrating a Phoenix and Elm app from REST to GraphQL"
 date: 2018-03-07 09:10 +1100
-last_modified_at: 2019-04-15 14:45 +1100
+last_modified_at: 2023-07-24 17:07 +1100
 tags: elixir phoenix elm rest graphql api
 header:
   image: /assets/images/2018-03-07/address-book-contacts-index.png
@@ -976,28 +976,28 @@ functional tech stack moving forward, I would love to hear about it!
 [Contact Database Schema]: https://github.com/paulfioravanti/phoenix-and-elm/blob/graphql/lib/phoenix_and_elm/address_book/contact.ex#L26
 [Contact Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/Contact/Model.elm
 [ContactList Elm Model]: https://github.com/paulfioravanti/phoenix-and-elm/blob/rest/assets/elm/src/ContactList/Model.elm
-[Elm]: http://elm-lang.org/
+[Elm]: https://elm-lang.org/
 [`elm-graphql`]: https://github.com/jamesmacaulay/elm-graphql
 [Elm hipster stack repo]: https://github.com/carleryd/elm-hipster-stack
-[Elm records]: http://elm-lang.org/docs/records
+[Elm records]: https://elm-lang.org/docs/records
 [GraphiQL]: https://github.com/graphql/graphiql
-[GraphQL]: http://graphql.org/
-[`GraphQL.Client.Http`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http
-[`GraphQL.Client.Http.sendQuery`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http#sendQuery
+[GraphQL]: https://graphql.org/
+[`GraphQL.Client.Http`]: https://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http
+[`GraphQL.Client.Http.sendQuery`]: https://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Client-Http#sendQuery
 [GraphiQL contact query]: /assets/images/2018-03-07/GraphiQL-contact-query.png "GraphiQL contact query"
 [GraphiQL contacts query]: /assets/images/2018-03-07/GraphiQL-contacts-query.png "GraphiQL contacts query"
-[GraphQL mutations]: http://graphql.org/learn/queries/#mutations
-[GraphQL resolvers]: http://graphql.org/learn/execution/#root-fields-resolvers
-[GraphQL schemas and types]: http://graphql.org/learn/schema/
-[GraphQL types and fields]: http://graphql.org/learn/schema/#object-types-and-fields
+[GraphQL mutations]: https://graphql.org/learn/queries/#mutations
+[GraphQL resolvers]: https://graphql.org/learn/execution/#root-fields-resolvers
+[GraphQL schemas and types]: https://graphql.org/learn/schema/
+[GraphQL types and fields]: https://graphql.org/learn/schema/#object-types-and-fields
 [`Http`]: https://github.com/elm-lang/http
 [JSON]: https://www.json.org/
-[`JSON.Decode`]: http://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode
+[`JSON.Decode`]: https://package.elm-lang.org/packages/elm-lang/core/5.1.1/Json-Decode
 [Navigation package]: https://github.com/elm-lang/navigation
 [Paul's repo]: https://github.com/paulfioravanti/phoenix-and-elm
 [Paul's repo graphql branch]: https://github.com/paulfioravanti/phoenix-and-elm/tree/graphql
-[Phoenix]: http://phoenixframework.org/
-[Phoenix and Elm, a real use case]: http://codeloveandboards.com/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1/
+[Phoenix]: https://phoenixframework.org/
+[Phoenix and Elm, a real use case]: https://codeloveandboards.com/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1/
 [Phoenix channels]: https://hexdocs.pm/phoenix/channels.html
 [Phoenix context]: https://hexdocs.pm/phoenix/contexts.html
 [REST]: https://en.wikipedia.org/wiki/Representational_state_transfer
@@ -1006,4 +1006,4 @@ functional tech stack moving forward, I would love to hear about it!
 [Scrivener.Ecto]: https://github.com/drewolson/scrivener_ecto
 [`Scrivener.Page`]: https://github.com/drewolson/scrivener/blob/master/lib/scrivener/page.ex
 [Translator Pattern blog]: https://medium.com/@alex.lew/the-translator-pattern-a-model-for-child-to-parent-communication-in-elm-f4bfaa1d3f98
-[`ValueSpec`]: http://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Request-Builder#ValueSpec
+[`ValueSpec`]: https://package.elm-lang.org/packages/jamesmacaulay/elm-graphql/1.8.0/GraphQL-Request-Builder#ValueSpec

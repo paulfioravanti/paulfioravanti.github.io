@@ -5,7 +5,7 @@ redirect_from:
   - /blog/setting-up-a-jekyll-blog/
 title: "Setting up a Jekyll Blog"
 date: 2017-11-17 22:30 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 17:06 +1100
 tags: jekyll ruby meta blog
 header:
   image: /assets/images/2017-11-17/wesley-caribe-63610-unsplash.jpg
@@ -327,7 +327,7 @@ Jekyll site.
 [jekyll-overriding-themes]: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 [Jekyll Plugin Generator]: https://jekyllrb.com/docs/plugins/#generators
 [jekyllthemes.org]: http://jekyllthemes.org/
-[jekyllthemes.io]: http://jekyllthemes.io/
+[jekyllthemes.io]: https://jekyllthemes.io/
 [HTML]: https://en.wikipedia.org/wiki/HTML
 [htmllint]: https://github.com/htmllint/htmllint
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli
@@ -358,5 +358,5 @@ Jekyll site.
 [stackoverflow-fa-embed-code]: https://stackoverflow.com/questions/43743857/using-font-awesome-cdn
 [stackoverflow-jekyll-safe-mode]: https://stackoverflow.com/questions/45349857/simple-jekyll-converter-plugin-not-working/45350535#45350535
 [ruby-gems-lint-search]: https://rubygems.org/search?utf8=%E2%9C%93&query=lint
-[themes.jekyllrc.org]: http://themes.jekyllrc.org/
-[Vim]: http://www.vim.org/
+[themes.jekyllrc.org]: https://themes.jekyllrc.org/
+[Vim]: https://www.vim.org/

@@ -4,7 +4,7 @@ redirect_from:
   - /blog/elm-018-to-019-upgrade-notes/
 title: "Elm 0.18 to 0.19 upgrade notes"
 date: 2019-04-01 14:20 +1100
-last_modified_at: 2023-07-24 16:15 +1100
+last_modified_at: 2023-07-24 16:57 +1100
 tags: elm upgrade elm-0.18 elm-0.19
 header:
   image: /assets/images/2019-04-01/david-travis-547046-unsplash.jpg
@@ -18,7 +18,7 @@ header:
 badges:
   - image: https://img.shields.io/badge/Elm%20Weekly-%2362-green.svg
     alt: "Elm Weekly #62"
-    link: http://www.elmweekly.nl/issues/elm-weekly-issue-62-176112
+    link: https://www.elmweekly.nl/p/elm-weekly-issue-62-176112
 excerpt: >
   Quite a lot has changed in the Elm ecosystem between version 0.18 and
   0.19, so here are some notes I jotted down while upgrading a few small apps.

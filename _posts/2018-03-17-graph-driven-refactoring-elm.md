@@ -4,7 +4,7 @@ redirect_from:
   - /blog/graph-driven-refactoring-in-elm/
 title: "Graph-driven Refactoring in Elm"
 date: 2018-03-17 12:15 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 16:53 +1100
 tags: elm refactoring architecture graphs
 header:
   image: /assets/images/2018-03-17/REST-branch-Messages-pre-refactor.png
@@ -647,7 +647,7 @@ some easy-to-digest information about its dependencies!
 [Paul's repo]: https://github.com/paulfioravanti/phoenix-and-elm
 [Paul's repo rest-refactor]: https://github.com/paulfioravanti/phoenix-and-elm/tree/rest-refactor
 [Migrating a Phoenix and Elm app from REST to GraphQL]: https://www.paulfioravanti.com/blog/migrating-a-phoenix-and-elm-app-from-rest-to-graphql/
-[Phoenix and Elm, a real use case]: http://codeloveandboards.com/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1/
+[Phoenix and Elm, a real use case]: https://bigardone.dev/blog/2017/02/02/phoenix-and-elm-a-real-use-case-pt-1
 [Python]: https://www.python.org/downloads/
 [REST branch default modules]: /assets/images/2018-03-17/REST-branch-default-modules.png "REST branch default modules"
 [REST branch Messages post-refactor]: /assets/images/2018-03-17/REST-branch-Messages-post-refactor.png "REST branch Messages post-refactor"

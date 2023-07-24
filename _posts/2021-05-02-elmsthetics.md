@@ -1,7 +1,7 @@
 ---
 title: "░▒▓ＥＬＭＳＴＨＥＴＩＣＳ▓▒░"
 date: 2021-05-02 14:40 +1100
-last_modified_at: 2021-05-02 14:40 +1100
+last_modified_at: 2023-07-24 17:00 +1100
 tags: elm synthwave retrowave 80s functional-programming soundcloud giphy
 header:
   image: /assets/images/2021-05-02/synthwave-3941721_1280.jpg
@@ -15,7 +15,7 @@ header:
 badges:
   - image: https://img.shields.io/badge/Elm%20Weekly-%23159-green.svg
     alt: "Elm Weekly #159"
-    link: http://www.elmweekly.nl/issues/elm-weekly-issue-159-582848
+    link: https://www.elmweekly.nl/p/elm-weekly-issue-159-582848
 excerpt: >
   Tech moves pretty fast. If you don't stop and do a side project once in a
   while, you could miss it.
@@ -2122,7 +2122,7 @@ just [ｒｅｌａｘ][80sfy Elm].
 [Alex Lew]: https://twitter.com/alexanderklew
 [API]: https://en.wikipedia.org/wiki/API
 [Arizona drinks]: https://drinkarizona.com/collections/drinks
-[Art Sangurai]: http://www.digitalbloc.com/
+[Art Sangurai]: https://www.digitalbloc.com/
 [AudioPlayer.Playlist]: https://github.com/paulfioravanti/80sfy/blob/master/src/AudioPlayer/Playlist.elm
 [`blur` events]: https://developer.mozilla.org/en-US/docs/Web/API/Window/blur_event
 [Charlie Koster]: https://github.com/ckoster22

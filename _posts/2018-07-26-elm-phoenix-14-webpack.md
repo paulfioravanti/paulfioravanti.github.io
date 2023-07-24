@@ -5,7 +5,7 @@ redirect_from:
   - /blog/connecting-elm-phoenix-14-webpack/
 title: "Connecting Elm to Phoenix 1.4 with webpack"
 date: 2018-07-26 16:20 +1100
-last_modified_at: 2019-04-15 14:45 +1100
+last_modified_at: 2023-07-24 17:00 +1100
 tags: elixir phoenix elm
 header:
   image: /assets/images/2018-07-26/functional_web_wallpaper.jpg
@@ -318,7 +318,7 @@ out again, and start building out your own Phoenix-and-Elm powered app!
 [Connecting Elm to Phoenix 1.3]: https://www.paulfioravanti.com/blog/connecting-elm-to-phoenix-1-3/
 [Create Elm App]: https://github.com/halfzebra/create-elm-app
 [Create React App]: https://github.com/facebook/create-react-app
-[Elm]: http://elm-lang.org/
+[Elm]: https://elm-lang.org/
 [Elm loader]: https://github.com/elm-community/elm-webpack-loader
 [Elm Styles Override Phoenix Styles]: /assets/images/2018-07-26/elm-styles-override-phoenix-styles.png "Elm Styles Override Phoenix Styles"
 [Finished App]: /assets/images/2018-07-26/finished-app.png "Finished App"
