@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2022-06-18 17:30 +1100
+last_modified_at: 2023-07-24 18:25 +1100
 tags: japanese jlpt anki html css javascript 日本語
 narration_video_id: "jcHX3PowK_w"
 header:
@@ -129,9 +129,8 @@ The links above lead to Japan-based book stores which may or may not ship
 overseas. If you have issues ordering the books, or you do not want to wait
 for shipping, then definitely check out your local international book store.
 
-If you are in Australia, I recommend checking out [Kinokuniya][]'s [range of
-JLPT books][Kinokuniya JLPT books], and visiting them if you are in range of
-a store.
+If you are in Australia, I recommend checking out [Kinokuniya][]'s range of
+JLPT books, and visiting them if you are in range of a store.
 
 ## Strict Study Cadence
 
@@ -355,7 +354,6 @@ language media that you like reading/watching, please let me know in a comment!
 [JST]: https://en.wikipedia.org/wiki/Japan_Standard_Time
 [kanji]: https://en.wikipedia.org/wiki/Kanji
 [Kinokuniya]: https://australia.kinokuniya.com/
-[Kinokuniya JLPT books]: https://australia.kinokuniya.com/t/hobby-and-goods/jlpt
 [Maximum the Hormone]: https://en.wikipedia.org/wiki/Maximum_the_Hormone
 [NHK World]: https://www3.nhk.or.jp/nhkworld/
 [NHK World YouTube]: https://www.youtube.com/c/NHKWORLDJAPAN

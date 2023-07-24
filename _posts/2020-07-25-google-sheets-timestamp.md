@@ -3,7 +3,7 @@ redirect_from:
   - /blog/all-i-want-is-a-timestamp/
 title: "All I want is a Timestamp"
 date: 2020-07-25 18:35 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 18:29 +1100
 tags: google-sheets javascript keyboards ergodox mechanical-keyboards
 header:
   image: /assets/images/2020-07-25/all-i-want-is-a-timestamp.png
@@ -293,8 +293,8 @@ before reaching for that text editor!
 [GS_TIMESTAMP keymap location]: https://github.com/paulfioravanti/qmk_keymaps/blob/dbd332f153eff5f7779f2363264e4d3eb6d908af/keyboards/ergodox_ez/keymaps/paulfioravanti/keymap.c#L96
 [How to Create Custom Keyboard Shortcuts in Mac OS]: https://osxdaily.com/2017/08/08/create-custom-keyboard-shortcut-mac/
 [Javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-[My `custom_keycodes`]: https://github.com/paulfioravanti/qmk_keymaps/blob/master/keyboards/ergodox_ez/keymaps/paulfioravanti/keycodes/custom_keycodes.c
-[My `process_record_user` function]: https://github.com/paulfioravanti/qmk_keymaps/blob/master/keyboards/ergodox_ez/keymaps/paulfioravanti/keycodes/process_record_user.c
+[My `custom_keycodes`]: https://github.com/paulfioravanti/qmk_keymaps/blob/master/keyboards/ergodox_ez/keymaps/paulfioravanti/user/process_record_user.c
+[My `process_record_user` function]: https://github.com/paulfioravanti/qmk_keymaps/blob/master/keyboards/ergodox_ez/keymaps/paulfioravanti/user/process_record_user.c
 [`NOW`]: https://support.google.com/docs/answer/3092981
 [Now Macro]: /assets/images/2020-07-25/now-macro.gif
 [paulfioravanti/qmk_keymaps]: https://github.com/paulfioravanti/qmk_keymaps
