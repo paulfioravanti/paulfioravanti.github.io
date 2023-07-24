@@ -4,7 +4,7 @@ redirect_from:
   - /blog/the-curious-incident-of-the-shadow-in-the-run-time/
 title: "The Curious Incident of the Shadow in the Run-Time"
 date: 2018-08-20 18:00 +1100
-last_modified_at: 2022-02-26 22:20 +1100
+last_modified_at: 2023-07-24 18:39 +1100
 tags: ruby shadowing
 header:
   image: /assets/images/2018-08-20/matthew-ansley-254316-unsplash.jpg
@@ -541,6 +541,6 @@ a comment explaining why.
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby shadowing a bad habit]: https://bugs.ruby-lang.org/issues/12490#note-2
 [Ruby's syntax documentation]: https://docs.ruby-lang.org/en/2.4.0/syntax_rdoc.html
-[`ShadowingOuterLocalVariable` cop]: https://rubocop.readthedocs.io/en/latest/cops_lint/#lintshadowingouterlocalvariable
+[`ShadowingOuterLocalVariable` cop]: https://docs.rubocop.org/rubocop/1.54/cops_lint.html#lintshadowingouterlocalvariable
 [variable shadowing]: https://en.wikipedia.org/wiki/Variable_shadowing
 [What does "shadowing" mean in Ruby?]: https://stackoverflow.com/questions/6259314/what-does-shadowing-mean-in-ruby
