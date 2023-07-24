@@ -4,7 +4,7 @@ redirect_from:
   - /blog/internationalisation-with-phoenix-liveview/
 title: "Internationalisation with Phoenix LiveView"
 date: 2019-11-03 00:00 +1100
-last_modified_at: 2022-05-16 08:49:00 1100
+last_modified_at: 2023-07-24 16:05:00 +1100
 tags: elixir phoenix liveview i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-11-03/nareeta-martin-vF1YCoLHMpg-unsplash.jpg
@@ -41,9 +41,8 @@ the [Tachyons][] [Full Screen Centered Title component documentation page][] in
 
 ![Tachyons Elm][]
 
-The page is deployed [here][Elm I18n Example Demo], and you can find the code
-[here][Elm I18n Example], but to save a click, the animated
-[GIF][GIF Pronunciation] above shows all of its use cases:
+You can find the code [here][Elm I18n Example], but to save a click, the
+animated [GIF][GIF Pronunciation] above shows all of its use cases:
 
 - Click on the current language, and the menu opens, showing a list of
   selectable languages
@@ -804,8 +803,6 @@ page content, as well as the page title!
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`01-client-server` branch][].
-The branch is also deployed [here][phx-i18n-01-client-server] in its own
-environment.  
 
 ### Client-Server Issues
 
@@ -998,8 +995,6 @@ menu closes.
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`02-js-sprinkles` branch][].
-The branch is also deployed [here][phx-i18n-02-js-sprinkles] in its own
-environment.  
 
 ### Javascript Sprinkles Issues
 
@@ -1294,8 +1289,6 @@ as the Elm version.
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`03-js-takeover` branch][].
-The branch is also deployed [here][phx-i18n-03-js-takeover] in its own
-environment.  
 
 ### Javascript Takeover Issues
 
@@ -2356,7 +2349,6 @@ the application and the LiveView version.
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`04-liveview` branch][].
-The branch is also deployed [here][phx-i18n-04-liveview] in its own environment.
 
 ## Conclusion
 
@@ -2659,8 +2651,6 @@ works as expected:
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`05-liveview-fix` branch][].
-The branch is also deployed [here][phx-i18n-05-liveview-fix] in its own
-environment.
 
 Follow the next steps of this application's journey in _[Internationalisation
 with Phoenix LiveComponents][]_!
@@ -2681,7 +2671,6 @@ with Phoenix LiveComponents][]_!
 [Elixir Plug]: https://github.com/elixir-plug/plug
 [Elm]: http://elm-lang.org/
 [Elm I18n Example]: https://github.com/paulfioravanti/elm-i18n-example
-[Elm I18n Example Demo]: https://elm-i18n-example.herokuapp.com/
 [Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
 [gettext]: https://www.gnu.org/software/gettext/
 [`Gettext.get_locale/0`]: https://hexdocs.pm/gettext/Gettext.html#get_locale/0
@@ -2727,11 +2716,6 @@ with Phoenix LiveComponents][]_!
 [Phoenix Routing Pipelines]: https://hexdocs.pm/phoenix/routing.html#pipelines
 [`Phoenix.View.render_many/4`]: https://hexdocs.pm/phoenix_view/Phoenix.View.html#render_many/4
 [`Phoenix.View.render/3`]: https://hexdocs.pm/phoenix_view/Phoenix.View.html#render/3
-[phx-i18n-01-client-server]: https://phx-i18n-01-client-server.herokuapp.com/
-[phx-i18n-02-js-sprinkles]: https://phx-i18n-02-js-sprinkles.herokuapp.com/
-[phx-i18n-03-js-takeover]: https://phx-i18n-03-js-takeover.herokuapp.com/
-[phx-i18n-04-liveview]: https://phx-i18n-04-liveview.herokuapp.com/
-[phx-i18n-05-liveview-fix]: https://phx-i18n-05-liveview-fix.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [`Plug.Conn.put_session/3`]: https://hexdocs.pm/plug/Plug.Conn.html#put_session/3
 [PubSub Static Channel Issue]: /assets/images/2019-11-03/pubsub-static-channel-issue.gif "PubSub Static Channel Issue"
