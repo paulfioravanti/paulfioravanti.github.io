@@ -329,7 +329,7 @@ comments!
 [redirection]: https://www.gnu.org/software/bash/manual/html_node/Redirections.html
 [Ruby]: https://www.ruby-lang.org/en/
 [Ruby Australia]: https://ruby.org.au/
-[Ruby Australia Slack]: https://ruby-au-join.herokuapp.com/
+[Ruby Australia Slack]: https://ruby.org.au/slack
 [separator problem]: https://en.wikipedia.org/wiki/Xargs#Separator_problem
 [Slack]: https://slack.com/
 [standard error]: https://en.wikipedia.org/wiki/Standard_streams#Standard_error_(stderr)
