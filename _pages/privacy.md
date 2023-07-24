@@ -67,6 +67,6 @@ operational, legal, or regulatory reasons.
 [Disqus]: https://disqus.com/
 [Disqus Privacy Policy]: https://help.disqus.com/en/articles/1717103-disqus-privacy-policy
 [GitHub Pages]: https://pages.github.com/
-[GitHub Pages Privacy Policy]: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement#github-pages
+[GitHub Pages Privacy Policy]: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement
 [Google Analytics]: https://analytics.google.com/analytics/web/
 [Google Analytics Privacy Policy]: https://policies.google.com/privacy
