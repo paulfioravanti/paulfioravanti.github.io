@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Sentia"
 date: 2021-05-09 18:50 +1100
-last_modified_at: 2022-06-10 20:30 +1100
+last_modified_at: 2023-07-24 15:30 +1100
 tags: ruby rails coding-test star-wars data-parsing tailwind enum draper kaminari tachyons pattern-matching lateral-join preloading
 header:
   image: /assets/images/2021-05-09/jocasta-helps-obi-wan.png
@@ -29,12 +29,7 @@ already know, that makes me re-think the way I have solved a problem.
 In this instance, a friend sent me [Sentia][]'s coding test to check out, and
 simply because I felt like I had not begun a [Ruby on Rails][] application from
 scratch in a long time, I decided to take a crack at it. So, here is my review
-of that attempt.
-
-Here are the public links for the deployed application and codebase:
-
-- [Sentia Coding Test application][]
-- [Sentia Coding Test codebase][]
+(and [the codebase][Sentia Coding Test codebase]) of that attempt.
 
 > Disclaimer: I am not, nor have ever been, an employee of Sentia, nor have I
 > ever applied for employment there, nor is this post some kind of attempt to
@@ -140,7 +135,7 @@ attempt, and keep [imposter syndrome][] at bay for that little bit longer.
 Since the requirements around this application focus on it being a Ruby on Rails
 application, I decided to go as "vanilla" as possible with Rails.
 
-This meant no explicit addition by me of any custom [Javascript][], or any
+This meant no explicit addition by me of any custom [JavaScript][], or any
 front-end frameworks that use it, to help out with things like filtering or
 sorting information.
 
@@ -926,7 +921,7 @@ for yourself.
 [inheritance]: https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)
 [Jabba the Hutt]: https://en.wikipedia.org/wiki/Jabba_the_Hutt
 [Jar Jar Binks]: https://en.wikipedia.org/wiki/Jar_Jar_Binks
-[Javascript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[JavaScript]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
 [Kaminari]: https://github.com/kaminari/kaminari
 [`Kernel.SpecialForms.import/2`]: https://elixir-lang.org/getting-started/alias-require-and-import.html#import
 [`Kernel#then`]: https://ruby-doc.org/core/Kernel.html#method-i-then
@@ -957,7 +952,6 @@ for yourself.
 [sample-csv-link]: https://github.com/paulfioravanti/sentia-coding-test/blob/main/test/fixtures/files/SentiaCodingTestData.csv
 [SCSS]: https://sass-lang.com/documentation/syntax
 [Sentia]: https://www.sentia.com.au/
-[Sentia Coding Test application]: https://sentiacodingtest.herokuapp.com/
 [Sentia Coding Test codebase]: https://github.com/paulfioravanti/sentia-coding-test
 [Sentia tests]: https://github.com/search?l=Ruby&p=1&q=sentia&type=Repositories
 [separation of concerns]: https://en.wikipedia.org/wiki/Separation_of_concerns
