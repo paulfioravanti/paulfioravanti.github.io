@@ -4,7 +4,7 @@ redirect_from:
   - /blog/2017/11/08/hello-blog/
 title: "Hello, Blog!"
 date: 2017-11-08 16:49 +1100
-last_modified_at: 2021-11-20 13:10 +1100
+last_modified_at: 2023-07-24 16:00 +1100
 tags: jekyll meta blog
 narration_video_id: "KNGnlJ5735Q"
 header:
@@ -39,8 +39,7 @@ this time as I have more manual control over this
 I didn't want to throw away the result of the _Learn Enough_ tutorial,
 as I made a few changes I think I will want to reference later, so I
 [moved the codebase repository][learn-enough-css-repo], took it off
-Github Pages, and instead deployed it using [Heroku][heroku] to its
-[new home][learn-enough-css-heroku].
+Github Pages, and instead deployed it using [Heroku][heroku].
 
 So, hello (again) blog, and here's to a new start :beers:
 
@@ -49,7 +48,6 @@ So, hello (again) blog, and here's to a new start :beers:
 [jekyll]: https://github.com/jekyll/jekyll
 [learn-enough-css]: https://www.learnenough.com/css-and-layout-tutorial
 [learn-enough-css-repo]: https://github.com/paulfioravanti/learn_enough_css
-[learn-enough-css-heroku]: http://learn-enough-css.herokuapp.com/
 [mhartl]: https://twitter.com/mhartl
 [technical-blogging]: https://pragprog.com/titles/actb2/
 [wordpress]: https://wordpress.com/
