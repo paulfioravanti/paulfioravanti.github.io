@@ -151,7 +151,7 @@ warm fuzzies for me):
 | [GraphQL Weekly][]              |     1 |
 | [Hacker News Blog Newsletter][] |     1 |
 | [Ruby Weekly][]                 |     1 |
-| [Test Automation Weekly][]      |     1 |
+| Test Automation Weekly          |     1 |
 | **Total**                       |**18** |
 {: refdef}
 
@@ -544,7 +544,6 @@ feedback, so let me know!
 [sunk costs]: https://en.wikipedia.org/wiki/Sunk_cost
 [Thanks For Coming To My TED Talk]: https://knowyourmeme.com/memes/thanks-for-coming-to-my-ted-talk
 [Technical Blogging, Second Edition]: https://pragprog.com/titles/actb2/technical-blogging-second-edition/
-[Test Automation Weekly]: #
 [TL;DR]: https://www.merriam-webster.com/dictionary/TL%3BDR
 [training data]: https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets#Training_data_set
 [Trello]: https://trello.com/
