@@ -4,7 +4,7 @@ redirect_from:
   - /blog/tmuxinator-for-exercism/
 title: "Tmuxinator for Exercism"
 date: 2018-01-12 17:10 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 16:33 +1100
 tags: exercism ruby tmux tmuxinator
 header:
   image: /assets/images/2018-01-12/rawpixel-788527-unsplash.jpg
@@ -118,12 +118,12 @@ future Exercism-ing!
 [asdf]: https://github.com/asdf-vm/asdf
 [dotfiles-tmuxinator-templates]: https://github.com/paulfioravanti/dotfiles/tree/master/tmuxinator
 [Elixir]: https://elixir-lang.org/
-[Elm]: http://elm-lang.org/
-[Exercism]: http://exercism.io/
+[Elm]: https://elm-lang.org/
+[Exercism]: https://exercism.org/
 [Ruby]: https://www.ruby-lang.org/
 [setting-up-a-ruby-development-environment-for-exercism]: https://www.paulfioravanti.com/blog/setting-up-a-ruby-development-environment-for-exercism/
 [tmux]: https://github.com/tmux/tmux/wiki
 [tmuxinator]: https://github.com/tmuxinator/tmuxinator
 [tmuxinator-erb]: https://github.com/tmuxinator/tmuxinator#erb
-[Vim]: http://www.vim.org/
-[YAML]: http://yaml.org/
+[Vim]: https://www.vim.org/
+[YAML]: https://yaml.org/
