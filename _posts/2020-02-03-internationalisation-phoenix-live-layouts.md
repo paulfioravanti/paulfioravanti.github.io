@@ -508,8 +508,6 @@ clicking the page.
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`09-live-layout` branch][].
-The branch is also deployed [here][phx-i18n-09-live-layout] in its own
-environment.
 
 ## Wrapping Up
 
@@ -539,6 +537,5 @@ moving forward!
 [Phoenix LiveView]: https://github.com/phoenixframework/phoenix_live_view
 [`Phoenix.LiveView.mount/3`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#c:mount/3
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
-[phx-i18n-09-live-layout]: https://phx-i18n-09-live-layout.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [updating the HTML document title]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#module-updating-the-html-document-title
