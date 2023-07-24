@@ -1,7 +1,7 @@
 ---
 title: "Thanks, Past-Me"
-date: 2023-04-28 16:30:00 +1100
-last_modified_at: 2023-04-28 16:30:00 1100
+date: 2023-04-28 16:30 +1100
+last_modified_at: 2023-07-24 17:17 1100
 tags: meta blogging
 narration_video_id: "8EX3aUYehNo"
 header:
@@ -546,7 +546,7 @@ feedback, so let me know!
 [Technical Blogging, Second Edition]: https://pragprog.com/titles/actb2/technical-blogging-second-edition/
 [Test Automation Weekly]: https://www.testautomationweekly.com/
 [TL;DR]: https://www.merriam-webster.com/dictionary/TL%3BDR
-[training data]: https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets#training_set
+[training data]: https://en.wikipedia.org/wiki/Training,_validation,_and_test_data_sets#Training_data_set
 [Trello]: https://trello.com/
 [Twitter]: https://twitter.com/paulfioravanti
 [Using C++ Bitcoin libraries in Elixir]: https://www.paulfioravanti.com/blog/c-plus-plus-bitcoin-libraries-elixir/
