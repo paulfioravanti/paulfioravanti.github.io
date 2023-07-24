@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2022-06-10 20:30 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -1608,7 +1608,7 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [Platinum Steno Lesson 31]: https://www.youtube.com/watch?v=ABd5JcmOmg0&list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU&index=70
 [Platinum Steno Theory Dictionary]: https://platinumsteno.com/downloads/platinum-steno-ncrs-theory-dictionary/
 [Platinum Steno Theory playlist]: https://www.youtube.com/playlist?list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU
-[Plover]: http://www.openstenoproject.org/
+[Plover]: https://www.openstenoproject.org/
 [Plover glue operator]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#glue-operator-numbers-fingerspelling
 [Plover Keyboard Shortcuts]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#keyboard-shortcuts
 [Plover's Dictionary Format]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format

@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2022-12-05 20:09:00 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -335,7 +335,7 @@ Here it is in action!
 [moniker]: https://www.merriam-webster.com/dictionary/moniker
 [official site]: https://zdoom.org/index
 [package manager]: https://en.wikipedia.org/wiki/Package_manager
-[Plover stenography]: http://www.openstenoproject.org/
+[Plover stenography]: https://www.openstenoproject.org/
 [REALLY stupid Zdoom Question.]: https://forum.zdoom.org/viewtopic.php?t=290
 [Sesame Street]: https://en.wikipedia.org/wiki/Sesame_Street
 [source port]: https://zdoom.org/wiki/Source_port

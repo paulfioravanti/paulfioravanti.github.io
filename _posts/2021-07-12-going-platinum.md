@@ -1,7 +1,7 @@
 ---
 title: "Going Platinum"
 date: 2021-07-12 18:35 +1100
-last_modified_at: 2022-10-30 21:00 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: plover stenography
 narration_video_id: "qNJmV5mXzFA" 
 header:
@@ -295,7 +295,7 @@ to my [custom dictionaries][paulfioravanti/steno-dictionaries].
 [Platinum Steno Theory Dictionary (NCRS Theory)]: https://platinumsteno.com/downloads/platinum-steno-ncrs-theory-dictionary/
 [Platinum Steno Theory playlist]: https://www.youtube.com/playlist?list=PL85Y9t9lANyArY9uTBE_kmy2cT_ECSHvU
 [Platinum Steno YouTube channel]: https://www.youtube.com/c/platinumsteno
-[Plover]: http://www.openstenoproject.org/
+[Plover]: https://www.openstenoproject.org/
 [Plover's Learning Resources Wiki page]: https://github.com/openstenoproject/plover/wiki/Learning-Stenography
 [Plover Discord]: https://discord.me/plover
 [Plover For the Record]: https://www.paulfioravanti.com/blog/plover-for-the-record/

@@ -4,7 +4,7 @@ redirect_from:
   - /blog/i-completed-typey-type/
 title: "I Completed Typey Type"
 date: 2020-06-10 22:00 +1100
-last_modified_at: 2022-04-23 23:37 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: stenography keyboards ergodox mechanical-keyboards plover
 narration_video_id: "lc7voR3QyMQ"
 header:
@@ -209,7 +209,7 @@ Good luck in your steno adventures!
 [Mastering Issues]: https://guides.github.com/features/issues/#:~:text=Issues%20are%20a%20great%20way,own%20section%20in%20every%20repository.
 [OMGGG!!! Finally!!!! 100 WPM on simple exercise broken after a MAJOR down period!!!]: https://www.reddit.com/r/Plover/comments/gdtmaj/omggg_finally_100_wpm_on_simple_exercise_broken/
 [open source software]: https://en.wikipedia.org/wiki/Open-source_software
-[Plover]: http://www.openstenoproject.org/
+[Plover]: https://www.openstenoproject.org/
 [Plover 3.1.1]: https://github.com/openstenoproject/plover/releases/tag/v3.1.1
 [Plover Installation Guide]: https://github.com/openstenoproject/plover/wiki/Installation-Guide
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY

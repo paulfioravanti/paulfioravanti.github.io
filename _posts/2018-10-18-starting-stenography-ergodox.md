@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2022-06-10 20:30 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -871,13 +871,13 @@ want to try this layout as well.
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
 [number bar]: http://qwertysteno.com/Intermediate/Numbers.php
-[Open Steno Project]: http://www.openstenoproject.org/
+[Open Steno Project]: https://www.openstenoproject.org/
 [Oryx]: https://configure.zsa.io/
 [PMK]: https://pimpmykeyboard.com/
-[Plover]: http://www.openstenoproject.org/plover/
+[Plover]: https://www.openstenoproject.org/plover/
 [Plover connected to keyboard]: /assets/images/2018-10-18/plover-keyboard-connected.png "Plover connected to keyboard"
 [Plover crash issue]: https://github.com/openstenoproject/plover/issues/573#issuecomment-256122550
-[Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
+[Plover in-browser steno demo]: https://www.openstenoproject.org/demo/
 [Plover Installation]: https://github.com/openstenoproject/plover/wiki/Installation-Guide#installation
 [Plover Keycap Recommendations]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#keycaps
 [Plover keyswitch guide]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#which-type-of-key-switch-should-i-choose

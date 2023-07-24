@@ -1,7 +1,7 @@
 ---
 title: "Stenography Numbers on a Georgi"
 date: 2021-01-17 18:15 +1100
-last_modified_at: 2022-04-25 14:24 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: stenography georgi mechanical-keyboards
 narration_video_id: "bdJtRvq7vvo"
 header:
@@ -195,7 +195,7 @@ you think would work better, please reach out to me or leave a comment!
 [number bar]: https://sites.google.com/site/learnplover/lesson-8-numbers#TOC-The-Number-Bar
 [pdf georgi-numbers]: https://www.dropbox.com/s/5d7n1hix84mkrlz/georgi-numbers.pdf?dl=1
 ["Philly shift"]: https://www.artofchording.com/layout/d-and-z.html#the-d-and-z-keys
-[Plover stenography]: http://www.openstenoproject.org/
+[Plover stenography]: https://www.openstenoproject.org/
 [ring finger]: https://en.wikipedia.org/wiki/Ring_finger
 [Starting Stenography with an Ergodox]: https://www.paulfioravanti.com/blog/starting-stenography-ergodox/
 [steno order]: https://sites.google.com/site/learnplover/lesson-2-steno-order#TOC-Steno-Order

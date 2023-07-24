@@ -4,7 +4,7 @@ redirect_from:
   - /blog/chording-qwerty-with-qmk-combos/
 title: "Chording QWERTY with QMK Combos"
 date: 2019-04-28 01:30 +1100
-last_modified_at: 2021-02-19 23:20 +1100
+last_modified_at: 2023-07-24 16:36 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography
 header:
   image: /assets/images/2019-04-28/samuel-ramos-1319769-unsplash.jpg
@@ -681,7 +681,7 @@ it seem like it would be required.
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
 [NOOP]: https://en.wikipedia.org/wiki/NOP_(code)
 [Planck]: https://olkb.com/planck
-[Plover]: http://www.openstenoproject.org/plover/
+[Plover]: https://www.openstenoproject.org/plover/
 [Plover in-browser steno demo]: http://www.openstenoproject.org/demo/
 [QMK basic keycodes]: https://docs.qmk.fm/#/keycodes_basic
 [QMK Combos]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
