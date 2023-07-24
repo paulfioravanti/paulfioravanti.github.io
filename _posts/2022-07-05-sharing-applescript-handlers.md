@@ -283,7 +283,7 @@ hopefully this post has been able to serve as some reference.
 [`bin/` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/bin
 [cloned]: https://git-scm.com/docs/git-clone
 [Command]: https://en.wikipedia.org/wiki/Command_key
-[`commands` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/dictionaries/command
+[`commands` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src/command
 [ctrlp.vim]: https://github.com/ctrlpvim/ctrlp.vim
 [Function Key]: https://en.wikipedia.org/wiki/Function_key
 [functions]: https://en.wikipedia.org/wiki/Subroutine
@@ -298,7 +298,7 @@ hopefully this post has been able to serve as some reference.
 [possessive syntax]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3
 [Property]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW5
 [Python]: https://www.python.org/
-[reasons]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/command/README.md#bash-commands
+[reasons]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/command.md
 [refactoring]: https://en.wikipedia.org/wiki/Code_refactoring
 [`.scpt`]: https://fileinfo.com/extension/scpt
 [Script Library]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW6
