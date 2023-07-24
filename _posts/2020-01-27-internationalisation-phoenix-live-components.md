@@ -4,7 +4,7 @@ redirect_from:
   - /blog/internationalisation-with-phoenix-live-components/
 title: "Internationalisation with Phoenix LiveComponents"
 date: 2020-01-27 10:00 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 16:08 +1100
 tags: elixir phoenix liveview live-components i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2020-01-27/jason-leung-jCBzW_Q_UGI-unsplash.jpg
@@ -480,8 +480,6 @@ And that's it! The application is now using Stateless LiveComponents!
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`06-live-stateless` branch][].
-The branch is also deployed [here][phx-i18n-06-live-stateless] in its own
-environment.
 
 ## Optional Refactor
 
@@ -958,8 +956,6 @@ Easily the most independent of the three LiveComponents in the application.
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the [`07-live-stateful` branch][].
-The branch is also deployed [here][phx-i18n-07-live-stateful] in its own
-environment.
 
 ## Stateless or Stateful?
 
@@ -1021,8 +1017,7 @@ outline a few points:
 
 You can find the code for this iteration of the application in this post's
 [companion Github repo][phx_i18n_example] on the
-[`08-live-stateful-0-6` branch][]. The branch is also deployed
-[here][phx-i18n-08-live-stateful-0-6] in its own environment.
+[`08-live-stateful-0-6` branch][].
 
 Follow the next steps of this application's journey in _[Internationalisation
 with Phoenix Live Layouts][]_!
@@ -1044,9 +1039,6 @@ with Phoenix Live Layouts][]_!
 [Phoenix LiveView]: https://github.com/phoenixframework/phoenix_live_view
 [`Phoenix.LiveView.Helpers.live_component/4`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.Helpers.html#live_component/4
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
-[phx-i18n-06-live-stateless]: https://phx-i18n-06-live-stateless.herokuapp.com/
-[phx-i18n-07-live-stateful]: https://phx-i18n-07-live-stateful.herokuapp.com/
-[phx-i18n-08-live-stateful-0-6]: https://phx-i18n-08-live-stateful-0-6.herokuapp.com/
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [`preload/1`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#c:preload/1
 [Preloading and update]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#module-preloading-and-update
