@@ -1,7 +1,7 @@
 ---
 title: "A Canvas of Cypress Tests"
 date: 2021-10-06 22:50 +1100
-last_modified_at: 2022-03-25 15:40 +1100
+last_modified_at: 2023-07-24 16:47 +1100
 tags: javascript mocha chai cypress elixir phoenix elm testing i18n
 header:
   image: /assets/images/2021-10-06/van-gogh-wheatfield-with-cypresses-june-1889.jpg
@@ -921,7 +921,7 @@ also be shared with non-technical areas of your team or business.
 If you have not used Cypress already, I would encourage you to give it a shot,
 and walk through your application in the shoes of your end users!
 
-[Chai]: http://chaijs.com/
+[Chai]: https://www.chaijs.com/
 [cookies]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 [`cy.get()`]: https://docs.cypress.io/api/commands/get
 [`cy.reload()`]: https://docs.cypress.io/api/commands/reload
@@ -947,7 +947,7 @@ and walk through your application in the shoes of your end users!
 [elm-program-test]: https://github.com/avh4/elm-program-test
 [Elm-WebDriver]: https://github.com/justgook/elm-webdriver
 [`Event.simulate`]: https://package.elm-lang.org/packages/elm-explorations/test/latest/Test-Html-Event#simulate
-[Full Screen Centered Title component documentation page]: http://tachyons.io/components/layout/full-screen-centered-title/index.html
+[Full Screen Centered Title component documentation page]: https://tachyons.io/components/layout/full-screen-centered-title/index.html
 [GitHub]: https://github.com/
 [gotcha]: https://www.merriam-webster.com/dictionary/gotcha
 [Hex]: https://hex.pm/
@@ -963,7 +963,7 @@ and walk through your application in the shoes of your end users!
 [LiveView Hooks]: https://hexdocs.pm/phoenix_live_view/js-interop.html#client-hooks
 [`localStorage`]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [`mix gettext.extract`]: https://hexdocs.pm/gettext/Mix.Tasks.Gettext.Extract.html#content
-[Mocha]: http://mochajs.org/
+[Mocha]: https://mochajs.org/
 [`mouseover` events]: https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseover_event
 [npm-init]: https://docs.npmjs.com/cli/init/
 [Phoenix]: https://www.phoenixframework.org/
@@ -979,7 +979,7 @@ and walk through your application in the shoes of your end users!
 [Runtime Language Switching in Elm]: https://www.paulfioravanti.com/blog/runtime-language-switching-elm/
 [`setCookie`]: https://docs.cypress.io/api/commands/setcookie
 [`support` directory]: https://github.com/paulfioravanti/cypress-i18n-example/tree/main/cypress/support
-[Tachyons]: http://tachyons.io/
+[Tachyons]: https://tachyons.io/
 [Tachyons App]: /assets/images/2021-10-06/tachyons-elm.gif "Animated GIF of Tachyons page implemented in Elm"
 [ternary expression]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 [The Elm Architecture]: https://guide.elm-lang.org/architecture/
