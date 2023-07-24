@@ -15,7 +15,7 @@ header:
 excerpt: >
   "Pipes! Well done! I feel like Leonardo da Vinci! It's a masterpiece!"
 tagline: >
-  "Pipes! Well done! I feel like Leonardo da Vinci! [It's a masterpiece](https://www.mariowiki.com/List_of_The_Super_Mario_Bros._Super_Show!_quotes#:~:text=%22Pipes!%20Well%20done!%20Huh%3F%20I%20feel%20like%20Leonardo%20da%20Vinci!%20It%27s%20a%20masterpiece!%22)"
+  "Pipes! Well done! I feel like Leonardo da Vinci! [It's a masterpiece!](https://www.mariowiki.com/List_of_The_Super_Mario_Bros._Super_Show!_quotes#Defective_Gadgetry_2)"
 ---
 
 [Alistair Tweed][] asked an interesting question on the [Ruby Australia][]
