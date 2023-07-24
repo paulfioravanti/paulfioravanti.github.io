@@ -585,8 +585,8 @@ into a future version of Elm...?
 [`elm/browser`]: https://github.com/elm/browser
 [elm/compiler/issues/1776]: https://github.com/elm/compiler/issues/1776
 [Elm Coverage]: https://github.com/zwilias/elm-coverage
-[elm-dependencies-analyzer]: https://github.com/malaire/elm-dependencies-analyzer
-[elm-dependencies-analyzer live]: https://www.markuslaire.com/github/elm-dependencies-analyzer/
+[elm-dependencies-analyzer]: https://github.com/synalysis/elm-dependencies-analyzer
+[elm-dependencies-analyzer live]: https://www.elm-dependencies-analyzer.net/
 [Elm Discourse]: https://discourse.elm-lang.org/
 [elm-explorations/test Test-Html-Event#expect]: https://package.elm-lang.org/packages/elm-explorations/test/latest/Test-Html-Event#expect
 [elm/html Html-Attributes#style]: https://package.elm-lang.org/packages/elm/html/1.0.0/Html-Attributes#style

@@ -675,7 +675,7 @@ it seem like it would be required.
 [Georgi]: https://www.gboards.ca/product/georgi
 [Georgi image]: /assets/images/2019-04-28/georgi.jpg
 [Georgi is the most nonQMK layout]: https://github.com/qmk/qmk_firmware/blob/9c98fef4f6d35d9e07865b119550f6e7e9e6610d/keyboards/georgi/keymaps/default/keymap.c#L2
-[Georgi QMK firmware]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/georgi
+[Georgi QMK firmware]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/gboards/georgi
 [`key_combos`]: https://github.com/qmk/qmk_firmware/blob/02b74d521bf84ba776a5920289887ad418806311/quantum/process_keycode/process_combo.c#L20
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
 [_N_-Key Rollover]: https://en.wikipedia.org/wiki/Rollover_(key)#n-key_rollover
