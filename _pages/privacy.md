@@ -63,7 +63,7 @@ from time to time in order to reflect changes to the site, or for other
 operational, legal, or regulatory reasons.
 
 [Buttondown]: https://buttondown.email
-[Buttondown Privacy Policy]: https://buttondown.email/privacy
+[Buttondown Privacy Policy]: https://buttondown.email/legal/privacy
 [Disqus]: https://disqus.com/
 [Disqus Privacy Policy]: https://help.disqus.com/en/articles/1717103-disqus-privacy-policy
 [GitHub Pages]: https://pages.github.com/
