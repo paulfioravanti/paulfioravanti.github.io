@@ -6,7 +6,7 @@ redirect_from:
   - /blog/using-c-plus-plus-bitcoin-libraries-in-elixir/
 title: "Using C++ Bitcoin libraries in Elixir"
 date: 2017-12-14 09:03 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 16:43 +1100
 tags: elixir bitcoin clang
 header:
   image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
@@ -885,8 +885,8 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [cure-compile-options]: https://github.com/luc-tielen/Cure#start-developing-in-cc
 [cure-helper-functions-info]: https://github.com/luc-tielen/Cure#cc-code
 [cure-readme-examples]: https://github.com/luc-tielen/Cure#example
-[Elixir]: http://elixir-lang.github.io/
-[Elixir binaries]: http://elixir-lang.github.io/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
+[Elixir]: https://elixir-lang.org/
+[Elixir binaries]: https://elixir-lang.org/getting-started/binaries-strings-and-char-lists.html#binaries-and-bitstrings
 [elixir-interop-examples]: https://github.com/asbaker/elixir-interop-examples
 [Elixir Weekly #76]: https://elixirweekly.net/issues/76
 [erlang-guide-ports]: https://erlang.mk/guide/ports.html
@@ -905,7 +905,7 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp
 [Mastering Bitcoin repo]: https://github.com/paulfioravanti/mastering_bitcoin
 [mix test.watch]: https://github.com/lpil/mix-test.watch
-[Native Implemented Functions]: http://erlang.org/doc/tutorial/nif.html
+[Native Implemented Functions]: https://erlang.org/doc/tutorial/nif.html
 [Options Controlling C Dialect]: https://gcc.gnu.org/onlinedocs/gcc/C-Dialect-Options.html
 [Porcelain]: https://github.com/alco/porcelain
 [Ports]: https://hexdocs.pm/elixir/Port.html
