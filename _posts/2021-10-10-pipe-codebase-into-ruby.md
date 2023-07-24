@@ -1,7 +1,7 @@
 ---
 title: "Pipe a Codebase into Ruby"
 date: 2021-10-10 20:50 +1100
-last_modified_at: 2021-10-10 20:50 +1100
+last_modified_at: 2023-07-24 16:15 +1100
 tags: ruby bash zsh shell pipe unix
 header:
   image: /assets/images/2021-10-10/denny-muller-W3wd-rmLP7I-unsplash.jpg

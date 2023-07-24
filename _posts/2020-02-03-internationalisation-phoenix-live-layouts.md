@@ -4,7 +4,7 @@ redirect_from:
   - /blog/internationalisation-with-phoenix-live-layouts/
 title: "Internationalisation with Phoenix Live Layouts"
 date: 2020-02-03 17:00 +1100
-last_modified_at: 2020-11-01 22:00 +1100
+last_modified_at: 2023-07-24 16:14 +1100
 tags: elixir phoenix liveview live-components live-layout i18n japanese italian 日本語 italiano
 header:
   image: /assets/images/2020-02-03/kyle-glenn-nXt5HtLmlgE-unsplash.jpg
