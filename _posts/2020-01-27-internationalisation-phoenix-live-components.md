@@ -1037,7 +1037,7 @@ with Phoenix Live Layouts][]_!
 [LiveView 0.6 Installation instructions]: https://github.com/phoenixframework/phoenix_live_view/blob/924fe4aa53e690751cdc063883a356b7c8165f08/guides/introduction/installation.md
 [LiveView version 0.6.0]: https://github.com/phoenixframework/phoenix_live_view/blob/master/CHANGELOG.md#deprecations
 [Phoenix LiveView]: https://github.com/phoenixframework/phoenix_live_view
-[`Phoenix.LiveView.Helpers.live_component/4`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.Helpers.html#live_component/4
+[`Phoenix.LiveView.Helpers.live_component/4`]: https://hexdocs.pm/phoenix_live_view/0.4.1/Phoenix.LiveView.html#live_component/4
 [Phoenix PubSub]: https://github.com/phoenixframework/phoenix_pubsub
 [phx_i18n_example]: https://github.com/paulfioravanti/phx_i18n_example
 [`preload/1`]: https://hexdocs.pm/phoenix_live_view/Phoenix.LiveComponent.html#c:preload/1
