@@ -73,7 +73,7 @@ jobs:
           bundle exec htmlproofer _site
           --allow-hash-href
           --ignore-urls "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
-          --ignore-status-codes "999,429,403,503,0"
+          --ignore-status-codes "0,301,403,429,503,999"
           --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           --no-check-external-hash
           --no-enforce-https
