@@ -122,6 +122,7 @@ I hope that you keep your own relationship with work healthy, and can leverage
 this cautionary tale to avoid ever being "welcomed back".
 
 [^1]: Issues that I can specifically remember with the system included:
+
       - Display, formatting, and encoding issues related to
         [double-byte character sets][DBCS] and [half-width _kana_][] (imagine a
         system that had problems displaying, say, English capital letters...)
