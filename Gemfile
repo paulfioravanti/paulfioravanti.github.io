@@ -16,10 +16,6 @@ group :development do
   gem "guard", "~> 2.14"
   # Guard extension to run cli processes
   gem "guard-process", "~> 1.2"
-  # NOTE: Ruby 3 not bundled with webrick, so Jekyll's assumption it can be
-  # used is now incorrect. Keep tabs on the following PR:
-  # https://github.com/jekyll/jekyll/issues/8523
-  gem "webrick", "~> 1.7"
 end
 
 group :development, :test do
