@@ -52,8 +52,8 @@ group :jekyll_plugins do
   # Jekyll plugin to let Jekyll build your Sass and SCSS.
   # NOTE: In order to not get server deprecation warnings about new Dart CSS
   # syntax, this needs to be pinned to 2.2. See:
-  # https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1371015867
-  # https://github.com/jekyll/jekyll-sass-converter/issues/145#issuecomment-1363069829
+  # Open issue REF: https://github.com/mmistakes/minimal-mistakes/issues/4054#issuecomment-1371015867
+  # Context REF: https://github.com/jekyll/jekyll-sass-converter/issues/145#issuecomment-1363069829
   gem "jekyll-sass-converter", "~> 2.2"
   # A Jekyll plugin to add metadata tags for search engines and social networks
   # to better index and display your site's content.
