@@ -11,7 +11,7 @@ header:
   overlay_image: /assets/images/2021-02-20/wolf-face-closeup.png
   overlay_filter: 0.2
   caption: >
-    Illustration by [Lee Sheppard](https://www.leesheppard.com)
+    Illustration by [Lee Sheppard](https://www.leesheppard.com.au)
 excerpt: >
   Will the Big Bad Wolf thwart The Three Little Pigs from getting a passing
   test suite?
@@ -36,7 +36,7 @@ The story of [The Three Little Pigs][] is a real story. A [fable][], even!
     <img src="/assets/images/2021-02-20/three-little-pigs.png"
          alt="The Three Little Pigs" />
     <figcaption style="text-align: center;">
-      Illustration by <a href="https://www.leesheppard.com">Lee Sheppard</a>.
+      Illustration by <a href="https://www.leesheppard.com.au">Lee Sheppard</a>.
     </figcaption>
   </figure>
 </div>
@@ -65,7 +65,7 @@ fairy tale together, which begins Once Upon A Time...
 
 [fable]: https://en.wikipedia.org/wiki/Fable
 [img three-little-pigs]: /assets/images/2021-02-20/three-little-pigs.png
-[Lee Sheppard]: https://www.leesheppard.com
+[Lee Sheppard]: https://www.leesheppard.com.au
 [make-believe]: https://www.collinsdictionary.com/dictionary/english/make-believe
 [MINASWAN]: https://en.wiktionary.org/wiki/MINASWAN
 [RSpec]: https://rspec.info/
