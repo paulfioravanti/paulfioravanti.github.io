@@ -309,7 +309,7 @@ Hexadecimal numbers are a bit abstract in conveying what this "intended use"
 really means, but, fortunately for us, we can use the [Web HID Explorer][] to
 get some more human-readable information:
 
-**Interface 0**
+### Interface 0
 
 ```console
 productName: Georgi
@@ -334,7 +334,7 @@ Input report 0x04
     Logical bounds: 1 to 672
 ```
 
-**Interface 1**
+### Interface 1
 
 ```console
 productName: Georgi
@@ -612,6 +612,7 @@ IDs, to ensure you can get a stable connection.
       from the Georgi use `0xFEED` as their vendor ID (it seems to be QMK's
       arbitrarily assigned [default vendor ID][]).
       So, we can conclude that:
+
       - the `0xFEED` vendor ID does not belong exclusively to the Georgi
       - enforcement of vendor ID uniqueness is lax/non-existent
       - we cannot rely on the VID/PID combo alone to open a connection to a
