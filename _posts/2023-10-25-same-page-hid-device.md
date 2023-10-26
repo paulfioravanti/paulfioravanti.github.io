@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2023-10-25 16:25 +1100
+last_modified_at: 2023-10-26 11:40 +1100
 tags: clang HID hidapi Georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -416,8 +416,8 @@ int main(int argc, char* argv[]) {
   current_device = devices;
 
   while (current_device) {
-    unsigned short usage = current_device->usage;
     unsigned short usage_page = current_device->usage_page;
+    unsigned short usage = current_device->usage;
 
     printf("Opening -- Usage (page): 0x%hx (0x%hx)...\n", usage, usage_page);
     handle = hid_open_path(current_device->path);
