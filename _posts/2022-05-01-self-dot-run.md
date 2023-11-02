@@ -170,7 +170,7 @@ currently use.
 
 As well as logging runs, I have gotten Strava to plot routes on maps for me to
 run based on what distance I want to try, leading to discovering more of my
-local area from the ground level. [Plotting routes near you][] is actually a
+local area from the ground level. Plotting routes near you is actually a
 feature for paid subscribers only; after using Strava for a few months with a
 free account, I decided that it was worth trying out its paid features, and so
 far, I have no regrets.
@@ -294,7 +294,6 @@ your human portfolio.
 [grit]: https://en.wikipedia.org/wiki/Grit_(personality_trait)
 [lumens]: https://en.wikipedia.org/wiki/Lumen_(unit)
 [open world]: https://en.wikipedia.org/wiki/Open_world
-[Plotting routes near you]: https://blog.strava.com/routes/
 [podcasts]: https://en.wikipedia.org/wiki/Podcast
 [refactoring]: https://en.wikipedia.org/wiki/Code_refactoring
 [run]: https://en.wikipedia.org/wiki/Run_command
