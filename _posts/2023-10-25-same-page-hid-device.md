@@ -2,7 +2,7 @@
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
 last_modified_at: 2023-10-26 11:40 +1100
-tags: clang HID hidapi Georgi stenography steno keyboards
+tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
   image_description: "Epson LX-300+ dot matrix printer with optional colour kit"
