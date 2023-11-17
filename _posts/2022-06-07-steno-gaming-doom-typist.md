@@ -1,7 +1,7 @@
 ---
 title: "Steno Gaming: Doom Typist"
 date: 2022-06-07 23:41:00 +1100
-last_modified_at: 2022-12-05 19:44:00 +1100
+last_modified_at: 2023-11-17 19:51:00 +1100
 tags: retro-gaming georgi steno doom qmk
 header:
   image: /assets/images/2022-06-07/doom-typist.jpg
@@ -42,9 +42,10 @@ Here are some videos of me doing some off-rails shooting with Doom Typist using
 a [Georgi][] stenographic keyboard.
 
 <div class="steno-video">
-  {% include video id="OWnSjpOIT8s" provider="youtube" %}
+  {% include video id="a8Kp5s-jw5k" provider="youtube" %}
   <figcaption>
-    Doom Typist - Episode 1 Map 1 (Short)
+    Doom Typist - Episode 2 Map 1
+    (<a href="https://www.youtube.com/watch?v=a8Kp5s-jw5k&list=PLNN5NpKrqwAM6zF_-hoJwaQYZs6qflv4T&index=4">Full playlist</a>)
   </figcaption>
 </div>
 

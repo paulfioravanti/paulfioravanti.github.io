@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2023-07-24 16:36 +1100
+last_modified_at: 2023-11-17 19:43 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -297,7 +297,7 @@ a typing game with [Typist.pk3][], and then use it with [Plover stenography][].
 Here it is in action!
 
 <div class="steno-video">
-  {% include video id="fxxDAYuciD8" provider="youtube" %}
+  {% include video id="a8Kp5s-jw5k" provider="youtube" %}
 </div>
 
 [^1]: GZDoom is named after [Graf Zahl][], the German name for [Sesame Street][]
