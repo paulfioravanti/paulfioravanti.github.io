@@ -32,10 +32,23 @@ jobs:
           node-version: 19
 
       - name: Install Global npm packages
-        run: npm install --location=global sass-lint htmllint-cli markdownlint-cli
+        run: >
+          npm install --location=global
+          sass-lint
+          htmllint-cli
+          markdownlint-cli
 
       - name: Run htmllint
-        run: htmllint _includes/japanese/* _includes/ruby/* _includes/audio-narration-banner.html _includes/audio-profile-custom-links.html _includes/japanese.html _includes/ruby.html _includes/signup-form.html _includes/stripped_markdown.html
+        run: >
+          htmllint
+          _includes/japanese/*
+          _includes/ruby/*
+          _includes/audio-narration-banner.html
+          _includes/audio-profile-custom-links.html
+          _includes/japanese.html
+          _includes/ruby.html
+          _includes/signup-form.html
+          _includes/stripped_markdown.html
 
       - name: Run markdownlint
         run: markdownlint _posts _drafts _pages README.md
@@ -62,9 +75,8 @@ jobs:
       # --no-check-external-hash - This is the flag I'd like to remove
       # eventually. It would be possible to slowly fix the problem URLs over
       # time
-      # NOTE: If a new post is created or new tags are introduced via a post,
-      # htmlproofer will need to be disabled for a build in order to proceed
-      # forward
+      # NOTE: If new tags are introduced via a post, htmlproofer will need to be
+      # disabled for a build in order to proceed forward
       # NOTE 4: The minimal-mistakes-generated 404 page seems to have a #main
       # hash href to nowhere, so ignore all #main hash links for now; I don't
       # have any that I've created in any pages that I control.
@@ -72,7 +84,7 @@ jobs:
         run: >
           bundle exec htmlproofer _site
           --allow-hash-href
-          --ignore-urls "/localhost/,/facebook.com\/sharer\/sharer.php/,#main"
+          --ignore-urls "/localhost/,/facebook.com\/sharer\/sharer.php/,#main,/paulfioravanti.com/"
           --ignore-status-codes "0,301,403,429,503,999"
           --typhoeus '{"ssl_verifypeer": false, "ssl_verifyhost": 0}'
           --no-check-external-hash
