@@ -125,10 +125,13 @@ and, to their credit, both custom coding tests revolve around them.
 > The output should include:
 >
 > 1. The participation percentage and total participant counts of the survey.
->   - Any response with a '`submitted_at`' date has submitted and is said to
->     have participated in the survey.
+>
+>     - Any response with a '`submitted_at`' date has submitted and is said to
+>       have participated in the survey.
+>
 > 2. The average for each rating question
->   - Results from unsubmitted surveys should not be considered in the output.
+>
+>     - Results from unsubmitted surveys should not be considered in the output.
 >
 > ### Other information
 >
@@ -629,7 +632,7 @@ curious about being able to display the questions in such a way where you could
 get an idea about _how many_ respondents chose a specific score for a question,
 and _who specifically_ chose each score. That curiosity led to creation of the
 tooltip [histogram][] you can see in the screenshot above, which shows when
-`mouseover`-ing a score. 
+`mouseover`-ing a score.
 
 Inspired by the way [Facebook][] displays post likes, I decided to shamelessly
 rip it off to show the respondent histogram. Since the data only contains user
