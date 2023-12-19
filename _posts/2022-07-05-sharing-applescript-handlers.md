@@ -10,9 +10,7 @@ header:
   overlay_image: /assets/images/2022-07-05/sliced-apples-overlay.jpg
   overlay_filter: 0.4
   caption: >
-    Photo by:
-    <a href="https://foto.wuestenigel.com/sliced-red-apple-on-the-wooden-board/" target="_blank">Marco Verch</a>
-    under
+    Photo by: Marco Verch under
     <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">
       Creative Commons 2.0
     </a>

@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2023-07-24 18:10 +1100
+last_modified_at: 2023-12-19 12:44 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -136,12 +136,12 @@ just use that? Why go to the trouble of creating another layout? Well...
   that later as well...)
 >
 > **UPDATE 28 Apr 2019**: The issue with TX Bolt is
-[now fixed][qmk/qmk_firmware #5229], and the [current QMK Ergodox EZ steno
-configuration][QMK Ergodox EZ Steno Configuration Current] does [now use QMK's
-built-in support for stenography][qmk/qmk_firmware #5220]. I may be biased, but
-I think the rest of this post still has value, with the added benefit of now
-having less configuration to do if you decide to adapt QMK's current Ergodox
-steno configuration for your own needs.
+[now fixed][qmk/qmk_firmware #5229], and the [most recent QMK Ergodox EZ steno
+configuration][QMK Ergodox EZ Steno Configuration Most Recent] does [now use
+QMK's built-in support for stenography][qmk/qmk_firmware #5220]. I may be
+biased, but I think the rest of this post still has value, with the added
+benefit of now having less configuration to do if you decide to adapt QMK's
+current Ergodox steno configuration for your own needs.
 
 ## N-Key Rollover
 
@@ -888,7 +888,7 @@ want to try this layout as well.
 [QMK Ergodox Default Steno High]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno_high
 [QMK Ergodox EZ Steno Configuration]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno
 [QMK Ergodox EZ Steno Configuration 2020-06-08]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno
-[QMK Ergodox EZ Steno Configuration Current]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps/steno
+[QMK Ergodox EZ Steno Configuration Most Recent]: https://github.com/qmk/qmk_firmware/tree/849ddc27eed60637ee2062df0e410dd8b9df7271/keyboards/ergodox_ez/keymaps/steno
 [QMK Ergodox EZ Steno Configuration Keymap Codes]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L140
 [QMK Ergodox EZ Steno Configuration Keymap Functions]: https://github.com/qmk/qmk_firmware/tree/545f95c8f49b8714a2fe2d0fa0f849f305cc7ca3/keyboards/ergodox_ez/keymaps/steno/keymap.c#L256
 [QMK Ergodox keymaps list]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps
