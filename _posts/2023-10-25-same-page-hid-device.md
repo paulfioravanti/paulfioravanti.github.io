@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2023-10-26 11:40 +1100
+last_modified_at: 2023-12-19 11:47 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -60,7 +60,6 @@ Let's illustrate the problem by recreating (and slightly simplifying) the
 
 int main(int argc, char* argv[]) {
   int res;
-  unsigned char buf[65];
   wchar_t wstr[MAX_STR];
   hid_device *handle;
 
@@ -222,8 +221,8 @@ FEED/1337: g Heavy Industries - Georgi
 ```
 
 Aside from lots of random Apple-related entries, we can see 6 devices that
-identify as the Georgi with the `0xFEED/0x1337` VID/PID combination, and they
-seem to be in 2 groupings(?), consisting of 1 and 5 entries. Compare that to the
+identify as the Georgi with a `0xFEED/0x1337` VID/PID combination, and they seem
+to be in 2 groupings(?), consisting of 1 and 5 entries. Compare that to the
 easy-to-distinguish Elgato Stream Deck Pedal, with just a single device
 detected.
 
@@ -403,7 +402,6 @@ enum {
 
 int main(int argc, char* argv[]) {
   int res;
-  unsigned char buf[65];
   wchar_t wstr[MAX_STR];
   hid_device *handle = NULL;
 
@@ -501,7 +499,6 @@ enum {
 
 int main(int argc, char* argv[]) {
   int res;
-  unsigned char buf[65];
   wchar_t wstr[MAX_STR];
   hid_device *handle = NULL;
 
