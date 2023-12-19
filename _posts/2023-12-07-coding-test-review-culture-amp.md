@@ -239,11 +239,11 @@ inside `SurveyTool::Report::Table`.
 
 I have even done the same thing with internal methods like good ol' [`puts`][].
 It may be available everywhere thanks to it being a part of Ruby's [`Kernel`][]
-module, but I have made outputting to the terminal is the strictly the concern
-of the `CLI` module. So, I treat `puts` like a third party library, and force
-all code to go through `CLI` to get to it, in an adapter-like way. Is this too
-pedantic?  Perhaps, but I still like having a [single source of truth][] for
-specific functionality.
+module, but I have made outputting to the terminal strictly the concern of the
+`CLI` module. So, I treat `puts` like a third party library, and force all code
+to go through `CLI` to get to it, in an adapter-like way. Is this too pedantic?
+Perhaps, but I still like having a [single source of truth][] for specific
+functionality.
 
 <div class="centered-image" style="width: 95%">
   <figure>
