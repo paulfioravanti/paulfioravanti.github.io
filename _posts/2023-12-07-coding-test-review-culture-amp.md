@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Culture Amp"
 date: 2023-12-07 15:10:00 +1100
-last_modified_at: 2023-12-07 15:10:00 1100
+last_modified_at: 2023-12-19 12:05:00 +1100
 tags: ruby elixir elm coding-test tachyons
 header:
   image: /assets/images/2023-12-07/celpax-1Lf5Adh9SCg-unsplash.jpg

@@ -158,9 +158,6 @@ GEM
     minitest (5.20.0)
     mutex_m (0.2.0)
     nenv (0.3.0)
-    nokogiri (1.15.5)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.15.5-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.15.5-arm-linux)
@@ -230,7 +227,6 @@ PLATFORMS
   aarch64-linux
   arm-linux
   arm64-darwin
-  ruby
   x86-linux
   x86_64-darwin
   x86_64-linux
