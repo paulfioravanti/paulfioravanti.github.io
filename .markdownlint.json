@@ -44,5 +44,6 @@
   "no-trailing-punctuation": {
     "punctuation": ",;"
   },
-  "reference-links-images": false
+  "reference-links-images": false,
+  "ul-indent": false
 }
