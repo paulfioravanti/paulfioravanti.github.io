@@ -414,8 +414,8 @@ int main(int argc, char* argv[]) {
   current_device = devices;
 
   while (current_device) {
-    unsigned short usage_page = current_device->usage_page;
-    unsigned short usage = current_device->usage;
+    unsigned short int usage_page = current_device->usage_page;
+    unsigned short int usage = current_device->usage;
 
     printf("Opening -- Usage (page): 0x%hx (0x%hx)...\n", usage, usage_page);
     handle = hid_open_path(current_device->path);
@@ -512,8 +512,8 @@ int main(int argc, char* argv[]) {
   int usage_known = (USAGE_PAGE != 0) && (USAGE != 0);
 
   while (current_device) {
-    unsigned short usage_page = current_device->usage_page;
-    unsigned short usage = current_device->usage;
+    unsigned short int usage_page = current_device->usage_page;
+    unsigned short int usage = current_device->usage;
 
     if (usage_known && (usage_page != USAGE_PAGE || usage != USAGE)) {
       printf("Skipping -- Usage (page): 0x%hx (0x%hx)\n", usage, usage_page);
