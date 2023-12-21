@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2023-12-19 11:47 +1100
+last_modified_at: 2023-12-21 10:30 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
