@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Culture Amp"
 date: 2023-12-07 15:10:00 +1100
-last_modified_at: 2023-12-19 12:05:00 +1100
+last_modified_at: 2023-12-26 19:50:00 +1100
 tags: ruby elixir elm coding-test tachyons
 header:
   image: /assets/images/2023-12-07/celpax-1Lf5Adh9SCg-unsplash.jpg
@@ -152,8 +152,8 @@ These requirements read to me like an "[extract, transform, load][]" problem:
 - then parsed and **_transformed_** into a summary report
 - then **_loaded_** (read: output) through the [CLI][]
 
-This thinking helped informed how the application architecture evolved, as the
-responsibilities ended up being split between three main modules:
+This thinking helped inform how the application architecture evolved, resulting
+in the responsibilities being split between three main modules:
 
 ### `survey_parser`
 
@@ -221,7 +221,7 @@ are worth making note of.
 ### Facades
 
 [Facades][Facade] are easily my favourite [software design pattern][], and you
-can see five of them in the codebase. Wherever there is a "boundary" `foo.rb`
+can see five of them in the codebase: wherever there is a "boundary" `foo.rb`
 file and a corresponding `foo/` directory containing all of the `Foo` module's
 implementation details. The front-facing `foo.rb` "API" file contains no real
 logic, and just [delegates][Forwardable] method calls to its child modules,
@@ -232,10 +232,10 @@ masking complexity from other modules that call it.
 Whenever I need to leverage code from third-party libraries, like Terminal
 Table, I instinctively want to lock down and quarantine its use to a single
 module with an [adapter][Adapter], rather than have it permeate throughout the
-codebase. What if I need to change table libraries? I would rather only have to
-change one module, than go hunting through the codebase for everywhere its
-referenced.  Therefore, you will only ever see `Terminal::Table` referenced
-inside `SurveyTool::Report::Table`.
+codebase. For this application, I would rather only have to change one module if
+I felt the need to change table libraries, rather than hunt through the codebase
+to find everywhere it is referenced.  Therefore, you will only ever see
+`Terminal::Table` referenced inside `SurveyTool::Report::Table`.
 
 I have even done the same thing with internal methods like good ol' [`puts`][].
 It may be available everywhere thanks to it being a part of Ruby's [`Kernel`][]
@@ -345,7 +345,8 @@ past the `SurveyTool.SurveyParser` boundary, and into
 provide the `SurveyTool.Report.Table` module with the information it needs, at
 the `SurveyTool.SurveyParser` level?
 
-`SurveyTool.SurveyParser.Survey` exposes its `t()` type in the following way:
+Since `SurveyTool.SurveyParser.Survey` exposes its `t()` type in the following
+way...
 
 **`lib/survey_tool/survey_parser/survey.ex`**
 
@@ -365,8 +366,8 @@ defmodule SurveyTool.SurveyParser.Survey do
 end
 ```
 
-We can "hoist" this type up to the `SurveyTool.SurveyParser` boundary module and
-expose it there:
+...we can "hoist" this type up to the `SurveyTool.SurveyParser` boundary module
+and expose it there:
 
 **`lib/survey_tool/survey_parser.ex`**
 
@@ -412,8 +413,9 @@ defmodule SurveyTool.Report.Table do
 end
 ```
 
-And, this should work. I did get a warning about `variable "survey" is unused`,
-but that can be silenced by changing `%survey` references to `%_survey`.
+After making this change, I did get a warning about `variable "survey" is
+unused`, but that can be silenced by changing `%survey` references to
+`%_survey`.
 
 If a module using an external type does _not_ need to know about the type's
 implementation details, rather than expose the `@type` at the boundary, we can
