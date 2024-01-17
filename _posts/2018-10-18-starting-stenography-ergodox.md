@@ -4,7 +4,7 @@ redirect_from:
   - /blog/starting-stenography-with-an-ergodox/
 title: "Starting Stenography with an Ergodox"
 date: 2018-10-18 20:05 +1100
-last_modified_at: 2023-12-19 12:44 +1100
+last_modified_at: 2024-01-17 12:48 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang stenography plover
 header:
   image: /assets/images/2018-10-18/phil-botha-469097-unsplash.jpg
@@ -859,7 +859,7 @@ want to try this layout as well.
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Georgi]: https://www.gboards.ca/product/georgi
 [Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/gboards/georgi
-[Google IME]: https://www.google.com/inputtools/services/features/input-method.html
+[Google IME]: https://www.google.co.jp/ime/
 [Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
 [keyboard switches]: https://thegamingsetup.com/gaming-keyboard/buying-guides/keyboard-switch-chart-table

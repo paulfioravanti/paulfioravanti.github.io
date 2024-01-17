@@ -1,7 +1,7 @@
 ---
 title: "Sharing AppleScript Handlers"
 date: 2022-07-05 09:30:00 +1100
-last_modified_at: 2022-07-05 09:30:00 +1100
+last_modified_at: 2024-01-17 12:46:00 +1100
 tags: apple scripting
 header:
   image: /assets/images/2022-07-05/sliced-apples.jpg
@@ -296,7 +296,7 @@ hopefully this post has been able to serve as some reference.
 [possessive syntax]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3
 [Property]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_fundamentals.html#//apple_ref/doc/uid/TP40000983-CH218-SW5
 [Python]: https://www.python.org/
-[reasons]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/command.md
+[reasons]: https://github.com/paulfioravanti/steno-dictionaries/blob/main/dictionaries/commands.md
 [refactoring]: https://en.wikipedia.org/wiki/Code_refactoring
 [`.scpt`]: https://fileinfo.com/extension/scpt
 [Script Library]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW6
