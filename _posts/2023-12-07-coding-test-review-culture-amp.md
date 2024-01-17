@@ -1,7 +1,7 @@
 ---
 title: "Coding Test Review: Culture Amp"
 date: 2023-12-07 15:10:00 +1100
-last_modified_at: 2023-12-26 19:50:00 +1100
+last_modified_at: 2024-01-17 12:24:00 +1100
 tags: ruby elixir elm coding-test tachyons
 header:
   image: /assets/images/2023-12-07/celpax-1Lf5Adh9SCg-unsplash.jpg
@@ -650,7 +650,7 @@ single user by consulting all of the responses with that user's
 #### Internationalisation
 
 Finally, completely out of scope of the requirements (but not something whose
-addiction detracts from anything), is internationalisation, something I value
+addition detracts from anything), is internationalisation, something I value
 highly in applications.
 
 <div class="centered-image" style="width: 90%">
