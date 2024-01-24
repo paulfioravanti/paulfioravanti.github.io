@@ -10,6 +10,7 @@ header:
   image_description: "Marty McFly from Back to the Future exclaiming that all he wants is a Pepsi."
   teaser: /assets/images/2020-07-25/all-i-want-is-a-timestamp.png
   overlay_image: /assets/images/2020-07-25/all-i-want-is-a-timestamp.png
+  caption: © Universal Pictures
 excerpt: >
   Google Sheets can insert the current date and time in your spreadsheet, if you
   know where to look.
