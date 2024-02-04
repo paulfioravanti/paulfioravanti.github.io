@@ -142,6 +142,7 @@ warm fuzzies for me):
 {: refdef:
   style="margin: auto; width: 50%; font-size: large; margin-bottom: 1rem;"
 }
+
 | Source                          | Links |
 |:--------------------------------|------:|
 | [Elixir Weekly][]               |     8 |
@@ -153,6 +154,7 @@ warm fuzzies for me):
 | [Ruby Weekly][]                 |     1 |
 | Test Automation Weekly          |     1 |
 | **Total**                       |**18** |
+
 {: refdef}
 
 Two of the Elixir Weekly links are from the same article, but in different

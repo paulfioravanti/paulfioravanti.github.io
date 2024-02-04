@@ -22,10 +22,12 @@ with the following [keyboard shortcut][Google Sheets keyboard shortcuts]:
 {: refdef:
   style="margin: auto; width: 50%; font-size: larger; margin-bottom: 1rem;"
 }
+
 | Platform | Shortcut              |
 |:--------:|:---------------------:|
 | PC       | Ctrl + Alt + Shift + ;|
 | Mac      | ⌘ + Option + Shift + ;|
+
 {: refdef}
 
 If you have found this page via searching specifically for this information,

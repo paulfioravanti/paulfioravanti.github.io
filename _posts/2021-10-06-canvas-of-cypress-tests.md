@@ -44,10 +44,12 @@ the browser title.
 > following locations:
 >
 > {: refdef: style="display: inline-table;" }
+>
 > |    Language    |       Application Codebase        |              Companion Blog Post               |
 > |:---------------|:----------------------------------|:-----------------------------------------------|
 > | Elixir/Phoenix | [Phoenix LiveView I18n Example][] | _[Internationalisation with Phoenix LiveView]_ |
 > | Elm            | [Elm I18n Example][]              | _[Runtime Language Switching in Elm]_          |
+>
 > {: refdef}
 
 The entire feature set consists of the following use cases:
