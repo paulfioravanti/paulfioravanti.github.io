@@ -6,7 +6,7 @@ redirect_from:
   - /blog/using-c-plus-plus-bitcoin-libraries-in-elixir/
 title: "Using C++ Bitcoin libraries in Elixir"
 date: 2017-12-14 09:03 +1100
-last_modified_at: 2023-07-24 16:43 +1100
+last_modified_at: 2024-02-04 22:00 +1100
 tags: elixir bitcoin clang
 header:
   image: /assets/images/2017-12-14/matt-antonioli-734745-unsplash.jpg
@@ -901,8 +901,8 @@ port over of _Mastering Bitcoin_ code over to Elixir, check out my
 [makefile-variable-referencing]: https://www.gnu.org/software/make/manual/html_node/Reference.html
 [mastering-bitcoin-book]: https://bitcoinbook.info/
 [mastering-bitcoin-compiling-and-running-the-addr-code]: https://github.com/bitcoinbook/bitcoinbook/blob/df1828b7205a5950a16a3182cf9b15421ee70658/ch04.asciidoc#addr_example_run
-[mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/addr.cpp
-[mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/develop/code/addr.cpp
+[mastering-bitcoin-example-4-3]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition_print3/code/addr.cpp
+[mastering-bitcoin-example-4-3-raw]: https://raw.githubusercontent.com/bitcoinbook/bitcoinbook/second_edition_print3/code/addr.cpp
 [Mastering Bitcoin repo]: https://github.com/paulfioravanti/mastering_bitcoin
 [mix test.watch]: https://github.com/lpil/mix-test.watch
 [Native Implemented Functions]: https://erlang.org/doc/tutorial/nif.html

@@ -6,7 +6,7 @@ redirect_from:
   - /blog/using-pythons-bitcoin-libraries-in-elixir/
 title: "Using Python's Bitcoin libraries in Elixir"
 date: 2017-12-04 17:20 +1100
-last_modified_at: 2023-07-24 17:09 +1100
+last_modified_at: 2024-02-04 22:00 +1100
 tags: elixir bitcoin python
 header:
   image: /assets/images/2017-12-04/drew-stock-628985-unsplash.jpg
@@ -417,7 +417,7 @@ attempt to port over more code, so keep an eye out for updates!
 [key-to-address-python-code]: https://github.com/paulfioravanti/mastering_bitcoin/blob/master/priv/key-to-address-ecc-example.py
 [Libbitcoin]: https://github.com/libbitcoin/libbitcoin
 [mastering-bitcoin-book]: https://bitcoinbook.info/
-[mastering-bitcoin-example-4-5]: https://github.com/bitcoinbook/bitcoinbook/blob/develop/code/key-to-address-ecc-example.py
+[mastering-bitcoin-example-4-5]: https://github.com/bitcoinbook/bitcoinbook/blob/second_edition_print3/code/key-to-address-ecc-example.py
 [mastering-bitcoin-repo]: https://github.com/paulfioravanti/mastering_bitcoin
 [Pybitcointools]: https://github.com/vbuterin/pybitcointools
 [pybitcointools-secp256k1]: https://github.com/vbuterin/pybitcointools/blob/aeb0a2bbb8bbfe421432d776c649650eaeb882a5/bitcoin/main.py#L15
