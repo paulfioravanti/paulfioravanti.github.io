@@ -1,13 +1,13 @@
 ---
 title: "Creating Plover Plugins with Python"
-date: 2024-01-19 14:20:00 +1100
-last_modified_at: 2024-01-19 14:20:00 +1100
+date: 2024-02-04 21:35:00 +1100
+last_modified_at: 2024-02-04 21:35:00 +1100
 tags: plover python steno stenography plugin
 header:
-  image: /assets/images/2024-01-19/doc-brown-cable-connect.jpg
+  image: /assets/images/2024-02-04/doc-brown-cable-connect.jpg
   image_description: "Doc Brown from the movie Back to the Future connecting a plug and socket"
-  teaser: /assets/images/2024-01-19/doc-brown-cable-connect.jpg
-  overlay_image: /assets/images/2024-01-19/doc-brown-cable-connect.jpg
+  teaser: /assets/images/2024-02-04/doc-brown-cable-connect.jpg
+  overlay_image: /assets/images/2024-02-04/doc-brown-cable-connect.jpg
   overlay_filter: 0.1
   caption: Universal
 excerpt: >
@@ -39,11 +39,11 @@ inside everyone's [Plover Plugin Manager][].
 The final result will be the following codebase:
 [Plover Practice Plugin][paulfioravanti/plover-practice-plugin].
 
-Basically, this post is intended to be the Plover plugin development guide that
-I wish I had when I first started, and my hope is that it can be of some
-reference if you decide to build your own plugins. It is long, and fairly
-technical in nature, so a basic knowledge of Python or computer programming (or
-a desire to learn!), is recommended in order to follow along.
+Basically, this post is intended to be the Plover plugin development guide I
+wish existed when I first started, and hopefully it can be of some reference if
+you decide to build your own plugins. It is long, and fairly technical in
+nature, so a basic knowledge of Python or computer programming (or a desire to
+learn!), is recommended in order to follow along.
 
 ## Python Environment
 
@@ -51,11 +51,11 @@ Since we are building something that is meant to run inside Plover's
 environment, in order to avoid any unexpected errors during development, we need
 to make sure the code we write is compatible with it.
 
-As of this writing, when you download the Plover application, it comes bundled
-with Python version 3.9[^1]. Therefore, in order to ensure maximum compatibility
-with Plover, a good choice would be to set your local Python version to use the
-latest [patch version][Semantic versioning] of Python 3.9, which is currently
-[Python 3.9.18][][^2].
+As of this writing, when you [download the Plover application][], it comes
+bundled with Python version 3.9[^1]. Therefore, in order to ensure maximum
+compatibility with Plover, a good choice would be to set your local Python
+version to use the latest [patch version][Semantic versioning] of Python 3.9,
+which is currently [Python 3.9.18][][^2].
 
 In order to change your Python version, I would recommend installing a [version
 manager][Python version manager]. This will enable you to easily use Plover's
@@ -143,7 +143,8 @@ entry points for them under the `[options.entry_points]` heading.
 
 Finally, Plover needs a minimal [`setup.py`][] file in order to help read in the
 configuration we have in `setup.cfg`, run Setuptools for us when our plugin
-is installed, and consequently be included properly in the Plugins Manager[^6]:
+is installed, and consequently allow the plugin to be included properly in the
+Plugins Manager[^6]:
 
 **`plover-practice-plugin/setup.py`**
 
@@ -304,7 +305,7 @@ see the Practice Plugin in the list.
 
 <div class="centered-image" style="width: 80%;">
   <figure>
-    <img src="/assets/images/2024-01-19/practice-plugin-installed.jpg"
+    <img src="/assets/images/2024-02-04/practice-plugin-installed.jpg"
          style="margin-bottom: 0;"
          alt="Plover Plugins Manager showing the newly-installed Practice Plugin" />
     <figcaption>
@@ -372,7 +373,7 @@ Here, we define the following:
   will maintain this for our own parameters as well
 
 Like with the command plugin, let's first create a new `random_number` entry
-point in the `setup.cfg` file under the command entry:
+point in the `setup.cfg` file underneath the existing command entry:
 
 **`plover-practice-plugin/setup.cfg`**
 
@@ -467,11 +468,11 @@ or meta plugin.
 
 So, we are going to start with the creation of a new meta plugin, surface some
 of the pain points around it, and then migrate it over to be an extension plugin
-to fix those pain points.
+to relieve the pain.
 
 ### Initial Meta Plugin
 
-The plugin we will create will enable us to read in and output values stored in
+Our new plugin will enable us to read in and output values stored in
 [environment variables][] on our computer, in the style of the [Plover Local Env
 Var][] plugin.
 
@@ -479,7 +480,7 @@ Var][] plugin.
 > macOS/Linux-focused. If you are following along using Windows, you will likely
 > need to make small changes to your code around `$VAR`/`$Env:VAR`/`%VAR%`
 > usage, as well as the `echo` shell command that gets executed. I'm
-> sorry...computers are hard...
+> sorry...computers are hard, and I do not have a Windows machine to test on...
 
 In dictionary entries, the meta will look like this:
 
@@ -645,7 +646,7 @@ Enabled box is checked.
 
 <div class="centered-image" style="width: 70%;">
   <figure>
-    <img src="/assets/images/2024-01-19/plover-extension-running.jpg"
+    <img src="/assets/images/2024-02-04/plover-extension-running.jpg"
          alt="Plover Configuration showing the Practice Plugin extension running" />
     <figcaption>
       Open Configure > Plugins and confirm that the Enabled box is checked
@@ -725,7 +726,7 @@ the cache when we want to read in new env var values: say, by pushing the Plover
 
 <div class="centered-image" style="width: 50%;">
   <figure>
-    <img src="/assets/images/2024-01-19/plover-reconnect.jpg"
+    <img src="/assets/images/2024-02-04/plover-reconnect.jpg"
          alt="Plover GUI highlighting the Reconnect button" />
   </figure>
 </div>
@@ -791,9 +792,9 @@ plover --script plover_plugins install --editable .
 Like before, the first retrieval of the env var should have a lag, but
 subsequent retrievals should be fast. Now, press the Plover "Reconnect" button,
 and try the same outline again. You should find that since there is no longer a
-cache present, the lag will return again as the env var value is directly
-fetched again via the command line, but subsequent retrievals should be fast
-again. Great, no more stale data for us!
+cache present, the lag will have returned since the env var value is directly
+fetched again via the command line. However, subsequent retrievals should be
+fast again as expected. Great, no more stale data for us!
 
 ### Eradicate Lag with Config
 
@@ -1028,7 +1029,7 @@ should find a `practice_plugin.json` file with the following contents:
 
 <div class="centered-image" style="width: 100%;">
   <figure style="margin-bottom: 0;">
-    <img src="/assets/images/2024-01-19/plover-practice-plugin-config.jpg"
+    <img src="/assets/images/2024-02-04/plover-practice-plugin-config.jpg"
          alt="Plover plugin config file shown in a Finder window" />
   </figure>
     <figcaption>
@@ -1109,9 +1110,9 @@ part, the following is my guide to automate publishing of a Plover plugin to
 PyPI from GitHub.
 
 The goal is to be able to perform a `git push` up to GitHub, and then have a
-GitHub action handle publishing to PyPI without any further interaction on my
-part. The GitHub action should also be smart enough to only publish to PyPI when
-I explicitly specify a new version of the plugin (via a [git tag][]), since
+GitHub action handle publishing to PyPI without any further interaction from us.
+The GitHub action should also be smart enough to only publish to PyPI when we
+_explicitly_ specify a new version of the plugin (via a [git tag][]), since
 not all code pushes need to be published immediately.
 
 #### Create Trusted Publisher
@@ -1125,7 +1126,7 @@ similar to this:
 
 <div class="centered-image" style="width: 50%;">
   <figure style="margin-bottom: 0;">
-    <img src="/assets/images/2024-01-19/pypi-trusted-publisher.jpg"
+    <img src="/assets/images/2024-02-04/pypi-trusted-publisher.jpg"
          alt="PyPI's 'Add a new pending publisher' form" />
   </figure>
     <figcaption>
@@ -1274,7 +1275,7 @@ successfully:
 
 <div class="centered-image" style="width: 100%;">
   <figure>
-    <img src="/assets/images/2024-01-19/github-action-success.jpg"
+    <img src="/assets/images/2024-02-04/github-action-success.jpg"
          alt="GitHub commit showing that a GitHub action workflow has run successfully" />
   </figure>
 </div>
@@ -1287,14 +1288,13 @@ was run, the job inside the workflow (`pypi-publish`) was skipped:
 
 <div class="centered-image" style="width: 100%;">
   <figure>
-    <img src="/assets/images/2024-01-19/github-action-skipped.jpg"
+    <img src="/assets/images/2024-02-04/github-action-skipped.jpg"
          alt="GitHub action showing that jobs were skipped" />
   </figure>
 </div>
 
-This is what we want! We are now free to push code to the repo as much as we
-want, and only publish to PyPI when we are ready...which, at this point, we
-definitely are.
+This is what we want! We are now free to push code to the repo, and only publish
+to PyPI when we are ready...which, at this point, we definitely are.
 
 Our `setup.cfg` metadata already has a `version` entry marked as `0.0.1`, so
 let's tag the repo's current commit as being `v0.0.1`[^24]. We will then push
@@ -1311,7 +1311,7 @@ pushed up a tag), you should see that it has been successful:
 
 <div class="centered-image" style="width: 100%;">
   <figure>
-    <img src="/assets/images/2024-01-19/github-action-job-success.jpg"
+    <img src="/assets/images/2024-02-04/github-action-job-success.jpg"
          alt="GitHub action showing that jobs were successfully completed" />
   </figure>
 </div>
@@ -1338,7 +1338,7 @@ Q&A][] plugin to the registry; you would create a similar one for your own
 plugin.
 
 It can sometimes take a while for pull requests to be approved, so do not get
-dishearted! As long as your plugin code is in a public git repo, people that
+disheartened! As long as your plugin code is in a public git repo, people that
 really want it immediately can download it from there and install it manually,
 just like we did during development. So, I would recommend adding instructions
 on how to do that in your `README.md` file until your plugin makes it into the
@@ -1365,13 +1365,15 @@ as many as before), and eventually wanted to add more features like:
 - specifying custom config
 - using Plover's "Reconnect" button.
 
-Sound familiar? :) The only way forward from there was to learn how to build the
-plugin I had been avoiding for so long, and take my first deep dive into Python
-and its ecosystem.
+Sound familiar? :) The pain of not having a plugin was too much, and the only
+way forward from there was to learn how to build the plugin I had been avoiding
+for so long, and take my first deep dive into Python and its ecosystem. I used
+to dread having to think about making a plugin, and now I am way more comfy with
+it.
 
 Hopefully this guide has been able to help lower any barriers you may feel exist
 between some cool thing you would love to see Plover do, and actually making it
-real.
+real. I look forward to seeing what you make!
 
 [^1]: You can confirm this in the [GitHub action][] that Plover uses to [build
       application distributions][Plover Platform builds] for its supported
@@ -1441,20 +1443,20 @@ real.
       `OPEN_URL = plover_practice_plugin.command:open_url`. It would seem to be
       convention for entry points to be named in lowercase, but when Plover
       registers a plugin internally, it [downcases the name][] anyway, so you
-      can technically name it any case you please.
+      can technically name it in any case you please.
 
 [^10]: More information about this syntax pattern can be found in Setuptools'
        [Entry Points Syntax documentation][].
 
-[^11]: The [`plover_plugins` script][] essentially is a [wrapper around
+[^11]: The [`plover_plugins` script][] is essentially a [wrapper around
        `pip`][], and so the `--editable` flag here allows you to ["install your
        project without copying any files][Editable installs]. Instead, the files
        in the development directory are added to Python's import path". I
        initially thought that this meant that when we make changes to existing
        files that we want to test, we only need to restart the Plover
        application, rather than run the `plover_plugins` script every time.
-       However, that is not the case, and every change requires the script to be
-       run.
+       However, I have found that not to be the case, with every change
+       requiring the script to be re-run.
 
 [^12]: In order to make the `plover` command work as-written in the Plover wiki
        page on my operating system (macOS), I ended up adding the following line
@@ -1569,6 +1571,7 @@ real.
 [crystal ball]: https://en.wikipedia.org/wiki/Crystal_ball
 [dasherize]: https://en.wiktionary.org/wiki/dasherize
 [downcases the name]: https://github.com/openstenoproject/plover/blob/53c416fd893d62ab9ede5898129da3be856e910d/plover/registry.py#L48
+[download the Plover application]: https://github.com/openstenoproject/plover/releases/latest
 [`dump`]: https://docs.python.org/3/library/json.html#json.dump
 [Editable installs]: https://pip.pypa.io/en/stable/topics/local-project-installs/#editable-installs
 [Emoji]: https://en.wikipedia.org/wiki/Emoji
