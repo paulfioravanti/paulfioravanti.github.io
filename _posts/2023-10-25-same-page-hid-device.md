@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2024-02-08 14:20 +1100
+last_modified_at: 2024-02-08 15:57 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -56,7 +56,9 @@ Let's illustrate the problem by recreating (and slightly simplifying) the
 
 #include <hidapi.h>
 
-#define MAX_STR 255
+enum {
+  MAX_STR = 255
+};
 
 int main(int argc, char* argv[]) {
   wchar_t wstr[MAX_STR];
@@ -392,9 +394,8 @@ needs:
 
 #include <hidapi.h>
 
-#define MAX_STR 255
-
 enum {
+  MAX_STR = 255,
   VENDOR_ID = 0xFEED,
   PRODUCT_ID = 0x1337
 };
@@ -485,9 +486,8 @@ to:
 
 #include <hidapi.h>
 
-#define MAX_STR 255
-
 enum {
+  MAX_STR = 255,
   VENDOR_ID = 0xFEED,
   PRODUCT_ID = 0x1337,
   // Set usage values to 0 if unknown.
