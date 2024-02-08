@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2023-12-21 10:30 +1100
+last_modified_at: 2024-02-08 14:20 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -59,12 +59,11 @@ Let's illustrate the problem by recreating (and slightly simplifying) the
 #define MAX_STR 255
 
 int main(int argc, char* argv[]) {
-  int res;
   wchar_t wstr[MAX_STR];
   hid_device *handle;
 
   // Initialize the hidapi library
-  res = hid_init();
+  hid_init();
 
   // Open the Georgi using the VID, PID.
   handle = hid_open(0xFEED, 0x1337, NULL);
@@ -75,14 +74,14 @@ int main(int argc, char* argv[]) {
   }
 
   // Read the Manufacturer String
-  res = hid_get_manufacturer_string(handle, wstr, MAX_STR);
+  hid_get_manufacturer_string(handle, wstr, MAX_STR);
   printf("Manufacturer String: %ls\n", wstr);
 
   // Close the device
   hid_close(handle);
 
   // Finalize the hidapi library
-  res = hid_exit();
+  hid_exit();
 
   return 0;
 }
@@ -401,12 +400,11 @@ enum {
 };
 
 int main(int argc, char* argv[]) {
-  int res;
   wchar_t wstr[MAX_STR];
   hid_device *handle = NULL;
 
   // Initialize the hidapi library
-  res = hid_init();
+  hid_init();
 
   struct hid_device_info *devices, *current_device;
   // Enumerate over the Georgi devices using the VID, PID.
@@ -433,7 +431,7 @@ int main(int argc, char* argv[]) {
   hid_free_enumeration(devices);
 
   // Read the Manufacturer String
-  res = hid_get_manufacturer_string(handle, wstr, MAX_STR);
+  hid_get_manufacturer_string(handle, wstr, MAX_STR);
   printf("Manufacturer String: %ls\n", wstr);
 
   // Close the device if its valid
@@ -442,7 +440,7 @@ int main(int argc, char* argv[]) {
   }
 
   // Finalize the hidapi library
-  res = hid_exit();
+  hid_exit();
 
   return 0;
 }
@@ -498,12 +496,11 @@ enum {
 };
 
 int main(int argc, char* argv[]) {
-  int res;
   wchar_t wstr[MAX_STR];
   hid_device *handle = NULL;
 
   // Initialize the hidapi library
-  res = hid_init();
+  hid_init();
 
   struct hid_device_info *devices, *current_device;
   // Enumerate over the Georgi devices using the VID, PID.
@@ -541,7 +538,7 @@ int main(int argc, char* argv[]) {
   hid_free_enumeration(devices);
 
   // Read the Manufacturer String
-  res = hid_get_manufacturer_string(handle, wstr, MAX_STR);
+  hid_get_manufacturer_string(handle, wstr, MAX_STR);
   printf("Manufacturer String: %ls\n", wstr);
 
   // Close the device if its valid
@@ -550,7 +547,7 @@ int main(int argc, char* argv[]) {
   }
 
   // Finalize the hidapi library
-  res = hid_exit();
+  hid_exit();
 
   return 0;
 }
