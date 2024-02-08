@@ -1,7 +1,7 @@
 ---
 title: "Creating Plover Plugins with Python"
 date: 2024-02-04 21:35:00 +1100
-last_modified_at: 2024-02-04 21:35:00 +1100
+last_modified_at: 2024-02-08 15:18:00 +1100
 tags: plover python steno stenography plugin
 header:
   image: /assets/images/2024-02-04/doc-brown-cable-connect.jpg
@@ -1207,7 +1207,7 @@ jobs:
   `{% raw %}if: ${{ startsWith(github.ref, 'refs/tags') }}{% endraw %}`
   statement is where we say to _only_ run the `pypi-publish` [job][] if the
   current [git commit reference][] ([`github.ref`][]) [`startsWith`][] a tag
-  (`refs/tags`)
+  (`refs/tags`)[^24]
 
 Before moving forward, let's add a commit for this new config:
 
@@ -1297,7 +1297,7 @@ This is what we want! We are now free to push code to the repo, and only publish
 to PyPI when we are ready...which, at this point, we definitely are.
 
 Our `setup.cfg` metadata already has a `version` entry marked as `0.0.1`, so
-let's tag the repo's current commit as being `v0.0.1`[^24]. We will then push
+let's tag the repo's current commit as being `v0.0.1`[^25]. We will then push
 that tag up to GitHub, where the GitHub action will run, and publish the plugin
 out to PyPI for us:
 
@@ -1550,7 +1550,15 @@ real. I look forward to seeing what you make!
        errored out with a helpful message instructing me to change the config
        back to `runs-on: ubuntu-latest`.
 
-[^24]: We will just use a [lightweight tag][git tag] for simplicity's sake,
+[^24]: **Update Feb 8, 2024**: Wouldn't you know it, there is a better way to do
+       this without needing that conditional: [this example][] just uses `on:
+       push: tags: - "v*"` config to make sure the job only runs when tags are
+       pushed up that begin with "v". It also has the benefit of
+       [auto-generating a GitHub release][], and not needing to skip any jobs.
+       Definitely shop around and check out other people's plugin GitHub action
+       config for other ways of doing things!
+
+[^25]: We will just use a [lightweight tag][git tag] for simplicity's sake,
        rather than an [annotated tag][].
 
 [`_Action`]: https://github.com/openstenoproject/plover/blob/53c416fd893d62ab9ede5898129da3be856e910d/plover/formatting.py#L571
@@ -1561,6 +1569,7 @@ real. I look forward to seeing what you make!
 [asdf installation script]: https://github.com/paulfioravanti/dotfiles/blob/3c35334c219ff472b428d49531fb81d38bfc9b33/asdf/setup.sh
 [asdf Python plugin]: https://github.com/asdf-community/asdf-python
 [asdf zsh config]: https://github.com/paulfioravanti/dotfiles/blob/3c35334c219ff472b428d49531fb81d38bfc9b33/zshrc#L56
+[auto-generating a GitHub release]: https://github.com/paulfioravanti/plover-run-applescript/blob/8d9d14a76c31fd794416367bfa5c727751ca564c/.github/workflows/release.yml#L34
 [Bitbucket]: https://bitbucket.org/
 [cache]: https://en.wikipedia.org/wiki/Cache_(computing)
 [CI/CD]: https://en.wikipedia.org/wiki/CI/CD
@@ -1707,6 +1716,7 @@ real. I look forward to seeing what you make!
 [StenoEngine]: https://plover.readthedocs.io/en/latest/api/engine.html
 [`str()`]: https://docs.python.org/3/library/stdtypes.html#str
 [terminal emulator]: https://en.wikipedia.org/wiki/Terminal_emulator
+[this example]: https://github.com/paulfioravanti/plover-run-applescript/blob/8d9d14a76c31fd794416367bfa5c727751ca564c/.github/workflows/release.yml
 [Type conversion]: https://en.wikipedia.org/wiki/Type_conversion
 [URL]: https://en.wikipedia.org/wiki/URL
 [`webbrowser`]: https://docs.python.org/3/library/webbrowser.html
