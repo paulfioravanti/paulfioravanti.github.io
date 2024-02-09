@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2024-02-08 15:57 +1100
+last_modified_at: 2024-02-09 11:19 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -54,21 +54,20 @@ Let's illustrate the problem by recreating (and slightly simplifying) the
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
 
-#include <hidapi.h>
+#include <hidapi.h> // hid_*
 
 enum {
-  MAX_STR = 255
+  VENDOR_ID = 0xFEED,
+  PRODUCT_ID = 0x1337,
+  MAX_LENGTH = 255
 };
 
 int main(int argc, char* argv[]) {
-  wchar_t wstr[MAX_STR];
-  hid_device *handle;
-
   // Initialize the hidapi library
   hid_init();
 
   // Open the Georgi using the VID, PID.
-  handle = hid_open(0xFEED, 0x1337, NULL);
+  hid_device *handle = hid_open(VENDOR_ID, PRODUCT_ID, NULL);
   if (!handle) {
     printf("Unable to open device\n");
     hid_exit();
@@ -76,8 +75,9 @@ int main(int argc, char* argv[]) {
   }
 
   // Read the Manufacturer String
-  hid_get_manufacturer_string(handle, wstr, MAX_STR);
-  printf("Manufacturer String: %ls\n", wstr);
+  wchar_t manufacturer[MAX_LENGTH];
+  hid_get_manufacturer_string(handle, manufacturer, MAX_LENGTH);
+  printf("Manufacturer String: %ls\n", manufacturer);
 
   // Close the device
   hid_close(handle);
@@ -392,21 +392,19 @@ needs:
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
 
-#include <hidapi.h>
+#include <hidapi.h> // hid_*
 
 enum {
-  MAX_STR = 255,
   VENDOR_ID = 0xFEED,
-  PRODUCT_ID = 0x1337
+  PRODUCT_ID = 0x1337,
+  MAX_LENGTH = 255
 };
 
 int main(int argc, char* argv[]) {
-  wchar_t wstr[MAX_STR];
-  hid_device *handle = NULL;
-
   // Initialize the hidapi library
   hid_init();
 
+  hid_device *handle = NULL;
   struct hid_device_info *devices, *current_device;
   // Enumerate over the Georgi devices using the VID, PID.
   devices = hid_enumerate(VENDOR_ID, PRODUCT_ID);
@@ -416,7 +414,7 @@ int main(int argc, char* argv[]) {
     unsigned short int usage_page = current_device->usage_page;
     unsigned short int usage = current_device->usage;
 
-    printf("Opening -- Usage (page): 0x%hx (0x%hx)...\n", usage, usage_page);
+    printf("Opening -- Usage (page): 0x%hX (0x%hX)...\n", usage, usage_page);
     handle = hid_open_path(current_device->path);
 
     if (!handle) {
@@ -431,13 +429,14 @@ int main(int argc, char* argv[]) {
 
   hid_free_enumeration(devices);
 
-  // Read the Manufacturer String
-  hid_get_manufacturer_string(handle, wstr, MAX_STR);
-  printf("Manufacturer String: %ls\n", wstr);
-
-  // Close the device if its valid
+  // Read the Manufacturer String if handle valid
   if (handle) {
+    wchar_t manufacturer[MAX_LENGTH];
+    hid_get_manufacturer_string(handle, manufacturer, MAX_LENGTH);
+    printf("Manufacturer String: %ls\n", manufacturer);
     hid_close(handle);
+  } else {
+    printf("Unable to open any devices for 0x%hX:0x%hX\n", VENDOR_ID, PRODUCT_ID);
   }
 
   // Finalize the hidapi library
@@ -484,24 +483,23 @@ to:
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
 
-#include <hidapi.h>
+#include <hidapi.h> // hid_*
 
 enum {
-  MAX_STR = 255,
   VENDOR_ID = 0xFEED,
   PRODUCT_ID = 0x1337,
   // Set usage values to 0 if unknown.
   USAGE_PAGE = 0xFF60,
-  USAGE = 0x61
+  USAGE = 0x61,
+  MAX_LENGTH = 255
 };
 
 int main(int argc, char* argv[]) {
-  wchar_t wstr[MAX_STR];
-  hid_device *handle = NULL;
 
   // Initialize the hidapi library
   hid_init();
 
+  hid_device *handle = NULL;
   struct hid_device_info *devices, *current_device;
   // Enumerate over the Georgi devices using the VID, PID.
   devices = hid_enumerate(VENDOR_ID, PRODUCT_ID);
@@ -513,12 +511,12 @@ int main(int argc, char* argv[]) {
     unsigned short int usage = current_device->usage;
 
     if (usage_known && (usage_page != USAGE_PAGE || usage != USAGE)) {
-      printf("Skipping -- Usage (page): 0x%hx (0x%hx)\n", usage, usage_page);
+      printf("Skipping -- Usage (page): 0x%hX (0x%hX)\n", usage, usage_page);
       current_device = current_device->next;
       continue;
     }
 
-    printf("Opening -- Usage (page): 0x%hx (0x%hx)...\n", usage, usage_page);
+    printf("Opening -- Usage (page): 0x%hX (0x%hX)...\n", usage, usage_page);
     handle = hid_open_path(current_device->path);
 
     if (!handle) {
@@ -537,13 +535,14 @@ int main(int argc, char* argv[]) {
 
   hid_free_enumeration(devices);
 
-  // Read the Manufacturer String
-  hid_get_manufacturer_string(handle, wstr, MAX_STR);
-  printf("Manufacturer String: %ls\n", wstr);
-
-  // Close the device if its valid
+  // Read the Manufacturer String if handle valid
   if (handle) {
+    wchar_t manufacturer[MAX_LENGTH];
+    hid_get_manufacturer_string(handle, manufacturer, MAX_LENGTH);
+    printf("Manufacturer String: %ls\n", manufacturer);
     hid_close(handle);
+  } else {
+    printf("Unable to open any devices for 0x%hX:0x%hX\n", VENDOR_ID, PRODUCT_ID);
   }
 
   // Finalize the hidapi library
