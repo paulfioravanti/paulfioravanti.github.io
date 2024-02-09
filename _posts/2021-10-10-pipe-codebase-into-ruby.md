@@ -1,7 +1,7 @@
 ---
 title: "Pipe a Codebase into Ruby"
 date: 2021-10-10 20:50 +1100
-last_modified_at: 2023-07-24 16:15 +1100
+last_modified_at: 2024-02-09 14:52 +1100
 tags: ruby bash zsh shell pipe unix
 header:
   image: /assets/images/2021-10-10/denny-muller-W3wd-rmLP7I-unsplash.jpg
@@ -321,7 +321,7 @@ comments!
 [`cat`]: https://www.gnu.org/software/coreutils/manual/html_node/cat-invocation.html
 [command substitution]: https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html
 [file descriptors]: https://en.wikipedia.org/wiki/File_descriptor
-[`gets`]: https://rubyapi.org/o/kernel#method-i-gets
+[`gets`]: https://ruby-doc.org/current/ARGF.html#method-i-gets
 [grouping commands]: https://www.gnu.org/software/bash/manual/html_node/Command-Grouping.html
 [hard requirement]: https://www.linkedin.com/pulse/why-requirements-cause-discomfort-dennis-vervoorn/#:~:text=and%20concept%20selection.-,Hard%20requirements,-Hard%20requirements%20are
 [Pipeline (Unix)]: https://en.wikipedia.org/wiki/Pipeline_(Unix)
