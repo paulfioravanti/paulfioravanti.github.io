@@ -53,7 +53,6 @@ Let's illustrate the problem by recreating (and slightly simplifying) the
 ```c
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
-
 #include <hidapi.h> // hid_*
 
 enum {
@@ -391,7 +390,6 @@ needs:
 ```c
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
-
 #include <hidapi.h> // hid_*
 
 enum {
@@ -482,7 +480,6 @@ to:
 ```c
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
-
 #include <hidapi.h> // hid_*
 
 enum {
