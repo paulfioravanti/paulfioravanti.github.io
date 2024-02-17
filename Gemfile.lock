@@ -26,9 +26,10 @@ GEM
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
-    console (1.23.3)
+    console (1.23.4)
       fiber-annotation
       fiber-local
+      json
     cssminify2 (2.0.1)
     drb (2.2.0)
       ruby2_keywords
@@ -79,7 +80,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    io-event (1.4.3)
+    io-event (1.4.4)
     jekyll (4.3.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
