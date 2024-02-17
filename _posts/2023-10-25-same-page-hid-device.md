@@ -16,6 +16,10 @@ excerpt: >
   wrong (usage) page.
 ---
 
+{% include video id="egReh-6maNw" provider="youtube" %}
+
+> See steno coding demos of the code in this post in the video above!
+
 I use the [Human Interface Device][] (HID) specification to enable programs I
 write to communicate back and forth directly with my [USB][] keyboards.
 
