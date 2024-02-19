@@ -1,7 +1,7 @@
 ---
 title: "Play Classic Doom on a Mac"
 date: 2022-05-13 18:25:00 +1100
-last_modified_at: 2023-11-17 19:43 +1100
+last_modified_at: 2024-02-19 11:10 +1100
 tags: gaming
 header:
   image: /assets/images/2022-05-13/doom-mac-desktop.jpg
@@ -155,8 +155,15 @@ users only, and cannot be used on a Mac.
 
 What we want is the less obvious "Offline Backup Game Installer". Download the
 file linked from there, which will have a name like
-`setup_the_ultimate_doom_1.9_(28044).exe`. Although we cannot directly use this `.exe`
-file on Mac, it contains the Doom WAD file that we seek to extract.
+`setup_the_ultimate_doom_1.9_(28044).exe`. Although we cannot directly use this
+`.exe` file on Mac, it contains the Doom WAD file that we seek to extract.
+
+> **Update 19 February 2024**: If you buy The Ultimate Doom from GOG.com, you
+> will now also find "Doom I Enhanced" in your game collection. This has a
+> different set of files in its "Offline Backup Game Installer" to The Ultimate
+> Doom, and, as of this writing, seems to **not** be compatible with GZDoom
+> (same for "Doom II Enhanced" if you also bought [Doom II][Doom II GOG]). So,
+> for now, do not download files from any "enhanced" versions of Doom.
 
 ## Extract WAD File
 
@@ -315,6 +322,7 @@ Here it is in action!
 [Count von Count]: https://en.wikipedia.org/wiki/Count_von_Count
 [Doom]: https://en.wikipedia.org/wiki/Doom_(1993_video_game)
 [Doom II]: https://en.wikipedia.org/wiki/Doom_II
+[Doom II GOG]: https://www.gog.com/en/game/doom_ii
 [.exe]: https://en.wikipedia.org/wiki/.exe
 [GOG.com]: https://www.gog.com/
 [GOG.com The Ultimate Doom]: https://www.gog.com/en/game/the_ultimate_doom
