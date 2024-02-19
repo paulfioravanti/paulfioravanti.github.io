@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2024-02-09 11:19 +1100
+last_modified_at: 2024-02-19 15:00 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -392,19 +392,10 @@ needs:
 **`host.c`**
 
 ```c
-#include <stdio.h> // printf
-#include <wchar.h> // wchar_t
-#include <hidapi.h> // hid_*
-
-enum {
-  VENDOR_ID = 0xFEED,
-  PRODUCT_ID = 0x1337,
-  MAX_LENGTH = 255
-};
+// ...
 
 int main(int argc, char* argv[]) {
-  // Initialize the hidapi library
-  hid_init();
+  // ...
 
   hid_device *handle = NULL;
   struct hid_device_info *devices, *current_device;
@@ -482,6 +473,81 @@ to:
 **`host.c`**
 
 ```c
+// ...
+
+enum {
+  // ...
+  // Set usage values to 0 if unknown.
+  USAGE_PAGE = 0xFF60,
+  USAGE = 0x61
+};
+
+int main(int argc, char* argv[]) {
+  // ...
+  int usage_known = (USAGE_PAGE != 0) && (USAGE != 0);
+
+  while (current_device) {
+    // ...
+    unsigned short int usage_page = current_device->usage_page;
+    unsigned short int usage = current_device->usage;
+
+    if (usage_known && (usage_page != USAGE_PAGE || usage != USAGE)) {
+      printf("Skipping -- Usage (page): 0x%hX (0x%hX)\n", usage, usage_page);
+      current_device = current_device->next;
+      continue;
+    }
+
+    // ...
+    handle = hid_open_path(current_device->path);
+
+    if (!handle) {
+      printf("Unable to open device\n");
+      if (usage_known) {
+        break;
+      } else {
+        current_device = current_device->next;
+        continue;
+      }
+    }
+
+    // ...
+  }
+
+  // ...
+}
+```
+
+Compiling and running these changes a couple of times gives us the following
+output:
+
+```console
+$ ./host
+Skipping -- Usage (page): 0x6 (0x1)
+Skipping -- Usage (page): 0x2 (0x1)
+Skipping -- Usage (page): 0x1 (0x1)
+Skipping -- Usage (page): 0x80 (0x1)
+Skipping -- Usage (page): 0x1 (0xc)
+Opening -- Usage (page): 0x61 (0xff60)...
+Success!
+Manufacturer String: g Heavy Industries
+$ ./host
+Opening -- Usage (page): 0x61 (0xff60)...
+Success!
+Manufacturer String: g Heavy Industries
+```
+
+It works! And, if you have been following along (with your own Georgi or other
+keyboard of choice), you will notice that successful connections are now made
+much faster, even if you do not hit the target device on the first try!
+
+So, if you ever find yourself writing custom firmware that connects to HID
+devices, remember to always include the usage values, as well as vendor/product
+IDs, to ensure you can get a stable connection.
+
+The complete code for the host file is below, but you can also get it from its
+GitHub repo [here][paulfioravanti/hid_host_example]:
+
+```c
 #include <stdio.h> // printf
 #include <wchar.h> // wchar_t
 #include <hidapi.h> // hid_*
@@ -553,36 +619,9 @@ int main(int argc, char* argv[]) {
 }
 ```
 
-Compiling and running these changes a couple of times gives us the following
-output:
-
-```console
-$ ./host
-Skipping -- Usage (page): 0x6 (0x1)
-Skipping -- Usage (page): 0x2 (0x1)
-Skipping -- Usage (page): 0x1 (0x1)
-Skipping -- Usage (page): 0x80 (0x1)
-Skipping -- Usage (page): 0x1 (0xc)
-Opening -- Usage (page): 0x61 (0xff60)...
-Success!
-Manufacturer String: g Heavy Industries
-$ ./host
-Opening -- Usage (page): 0x61 (0xff60)...
-Success!
-Manufacturer String: g Heavy Industries
-```
-
-It works! And, if you have been following along (with your own Georgi or other
-keyboard of choice), you will notice that successful connections are now made
-much faster, even if you do not hit the target device on the first try!
-
-So, if you ever find yourself writing custom firmware that connects to HID
-devices, remember to always include the usage values, as well as vendor/product
-IDs, to ensure you can get a stable connection.
-
 > If you are interested in seeing other host code containing more robust error
 > handling, and the reading and writing of custom information to and from a
-> device, check out my [HID Host][] GitHub repository.
+> device, check out my [HID Hosts][] GitHub repository.
 
 [^1]: I've written about playing [Doom][] [1993] with steno in
       _[Steno Gaming: Doom Typist][]_, but the mechanics around making
@@ -640,7 +679,7 @@ IDs, to ensure you can get a stable connection.
 [`hidapitester`]: https://github.com/todbot/hidapitester
 [`hid_device_info`]: https://github.com/libusb/hidapi/blob/baa0dab6114e8654161478e10a20c67cf5d1a1a3/hidapi/hidapi.h#L150
 [`hid_enumerate`]: https://github.com/libusb/hidapi/blob/baa0dab6114e8654161478e10a20c67cf5d1a1a3/libusb/hid.c#L787
-[HID Host]: https://github.com/paulfioravanti/hid_hosts
+[HID Hosts]: https://github.com/paulfioravanti/hid_hosts
 [`hid_open`]: https://github.com/libusb/hidapi/blob/baa0dab6114e8654161478e10a20c67cf5d1a1a3/libusb/hid.c#L915
 [`hid_open_path`]: https://github.com/libusb/hidapi/blob/baa0dab6114e8654161478e10a20c67cf5d1a1a3/libusb/hid.c#L1261
 [host]: https://en.wikipedia.org/wiki/Human_interface_device#Components_of_the_HID_protocol
@@ -648,6 +687,7 @@ IDs, to ensure you can get a stable connection.
 [hundreds of devices]: https://github.com/search?q=repo%3Aqmk%2Fqmk_firmware+%22vid%22%3A+%220xFEED%22+language%3AJSON&type=code&l=JSON
 [its Product ID and Vendor ID]: https://github.com/qmk/qmk_firmware/blob/ca4541699915b37cd1f253bbed51854627efd2ce/keyboards/gboards/georgi/info.json#L6
 [linked list]: https://en.wikipedia.org/wiki/Linked_list
+[paulfioravanti/hid_host_example]: https://github.com/paulfioravanti/hid_host_example
 [`pkg-config`]: https://www.freedesktop.org/wiki/Software/pkg-config/
 [Plover]: https://www.openstenoproject.org/plover/
 [pointer]: https://en.wikipedia.org/wiki/Pointer_(computer_programming)
