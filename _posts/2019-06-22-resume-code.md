@@ -4,7 +4,7 @@ redirect_from:
   - /blog/resume-as-code/
 title: "Resume as Code"
 date: 2019-06-22 22:00 +1100
-last_modified_at: 2023-07-24 16:50 +1100
+last_modified_at: 2024-02-22 09:30 +1100
 tags: pdf prawn resume ruby japanese italian 日本語 italiano
 header:
   image: /assets/images/2019-06-22/drew-beamer-692664-unsplash.jpg
@@ -380,7 +380,7 @@ interviewing!
 [Should You Use Prawn?]: https://github.com/prawnpdf/prawn/tree/c5842a27b15f912f2f0ad5818a9ef38992978b3c#should-you-use-prawn
 [rails gem prawn, image and anchor]: https://stackoverflow.com/questions/8289031/rails-gem-prawn-image-and-anchor
 [resume top half in Japanese]: /assets/images/2019-06-22/resume_first_half_japanese.jpg
-[RSpec]: https://github.com/rspec/rspec
+[RSpec]: https://rspec.info/
 [Rubocop]: https://github.com/rubocop-hq/rubocop
 [Ruby]: https://www.ruby-lang.org/en/
 [Simplecov]: https://github.com/colszowka/simplecov
