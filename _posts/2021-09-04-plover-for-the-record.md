@@ -1,7 +1,7 @@
 ---
 title: "Plover For the Record"
 date: 2021-09-04 17:00 +1100
-last_modified_at: 2023-07-24 16:36 +1100
+last_modified_at: 2024-02-22 09:20 +1100
 tags: plover stenography court-reporting q-and-a cosplay georgi
 header:
   image: /assets/images/2021-09-04/ace-attorney-cosplay.jpg
@@ -71,6 +71,11 @@ in this post!
 
 Armed with a dictionary to use, let's learn how to use it, while getting an
 introduction to Q&A itself!
+
+> **UPDATE 22 February 2024**: If you don't want to maintain another dictionary,
+> I have packaged up all the Q&A logic in this post (and more) into a Plover
+> plugin called [Plover Q&A][]. You can find it in the Plugins Manager of your
+> Plover application.
 
 ## _[Ab Initio][]_
 
@@ -1613,6 +1618,8 @@ stitching dictionary] and in my [Plover overrides][Paul's Plover Overrides].
 [Plover Keyboard Shortcuts]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#keyboard-shortcuts
 [Plover's Dictionary Format]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format
 [Plover's main dictionary]: https://raw.githubusercontent.com/openstenoproject/plover/master/plover/assets/main.json
+[Plover plugin]: https://plover.readthedocs.io/en/latest/plugins.html
+[Plover Q&A]: https://github.com/paulfioravanti/plover-q-and-a
 [Plover Speaker ID]: https://github.com/sammdot/plover-speaker-id
 [Plover Stitching Plugin]: https://github.com/morinted/plover_stitching
 [Plover Undoable Line Breaks and Tabs]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#undoable-line-breaks-and-tabs
