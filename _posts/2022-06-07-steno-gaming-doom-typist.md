@@ -882,7 +882,7 @@ it's 1993! :musical_keyboard:
 
 [AppleScript]: https://en.wikipedia.org/wiki/AppleScript
 [boomstick]: https://evildead.fandom.com/wiki/Boomstick
-[Brutal Doom]: https://www.moddb.com/mods/brutal-doom
+[Brutal Doom]: https://en.wikipedia.org/wiki/Brutal_Doom
 [Cargo Crisis]: http://qwertysteno.com/Games/CargoCrisis.php
 [chainsaw]: https://doom.fandom.com/wiki/Chainsaw
 [Chording QWERTY with QMK Combos]: https://www.paulfioravanti.com/blog/chording-qwerty-qmk-combos/
