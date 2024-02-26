@@ -854,13 +854,13 @@ want to try this layout as well.
 [Ergodox EZ keyswitches]: https://ergodox-ez.com/pages/keyswitches
 [Escape the defaults and Control your keyboard with QMK]: https://www.paulfioravanti.com/blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/sp-g20-blank-keys/
-[Gateron Browns]: https://mechanicalkeyboards.com/switches/index.php?switch=Gateron-Brown
+[Gateron Browns]: https://www.keychron.com/blogs/news/gateron-mechanical-switch-guide
 [GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Georgi]: https://www.gboards.ca/product/georgi
 [Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/gboards/georgi
 [Google IME]: https://www.google.co.jp/ime/
-[Kailh Speed Silver]: https://mechanicalkeyboards.com/switches/index.php?switch=Kailh-Speed-Silver
+[Kailh Speed Silver]: https://www.keychron.com/blogs/news/kailh-mechanical-switch-guide
 [Keyboard Ghosting Test]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#test-2-keyboard-ghosting-test
 [keyboard switches]: https://thegamingsetup.com/gaming-keyboard/buying-guides/keyboard-switch-chart-table
 [Learn Plover!]: https://www.openstenoproject.org/learn-plover/home.html
