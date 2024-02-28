@@ -1,7 +1,7 @@
 ---
 title: "Amazon Prime's Localisation Fail"
 date: 2024-02-21 15:30:00 +1100
-last_modified_at: 2024-02-21 15:30:00 +1100
+last_modified_at: 2024-02-29 10:33:00 +1100
 tags: i18n l10n
 header:
   image: /assets/images/2024-02-21/frank-mckenna-JB92NeJSxW4-unsplash.jpg
@@ -45,7 +45,8 @@ Japanese site, to view information about a Japanese-language movie that was made
 in Japan, with a Japanese cast...
 
 ...And yet, the film is tagged as being "International" (or, more blatantly, a
-"foreign film", as per "外国映画", the Japanese translation of the tag).
+"foreign film", as per "外国映画" [_gaikoku eiga_], the Japanese translation of
+the tag[^1]).
 
 No, Amazon, it is not an international film. From where we were sitting, it is
 about as local as you can get.
@@ -140,6 +141,12 @@ This whole post may be about making a mountain out of a tag-shaped molehill that
 it seems most people do not notice or care about. But, it goes to show that
 internationalisation/localisation is hard, and even for huge companies with
 lots of resources like Amazon, there is always room for improvement.
+
+[^1]: Unfortunately, this Japanese translation itself is also inappropriate,
+      since it contains the word "film/movie" in it ("映画"), and the tag is
+      applied to media that are not classified as films, like TV series. For
+      artistic works, I would think that "海外作品" (_kaigai sakuhin_; overseas
+      [artistic] works) is a better fit.
 
 [Amazon Prime]: https://www.primevideo.com/
 [Death's Game]: https://www.primevideo.com/detail/0ST2GP2VV9J9AKW7YJ6PZ67UYN/ref=atv_sr_fle_c_Tn74RA_1_1_1?sr=1-1&pageTypeIdSource=ASIN&pageTypeId=B0CPS4KSVD&qid=1708476755572
