@@ -142,8 +142,8 @@ it seems most people do not notice or care about. But, it goes to show that
 internationalisation/localisation is hard, and even for huge companies with
 lots of resources like Amazon, there is always room for improvement.
 
-[^1]: Unfortunately, this Japanese translation itself is also inappropriate,
-      since it contains the word "film/movie" in it ("映画"), and the tag is
+[^1]: Unfortunately, this Japanese translation itself is inappropriate, since it
+      contains the word "film/movie" in it ("映画"), and the tag is also being
       applied to media that are not classified as films, like TV series. For
       artistic works, I would think that "海外作品" (_kaigai sakuhin_; overseas
       [artistic] works) is a better fit.
