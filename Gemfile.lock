@@ -251,7 +251,6 @@ DEPENDENCIES
   jekyll-paginate (~> 1.1)
   jekyll-redirect-from (~> 0.14)
   jekyll-remote-theme (~> 0.4)
-  jekyll-sass-converter (~> 2.2)
   jekyll-seo-tag (~> 2.6)
   jekyll-sitemap (~> 1.3)
   jemoji (~> 0.10)
