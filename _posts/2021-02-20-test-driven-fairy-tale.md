@@ -65,7 +65,7 @@ fairy tale together, which begins Once Upon A Time...
 
 [fable]: https://en.wikipedia.org/wiki/Fable
 [img three-little-pigs]: /assets/images/2021-02-20/three-little-pigs.png
-[Lee Sheppard]: https://www.leesheppard.com.au
+[Lee Sheppard]: https://www.leesheppard.com
 [make-believe]: https://www.collinsdictionary.com/dictionary/english/make-believe
 [MINASWAN]: https://en.wiktionary.org/wiki/MINASWAN
 [RSpec]: https://rspec.info/
