@@ -103,6 +103,11 @@ analytics:
     tracking_id          : "G-Q173829KF7"
     anonymize_ip         : # true, false (default)
 
+# REF: https://github.com/dart-lang/site-www/issues/502#issuecomment-365955221
+assets:
+  external:
+    uglifier:
+      harmony: true
 
 # Site Author
 author:
