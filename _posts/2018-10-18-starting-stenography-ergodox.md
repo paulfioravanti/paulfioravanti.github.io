@@ -844,7 +844,7 @@ want to try this layout as well.
 [Cherry MX Browns]: https://www.cherrymx.de/en/cherry-mx/mx-original/mx-brown.html
 [Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
-[Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#configuring-qmk-for-steno
+[Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#configuring-qmk-for-steno
 [DCS profile]: https://deskthority.net/wiki/Signature_Plastics_DCS_family
 [Dvorak]: https://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard
 [Ergodox]: https://www.ergodox.io/
@@ -855,7 +855,7 @@ want to try this layout as well.
 [Escape the defaults and Control your keyboard with QMK]: https://www.paulfioravanti.com/blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
 [G20 Blank Keysets]: https://pimpmykeyboard.com/sp-g20-blank-keys/
 [Gateron Browns]: https://www.keychron.com/blogs/news/gateron-mechanical-switch-guide
-[GeminiPR]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#geminipr
+[GeminiPR]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#geminipr
 [GeminiPR connected]: /assets/images/2018-10-18/plover-geminipr-connected.png "GeminiPR connected"
 [Georgi]: https://www.gboards.ca/product/georgi
 [Georgi QMK config]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/gboards/georgi
@@ -881,7 +881,7 @@ want to try this layout as well.
 [Plover Keycap Recommendations]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#keycaps
 [Plover keyswitch guide]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#which-type-of-key-switch-should-i-choose
 [Plover supported protocols]: https://github.com/openstenoproject/plover/wiki/Supported-Hardware#supported-protocols
-[Plover with Steno Protocol]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#plover-with-steno-protocol
+[Plover with Steno Protocol]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#plover-with-steno-protocol
 [Plover QWERTY mapping]: https://github.com/openstenoproject/plover/wiki/Beginner's-Guide:-Get-Started-with-Plover#use-the-correct-body-posture-and-finger-placement
 [QMK default Ergodox EZ keymap]: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ergodox_ez/keymaps/default
 [QMK Ergodox Default Steno]: https://github.com/paulfioravanti/qmk_example_keymaps/tree/master/keyboards/ergodox_ez/keymaps/default_steno
@@ -901,16 +901,16 @@ want to try this layout as well.
 [qmk/qmk_firmware #5220]: https://github.com/qmk/qmk_firmware/pull/5220
 [qmk/qmk_firmware #5229]: https://github.com/qmk/qmk_firmware/pull/5229
 [QMK Special Keys]: https://docs.qmk.fm/#/keycodes_basic?id=special-keys
-[QMK steno keycodes]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#keycode-reference
+[QMK steno keycodes]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#keycode-reference-keycode-reference
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY
 [Select GeminiPR from dropdown and click Configure button]: /assets/images/2018-10-18/plover-configuration-configure.png "Select GeminiPR from dropdown and click Configure button"
 [Select serial port and baud rate]: /assets/images/2018-10-18/plover-serial-port-configuration.png "Select serial port and baud rate"
 [steno machine keymap]: https://www.openstenoproject.org/learn-plover/lesson-1-fingers-and-keys.html#TOC-The-Keyboard
-[Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md
+[Stenography in QMK]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md
 [Stenography with ZSA Keyboards: A Tutorial]: https://blog.zsa.io/2107-steno-tutorial/
 [`TG(layer)` function]: https://docs.qmk.fm/#/feature_advanced_keycodes?id=switching-and-toggling-layers
 [Toggling Plover in software]: https://waleedkhan.name/blog/steno-adventures-part-2/#toggling-plover-in-software
-[TX Bolt]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#tx-bolt
+[TX Bolt]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#tx-bolt
 [USB Endpoint Limitations]: https://docs.qmk.fm/#/config_options?id=usb-endpoint-limitations
 [Waleed Khan]: https://waleedkhan.name
 [Workman]: https://workmanlayout.org/

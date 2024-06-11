@@ -531,7 +531,7 @@ feedback, so let me know!
 [Persistence]: https://en.wikipedia.org/wiki/Persistence_(computer_science)
 [Plover Blog]: http://plover.stenoknight.com/
 [Profile Your Future App]: https://reinteractive.com/posts/304-profile-your-future-app
-[QMK stenography keys]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_stenography.md#keycode-reference-idkeycode-reference
+[QMK stenography keys]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#keycode-reference-idkeycode-reference
 [Reddit]: https://www.reddit.com/
 [reinvent the wheel]: https://en.wikipedia.org/wiki/Reinventing_the_wheel
 [retrospective]: https://en.wikipedia.org/wiki/Retrospective#Software_development

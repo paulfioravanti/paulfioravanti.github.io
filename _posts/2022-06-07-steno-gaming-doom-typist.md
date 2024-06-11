@@ -937,7 +937,7 @@ it's 1993! :musical_keyboard:
 [Plover Dictionary Format Keyboard Shortcuts]: https://github.com/openstenoproject/plover/wiki/Dictionary-Format#keyboard-shortcuts
 [Plover Run Shell]: https://github.com/user202729/plover_run_shell
 [QMK]: https://qmk.fm/
-[QMK combo]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
+[QMK combo]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/combo.md
 [QMK custom quantum functions]: https://github.com/qmk/qmk_firmware/blob/master/docs/custom_quantum_functions.md#programming-the-behavior-of-any-keycode-idprogramming-the-behavior-of-any-keycode
 [QMK programming the Behavior of Any Keycode]: https://github.com/qmk/qmk_firmware/blob/master/docs/custom_quantum_functions.md#programming-the-behavior-of-any-keycode-idprogramming-the-behavior-of-any-keycode
 [QWERTY]: https://en.wikipedia.org/wiki/QWERTY

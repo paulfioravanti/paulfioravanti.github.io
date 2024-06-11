@@ -507,7 +507,7 @@ in firmware!
 [Plover]: https://www.openstenoproject.org/plover/
 [Prerequisites]: https://docs.qmk.fm/#/newbs_getting_started?id=_1-prerequisites
 [qmk/qmk_firmware]: https://github.com/qmk/qmk_firmware
-[QMK combo]: https://github.com/qmk/qmk_firmware/blob/master/docs/feature_combo.md
+[QMK combo]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/combo.md
 [QMK Configurator]: https://config.qmk.fm/#
 [QMK Configurator Georgi Layout]: https://config.qmk.fm/#/gboards/georgi/LAYOUT_georgi
 [QMK documentation]: https://docs.qmk.fm/#/
