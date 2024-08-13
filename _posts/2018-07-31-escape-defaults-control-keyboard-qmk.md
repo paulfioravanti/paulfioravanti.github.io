@@ -5,7 +5,7 @@ redirect_from:
   - /blog/escape-the-defaults-and-control-your-keyboard-with-qmk/
 title: "Escape the defaults and Control your keyboard with QMK"
 date: 2018-07-31 09:10 +1100
-last_modified_at: 2022-06-10 20:30 +1100
+last_modified_at: 2024-08-10 22:30 +1100
 tags: ergodox keyboards mechanical-keyboards qmk clang japanese 日本語
 header:
   image: /assets/images/2018-07-31/ergodox-ez.jpg
@@ -447,7 +447,7 @@ Happy Clacking!
 [QMK Ergodox EZ keymaps]: https://github.com/qmk/qmk_firmware/tree/master/keyboards/ergodox_ez/keymaps
 [QMK Firmware]: https://qmk.fm/
 [QMK Keycodes Documentation]: https://docs.qmk.fm/#/keycodes
-[QMK Supported Keyboards]: https://qmk.fm/keyboards/
+[QMK Supported Keyboards]: https://browse.qmk.fm
 [Rebecca Le]: https://sevenseacat.net
 [Ruby]: https://www.ruby-lang.org/en/
 [Update send_string pull request]: https://github.com/qmk/qmk_firmware/pull/1657
