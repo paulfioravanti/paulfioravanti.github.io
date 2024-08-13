@@ -1,7 +1,7 @@
 ---
 title: "Get on the Same Page as your HID Device"
 date: 2023-10-25 16:25 +1100
-last_modified_at: 2024-02-19 15:00 +1100
+last_modified_at: 2024-08-13 22:30 +1100
 tags: clang HID hidapi georgi stenography steno keyboards
 header:
   image: /assets/images/2023-10-25/dot-matrix-printer.jpg
@@ -18,7 +18,7 @@ excerpt: >
 
 {% include video id="egReh-6maNw" provider="youtube" %}
 
-> See steno coding demos of the code in this post in the video above!
+> Check out steno coding demos of this post's content in the video above!
 
 I use the [Human Interface Device][] (HID) specification to enable programs I
 write to communicate back and forth directly with my [USB][] keyboards.
@@ -627,7 +627,7 @@ int main(int argc, char* argv[]) {
       _[Steno Gaming: Doom Typist][]_, but the mechanics around making
       communication possible between the Georgi, Elgato pedal, and [Plover][]
       probably warrants its own blog post. If you're game, you can check out the
-      code specifics in the following GitHub repos: [HID Host][],
+      code specifics in the following GitHub repos: [HID Hosts][],
       [Steno Tape][], and my [Georgi firmware][].
 
 [^2]: Yes, technically, it is a [pointer][] to a [linked list][] of
@@ -670,7 +670,7 @@ int main(int argc, char* argv[]) {
 [Elgato Stream Deck Pedal]: https://www.elgato.com/us/en/p/stream-deck-pedal
 [example host program]: https://github.com/libusb/hidapi/blob/baa0dab6114e8654161478e10a20c67cf5d1a1a3/README.md#what-does-the-api-look-like
 [`gcc`]: https://gcc.gnu.org/
-[Georgi]: https://qmk.fm/keyboards/georgi/
+[Georgi]: https://github.com/qmk/qmk_firmware/tree/dccada95aaad475ebe6da5d98fd0e2b428b19034/keyboards/gboards/georgi
 [Georgi firmware]: https://github.com/paulfioravanti/qmk_keymaps/tree/master/keyboards/gboards/georgi/keymaps/paulfioravanti
 [Getting a Vendor ID]: https://www.usb.org/getting-vendor-id
 [handle]: https://en.wikipedia.org/wiki/Handle_(computing)
