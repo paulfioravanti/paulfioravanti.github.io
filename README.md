@@ -16,7 +16,7 @@ at the following posts:
 
 ## Install
 
-```sh
+```console
 git clone git@github.com:paulfioravanti/paulfioravanti.github.io.git
 cd paulfioravanti.github.io
 bundle install
@@ -40,7 +40,7 @@ re-shim whatever version manager is being used for Node (I use [`asdf`][]), or
 add the `bin` folder of the Node installation to the `$PATH`, otherwise
 executables like `sass-lint` won't be available:
 
-```sh
+```console
 npm install --global sass-lint htmllint-cli markdownlint-cli
 asdf reshim nodejs
 ```
@@ -51,7 +51,7 @@ HTMLProofer is a Ruby gem and so Bundler will bring it into the project.
 
 ### Start blog server
 
-```sh
+```console
 bundle exec jekyll serve --incremental --drafts --port 5000 --livereload
 ```
 
@@ -63,7 +63,7 @@ This project uses [Guard][] to monitor file changes.
 
 Start Guard with the following command:
 
-```sh
+```console
 bundle exec guard
 ```
 
@@ -72,20 +72,22 @@ bundle exec guard
 This blog currently uses the [Minimal Mistakes][] theme.
 
 Previously, it used the [Minima][] theme, as that seemed to be the theme that
-worked best out of the box with Jekyll 3.6, and was usable on [Github Pages][].
+worked best out of the box with Jekyll 3.6, and was usable on [GitHub Pages][].
 
 ## Deployment
 
-This blog is current deployed to [Github Pages][], but Github Pages tend to be
+This blog is current deployed to [GitHub Pages][], but GitHub Pages tend to be
 slow at updating their Jekyll technical stack, and they only support a
-[limited set of plugins][Github Pages Supported Plugin List].
+[limited set of plugins][GitHub Pages Supported Plugin List].
 
-So, I'm using [Travis CI][] as both a test harness and a deployment pipeline to
-bypass the limitations of the [Pages gem][], and allow Jekyll to use the latest
-gems, as well as plugins not supported by Github's `safe` mode.
+I initially used [Travis CI][] as both a test harness and a deployment pipeline
+to bypass the limitations of the [Pages gem][], and allow Jekyll to use the
+latest gems, as well as plugins not supported by GitHub's `safe` mode (see my
+blog post _[Build a CI/CD pipeline for your Jekyll site][]_ for more information
+about how I got a Travis-GitHub Pages test/deploy pipeline working).
 
-See my post _[Build a CI/CD pipeline for your Jekyll site][]_ for more
-information about how to get a Travis-Github Pages test/deploy pipeline working.
+However, I now use [GitHub Actions][] for CI/CD. See the [`ci.yml`][] file for
+details.
 
 ## License
 
@@ -101,18 +103,15 @@ under the [MIT license][license-mit].
 
 SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 
-## Social
-
-[![Contact][twitter-badge]][twitter-url]<br />
-[![Stack Overflow][stackoverflow-badge]][stackoverflow-url]
-
 [`asdf`]: https://github.com/asdf-vm/asdf
 [Build a CI/CD pipeline for your Jekyll site]: https://www.paulfioravanti.com/blog/build-a-ci-cd-pipeline-for-your-jekyll-site/
 [Build Status image]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml/badge.svg
 [Build Status url]: https://github.com/paulfioravanti/paulfioravanti.github.io/actions/workflows/ci.yml
+[`ci.yml`]: https://github.com/paulfioravanti/paulfioravanti.github.io/blob/release/.github/workflows/ci.yml
 [Flexbox Furigana]: https://www.paulfioravanti.com/blog/flexbox-furigana/
-[Github Pages]: https://pages.github.com/
-[Github Pages Supported Plugin List]: https://pages.github.com/versions/
+[GitHub Actions]: https://github.com/features/actions
+[GitHub Pages]: https://pages.github.com/
+[GitHub Pages Supported Plugin List]: https://pages.github.com/versions/
 [Guard]: https://github.com/guard/guard
 [htmllint]: https://github.com/htmllint/htmllint
 [htmllint-cli]: https://github.com/htmllint/htmllint-cli
@@ -134,8 +133,4 @@ SPDX-License-Identifier: (MIT AND CC-BY-4.0)
 [Sass Lint]: https://github.com/sasstools/sass-lint
 [scss-lint]: https://github.com/brigade/scss-lint
 [Setting up a Jekyll Blog]: https://www.paulfioravanti.com/blog/set-up-jekyll-blog/
-[stackoverflow-badge]: http://stackoverflow.com/users/flair/567863.png
-[stackoverflow-url]: http://stackoverflow.com/users/567863/paul-fioravanti
 [Travis CI]: https://travis-ci.com/
-[twitter-badge]: https://img.shields.io/badge/contact-%40paulfioravanti-blue.svg
-[twitter-url]: https://twitter.com/paulfioravanti
