@@ -1,7 +1,7 @@
 ---
 title: "AppleScript Records: Strings as Keys"
 date: 2022-06-10 15:30:00 +1100
-last_modified_at: 2022-06-14 11:15:00 +1100
+last_modified_at: 2024-08-23 22:00:00 +1100
 tags: hash dictionary apple scripting
 header:
   image: /assets/images/2022-06-10/anita-jankovic-Xh-Xr7_fxBI-unsplash-header.jpg
@@ -185,7 +185,7 @@ case of mapping [stenography][] chords to macOS keyboard shortcuts, check out my
 [Record Properties]: http://books.gigatux.nl/mirror/applescriptdefinitiveguide/applescpttdg2-CHP-13-SECT-11.html
 [shotgun approach]: https://en.wiktionary.org/wiki/shotgun_approach
 [solution]: https://twitter.com/Piyomaru/status/1517769013488918528
-[steno-dictionaries commands]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src/command
+[steno-dictionaries commands]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
 [String]: https://en.wikipedia.org/wiki/String_(computer_science)
 [Takaaki Naganoya]: http://piyocast.com/as/

@@ -1,7 +1,7 @@
 ---
 title: "Sharing AppleScript Handlers"
 date: 2022-07-05 09:30:00 +1100
-last_modified_at: 2024-01-17 12:46:00 +1100
+last_modified_at: 2024-08-23 22:00:00 +1100
 tags: apple scripting
 header:
   image: /assets/images/2022-07-05/sliced-apples.jpg
@@ -88,7 +88,7 @@ So, the script needs to figure out what current the "active" application is, and
 then "press" the appropriate keyboard shortcut (either ⌘R, or F5). Here is what
 that looks like in my code:
 
-**`src/command/actions/refresh.applescript`**
+**`src/actions/refresh.applescript`**
 
 ```applescript
 on run
@@ -147,7 +147,7 @@ extraction into some other file, where they can be shared.
 Let's remove them from `refresh.applescript`, and put them into a "utilities"
 file:
 
-**`src/command/actions/util.applescript`**
+**`src/actions/util.applescript`**
 
 ```applescript
 on getActiveApp()
@@ -202,7 +202,7 @@ mv util.scpt ~/Library/Script Libraries/steno-dictionaries
 Now, we can change `refresh.applescript` to use the handlers in the newly-minted
 Script Library:
 
-**`src/command/actions/refresh.applescript`**
+**`src/actions/refresh.applescript`**
 
 ```applescript
 property Util : script "steno-dictionaries/util"
@@ -251,11 +251,11 @@ in the following order:
 
 The `.scpt` scripts are executed by shell commands that run [`osascript`][]
 commands, which are contained in steno chord entries in the repo's
-[`commands` directory][]. The one that runs the "refresh" script looks like
+[`src` directory][]. The one that runs the "refresh" script looks like
 this:
 
 ```bash
-bash -ci 'osascript $STENO_DICTIONARIES/src/command/actions/refresh.scpt'
+bash -ci 'osascript $STENO_DICTIONARIES/src/actions/refresh.scpt'
 ```
 
 > The shell commands run in [interactive mode][] for [reasons][].
@@ -281,7 +281,6 @@ hopefully this post has been able to serve as some reference.
 [`bin/` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/bin
 [cloned]: https://git-scm.com/docs/git-clone
 [Command]: https://en.wikipedia.org/wiki/Command_key
-[`commands` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src/command
 [ctrlp.vim]: https://github.com/ctrlpvim/ctrlp.vim
 [Function Key]: https://en.wikipedia.org/wiki/Function_key
 [functions]: https://en.wikipedia.org/wiki/Subroutine
@@ -290,7 +289,7 @@ hopefully this post has been able to serve as some reference.
 [iTerm2]: https://iterm2.com/
 [macOS]: https://en.wikipedia.org/wiki/MacOS
 [steno-dictionaries repo]: https://github.com/paulfioravanti/steno-dictionaries
-[my stenography dictionaries]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src/command
+[my stenography dictionaries]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src
 [`osacompile`]: https://ss64.com/osx/osacompile.html
 [`osascript`]: https://ss64.com/osx/osascript.html
 [possessive syntax]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW3
@@ -302,6 +301,7 @@ hopefully this post has been able to serve as some reference.
 [Script Library]: https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/conceptual/ASLR_script_objects.html#//apple_ref/doc/uid/TP40000983-CH207-SW6
 [shell scripts]: https://en.wikipedia.org/wiki/Shell_script
 [Single source of truth]: https://en.wikipedia.org/wiki/Single_source_of_truth
+[`src` directory]: https://github.com/paulfioravanti/steno-dictionaries/tree/main/src
 [stenographic chords]: https://www.artofchording.com/introduction/how-steno-works.html
 [stenography]: https://en.wikipedia.org/wiki/Stenotype
 [Swift]: https://www.swift.org/
