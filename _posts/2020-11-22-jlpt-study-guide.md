@@ -1,7 +1,7 @@
 ---
 title: "My JLPT N1 Study Guide"
 date: 2020-11-22 23:05 +1100
-last_modified_at: 2023-07-24 18:25 +1100
+last_modified_at: 2024-08-23 21:40 +1100
 tags: japanese jlpt anki html css javascript 日本語
 narration_video_id: "jcHX3PowK_w"
 header:
@@ -343,7 +343,7 @@ language media that you like reading/watching, please let me know in a comment!
 [AnkiWeb]: https://ankiweb.net/about
 [AnkiWeb JLPT]: https://ankiweb.net/shared/decks/jlpt
 [Eat That Frog]: https://www.briantracy.com/blog/time-management/the-truth-about-frogs/
-[Easy Japanese for Work しごとのにほんご]: https://www3.nhk.or.jp/nhkworld/en/ondemand/program/video/easyjapaneseforwork
+[Easy Japanese for Work しごとのにほんご]: https://www3.nhk.or.jp/nhkworld/en/shows/easyjapaneseforwork/
 [Egashira 2:50]: https://en.wikipedia.org/wiki/Egashira_2:50
 [Google Chrome]: https://www.google.com/intl/en_au/chrome/
 [Hitoshi Matsumoto]: https://twitter.com/matsu_bouzu
