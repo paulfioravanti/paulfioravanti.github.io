@@ -22,14 +22,14 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.3.4
+          ruby-version: 3.3.6
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
 
       - name: Set up Node JS
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 23
 
       - name: Install Global npm packages
         run: >

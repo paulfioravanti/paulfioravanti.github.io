@@ -1,5 +1,7 @@
 source "https://rubygems.org"
-ruby "3.3.4"
+# NOTE: Jekyll not compatible with Ruby 3.4.x yet
+# REF: https://github.com/jekyll/jekyll/pull/9736
+ruby "3.3.6"
 
 # Jekyll is a blog-aware static site generator in Ruby
 # NOTE: Although this is currently deployed on Github Pages, I'm not using
