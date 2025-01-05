@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Samuel Ramos](https://unsplash.com/photos/nREufpxxM8o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/typewriter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/close-up-photography-of-yellow-typewriter-nREufpxxM8o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   Why let stenographers have all the fun? Get more keyboard output using less
   keys.

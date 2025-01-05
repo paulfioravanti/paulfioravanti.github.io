@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Phil Botha](https://unsplash.com/photos/l8AH_h8w3Hk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/plover?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/white-and-brown-bird-l8AH_h8w3Hk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   QMK and Plover can get your Ergodox singing steno chords.
 ---
@@ -841,7 +841,7 @@ I am not sure which of these thumb-based number keys I will end up using yet
 want to try this layout as well.
 
 [changeable switches]: https://ergodox-ez.com/pages/change-it-yourself
-[Cherry MX Browns]: https://www.cherrymx.de/en/cherry-mx/mx-original/mx-brown.html
+[Cherry MX Browns]: https://www.cherry.de/en-gb/product/mx2a-brown
 [Click configure button in Plover window]: /assets/images/2018-10-18/plover-configure.png "Click configure button in Plover window"
 [Colemak]: https://colemak.com/
 [Configuring QMK for Steno]: https://github.com/qmk/qmk_firmware/blob/8b5cdfabf5d05958a607efa174e64377d36e4b64/docs/features/stenography.md#configuring-qmk-for-steno

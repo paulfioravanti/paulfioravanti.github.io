@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Matthew Ansley](https://unsplash.com/photos/6AQxBtaIYOk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/two-people-standing-on-concrete-floor-6AQxBtaIYOk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 badges:
   - image: https://img.shields.io/badge/Ruby%20Weekly-%23413-red.svg
     alt: "Ruby Weekly #413"
@@ -119,7 +119,7 @@ for some interesting/confusing behaviour.
          alt="grayscale photography of cages">
     <figcaption>
       Photo by Samuel Zeller on
-      <a href="https://unsplash.com/search/photos/shadow?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+      <a href="https://unsplash.com">
         Unsplash
       </a>
     </figcaption>
@@ -224,7 +224,7 @@ reads through the code.
          alt="person holding magnifying glass">
     <figcaption>
       Photo by João Silas on
-      <a href="https://unsplash.com/search/photos/magnifying-glass?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+      <a href="https://unsplash.com">
         Unsplash
       </a>
     </figcaption>

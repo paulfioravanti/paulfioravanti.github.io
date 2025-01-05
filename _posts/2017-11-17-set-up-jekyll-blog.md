@@ -15,7 +15,7 @@ header:
   overlay_filter: 0.7
   caption: >
     Photo by [Wesley Caribe](https://unsplash.com/photos/TtN_obfWlGw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/plug?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/flat-lay-photography-of-assorted-color-mechanical-tool-set-TtN_obfWlGw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   Setting up this blog, and creating a development environment that I was happy
   with, took longer than I expected.

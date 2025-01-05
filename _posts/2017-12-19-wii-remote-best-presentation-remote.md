@@ -17,7 +17,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Geeky Shots](https://unsplash.com/photos/hQ4BQ3wdHsQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/nintendo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/person-holding-super-mushroom-hQ4BQ3wdHsQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   Give new life to your old controllers.
 ---

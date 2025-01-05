@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Toa Heftiba](https://unsplash.com/photos/PxM8hw4j3ZY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/royal-guard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/royal-guard-outside-building-PxM8hw4j3ZY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   Test-drive your exercises with Guard.
 ---

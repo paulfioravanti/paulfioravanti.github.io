@@ -16,7 +16,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Matt Antonioli](https://unsplash.com/photos/c8QJ7dhHP9Y?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/lamborghini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/white-lamborghini-car-c8QJ7dhHP9Y?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2376-blueviolet.svg
     alt: "Elixir Weekly #76"

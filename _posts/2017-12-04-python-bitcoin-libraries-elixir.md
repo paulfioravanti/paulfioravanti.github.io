@@ -16,7 +16,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Drew Stock](https://unsplash.com/photos/K-he2HgZVCA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/orange-lamborghini-vehicle-closeup-photography-K-he2HgZVCA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 badges:
   - image: https://img.shields.io/badge/Elixir%20Weekly-%2374-blueviolet.svg
     alt: "Elixir Weekly #74"
@@ -128,7 +128,7 @@ the following method calls:
 {% endcapture %}
 {% capture katy_belcher_credit %}
 Photo by [Katy Belcher](https://unsplash.com/photos/uVX0tmFdNEg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on [Unsplash](https://unsplash.com/search/photos/private-key?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com/photos/gray-key-hanging-on-tree-uVX0tmFdNEg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 {% endcapture %}
 <figure>
   {% include stripped_markdown.html markdown=katy_belcher_img %}

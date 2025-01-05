@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [David Travis](https://unsplash.com/photos/5bYxXawHOQg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/notes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/brown-fountain-pen-on-notebook-5bYxXawHOQg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 badges:
   - image: https://img.shields.io/badge/Elm%20Weekly-%2362-green.svg
     alt: "Elm Weekly #62"

@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Samuel Sianipar](https://unsplash.com/photos/scUBcasSvbE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/pipes?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com/photos/grayscale-photography-of-metal-pipes-scUBcasSvbE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
 excerpt: >
   Confidently test your Jekyll site, and bypass the Github Pages gem to publish
   the site that _you_ want to production.
@@ -82,7 +82,7 @@ Let's see about getting this done!
 {% endcapture %}
 {% capture fancycrave_credit %}
 Photo originally by Fancycrave
-on [Unsplash](https://unsplash.com/search/photos/repair?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com)
 {% endcapture %}
 <figure>
   {% include stripped_markdown.html markdown=fancycrave_img %}
@@ -271,7 +271,7 @@ restrictions, to Github Pages! :tada:
 [Github Setting the default branch]: https://help.github.com/articles/setting-the-default-branch/
 [HTMLProofer]: https://github.com/gjtorikian/html-proofer
 [HTTP 404]: https://en.wikipedia.org/wiki/HTTP_404
-[Get started with Travis CI]: https://docs.travis-ci.com/user/tutorial/#to-get-started-with-travis-ci
+[Get started with Travis CI]: https://docs.travis-ci.com/user/onboarding/
 [Github Creating a personal access token]: https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/
 [Github Pages]: https://pages.github.com/
 [Github Pages gem dependencies]: https://github.com/github/pages-gem/blob/8b199c139982187e0c858a82dba1580daad6ccc8/lib/github-pages/dependencies.rb

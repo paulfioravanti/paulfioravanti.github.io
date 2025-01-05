@@ -14,7 +14,7 @@ header:
   overlay_filter: 0.5
   caption: >
     Photo by [Drew Beamer](https://unsplash.com/@drew_beamer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-    on [Unsplash](https://unsplash.com/search/photos/interview?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    on [Unsplash](https://unsplash.com)
 excerpt: >
   Bring some fun back into the document that sells you to the world.
 ---
@@ -57,7 +57,7 @@ some :sparkles:sparkles:sparkles: to a bland resume submission process.
 {% endcapture %}
 {% capture alice_pasqual_credit %}
 Photo by [Alice Pasqual](https://unsplash.com/@stri_khedonia?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-on [Unsplash](https://unsplash.com/search/photos/prawn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+on [Unsplash](https://unsplash.com)
 {% endcapture %}
 <figure style="width:50%; float: right; margin-left: 10px; margin-top: 20px;">
   {% include stripped_markdown.html markdown=alice_pasqual_img %}
